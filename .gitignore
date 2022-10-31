@@ -1,4 +1,13 @@
+#### CUSTOM ####
+
+Unisyn GAM
+unisynDict.txt
+
+
+#### OSs ####
+
 ## Windows
+
 # Windows thumbnail cache files
 Thumbs.db
 Thumbs.db:encryptable
@@ -24,7 +33,9 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
-##Mac
+
+## Mac
+
 # General
 .DS_Store
 .AppleDouble
@@ -53,7 +64,8 @@ Temporary Items
 .apdisk
 
 
-##Linux
+## Linux
+
 *~
 
 # temporary files which can be created if a process still has a handle open of a deleted file
