@@ -158,11 +158,33 @@ Here are some other things to note:
 - When /ŋ/ comes before a vowel or syllabic consonant, assume it's followed by /g/ (e.g., _dangle_ is `d{NgP`, not *`d{NP`)
 - Don't forget that _nk_ in English spelling is usually /ŋk/ (DISC `Nk`) rather than /nk/ (DISC `nk`)
 - For "schwi", use `@` rather than `I` (e.g., _breathless_ is `brETl@s` not *`brETlIs`)
+- If you have the _cot_–_caught_ merger in production and/or perception, ask a non-merged friend to help you decide whether to transcribe `Q` or `$`.
+
+
+## Suggesting new dictionary entries
+
+APLS uses two sources to look up phonemic representations: (1) the Unisyn English dictionary (which is supposed to be a universal English dictionary), and (2) a [custom dictionary](https://raw.githubusercontent.com/djvill/APLS/main/files/custom-dictionary/aplsDict.txt).
+Occasionnally you'll run across a word that needs to be added to APLS's custom dictionary.
+Most often this will be a Pittsburgh/western PA geographic name (e.g., neighborhoods like _Shadyside_, municipalities like _Sewickley_, streets like _Baum_), a brand name (e.g., _Highmark_, _Panera_), or a Pittsburgh lexical feature (e.g., _redd_, _gumband_).
+However, there are words that aren't Pittsburgh-specific that are absent from Unisyn, sometimes unexpectedly;
+for example, we've had to manually add entries for _artsy_, _bachelorette_, _homie_, _Kwanzaa_, _microbrew_, _stepdad_, _tarp_, and _y'all_ (among others).
+
+Everything from the previous sections apply to new words that you suggest for the custom dictionary, plus the following:
+
+1. If applicable, you can suggest 2+ phonemic representations per word (but this is optional)
+1. Add symbols to mark syllabification and stress
+
+
+### Multiple phonemic representations
+
+APLS's custom dictionary can contain multiple phonemic representations for any given word.
+For example, the first vowel in _Lawrenceville_ can rhyme with either _shore_ or _far_ (`$r` or `#r`).
+In that case, just suggest the full DISC representation twice: `'l$r-Hs-"vIl` or `'l#r-Hs-"vIl`
 
 
 ### Syllabification and stress
 
-Use the following symbols for syllabification and stress **only** if suggesting new entries for the [APLS custom dictionary](https://raw.githubusercontent.com/djvill/elan-file-checkers/main/APLS%20Elan%20File%20Checker/dict/aplsDict.txt) (not for DISC transcription as pronounce codes):
+Use the following symbols for syllabification and stress **only** if suggesting new entries for the APLS custom dictionary (not for DISC transcription in pronounce codes):
 
 <div id="syll-table">
 
@@ -174,7 +196,7 @@ Use the following symbols for syllabification and stress **only** if suggesting 
 
 </div>
 
-For example, _Pittsburghese_ is `"pIts-b3r-'giz`. 
+For example, _Pennsylvanian_ is `"pEn-sP-'v1n-jH`. 
 Stress markers go before any other DISC symbols, but (if applicable) after the syllable boundary.
 Unstressed syllables get no stress markers.
 
