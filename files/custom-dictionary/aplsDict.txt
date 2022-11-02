@@ -2,15 +2,17 @@
 Ambridge
 Avonworth
 Beechview
+Braddock
 Brashear
 Brookline
 Clarion
 Crider
-Crider's
+Criders
 Duquesne
 Eastvale
 Emsworth
 Fernway
+Garfield
 Glassport
 Glenshaw
 Greensburg
@@ -40,11 +42,12 @@ Pittsburgher
 Portersville
 Renfrew
 Roche
-S'Liberty
+Schenley
 Sewickley
 Shadyside
 Shaler
 Sharpsburg
+SL'iberty
 Steeler
 Steelers
 Warrendale
@@ -87,6 +90,7 @@ yinzer
 ##Other
 'n
 Amiesite
+Amtrak
 anchorpeople
 anchorwoman
 anchorwomen
@@ -105,6 +109,8 @@ collab
 Deener
 dietitian
 disrespecting
+Dunkin
+Dunkin'
 Grier
 Gullifty
 Gullifty's
@@ -114,6 +120,7 @@ impatien
 Jo
 Juneteenth
 kind-hearted
+knick
 kook
 Kwanzaa
 Loews
@@ -129,6 +136,7 @@ righty
 Sambo
 Shawntae
 soft-hearted
+Starbucks
 stepdad
 stogie
 Stroh
