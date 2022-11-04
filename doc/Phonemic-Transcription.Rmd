@@ -86,9 +86,10 @@ As a result, the APLS subset of DISC doesn't have symbols for [ɾ] or [ʔ]; in N
 |  ʃ  |   S  | **sh**eep    |  **S**ip      |
 |  ʒ  |   Z  | mea**s**ure  |  mE**Z**\@r   |
 |  h  |   h  | **h**ad      |  **h**{d      |
-|  w  |   w  | **w**et      |  **w**Et      |
 |  tʃ |   J  | **ch**eap    |  **J**ip      |
 |  dʒ |   _  | **j**eep     |  **\_**ip     |
+|  w  |   w  | **w**et      |  **w**Et      |
+|  j  |   j  | **y**et      |  **j**Et      |
 
 
 ### Syllabic consonants
