@@ -7,7 +7,7 @@ Brashear
 Brookline
 Clarion
 Crider
-Criders
+Crider's
 Duquesne
 Eastvale
 Emsworth
@@ -42,12 +42,12 @@ Pittsburgher
 Portersville
 Renfrew
 Roche
+S'Liberty
 Schenley
 Sewickley
 Shadyside
 Shaler
 Sharpsburg
-SL'iberty
 Steeler
 Steelers
 Warrendale
