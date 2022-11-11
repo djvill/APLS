@@ -5,7 +5,7 @@
 #### txt format for APLS Elan File Checker.
 ####
 
-convertDict <- function(x, outFile=NULL) {
+convertDict <- function(x, outFile=NULL, format=c("txt", "md")) {
   library(readr)
   library(stringr)
   library(purrr)
@@ -39,7 +39,14 @@ convertDict <- function(x, outFile=NULL) {
   
   ##Optionally save
   if (!is.null(outFile)) {
-    writeLines(dict, outFile)
+    outFile <- tools::file_path_sans_ext(outFile)
+    if ("txt" %in% format) {
+      writeLines(dict, paste0(outFile, ".txt"))
+    }
+    if ("md" %in% format) {
+      mdHead <- "# APLS custom dictionary"
+      writeLines(dict, paste0(outFile, ".txt"))
+    }
   }
   
   ##Return dictionary invisibly

@@ -8,8 +8,10 @@ Brookline
 Clarion
 Crider
 Crider's
+Deener
 Duquesne
 Eastvale
+Edinboro
 Emsworth
 Fernway
 Garfield
@@ -20,6 +22,7 @@ Haine
 Hazelwood
 Homewood
 Indiantown
+Jo
 Karns
 Larimer
 Lawrenceville
@@ -33,6 +36,8 @@ Millvale
 Mon
 Monroeville
 Morganza
+Morningside
+Murrysville
 Oakmont
 Overbrook
 Passavant
@@ -50,6 +55,7 @@ Shaler
 Sharpsburg
 Steeler
 Steelers
+Swissvale
 Warrendale
 Waynesburg
 Weil
@@ -71,6 +77,7 @@ Wiggin
 
 
 ##Pittsburgh lexicon
+'n
 Eat'n
 grinnies
 grinny
@@ -89,74 +96,79 @@ yinz
 yinzer
 
 
-##Other
-'n
+##Company/brand names (local or otherwise)
 Amiesite
 Amtrak
-anchorpeople
-anchorwoman
-anchorwomen
-aneurysm
 Applebee
 Arby
 Arby's
-artsy
-babushka
-bachelorette
-balled
-Blige
-bungee
-coanchor
-collab
-Deener
-dietitian
-disrespecting
 Dunkin
 Dunkin'
-Grier
 Gullifty
 Gullifty's
 Highmark
-homie
+Loews
+Panera
+Pelusi
+Poli
+Poli's
+Starbucks
+Stroh
+Stroh's
+
+
+##Unexpected omissions from Unisyn
+aneurysm
+artsy
+bachelorette
+balled
+bungee
+dietitian
+disrespecting
+Grier
 impatien
-Jo
-Juneteenth
 kind-hearted
 knick
 kook
 Kwanzaa
-Loews
-McGruder
-meister
-microbrew
 moonshot
-Panera
-Pittsburghy
-Poli
-Poli's
 righty
-Sambo
-Shawntae
 soft-hearted
-Starbucks
+St
 stepdad
-stogie
-Stroh
-Stroh's
-sucky
 tarp
-there're
 worldview
 y'all
+
+
+##Other
+babushka
+Blige
+collab
+homie
+Juneteenth
+McGruder
+meister
+Pittsburghy
+Sambo
+Shawntae
+sucky
+there're
 Zehner
 
 
 ##Allowable colloquial spellings
 'nother
 'til
+anchorpeople
+anchorwoman
+anchorwomen
+coanchor
 I'mma
 lotta
+microbrew
 outta
+stogie
 tryna
 
 

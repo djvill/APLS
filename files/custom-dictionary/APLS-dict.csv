@@ -72,6 +72,12 @@ Garfield,'g#r-fild
 Schenley,'SEn-li
 Braddock,'br{-d@k
 Braddock,'br{-dQk
+Edinboro,'Ed-In-b@r-5
+Murrysville,'m3r-iz-"vIl 
+Morningside,'m$rn-IN-"s2d
+Swissvale,'swIs-"v1l
+Jo,'_5
+Deener,'di-n@r
 
 
 ##Pittsburgh personal names
@@ -101,55 +107,34 @@ grinnies,'grI-niz
 Trib,trIb
 Eat'n,'it-H
 N',H
+'n,H
 outen,'6t-H
 
 
-##Other
-Jo,'_5
-Deener,'di-n@r
-Kwanzaa,'kwQn-z@
-Juneteenth,"""_un-'tinT"
-Shawntae,"""S$n-'t1"
+##Company/brand names (local or otherwise)
 Applebee,'{-pP-bi
-homie,'h5-mi
-'n,H
+Pelusi,p@-'lu-si
 Amiesite,'{-mI-s2t
-Zehner,'z1-n@r
-impatien,Im-'p1-SH
-y'all,'j$l
-artsy,'#rt-si
-bachelorette,"""b{J-l@r-'Et"
-worldview,'w3rld-"vju
 Loews,'l5z
-meister,'m2s-t@r
-balled,'b$ld
-righty,'r2-ti
-Sambo,'s{m-b5
 Panera,p@-'n8r-@
-there're,D8r-@r
-anchorpeople,'{N-k@r-"pi-pP
-anchorwoman,'{N-k@r-"wU-mH
-anchorwomen,'{N-k@r-"wI-mH
-coanchor,'k5-"{N-k@r
-microbrew,'m2-kr5-bru
-stogie,'st5-gi
 Stroh,'str5
 Stroh's,'str5z
 Poli,'p5-l2
 Poli's,'p5-l2z
-McGruder,mI-'gru-d@r
-sucky,'sV-ki
-collab,k@-'l{b
-Blige,'bl2_
 Gullifty,g@-'lIf-ti
 Gullifty's,g@-'lIf-tiz
-kook,'kuk
-dietitian,"""d2-@-'tI-SH"
 Highmark,'h2-"m#rk
+Arby,'#r-bi
+Arby's,'#r-biz
+Starbucks,'st#r-bVks
+Dunkin,'dVN-kH
+Dunkin','dVN-kH
+Amtrak,'{m-"tr{k
+
+
+##Unexpected omissions from Unisyn
 tarp,'t#rp
 bungee,'bVn-_i
-babushka,b@-'bUS-k@
-babushka,b@-'buS-k@
 stepdad,'stEp-"d{d
 aneurysm,'{n-j@r-I-zF
 kind-hearted,'k2nd-"h#r-t@d
@@ -157,14 +142,36 @@ soft-hearted,'s$ft-"h#r-t@d
 disrespecting,"""dIs-r@-'spEk-tIN"
 Grier,'gr7r
 moonshot,'mun-"SQt
-Pittsburghy,'pIts-b3r-gi
-Arby,'#r-bi
-Arby's,'#r-biz
+kook,'kuk
+dietitian,"""d2-@-'tI-SH"
+balled,'b$ld
+righty,'r2-ti
+impatien,Im-'p1-SH
+y'all,'j$l
+artsy,'#rt-si
+bachelorette,"""b{J-l@r-'Et"
+worldview,'w3rld-"vju
+Kwanzaa,'kwQn-z@
 knick,'nIk
-Starbucks,'st#r-bVks
-Dunkin,'dVN-kH
-Dunkin','dVN-kH
-Amtrak,'{m-"tr{k
+St,'s1nt
+St,'strit
+
+
+##Other
+Juneteenth,"""_un-'tinT"
+Shawntae,"""S$n-'t1"
+homie,'h5-mi
+Zehner,'z1-n@r
+meister,'m2s-t@r
+Sambo,'s{m-b5
+there're,D8r-@r
+McGruder,mI-'gru-d@r
+sucky,'sV-ki
+collab,k@-'l{b
+Blige,'bl2_
+babushka,b@-'bUS-k@
+babushka,b@-'buS-k@
+Pittsburghy,'pIts-b3r-gi
 
 
 ##Allowable colloquial spellings
@@ -174,6 +181,12 @@ lotta,'lQ-t@
 I'mma,'2-m@
 outta,'6-t@
 tryna,'tr2-n@
+anchorpeople,'{N-k@r-"pi-pP
+anchorwoman,'{N-k@r-"wU-mH
+anchorwomen,'{N-k@r-"wI-mH
+coanchor,'k5-"{N-k@r
+microbrew,'m2-kr5-bru
+stogie,'st5-gi
 
 
 ##Allowable interjections
