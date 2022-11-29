@@ -40,7 +40,7 @@ Lawrenceville,'l#r-Hs-"vIl
 McKeesport,m@-'kiz-"p$rt
 Renfrew,'rEn-fru
 Sharpsburg,'S#rps-"b3rg
-Shaler,'S2-l@r
+Shaler,'S1-l@r
 Ambridge,'{m-brI_
 Leetsdale,'lits-"d1l
 Sewickley,s@-'wIk-li
@@ -78,6 +78,9 @@ Morningside,'m$rn-IN-"s2d
 Swissvale,'swIs-"v1l
 Jo,'_5
 Deener,'di-n@r
+Aspinwall,'{s-pH-"w$l
+Richland,'rIJ-lHd
+Ringgold,'rIN-g5ld
 
 
 ##Pittsburgh personal names
@@ -155,6 +158,10 @@ Kwanzaa,'kwQn-z@
 knick,'nIk
 St,'s1nt
 St,'strit
+anchorpeople,'{N-k@r-"pi-pP
+anchorwoman,'{N-k@r-"wU-mH
+anchorwomen,'{N-k@r-"wI-mH
+stogie,'st5-gi
 
 
 ##Other
@@ -172,6 +179,11 @@ Blige,'bl2_
 babushka,b@-'bUS-k@
 babushka,b@-'buS-k@
 Pittsburghy,'pIts-b3r-gi
+Limbaugh,'lIm-b$
+microbrew,'m2-kr5-bru
+coanchor,'k5-"{N-k@r
+scaredy,'sk8r-di
+rollerskating,'r5-l@r-"sk1-tIN
 
 
 ##Allowable colloquial spellings
@@ -181,12 +193,6 @@ lotta,'lQ-t@
 I'mma,'2-m@
 outta,'6-t@
 tryna,'tr2-n@
-anchorpeople,'{N-k@r-"pi-pP
-anchorwoman,'{N-k@r-"wU-mH
-anchorwomen,'{N-k@r-"wI-mH
-coanchor,'k5-"{N-k@r
-microbrew,'m2-kr5-bru
-stogie,'st5-gi
 
 
 ##Allowable interjections

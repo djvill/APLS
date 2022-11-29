@@ -1,5 +1,6 @@
 ##Pittsburgh/SWPA geographic names
 Ambridge
+Aspinwall
 Avonworth
 Beechview
 Braddock
@@ -46,6 +47,8 @@ Pennsylvanian
 Pittsburgher
 Portersville
 Renfrew
+Richland
+Ringgold
 Roche
 S'Liberty
 Schenley
@@ -118,6 +121,9 @@ Stroh's
 
 
 ##Unexpected omissions from Unisyn
+anchorpeople
+anchorwoman
+anchorwomen
 aneurysm
 artsy
 bachelorette
@@ -136,6 +142,7 @@ righty
 soft-hearted
 St
 stepdad
+stogie
 tarp
 worldview
 y'all
@@ -144,13 +151,18 @@ y'all
 ##Other
 babushka
 Blige
+coanchor
 collab
 homie
 Juneteenth
+Limbaugh
 McGruder
 meister
+microbrew
 Pittsburghy
+rollerskating
 Sambo
+scaredy
 Shawntae
 sucky
 there're
@@ -160,15 +172,9 @@ Zehner
 ##Allowable colloquial spellings
 'nother
 'til
-anchorpeople
-anchorwoman
-anchorwomen
-coanchor
 I'mma
 lotta
-microbrew
 outta
-stogie
 tryna
 
 
