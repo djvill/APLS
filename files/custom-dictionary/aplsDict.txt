@@ -28,6 +28,7 @@ Karns
 Larimer
 Lawrenceville
 Leetsdale
+McArdle
 McCandless
 McKeesport
 McKnightmare
@@ -93,6 +94,9 @@ Pittsburghese
 redd
 redder
 redding
+rench
+renched
+renches
 Trib
 WAMO
 yinz
@@ -153,6 +157,8 @@ babushka
 Blige
 coanchor
 collab
+craneman
+grandpap
 homie
 Juneteenth
 Limbaugh
