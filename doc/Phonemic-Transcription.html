@@ -11,9 +11,8 @@
 
 <meta name="author" content="Dan Villarreal" />
 
-<meta name="date" content="2022-10-27" />
 
-<title>DISC transcription for APLS</title>
+<title>DISC transcription</title>
 
 <script>// Pandoc 2.9 adds attributes on both header and div. We remove the former (to
 // be compatible with the behavior of Pandoc < 2.8).
@@ -1391,23 +1390,17 @@ overflow-y: auto;
 border: 1px solid #ddd;
 border-radius: 4px;
 }
-.tabset-dropdown > .nav-tabs > li.active:before {
-content: "";
+.tabset-dropdown > .nav-tabs > li.active:before, .tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+content: "\e259";
 font-family: 'Glyphicons Halflings';
 display: inline-block;
 padding: 10px;
 border-right: 1px solid #ddd;
 }
 .tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
-content: "";
-border: none;
-}
-.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
-content: "";
+content: "\e258";
 font-family: 'Glyphicons Halflings';
-display: inline-block;
-padding: 10px;
-border-right: 1px solid #ddd;
+border: none;
 }
 .tabset-dropdown > .nav-tabs > li.active {
 display: block;
@@ -1515,14 +1508,24 @@ font-size: 0.95em;
 
 
 
-<h1 class="title toc-ignore">DISC transcription for APLS</h1>
+<h1 class="title toc-ignore">DISC transcription</h1>
+<h3 class="subtitle">Archive of Pittsburgh Language and Speech
+(APLS)</h3>
 <h4 class="author">Dan Villarreal</h4>
-<h4 class="date">October 27, 2022</h4>
+<h4 class="date">Last updated January 20, 2023</h4>
 
 </div>
 
 
 <style type="text/css">
+
+li code:not(.counterex), p code:not(.counterex) {
+font-weight: bold;
+}
+li code.counterex, p code.counterex {
+font-weight: normal;
+text-decoration: line-through;
+}
 
 .table-condensed {
 max-width: 500px;
@@ -1955,28 +1958,37 @@ cutting off <em>start</em> as <code>sta~[st#]</code></li>
 <ul>
 <li>Exception: Always use <code>3r</code> for <em>-burg(h)</em>, even if
 it&#39;s unstressed (e.g., <em>Pittsburghese</em> is <code>pItsb3rgiz</code>
-not *<code>pItsb@rgiz</code>)</li>
+not <code class="counterex">pItsb@rgiz</code>)</li>
 </ul></li>
 <li>Use the DISC symbols for syllabic consonants,
 <code>F</code>/<code>H</code>/<code>P</code>, rather than
-<code>@m</code>/<code>@n</code>/<code>@l</code> (see examples <a href="#disc-consonants">above</a>)
+<code class="counterex">@m</code>/<code class="counterex">@n</code>/<code class="counterex">@l</code>
+(see examples <a href="#disc-consonants">above</a>)
 <ul>
-<li>Exception: Don&#39;t use syllabic consonants for onsets (e.g.,
-<em>Panera</em> is <code>p@n8r@</code>, not *<code>pH8r@</code>)</li>
+<li>Exception: Don&#39;t use these symbols for onsets (e.g., <em>Panera</em>
+is <code>p@n8r@</code>, not <code class="counterex">pH8r@</code>)</li>
 </ul></li>
 <li>For word-final high front vowels, use <code>i</code> rather than
 <code>I</code> (i.e., we assume universal <a href="https://en.wikipedia.org/wiki/Phonological_history_of_English_close_front_vowels#Happy-tensing"><em>happy</em>-tensing</a>)</li>
 <li>When /ŋ/ comes before a vowel or syllabic consonant, assume it&#39;s
 followed by /g/ (e.g., <em>dangle</em> is <code>d{NgP</code>, not
-*<code>d{NP</code>)</li>
+<code class="counterex">d{NP</code>)</li>
 <li>Don&#39;t forget that <em>nk</em> in English spelling is usually /ŋk/
-(DISC <code>Nk</code>) rather than /nk/ (DISC <code>nk</code>)</li>
-<li>For &quot;schwi&quot;, use <code>@</code> rather than <code>I</code> (e.g.,
-<em>breathless</em> is <code>brETl@s</code> not
-*<code>brETlIs</code>)</li>
+(DISC <code>Nk</code>) rather than /nk/ (DISC
+<code class="counterex">nk</code>)</li>
 <li>If you have the <em>cot</em>–<em>caught</em> merger in production
 and/or perception, ask a non-merged friend to help you decide whether to
 transcribe <code>Q</code> or <code>$</code>.</li>
+<li>Unstressed vowels can be tricky!
+<ul>
+<li>For &quot;schwi&quot;, use <code>@</code> rather than <code>I</code> (e.g.,
+<em>breathless</em> is <code>brETl@s</code> not
+<code class="counterex">brETlIs</code>)</li>
+<li>Same for <em>&#39;s</em> after a sibilant (e.g., <em>Lutz&#39;s</em> is
+<code>lVts@z</code> not <code class="counterex">lVtsIz</code>)</li>
+<li>Again, use <code>@</code> for unstressed mid-central vowels
+(&quot;schwa&quot;) and <code>@r</code> pre-/ɹ/</li>
+</ul></li>
 </ul>
 </div>
 <div id="suggesting-new-dictionary-entries" class="section level2 hasAnchor">
@@ -1988,13 +2000,14 @@ dictionary</a>. Occasionnally you&#39;ll run across a word that needs to be
 added to APLS&#39;s custom dictionary. Most often this will be a
 Pittsburgh/western PA geographic name (e.g., neighborhoods like
 <em>Shadyside</em>, municipalities like <em>Sewickley</em>, streets like
-<em>Baum</em>), a brand name (e.g., <em>Highmark</em>, <em>Panera</em>),
-or a Pittsburgh lexical feature (e.g., <em>redd</em>, <em>gumband</em>).
-However, there are words that aren&#39;t Pittsburgh-specific that are absent
-from Unisyn, sometimes unexpectedly; for example, we&#39;ve had to manually
-add entries for <em>artsy</em>, <em>bachelorette</em>, <em>homie</em>,
-<em>Kwanzaa</em>, <em>microbrew</em>, <em>stepdad</em>, <em>tarp</em>,
-and <em>y&#39;all</em> (among others).</p>
+<em>Baum</em>, schools like <em>Milliones</em>), a brand name (e.g.,
+<em>Highmark</em>, <em>Panera</em>), or a Pittsburgh lexical feature
+(e.g., <em>redd</em>, <em>gumband</em>). However, there are words that
+aren&#39;t Pittsburgh-specific that are absent from Unisyn, sometimes
+unexpectedly; for example, we&#39;ve had to manually add entries for
+<em>artsy</em>, <em>bachelorette</em>, <em>homie</em>, <em>Kwanzaa</em>,
+<em>microbrew</em>, <em>stepdad</em>, <em>tarp</em>, and <em>y&#39;all</em>
+(among others).</p>
 <p>Everything from the previous sections apply to new words that you
 suggest for the custom dictionary, plus the following:</p>
 <ol style="list-style-type: decimal">
@@ -2046,29 +2059,32 @@ after the syllable boundary. Unstressed syllables get no stress
 markers.</p>
 <p>A few finer points:</p>
 <ul>
-<li>Every complete word has one primary-stressed syllable.
+<li>Every <em>complete</em> word has one primary-stressed syllable.
 <em>Incomplete</em> words with hesitations might not have a
 primary-stressed syllable, but the APLS custom dictionary won&#39;t have
 incomplete words
 <ul>
-<li>Most words don&#39;t have secondary stress</li>
+<li>Most words don&#39;t have secondary stress. Compounds often do have
+secondary stress (e.g., <em>Sandcastle</em> is
+<code>&#39;s{nd-&quot;k{-sP</code>)</li>
 </ul></li>
 <li>Use secondary stress for city-name morphemes <em>-burg(h)</em>,
 <em>-ville</em>, <em>-vale</em>, <em>-dale</em>, <em>-town</em>, etc.
 <ul>
 <li>Exception: There are derivational affixes that change the stress
-pattern (e.g., <em>Pittsburghese</em> is
-<code>&quot;pIts-b3r-&#39;giz</code>)</li>
+pattern (e.g., <em>Pittsburgh</em> is <code>&quot;pIts-&quot;b3rg</code>, but
+<em>Pittsburghese</em> is <code>&quot;pIts-b3r-&#39;giz</code>)</li>
 </ul></li>
 <li>Intervocalic consonants should be syllabified as onsets rather than
 codas (e.g.,
 <ul>
 <li>Exception 1: Intervocalic /ɹ/ should be syllabified as a coda (e.g.,
 <em>Panera</em> is <code>p@-&#39;n8r-@</code> not
-*<code>p@-&#39;n8-r@</code>)</li>
+<code class="counterex">p@-&#39;n8-r@</code>)</li>
 <li>Exception 2: In environments where prevocalic /t/ becomes [ʔ] (e.g.,
-before /n̩/) should be syllabified as a coda (e.g., <em>outen</em> is
-<code>&#39;6t-H</code> not *<code>&#39;6-tH</code>)</li>
+before /n̩/), the /t/ should be syllabified as a coda (e.g.,
+<em>outen</em> is <code>&#39;6t-H</code> not
+<code class="counterex">&#39;6-tH</code>)</li>
 </ul></li>
 </ul>
 <script type="text/javascript">

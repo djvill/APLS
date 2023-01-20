@@ -1,7 +1,8 @@
 ---
-title: DISC transcription for APLS
+title: DISC transcription
+subtitle: Archive of Pittsburgh Language and Speech (APLS)
 author: Dan Villarreal
-date: October 27, 2022
+date: "Last updated `r gsub(' 0', ' ', format(Sys.Date(), '%B %d, %Y'))`"
 output: 
   html_document:
     toc: yes
@@ -18,6 +19,16 @@ knitr::opts_chunk$set(echo=FALSE)
 
 
 ```{css}
+/* Inline DISC examples */
+li code:not(.counterex), p code:not(.counterex) {
+  font-weight: bold;
+}
+
+li code.counterex, p code.counterex {
+  font-weight: normal;
+  text-decoration: line-through;
+}
+
 /* Consonants & vowels tables */
 .table-condensed {
   max-width: 500px;
@@ -152,21 +163,24 @@ Here are some other things to note:
 - Monophthongs before /ɹ/ should always be transcribed with the DISC `r` symbol (see examples [above](#monophthongs-before-r))
 	- Exception: the speaker cuts off the word before an /ɹ/ (e.g., cutting off _start_ as `sta~[st#]`
 - IPA makes a distinction between _stressed_ central vowels /ʌ ɝ/ and _unstressed_ central vowels /ə ɚ/. Similiarly, use DISC `V`/`3r` for _stressed_ vowels and `@`/`@r` for _unstressed_ vowels
-	- Exception: Always use `3r` for _-burg(h)_, even if it's unstressed (e.g., _Pittsburghese_ is `pItsb3rgiz` not *`pItsb@rgiz`)
-- Use the DISC symbols for syllabic consonants, `F`/`H`/`P`, rather than `@m`/`@n`/`@l` (see examples [above](#disc-consonants))
-	- Exception: Don't use syllabic consonants for onsets (e.g., _Panera_ is `p@n8r@`, not *`pH8r@`)
+	- Exception: Always use `3r` for _-burg(h)_, even if it's unstressed (e.g., _Pittsburghese_ is `pItsb3rgiz` not <code class="counterex">pItsb\@rgiz</code>)
+- Use the DISC symbols for syllabic consonants, `F`/`H`/`P`, rather than <code class="counterex">\@m</code>/<code class="counterex">\@n</code>/<code class="counterex">\@l</code> (see examples [above](#disc-consonants))
+	- Exception: Don't use these symbols for onsets (e.g., _Panera_ is `p@n8r@`, not <code class="counterex">pH8r\@</code>)
 - For word-final high front vowels, use `i` rather than `I` (i.e., we assume universal [_happy_-tensing](https://en.wikipedia.org/wiki/Phonological_history_of_English_close_front_vowels#Happy-tensing))
-- When /ŋ/ comes before a vowel or syllabic consonant, assume it's followed by /g/ (e.g., _dangle_ is `d{NgP`, not *`d{NP`)
-- Don't forget that _nk_ in English spelling is usually /ŋk/ (DISC `Nk`) rather than /nk/ (DISC `nk`)
-- For "schwi", use `@` rather than `I` (e.g., _breathless_ is `brETl@s` not *`brETlIs`)
+- When /ŋ/ comes before a vowel or syllabic consonant, assume it's followed by /g/ (e.g., _dangle_ is `d{NgP`, not <code class="counterex">d{NP</code>)
+- Don't forget that _nk_ in English spelling is usually /ŋk/ (DISC `Nk`) rather than /nk/ (DISC <code class="counterex">nk</code>)
 - If you have the _cot_–_caught_ merger in production and/or perception, ask a non-merged friend to help you decide whether to transcribe `Q` or `$`.
+- Unstressed vowels can be tricky!
+  - For "schwi", use `@` rather than `I` (e.g., _breathless_ is `brETl@s` not <code class="counterex">brETlIs</code>)
+  - Same for _'s_ after a sibilant (e.g., _Lutz's_ is `lVts@z` not <code class="counterex">lVtsIz</code>)
+  - Again, use `@` for unstressed mid-central vowels ("schwa") and `@r` pre-/ɹ/
 
 
 ## Suggesting new dictionary entries
 
 APLS uses two sources to look up phonemic representations: (1) the Unisyn English dictionary (which is supposed to be a universal English dictionary), and (2) a [custom dictionary](https://raw.githubusercontent.com/djvill/APLS/main/files/custom-dictionary/aplsDict.txt).
 Occasionnally you'll run across a word that needs to be added to APLS's custom dictionary.
-Most often this will be a Pittsburgh/western PA geographic name (e.g., neighborhoods like _Shadyside_, municipalities like _Sewickley_, streets like _Baum_), a brand name (e.g., _Highmark_, _Panera_), or a Pittsburgh lexical feature (e.g., _redd_, _gumband_).
+Most often this will be a Pittsburgh/western PA geographic name (e.g., neighborhoods like _Shadyside_, municipalities like _Sewickley_, streets like _Baum_, schools like _Milliones_), a brand name (e.g., _Highmark_, _Panera_), or a Pittsburgh lexical feature (e.g., _redd_, _gumband_).
 However, there are words that aren't Pittsburgh-specific that are absent from Unisyn, sometimes unexpectedly;
 for example, we've had to manually add entries for _artsy_, _bachelorette_, _homie_, _Kwanzaa_, _microbrew_, _stepdad_, _tarp_, and _y'all_ (among others).
 
@@ -203,13 +217,13 @@ Unstressed syllables get no stress markers.
 
 A few finer points:
 
-- Every complete word has one primary-stressed syllable. _Incomplete_ words with hesitations might not have a primary-stressed syllable, but the APLS custom dictionary won't have incomplete words
-	- Most words don't have secondary stress
+- Every _complete_ word has one primary-stressed syllable. _Incomplete_ words with hesitations might not have a primary-stressed syllable, but the APLS custom dictionary won't have incomplete words
+	- Most words don't have secondary stress. Compounds often do have secondary stress (e.g., _Sandcastle_ is `'s{nd-"k{-sP`)
 - Use secondary stress for city-name morphemes _-burg(h)_, _-ville_, _-vale_, _-dale_, _-town_, etc.
-	- Exception: There are derivational affixes that change the stress pattern (e.g., _Pittsburghese_ is `"pIts-b3r-'giz`)
+	- Exception: There are derivational affixes that change the stress pattern (e.g., _Pittsburgh_ is `"pIts-"b3rg`, but _Pittsburghese_ is `"pIts-b3r-'giz`)
 - Intervocalic consonants should be syllabified as onsets rather than codas (e.g., 
-	- Exception 1: Intervocalic /ɹ/ should be syllabified as a coda (e.g., _Panera_ is `p@-'n8r-@` not *`p@-'n8-r@`)
-	- Exception 2: In environments where prevocalic /t/ becomes [ʔ] (e.g., before /n̩/) should be syllabified as a coda (e.g., _outen_ is `'6t-H` not *`'6-tH`)
+	- Exception 1: Intervocalic /ɹ/ should be syllabified as a coda (e.g., _Panera_ is `p@-'n8r-@` not <code class="counterex">p\@-'n8-r\@</code>)
+	- Exception 2: In environments where prevocalic /t/ becomes [ʔ] (e.g., before /n̩/), the /t/ should be syllabified as a coda (e.g., _outen_ is `'6t-H` not <code class="counterex">'6-tH</code>)
 
 
 ```{js}

@@ -21,7 +21,9 @@ Glenshaw
 Greensburg
 Haine
 Hazelwood
+Herron
 Homewood
+Idlewild
 Indiantown
 Jo
 Karns
@@ -31,6 +33,7 @@ Leetsdale
 McArdle
 McCandless
 McKeesport
+McKelvey
 McKnightmare
 McMunn
 Milliones
@@ -52,6 +55,7 @@ Richland
 Ringgold
 Roche
 S'Liberty
+Sandcastle
 Schenley
 Sewickley
 Shadyside
@@ -60,12 +64,14 @@ Sharpsburg
 Steeler
 Steelers
 Swissvale
+wannabe
 Warrendale
 Waynesburg
 Weil
 Wexford
 Wiley
 Wilkinsburg
+Woolslair
 Zelie
 Zelienople
 
@@ -115,6 +121,8 @@ Gullifty
 Gullifty's
 Highmark
 Loews
+Lutz
+Lutz's
 Panera
 Pelusi
 Poli
