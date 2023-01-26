@@ -7,7 +7,6 @@ Braddock
 Brashear
 Brookline
 Clarion
-Crider
 Crider's
 Deener
 Duquesne
@@ -79,7 +78,6 @@ Zelienople
 ##Pittsburgh personal names
 Bonilla
 Kaufer
-Krenn
 Krenn's
 Kudzma
 Stargell
@@ -113,22 +111,17 @@ yinzer
 Amiesite
 Amtrak
 Applebee
-Arby
 Arby's
 Dunkin
 Dunkin'
-Gullifty
 Gullifty's
 Highmark
 Loews
-Lutz
 Lutz's
 Panera
 Pelusi
-Poli
 Poli's
 Starbucks
-Stroh
 Stroh's
 
 
