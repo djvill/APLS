@@ -12,13 +12,15 @@ output:
       style: "icon"
     md_extensions: -smart
     includes:
-      in_header: ../site-elements/header.html
+      in_header: ../site-assets/header.html
+    css: ../site-assets/css/doc.css
+    number_sections: yes
+    pandoc_args: "--shift-heading-level-by=-1"
 ---
 
 ```{r, echo=FALSE}
 knitr::opts_chunk$set(echo=FALSE)
 ```
-
 
 ```{css}
 /* Inline DISC examples */
@@ -65,9 +67,9 @@ li {
 
 The **DISC phonemic alphabet** represents speech sounds by creating a one-to-one mapping between sounds and symbols, much like the IPA.
 _Unlike_ the IPA, the DISC phonemic alphabet only uses symbols that appear on a standard keyboard.
-APLS uses a subset of DISC relevant to North American Englishes.
 
-In APLS, we use DISC symbols for **phonemic** representations of sounds, not **phonetic** representations.
+APLS uses a subset of DISC relevant to North American Englishes.
+In APLS, we use DISC symbols for _phonemic_ representations of sounds, not _phonetic_ representations.
 As a result, the APLS subset of DISC doesn't have symbols for [ɾ] or [ʔ]; in North American Englishes, these surface only as allophones of /t/.
 
 
@@ -116,7 +118,7 @@ As a result, the APLS subset of DISC doesn't have symbols for [ɾ] or [ʔ]; in N
 
 ## DISC vowels 
 
-### Monophthongs not before /ɹ/
+### Monophthongs not before /ɹ/ {#monophthongs-not-before-r}
 
 | IPA | DISC |    English   |      DISC     |
 |-----|------|--------------|---------------|
@@ -132,7 +134,7 @@ As a result, the APLS subset of DISC doesn't have symbols for [ɾ] or [ʔ]; in N
 |  u  |   u  | g**oo**se    |  g**u**s      |
 
 
-### Monophthongs before /ɹ/
+### Monophthongs before /ɹ/ {#monophthongs-before-r}
 
 | IPA | DISC |    English   |      DISC     |
 |-----|------|--------------|---------------|
@@ -228,6 +230,12 @@ A few finer points:
 	- Exception 2: In environments where prevocalic /t/ becomes [ʔ] (e.g., before /n̩/), the /t/ should be syllabified as a coda (e.g., _outen_ is `'6t-H` not <code class="counterex">'6-tH</code>)
 
 
+
+
+```{js, file="../site-assets/js/doc.js"}
+/* Common documentation JS */
+```
+
 ```{js}
 /* Add headers above consonants and vowels tables */
 var newHead = `
@@ -242,12 +250,6 @@ Array.from($("#disc-consonants tr.header"))
 	.map(a => a.insertAdjacentHTML('beforebegin', newHead));
 Array.from($("#disc-vowels tr.header"))
 	.map(a => a.insertAdjacentHTML('beforebegin', newHead));
-
-/* Open external links in new tab */
-Array.from($("a:not(.anchor-section)"))
-	.filter(a => !a.href.startsWith("file:///"))
-	.filter(a => !a.href.startsWith("https://djvill.github.io/APLS/doc/Phonemic-Transcription.html#"))
-	.map(a => a.target="_blank");
 ```
 
 

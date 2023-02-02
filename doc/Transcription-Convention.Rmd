@@ -12,13 +12,15 @@ output:
       style: "icon"
     md_extensions: -smart
     includes:
-      in_header: ../site-elements/header.html
+      in_header: ../site-assets/header.html
+    css: ../site-assets/css/doc.css
+    number_sections: yes
+    pandoc_args: "--shift-heading-level-by=-1"
 ---
 
 ```{r, echo=FALSE}
 knitr::opts_chunk$set(echo=FALSE)
 ```
-
 
 ```{css}
 /* Text typed into transcription program */
@@ -244,19 +246,15 @@ Within that framework, though, there are some important things to consider
 
 
 
+```{js, file="../site-assets/js/doc.js"}
+/* Common documentation JS */
+```
 
 ```{js}
-/* Open external links in new tab */
-Array.from($("a:not(.anchor-section)"))
-	.filter(a => !a.href.startsWith("file:///"))
-	.filter(a => !a.href.startsWith("https://djvill.github.io/APLS/doc/Transcription-Convention.html#"))
-	.map(a => a.target="_blank");
-
 /* Remove space between list and table */
 Array.from($("ul + table").prev())
 	.map(a => a.style.cssText+='margin-bottom:0px; padding-bottom:0px;')
-
-/* Add nonbreaking spaces after "e.g.," */
-Array.from($("p, li"))
-	.map(a => a.innerHTML = a.innerHTML.replace("e.g., ", "e.g.,&nbsp;"))
 ```
+
+
+

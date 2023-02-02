@@ -1346,6 +1346,7 @@ if (window.hljs) {
 
 
 
+<style type="text/css">#header {margin-bottom: 1.5em;}#header .title {margin-bottom: 5px;}#header :not(h1) {margin: 0px 0px 5px;padding-left: 25px;font-style: italic;}#header .subtitle {font-size: 20px;font-weight: bold;}#header h4 {font-size: 14px;}</style>
 
 
 
@@ -1513,7 +1514,7 @@ font-size: 0.95em;
 <h3 class="subtitle">Archive of Pittsburgh Language and Speech
 (APLS)</h3>
 <h4 class="author">Dan Villarreal</h4>
-<h4 class="date">Last updated January 30, 2023</h4>
+<h4 class="date">Last updated February 1, 2023</h4>
 
 </div>
 
@@ -1564,8 +1565,9 @@ turns. In other words, you first figure out who is speaking when, then
 you figure what they said.</p>
 <p>In this document, <code>fixed-width font</code> is used for things
 you actually type into the transcription program (Elan or Praat).</p>
-<div id="file-setup" class="section level2 hasAnchor">
-<h2 class="hasAnchor">File setup<a href="#file-setup" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="file-setup" class="section level1 hasAnchor" number="1">
+<h1 class="hasAnchor"><span class="header-section-number">1</span> File
+setup<a href="#file-setup" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <ul>
 <li>The transcription file (ending in .eaf if using Elan, .TextGrid if
 using Praat) should have the same name as the sound file. Pay attention
@@ -1582,23 +1584,22 @@ tiers</strong>: <code>Noise</code>, <code>Comment</code>, and
 <code>Redaction</code>
 <ul>
 <li>The tier name for the main speaker(s) should be that speaker&#39;s APLS
-code (e.g., <code>LV01</code>). Main speaker(s) are in the sound file
+code (e.g., <code>LV01</code>). Main speaker(s) are in the sound file
 name.</li>
 <li>The tier name for the interviewer(s) should be the interviewer&#39;s
 name if it&#39;s known (<code>Trista Pennington</code> for HD interviews,
 <code>Barbara Johnstone</code> or <code>Jennifer Andrus</code> for
 CB/FH/LV interviews). If unknown, use <code>Interviewer</code> and the
-main speaker&#39;s APLS code (e.g., <code>Interviewer HD01</code>)</li>
+main speaker&#39;s APLS code (e.g., <code>Interviewer HD01</code>)</li>
 <li>If the main speaker from a different file shows up in the sound
 file, name their tier with their speaker code</li>
 <li>Any additional speakers should be named <code>Bystander</code> +
-main speaker&#39;s APLS code + a number
-(e.g., <code>Bystander CB01 1</code>,
-<code>Bystander CB01 2</code>)</li>
+main speaker&#39;s APLS code + a number (e.g.,
+<code>Bystander CB01 1</code>, <code>Bystander CB01 2</code>)</li>
 <li>Don&#39;t forget <code>Noise</code>, <code>Comment</code>, and
 <code>Redaction</code> tiers!</li>
-<li>Pay attention to capitalization, plurals, etc.
-(e.g., <code>Redaction</code> not
+<li>Pay attention to capitalization, plurals, etc. (e.g.,
+<code>Redaction</code> not
 <code class="counterex">redactions</code>)</li>
 </ul></li>
 <li>If using Elan:
@@ -1615,8 +1616,9 @@ transcription)</li>
 Participant and Annotator attributes after importing to Elan</li>
 </ul></li>
 </ul>
-<div id="tips" class="section level3 hasAnchor">
-<h3 class="hasAnchor">Tips<a href="#tips" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="tips" class="section level2 hasAnchor" number="1.1">
+<h2 class="hasAnchor"><span class="header-section-number">1.1</span>
+Tips<a href="#tips" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <ul>
 <li><strong>Save your work often!</strong>
 <ul>
@@ -1639,8 +1641,9 @@ fresh ears after you&#39;re done the first pass. Make sure to delete the
 </ul>
 </div>
 </div>
-<div id="segmentation" class="section level2 hasAnchor">
-<h2 class="hasAnchor">Segmentation<a href="#segmentation" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="segmentation" class="section level1 hasAnchor" number="2">
+<h1 class="hasAnchor"><span class="header-section-number">2</span>
+Segmentation<a href="#segmentation" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <ul>
 <li>It&#39;s strongly recommended to segment the sound file into turns
 first, then go back and fill in the transcription
@@ -1650,7 +1653,7 @@ annotating, and others prefer to segment and annotate in chunks</li>
 <li>If using Elan, segment using Annotation Mode or Segmentation Mode,
 and transcribe using Transcription Mode</li>
 <li>Praat doesn&#39;t distinguish between empty and non-empty intervals. So
-when segmenting, add a filler character (e.g., <code>&gt;</code>) into
+when segmenting, add a filler character (e.g., <code>&gt;</code>) into
 each interval you intend to fill later</li>
 <li>In files with a single main speaker, the interviewer is always on
 the left channel and the interviewee is on the right channel. In Praat,
@@ -1666,8 +1669,9 @@ or right-click on the turn to split/merge the turn</li>
 <li>If using Praat, drag turn boundaries to adjust them</li>
 </ul></li>
 </ul>
-<div id="turns" class="section level3 hasAnchor">
-<h3 class="hasAnchor">Turns<a href="#turns" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="turns" class="section level2 hasAnchor" number="2.1">
+<h2 class="hasAnchor"><span class="header-section-number">2.1</span>
+Turns<a href="#turns" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <ul>
 <li>Segment interviews into turns based on breath groups, not
 sentences—spontaneous speech seldom consists of sentences as we know
@@ -1684,8 +1688,9 @@ words into sets of ~5 within a turn</li>
 <li>Never put a breakpoint in the middle of a word.</li>
 </ul>
 </div>
-<div id="overlaps" class="section level3 hasAnchor">
-<h3 class="hasAnchor">Overlaps<a href="#overlaps" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="overlaps" class="section level2 hasAnchor" number="2.2">
+<h2 class="hasAnchor"><span class="header-section-number">2.2</span>
+Overlaps<a href="#overlaps" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>We have to handle <strong>overlapping speech</strong> carefully
 because of how LaBB-CAT treats overlapping turns: it excludes them from
 phonetic forced-alignment. That is, any audio transcribed as overlapping
@@ -1712,8 +1717,9 @@ program that &#39;snaps together&#39; turn boundaries across tiers</li>
 </ul></li>
 </ul>
 </div>
-<div id="redaction" class="section level3 hasAnchor">
-<h3 class="hasAnchor">Redaction<a href="#redaction" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="redaction" class="section level2 hasAnchor" number="2.3">
+<h2 class="hasAnchor"><span class="header-section-number">2.3</span>
+Redaction<a href="#redaction" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>To help protect our speakers&#39; privacy, we use
 <strong>redaction</strong> to keep sensitive personal information out of
 APLS. When we mark a stretch of speech as redacted, LaBB-CAT deletes the
@@ -1725,12 +1731,12 @@ information, plus the <code>Redaction</code> tier</li>
 <li>On the speaker&#39;s tier, enter <code>REDACT</code>
 <ul>
 <li>On the <code>Redaction</code> tier, enter a brief description of why
-you&#39;re redacting the speech (e.g., <code>speaker name</code>)</li>
+you&#39;re redacting the speech (e.g., <code>speaker name</code>)</li>
 <li>Treat these redactions like overlaps: they should be as short as
 possible to avoid deleting more information than necessary, and they
 should be separate from other turns. As usual for overlaps, don&#39;t split
 up words</li>
-<li>If a redaction coincides with overlapped speech (e.g., Speaker A
+<li>If a redaction coincides with overlapped speech (e.g., Speaker A
 says their name while Speaker B says something else), enter
 <code>REDACT</code> on Speaker A&#39;s tier, and transcribe Speaker B
 normally</li>
@@ -1751,15 +1757,17 @@ contact Dan</li>
 </ul>
 </div>
 </div>
-<div id="annotation" class="section level2 hasAnchor">
-<h2 class="hasAnchor">Annotation<a href="#annotation" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="annotation" class="section level1 hasAnchor" number="3">
+<h1 class="hasAnchor"><span class="header-section-number">3</span>
+Annotation<a href="#annotation" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <p>For the most part, these transcriptions are
 <strong>orthographic</strong>. That is, they consist mostly of the words
 that speakers say, written with conventional American English spelling.
 Within that framework, though, there are some important things to
 consider</p>
-<div id="spelling" class="section level3 hasAnchor">
-<h3 class="hasAnchor">Spelling<a href="#spelling" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="spelling" class="section level2 hasAnchor" number="3.1">
+<h2 class="hasAnchor"><span class="header-section-number">3.1</span>
+Spelling<a href="#spelling" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <ul>
 <li><strong>Careless typos cause difficulties for our parsers—please be
 careful</strong>!</li>
@@ -1769,7 +1777,7 @@ dictionary or Google it
 <ul>
 <li>When the speaker refers to a neighborhood or city, the name should
 always be capitalized even if the individual words are common nouns
-(e.g., <code>Larimer</code>, <code>the Hill</code>)</li>
+(e.g., <code>Larimer</code>, <code>the Hill</code>)</li>
 </ul></li>
 <li>With the exception of disfluencies or obvious mispronunciations,
 words should be spelled out in their &quot;dictionary form&quot;. That means:
@@ -1788,28 +1796,28 @@ letters (e.g., <code>old</code> not
 (<code>downtown</code> not <code class="counterex">dahntahn</code>;
 <code>Steelers</code> not <code class="counterex">Stillers</code>). If
 you want to mention speakers&#39; performative use of &quot;dialect
-pronunciations&quot;, use a comment in curly brackets (see <a href="#comments-and-noises">below</a>)</li>
+pronunciations&quot;, use a <a href="#comments-and-noises">comment</a></li>
 <li>Using non-dictionary forms makes it harder to find words in search
 results and prevents the corpus software from using computational
-methods (e.g., part-of-speech lookup)</li>
+methods (e.g., part-of-speech lookup)</li>
 </ul></li>
 <li><strong>Don&#39;t tidy up the speech</strong>. Leave in the repetitions,
 fillers, speech errors, bad words, mean sentiments, etc.</li>
 <li>Don&#39;t use capital letters for the start of new sentences. Only use
 capital letters for proper nouns and the pronoun <em>I</em></li>
-<li>Write all numbers out in full, with spaces instead of hyphens
-(e.g., <code>one hundred and twenty three</code> not
+<li>Write all numbers out in full, with spaces instead of hyphens (e.g.,
+<code>one hundred and twenty three</code> not
 <code class="counterex">123</code> or <code class="counterex">one
 hundred and twenty-three</code>)</li>
 <li>When abbreviations or acronyms are used
 <ul>
 <li>If each letter is said separately, use capital letters with spaces
-in between each letter (e.g., <code>P G H</code>)</li>
+in between each letter (e.g., <code>P G H</code>)</li>
 <li>If the word is pronounced as a word, use capitals with no spaces
-(e.g., <code>FEMA</code>)</li>
+(e.g., <code>FEMA</code>)</li>
 </ul></li>
 <li>Don&#39;t use any diacritics that are not part of the English alphabet
-(e.g., <code>fiancee</code> not
+(e.g., <code>fiancee</code> not
 <code class="counterex">fiancée</code>)</li>
 <li>A single word should always be spelled as an entire word, even if
 there is a pause between syllables. <strong>Never</strong> put a
@@ -1902,17 +1910,18 @@ symbols for clarity):</li>
 </tbody>
 </table>
 </div>
-<div id="punctuation" class="section level3 hasAnchor">
-<h3 class="hasAnchor">Punctuation<a href="#punctuation" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="punctuation" class="section level2 hasAnchor" number="3.2">
+<h2 class="hasAnchor"><span class="header-section-number">3.2</span>
+Punctuation<a href="#punctuation" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <ul>
 <li>The only allowable punctuation marks are apostrophes and hyphens
 (within words) and periods, hyphens, and question marks (between
 words)</li>
 <li>Correctly use apostrophes as they would be used in standard writing
-(e.g., <code>can&#39;t</code>, <code>it&#39;s</code>, <code>John&#39;s</code>,
+(e.g., <code>can&#39;t</code>, <code>it&#39;s</code>, <code>John&#39;s</code>,
 <code>the Johnsons&#39; house</code>)</li>
 <li>Use within-word hyphens when the hyphenated representation of a word
-is common in writing (e.g., <code>self-esteem</code> not
+is common in writing (e.g., <code>self-esteem</code> not
 <code class="counterex">short-necked</code>)</li>
 <li>Other than apostrophes, there should always be a space between
 letters and punctuation (e.g., <code>I know it .</code> not
@@ -1934,17 +1943,18 @@ other characters.</li>
 <code>then he said well I suppose you could try it</code>)</li>
 </ul>
 </div>
-<div id="comments-and-noises" class="section level3 hasAnchor">
-<h3 class="hasAnchor">Comments and noises<a href="#comments-and-noises" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="comments-and-noises" class="section level2 hasAnchor" number="3.3">
+<h2 class="hasAnchor"><span class="header-section-number">3.3</span>
+Comments and noises<a href="#comments-and-noises" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <ul>
 <li>Non-speech noises should be notated with a brief description
 <ul>
 <li>Noises produced by individuals should be transcribed between square
-brackets on that individual speakers&#39; tier (e.g., <code>[laughs]</code>,
+brackets on that individual speakers&#39; tier (e.g., <code>[laughs]</code>,
 <code>[sniffs]</code>)</li>
 <li>General noises should appear on the Noise tier
-<strong>without</strong> square brackets
-(e.g., <code>loud truck goes by</code>,
+<strong>without</strong> square brackets (e.g.,
+<code>loud truck goes by</code>,
 <code>interviewer plays drums</code>)</li>
 <li>You don&#39;t need to transcribe every single breath or sniff, just the
 ones that are prominent enough that a computer could confuse them for a
@@ -1953,16 +1963,16 @@ speech sound</li>
 <li>Comments can be about individuals&#39; speech or general comments
 <ul>
 <li>Comments about individuals&#39; speech or behavior should be placed
-between curly brackets on the speaker&#39;s tier
-(e.g., <code>{pretends to talk like a man}</code>)</li>
+between curly brackets on the speaker&#39;s tier (e.g.,
+<code>{pretends to talk like a man}</code>)</li>
 <li>General comments can be placed on the <code>Comment</code> tier
-<strong>without</strong> curly brackets
-(e.g., <code>long period not transcribed due to microphone failure</code>
-or <code>the two speakers whisper together</code>)</li>
+<strong>without</strong> curly brackets (e.g.,
+<code>long period not transcribed due to microphone failure</code> or
+<code>the two speakers whisper together</code>)</li>
 <li>In the &quot;Pittsburghese&quot; or &quot;AAE&quot; section of the interview, if the
 speaker performs &quot;dialect forms&quot;, curly brackets can be used to mention
-their performance
-(e.g., <code>you often hear people saying downtown {performs monophthong aw}</code>).
+their performance (e.g.,
+<code>you often hear people saying downtown {performs monophthong aw}</code>).
 Remember: <a href="#spelling">don&#39;t use &quot;eye dialect&quot; spellings</a>,
 even if the speaker is clearly performing an accent other than their
 own</li>
@@ -1980,8 +1990,9 @@ you&#39;ve heard more of the speaker</li>
 </ul></li>
 </ul>
 </div>
-<div id="hesitations-and-novel-words" class="section level3 hasAnchor">
-<h3 class="hasAnchor">Hesitations and novel words<a href="#hesitations-and-novel-words" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="hesitations-and-novel-words" class="section level2 hasAnchor" number="3.4">
+<h2 class="hasAnchor"><span class="header-section-number">3.4</span>
+Hesitations and novel words<a href="#hesitations-and-novel-words" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <ul>
 <li>Words that are unfinished are represented in a special way: with a
 tilde to mark incompleteness and at least one code to help LaBB-CAT
@@ -2013,7 +2024,7 @@ just a consonant, since these are built-in to APLS&#39;s dictionary
 <li>If a speaker uses a word that isn&#39;t likely to be in APLS&#39;s custom
 dictionary (a word made up on the spot, a specific road name, etc.),
 just spell it the best you can, and provide a pronounce code in DISC
-(e.g., <code>yinzerific[yInz@rIfIk]</code>)
+(e.g., <code>yinzerific[yInz@rIfIk]</code>)
 <ul>
 <li>We can add words to APLS&#39;s custom dictionary, but only if it&#39;s a
 word that is likely to be used by more than just one speaker</li>
@@ -2025,16 +2036,18 @@ supplied every time</li>
 /* Open external links in new tab */
 Array.from($("a:not(.anchor-section)"))
     .filter(a => !a.href.startsWith("file:///"))
-    .filter(a => !a.href.startsWith("https://djvill.github.io/APLS/doc/Transcription-Convention.html#"))
+    .filter(a => !a.href.startsWith(window.location.href + "#"))
     .map(a => a.target="_blank");
-
-/* Remove space between list and table */
-Array.from($("ul + table").prev())
-    .map(a => a.style.cssText+='margin-bottom:0px; padding-bottom:0px;')
 
 /* Add nonbreaking spaces after "e.g.," */
 Array.from($("p, li"))
     .map(a => a.innerHTML = a.innerHTML.replace("e.g., ", "e.g.,&nbsp;"))
+
+</script>
+<script type="text/javascript">
+/* Remove space between list and table */
+Array.from($("ul + table").prev())
+    .map(a => a.style.cssText+='margin-bottom:0px; padding-bottom:0px;')
 </script>
 </div>
 </div>
