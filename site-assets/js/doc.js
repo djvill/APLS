@@ -5,6 +5,7 @@ document.title += " | APLS"
 Array.from($("a:not(.anchor-section)"))
 	.filter(a => !a.href.startsWith("file:///"))
 	.filter(a => !a.href.startsWith(window.location.href + "#"))
+	.filter(a => a.innerText != "")
 	.map(a => a.target="_blank");
 
 /* Add nonbreaking spaces after "e.g.," */
