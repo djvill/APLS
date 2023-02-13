@@ -1514,7 +1514,7 @@ font-size: 0.95em;
 <h3 class="subtitle">Archive of Pittsburgh Language and Speech
 (APLS)</h3>
 <h4 class="author">Dan Villarreal</h4>
-<h4 class="date">Last updated February 1, 2023</h4>
+<h4 class="date">Last updated February 13, 2023</h4>
 
 </div>
 
@@ -1629,7 +1629,7 @@ automatic backup interval (File &gt; Automatic Backup)</li>
 then it speeds up once you get used to how a speaker talks</li>
 <li>The majority of the sound file will be relatively easy to
 transcribe. However, some parts of each file will take
-disproportionately long to transcribe due to <a href="#hesitations-and-novel-words">hesitations</a>, <a href="#overlaps">overlaps</a>, and/or ambiguous speech
+disproportionately long to transcribe due to <a href="#unfinished-words-and-novel-words">unfinished words</a>, <a href="#overlaps">overlaps</a>, and/or ambiguous speech
 <ul>
 <li>One recommendation is to create a temporary <code>Recheck</code>
 tier where you make note of speech you&#39;re having trouble hearing
@@ -1779,8 +1779,9 @@ dictionary or Google it
 always be capitalized even if the individual words are common nouns
 (e.g., <code>Larimer</code>, <code>the Hill</code>)</li>
 </ul></li>
-<li>With the exception of disfluencies or obvious mispronunciations,
-words should be spelled out in their &quot;dictionary form&quot;. That means:
+<li><a id="dict-form"></a> With the exception of disfluencies or obvious
+mispronunciations, words should be spelled out in their &quot;dictionary
+form&quot;. That means:
 <ul>
 <li>Do <strong>not</strong> represent typical
 phonological/sociolinguistic processes like &quot;g dropping&quot; or consonant
@@ -1822,8 +1823,8 @@ in between each letter (e.g., <code>P G H</code>)</li>
 <li>A single word should always be spelled as an entire word, even if
 there is a pause between syllables. <strong>Never</strong> put a
 breakpoint in the middle of a word.</li>
-<li>The following list represents all and only colloquial spellings that
-may be used in transcription:</li>
+<li><a id="colloq-spellings"></a> The following list represents all and
+only colloquial spellings that may be used in transcription:</li>
 </ul>
 <table>
 <tbody>
@@ -1857,8 +1858,8 @@ may be used in transcription:</li>
 <li>Standard contractions are fine (e.g., <code>might&#39;ve</code>). The
 clitics <code>&#39;d</code>, <code>&#39;ll</code> and <code>&#39;s</code> can be
 attached to any noun</li>
-<li>For other interjections, select a representation from the list (IPA
-symbols for clarity):</li>
+<li><a id="other-interjections"></a> For other interjections, select a
+representation from the list (IPA symbols for clarity):</li>
 </ul>
 <table>
 <tbody>
@@ -1990,9 +1991,9 @@ you&#39;ve heard more of the speaker</li>
 </ul></li>
 </ul>
 </div>
-<div id="hesitations-and-novel-words" class="section level2 hasAnchor" number="3.4">
+<div id="unfinished-words-and-novel-words" class="section level2 hasAnchor" number="3.4">
 <h2 class="hasAnchor"><span class="header-section-number">3.4</span>
-Hesitations and novel words<a href="#hesitations-and-novel-words" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+Unfinished words and novel words<a href="#unfinished-words-and-novel-words" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <ul>
 <li>Words that are unfinished are represented in a special way: with a
 tilde to mark incompleteness and at least one code to help LaBB-CAT
@@ -2008,31 +2009,47 @@ be acceptable: <code>hesi~[hEz@]</code>,
 tilde</strong>. The pronounce code uses the <a href="https://djvill.github.io/APLS/doc/Phonemic-Transcription.html">DISC
 phonemic alphabet</a> to give a phonological representation of what was
 said, in square brackets (<code>[hEz@]</code>, where DISC <code>E</code>
-&amp; <code>@</code> = IPA ε &amp; ə). Note that this transcription is
-<strong>phonological, not phonetic</strong></li>
+&amp; <code>@</code> = IPA ε &amp; ə). Note that DISC representations
+are <strong>phonological, not phonetic</strong></li>
 <li>Optionally, you can add a lexical code, which uses English spelling
 to represent the intended word (if known). The lexical code goes in
 parentheses (<code>(hesitate)</code>) with <strong>no space after the
 pronounce code</strong></li>
 </ul></li>
-<li>You can omit pronounce codes for unfinished words that consist of
-just a consonant, since these are built-in to APLS&#39;s dictionary
+<li><a id="single-cons-unfinished"></a> You can omit pronounce codes for
+unfinished words that consist of just a consonant, since these are
+built-in to APLS&#39;s dictionary
 <ul>
 <li>For example, if the speaker just says [f], you can write just
 <code>f~</code> without a pronounce code</li>
 </ul></li>
-<li>If a speaker uses a word that isn&#39;t likely to be in APLS&#39;s custom
-dictionary (a word made up on the spot, a specific road name, etc.),
-just spell it the best you can, and provide a pronounce code in DISC
-(e.g., <code>yinzerific[yInz@rIfIk]</code>)
+<li>Words do <strong>not</strong> need to be marked as unfinished if
+their pronunciation is the result of a typical
+phonological/sociolinguistic process like or consonant cluster deletion
 <ul>
+<li>For example, if the speaker says <em>and</em> as
+[æ<strong>n</strong>] rather than [æ<strong>nd</strong>], transcribe it
+as just <code>and</code>, not
+<code class="counterex">an~[{n]</code></li>
+<li>This is related to the principle that words should be spelled out in
+their <a href="#dict-form">&quot;dictionary form&quot;</a></li>
+</ul></li>
+<li><a id="novel-words"></a> If a speaker uses a word that isn&#39;t in a
+standard dictionary or <a href="https://raw.githubusercontent.com/djvill/APLS/main/files/custom-dictionary/aplsDict.txt">APLS&#39;s
+custom dictionary</a> (a word made up on the spot, a specific road name,
+etc.), just spell it the best you can, and provide a pronounce code in
+DISC (e.g., <code>yinzerific[jInz@rIfIk]</code>)
+<ul>
+<li>If the word is used more than once in a transcript, the DISC code
+needs to be supplied every time</li>
 <li>We can add words to APLS&#39;s custom dictionary, but only if it&#39;s a
 word that is likely to be used by more than just one speaker</li>
-<li>If the word is used more than once, the DISC code needs to be
-supplied every time</li>
 </ul></li>
 </ul>
 <script type="text/javascript">
+/* Add " | APLS" suffix to page title */
+document.title += " | APLS"
+
 /* Open external links in new tab */
 Array.from($("a:not(.anchor-section)"))
     .filter(a => !a.href.startsWith("file:///"))
@@ -2042,7 +2059,6 @@ Array.from($("a:not(.anchor-section)"))
 /* Add nonbreaking spaces after "e.g.," */
 Array.from($("p, li"))
     .map(a => a.innerHTML = a.innerHTML.replace("e.g., ", "e.g.,&nbsp;"))
-
 </script>
 <script type="text/javascript">
 /* Remove space between list and table */

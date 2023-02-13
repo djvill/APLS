@@ -1515,7 +1515,7 @@ alphabet</h1>
 <h3 class="subtitle">Archive of Pittsburgh Language and Speech
 (APLS)</h3>
 <h4 class="author">Dan Villarreal</h4>
-<h4 class="date">Last updated February 1, 2023</h4>
+<h4 class="date">Last updated February 13, 2023</h4>
 
 </div>
 
@@ -2007,7 +2007,7 @@ Suggesting new dictionary entries<a href="#suggesting-new-dictionary-entries" cl
 <p>APLS uses two sources to look up phonemic representations: (1) the
 Unisyn English dictionary (which is supposed to be a universal English
 dictionary), and (2) a <a href="https://raw.githubusercontent.com/djvill/APLS/main/files/custom-dictionary/aplsDict.txt">custom
-dictionary</a>. Occasionnally you&#39;ll run across a word that needs to be
+dictionary</a>. Occasionally you&#39;ll run across a word that needs to be
 added to APLS&#39;s custom dictionary. Most often this will be a
 Pittsburgh/western PA geographic name (e.g., neighborhoods like
 <em>Shadyside</em>, municipalities like <em>Sewickley</em>, streets like
@@ -2019,11 +2019,18 @@ unexpectedly; for example, we&#39;ve had to manually add entries for
 <em>artsy</em>, <em>bachelorette</em>, <em>homie</em>, <em>Kwanzaa</em>,
 <em>microbrew</em>, <em>stepdad</em>, <em>tarp</em>, and <em>y&#39;all</em>
 (among others).</p>
-<p>Everything from the previous sections apply to new words that you
+<p>If a word falls into one of the preceding categories, it should be
+added to the APLS dictionary. On the other hand, if a word is unlikely
+to be used by more than one speaker, it&#39;s better to just use an <a href="https://djvill.github.io/APLS/doc/Transcription-Convention.html#novel-words">inline
+DISC code</a>. Singular and plural forms don&#39;t need to be added to the
+dictionary separately, unless the plural is something other than the
+singular + <em>-s</em>.</p>
+<p>Everything from the previous sections applies to new words that you
 suggest for the custom dictionary, plus the following:</p>
 <ol style="list-style-type: decimal">
 <li>If applicable, you can suggest 2+ phonemic representations per word
 (but this is optional)</li>
+<li>Use the speech community&#39;s pronunciation(s)</li>
 <li>Add symbols to mark syllabification and stress</li>
 </ol>
 <div id="multiple-phonemic-representations" class="section level2 hasAnchor" number="4.1">
@@ -2034,10 +2041,31 @@ representations for any given word. For example, the first vowel in
 <em>Lawrenceville</em> can rhyme with either <em>shore</em> or
 <em>far</em> (<code>$r</code> or <code>#r</code>). In that case, just
 suggest the full DISC representation twice: <code>&#39;l$r-Hs-&quot;vIl</code> or
-<code>&#39;l#r-Hs-&quot;vIl</code></p>
+<code>&#39;l#r-Hs-&quot;vIl</code>.</p>
+<p>Keep in mind that these are <em>phonemic</em> representations. This
+means that we don&#39;t add separate entries that reflect variable
+phonological processes like consonant cluster deletion. For example,
+even though Pittsburghers pronounce <em>gumband</em> as both
+[ˈgʌmbæ<strong>nd</strong>] and [ˈgʌmbæ<strong>n</strong>], only
+<code>&#39;gVm-b{nd</code> should go in APLS&#39;s custom dictionary.</p>
 </div>
-<div id="syllabification-and-stress" class="section level2 hasAnchor" number="4.2">
-<h2 class="hasAnchor"><span class="header-section-number">4.2</span>
+<div id="use-the-speech-communitys-pronunciations" class="section level2 hasAnchor" number="4.2">
+<h2 class="hasAnchor"><span class="header-section-number">4.2</span> Use
+the speech community&#39;s pronunciation(s)<a href="#use-the-speech-communitys-pronunciations" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>APLS&#39;s dictionary entries should reflect Pittsburgh English speakers&#39;
+mental lexicons. That means that if Pittsburgh English speakers have a
+different mental representation for a word than we&#39;d expect based on the
+word&#39;s spelling or our experience, APLS&#39;s dictionary needs to include
+the local phonemic representation. For example, Pittsburghers often
+pronounce <em>Carnegie</em> as [kɑɹˈneɪgi], whereas non-Pittsburghers
+almost always use [ˈkɑɹnəgi]. In the course of a single transcription,
+it&#39;s impossible to know whether a particular pronunciation is
+widespread, so use your best judgment. As mentioned <a href="#multiple-phonemic-representations">above</a>, you can suggest
+multiple representations for a word, as long as they&#39;re
+<em>phonemic</em> representations.</p>
+</div>
+<div id="syllabification-and-stress" class="section level2 hasAnchor" number="4.3">
+<h2 class="hasAnchor"><span class="header-section-number">4.3</span>
 Syllabification and stress<a href="#syllabification-and-stress" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Use the following symbols for syllabification and stress
 <strong>only</strong> if suggesting new entries for the APLS custom
@@ -2101,6 +2129,9 @@ before /n̩/), the /t/ should be syllabified as a coda (e.g.,
 </ul></li>
 </ul>
 <script type="text/javascript">
+/* Add " | APLS" suffix to page title */
+document.title += " | APLS"
+
 /* Open external links in new tab */
 Array.from($("a:not(.anchor-section)"))
     .filter(a => !a.href.startsWith("file:///"))
@@ -2110,7 +2141,6 @@ Array.from($("a:not(.anchor-section)"))
 /* Add nonbreaking spaces after "e.g.," */
 Array.from($("p, li"))
     .map(a => a.innerHTML = a.innerHTML.replace("e.g., ", "e.g.,&nbsp;"))
-
 </script>
 <script type="text/javascript">
 /* Add headers above consonants and vowels tables */

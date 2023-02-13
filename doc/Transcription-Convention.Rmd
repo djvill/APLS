@@ -93,7 +93,7 @@ In this document, `fixed-width font` is used for things you actually type into t
 - **Save your work often!**
 	- Elan is known to crash occasionally, so you may want to set an automatic backup interval (File > Automatic Backup)
 - Transcription usually takes longer at the start of the sound file, then it speeds up once you get used to how a speaker talks
-- The majority of the sound file will be relatively easy to transcribe. However, some parts of each file will take disproportionately long to transcribe due to [hesitations](#hesitations-and-novel-words), [overlaps](#overlaps), and/or ambiguous speech
+- The majority of the sound file will be relatively easy to transcribe. However, some parts of each file will take disproportionately long to transcribe due to [unfinished words](#unfinished-words-and-novel-words), [overlaps](#overlaps), and/or ambiguous speech
 	- One recommendation is to create a temporary `Recheck` tier where you make note of speech you're having trouble hearing correctly, so you can return to these portions of the transcript with fresh ears after you're done the first pass. Make sure to delete the `Recheck` tier once you're done checking
 - Once you've finished transcribing, check over your work!
 
@@ -125,7 +125,7 @@ We have to handle **overlapping speech** carefully because of how LaBB-CAT treat
 That is, any audio transcribed as overlapping can't be searched for individual segments.
 
 - When speakers overlap speech, make the overlapped portion a separate turn on each of the speakers' tiers
-	* For example, Speaker A speaks continuously from 4:00 to 4:08 and Speaker B speaks from 4:04 to 4:05 (talking over Speaker A). You should create 3 turns for Speaker A (4:00&ndash;4:04, 4:04&ndash;4:05, 4:05&ndash;4:08) and 1 turn for Speaker B (4:04&ndash;4:05)
+	- For example, Speaker A speaks continuously from 4:00 to 4:08 and Speaker B speaks from 4:04 to 4:05 (talking over Speaker A). You should create 3 turns for Speaker A (4:00&ndash;4:04, 4:04&ndash;4:05, 4:05&ndash;4:08) and 1 turn for Speaker B (4:04&ndash;4:05)
 	- Don't break up words, even if the speakers only overlap for one syllable
 	- This only applies to when speakers overlap speech; boundaries on the `Noise` or `Comment` tiers don't have to align with speaker tiers
 - Elan doesn't make it easy to precisely sync boundaries across tiers, so just get it close enough
@@ -163,7 +163,7 @@ Within that framework, though, there are some important things to consider
 - Use conventional American English spelling
 - If you are unsure of how to spell something, look it up in a dictionary or Google it
 	- When the speaker refers to a neighborhood or city, the name should always be capitalized even if the individual words are common nouns (e.g., `Larimer`, `the Hill`)
-- With the exception of disfluencies or obvious mispronunciations, words should be spelled out in their "dictionary form". That means:
+- <a id="dict-form"/> With the exception of disfluencies or obvious mispronunciations, words should be spelled out in their "dictionary form". That means:
 	- Do **not** represent typical phonological/sociolinguistic processes like "g dropping" or consonant cluster deletion in the spelling. For example, [dʒʌmpɪ**ŋ**] and [dʒʌmpɪ**n**] should both be transcribed `jumping` not <code class="counterex">jumpin'</code>; [æ**nd**] and [æ**n**] should both be `and` not <code class="counterex">an'</code>. Do not substitute apostrophes for letters (e.g., `old` not <code class="counterex">ol'</code>).
 	- Do **not** use "eye dialect" spellings for common words (`downtown` not <code class="counterex">dahntahn</code>; `Steelers` not <code class="counterex">Stillers</code>). If you want to mention speakers' performative use of "dialect pronunciations", use a [comment](#comments-and-noises)
 	- Using non-dictionary forms makes it harder to find words in search results and prevents the corpus software from using computational methods (e.g., part-of-speech lookup)
@@ -175,7 +175,7 @@ Within that framework, though, there are some important things to consider
 	- If the word is pronounced as a word, use capitals with no spaces (e.g., `FEMA`)
 - Don't use any diacritics that are not part of the English alphabet (e.g., `fiancee` not <code class="counterex">fiancée</code>)
 - A single word should always be spelled as an entire word, even if there is a pause between syllables. **Never** put a breakpoint in the middle of a word.
-- The following list represents all and only colloquial spellings that may be used in transcription: 
+- <a id="colloq-spellings"/> The following list represents all and only colloquial spellings that may be used in transcription: 
 
 |       |       |
 |-------|-------|
@@ -187,7 +187,7 @@ Within that framework, though, there are some important things to consider
 |`'nother` (as in _a whole 'nother_)||
 
 - Standard contractions are fine (e.g., `might've`). The clitics `'d`, `'ll` and `'s` can be attached to any noun
-- For other interjections, select a representation from the list (IPA symbols for clarity):
+- <a id="other-interjections"/> For other interjections, select a representation from the list (IPA symbols for clarity):
 
 |     |      |                       |
 |-----|------|-----------------------|
@@ -231,18 +231,21 @@ Within that framework, though, there are some important things to consider
 	- It can help to re-listen to earlier sections of the interview once you've heard more of the speaker
 
 
-### Hesitations and novel words
+### Unfinished words and novel words
 
 - Words that are unfinished are represented in a special way: with a tilde to mark incompleteness and at least one code to help LaBB-CAT assign phonemes to the unfinished word. 
 	- For example, if the speaker starts to say _hesitate_ but stops after two syllables, either of the following two notations would be acceptable: `hesi~[hEz@]`, `hesi~[hEz@](hesitate)`
 	- First, type the incomplete word with a tilde at the end (`hesi~`)
-	- Then, attach a "pronounce code" with **no space after the tilde**. The pronounce code uses the [DISC phonemic alphabet](https://djvill.github.io/APLS/doc/Phonemic-Transcription.html) to give a phonological representation of what was said, in square brackets (`[hEz@]`, where DISC `E` & `@` = IPA ε & ə). Note that this transcription is **phonological, not phonetic**
+	- Then, attach a "pronounce code" with **no space after the tilde**. The pronounce code uses the [DISC phonemic alphabet](https://djvill.github.io/APLS/doc/Phonemic-Transcription.html) to give a phonological representation of what was said, in square brackets (`[hEz@]`, where DISC `E` & `@` = IPA ε & ə). Note that DISC representations are **phonological, not phonetic**
 	- Optionally, you can add a lexical code, which uses English spelling to represent the intended word (if known). The lexical code goes in parentheses (`(hesitate)`) with **no space after the pronounce code**
-- You can omit pronounce codes for unfinished words that consist of just a consonant, since these are built-in to APLS's dictionary
+- <a id="single-cons-unfinished"/> You can omit pronounce codes for unfinished words that consist of just a consonant, since these are built-in to APLS's dictionary
 	- For example, if the speaker just says [f], you can write just `f~` without a pronounce code
-- If a speaker uses a word that isn't likely to be in APLS's custom dictionary (a word made up on the spot, a specific road name, etc.), just spell it the best you can, and provide a pronounce code in DISC (e.g., `yinzerific[yInz@rIfIk]`)
+- Words do **not** need to be marked as unfinished if their pronunciation is the result of a typical phonological/sociolinguistic process like or consonant cluster deletion
+	- For example, if the speaker says _and_ as [æ**n**] rather than [æ**nd**], transcribe it as just `and`, not <code class="counterex">an~[{n]</code>
+	- This is related to the principle that words should be spelled out in their ["dictionary form"](#dict-form)
+- <a id="novel-words"/> If a speaker uses a word that isn't in a standard dictionary or [APLS's custom dictionary](https://raw.githubusercontent.com/djvill/APLS/main/files/custom-dictionary/aplsDict.txt) (a word made up on the spot, a specific road name, etc.), just spell it the best you can, and provide a pronounce code in DISC (e.g., `yinzerific[jInz@rIfIk]`)
+	- If the word is used more than once in a transcript, the DISC code needs to be supplied every time
 	- We can add words to APLS's custom dictionary, but only if it's a word that is likely to be used by more than just one speaker
-	- If the word is used more than once, the DISC code needs to be supplied every time
 
 
 

@@ -183,14 +183,21 @@ Here are some other things to note:
 ## Suggesting new dictionary entries
 
 APLS uses two sources to look up phonemic representations: (1) the Unisyn English dictionary (which is supposed to be a universal English dictionary), and (2) a [custom dictionary](https://raw.githubusercontent.com/djvill/APLS/main/files/custom-dictionary/aplsDict.txt).
-Occasionnally you'll run across a word that needs to be added to APLS's custom dictionary.
+Occasionally you'll run across a word that needs to be added to APLS's custom dictionary.
 Most often this will be a Pittsburgh/western PA geographic name (e.g., neighborhoods like _Shadyside_, municipalities like _Sewickley_, streets like _Baum_, schools like _Milliones_), a brand name (e.g., _Highmark_, _Panera_), or a Pittsburgh lexical feature (e.g., _redd_, _gumband_).
 However, there are words that aren't Pittsburgh-specific that are absent from Unisyn, sometimes unexpectedly;
 for example, we've had to manually add entries for _artsy_, _bachelorette_, _homie_, _Kwanzaa_, _microbrew_, _stepdad_, _tarp_, and _y'all_ (among others).
 
-Everything from the previous sections apply to new words that you suggest for the custom dictionary, plus the following:
+
+If a word falls into one of the preceding categories, it should be added to the APLS dictionary.
+On the other hand, if a word is unlikely to be used by more than one speaker, it's better to just use an [inline DISC code](https://djvill.github.io/APLS/doc/Transcription-Convention.html#novel-words).
+Singular and plural forms don't need to be added to the dictionary separately, unless the plural is something other than the singular + _-s_.
+
+
+Everything from the previous sections applies to new words that you suggest for the custom dictionary, plus the following:
 
 1. If applicable, you can suggest 2+ phonemic representations per word (but this is optional)
+1. Use the speech community's pronunciation(s)
 1. Add symbols to mark syllabification and stress
 
 
@@ -198,7 +205,21 @@ Everything from the previous sections apply to new words that you suggest for th
 
 APLS's custom dictionary can contain multiple phonemic representations for any given word.
 For example, the first vowel in _Lawrenceville_ can rhyme with either _shore_ or _far_ (`$r` or `#r`).
-In that case, just suggest the full DISC representation twice: `'l$r-Hs-"vIl` or `'l#r-Hs-"vIl`
+In that case, just suggest the full DISC representation twice: `'l$r-Hs-"vIl` or `'l#r-Hs-"vIl`.
+
+
+Keep in mind that these are _phonemic_ representations.
+This means that we don't add separate entries that reflect variable phonological processes like consonant cluster deletion.
+For example, even though Pittsburghers pronounce _gumband_ as both [ˈgʌmbæ**nd**] and [ˈgʌmbæ**n**], only `'gVm-b{nd` should go in APLS's custom dictionary.
+
+
+### Use the speech community's pronunciation(s)
+
+APLS's dictionary entries should reflect Pittsburgh English speakers' mental lexicons.
+That means that if Pittsburgh English speakers have a different mental representation for a word than we'd expect based on the word's spelling or our experience, APLS's dictionary needs to include the local phonemic representation.
+For example, Pittsburghers often pronounce _Carnegie_ as [kɑɹˈneɪgi], whereas non-Pittsburghers almost always use [ˈkɑɹnəgi].
+In the course of a single transcription, it's impossible to know whether a particular pronunciation is widespread, so use your best judgment.
+As mentioned [above](#multiple-phonemic-representations), you can suggest multiple representations for a word, as long as they're _phonemic_ representations.
 
 
 ### Syllabification and stress
