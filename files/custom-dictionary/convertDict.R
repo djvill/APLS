@@ -12,14 +12,15 @@ convertDict <- function(x, outFile=NULL, format=c("txt", "md")) {
   
   ##Read & process file
   inFile <- read_file(x)
-  ##Get headers and entries
+  ##Get headers and sections
   headers <- str_extract_all(inFile, "##.+")[[1]]
-  entries <- str_split(inFile, "##.+\r\n")[[1]][-1]
-  ##Format entries
-  entries <- entries %>% 
+  sections <- str_split(inFile, "##.+[\r\n]+")[[1]][-1]
+  
+  ##Get entries by section
+  entries <- sections %>% 
     map(~ .x %>% 
           ##Each entry in its own string
-          str_split("\r\n") %>% 
+          str_split("[\r\n]+") %>% 
           pluck(1) %>%
           ##Remove DISC
           str_remove(",.+$") %>% 
@@ -28,6 +29,7 @@ convertDict <- function(x, outFile=NULL, format=c("txt", "md")) {
           ##Unique & sort
           unique() %>% 
           sort())
+  
   ##Remove empty elements
   empty <- map_lgl(entries, ~ length(.x)==0)
   headers <- headers[!empty]
@@ -48,6 +50,9 @@ convertDict <- function(x, outFile=NULL, format=c("txt", "md")) {
       writeLines(dict, paste0(outFile, ".txt"))
     }
   }
+  
+  cat("Writing dictionary with", length(flatten_chr(entries)), "entries across",
+      length(headers), "sections", fill=TRUE)
   
   ##Return dictionary invisibly
   invisible(dict)
