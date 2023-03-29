@@ -112,18 +112,23 @@ Amiesite
 Amtrak
 Applebee
 Arby's
+Damico's
 Dunkin
 Dunkin'
+Foodland
 Gullifty's
 Highmark
 Loews
 Lutz's
+Mariani's
+Mezzanotte
 Panera
 Pelusi
 Penn-Mac
 Poli's
 Starbucks
 Stroh's
+Sunseri's
 
 
 ##Unexpected omissions from Unisyn
@@ -139,11 +144,14 @@ dietitian
 disrespecting
 Grier
 impatien
+jitney
 kind-hearted
 knick
 kook
 Kwanzaa
+limburger
 moonshot
+popsicle
 righty
 soft-hearted
 St
