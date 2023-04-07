@@ -63,7 +63,7 @@ Sharpsburg
 Steeler
 Steelers
 Swissvale
-wannabe
+Uniontown
 Warrendale
 Waynesburg
 Weil
@@ -117,12 +117,14 @@ Dunkin
 Dunkin'
 Foodland
 Gullifty's
+Hermanowski's
 Highmark
 Loews
 Lutz's
 Mariani's
 Mezzanotte
 Panera
+Parma's
 Pelusi
 Penn-Mac
 Poli's
@@ -140,6 +142,7 @@ artsy
 bachelorette
 balled
 bungee
+com
 dietitian
 disrespecting
 Grier
@@ -182,6 +185,7 @@ scaredy
 Shawntae
 sucky
 there're
+wannabe
 Zehner
 
 
