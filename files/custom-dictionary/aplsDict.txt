@@ -29,6 +29,7 @@ Karns
 Larimer
 Lawrenceville
 Leetsdale
+Ligonier
 McArdle
 McCandless
 McKeesport
@@ -149,6 +150,8 @@ cornrow
 cornrows
 dietitian
 disrespecting
+docent
+docents
 Grier
 impatien
 jitney
@@ -183,6 +186,7 @@ McGruder
 meister
 microbrew
 Pittsburghy
+reeducation
 rollerskating
 Sambo
 scaredy
