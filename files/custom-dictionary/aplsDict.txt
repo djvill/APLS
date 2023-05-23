@@ -26,6 +26,8 @@ Idlewild
 Indiantown
 Jo
 Karns
+Kennard
+Kennywood
 Larimer
 Lawrenceville
 Leetsdale
@@ -146,10 +148,14 @@ bungee
 CD
 CDs
 com
+cookout
+cookouts
 cornrow
 cornrows
 dietitian
 disrespecting
+DJ
+DJs
 docent
 docents
 Grier
@@ -180,6 +186,7 @@ collab
 craneman
 grandpap
 homie
+hoodie
 Juneteenth
 Limbaugh
 McGruder
