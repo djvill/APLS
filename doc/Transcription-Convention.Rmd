@@ -186,7 +186,7 @@ Within that framework, though, there are some important things to consider
 |`lotta`|`'til` (from _until_)|
 |`'nother` (as in _a whole 'nother_)||
 
-- Standard contractions are fine (e.g., `might've`). The clitics `'d`, `'ll` and `'s` can be attached to any noun
+- Standard contractions are fine (e.g., `might've`). The clitics `'d`, `'ll`, `'ve`, and `'s` can be attached to any noun
 - <a id="other-interjections"/> For other interjections, select a representation from the list (IPA symbols for clarity):
 
 |     |      |                       |
