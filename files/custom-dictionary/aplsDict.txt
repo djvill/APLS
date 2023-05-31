@@ -3,6 +3,7 @@ Ambridge
 Aspinwall
 Avonworth
 Beechview
+Belmar
 Braddock
 Brashear
 Brookline
@@ -26,11 +27,13 @@ Idlewild
 Indiantown
 Jo
 Karns
+Kedron
 Kennard
 Kennywood
 Larimer
 Lawrenceville
 Leetsdale
+Lemington
 Ligonier
 McArdle
 McCandless
