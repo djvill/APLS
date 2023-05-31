@@ -1,5 +1,7 @@
 ##Pittsburgh/SWPA geographic names
+Allderdice
 Ambridge
+Ardmore
 Aspinwall
 Avonworth
 Beechview
@@ -15,6 +17,7 @@ Eastvale
 Edinboro
 Emsworth
 Fernway
+Filmore
 Garfield
 Glassport
 Glenshaw
@@ -74,6 +77,7 @@ Uniontown
 Warrendale
 Waynesburg
 Weil
+Wendover
 Wexford
 Wiley
 Wilkinsburg
