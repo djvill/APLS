@@ -178,7 +178,7 @@ Here are some other things to note:
   - For "schwi", use `@` rather than `I` (e.g., _breathless_ is `brETl@s` not <code class="counterex">brETlIs</code>)
   - Same for _'s_ after a sibilant (e.g., _Lutz's_ is `lVts@z` not <code class="counterex">lVtsIz</code>)
   - Again, use `@` for unstressed mid-central vowels ("schwa") and `@r` pre-/ɹ/
-
+- There's no [ɾ] symbol; instead, use `t` or `d` as suggested by orthography, even if it doesn't match the voicing of the surface segment (e.g., _Bettis_ is `bEtIs`, not <code class="counterex">bEdIs</code>)
 
 ## Suggesting new dictionary entries
 
