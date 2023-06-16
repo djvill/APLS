@@ -9,6 +9,7 @@ Belmar
 Braddock
 Brashear
 Brookline
+Chalfant
 Clarion
 Crider's
 Deener
@@ -60,6 +61,7 @@ Penn
 Pennsylvanian
 Pittsburgher
 Portersville
+Rankin
 Renfrew
 Richland
 Ringgold
@@ -199,6 +201,7 @@ homie
 hoodie
 Juneteenth
 Limbaugh
+Mawr
 McGruder
 meister
 microbrew
