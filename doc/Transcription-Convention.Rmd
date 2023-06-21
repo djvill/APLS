@@ -236,7 +236,7 @@ Within that framework, though, there are some important things to consider
 - Words that are unfinished are represented in a special way: with a tilde to mark incompleteness and at least one code to help LaBB-CAT assign phonemes to the unfinished word. 
 	- For example, if the speaker starts to say _hesitate_ but stops after two syllables, either of the following two notations would be acceptable: `hesi~[hEz@]`, `hesi~[hEz@](hesitate)`
 	- First, type the incomplete word with a tilde at the end (`hesi~`)
-	- Then, attach a "pronounce code" with **no space after the tilde**. The pronounce code uses the [DISC phonemic alphabet](https://djvill.github.io/APLS/doc/Phonemic-Transcription.html) to give a phonological representation of what was said, in square brackets (`[hEz@]`, where DISC `E` & `@` = IPA ε & ə). Note that DISC representations are **phonological, not phonetic**
+	- Then, attach a "pronounce code" with **no space after the tilde**. The pronounce code uses the [DISC phonemic alphabet](Phonemic-Transcription) to give a phonological representation of what was said, in square brackets (`[hEz@]`, where DISC `E` & `@` = IPA ε & ə). Note that DISC representations are **phonological, not phonetic**
 	- Optionally, you can add a lexical code, which uses English spelling to represent the intended word (if known). The lexical code goes in parentheses (`(hesitate)`) with **no space after the pronounce code**
 - <a id="single-cons-unfinished"/> You can omit pronounce codes for unfinished words that consist of just a consonant, since these are built-in to APLS's dictionary
 	- For example, if the speaker just says [f], you can write just `f~` without a pronounce code

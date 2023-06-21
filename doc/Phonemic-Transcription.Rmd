@@ -190,7 +190,7 @@ for example, we've had to manually add entries for _artsy_, _bachelorette_, _hom
 
 
 If a word falls into one of the preceding categories, it should be added to the APLS dictionary.
-On the other hand, if a word is unlikely to be used by more than one speaker, it's better to just use an [inline DISC code](https://djvill.github.io/APLS/doc/Transcription-Convention.html#novel-words).
+On the other hand, if a word is unlikely to be used by more than one speaker, it's better to just use an [inline DISC code](Transcription-Convention#novel-words).
 Singular and plural forms don't need to be added to the dictionary separately, unless the plural is something other than the singular + _-s_.
 
 
