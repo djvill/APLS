@@ -65,9 +65,21 @@ li {
 }
 ```
 
-[Test 1](/)
 
-[Test 2](/#APLS)
+[Test 1a](README)
+
+[Test 1b](/APLS)
+
+[Test 1c](APLS)
+
+
+[Test 2a](README#APLS)
+
+[Test 2b](/APLS#APLS)
+
+[Test 2c](APLS#APLS)
+
+
 
 
 ```{js, file="site-assets/js/doc.js"}
