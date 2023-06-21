@@ -251,9 +251,6 @@ A few finer points:
 	- Exception 2: In environments where prevocalic /t/ becomes [ʔ] (e.g., before /n̩/), the /t/ should be syllabified as a coda (e.g., _outen_ is `'6t-H` not <code class="counterex">'6-tH</code>)
 
 
-[Test 1](README)
-
-[Test 2](README#APLS)
 
 
 ```{js, file="../site-assets/js/doc.js"}
