@@ -173,6 +173,7 @@ docent
 docents
 DVD
 DVDs
+gelato
 Grier
 impatien
 jitney
