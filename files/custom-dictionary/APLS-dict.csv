@@ -1,6 +1,6 @@
 // APLS custom dictionary
 
-// Secondary-stress markers immediately after a comma need to be escaped (with """)
+// Word-initial secondary-stress: Use """ at the start of the word & " at the end"
 // DO NOT EDIT IN EXCEL--IT WILL ADD EXTRA CHARACTERS
 // N.B. Rows with just one entry are ignored by LaBB-CAT; these can be used for comments
 
@@ -32,7 +32,7 @@ Glenshaw,'glEn-"sh$
 Pittsburgher,'pIts-b3r-g@r
 Waynesburg,'w1nz-"b3rg
 Fernway,'f3rn-"w1
-Pennsylvanian,"""pEn-sP-'v1n-jH
+Pennsylvanian,"""pEn-sP-'v1n-jH"
 McMunn,mIk-'mVn
 S'Liberty,'slI-b@r-ti
 Lawrenceville,'l$r-Hs-"vIl
@@ -90,7 +90,7 @@ Herron,'h8r-H
 Herron,'h8r-In
 Woolslair,'wUls-l@r
 Uniontown,'jun-jH-"t6n
-Ligonier,"lI-g@-'n7r
+Ligonier,"""lI-g@-'n7r"
 Kennywood,'kE-ni-"wUd
 Kennard,'kE-n#rd
 Ossipee,'Q-sI-pi
@@ -120,7 +120,7 @@ Bettis,'bE-tIs
 nebby,'nE-bi
 yinz,'jInz
 yinzer,'jIn-z@r
-Pittsburghese,"""pIts-b3r-'giz
+Pittsburghese,"""pIts-b3r-'giz"
 WAMO,'w{-m5
 gumband,'gVm-b{nd
 n'at,H-'{t
@@ -154,14 +154,14 @@ Dunkin,'dVN-kH
 Dunkin','dVN-kH
 Amtrak,'{m-"tr{k
 Lutz's,'lVts-@z
-Penn-Mac,"pEn-'m{k
+Penn-Mac,"""pEn-'m{k"
 Foodland,'fud-"l{nd
 Mariani's,m8r-i-'Q-niz]
 Damico's,d@-'mi-k5z
 Mezzanotte,'mE-z@-nQ-t1
 Sunseri's,sVn-'s8r-iz
 Parma's,'p#r-m@z
-Hermanowski's,"h@r-m@n-'6-skiz
+Hermanowski's,"""h@r-m@n-'6-skiz"
 Isaly's,'2s-liz
 
 
@@ -169,17 +169,17 @@ Isaly's,'2s-liz
 tarp,'t#rp
 stepdad,'stEp-"d{d
 aneurysm,'{n-j@r-I-zF
-disrespecting,"""dIs-r@-'spEk-tIN
+disrespecting,"""dIs-r@-'spEk-tIN"
 Grier,'gr7r
 moonshot,'mun-"SQt
 kook,'kuk
-dietitian,"""d2-@-'tI-SH
+dietitian,"""d2-@-'tI-SH"
 balled,'b$ld
 righty,'r2-ti
 impatien,Im-'p1-SH
 y'all,'j$l
 artsy,'#rt-si
-bachelorette,"""b{J-l@r-'Et
+bachelorette,"""b{J-l@r-'Et"
 worldview,'w3rld-"vju
 Kwanzaa,'kwQn-z@
 knick,'nIk
@@ -193,8 +193,8 @@ jitney,'_It-ni
 popsicle,'pQp-sI-kP
 limburger,'lIm-b@r-g@r
 com,'kQm
-CD,"""si-'di
-CDs,"""si-'diz
+CD,"""si-'di"
+CDs,"""si-'diz"
 cornrow,'k$rn-"r5
 cornrows,'k$rn-"r5z
 docent,'d5-sInt
@@ -203,14 +203,14 @@ cookout,'kUk-6t
 cookouts,'kUk-6ts
 DJ,'di-_1
 DJs,'di-_1z
-DVD,"""di-vi-'di
-DVDs,"""di-vi-'diz
+DVD,"""di-vi-'di"
+DVDs,"""di-vi-'diz"
 gelato,_@-'lQ-t5
 
 
 // Other
-Juneteenth,"""_un-'tinT
-Shawntae,"""S$n-'t1
+Juneteenth,"""_un-'tinT"
+Shawntae,"""S$n-'t1"
 homie,'h5-mi
 Zehner,'z1-n@r
 meister,'m2s-t@r
