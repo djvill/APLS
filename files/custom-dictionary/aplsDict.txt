@@ -10,26 +10,21 @@ Braddock
 Brashear
 Brookline
 Chalfant
-Clarion
 Crider's
 Deener
-Duquesne
 Eastvale
 Edinboro
 Emsworth
 Fernway
 Filmore
-Garfield
 Glassport
 Glenshaw
 Greensburg
 Haine
-Hazelwood
 Herron
 Homewood
 Idlewild
 Indiantown
-Jo
 Karns
 Kedron
 Kennard
@@ -42,7 +37,6 @@ Ligonier
 McArdle
 McCandless
 McKeesport
-McKelvey
 McKnightmare
 McMunn
 Milliones
@@ -57,7 +51,6 @@ Oakmont
 Ossipee
 Overbrook
 Passavant
-Penn
 Pennsylvanian
 Pittsburgher
 Portersville
@@ -65,7 +58,6 @@ Rankin
 Renfrew
 Richland
 Ringgold
-Roche
 S'Liberty
 Sandcastle
 Schenley
@@ -79,7 +71,6 @@ Swissvale
 Uniontown
 Warrendale
 Waynesburg
-Weil
 Wendover
 Wexford
 Wiley
@@ -111,8 +102,6 @@ nebby
 outen
 Pittsburghese
 redd
-redder
-redding
 rench
 renched
 renches
@@ -157,7 +146,6 @@ aneurysm
 artsy
 bachelorette
 balled
-bungee
 CD
 CDs
 com
@@ -177,7 +165,6 @@ gelato
 Grier
 impatien
 jitney
-kind-hearted
 knick
 kook
 Kwanzaa
@@ -185,7 +172,6 @@ limburger
 moonshot
 popsicle
 righty
-soft-hearted
 St
 stepdad
 stogie
@@ -217,7 +203,6 @@ scaredy
 Shawntae
 sucky
 there're
-wannabe
 wouldn't've
 Zehner
 
@@ -226,25 +211,17 @@ Zehner
 'nother
 'til
 I'mma
-lotta
-outta
 tryna
 
 
 ##Allowable interjections
 ahh
 aw
-hmm
 jeez
 mmm
 nah
 oo
-uh
-um
-whoops
 woohoo
-yuck
-yup
 
 
 ##Tilde codes

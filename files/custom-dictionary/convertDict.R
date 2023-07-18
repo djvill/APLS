@@ -13,8 +13,9 @@ convertDict <- function(x, outFile=NULL, format=c("txt", "md")) {
   ##Read & process file
   inFile <- read_file(x)
   ##Get headers and sections
-  headers <- str_extract_all(inFile, "##.+")[[1]]
-  sections <- str_split(inFile, "##.+[\r\n]+")[[1]][-1]
+  headers <- str_extract_all(inFile, "//.+")[[1]] %>%
+    str_replace("// ", "##")
+  sections <- str_split(inFile, "//.+[\r\n]+")[[1]][-1]
   
   ##Get entries by section
   entries <- sections %>% 
