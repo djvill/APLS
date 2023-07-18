@@ -1,11 +1,11 @@
-##APLS custom dictionary
+// APLS custom dictionary
 
-##Secondary-stress markers immediately after a comma need to be escaped (with """)
-##DO NOT EDIT IN EXCEL--IT WILL ADD EXTRA CHARACTERS
-##N.B. Rows with just one entry are ignored by LaBB-CAT; these can be used for comments
+// Secondary-stress markers immediately after a comma need to be escaped (with """)
+// DO NOT EDIT IN EXCEL--IT WILL ADD EXTRA CHARACTERS
+// N.B. Rows with just one entry are ignored by LaBB-CAT; these can be used for comments
 
 
-##Pittsburgh/SWPA geographic names
+// Pittsburgh/SWPA geographic names
 Wilkinsburg,'wIl-kInz-"b3rg
 Wilkinsburg,'wIl-kHz-"b3rg
 Duquesne,du-'k1n
@@ -32,7 +32,7 @@ Glenshaw,'glEn-"sh$
 Pittsburgher,'pIts-b3r-g@r
 Waynesburg,'w1nz-"b3rg
 Fernway,'f3rn-"w1
-Pennsylvanian,"""pEn-sP-'v1n-jH"
+Pennsylvanian,"""pEn-sP-'v1n-jH
 McMunn,mIk-'mVn
 S'Liberty,'slI-b@r-ti
 Lawrenceville,'l$r-Hs-"vIl
@@ -106,7 +106,7 @@ Rankin,'r1N-kH
 Chalfant,'J{l-"fQnt
 
 
-##Pittsburgh personal names
+// Pittsburgh personal names
 Stargell,'st#r-_P
 Bonilla,b5-'ni-@
 Kudzma,'kVdz-m@
@@ -116,18 +116,16 @@ Krenn's,'krEnz
 Bettis,'bE-tIs
 
 
-##Pittsburgh lexicon
+// Pittsburgh lexicon
 nebby,'nE-bi
 yinz,'jInz
 yinzer,'jIn-z@r
-Pittsburghese,"""pIts-b3r-'giz"
+Pittsburghese,"""pIts-b3r-'giz
 WAMO,'w{-m5
 gumband,'gVm-b{nd
 n'at,H-'{t
 n'at,'n{t
 redd,'rEd
-redding,'rE-dIN
-redder,'rE-d@r
 grinny,'grI-ni
 grinnies,'grI-niz
 Trib,trIb
@@ -140,7 +138,7 @@ renches,'rEnJ-@z
 renched,'rEnJt
 
 
-##Company/brand names (local or otherwise)
+// Company/brand names (local or otherwise)
 Applebee,'{-pP-bi
 Pelusi,p@-'lu-si
 Amiesite,'{-mI-s2t
@@ -167,24 +165,21 @@ Hermanowski's,"h@r-m@n-'6-skiz
 Isaly's,'2s-liz
 
 
-##Unexpected omissions from Unisyn
+// Unexpected omissions from Unisyn
 tarp,'t#rp
-bungee,'bVn-_i
 stepdad,'stEp-"d{d
 aneurysm,'{n-j@r-I-zF
-kind-hearted,'k2nd-"h#r-t@d
-soft-hearted,'s$ft-"h#r-t@d
-disrespecting,"""dIs-r@-'spEk-tIN"
+disrespecting,"""dIs-r@-'spEk-tIN
 Grier,'gr7r
 moonshot,'mun-"SQt
 kook,'kuk
-dietitian,"""d2-@-'tI-SH"
+dietitian,"""d2-@-'tI-SH
 balled,'b$ld
 righty,'r2-ti
 impatien,Im-'p1-SH
 y'all,'j$l
 artsy,'#rt-si
-bachelorette,"""b{J-l@r-'Et"
+bachelorette,"""b{J-l@r-'Et
 worldview,'w3rld-"vju
 Kwanzaa,'kwQn-z@
 knick,'nIk
@@ -213,9 +208,9 @@ DVDs,"""di-vi-'diz
 gelato,_@-'lQ-t5
 
 
-##Other
-Juneteenth,"""_un-'tinT"
-Shawntae,"""S$n-'t1"
+// Other
+Juneteenth,"""_un-'tinT
+Shawntae,"""S$n-'t1
 homie,'h5-mi
 Zehner,'z1-n@r
 meister,'m2s-t@r
@@ -235,41 +230,32 @@ scaredy,'sk8r-di
 rollerskating,'r5-l@r-"sk1-tIN
 craneman,'kr1n-mH
 grandpap,'gr{nd-"p{p
-wannabe,'wQ-n@-bi
 reeducation,ri-"E-_@-'k1-SH
 hoodie,'hU-di
 wouldn't've,'wU-dH-t@v
 Mawr,'m#r
 
 
-##Allowable colloquial spellings
-lotta,'lQ-t@
+// Allowable colloquial spellings
 'til,'tIl
 'nother,'nV-D@r
 I'mma,'2-m@
-outta,'6-t@
 tryna,'tr2-n@
 
 
-##Allowable interjections
-yup,'jVp
+// Allowable interjections
 mmm,'F
-uh,'V
 nah,'nQ
 nah,'n$
-hmm,'hF
-um,'Vm
 aw,'$
 oo,'u
 ahh,'Q
 ahh,'$
 jeez,'_iz
-whoops,'wUps
-yuck,'jVk
 woohoo,wu-'hu
 
 
-##Tilde codes
+// Tilde codes
 p~,p
 b~,b
 t~,t
