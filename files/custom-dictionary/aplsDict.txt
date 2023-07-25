@@ -52,7 +52,9 @@ Ossipee
 Overbrook
 Passavant
 Pennsylvanian
+Pennsylvanians
 Pittsburgher
+Pittsburghers
 Portersville
 Rankin
 Renfrew
@@ -96,12 +98,17 @@ Eat'n
 grinnies
 grinny
 gumband
+gumbands
 N'
 n'at
 nebby
 outen
+outened
+outens
 Pittsburghese
 redd
+redded
+redds
 rench
 renched
 renches
@@ -109,12 +116,13 @@ Trib
 WAMO
 yinz
 yinzer
+yinzers
 
 
 ##Company/brand names (local or otherwise)
 Amiesite
-Amtrak
 Applebee
+Applebee's
 Arby's
 Damico's
 Dunkin
@@ -137,6 +145,7 @@ Starbucks
 Stroh's
 Sunseri's
 Yuengling
+Yuenglings
 
 
 ##Unexpected omissions from Unisyn
@@ -144,9 +153,12 @@ anchorpeople
 anchorwoman
 anchorwomen
 aneurysm
+aneurysms
 artsy
 bachelorette
+bachelorettes
 balled
+balling
 CD
 CDs
 com
@@ -155,6 +167,8 @@ cookouts
 cornrow
 cornrows
 dietitian
+dietitians
+disrespected
 disrespecting
 DJ
 DJs
@@ -163,41 +177,61 @@ docents
 DVD
 DVDs
 gelato
+gelatos
 Grier
 impatien
+impatiens
 jitney
+jitneys
 knick
+knicks
 kook
+kooks
 Kwanzaa
 limburger
 moonshot
+moonshots
 popsicle
+popsicles
 righty
 St
 stepdad
+stepdads
 stogie
+stogies
 tarp
+tarps
 worldview
+worldviews
 y'all
 
 
 ##Other
 babushka
+babushkas
 Blige
 coanchor
+coanchors
 collab
 craneman
 grandpap
+grandpaps
 homie
+homies
 hoodie
+hoodies
 Juneteenth
 Limbaugh
 Mawr
 McGruder
 meister
 microbrew
+microbrews
 Pittsburghy
 reeducation
+rollerskate
+rollerskated
+rollerskates
 rollerskating
 Sambo
 scaredy

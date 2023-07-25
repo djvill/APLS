@@ -26,9 +26,11 @@ Monroeville,mH-'r5-"vIl
 Portersville,'p$r-t2rz-"vIl
 Glenshaw,'glEn-"sh$
 Pittsburgher,'pIts-b3r-g@r
+Pittsburghers,'pIts-b3r-g@rz
 Waynesburg,'w1nz-"b3rg
 Fernway,'f3rn-"w1
 Pennsylvanian,"""pEn-sP-'v1n-jH"
+Pennsylvanians,"""pEn-sP-'v1n-jHz"
 McMunn,mIk-'mVn
 S'Liberty,'slI-b@r-ti
 Lawrenceville,'l$r-Hs-"vIl
@@ -110,12 +112,16 @@ Bettis,'bE-tIs
 nebby,'nE-bi
 yinz,'jInz
 yinzer,'jIn-z@r
+yinzers,'jIn-z@rz
 Pittsburghese,"""pIts-b3r-'giz"
 WAMO,'w{-m5
 gumband,'gVm-b{nd
+gumbands,'gVm-b{nds
 n'at,H-'{t
 n'at,'n{t
 redd,'rEd
+redds,'rEdz
+redded,'rE-d@d
 grinny,'grI-ni
 grinnies,'grI-niz
 Trib,trIb
@@ -123,6 +129,8 @@ Eat'n,'it-H
 N',H
 'n,H
 outen,'6t-H
+outens,'6t-Hz
+outened,'6t-Hd
 rench,'rEnJ
 renches,'rEnJ-@z
 renched,'rEnJt
@@ -130,6 +138,7 @@ renched,'rEnJt
 
 // Company/brand names (local or otherwise)
 Applebee,'{-pP-bi
+Applebee's,'{-pP-biz
 Pelusi,p@-'lu-si
 Amiesite,'{-mI-s2t
 Loews,'l5z
@@ -142,7 +151,6 @@ Arby's,'#r-biz
 Starbucks,'st#r-bVks
 Dunkin,'dVN-kH
 Dunkin','dVN-kH
-Amtrak,'{m-"tr{k
 Lutz's,'lVts-@z
 Penn-Mac,"""pEn-'m{k"
 Foodland,'fud-"l{nd
@@ -154,34 +162,50 @@ Parma's,'p#r-m@z
 Hermanowski's,"""h@r-m@n-'6-skiz"
 Isaly's,'2s-liz
 Yuengling,'jIN-lIN
+Yuenglings,'jIN-lINz
 
 
 // Unexpected omissions from Unisyn
 tarp,'t#rp
+tarps,'t#rps
 stepdad,'stEp-"d{d
+stepdads,'stEp-"d{dz
 aneurysm,'{n-j@r-I-zF
+aneurysms,'{n-j@r-I-zFz
+disrespected,"""dIs-r@-'spEk-t@d"
 disrespecting,"""dIs-r@-'spEk-tIN"
 Grier,'gr7r
 moonshot,'mun-"SQt
+moonshots,'mun-"SQts
 kook,'kuk
+kooks,'kuks
 dietitian,"""d2-@-'tI-SH"
+dietitians,"""d2-@-'tI-SHs"
 balled,'b$ld
+balling,'b$-lIN
 righty,'r2-ti
 impatien,Im-'p1-SH
+impatiens,Im-'p1-SHz
 y'all,'j$l
 artsy,'#rt-si
 bachelorette,"""b{J-l@r-'Et"
+bachelorettes,"""b{J-l@r-'Ets"
 worldview,'w3rld-"vju
+worldviews,'w3rld-"vjuz
 Kwanzaa,'kwQn-z@
 knick,'nIk
+knicks,'nIks
 St,'s1nt
 St,'strit
 anchorpeople,'{N-k@r-"pi-pP
 anchorwoman,'{N-k@r-"wU-mH
 anchorwomen,'{N-k@r-"wI-mH
 stogie,'st5-gi
+stogies,'st5-giz
 jitney,'_It-ni
+jitneys,'_It-niz
 popsicle,'pQp-sI-kP
+popsicles,'pQp-sI-kPz
 limburger,'lIm-b@r-g@r
 com,'kQm
 CD,"""si-'di"
@@ -197,12 +221,14 @@ DJs,'di-_1z
 DVD,"""di-vi-'di"
 DVDs,"""di-vi-'diz"
 gelato,_@-'lQ-t5
+gelatos,_@-'lQ-t5z
 
 
 // Other
 Juneteenth,"""_un-'tinT"
 Shawntae,"""S$n-'t1"
 homie,'h5-mi
+homies,'h5-miz
 Zehner,'z1-n@r
 meister,'m2s-t@r
 Sambo,'s{m-b5
@@ -213,16 +239,25 @@ collab,k@-'l{b
 Blige,'bl2_
 babushka,b@-'bUS-k@
 babushka,b@-'buS-k@
+babushkas,b@-'bUS-k@z
+babushkas,b@-'buS-k@z
 Pittsburghy,'pIts-b3r-gi
 Limbaugh,'lIm-b$
 microbrew,'m2-kr5-bru
+microbrews,'m2-kr5-bruz
 coanchor,'k5-"{N-k@r
+coanchors,'k5-"{N-k@rz
 scaredy,'sk8r-di
+rollerskate,'r5-l@r-"sk1t
+rollerskates,'r5-l@r-"sk1ts
+rollerskated,'r5-l@r-"sk1-t@d
 rollerskating,'r5-l@r-"sk1-tIN
 craneman,'kr1n-mH
 grandpap,'gr{nd-"p{p
+grandpaps,'gr{nd-"p{ps
 reeducation,ri-"E-_@-'k1-SH
 hoodie,'hU-di
+hoodies,'hU-dis
 wouldn't've,'wU-dH-t@v
 Mawr,'m#r
 
