@@ -191,7 +191,6 @@ for example, we've had to manually add entries for _artsy_, _bachelorette_, _hom
 
 If a word falls into one of the preceding categories, it should be added to the APLS dictionary.
 On the other hand, if a word is unlikely to be used by more than one speaker, it's better to just use an [inline DISC code](Transcription-Convention#novel-words).
-Singular and plural forms don't need to be added to the dictionary separately, unless the plural is something other than the singular + _-s_.
 
 
 Everything from the previous sections applies to new words that you suggest for the custom dictionary, plus the following:
@@ -217,7 +216,7 @@ For example, even though Pittsburghers pronounce _gumband_ as both [ˈgʌmbæ**n
 
 APLS's dictionary entries should reflect Pittsburgh English speakers' mental lexicons.
 That means that if Pittsburgh English speakers have a different mental representation for a word than we'd expect based on the word's spelling or our experience, APLS's dictionary needs to include the local phonemic representation.
-For example, Pittsburghers often pronounce _Carnegie_ as [kɑɹˈneɪgi], whereas non-Pittsburghers almost always use [ˈkɑɹnəgi].
+For example, Pittsburghers often pronounce _Carnegie_ as [kɑɹ.ˈneɪ.gi], whereas non-Pittsburghers almost always use [ˈkɑɹ.nə.gi].
 In the course of a single transcription, it's impossible to know whether a particular pronunciation is widespread, so use your best judgment.
 As mentioned [above](#multiple-phonemic-representations), you can suggest multiple representations for a word, as long as they're _phonemic_ representations.
 

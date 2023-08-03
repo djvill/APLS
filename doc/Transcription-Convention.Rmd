@@ -186,7 +186,7 @@ Within that framework, though, there are some important things to consider
 |`lotta`|`'til` (from _until_)|
 |`'nother` (as in _a whole 'nother_)||
 
-- Standard contractions are fine (e.g., `might've`). The clitics `'d`, `'ll`, `'ve`, and `'s` can be attached to any noun
+- <a id="clitics"/> Standard contractions are fine (e.g., `might've`). The clitics `'d`, `'ll`, `'ve`, and `'s` can be attached to any noun
 - <a id="other-interjections"/> For other interjections, select a representation from the list (IPA symbols for clarity):
 
 |     |      |                       |
@@ -232,6 +232,15 @@ Within that framework, though, there are some important things to consider
 
 
 ### Unfinished words and novel words
+
+<!-- ADD THE FOLLOWING SOMEWHERE:
+			There are 3 situations in which you need to use a "pronounce code":
+			- hesitations/incomplete words
+			- idiosyncratic pronunciations
+			- valid words that shouldn't be in APLS's custom dictionary
+
+			- Add syllabification & stress to pronounce codes
+-->
 
 - Words that are unfinished are represented in a special way: with a tilde to mark incompleteness and at least one code to help LaBB-CAT assign phonemes to the unfinished word. 
 	- For example, if the speaker starts to say _hesitate_ but stops after two syllables, either of the following two notations would be acceptable: `hesi~[hEz@]`, `hesi~[hEz@](hesitate)`
