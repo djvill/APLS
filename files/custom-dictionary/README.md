@@ -30,25 +30,25 @@ It's up to the corpus maintainer whether to add these entries, or whether transc
 Add the word if:
 
 1. It's likely to be used by **more than one speaker**
-		- **Examples:** <span class="goodex">Monongahela</span>  <span class="goodex">Panera</span>  <span class="badex">(word made up on the spot)</span>
-		- **Rationale:** If a word gets added to the dictionary, it'll save future transcribers time and ensure quality control
-		- **Transcribers should:** Use an inline pronounce code
-		- **Note:** This criterion is by far the most subjective! If the word satisfies all the other criteria, err on the side of adding it
+   - **Examples:** <span class="goodex">Monongahela</span>  <span class="goodex">Panera</span>  <span class="badex">(word made up on the spot)</span>
+   - **Rationale:** If a word gets added to the dictionary, it'll save future transcribers time and ensure quality control
+   - **Transcribers should:** Use an inline pronounce code
+   - **Note:** This criterion is by far the most subjective! If the word satisfies all the other criteria, err on the side of adding it
 2. It's not a **new [colloquial spelling](https://djvill.github.io/APLS/doc/Transcription-Convention.html#colloq-spellings) or [interjection](https://djvill.github.io/APLS/doc/Transcription-Convention.html#other-interjections)**
-		- **Examples:** <span class="badex">dunno</span>  <span class="badex">er</span>  <span class="badex">ahem</span>
-		- **Rationale:** We want to avoid "coding while transcribing". If transcribers have the choice between (e.g.) _don't know_ and _dunno_, they'll have to spend time deciding which one the speaker uttered. That's really a question for future sociolinguistic investigation, not something to be decided at the transcription stage
-		- **Transcribers should:** Depending on the situation, use a standard spelling, a [hesitation code](https://djvill.github.io/APLS/doc/Transcription-Convention.html#unfinished-words-and-novel-words), or a [noise code](https://djvill.github.io/APLS/doc/Transcription-Convention.html#unfinished-words-and-novel-words)
+   - **Examples:** <span class="badex">dunno</span>  <span class="badex">er</span>  <span class="badex">ahem</span>
+   - **Rationale:** We want to avoid "coding while transcribing". If transcribers have the choice between (e.g.) _don't know_ and _dunno_, they'll have to spend time deciding which one the speaker uttered. That's really a question for future sociolinguistic investigation, not something to be decided at the transcription stage
+   - **Transcribers should:** Depending on the situation, use a standard spelling, a [hesitation code](https://djvill.github.io/APLS/doc/Transcription-Convention.html#unfinished-words-and-novel-words), or a [noise code](https://djvill.github.io/APLS/doc/Transcription-Convention.html#unfinished-words-and-novel-words)
 3. It doesn't **violate existing rules** in the transcription convention
-		- **Examples:** <span class="badex">412</span>  <span class="badex">IBM</span>  <span class="badex">colllect</span>  <span class="badex">jumpin'</span>  <span class="badex">résumé</span>  <span class="badex">Picksburgh</span>
-		- **Rationale:** We have those rules for good reasons! Plus, allowing "eye dialect" forms like _Picksburgh_ leads to "coding while transcribing"
-		- **Transcribers should:** Correct their spelling
+   - **Examples:** <span class="badex">412</span>  <span class="badex">IBM</span>  <span class="badex">colllect</span>  <span class="badex">jumpin'</span>  <span class="badex">résumé</span>  <span class="badex">Picksburgh</span>
+   - **Rationale:** We have those rules for good reasons! Plus, allowing "eye dialect" forms like _Picksburgh_ leads to "coding while transcribing"
+   - **Transcribers should:** Correct their spelling
 4. It's not **already in the Unisyn dictionary**
-		- **Rationale:** LaBB-CAT won't update a dictionary entry if it's in Unisyn (it will update custom dictionary entries if needed)
-		- **Transcribers should:** Do nothing
-		- **Note:** Don't assume that pluralized forms are in the Unisyn dictionary! If the Elan file checker flags a form, it's not in either dictionary
+   - **Rationale:** LaBB-CAT won't update a dictionary entry if it's in Unisyn (it will update custom dictionary entries if needed)
+   - **Transcribers should:** Do nothing
+   - **Note:** Don't assume that pluralized forms are in the Unisyn dictionary! If the Elan file checker flags a form, it's not in either dictionary
 5. It's not a **vulgar and/or objectionable** word
-		- **Rationale:** Since the APLS dictionary gets published on the open web, we don't want it to show up in search engine results associated with racial slurs, etc.
-		- **Transcribers should:** Use an inline pronounce code
+   - **Rationale:** Since the APLS dictionary gets published on the open web, we don't want it to show up in search engine results associated with racial slurs, etc.
+   - **Transcribers should:** Use an inline pronounce code
 
 
 _Non_-criteria:
@@ -99,7 +99,7 @@ Requirements:
 	- Bash (if not included as Git Bash in Git install)
 	- R
 		- Packages `readr`, `stringr`, `purrr`, and dependencies
-		- R must be in your PATH (directions for [Windows](https://docs.oracle.com/en/database/oracle/machine-learning/oml4r/1.5.1/oread/creating-and-modifying-environment-variables-on-windows.html#GUID-DD6F9982-60D5-48F6-8270-A27EC53807D0), [macOS](https://www.architectryan.com/2012/10/02/add-to-the-path-on-mac-os-x-mountain-lion/#.Uydjga1dXDg), [Unix](https://unix.stackexchange.com/a/26059)). If R is in your PATH, then at the command line `Rscript -e R.version.string` will print your R version
+		- R must be in your PATH (and it probably is, if you've installed R). You can tell that R is in your PATH if running `Rscript -e R.version.string` at the command line prints your R version. If not, follow directions for [Windows](https://docs.oracle.com/en/database/oracle/machine-learning/oml4r/1.5.1/oread/creating-and-modifying-environment-variables-on-windows.html#GUID-DD6F9982-60D5-48F6-8270-A27EC53807D0), [macOS](https://www.architectryan.com/2012/10/02/add-to-the-path-on-mac-os-x-mountain-lion/#.Uydjga1dXDg), or [Unix](https://unix.stackexchange.com/a/26059)
 - GitHub account
 - Push access to https://github.com/djvill/APLS
 
