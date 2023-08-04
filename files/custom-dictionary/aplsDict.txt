@@ -67,6 +67,7 @@ Sewickley
 Shadyside
 Shaler
 Sharpsburg
+Skeetersville
 Steeler
 Steelers
 Swissvale
@@ -132,6 +133,7 @@ Gullifty's
 Hermanowski's
 Highmark
 Isaly's
+Koppers
 Loews
 Lutz's
 Mariani's
@@ -162,6 +164,7 @@ balling
 CD
 CDs
 com
+commodification
 cookout
 cookouts
 cornrow
@@ -176,6 +179,7 @@ docent
 docents
 DVD
 DVDs
+extracurricular
 gelato
 gelatos
 Grier
@@ -191,8 +195,10 @@ Kwanzaa
 limburger
 moonshot
 moonshots
+nonscientific
 popsicle
 popsicles
+rec
 righty
 St
 stepdad
