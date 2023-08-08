@@ -1508,7 +1508,7 @@ font-size: 0.95em;
 <h3 class="subtitle">Archive of Pittsburgh Language and Speech
 (APLS)</h3>
 <h4 class="author">Dan Villarreal</h4>
-<h4 class="date">Last updated August 3, 2023</h4>
+<h4 class="date">Last updated August 8, 2023</h4>
 
 </div>
 
@@ -1985,39 +1985,58 @@ you&#39;ve heard more of the speaker</li>
 </ul></li>
 </ul>
 </div>
-<div id="unfinished-words-and-novel-words" class="section level2 hasAnchor" number="3.4">
+<div id="pronounce-codes" class="section level2 hasAnchor" number="3.4">
 <h2 class="hasAnchor"><span class="header-section-number">3.4</span>
-Unfinished words and novel words<a href="#unfinished-words-and-novel-words" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<!-- ADD THE FOLLOWING SOMEWHERE:
-            There are 3 situations in which you need to use a "pronounce code":
-            - hesitations/incomplete words
-            - idiosyncratic pronunciations
-            - valid words that shouldn't be in APLS's custom dictionary
-
-            - Add syllabification & stress to pronounce codes
--->
+Pronounce codes<a href="#pronounce-codes" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <ul>
-<li>Words that are unfinished are represented in a special way: with a
-tilde to mark incompleteness and at least one code to help LaBB-CAT
-assign phonemes to the unfinished word.
+<li>There are 3 situations where you need to attach a &quot;pronounce code&quot;
+to the end of a word to help LaBB-CAT determine the phonemes that are in
+the word: (1) words that aren&#39;t in the dictionary, (2) idiosyncratic
+pronunciations, (3) hesitations/incomplete words
+<ul>
+<li>Attach the pronounce code with <strong>no space after the
+word</strong>, in square brackets (e.g.,
+<code>yinzerific[jInz@rIfIk]</code>)</li>
+<li>The pronounce code uses the <a href="Phonemic-Transcription">DISC
+phonemic alphabet</a> to give a phonemic representation of what was
+said</li>
+</ul></li>
+<li><a id="novel-words"></a> If a speaker uses a word that isn&#39;t in a
+standard dictionary or <a href="https://raw.githubusercontent.com/djvill/APLS/main/files/custom-dictionary/aplsDict.txt">APLS&#39;s
+custom dictionary</a> (a word made up on the spot, a specific road name,
+etc.), just spell it the best you can, and provide a pronounce code in
+DISC (e.g., <code>yinzerific[jInz@rIfIk]</code>)
+<ul>
+<li>If the word is used more than once in a transcript, the DISC code
+needs to be supplied every time</li>
+<li>We can add words to APLS&#39;s custom dictionary, but only if it&#39;s a
+word that is likely to be used by more than just one speaker</li>
+</ul></li>
+<li>If a speaker pronounces a word in an idiosyncratic way (e.g.,
+<em>bookshelves</em> as <em>buckshelves</em>), provide a DISC code
+<ul>
+<li>Do not use a DISC code if their pronunciation is the result of a
+typical phonological/sociolinguistic process like pre-/l/ vowel laxing
+(e.g., <em>fail</em> as [fεl]) or consonant cluster reduction (e.g.,
+<em>waste</em> as [weɪs]). If you&#39;re not sure, err on the side of not
+using a DISC code</li>
+<li>Remember: <a href="#spelling">don&#39;t use &quot;eye dialect&quot; spellings</a>,
+even if the speaker is clearly performing an accent other than their
+own</li>
+<li>If the idiosyncratic pronunciation is used more than once in a
+transcript, the DISC code needs to be supplied every time</li>
+</ul></li>
+<li>Unfinished words use a tilde to mark incompleteness, plus a
+pronounce code and optional lexical code
 <ul>
 <li>For example, if the speaker starts to say <em>hesitate</em> but
 stops after two syllables, either of the following two notations would
 be acceptable: <code>hesi~[hEz@]</code>,
 <code>hesi~[hEz@](hesitate)</code></li>
-<li>First, type the incomplete word with a tilde at the end
-(<code>hesi~</code>)</li>
-<li>Then, attach a &quot;pronounce code&quot; with <strong>no space after the
-tilde</strong>. The pronounce code uses the <a href="Phonemic-Transcription">DISC phonemic alphabet</a> to give a
-phonological representation of what was said, in square brackets
-(<code>[hEz@]</code>, where DISC <code>E</code> &amp; <code>@</code> =
-IPA ε &amp; ə). Note that DISC representations are <strong>phonological,
-not phonetic</strong></li>
 <li>Optionally, you can add a lexical code, which uses English spelling
 to represent the intended word (if known). The lexical code goes in
 parentheses (<code>(hesitate)</code>) with <strong>no space after the
 pronounce code</strong></li>
-</ul></li>
 <li><a id="single-cons-unfinished"></a> You can omit pronounce codes for
 unfinished words that consist of just a consonant, since these are
 built-in to APLS&#39;s dictionary
@@ -2036,16 +2055,6 @@ as just <code>and</code>, not
 <li>This is related to the principle that words should be spelled out in
 their <a href="#dict-form">&quot;dictionary form&quot;</a></li>
 </ul></li>
-<li><a id="novel-words"></a> If a speaker uses a word that isn&#39;t in a
-standard dictionary or <a href="https://raw.githubusercontent.com/djvill/APLS/main/files/custom-dictionary/aplsDict.txt">APLS&#39;s
-custom dictionary</a> (a word made up on the spot, a specific road name,
-etc.), just spell it the best you can, and provide a pronounce code in
-DISC (e.g., <code>yinzerific[jInz@rIfIk]</code>)
-<ul>
-<li>If the word is used more than once in a transcript, the DISC code
-needs to be supplied every time</li>
-<li>We can add words to APLS&#39;s custom dictionary, but only if it&#39;s a
-word that is likely to be used by more than just one speaker</li>
 </ul></li>
 </ul>
 <script>
