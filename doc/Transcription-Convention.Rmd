@@ -165,7 +165,8 @@ Within that framework, though, there are some important things to consider
 	- When the speaker refers to a neighborhood or city, the name should always be capitalized even if the individual words are common nouns (e.g., `Larimer`, `the Hill`)
 - <a id="dict-form"/> With the exception of disfluencies or obvious mispronunciations, words should be spelled out in their "dictionary form". That means:
 	- Do **not** represent typical phonological/sociolinguistic processes like "g dropping" or consonant cluster deletion in the spelling. For example, [dʒʌmpɪ**ŋ**] and [dʒʌmpɪ**n**] should both be transcribed `jumping` not <code class="counterex">jumpin'</code>; [æ**nd**] and [æ**n**] should both be `and` not <code class="counterex">an'</code>. Do not substitute apostrophes for letters (e.g., `old` not <code class="counterex">ol'</code>).
-	- Do **not** use "eye dialect" spellings for common words (`downtown` not <code class="counterex">dahntahn</code>; `Steelers` not <code class="counterex">Stillers</code>). If you want to mention speakers' performative use of "dialect pronunciations", use a [comment](#comments-and-noises)
+	- <a id="eye-dialect"/> Do **not** use "eye dialect" spellings for common words (`downtown` not <code class="counterex">dahntahn</code>; `Steelers` not <code class="counterex">Stillers</code>).
+		- You _can_ use a [comment](#comments-and-noises) to mention speakers' performative use of "dialect pronunciations", but this is strictly optional.
 	- Using non-dictionary forms makes it harder to find words in search results and prevents the corpus software from using computational methods (e.g., part-of-speech lookup)
 - **Don't tidy up the speech**. Leave in the repetitions, fillers, speech errors, bad words, mean sentiments, etc.
 - Don't use capital letters for the start of new sentences. Only use capital letters for proper nouns and the pronoun _I_
@@ -224,7 +225,8 @@ Within that framework, though, there are some important things to consider
 - Comments can be about individuals' speech or general comments
 	- Comments about individuals' speech or behavior should be placed between curly brackets on the speaker's tier (e.g., `{pretends to talk like a man}`)
 	- General comments can be placed on the `Comment` tier **without** curly brackets (e.g., `long period not transcribed due to microphone failure` or `the two speakers whisper together`)
-	- In the "Pittsburghese" or "AAE" section of the interview, if the speaker performs "dialect forms", curly brackets can be used to mention their performance (e.g., `you often hear people saying downtown {performs monophthong aw}`). Remember: [don't use "eye dialect" spellings](#spelling), even if the speaker is clearly performing an accent other than their own
+	- In the "Pittsburghese" or "AAE" section of the interview, if the speaker performs "dialect forms", curly brackets can be used to remark upon their performance (e.g., `you often hear people saying downtown {performs monophthong aw}`).
+		- Remember: [don't use "eye dialect" spellings](#eye-dialect), even if the speaker is clearly performing an accent other than their own.
 - If a speaker laughs while speaking a single word, use the notation `{mid-word laugh}` on their tier. If a speaker laughs while speaking multiple words, use `mid-word laugh `on the `Comment` tier
 - If you can't decipher what someone says, insert `[unclear]` on their tier
 	- Try to minimize the use of `[unclear]`
@@ -241,7 +243,8 @@ Within that framework, though, there are some important things to consider
 	- We can add words to APLS's custom dictionary, but only if it's a word that is likely to be used by more than just one speaker
 - If a speaker pronounces a word in an idiosyncratic way (e.g., _bookshelves_ as _buckshelves_), provide a DISC code
 	- Do not use a DISC code if their pronunciation is the result of a typical phonological/sociolinguistic process like pre-/l/ vowel laxing (e.g., _fail_ as [fεl]) or consonant cluster reduction (e.g., _waste_ as [weɪs]). If you're not sure, err on the side of not using a DISC code
-	- Remember: [don't use "eye dialect" spellings](#spelling), even if the speaker is clearly performing an accent other than their own
+	- Remember: [don't use "eye dialect" spellings](#eye-dialect), even if the speaker is clearly performing an accent other than their own
+		- You _can_ use a [comment](#comments-and-noises) to remark upon speakers' performative use of "dialect pronunciations", but this is strictly optional
 	- If the idiosyncratic pronunciation is used more than once in a transcript, the DISC code needs to be supplied every time
 - Unfinished words use a tilde to mark incompleteness, plus a pronounce code and optional lexical code
 	- For example, if the speaker starts to say _hesitate_ but stops after two syllables, either of the following two notations would be acceptable: `hesi~[hEz@]`, `hesi~[hEz@](hesitate)`
