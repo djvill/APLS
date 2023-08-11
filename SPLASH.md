@@ -5,6 +5,7 @@
 Welcome to the homepage for the **Archive of Pittsburgh Language and Speech** aka **APLS** (pronounced like _apples_).
 
 <div id="dashboard">
+	<!--
 	<nav class="links">
 		<div class="item" title="Sign in">
 			<a href="https://apls.pitt.edu/labbcat" />
@@ -25,4 +26,22 @@ Welcome to the homepage for the **Archive of Pittsburgh Language and Speech** ak
 			</a>
 		</div>
 	</nav>
+	-->
+	
+	<table>
+		<tbody>
+			<tr>
+				<td><img src="site-assets/img/fa-apple-whole.svg" width="40" height="40" /></td>
+				<td><img src="site-assets/img/fa-user-plus.svg" width="40" height="40" /></td>
+				<td><img src="site-assets/img/fa-circle-question.svg" width="40" height="40" /></td>
+			</tr>
+			<tr>
+				<td><a href="https://apls.pitt.edu/labbcat">Sign in</a></td>
+				<td><a href="https://docs.google.com/forms/d/e/1FAIpQLSdFclWfbWZ-aM-h3Givrr4mH9T4MjyWaeQ-TpTMriC5mOcoqw/viewform?usp=sf_link">Sign up</a></td>
+				<td><a href="https://djvill.github.io/APLS/doc">APLS documentation</a></td>
+			</tr>
+		<tbody>
+	</table>
 </div>
+
+
