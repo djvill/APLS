@@ -29,7 +29,7 @@ Welcome to the homepage for the **Archive of Pittsburgh Language and Speech** ak
 	-->
 	
 	<table>
-		<tbody>
+		<tbody align="center">
 			<tr>
 				<td><img src="site-assets/img/fa-apple-whole.svg" width="40" height="40" /></td>
 				<td><img src="site-assets/img/fa-user-plus.svg" width="40" height="40" /></td>
@@ -40,8 +40,9 @@ Welcome to the homepage for the **Archive of Pittsburgh Language and Speech** ak
 				<td><a href="https://docs.google.com/forms/d/e/1FAIpQLSdFclWfbWZ-aM-h3Givrr4mH9T4MjyWaeQ-TpTMriC5mOcoqw/viewform?usp=sf_link">Sign up</a></td>
 				<td><a href="https://djvill.github.io/APLS/doc">APLS documentation</a></td>
 			</tr>
-		<tbody>
+		</tbody>
 	</table>
+	
 </div>
 
 
