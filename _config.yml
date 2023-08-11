@@ -1,0 +1,27 @@
+# Jekyll Primer theme _custom.yml
+# https://github.com/pages-themes/primer/blob/master/_config.yml
+
+title: Archive of Pittsburgh Language and Speech (APLS)
+
+exclude:
+  - node_modules
+  - script
+
+sass:
+  style: :compressed
+
+theme: jekyll-theme-primer
+
+github:
+  private: false
+  license:
+    name: CC BY-NC-SA 4.0
+  source:
+    branch: "main"
+    path: "/"
+  repository_url: "https://github.com/djvill/APLS"
+
+lang: en-US
+
+google_analytics: G-TT6NWBCLVW
+
