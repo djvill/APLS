@@ -1,8 +1,8 @@
-# APLS
+# Archive of Pittsburgh Language and Speech (APLS)
 
-Dan Villarreal, University of Pittsburgh Linguistics
+This repository hosts documentation and files for users of the **Archive of Pittsburgh Language and Speech** aka **APLS** (pronounced like _apples_).
 
-This repository holds information for users of the [Archive of Pittsburgh Language and Speech](https://labb-cat.linguistics.pitt.edu/labbcat/) aka APLS (pronounced like _apples_).
+[![](https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png)](https://creativecommons.org/licenses/by-nc-sa/4.0/)
 
 It includes a few public-facing pages hosted via GitHub Pages (aka github.io): the [APLS transcription convention](https://djvill.github.io/APLS/doc/Transcription-Convention.html) and [phonemic transcription with DISC](https://djvill.github.io/APLS/doc/Phonemic-Transcription.html).
 

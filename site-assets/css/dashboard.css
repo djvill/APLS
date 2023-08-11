@@ -1,0 +1,35 @@
+#dashboard {
+    width: 90vw;
+    text-align: center;
+}
+
+#dashboard .links {
+    width: 100%;
+}
+
+#dashboard .links .item {
+    display: inline-block;
+    padding: 20px;
+}
+#dashboard .links .item a, #dashboard .links .item a .dash-label {
+    height: 100%;
+    vertical-align: middle;
+    display: block;
+}
+
+#dashboard .queries, #dashboard .commands {
+    width: 100%;
+}
+
+#dashboard .queries .item, #dashboard .commands .item {
+    display: inline-block;
+    padding: 20px;
+}
+#dashboard .queries .item .dash-statistic, #dashboard .queries .item .dash-label, #dashboard .commands .item .dash-statistic, #dashboard .commands .item .dash-label {
+    display: block;
+}
+
+#dashboard img, td.item-icon button {
+    height: 40px;
+    width: 40px;
+}
