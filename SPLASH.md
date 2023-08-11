@@ -1,4 +1,8 @@
-# The Archive of Pittsburgh Language and Speech (APLS)
+---
+title: Archive of Pittsburgh Language and Speech (APLS)
+noedit: yes
+---
+
 
 <!-- To be injected via <iframe> into https://apls.pitt.edu/ -->
 
