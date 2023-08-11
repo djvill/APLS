@@ -12,8 +12,8 @@ output:
       style: "icon"
     md_extensions: -smart
     includes:
-      in_header: ../site-assets/header.html
-    css: ../site-assets/css/doc.css
+      in_header: ../assets/header.html
+    css: ../assets/css/doc.css
     number_sections: yes
     pandoc_args: "--shift-heading-level-by=-1"
 ---
@@ -252,7 +252,7 @@ A few finer points:
 
 
 
-```{js, file="../site-assets/js/doc.js"}
+```{js, file="../assets/js/doc.js"}
 /* Common documentation JS */
 ```
 

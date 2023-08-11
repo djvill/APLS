@@ -1,0 +1,41 @@
+/* 
+ * Dashboard links a la LaBB-CAT homepage 
+ */
+
+#dashboard {
+  width: 90vw;
+  text-align: center;
+	
+	.links {
+		width: 100%;
+		
+		.item {
+			display: inline-block;
+			padding: 20px;
+			
+			a, a .dash-label {
+				height: 100%;
+				vertical-align: middle;
+				display: block;
+			}
+		}
+	}
+	
+	.queries, .commands {
+		width: 100%;
+		
+		.item {
+			display: inline-block;
+			padding: 20px;
+			
+			.dash-statistic, .dash-label {
+				display: block;
+			}
+		}
+	}
+	
+	img {
+		height: 40px;
+		width: 40px;
+	}
+}
