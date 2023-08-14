@@ -16,7 +16,8 @@ The custom dictionary supplements Unisyn, with words in a few categories:
 
 ## (For corpus admins) How to add dictionary entries
 
-> [!NOTE]  
+<!-- > [!NOTE]  -->
+> **Note:** 
 > This section is meant for users with **admin access** to APLS. However, other users may find this section useful to understand the processes that go into making APLS.
 
 

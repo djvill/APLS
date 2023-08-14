@@ -1,0 +1,23 @@
+/* 
+ * Good examples vs. bad examples
+ */
+
+.goodex {
+  color: green;
+	
+	&:before {
+	  color: green;
+	  content: '✓ '; /* &check; + &#202f; */
+		font-weight: bold;
+	}
+}
+
+.badex {
+  color: red;
+	
+	&:before {
+	  color: red;
+	  content: '✗ '; /* &#2717; + &#202f; */
+		font-weight: bold;
+	}
+}
