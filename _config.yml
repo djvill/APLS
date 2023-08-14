@@ -10,8 +10,8 @@ exclude:
 sass:
   style: :compressed
 
-theme: jekyll-theme-dinky
-# remote_theme: just-the-docs/just-the-docs@v0.5.3
+# theme: jekyll-theme-primer
+remote_theme: just-the-docs/just-the-docs@v0.5.4
 
 github:
   private: false
