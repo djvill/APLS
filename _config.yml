@@ -30,6 +30,8 @@ lang: en-US
 ga_tracking: G-TT6NWBCLVW 
 ga_tracking_anonymize_ip: true  # Use GDPR compliant Google Analytics settings
 
+favicon_ico: assets/img/1f34e.svg
+
 ##Callouts (e.g., "Note", "Warning")
 ##Use: https://just-the-docs.github.io/just-the-docs/docs/ui-components/callouts/
 ##Config: https://just-the-docs.github.io/just-the-docs/docs/configuration/#callouts
