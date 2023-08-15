@@ -1,14 +1,18 @@
+---
+nav_exclude: true
+---
+
 # Archive of Pittsburgh Language and Speech (APLS)
 
 [![](https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png)](https://creativecommons.org/licenses/by-nc-sa/4.0/)
 
 This GitHub repository hosts documentation and files for users of the **Archive of Pittsburgh Language and Speech** aka **APLS** (pronounced like _apples_).
-It powers the webpage https://djvill.github.io/APLS/, which is hosted by GitHub Pages.
+It powers the webpage <djvill.github.io/APLS>, which is hosted by GitHub Pages.
 This repository (unlike APLS itself) is licensed CC BY-NC-SA 4.0.
 
 
-If you're looking for the APLS homepage, please visit https://apls.pitt.edu.
-The APLS corpus is at https://apls.pitt.edu/labbcat.
+If you're looking for the APLS homepage, please visit <apls.pitt.edu>.
+The APLS corpus is at <apls.pitt.edu/labbcat>.
 This README page describes the repository itself, which may be of interest to developers.
 
 
@@ -18,12 +22,12 @@ However, I anticipate it'll contain info for not only end-users, but also transc
 
 ## GitHub Pages/Jekyll
 
-The public-facing pages are built and deployed to https://djvill.github.io/APLS/ using GitHub Pages.
-The page source is built from the `main` branch's root directory, using the ["deploy from a branch"](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site#publishing-from-a-branch) workflow;
-by default, this workflow uses the [Primer](https://github.com/pages-themes/primer) Jekyll theme.
+The public-facing pages are built and deployed to <djvill.github.io/APLS> using GitHub Pages.
+The page source is built from the `main` branch's root directory, using the ["deploy from a branch"](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site#publishing-from-a-branch) workflow.
+This repo uses the [just-the-docs theme](https://github.com/just-the-docs/just-the-docs).
 
 
-This repo only contains a few Jekyll files for customizing Primer (e.g., overwriting `_config.yml`).
+This repo only contains a few Jekyll files for customizing just-the-docs (e.g., overwriting `_config.yml`).
 As a result, the repo doesn't have all the files to preview the page locally (i.e., with `bundle exec jekyll serve`).
 I decided this limitation was worth not clogging up the repository with a ton of Jekyll code.
 
@@ -43,4 +47,4 @@ I decided this limitation was worth not clogging up the repository with a ton of
 	- `_config.yml`: Site configuration file (see [Jekyll doc](https://jekyllrb.com/docs/configuration/))
 	- `LICENSE.md`: Markdown conversion of [legal code for CC BY-NC-SA 4.0 license](https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode)
 	- `README.md`: What you're reading right now!
-	- `SPLASH.md`: APLS homepage (aka splash page), injected via `<iframe>` into https://apls.pitt.edu/
+	- `SPLASH.md`: APLS homepage (aka splash page), injected via `<iframe>` into <apls.pitt.edu>
