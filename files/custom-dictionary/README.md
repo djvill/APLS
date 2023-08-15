@@ -1,22 +1,6 @@
 # `custom-dictionary/`
-{: .no_toc }
-
 
 This folder contains files for APLS's custom dictionary (browse files [here](https://github.com/djvill/APLS/tree/main/files/custom-dictionary)).
-
-
-## On this page
-{: .no_toc .text-delta }
-
-1. TOC
-{:toc}
-
-{% comment %}
-{% include page-toc.html %}
-{% endcomment %}
-
-
-## Intro
 
 APLS uses **pronouncing dictionaries** to match individual words in a transcript to their phonemic representations.
 Its 'default' dictionary is the [Unisyn](https://www.cstr.ed.ac.uk/projects/unisyn/) lexicon for American English, which covers most of the words in any given transcript.

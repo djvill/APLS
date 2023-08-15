@@ -1,7 +1,7 @@
 # Jekyll Primer theme _custom.yml
 # https://github.com/pages-themes/primer/blob/master/_config.yml
 
-title: APLS Documentation
+title: Archive of Pittsburgh Language and Speech (APLS)
 
 exclude:
   - node_modules
@@ -23,19 +23,5 @@ github:
 
 lang: en-US
 
-########################################
-#### Config for just-the-docs theme ####
-########################################
-
-ga_tracking: G-TT6NWBCLVW 
-ga_tracking_anonymize_ip: true  # Use GDPR compliant Google Analytics settings
-
-##Callouts (e.g., "Note", "Warning")
-##Use: https://just-the-docs.github.io/just-the-docs/docs/ui-components/callouts/
-##Config: https://just-the-docs.github.io/just-the-docs/docs/configuration/#callouts
-callouts:
-  note:
-    title: Note
-    color: yellow
-    icon: assets/img/fa-circle-info.png  # Not implemented yet. Need to use JS to inject icon into .note::before
+google_analytics: G-TT6NWBCLVW
 

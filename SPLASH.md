@@ -1,11 +1,10 @@
 ---
-layout: ghost
-nav_exclude: true
+title: Archive of Pittsburgh Language and Speech (APLS)
+noedit: yes
 ---
 
-<!-- To be injected via <iframe> into https://apls.pitt.edu/ -->
 
-# Archive of Pittsburgh Language and Speech (APLS)
+<!-- To be injected via <iframe> into https://apls.pitt.edu/ -->
 
 Welcome to the homepage for the **Archive of Pittsburgh Language and Speech** aka **APLS** (pronounced like _apples_).
 
