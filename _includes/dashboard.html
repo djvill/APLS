@@ -1,0 +1,26 @@
+<div class="dashboard">
+	<nav class="links">
+		<ul>
+			{% for link in page[include.id] %}
+				{% capture linkid %}
+					{% if link.id %}
+						{{ link.id | replace: " ", "_" | downcase }}
+					{% else %}
+						{{ link.text | replace: " ", "_" | downcase }}
+					{% endif %}
+				{% endcapture %}
+				{% capture target %}
+					{% if link.newtab %}
+						target="_blank"
+					{% endif %}
+				{% endcapture %}
+				<li class="item" id="{{ linkid | strip }}">
+					<a href="{{ link.url | absolute_url }}" {{ target }} >
+						<img src="{{ link.image | prepend: '/assets/img/' }}" />
+						<span class="dash-label">{{ link.text }}</span>
+					</a>
+				</li>
+			{% endfor %}
+		</ul>
+	</nav>
+</div>

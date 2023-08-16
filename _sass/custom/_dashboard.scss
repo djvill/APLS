@@ -2,14 +2,22 @@
  * Dashboard links à la LaBB-CAT homepage 
  */
 
-#dashboard {
+.dashboard {
   text-align: center;
 	display: flex;
 	justify-content: center;
 	
+	ul {
+		padding-left: 0px;
+	}
+	
 	.links .item {
 		display: inline-block;
 		padding: 20px;
+		
+		&::before {
+		  content: "";
+		}
 		
 		a, a .dash-label {
 			height: 100%;
