@@ -1,6 +1,7 @@
 ---
 layout: default
 nav_exclude: true
+permalink: /
 ---
 
 # Archive of Pittsburgh Language and Speech (APLS)
