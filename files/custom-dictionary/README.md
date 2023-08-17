@@ -26,7 +26,7 @@ The custom dictionary supplements Unisyn, with words in a few categories:
 - Brand/business names, whether local (e.g., _Pelusi_) or not (e.g., _Highmark_, _Panera_)
 - Pittsburgh lexical features, whether stereotypical (e.g., _redd_, _gumband_) or not (e.g., _Trib_, _WAMO_)
 - Non-Pittsburgh-specific words that are absent from Unisyn, sometimes unexpectedly (_artsy_, _bachelorette_, _homie_, _Kwanzaa_, _microbrew_, _stepdad_, _tarp_, _y'all_)
-- Restricted mini-lexicons specified in the APLS transcription convention: [colloquial spellings](https://djvill.github.io/APLS/doc/Transcription-Convention.html#colloq-spellings) (e.g., _gonna_), [interjections](https://djvill.github.io/APLS/doc/Transcription-Convention.html#other-interjections) (e.g., _yup_), and [single-phoneme hesitation codes](https://djvill.github.io/APLS/doc/Transcription-Convention.html#single-cons-unfinished) (e.g., _f~_ for [f])
+- Restricted mini-lexicons specified in the APLS transcription convention: [colloquial spellings](/doc/Transcription-Convention#colloq-spellings) (e.g., _gonna_), [interjections](/doc/Transcription-Convention#other-interjections) (e.g., _yup_), and [single-phoneme hesitation codes](/doc/Transcription-Convention#single-cons-unfinished) (e.g., _f~_ for [f])
 
 
 
@@ -46,7 +46,7 @@ The custom dictionary supplements Unisyn, with words in a few categories:
 ### To add or not to add?
 
 Transcribers will suggest new dictionary entries as they work on transcriptions, typically because a word got flagged by the [Elan file checker's](https://djvill.shinyapps.io/apls_elan_file_checker/) step 2.
-It's up to the corpus maintainer whether to add these entries, or whether transcribers should specify the phonemic transcription inline (see [transcription convention sec. 3.4](https://djvill.github.io/APLS/doc/Transcription-Convention.html#novel-words)).
+It's up to the corpus maintainer whether to add these entries, or whether transcribers should specify the phonemic transcription inline (see [transcription convention sec. 3.4](/doc/Transcription-Convention#pronounce-codes)).
 
 Add the word if:
 
@@ -55,10 +55,10 @@ Add the word if:
    - **Rationale:** If a word gets added to the dictionary, it'll save future transcribers time and ensure quality control
    - **Transcribers should:** Use an inline pronounce code
    - **Note:** This criterion is by far the most subjective! If the word satisfies all the other criteria, err on the side of adding it
-2. It's not a **new [colloquial spelling](https://djvill.github.io/APLS/doc/Transcription-Convention.html#colloq-spellings) or [interjection](https://djvill.github.io/APLS/doc/Transcription-Convention.html#other-interjections)**
+2. It's not a **new [colloquial spelling](/doc/Transcription-Convention#colloq-spellings) or [interjection](/doc/Transcription-Convention#other-interjections)**
    - **Examples:** <span class="badex">dunno</span>  <span class="badex">er</span>  <span class="badex">ahem</span>
    - **Rationale:** We want to avoid "coding while transcribing". If transcribers have the choice between (e.g.) _don't know_ and _dunno_, they'll have to spend time deciding which one the speaker uttered. That's really a question for future sociolinguistic investigation, not something to be decided at the transcription stage
-   - **Transcribers should:** Depending on the situation, use a standard spelling, a [hesitation code](https://djvill.github.io/APLS/doc/Transcription-Convention.html#unfinished-words-and-novel-words), or a [noise code](https://djvill.github.io/APLS/doc/Transcription-Convention.html#unfinished-words-and-novel-words)
+   - **Transcribers should:** Depending on the situation, use a standard spelling, a [hesitation code](/doc/Transcription-Convention#pronounce-codes), or a [noise code](/doc/Transcription-Convention#pronounce-codes)
    - **Note:** We can consider waiving this criterion only if the evidence is really, really strong. See [below](#example-lemme) for an example of this principle in action.
 3. It doesn't **violate existing rules** in the transcription convention
    - **Examples:** <span class="badex">412</span>  <span class="badex">IBM</span>  <span class="badex">colllect</span>  <span class="badex">jumpin'</span>  <span class="badex">résumé</span>  <span class="badex">Picksburgh</span>
@@ -132,11 +132,11 @@ Edit the file in a text editor, **not in Excel**, as Excel will mess up the form
 Simply add a new line under the appropriate category heading: `<word>,<phonemes>`.
 The category headings are semi-arbitrary and don't affect anything meaningful, so just pick whichever one seems right.
 
-Use the DISC phonemic alphabet, as described [here](https://djvill.github.io/APLS/doc/Phonemic-Transcription).
-Please pay attention to the extra considerations for [suggesting new dictionary entries](https://djvill.github.io/APLS/doc/Phonemic-Transcription#suggesting-new-dictionary-entries): multiple phonemic representations per word, the speech community's pronunciation(s), and syllabification/stress.
+Use the DISC phonemic alphabet, as described [here](/doc/Phonemic-Transcription).
+Please pay attention to the extra considerations for [suggesting new dictionary entries](/doc/Phonemic-Transcription#suggesting-new-dictionary-entries): multiple phonemic representations per word, the speech community's pronunciation(s), and syllabification/stress.
 
 You'll also need to add inflectional forms, like plurals, verbal forms like _-s_, _-ing_, etc.
-You do **not** need to add [cliticized forms](https://djvill.github.io/APLS/doc/Transcription-Convention.html) (e.g., _Pittsburgh's_);
+You do **not** need to add [cliticized forms](/doc/Transcription-Convention) (e.g., _Pittsburgh's_);
 APLS automatically adjusts pronunciations to account for clitics, and the Elan file checker is programmed to ignore _X's_ if _X_ is in the dictionary.
 (The transcription convention says certain clitics can be added to any _noun_, but the implementation of clitics in APLS and the file checker aren't actually restricted to nouns.)
 If you supplied multiple entries for the base-form of the word, you should also add multiple entries for each inflected form.
@@ -159,7 +159,7 @@ Requirements:
 	- Bash (if not included as Git Bash in Git install)
 	- R
 		- Packages `readr`, `stringr`, `purrr`, and dependencies
-		- R must be in your PATH (and it probably is, if you've installed R). You can tell that R is in your PATH if running `Rscript -e R.version.string` at the command line prints your R version. If not, follow directions for [Windows](https://docs.oracle.com/en/database/oracle/machine-learning/oml4r/1.5.1/oread/creating-and-modifying-environment-variables-on-windows.html#GUID-DD6F9982-60D5-48F6-8270-A27EC53807D0), [macOS](https://www.architectryan.com/2012/10/02/add-to-the-path-on-mac-os-x-mountain-lion/#.Uydjga1dXDg), or [Unix](https://unix.stackexchange.com/a/26059)
+		- R must be in your PATH (and it probably is, if you've installed R). You can tell that R is in your PATH if running `Rscript -e R.version.string` at the command line prints your R version. If not, follow directions for [Windows](https://info201.github.io/r-intro#windows-command-line), [macOS](https://www.architectryan.com/2012/10/02/add-to-the-path-on-mac-os-x-mountain-lion/#.Uydjga1dXDg), or [Unix](https://unix.stackexchange.com/a/26059)
 - GitHub account
 - Push access to https://github.com/djvill/APLS
 
