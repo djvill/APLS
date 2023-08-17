@@ -1,3 +1,8 @@
+---
+layout: default
+permalink: /
+---
+
 # Documentation
 
 _Archive of Pittsburgh Language and Speech (APLS)_

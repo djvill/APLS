@@ -1,15 +1,16 @@
 ---
 layout: default
 nav_exclude: true
-permalink: /
+search_exclude: true
+permalink: /README
 ---
 
 # Archive of Pittsburgh Language and Speech (APLS)
 
 [![](https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png)](https://creativecommons.org/licenses/by-nc-sa/4.0/)
 
-This GitHub repository hosts documentation and files for users of the **Archive of Pittsburgh Language and Speech** aka **APLS** (pronounced like _apples_).
-It powers the webpage [djvill.github.io/APLS](https://djvill.github.io/APLS), which is hosted by GitHub Pages.
+The GitHub repository [`djvill/APLS`](https://github.com/djvill/APLS) hosts documentation and files for users of the **Archive of Pittsburgh Language and Speech** aka **APLS** (pronounced like _apples_).
+It powers the website [djvill.github.io/APLS](https://djvill.github.io/APLS) and APLS 'splash page' [apls.pitt.edu](https://apls.pitt.edu), both of which are hosted by GitHub Pages.
 This repository (unlike APLS itself) is licensed CC BY-NC-SA 4.0.
 
 

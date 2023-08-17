@@ -1,6 +1,7 @@
 ---
 layout: ghost
 nav_exclude: true
+search_exclude: true
 dashlinks:
   - text: Sign in
     image: fa-apple-whole.svg
