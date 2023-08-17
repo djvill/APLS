@@ -1,5 +1,8 @@
 <!-- BEGIN _includes/head_custom.html -->
 
+<!-- For some reason, default favicon not working -->
+<link rel="icon" href="{{ site.favicon_ico | default: '/favicon.ico' | relative_url }}" type="image/x-icon">
+
 <!-- Custom JavaScript -->
 <script src="{{ '/assets/js/search.js' | relative_url }}"></script>
 

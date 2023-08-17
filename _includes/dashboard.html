@@ -16,7 +16,7 @@
 				{% endcapture %}
 				<li class="item" id="{{ linkid | strip }}">
 					<a href="{{ link.url | absolute_url }}" {{ target }} >
-						<img src="{{ link.image | prepend: '/assets/img/' }}" />
+						<img src="{{ link.image | prepend: '/assets/img/' | absolute_url }}" />
 						<span class="dash-label">{{ link.text }}</span>
 					</a>
 				</li>

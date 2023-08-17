@@ -10,6 +10,7 @@ exclude:
 sass:
   style: :compressed
 
+# theme: just-the-docs
 remote_theme: just-the-docs/just-the-docs@v0.5.4
 
 github:
@@ -27,10 +28,15 @@ lang: en-US
 #### Config for just-the-docs theme ####
 ########################################
 
-ga_tracking: G-TT6NWBCLVW 
-ga_tracking_anonymize_ip: true  # Use GDPR compliant Google Analytics settings
+##Favicon
+favicon_ico: /assets/img/1f34e.svg
 
-favicon_ico: assets/img/1f34e.svg
+##Aux links
+##Config: https://just-the-docs.github.io/just-the-docs/docs/configuration/#aux-links
+aux_links:
+  "View on GitHub":
+    - "//github.com/djvill/APLS"
+aux_links_new_tab: true
 
 ##Callouts (e.g., "Note", "Warning")
 ##Use: https://just-the-docs.github.io/just-the-docs/docs/ui-components/callouts/
@@ -41,3 +47,6 @@ callouts:
     color: yellow
     icon: assets/img/fa-circle-info.png  # Not implemented yet. Need to use JS to inject icon into .note::before
 
+##Google Analytics
+ga_tracking: G-TT6NWBCLVW 
+ga_tracking_anonymize_ip: true  # Use GDPR compliant Google Analytics settings
