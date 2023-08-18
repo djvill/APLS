@@ -11,7 +11,7 @@ dashlinks:
     url: https://docs.google.com/forms/d/e/1FAIpQLSdFclWfbWZ-aM-h3Givrr4mH9T4MjyWaeQ-TpTMriC5mOcoqw/viewform?usp=sf_link
   - text: Documentation
     image: fa-circle-question.svg
-    url: https://djvill.github.io/APLS/doc
+    url: /APLS
     newtab: yes
 ---
 

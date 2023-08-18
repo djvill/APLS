@@ -1,12 +1,13 @@
 ---
+title: Custom dictionary
 layout: default
+permalink: /files/custom-dictionary
 ---
 
-# `custom-dictionary/`
 {: .no_toc }
 
 
-This folder [`/files/custom-dictionary/`](https://github.com/djvill/APLS/tree/main/files/custom-dictionary) contains files for APLS's custom dictionary.
+The folder [`/files/custom-dictionary/`](https://github.com/djvill/APLS/tree/main/files/custom-dictionary) contains files for APLS's custom dictionary.
 
 
 ## On this page
@@ -30,7 +31,7 @@ The custom dictionary supplements Unisyn, with words in a few categories:
 - Brand/business names, whether local (e.g., _Pelusi_) or not (e.g., _Highmark_, _Panera_)
 - Pittsburgh lexical features, whether stereotypical (e.g., _redd_, _gumband_) or not (e.g., _Trib_, _WAMO_)
 - Non-Pittsburgh-specific words that are absent from Unisyn, sometimes unexpectedly (_artsy_, _bachelorette_, _homie_, _Kwanzaa_, _microbrew_, _stepdad_, _tarp_, _y'all_)
-- Restricted mini-lexicons specified in the APLS transcription convention: [colloquial spellings](/doc/Transcription-Convention#colloq-spellings) (e.g., _gonna_), [interjections](/doc/Transcription-Convention#other-interjections) (e.g., _yup_), and [single-phoneme hesitation codes](/doc/Transcription-Convention#single-cons-unfinished) (e.g., _f~_ for [f])
+- Restricted mini-lexicons specified in the APLS transcription convention: [colloquial spellings](/APLS/doc/Transcription-Convention#colloq-spellings) (e.g., _gonna_), [interjections](/APLS/doc/Transcription-Convention#other-interjections) (e.g., _yup_), and [single-phoneme hesitation codes](/APLS/doc/Transcription-Convention#single-cons-unfinished) (e.g., _f~_ for [f])
 
 
 
@@ -49,7 +50,7 @@ The custom dictionary supplements Unisyn, with words in a few categories:
 ### To add or not to add?
 
 Transcribers will suggest new dictionary entries as they work on transcriptions, typically because a word got flagged by the [Elan file checker's](https://djvill.shinyapps.io/apls_elan_file_checker/) step 2.
-It's up to the corpus maintainer whether to add these entries, or whether transcribers should specify the phonemic transcription inline (see [transcription convention sec. 3.4](/doc/Transcription-Convention#pronounce-codes)).
+It's up to the corpus maintainer whether to add these entries, or whether transcribers should specify the phonemic transcription inline (see [transcription convention sec. 3.4](/APLS/doc/Transcription-Convention#pronounce-codes)).
 
 Add the word if:
 
@@ -58,10 +59,10 @@ Add the word if:
    - **Rationale:** If a word gets added to the dictionary, it'll save future transcribers time and ensure quality control
    - **Transcribers should:** Use an inline pronounce code
    - **Note:** This criterion is by far the most subjective! If the word satisfies all the other criteria, err on the side of adding it
-2. It's not a **new [colloquial spelling](/doc/Transcription-Convention#colloq-spellings) or [interjection](/doc/Transcription-Convention#other-interjections)**
+2. It's not a **new [colloquial spelling](/APLS/doc/Transcription-Convention#colloq-spellings) or [interjection](/APLS/doc/Transcription-Convention#other-interjections)**
    - **Examples:** <span class="badex">dunno</span>  <span class="badex">er</span>  <span class="badex">ahem</span>
    - **Rationale:** We want to avoid "coding while transcribing". If transcribers have the choice between (e.g.) _don't know_ and _dunno_, they'll have to spend time deciding which one the speaker uttered. That's really a question for future sociolinguistic investigation, not something to be decided at the transcription stage
-   - **Transcribers should:** Depending on the situation, use a standard spelling, a [hesitation code](/doc/Transcription-Convention#pronounce-codes), or a [noise code](/doc/Transcription-Convention#pronounce-codes)
+   - **Transcribers should:** Depending on the situation, use a standard spelling, a [hesitation code](/APLS/doc/Transcription-Convention#pronounce-codes), or a [noise code](/APLS/doc/Transcription-Convention#pronounce-codes)
    - **Note:** We can consider waiving this criterion only if the evidence is really, really strong. See [below](#example-lemme) for an example of this principle in action.
 3. It doesn't **violate existing rules** in the transcription convention
    - **Examples:** <span class="badex">412</span>  <span class="badex">IBM</span>  <span class="badex">colllect</span>  <span class="badex">jumpin'</span>  <span class="badex">résumé</span>  <span class="badex">Picksburgh</span>
@@ -135,11 +136,11 @@ Edit the file in a text editor, **not in Excel**, as Excel will mess up the form
 Simply add a new line under the appropriate category heading: `<word>,<phonemes>`.
 The category headings are semi-arbitrary and don't affect anything meaningful, so just pick whichever one seems right.
 
-Use the DISC phonemic alphabet, as described [here](/doc/Phonemic-Transcription).
-Please pay attention to the extra considerations for [suggesting new dictionary entries](/doc/Phonemic-Transcription#suggesting-new-dictionary-entries): multiple phonemic representations per word, the speech community's pronunciation(s), and syllabification/stress.
+Use the DISC phonemic alphabet, as described [here](/APLS/doc/Phonemic-Transcription).
+Please pay attention to the extra considerations for [suggesting new dictionary entries](/APLS/doc/Phonemic-Transcription#suggesting-new-dictionary-entries): multiple phonemic representations per word, the speech community's pronunciation(s), and syllabification/stress.
 
 You'll also need to add inflectional forms, like plurals, verbal forms like _-s_, _-ing_, etc.
-You do **not** need to add [cliticized forms](/doc/Transcription-Convention) (e.g., _Pittsburgh's_);
+You do **not** need to add [cliticized forms](/APLS/doc/Transcription-Convention) (e.g., _Pittsburgh's_);
 APLS automatically adjusts pronunciations to account for clitics, and the Elan file checker is programmed to ignore _X's_ if _X_ is in the dictionary.
 (The transcription convention says certain clitics can be added to any _noun_, but the implementation of clitics in APLS and the file checker aren't actually restricted to nouns.)
 If you supplied multiple entries for the base-form of the word, you should also add multiple entries for each inflected form.
@@ -173,11 +174,11 @@ Currently, you have to update the custom dictionary for **two** separate layers 
 Go to the [word layers page](https://labb-cat.linguistics.pitt.edu/labbcat/admin/layers/word) (note: you must have admin access, or else you'll get "ERROR 403").
 For each layer:
 
-1. Click on the "dictionary" icon (![](https://labb-cat.linguistics.pitt.edu/labbcat/user-interface/en/assets/book.svg))
+1. Click on the dictionary icon: ![a yellow book with a white bookmark](https://labb-cat.linguistics.pitt.edu/labbcat/user-interface/en/assets/book.svg){:height="14px"}
 1. Drag and drop [`APLS-dict.csv`](APLS-dict.csv) to the "Choose File" button, and click "Import From CSV"
 1. You'll see a ton of lines indicating entries that _weren't_ added, such as
    - **Line 1 word // APLS custom dictionary not deleted: isn't in the dictionary**
-	 - **Line 9 word Wilkinsburg definition 'wIl-kInz-"b3rg ignored: definition already in the dictionary**
+   - **Line 9 word Wilkinsburg definition 'wIl-kInz-"b3rg ignored: definition already in the dictionary**
 1. These are normal. At the very bottom, you should see **Entries added: 17** (or some other number), with the new entries listed below.
 1. If you see any lines in red like **Line 1 word _water_ ignored: word in the read-only part of the dictionary**, then follow the steps for [dialect pronunciations](#dialect-pronunciations)
 

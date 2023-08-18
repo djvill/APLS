@@ -3,10 +3,6 @@
 
 title: APLS Documentation
 
-baseurl: /APLS
-plugins:
-  - jekyll-relative-links
-
 exclude:
   - node_modules
   - script
