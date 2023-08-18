@@ -3,6 +3,8 @@
 
 title: APLS Documentation
 
+baseurl: /APLS
+
 exclude:
   - node_modules
   - script
@@ -20,7 +22,7 @@ github:
   source:
     branch: "main"
     path: "/"
-  repository_url: "https://github.com/djvill/APLS"
+  repository_url: https://github.com/djvill/APLS
 
 lang: en-US
 
