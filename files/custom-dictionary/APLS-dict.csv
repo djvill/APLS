@@ -1,6 +1,6 @@
 // APLS custom dictionary
 
-// Word-initial secondary-stress: Use """ at the start of the word & " at the end"
+// Word-initial secondary-stress: Use """ at the start of the word & " at the end
 // DO NOT EDIT IN EXCEL--IT WILL ADD EXTRA CHARACTERS
 // N.B. Rows with just one entry are ignored by LaBB-CAT; these can be used for comments
 

@@ -71,7 +71,10 @@ Add the word if:
 4. It's not **already in the Unisyn dictionary**
    - **Rationale:** LaBB-CAT won't update a dictionary entry if it's in Unisyn (it will update custom dictionary entries if needed)
    - **Transcribers should:** Do nothing
-   - **Note:** Don't assume that pluralized forms are in the Unisyn dictionary! If the Elan file checker flags a form, it's not in either dictionary
+   - **Notes:**
+     - Don't assume that pluralized forms are in the Unisyn dictionary!
+     - If the Elan file checker flags a form, it's not in either dictionary.
+     - If you accidentally add a word that turns out to have been in Unisyn, you'll get the message <span style="color:red;">**word in the read-only part of the dictionary**</span> when you try to [upload it to APLS](https://djvill.github.io/APLS/files/custom-dictionary#update-aplss-internal-dictionary). If that happens, simply delete the word from the custom dictionary
 5. It's not a **vulgar and/or objectionable** word
    - **Rationale:** Since the APLS dictionary gets published on the open web, we don't want it to show up in search engine results associated with racial slurs, etc.
    - **Transcribers should:** Use an inline pronounce code
@@ -180,8 +183,9 @@ For each layer:
    - **Line 1 word // APLS custom dictionary not deleted: isn't in the dictionary**
    - **Line 9 word Wilkinsburg definition 'wIl-kInz-"b3rg ignored: definition already in the dictionary**
 1. These are normal. At the very bottom, you should see **Entries added: 17** (or some other number), with the new entries listed below.
-1. If you see any lines in red like **Line 1 word _water_ ignored: word in the read-only part of the dictionary**, then follow the steps for [dialect pronunciations](#dialect-pronunciations)
+1. If you see any lines in red like <span style="color:red;">**Line 1 word _water_ ignored: word in the read-only part of the dictionary**</span>, then either:
+   - Delete the word (if you didn't mean to provide a dialect pronunciation), or
+   - Follow the steps for [dialect pronunciations](#dialect-pronunciations)
 
-That's it!
 
 
