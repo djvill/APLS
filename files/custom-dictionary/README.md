@@ -165,7 +165,7 @@ Requirements:
 		- Packages `readr`, `stringr`, `purrr`, and dependencies
 		- R must be in your PATH (and it probably is, if you've installed R). You can tell that R is in your PATH if running `Rscript -e R.version.string` at the command line prints your R version. If not, follow directions for [Windows](https://info201.github.io/r-intro#windows-command-line), [macOS](https://www.architectryan.com/2012/10/02/add-to-the-path-on-mac-os-x-mountain-lion/#.Uydjga1dXDg), or [Unix](https://unix.stackexchange.com/a/26059)
 - GitHub account
-- Push access to https://github.com/djvill/APLS
+- Push access to <https://github.com/djvill/APLS>
 
 
 ### Update APLS's internal dictionary
@@ -174,7 +174,7 @@ Currently, you have to update the custom dictionary for **two** separate layers 
 Go to the [word layers page](https://labb-cat.linguistics.pitt.edu/labbcat/admin/layers/word) (note: you must have admin access, or else you'll get "ERROR 403").
 For each layer:
 
-1. Click on the dictionary icon: ![a yellow book with a white bookmark](https://labb-cat.linguistics.pitt.edu/labbcat/user-interface/en/assets/book.svg){:height="14px"}
+1. Click on the dictionary icon: ![a yellow book with a white bookmark](https://labb-cat.linguistics.pitt.edu/labbcat/user-interface/en/assets/book.svg){:height="14"}
 1. Drag and drop [`APLS-dict.csv`](APLS-dict.csv) to the "Choose File" button, and click "Import From CSV"
 1. You'll see a ton of lines indicating entries that _weren't_ added, such as
    - **Line 1 word // APLS custom dictionary not deleted: isn't in the dictionary**
