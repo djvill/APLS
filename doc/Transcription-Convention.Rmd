@@ -172,7 +172,7 @@ Within that framework, though, there are some important things to consider
 - Don't use capital letters for the start of new sentences. Only use capital letters for proper nouns and the pronoun _I_
 - Write all numbers out in full, with spaces instead of hyphens (e.g., `one hundred and twenty three` not <code class="counterex">123</code> or <code class="counterex">one hundred and twenty-three</code>)
 - When abbreviations or acronyms are used
-	- If each letter is said separately, use capital letters with spaces in between each letter (e.g., `P G H`)
+	- If each letter is said separately, use capital letters with spaces in between each letter (e.g., `P G H`). If the word is pluralized, just attach the `s` to the last letter (e.g., `D V Ds`).
 	- If the word is pronounced as a word, use capitals with no spaces (e.g., `FEMA`)
 - Don't use any diacritics that are not part of the English alphabet (e.g., `fiancee` not <code class="counterex">fiancée</code>)
 - A single word should always be spelled as an entire word, even if there is a pause between syllables. **Never** put a breakpoint in the middle of a word.

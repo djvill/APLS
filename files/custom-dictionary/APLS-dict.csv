@@ -66,9 +66,9 @@ Haine,'h1n
 Schenley,'SEn-li
 Braddock,'br{-d@k
 Braddock,'br{-dQk
-Edinboro,'Ed-In-b@r-5
+Edinboro,'E-dIn-b@r-5
 Murrysville,'m3r-iz-"vIl 
-Morningside,'m$rn-IN-"s2d
+Morningside,'m$r-nIN-"s2d
 Swissvale,'swIs-"v1l
 Deener,'di-n@r
 Aspinwall,'{s-pH-"w$l
@@ -327,3 +327,29 @@ o~,5
 u~,@
 ou~,6
 oi~,4
+
+
+// Plural letters (for e.g. "D V Ds")
+Bs,'biz
+Cs,'siz
+Ds,'diz
+Es,'iz
+Fs,'Efz
+Gs,'_iz
+Hs,'1-J@z
+Js,'_1z
+Ks,'k1z
+Ls,'Elz
+Ns,'Enz
+Os,'5z
+Ps,'piz
+Qs,'kjuz
+Rs,'#rz
+Ss,'E-s@z
+Ts,'tiz
+Vs,'viz
+Ws,'dV-bP-juz
+Xs,'Ek-s@z
+Ys,'w2z
+Zs,'ziz
+// N.B. [AIMU]s are already specified in Unisyn

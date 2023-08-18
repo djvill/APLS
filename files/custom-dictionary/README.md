@@ -188,4 +188,6 @@ For each layer:
    - Follow the steps for [dialect pronunciations](#dialect-pronunciations)
 
 
+### If you need to correct a custom entry
 
+<!-- ADD -->

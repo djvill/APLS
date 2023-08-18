@@ -307,3 +307,28 @@ z~
 zh~
 
 
+##Plural letters (for e.g. "D V Ds")
+Bs
+Cs
+Ds
+Es
+Fs
+Gs
+Hs
+Js
+Ks
+Ls
+Ns
+Os
+Ps
+Qs
+Rs
+Ss
+Ts
+Vs
+Ws
+Xs
+Ys
+Zs
+
+
