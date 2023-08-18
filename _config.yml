@@ -31,12 +31,28 @@ lang: en-US
 ##Favicon
 favicon_ico: /assets/img/1f34e.svg
 
+##Search
+##Config: https://just-the-docs.github.io/just-the-docs/docs/configuration/#search
+search:
+  heading_level: 3
+  previews: 5
+
 ##Aux links
 ##Config: https://just-the-docs.github.io/just-the-docs/docs/configuration/#aux-links
 aux_links:
   "View on GitHub":
     - "//github.com/djvill/APLS"
 aux_links_new_tab: true
+
+##Footer
+##Config: https://just-the-docs.github.io/just-the-docs/docs/configuration/#footer-content
+back_to_top: false
+gh_edit_link: true # show or hide edit this page link
+gh_edit_link_text: "Edit this page on GitHub."
+gh_edit_repository: "https://github.com/djvill/APLS" # the github URL for your repo
+gh_edit_branch: "main" # the branch that your docs is served from
+gh_edit_view_mode: "edit" # "tree" or "edit" if you want the user to jump into the editor immediately
+
 
 ##Callouts (e.g., "Note", "Warning")
 ##Use: https://just-the-docs.github.io/just-the-docs/docs/ui-components/callouts/
@@ -45,7 +61,7 @@ callouts:
   note:
     title: Note
     color: yellow
-    icon: assets/img/fa-circle-info.png  # Not implemented yet. Need to use JS to inject icon into .note::before
+    icon: /assets/img/fa-circle-info.png  # Not implemented yet. Need to use JS to inject icon into .note::before
 
 ##Google Analytics
 ga_tracking: G-TT6NWBCLVW 
