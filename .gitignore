@@ -1,7 +1,9 @@
 #### CUSTOM ####
 
-Unisyn GAM
-unisynDict.txt
+
+# Files for building site locally (bundle exec jekyll serve)
+_site
+Gemfile*
 
 
 #### OSs ####
