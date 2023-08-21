@@ -1,3 +1,25 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=Rubik:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap');
+
+h1, h2, h3, h4, h5, .site-title {
+	font-family: 'Rubik',sans-serif;
+	letter-spacing: 0.015em;
+}
+
+h1 {
+	font-weight: 700;
+}
+
+h2, h3, .site-title {
+	font-weight: 600;
+}
+
+h4 {
+	font-size: 14px !important;
+	//Keep default font-weight: 400;
+}
+
+
 /* Add (sub)section numbering to headings
  * Credit: https://stackoverflow.com/a/535390
  */
@@ -59,3 +81,5 @@ ol#markdown-toc>li ol {
 		}
 	}
 }
+
+

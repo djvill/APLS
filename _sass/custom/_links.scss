@@ -1,0 +1,20 @@
+/* Add colored styling to links */
+// $link-color: $pitt-blue; //in ../color_schemes/apls.scss
+
+a:not([class]) {
+
+  &:hover {
+		color: $pitt-gold;
+    text-decoration-color: $pitt-gold;
+  }
+	
+	code {
+		text-decoration: underline;
+		text-decoration-color: $pitt-blue;
+		text-underline-offset: 2px;
+		
+		&:hover {
+			text-decoration-color: $pitt-gold;
+		}
+	}
+}

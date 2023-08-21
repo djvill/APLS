@@ -1,0 +1,12 @@
+/* APLS color scheme
+ * Just used for overriding theme variable defaults
+ * See https://just-the-docs.github.io/just-the-docs/docs/customization/#custom-schemes
+ * All other styling is done in ../custom/_*scss
+ */
+
+/* Links */
+$link-color: $pitt-blue;
+// $border-color: $pitt-light-gray
+
+/* Fonts */
+$body-font-family: 'Atkinson Hyperlegible', sans-serif;
