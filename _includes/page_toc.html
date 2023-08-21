@@ -13,19 +13,17 @@
 {% endcapture %}
 
 {% if collapsible %}
-	<details {{ open }} markdown="block">
-		<summary>
-			{{ title }}
-		</summary>
-		{: .text-delta }
-	
-		1. TOC
-		{:toc}
-	</details>
+<details {{ open }} markdown="block">
+  <summary>{{ title }}</summary>
+  {: .text-delta }
+  
+  1. TOC
+  {:toc}
+</details>
 {% else %}
-	## {{ title }}
-	{: .no_toc .text-delta }
-
-	1. TOC
-	{:toc}
+  {{ title }}
+  {: .text-delta }
+  
+  1. TOC
+  {:toc}
 {% endif %}

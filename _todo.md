@@ -1,9 +1,13 @@
 # TODO
 
 - Basic fonts/colors styling
-	- Number headings
-	- TOC numbering: 1.2.1 rather than 1.b.a
 - Remove link from page-top `<h1>`s
+- Set `#main-content > main` min-height so the footer never appears in the middle of the page (e.g., 404 page: https://djvill.github.io/APLS/files/blah%20blah)
+- 404 issue link: Prefill some values (https://github.com/isaacs/github/issues/99#issuecomment-24584307)
+- Add glossary
+  - Mark words as `<span class="glossary">`, have them link to anchors on a glossary page
+- Add "last edited" to custom_footer
+- Convert Rmd to md
 
 ## Fun but not necessary
 

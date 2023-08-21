@@ -9,17 +9,7 @@ permalink: /files/custom-dictionary
 
 The folder [`/files/custom-dictionary/`](https://github.com/djvill/APLS/tree/main/files/custom-dictionary) contains files for APLS's custom dictionary.
 
-
-## On this page
-{: .no_toc .text-delta }
-
-1. TOC
-{:toc}
-
-{% comment %}
-{% include page-toc.html %}
-{% endcomment %}
-
+{% include page_toc.html collapsible=true %}
 
 ## Intro
 

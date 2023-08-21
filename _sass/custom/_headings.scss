@@ -1,0 +1,61 @@
+/* Add (sub)section numbering to headings
+ * Credit: https://stackoverflow.com/a/535390
+ */
+body {
+	counter-reset: section;
+}
+
+h2:not(.no_toc) {
+	counter-reset: sub-section;
+	
+	&::before {
+		counter-increment: section;
+		content: counter(section) " ";
+	}
+}
+
+h3:not(.no_toc) {
+  counter-reset: composite;
+	
+	&::before {
+		counter-increment: sub-section;
+		content: counter(section) "." counter(sub-section) " ";
+	}
+}
+
+h4:not(.no_toc) {
+	counter-reset: detail;
+	
+	&::before {
+		counter-increment: composite;
+		content: counter(section) "." counter(sub-section) "." counter(composite) " ";
+	}
+}
+
+h5:not(.no_toc)::before {
+	counter-increment: detail;
+	content: counter(section) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";
+}
+
+/* Override letters to numbers in TOC, with inherited super-step numbers */
+ol#markdown-toc>li ol {
+	padding-left: 1.8em;
+	
+	>li {
+		&::before {
+			content: counter(step-counter) "." counter(sub-counter, numeric);
+			left: -2.1em;
+		}
+		
+		ol {
+			counter-reset: sub-sub-counter;
+			padding-left: 2.4em;
+			
+			> li::before {
+				content: counter(step-counter) "." counter(sub-counter) "." counter(sub-sub-counter, numeric);
+				counter-increment: sub-sub-counter;
+				left: -2.7em
+			}
+		}
+	}
+}
