@@ -1,7 +1,6 @@
 # TODO
 
 - Basic fonts/colors styling
-- Remove link from page-top `<h1>`s
 - Set `#main-content > main` min-height so the footer never appears in the middle of the page (e.g., 404 page: https://djvill.github.io/APLS/files/blah%20blah)
 - 404 issue link: Prefill some values (https://github.com/isaacs/github/issues/99#issuecomment-24584307)
 - Add glossary

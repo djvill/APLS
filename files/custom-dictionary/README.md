@@ -4,8 +4,8 @@ layout: default
 permalink: /files/custom-dictionary
 ---
 
-{: .no_toc }
-
+# {{ page.title }}
+{:.no_toc}
 
 The folder [`/files/custom-dictionary/`](https://github.com/djvill/APLS/tree/main/files/custom-dictionary) contains files for APLS's custom dictionary.
 
