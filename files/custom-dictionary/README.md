@@ -2,7 +2,7 @@
 title: Custom dictionary
 layout: default
 permalink: /files/custom-dictionary
-last_modified_at: 2023-08-22T20:14:44
+last_modified_date: 2023-08-22T20:30:57
 ---
 
 # {{ page.title }}

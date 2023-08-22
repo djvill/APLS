@@ -47,6 +47,8 @@ aux_links_new_tab: true
 ##Footer
 ##Config: https://just-the-docs.github.io/just-the-docs/docs/configuration/#footer-content
 back_to_top: false
+last_edit_timestamp: true
+last_edit_time_format: "%B %-d, %Y"
 gh_edit_link: true # show or hide edit this page link
 gh_edit_link_text: "Edit this page on GitHub."
 gh_edit_repository: "https://github.com/djvill/APLS" # the github URL for your repo

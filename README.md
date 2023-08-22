@@ -35,6 +35,28 @@ As a result, the repo doesn't have all the files to preview the page locally (i.
 I decided this limitation was worth not clogging up the repository with a ton of Jekyll code.
 
 
+### Page `last_modified_date`
+
+Markdown files that have the `last_modified_date` parameter set in their YAML headers will have "Page last modified: DATE" appear [in the footer](https://github.com/just-the-docs/just-the-docs/blob/main/_includes/components/footer.html#L15-L19).
+(To suppress this, just remove/don't add `last_modified_date` to the header.)
+To have this parameter automatically updated when changes are committed to a page, add a pre-commit hook as the file `.git/hooks/pre-commit`:
+
+```bash
+#!/bin/sh
+# Replace `last_modified_date` timestamp with current time
+# Credit: https://mademistakes.com/notes/adding-last-modified-timestamps-with-git/
+
+git diff --cached --name-status | egrep -i "^(A|M).*\.(md)$" | while read a b; do
+  cat $b | sed -b "/---.*/,/---.*/s/^last_modified_date:.*$/last_modified_date: $(date -u "+%Y-%m-%dT%H:%M:%S")/" > tmp
+  mv tmp $b
+  git add $b
+done
+```
+
+Solution courtesy of https://mademistakes.com/notes/adding-last-modified-timestamps-with-git/.
+
+
+
 ## Repo contents
 
 - `_includes/`: Content stubs (see [Jekyll doc](https://jekyllrb.com/docs/includes/))
@@ -48,6 +70,8 @@ I decided this limitation was worth not clogging up the repository with a ton of
 - `./` (this folder):
 	- `.gitignore`: For [Git version control](https://git-scm.com/docs/gitignore)
 	- `_config.yml`: Site configuration file (see [Jekyll doc](https://jekyllrb.com/docs/configuration/))
+	- `_todo.md`: Site maintenance to-do list
+	- `404.md`: Custom "Page not found" error page (see [Jekyll doc](https://jekyllrb.com/tutorials/custom-404-page/))
 	- `LICENSE.md`: Markdown conversion of [legal code for CC BY-NC-SA 4.0 license](https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode)
 	- `README.md`: What you're reading right now!
 	- `SPLASH.md`: APLS homepage (aka splash page), injected via `<iframe>` into [apls.pitt.edu](https://apls.pitt.edu)
