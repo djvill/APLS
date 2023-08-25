@@ -5,7 +5,6 @@
 - 404 issue link: Prefill some values (https://github.com/isaacs/github/issues/99#issuecomment-24584307)
 - Add glossary
   - Mark words as `<span class="glossary">`, have them link to anchors on a glossary page
-- Convert Rmd to md
 
 ## Fun but not necessary
 

@@ -1,0 +1,63 @@
+/* DISC tables
+ * For doc/phonemic-transcription
+ * (I may decide later to apply some of these styles to tables more generally)
+ */
+.table-wrapper {
+	//All tables
+	&:has(.disc-table), &:has(#syll-table) {
+		//Smaller cells
+		th, td {
+			padding: 5px;
+			min-width: 0px;
+			border-left: none;
+			border-right: none;
+		}
+		
+		//Row borders
+		padding: 2px;
+		table {
+			border-collapse: collapse;
+		}
+		thead {
+			border-bottom: 3px solid $border-color;
+		}
+		tr:not(:last-child) {
+			border-bottom: 1px solid $border-color;
+		}
+	}
+	
+	//Syllabification/stress table
+	&:has(#syll-table) {
+		max-width: 200px;
+	}
+	
+	//All other tables
+	&:has(.disc-table) {
+		max-width: 300px;
+		
+		//Monospace DISC
+		td:nth-child(2), td:nth-child(4) {
+			font-family: $mono-font-family;
+		}
+		
+		//"Example word" extra header
+		.ex-word {
+			border-bottom: none;
+			
+			th {
+				&:first-child {
+					empty-cells: hide;
+					border-bottom: hidden;
+				}
+				&:nth-child(2) {
+					border-bottom: hidden;
+					padding-bottom: 0px;
+					
+					div {
+						border-bottom: 1px solid $border-color;
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,69 +1,14 @@
 ---
 title: Phonemic transcription with the DISC alphabet
-subtitle: Archive of Pittsburgh Language and Speech (APLS)
-author: Dan Villarreal
-date: "Last updated `r gsub(' 0', ' ', format(Sys.Date(), '%B %d, %Y'))`"
-output: 
-  html_document:
-    toc: yes
-    toc_float: 
-      collapsed: no
-    anchor_sections: 
-      style: "icon"
-    md_extensions: -smart
-    includes:
-      in_header: ../assets/header.html
-    css: ../assets/css/doc.css
-    number_sections: yes
-    pandoc_args: "--shift-heading-level-by=-1"
+layout: default
+permalink: /doc/phonemic-transcription
+parent: Transcription convention
+nav_order: 2
+last_modified_date:
 ---
 
-```{r, echo=FALSE}
-knitr::opts_chunk$set(echo=FALSE)
-```
-
-```{css}
-/* Inline DISC examples */
-li code:not(.counterex), p code:not(.counterex) {
-  font-weight: bold;
-}
-
-li code.counterex, p code.counterex {
-  font-weight: normal;
-  text-decoration: line-through;
-}
-
-/* Consonants & vowels tables */
-.table-condensed {
-  max-width: 500px;
-  font-size: 1.2em;
-}
-td:nth-child(2) {
-  font-family: monospace;
-}
-td:nth-child(4) {
-  font-family: monospace;
-}
-
-/* Syllabification table */
-#syll-table.table-condensed {
-  max-width: 300px;
-}
-#syll-table td:nth-child(1) {
-  font-family: monospace;
-}
-#syll-table td:nth-child(2) {
-  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
-}
-
-/* Extra padding for list elements */
-ul {
-  padding-bottom: 6px;
-}
-li {
-  padding-top: 2px;
-}
-```
+# {{ page.title }}
+{:.no_toc}
 
 The **DISC phonemic alphabet** represents speech sounds by creating a one-to-one mapping between sounds and symbols, much like the IPA.
 _Unlike_ the IPA, the DISC phonemic alphabet only uses symbols that appear on a standard keyboard.
@@ -72,6 +17,7 @@ APLS uses a subset of DISC relevant to North American Englishes.
 In APLS, we use DISC symbols for _phonemic_ representations of sounds, not _phonetic_ representations.
 As a result, the APLS subset of DISC doesn't have symbols for [ɾ] or [ʔ]; in North American Englishes, these surface only as allophones of /t/.
 
+{% include page_toc.html collapsible=true %}
 
 
 ## DISC consonants
@@ -99,12 +45,13 @@ As a result, the APLS subset of DISC doesn't have symbols for [ɾ] or [ʔ]; in N
 |  s  |   s  | **s**ap      |  **s**{p      |
 |  z  |   z  | **z**ap      |  **z**{p      |
 |  ʃ  |   S  | **sh**eep    |  **S**ip      |
-|  ʒ  |   Z  | mea**s**ure  |  mE**Z**\@r   |
+|  ʒ  |   Z  | mea**s**ure  |  mE**Z**@r    |
 |  h  |   h  | **h**ad      |  **h**{d      |
 |  tʃ |   J  | **ch**eap    |  **J**ip      |
 |  dʒ |   _  | **j**eep     |  **\_**ip     |
 |  w  |   w  | **w**et      |  **w**Et      |
 |  j  |   j  | **y**et      |  **j**Et      |
+{:.disc-table}
 
 
 ### Syllabic consonants
@@ -114,6 +61,7 @@ As a result, the APLS subset of DISC doesn't have symbols for [ɾ] or [ʔ]; in N
 |  ɱ̩  |   F  | idealis**m** |  2dilIz**F**  |
 |  n̩  |   H  | burd**en**   |  b3rd**H**    |
 |  l̩  |   P  | dang**le**   |  d{Ng**P**    |
+{:.disc-table}
 
 
 ## DISC vowels 
@@ -128,10 +76,11 @@ As a result, the APLS subset of DISC doesn't have symbols for [ɾ] or [ʔ]; in N
 |  ʌ  |   V  | str**u**t    |  str**V**t    |
 |  ɑ  |   Q  | l**o**t      |  l**Q**t      |
 |  ʊ  |   U  | f**oo**t     |  f**U**t      |
-|  ə  |   \@ | comm**a**    |  kQm**\@**    |
+|  ə  |   @  | comm**a**    |  kQm**@**     |
 |  i  |   i  | fl**ee**ce   |  fl**i**s     |
 |  ɔ  |   \$ | th**ough**t  |  T**\$**t     |
 |  u  |   u  | g**oo**se    |  g**u**s      |
+{:.disc-table}
 
 
 ### Monophthongs before /ɹ/ {#monophthongs-before-r}
@@ -140,11 +89,12 @@ As a result, the APLS subset of DISC doesn't have symbols for [ɾ] or [ʔ]; in N
 |-----|------|--------------|---------------|
 |  ɑɹ |  #r  | st**ar**t    |  st**#r**t    |
 |  ɔɹ |  \$r | f**or**ce    |  f**\$r**s    |
-|  ɚ  |  \@r | lett**er**   |  lEt**\@r**   |
+|  ɚ  |  @r  | lett**er**   |  lEt**@r**    |
 |  ɝ  |  3r  | n**ur**se    |  n**3r**s     |
 |  ɪɹ |  7r  | n**ear**     |  n**7r**      |
 |  εɹ |  8r  | squ**are**   |  skw**8r**    |
 |  ʊɹ |  9r  | c**ure**     |  kj**9r**     |
+{:.disc-table}
 
 
 ### Diphthongs
@@ -156,7 +106,7 @@ As a result, the APLS subset of DISC doesn't have symbols for [ɾ] or [ʔ]; in N
 |  ɔɪ |   4  | ch**oi**ce   |  J**4**s      |
 |  oʊ |   5  | g**oa**t     |  g**5**t      |
 |  aʊ |   6  | m**ou**th    |  m**6**T      |
-
+{:.disc-table}
 
 
 ## Transcribing words using DISC
@@ -167,9 +117,9 @@ Here are some other things to note:
 - Monophthongs before /ɹ/ should always be transcribed with the DISC `r` symbol (see examples [above](#monophthongs-before-r))
 	- Exception: the speaker cuts off the word before an /ɹ/ (e.g., cutting off _start_ as `sta~[st#]`
 - IPA makes a distinction between _stressed_ central vowels /ʌ ɝ/ and _unstressed_ central vowels /ə ɚ/. Similiarly, use DISC `V`/`3r` for _stressed_ vowels and `@`/`@r` for _unstressed_ vowels
-	- Exception: Always use `3r` for _-burg(h)_, even if it's unstressed (e.g., _Pittsburghese_ is `pItsb3rgiz` not <code class="counterex">pItsb\@rgiz</code>)
-- Use the DISC symbols for syllabic consonants, `F`/`H`/`P`, rather than <code class="counterex">\@m</code>/<code class="counterex">\@n</code>/<code class="counterex">\@l</code> (see examples [above](#disc-consonants))
-	- Exception: Don't use these symbols for onsets (e.g., _Panera_ is `p@n8r@`, not <code class="counterex">pH8r\@</code>)
+	- Exception: Always use `3r` for _-burg(h)_, even if it's unstressed (e.g., _Pittsburghese_ is `pItsb3rgiz` not <code class="counterex">pItsb@rgiz</code>)
+- Use the DISC symbols for syllabic consonants, `F`/`H`/`P`, rather than <code class="counterex">@m</code>/<code class="counterex">@n</code>/<code class="counterex">@l</code> (see examples [above](#syllabic-consonants))
+	- Exception: Don't use these symbols for onsets (e.g., _Panera_ is `p@n8r@`, not <code class="counterex">pH8r@</code>)
 - For word-final high front vowels, use `i` rather than `I` (i.e., we assume universal [_happy_-tensing](https://en.wikipedia.org/wiki/Phonological_history_of_English_close_front_vowels#Happy-tensing))
 - When /ŋ/ comes before a vowel or syllabic consonant, assume it's followed by /g/ (e.g., _dangle_ is `d{NgP`, not <code class="counterex">d{NP</code>)
 - Don't forget that _nk_ in English spelling is usually /ŋk/ (DISC `Nk`) rather than /nk/ (DISC <code class="counterex">nk</code>)
@@ -225,15 +175,12 @@ As mentioned [above](#multiple-phonemic-representations), you can suggest multip
 
 Use the following symbols for syllabification and stress **only** if suggesting new entries for the APLS custom dictionary (not for DISC transcription in pronounce codes):
 
-<div id="syll-table">
-
 | DISC | Function          |
 |------|-------------------|
-|   -  | Syllable boundary |
-|   '  | Primary stress    |
-|   "  | Secondary stress  |
-
-</div>
+|  `-` | Syllable boundary |
+|  `'` | Primary stress    |
+|  `"` | Secondary stress  |
+{:#syll-table .no-bg}
 
 For example, _Pennsylvanian_ is `"pEn-sP-'v1n-jH`. 
 Stress markers go before any other DISC symbols, but (if applicable) after the syllable boundary.
@@ -244,32 +191,29 @@ A few finer points:
 - Every _complete_ word has one primary-stressed syllable. _Incomplete_ words with hesitations might not have a primary-stressed syllable, but the APLS custom dictionary won't have incomplete words
 	- Most words don't have secondary stress. Compounds often do have secondary stress (e.g., _Sandcastle_ is `'s{nd-"k{-sP`)
 - Use secondary stress for city-name morphemes _-burg(h)_, _-ville_, _-vale_, _-dale_, _-town_, etc.
-	- Exception: There are derivational affixes that change the stress pattern (e.g., _Pittsburgh_ is `"pIts-"b3rg`, but _Pittsburghese_ is `"pIts-b3r-'giz`)
+	- Exception: There are derivational affixes that change the stress pattern (e.g., _Pittsburgh_ is `'pIts-"b3rg`, but _Pittsburghese_ is `"pIts-b3r-'giz`)
 - Intervocalic consonants should be syllabified as onsets rather than codas (e.g., 
-	- Exception 1: Intervocalic /ɹ/ should be syllabified as a coda (e.g., _Panera_ is `p@-'n8r-@` not <code class="counterex">p\@-'n8-r\@</code>)
+	- Exception 1: Intervocalic /ɹ/ should be syllabified as a coda (e.g., _Panera_ is `p@-'n8r-@` not <code class="counterex">p@-'n8-r@</code>)
 	- Exception 2: In environments where prevocalic /t/ becomes [ʔ] (e.g., before /n̩/), the /t/ should be syllabified as a coda (e.g., _outen_ is `'6t-H` not <code class="counterex">'6-tH</code>)
 
+<script>
+	/* Add headers above consonants and vowels tables */
+	var newHead = `
+		<tr class="ex-word">
+			<th colspan='2'/>
+			<th colspan='2'>
+				<div>Example word</div>
+			</th>
+		</tr>
+	`;
+	var t = document.querySelectorAll(".disc-table thead tr");
+	t.forEach(a => a.insertAdjacentHTML('beforebegin', newHead));
 
+	/* Bold non-counterexamples not in tables */
+	var c = document.querySelectorAll("*:not(td) > code:not(.counterex)");
+	c.forEach(a => a.classList.add("fw-700"));
 
-
-```{js, file="../assets/js/doc.js"}
-/* Common documentation JS */
-```
-
-```{js}
-/* Add headers above consonants and vowels tables */
-var newHead = `
-	<tr>
-		<th style='empty-cells:hide; border-bottom:hidden;' colspan='2'/>
-		<th style='border-bottom:hidden; padding-bottom:0; padding-left:3px; padding-right:3px; text-align:center;' colspan='2'>
-			<div style='border-bottom: 1px solid #ddd; padding-bottom: 5px;'>Example word</div>
-		</th>
-	</tr>
-`;
-Array.from($("#disc-consonants tr.header"))
-	.map(a => a.insertAdjacentHTML('beforebegin', newHead));
-Array.from($("#disc-vowels tr.header"))
-	.map(a => a.insertAdjacentHTML('beforebegin', newHead));
-```
-
-
+	/* <code>: Replace hyphen with nonbreaking hyphen */
+	var h = document.querySelectorAll("#main-content code");
+	h.forEach(a => a.innerText = a.innerText.replaceAll("-", "\u2011"));
+</script>
