@@ -1,6 +1,4 @@
 /* Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=Rubik:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap');
-
 h1, h2, h3, h4, h5, .site-title {
 	font-family: 'Rubik',sans-serif;
 	letter-spacing: 0.015em;
@@ -27,12 +25,18 @@ body {
 	counter-reset: section;
 }
 
+h2, h3, h4, h5 {
+	&:not(.no_toc)::before {
+		padding-right: 8px;
+	}
+}
+
 h2:not(.no_toc) {
 	counter-reset: sub-section;
 	
 	&::before {
 		counter-increment: section;
-		content: counter(section) " ";
+		content: counter(section);
 	}
 }
 

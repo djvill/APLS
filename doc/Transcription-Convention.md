@@ -1,63 +1,15 @@
 ---
 title: Transcription convention
-subtitle: Archive of Pittsburgh Language and Speech (APLS)
-author: Dan Villarreal
-date: "Last updated `r gsub(' 0', ' ', format(Sys.Date(), '%B %d, %Y'))`"
-output: 
-  html_document:
-    toc: yes
-    toc_float: 
-      collapsed: no
-    anchor_sections: 
-      style: "icon"
-    md_extensions: -smart
-    includes:
-      in_header: ../assets/header.html
-    css: ../assets/css/doc.css
-    number_sections: yes
-    pandoc_args: "--shift-heading-level-by=-1"
+layout: default
+permalink: /doc/transcription-convention
+has_children: yes
+has_toc: no
+last_modified_date: 2023-08-25T03:59:27
 ---
 
-```{r, echo=FALSE}
-knitr::opts_chunk$set(echo=FALSE)
-```
 
-```{css}
-/* Text typed into transcription program */
-/* Inline good examples */
-li code:not(.counterex), p code:not(.counterex) {
-  font-weight: bold;
-}
-/* Inline bad examples */
-li code.counterex, p code.counterex {
-  font-weight: normal;
-  text-decoration: line-through;
-}
-/* In table */
-.table-condensed code {
-  background: none;
-  padding: 0px;
-}
-
-/* Extra padding for list elements */
-ul {
-  padding-bottom: 6px;
-}
-li {
-  padding-top: 2px;
-}
-
-/* Table formatting */
-.table-condensed {
-  margin-left: 80px;
-  max-width: max-content;
-}
-.table-condensed>tbody>tr>td, .table-condensed>tbody>tr>th, .table-condensed>tfoot>tr>td, .table-condensed>tfoot>tr>th, .table-condensed>thead>tr>td, .table-condensed>thead>tr>th {
-  border: none;
-  padding: 0px 5px;
-}
-```
-
+# {{ page.title }}
+{:.no_toc}
 
 The purpose of transcription for APLS is to **facilitate large-scale processing of speech data** through the **LaBB-CAT** corpus analysis tool.
 This means that we need to report speech as faithfully as possible and be consistent about little details like file names.
@@ -66,8 +18,9 @@ It also means that we _don't_ transcribe or notate things that LaBB-CAT can do a
 Once you've [set up the transcription file](#file-setup), transcription consists of two tasks: [**segmenting**](#segmentation) the file into turns, and [**annotating**](#annotation) the turns.
 In other words, you first figure out who is speaking when, then you figure what they said.
 
-
 In this document, `fixed-width font` is used for things you actually type into the transcription program (Elan or Praat).
+
+{% include page_toc.html collapsible=true %}
 
 
 ## File setup
@@ -93,7 +46,7 @@ In this document, `fixed-width font` is used for things you actually type into t
 - **Save your work often!**
 	- Elan is known to crash occasionally, so you may want to set an automatic backup interval (File > Automatic Backup)
 - Transcription usually takes longer at the start of the sound file, then it speeds up once you get used to how a speaker talks
-- The majority of the sound file will be relatively easy to transcribe. However, some parts of each file will take disproportionately long to transcribe due to [unfinished words](#unfinished-words-and-novel-words), [overlaps](#overlaps), and/or ambiguous speech
+- The majority of the sound file will be relatively easy to transcribe. However, some parts of each file will take disproportionately long to transcribe due to [unfinished words](#pronounce-codes), [overlaps](#overlaps), and/or ambiguous speech
 	- One recommendation is to create a temporary `Recheck` tier where you make note of speech you're having trouble hearing correctly, so you can return to these portions of the transcript with fresh ears after you're done the first pass. Make sure to delete the `Recheck` tier once you're done checking
 - Once you've finished transcribing, check over your work!
 
@@ -177,30 +130,48 @@ Within that framework, though, there are some important things to consider
 - Don't use any diacritics that are not part of the English alphabet (e.g., `fiancee` not <code class="counterex">fiancée</code>)
 - A single word should always be spelled as an entire word, even if there is a pause between syllables. **Never** put a breakpoint in the middle of a word.
 - <a id="colloq-spellings"/> The following list represents all and only colloquial spellings that may be used in transcription: 
-
-|       |       |
-|-------|-------|
-|`gonna`|`sorta`|
-|`'cause` (from _because_)|`kinda`|
-|`gotta`|`I'mma`|
-|`wanna`|`tryna`|
-|`lotta`|`'til` (from _until_)|
-|`'nother` (as in _a whole 'nother_)||
-
+	- `gonna`
+	- `sorta`
+	- `'cause` (from _because_)
+	- `kinda`
+	- `gotta`
+	- `I'mma`
+	- `wanna`
+	- `tryna`
+	- `lotta`
+	- `'til` (from _until_)
+	- `'nother` (as in _a whole 'nother_)
+	{:.wrap .fb-15 .no-bg}
 - <a id="clitics"/> Standard contractions are fine (e.g., `might've`). The clitics `'d`, `'ll`, `'ve`, and `'s` can be attached to any noun
 - <a id="other-interjections"/> For other interjections, select a representation from the list (IPA symbols for clarity):
-
-|     |      |                       |
-|-----|------|-----------------------|
-|`yup`|`yeah`|`okay` (even if [m̩keɪ])|
-|`mmm`|`eh` /eɪ/|`uh huh`|
-|`nah`|`mmm hmm`|`hmm`|
-|`um`|`uh` |`aw` /ɔ/|
-|`oh` /oʊ/|`oo` /u/|`ahh` /ɑ/|
-|`gee`|`jeez`|`whoops`|
-|`ow`|`ha`|`huh`|
-|`yuck`|`damn`|`hey`|
-|`oof`|`blah`|`woohoo`|
+	- `yup`
+	- `yeah`
+	- `okay` (even if [m̩keɪ])
+	- `mmm`
+	- `eh` /eɪ/
+	- `uh huh`
+	- `nah`
+	- `mmm hmm`
+	- `hmm`
+	- `um`
+	- `uh` 
+	- `aw` /ɔ/
+	- `oh` /oʊ/
+	- `oo` /u/
+	- `ahh` /ɑ/
+	- `gee`
+	- `jeez`
+	- `whoops`
+	- `ow`
+	- `ha`
+	- `huh`
+	- `yuck`
+	- `damn`
+	- `hey`
+	- `oof`
+	- `blah`
+	- `woohoo`
+	{:.wrap .fb-10 .no-bg}
 
 
 ### Punctuation
@@ -256,16 +227,12 @@ Within that framework, though, there are some important things to consider
 		- This is related to the principle that words should be spelled out in their ["dictionary form"](#dict-form)
 
 
+<script>
+	/* Bold non-counterexamples not in tables */
+	var c = document.querySelectorAll("*:not(td) > code:not(.counterex)");
+	c.forEach(a => a.classList.add("fw-700"));
 
-```{js, file="../assets/js/doc.js"}
-/* Common documentation JS */
-```
-
-```{js}
-/* Remove space between list and table */
-Array.from($("ul + table").prev())
-	.map(a => a.style.cssText+='margin-bottom:0px; padding-bottom:0px;')
-```
-
-
-
+	/* <code>: Replace hyphen with nonbreaking hyphen */
+	var h = document.querySelectorAll("#main-content code");
+	h.forEach(a => a.innerText = a.innerText.replaceAll("-", "\u2011"));
+</script>

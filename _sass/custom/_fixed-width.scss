@@ -1,0 +1,20 @@
+/* Code should be regular-size */
+code {
+	font-size: 0.9em;
+}
+
+/* Counterexamples
+ * Should be used in conjunction with JS that bolds non-counterexamples (not in tables):
+ *   var c = document.querySelectorAll("*:not(td) > code:not(.counterex)");
+ *   c.forEach(a => a.style.fontWeight = "bold");
+ */
+code.counterex {
+	text-decoration: line-through;
+}
+
+/* Style without background */
+code.no-bg, .no-bg code {
+	padding: 0px;
+	background: none;
+	border: none;
+}

@@ -1,0 +1,27 @@
+/* Use darker numbers for numbered lists */
+li::before {
+	color: $pitt-gray !important;
+	font-weight: bold;
+}
+
+/* Wrap-style unordered lists */	
+ul.wrap {
+	display: flex;
+	flex-wrap: wrap;
+	
+	&.fb-15 li {
+		flex-basis: 15rem;
+	}
+	
+	&.fb-10 li {
+		flex-basis: 10rem;
+	}
+	
+	li {
+		padding: 0px 1px;
+		
+		&::before {
+			content: "";
+		}
+	}
+}
