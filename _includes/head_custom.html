@@ -1,10 +1,18 @@
 <!-- BEGIN _includes/head_custom.html -->
 
-<!-- For some reason, default favicon not working -->
-<link rel="icon" href="{{ site.favicon_ico | default: '/favicon.ico' | relative_url }}" type="image/x-icon">
 
-<!-- Custom JavaScript -->
-<script src="{{ '/assets/js/search.js' | relative_url }}"></script>
+{% unless page.layout == "ghost" %}
+	<!-- For some reason, default favicon not working -->
+	<link rel="icon" href="{{ site.favicon_ico | default: '/favicon.ico' | relative_url }}" type="image/x-icon">
+	
+	<!-- Custom JavaScript: non-ghost layouts -->
+	<script src="{{ '/assets/js/search.js' | relative_url }}"></script>
+{% else %}
+	<!-- For some reason, default favicon not working -->
+	<link rel="icon" href="{{ site.favicon_ico | default: '/favicon.ico' | absolute_url }}" type="image/x-icon">
+{% endunless %}
+
+<!-- Custom JavaScript: all layouts -->
 <script src="{{ '/assets/js/misc.js' | relative_url }}"></script>
 
 <!-- END _includes/head_custom.html -->
