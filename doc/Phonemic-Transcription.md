@@ -4,8 +4,9 @@ layout: default
 permalink: /doc/phonemic-transcription
 parent: Transcription convention
 nav_order: 2
-last_modified_date:
+last_modified_date: 2023-08-25T03:59:27
 ---
+
 
 # {{ page.title }}
 {:.no_toc}
