@@ -47,9 +47,11 @@ To have this parameter automatically updated when changes are committed to a pag
 # Credit: https://mademistakes.com/notes/adding-last-modified-timestamps-with-git/
 
 git diff --cached --name-status | egrep -i "^(A|M).*\.(md)$" | while read a b; do
-  cat $b | sed -b "/---.*/,/---.*/s/^last_modified_date:.*$/last_modified_date: $(date "+%Y-%m-%dT%H:%M:%S")/" > tmp
-  mv tmp $b
-  git add $b
+	if grep -q ^last_modified_date $b ; then
+		cat $b | sed -b "/---.*/,/---.*/s/^last_modified_date:[0-9T: -]*\(\r\?\)$/last_modified_date: $(date "+%Y-%m-%dT%H:%M:%S%:z")\1/" > tmp
+		mv tmp $b
+		git add $b
+	fi
 done
 ```
 

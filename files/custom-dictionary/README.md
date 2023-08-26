@@ -2,11 +2,12 @@
 title: Custom dictionary
 layout: default
 permalink: /files/custom-dictionary
-last_modified_date: 2023-08-25T23:29:02
+last_modified_date: 2023-08-26T00:38:04-04:00
 ---
 
 # {{ page.title }}
 {:.no_toc}
+
 
 The folder [`/files/custom-dictionary/`](https://github.com/djvill/APLS/tree/main/files/custom-dictionary) contains files for APLS's custom dictionary.
 
