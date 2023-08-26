@@ -1,4 +1,11 @@
-.site-footer p {
+/* Sign in to APLS | Sign up
+ * Appears at bottom of sidebar in desktop, bottom of page in mobile
+ */
+.side-bar footer p {
   font-size: 14px;
 	text-align: center;
+}
+
+.main footer {
+	color: $footer-text-color;
 }

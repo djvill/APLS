@@ -6,7 +6,7 @@
 
 /* Links */
 $link-color: $pitt-blue;
-// $border-color: $pitt-light-gray
+$nav-child-link-color: mix($link-color, $grey-dk-000, 75%);
 
 /* Fonts */
 $body-font-family: 'Atkinson Hyperlegible', sans-serif;

@@ -1,6 +1,6 @@
 /* Use darker numbers for numbered lists */
 li::before {
-	color: $pitt-gray !important;
+	color: $list-marker-color !important;
 	font-weight: bold;
 }
 

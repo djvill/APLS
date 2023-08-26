@@ -1,0 +1,38 @@
+/* APLS dark color scheme
+ * Just used for overriding just-the-docs dark theme variable defaults
+ * See https://just-the-docs.github.io/just-the-docs/docs/customization/#custom-schemes
+ * All other styling is done in ../custom/_*scss
+ */
+
+@import "./color_schemes/dark";
+
+/* Links */
+//Regular
+$link-color: $pitt-gold;
+$link-hover-color: $pitt-blue;
+$link-underline-hover-color: $pitt-blue;
+//Within <code> tags
+$code-link-underline-color: $pitt-gold;
+$code-link-hover-color: $pitt-gold;
+//In nav
+$nav-child-link-color: mix($link-color, $grey-dk-000, 75%);
+
+// $border-color: $pitt-light-gray
+
+/* Fonts */
+$body-font-family: 'Atkinson Hyperlegible', sans-serif;
+
+/* Colors */
+//Backgrounds
+$sidebar-color: $grey-dk-350;
+$example-bg-color: #121212;
+//Text colors
+$body-heading-color: $pitt-gold;
+$body-text-color: $grey-lt-100;
+$footer-text-color: $pitt-light-gray;
+//Tables
+$table-background-color: $grey-dk-200;
+$border-color: $grey-dk-150;
+//Other elements
+$list-marker-color: $pitt-light-gray;
+

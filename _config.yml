@@ -58,6 +58,7 @@ gh_edit_view_mode: "edit" # "tree" or "edit" if you want the user to jump into t
 ##Color scheme
 ##Config: https://just-the-docs.github.io/just-the-docs/docs/customization/#custom-schemes
 color_scheme: apls
+# color_scheme: apls-dark
 
 ##Callouts (e.g., "Note", "Warning")
 ##Use: https://just-the-docs.github.io/just-the-docs/docs/ui-components/callouts/

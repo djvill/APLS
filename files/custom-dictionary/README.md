@@ -2,7 +2,7 @@
 title: Custom dictionary
 layout: default
 permalink: /files/custom-dictionary
-last_modified_date: 2023-08-22T20:30:57
+last_modified_date: 2023-08-25T23:29:02
 ---
 
 # {{ page.title }}
@@ -65,7 +65,7 @@ Add the word if:
    - **Notes:**
      - Don't assume that pluralized forms are in the Unisyn dictionary!
      - If the Elan file checker flags a form, it's not in either dictionary.
-     - If you accidentally add a word that turns out to have been in Unisyn, you'll get the message <span style="color:red;">**word in the read-only part of the dictionary**</span> when you try to [upload it to APLS](https://djvill.github.io/APLS/files/custom-dictionary#update-aplss-internal-dictionary). If that happens, simply delete the word from the custom dictionary
+     - If you accidentally add a word that turns out to have been in Unisyn, you'll get the message <span class="lc-error">word in the read-only part of the dictionary</span> when you try to [upload it to APLS](https://djvill.github.io/APLS/files/custom-dictionary#update-aplss-internal-dictionary). If that happens, simply delete the word from the custom dictionary
 5. It's not a **vulgar and/or objectionable** word
    - **Rationale:** Since the APLS dictionary gets published on the open web, we don't want it to show up in search engine results associated with racial slurs, etc.
    - **Transcribers should:** Use an inline pronounce code
@@ -111,7 +111,7 @@ For example, _Carnegie_ is /ˈkɑɹ-nə-gi/ in "general American", /kɑɹ-ˈneɪ
 
 We have to handle these words in a special way.
 If a word is already in Unisyn, LaBB-CAT won't update the word's dictionary entry;
-you'll get an error like "**Line 1 word _water_ ignored: word in the read-only part of the dictionary**".
+you'll get an error like <span class="lc-error">Line 1 word _water_ ignored: word in the read-only part of the dictionary</span>.
 So rather than adding the word to the custom dictionary, we have to change Unisyn's representation of the word;
 if you have access to the `APLS-Admin` repo, see here for directions: https://github.com/djvill/APLS-Admin/blob/main/doc/dictionary-phonemes/README.md.
 
@@ -174,7 +174,7 @@ For each layer:
    - **Line 1 word // APLS custom dictionary not deleted: isn't in the dictionary**
    - **Line 9 word Wilkinsburg definition 'wIl-kInz-"b3rg ignored: definition already in the dictionary**
 1. These are normal. At the very bottom, you should see **Entries added: 17** (or some other number), with the new entries listed below.
-1. If you see any lines in red like <span style="color:red;">**Line 1 word _water_ ignored: word in the read-only part of the dictionary**</span>, then either:
+1. If you see any lines in red like <span class="lc-error">Line 1 word _water_ ignored: word in the read-only part of the dictionary</span>, then either:
    - Delete the word (if you didn't mean to provide a dialect pronunciation), or
    - Follow the steps for [dialect pronunciations](#dialect-pronunciations)
 

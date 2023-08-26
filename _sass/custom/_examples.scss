@@ -1,11 +1,10 @@
-/* 
- * Good examples vs. bad examples
- */
+/* Good examples vs. bad examples */
 .goodex {
-  color: green;
+	// color: green;
+  color: $green-contrast;
 	
 	&:before {
-	  color: green;
+	  color: $green-contrast;
 	  content: '✓ '; /* &check; + &#202f; */
 		font-weight: bold;
 	}
@@ -19,4 +18,16 @@
 	  content: '✗ '; /* &#2717; + &#202f; */
 		font-weight: bold;
 	}
+}
+
+/* LaBB-CAT error codes */
+.lc-error {
+	color: red;
+	font-weight: bold;
+}
+
+.goodex, .badex, .lc-error {
+	background: $example-bg-color;
+	padding: 1px;
+	border-radius: 4px;
 }
