@@ -1,0 +1,22 @@
+<div id="dark-mode-toggle">
+	<img src="/assets/img/fa-sun.svg" title="Switch to dark color scheme" aria-label="Switch to dark color scheme" />
+</div>
+
+<script>
+var dmt = document.getElementById('dark-mode-toggle'),
+    img = dmt.querySelector('img');
+
+jtd.addEvent(dmt, 'click', function(){
+  if (jtd.getTheme() === 'dark') {
+    jtd.setTheme('light');
+		img.src = '/assets/img/fa-moon.svg';
+		img.title = 'Switch to dark color scheme';
+		img.ariaLabel = 'Switch to dark color scheme';
+  } else {
+    jtd.setTheme('dark');
+		img.src = '/assets/img/fa-sun.svg';
+		img.title = 'Switch to light color scheme';
+		img.ariaLabel = 'Switch to light color scheme';
+  }
+});
+</script>
