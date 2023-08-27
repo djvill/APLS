@@ -8,14 +8,16 @@ window.addEventListener('DOMContentLoaded', function () {
 	setScheme = function() {
 		if (img.src.endsWith('/assets/img/fa-sun.svg')) {
 			jtd.setTheme('apls');
-			img.src = '/assets/img/fa-moon.svg';
+			img.src = '/APLS/assets/img/fa-moon.svg';
 			img.title = 'Switch to dark color scheme';
 			img.ariaLabel = 'Switch to dark color scheme';
+			img.alt = '🌙';
 		} else {
 			jtd.setTheme('apls-dark');
-			img.src = '/assets/img/fa-sun.svg';
+			img.src = '/APLS/assets/img/fa-sun.svg';
 			img.title = 'Switch to light color scheme';
 			img.ariaLabel = 'Switch to light color scheme';
+			img.alt = '☀️';
 		}
 	};
 
