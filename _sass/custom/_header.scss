@@ -1,14 +1,14 @@
-/* aux-nav font size */
-.aux-nav {
-	font-size: 0.875rem !important;
+/* Wrapper around toggle and aux-nav */
+#header-aux-wrapper {
+	display: flex;
+	justify-content: space-between;
 }
 
 /* Dark mode toggle button */
 #dark-mode-toggle {
 	background: $toggle-background;
 	border-radius: 50%;
-	margin: auto;
-	margin-right: 10px;
+	margin: auto 10px;
 	height: 2.5rem;
 	width: 2.5rem;
 	cursor: pointer;
@@ -20,5 +20,14 @@
 	img {
 		height: inherit;
 		padding: $toggle-padding;
+	}
+}
+
+/* aux-nav font size */
+.aux-nav {
+	font-size: 0.875rem !important;
+	
+	.aux-nav-list {
+		justify-content: flex-end;
 	}
 }

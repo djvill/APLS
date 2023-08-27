@@ -1,4 +1,15 @@
-<!-- Dark mode toggle --- see dark-mode-toggle.js -->
-<div id="dark-mode-toggle">
-	<img src="/APLS/assets/img/fa-moon.svg" title="Switch to dark color scheme" aria-label="Switch to dark color scheme" alt="🌙" />
+<!-- Wrap a div around toggle and aux-nav to use flex-direction -->
+<div id="header-aux-wrapper">
+	<!-- Dark mode toggle (see dark-mode-toggle.js) -->
+	<div id="dark-mode-toggle">
+		<img src="/APLS/assets/img/fa-moon.svg" title="Switch to dark color scheme" aria-label="Switch to dark color scheme" alt="🌙" />
+	</div>
+	<!-- From https://github.com/just-the-docs/just-the-docs/blob/main/_includes/components/aux_nav.html -->
+	<nav aria-label="Auxiliary" class="aux-nav">
+		<ul class="aux-nav-list">
+			<li class="aux-nav-list-item">
+				<a href="//github.com/djvill/APLS" class="site-button" target="_blank" rel="noopener noreferrer">View on GitHub</a>
+			</li>
+		</ul>
+	</nav>
 </div>
