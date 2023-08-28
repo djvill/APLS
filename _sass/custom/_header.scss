@@ -22,6 +22,15 @@
 		padding: $toggle-padding;
 	}
 }
+//Button icon
+#dark-mode-toggle img {
+	content: url('/APLS/assets/img/fa-moon.svg');		//For actual website
+	// content: url('/assets/img/fa-moon.svg');		//For localhost
+}
+.dark-mode #dark-mode-toggle img {
+	content: url('/APLS/assets/img/fa-sun.svg');		//For actual website
+	// content: url('/assets/img/fa-sun.svg');		//For localhost
+}
 
 /* aux-nav font size */
 .aux-nav {
