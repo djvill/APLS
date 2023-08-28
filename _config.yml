@@ -37,13 +37,6 @@ search:
   heading_level: 3
   previews: 5
 
-##Aux links
-##Config: https://just-the-docs.github.io/just-the-docs/docs/configuration/#aux-links
-aux_links:
-  "View on GitHub":
-    - "//github.com/djvill/APLS"
-aux_links_new_tab: true
-
 ##Footer
 ##Config: https://just-the-docs.github.io/just-the-docs/docs/configuration/#footer-content
 back_to_top: false
