@@ -67,7 +67,7 @@ Schenley,'SEn-li
 Braddock,'br{-d@k
 Braddock,'br{-dQk
 Edinboro,'E-dIn-b@r-5
-Murrysville,'m3r-iz-"vIl 
+Murrysville,'m3r-iz-"vIl
 Morningside,'m$r-nIN-"s2d
 Swissvale,'swIs-"v1l
 Deener,'di-n@r
@@ -97,6 +97,11 @@ Mucklerat,'mV-kP-"r{t
 Rankin,'r1N-kH
 Chalfant,'J{l-"fQnt
 Skeetersville,'ski-t@rs-"vIl
+Monessen,m@-'nE-sH
+Carlow,'k#r-l5
+Negley,'nE-gli
+Brushton,'brVS-tH
+Pymatuning,'p2-m@-"tu-nIN
 
 
 // Pittsburgh personal names
@@ -166,6 +171,9 @@ Isaly's,'2s-liz
 Yuengling,'jIN-lIN
 Yuenglings,'jIN-lINz
 Koppers,'kQ-p@rz
+Heppenstall,'hE-pH-"st$l
+Cigna,'sIg-n@
+Pennysaver,'pE-ni-"s1-v@r
 
 
 // Unexpected omissions from Unisyn
@@ -229,7 +237,11 @@ nonscientific,"""nQn-s2-H-'tI-fIk"
 commodification,k@-"mQ-d@-f@-'k1-SH
 rec,'rEk
 extracurricular,"""Eks-tr@-k@-'rI-kj@-l@r"
-
+refacing,"ri-'f1-sIN
+gummies,'gV-miz
+gummy,'gV-mi
+webcam,'wEb-k{m
+webcams,'wEb-k{mz
 
 // Other
 Juneteenth,"""_un-'tinT"
@@ -267,7 +279,8 @@ hoodie,'hU-di
 hoodies,'hU-dis
 wouldn't've,'wU-dH-t@v
 Mawr,'m#r
-
+bro,'br5
+bros,'br5z
 
 // Allowable colloquial spellings
 'til,'tIl

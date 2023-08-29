@@ -9,6 +9,8 @@ Belmar
 Braddock
 Brashear
 Brookline
+Brushton
+Carlow
 Chalfant
 Crider's
 Deener
@@ -42,11 +44,13 @@ McMunn
 Milliones
 Millvale
 Mon
+Monessen
 Monroeville
 Morganza
 Morningside
 Mucklerat
 Murrysville
+Negley
 Oakmont
 Ossipee
 Overbrook
@@ -56,6 +60,7 @@ Pennsylvanians
 Pittsburgher
 Pittsburghers
 Portersville
+Pymatuning
 Rankin
 Renfrew
 Richland
@@ -126,11 +131,13 @@ Amiesite
 Applebee
 Applebee's
 Arby's
+Cigna
 Damico's
 Dunkin
 Dunkin'
 Foodland
 Gullifty's
+Heppenstall
 Hermanowski's
 Highmark
 Isaly's
@@ -143,6 +150,7 @@ Panera
 Parma's
 Pelusi
 Penn-Mac
+Pennysaver
 Poli's
 Starbucks
 Stroh's
@@ -184,6 +192,8 @@ extracurricular
 gelato
 gelatos
 Grier
+gummies
+gummy
 impatien
 impatiens
 jitney
@@ -200,6 +210,7 @@ nonscientific
 popsicle
 popsicles
 rec
+refacing
 righty
 St
 stepdad
@@ -208,6 +219,8 @@ stogie
 stogies
 tarp
 tarps
+webcam
+webcams
 worldview
 worldviews
 y'all
@@ -217,6 +230,8 @@ y'all
 babushka
 babushkas
 Blige
+bro
+bros
 coanchor
 coanchors
 collab
