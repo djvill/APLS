@@ -2,7 +2,7 @@
 title: Custom dictionary
 layout: default
 permalink: /files/custom-dictionary
-last_modified_date: 2023-08-26T00:38:04-04:00
+last_modified_date: 2023-08-29T09:55:44-04:00
 ---
 
 # {{ page.title }}
@@ -143,8 +143,12 @@ If you supplied multiple entries for the base-form of the word, you should also 
 
 ### Update the Elan file checker's dictionary
 
-This is the easiest part---once you've got your computer set up for it.
-Simply run [`updateDict.sh`](https://github.com/djvill/APLS/blob/main/files/custom-dictionary/updateDict.sh), then commit and push your changes to the [GitHub repository](https://github.com/djvill/APLS).
+This is the easiest part---once you've got your computer set up for it:
+
+1. Pull updates from the [GitHub repository](https://github.com/djvill/APLS)
+2. Run [`updateDict.sh`](https://github.com/djvill/APLS/blob/main/files/custom-dictionary/updateDict.sh)
+3. Commit and push your changes to GitHub.
+
 That's it!
 
 The [Elan file checker](https://djvill.shinyapps.io/apls_elan_file_checker/) reads `aplsDict.txt` from this repository;

@@ -8,8 +8,6 @@
 
 ## Fun but not necessary
 
-- Switch from light mode to dark mode
-	- Inherit from user default: https://dev.to/whitep4nth3r/the-best-lightdark-mode-theme-toggle-in-javascript-368f
 - Callouts: Add icon to `::before` based on (e.g.) `site.note.icon`
 	- This is tricky because it's an SVG and it's hard to target `::before` w/ JS. 
 	- Prob easier in CSS/Sass if Liquid variables allowed there
