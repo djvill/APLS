@@ -4,7 +4,7 @@ layout: default
 permalink: /doc/phonemic-transcription
 parent: Transcription convention
 nav_order: 2
-last_modified_date: 2023-08-25T03:59:27
+last_modified_date: 2023-08-29T19:01:00-04:00
 ---
 
 
@@ -88,7 +88,7 @@ As a result, the APLS subset of DISC doesn't have symbols for [ɾ] or [ʔ]; in N
 
 | IPA | DISC |    English   |      DISC     |
 |-----|------|--------------|---------------|
-|  ɑɹ |  #r  | st**ar**t    |  st**#r**t    |
+|  aɹ |  #r  | st**ar**t    |  st**#r**t    |
 |  ɔɹ |  \$r | f**or**ce    |  f**\$r**s    |
 |  ɚ  |  @r  | lett**er**   |  lEt**@r**    |
 |  ɝ  |  3r  | n**ur**se    |  n**3r**s     |
