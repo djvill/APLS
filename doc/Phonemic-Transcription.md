@@ -33,12 +33,6 @@ As a result, the APLS subset of DISC doesn't have symbols for [ɾ] or [ʔ]; in N
 |  t  |   t  | **t**ack     |  **t**{k      |
 |  d  |   d  | **d**ad      |  **d**{d      |
 |  k  |   k  | **c**ad      |  **k**{d      |
-|  ɡ  |   g  | **g**ame     |  **g**1m      |
-|  ŋ  |   N  | ba**ng**     |  b{**N**      |
-|  m  |   m  | **m**ad      |  **m**{d      |
-|  n  |   n  | **n**at      |  **n**{t      |
-|  l  |   l  | **l**ad      |  **l**{d      |
-|  ɹ  |   r  | **r**ad      |  **r**{d      |
 |  f  |   f  | **f**ad      |  **f**{d      |
 |  v  |   v  | **v**at      |  **v**{t      |
 |  θ  |   T  | **th**in     |  **T**In      |
@@ -50,6 +44,12 @@ As a result, the APLS subset of DISC doesn't have symbols for [ɾ] or [ʔ]; in N
 |  h  |   h  | **h**ad      |  **h**{d      |
 |  tʃ |   J  | **ch**eap    |  **J**ip      |
 |  dʒ |   _  | **j**eep     |  **\_**ip     |
+|  ɡ  |   g  | **g**ame     |  **g**1m      |
+|  m  |   m  | **m**ad      |  **m**{d      |
+|  n  |   n  | **n**at      |  **n**{t      |
+|  ŋ  |   N  | ba**ng**     |  b{**N**      |
+|  l  |   l  | **l**ad      |  **l**{d      |
+|  ɹ  |   r  | **r**ad      |  **r**{d      |
 |  w  |   w  | **w**et      |  **w**Et      |
 |  j  |   j  | **y**et      |  **j**Et      |
 {:.disc-table}
@@ -59,7 +59,7 @@ As a result, the APLS subset of DISC doesn't have symbols for [ɾ] or [ʔ]; in N
 
 | IPA | DISC |    English   |      DISC     |
 |-----|------|--------------|---------------|
-|  ɱ̩  |   F  | idealis**m** |  2dilIz**F**  |
+|  m̩  |   F  | idealis**m** |  2dilIz**F**  |
 |  n̩  |   H  | burd**en**   |  b3rd**H**    |
 |  l̩  |   P  | dang**le**   |  d{Ng**P**    |
 {:.disc-table}
