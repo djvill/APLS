@@ -2,9 +2,9 @@
 title: Phonemic transcription with the DISC alphabet
 layout: default
 permalink: /doc/phonemic-transcription
-parent: Transcription convention
-nav_order: 2
-last_modified_date: 2023-08-30T09:37:23-04:00
+parent: Transcription
+nav_order: 3
+last_modified_date: 2023-08-30T13:11:16-04:00
 ---
 
 
@@ -17,6 +17,8 @@ _Unlike_ the IPA, the DISC phonemic alphabet only uses symbols that appear on a 
 APLS uses a subset of DISC relevant to North American Englishes.
 In APLS, we use DISC symbols for _phonemic_ representations of sounds, not _phonetic_ representations.
 As a result, the APLS subset of DISC doesn't have symbols for [ɾ] or [ʔ]; in North American Englishes, these surface only as allophones of /t/.
+
+In this document, `fixed-width font` is used for things you actually type into the transcription program (Elan or Praat).
 
 {% include page_toc.html collapsible=true %}
 
@@ -33,6 +35,7 @@ As a result, the APLS subset of DISC doesn't have symbols for [ɾ] or [ʔ]; in N
 |  t  |   t  | **t**ack     |  **t**{k      |
 |  d  |   d  | **d**ad      |  **d**{d      |
 |  k  |   k  | **c**ad      |  **k**{d      |
+|  ɡ  |   g  | **g**ap      |  **g**{p      |
 |  f  |   f  | **f**ad      |  **f**{d      |
 |  v  |   v  | **v**at      |  **v**{t      |
 |  θ  |   T  | **th**in     |  **T**In      |
@@ -44,7 +47,6 @@ As a result, the APLS subset of DISC doesn't have symbols for [ɾ] or [ʔ]; in N
 |  h  |   h  | **h**ad      |  **h**{d      |
 |  tʃ |   J  | **ch**eap    |  **J**ip      |
 |  dʒ |   _  | **j**eep     |  **\_**ip     |
-|  ɡ  |   g  | **g**ame     |  **g**1m      |
 |  m  |   m  | **m**ad      |  **m**{d      |
 |  n  |   n  | **n**at      |  **n**{t      |
 |  ŋ  |   N  | ba**ng**     |  b{**N**      |
@@ -141,7 +143,7 @@ for example, we've had to manually add entries for _artsy_, _bachelorette_, _hom
 
 
 If a word falls into one of the preceding categories, it should be added to the APLS dictionary.
-On the other hand, if a word is unlikely to be used by more than one speaker, it's better to just use an [inline DISC code](Transcription-Convention#novel-words).
+On the other hand, if a word is unlikely to be used by more than one speaker, it's better to just use an [inline pronounce code](transcription-convention#pronounce-codes).
 
 
 Everything from the previous sections applies to new words that you suggest for the custom dictionary, plus the following:

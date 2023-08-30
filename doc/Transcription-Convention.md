@@ -2,9 +2,9 @@
 title: Transcription convention
 layout: default
 permalink: /doc/transcription-convention
-has_children: yes
-has_toc: no
-last_modified_date: 2023-08-25T03:59:27
+parent: Transcription
+nav_order: 2
+last_modified_date: 2023-08-30T13:11:16-04:00
 ---
 
 
@@ -208,7 +208,7 @@ Within that framework, though, there are some important things to consider
 
 - There are 3 situations where you need to attach a "pronounce code" to the end of a word to help LaBB-CAT determine the phonemes that are in the word: (1) words that aren't in the dictionary, (2) idiosyncratic pronunciations, (3) hesitations/incomplete words
 	- Attach the pronounce code with **no space after the word**, in square brackets (e.g., `yinzerific[jInz@rIfIk]`)
-	- The pronounce code uses the [DISC phonemic alphabet](Phonemic-Transcription) to give a phonemic representation of what was said
+	- The pronounce code uses the [DISC phonemic alphabet](phonemic-transcription) to give a phonemic representation of what was said
 - <a id="novel-words"/> If a speaker uses a word that isn't in a standard dictionary or [APLS's custom dictionary](https://raw.githubusercontent.com/djvill/APLS/main/files/custom-dictionary/aplsDict.txt) (a word made up on the spot, a specific road name, etc.), just spell it the best you can, and provide a pronounce code in DISC (e.g., `yinzerific[jInz@rIfIk]`)
 	- If the word is used more than once in a transcript, the DISC code needs to be supplied every time
 	- We can add words to APLS's custom dictionary, but only if it's a word that is likely to be used by more than just one speaker
