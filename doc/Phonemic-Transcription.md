@@ -4,7 +4,7 @@ layout: default
 permalink: /doc/phonemic-transcription
 parent: Transcription convention
 nav_order: 2
-last_modified_date: 2023-08-29T19:01:00-04:00
+last_modified_date: 2023-08-30T09:37:23-04:00
 ---
 
 
@@ -71,16 +71,16 @@ As a result, the APLS subset of DISC doesn't have symbols for [ɾ] or [ʔ]; in N
 
 | IPA | DISC |    English   |      DISC     |
 |-----|------|--------------|---------------|
+|  i  |   i  | fl**ee**ce   |  fl**i**s     |
 |  ɪ  |   I  | k**i**t      |  k**I**t      |
 |  ε  |   E  | dr**e**ss    |  dr**E**s     |
 |  æ  |   {  | tr**a**p     |  tr**{**p     |
-|  ʌ  |   V  | str**u**t    |  str**V**t    |
 |  ɑ  |   Q  | l**o**t      |  l**Q**t      |
-|  ʊ  |   U  | f**oo**t     |  f**U**t      |
-|  ə  |   @  | comm**a**    |  kQm**@**     |
-|  i  |   i  | fl**ee**ce   |  fl**i**s     |
 |  ɔ  |   \$ | th**ough**t  |  T**\$**t     |
+|  ʌ  |   V  | str**u**t    |  str**V**t    |
+|  ʊ  |   U  | f**oo**t     |  f**U**t      |
 |  u  |   u  | g**oo**se    |  g**u**s      |
+|  ə  |   @  | comm**a**    |  kQm**@**     |
 {:.disc-table}
 
 
@@ -88,13 +88,13 @@ As a result, the APLS subset of DISC doesn't have symbols for [ɾ] or [ʔ]; in N
 
 | IPA | DISC |    English   |      DISC     |
 |-----|------|--------------|---------------|
-|  aɹ |  #r  | st**ar**t    |  st**#r**t    |
-|  ɔɹ |  \$r | f**or**ce    |  f**\$r**s    |
-|  ɚ  |  @r  | lett**er**   |  lEt**@r**    |
-|  ɝ  |  3r  | n**ur**se    |  n**3r**s     |
 |  ɪɹ |  7r  | n**ear**     |  n**7r**      |
 |  εɹ |  8r  | squ**are**   |  skw**8r**    |
+|  aɹ |  #r  | st**ar**t    |  st**#r**t    |
+|  ɝ  |  3r  | n**ur**se    |  n**3r**s     |
+|  ɔɹ |  \$r | f**or**ce    |  f**\$r**s    |
 |  ʊɹ |  9r  | c**ure**     |  kj**9r**     |
+|  ɚ  |  @r  | lett**er**   |  lEt**@r**    |
 {:.disc-table}
 
 
@@ -104,9 +104,9 @@ As a result, the APLS subset of DISC doesn't have symbols for [ɾ] or [ʔ]; in N
 |-----|------|--------------|---------------|
 |  eɪ |   1  | f**a**ce     |  f**1**s      |
 |  aɪ |   2  | pr**i**ce    |  pr**2**s     |
+|  aʊ |   6  | m**ou**th    |  m**6**T      |
 |  ɔɪ |   4  | ch**oi**ce   |  J**4**s      |
 |  oʊ |   5  | g**oa**t     |  g**5**t      |
-|  aʊ |   6  | m**ou**th    |  m**6**T      |
 {:.disc-table}
 
 
