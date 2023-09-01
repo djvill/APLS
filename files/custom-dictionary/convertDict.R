@@ -39,7 +39,7 @@ convertDict <- function(x, outFile=NULL, format=c("txt", "md")) {
   dict <- map2(headers, entries, c, "", "") %>% 
     ##Atomic character vector
     flatten_chr()
-  
+	
   ##Optionally save
   if (!is.null(outFile)) {
     outFile <- tools::file_path_sans_ext(outFile)
@@ -47,13 +47,39 @@ convertDict <- function(x, outFile=NULL, format=c("txt", "md")) {
       writeLines(dict, paste0(outFile, ".txt"))
     }
     if ("md" %in% format) {
-      mdHead <- "# APLS custom dictionary"
-      writeLines(dict, paste0(outFile, ".txt"))
+			##Dictionary body
+			dictMD <- map2(headers, entries, 
+										 ~ c(str_replace(.x, "##", "## "),
+												 "",
+												 paste("-", .y),
+												 "{:.wrap .fb-10}",
+												 "")) %>% 
+				##Atomic character vector
+				flatten_chr()
+			
+			##Add Markdown front matter
+			mdHead <- c("---",
+									"title: Custom dictionary entries",
+									"layout: default",
+									"permalink: /files/custom-entries",
+									"parent: Custom dictionary",
+									"search_exclude: true",
+									"last_modified_date:",
+									"---",
+									"",
+									"# {{ page.title }}",
+									"{:.no_toc}",
+									"",
+									"{% include page_toc.html collapsible=true %}",
+									"")
+			dictMD <- c(mdHead, dictMD)
+      writeLines(dictMD, "custom-entries.md")
     }
+		
+		cat("Writing dictionary with", length(flatten_chr(entries)), "entries across",
+				length(headers), "sections", fill=TRUE)
   }
   
-  cat("Writing dictionary with", length(flatten_chr(entries)), "entries across",
-      length(headers), "sections", fill=TRUE)
   
   ##Return dictionary invisibly
   invisible(dict)

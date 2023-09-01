@@ -2,7 +2,9 @@
 title: Custom dictionary
 layout: default
 permalink: /files/custom-dictionary
-last_modified_date: 2023-08-29T09:55:44-04:00
+has_children: yes
+has_toc: no
+last_modified_date: 2023-09-01T11:13:46-04:00
 ---
 
 # {{ page.title }}
@@ -165,6 +167,9 @@ Requirements:
 		- R must be in your PATH (and it probably is, if you've installed R). You can tell that R is in your PATH if running `Rscript -e R.version.string` at the command line prints your R version. If not, follow directions for [Windows](https://info201.github.io/r-intro#windows-command-line), [macOS](https://www.architectryan.com/2012/10/02/add-to-the-path-on-mac-os-x-mountain-lion/#.Uydjga1dXDg), or [Unix](https://unix.stackexchange.com/a/26059)
 - GitHub account
 - Push access to <https://github.com/djvill/APLS>
+
+FYI, `updateDict.sh` also updates `custom-entries.md`.
+The sole purpose of this file is creating a nice user-facing [custom dictionary page](https://djvill.github.io/APLS/files/custom-entries) on the APLS documentation site.
 
 
 ### Update APLS's internal dictionary

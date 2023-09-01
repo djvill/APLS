@@ -24,6 +24,10 @@ github:
 
 lang: en-US
 
+collections:
+  versions:
+    sort_by: version
+
 ########################################
 #### Config for just-the-docs theme ####
 ########################################
@@ -61,6 +65,9 @@ callouts:
     title: Note
     color: yellow
     icon: /assets/img/fa-circle-info.png  # Not implemented yet. Need to use JS to inject icon into .note::before
+  warning:
+    title: Warning
+    color: red
 
 ##Google Analytics
 ga_tracking: G-TT6NWBCLVW 

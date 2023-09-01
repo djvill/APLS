@@ -2,9 +2,9 @@
 title: Phonemic transcription with the DISC alphabet
 layout: default
 permalink: /doc/phonemic-transcription
-parent: Transcription convention
-nav_order: 2
-last_modified_date: 2023-08-29T19:01:00-04:00
+parent: Transcription
+nav_order: 3
+last_modified_date: 2023-09-01T11:11:17-04:00
 ---
 
 
@@ -17,6 +17,8 @@ _Unlike_ the IPA, the DISC phonemic alphabet only uses symbols that appear on a 
 APLS uses a subset of DISC relevant to North American Englishes.
 In APLS, we use DISC symbols for _phonemic_ representations of sounds, not _phonetic_ representations.
 As a result, the APLS subset of DISC doesn't have symbols for [ɾ] or [ʔ]; in North American Englishes, these surface only as allophones of /t/.
+
+In this document, `fixed-width font` is used for things you actually type into the transcription program (Elan or Praat).
 
 {% include page_toc.html collapsible=true %}
 
@@ -33,12 +35,7 @@ As a result, the APLS subset of DISC doesn't have symbols for [ɾ] or [ʔ]; in N
 |  t  |   t  | **t**ack     |  **t**{k      |
 |  d  |   d  | **d**ad      |  **d**{d      |
 |  k  |   k  | **c**ad      |  **k**{d      |
-|  ɡ  |   g  | **g**ame     |  **g**1m      |
-|  ŋ  |   N  | ba**ng**     |  b{**N**      |
-|  m  |   m  | **m**ad      |  **m**{d      |
-|  n  |   n  | **n**at      |  **n**{t      |
-|  l  |   l  | **l**ad      |  **l**{d      |
-|  ɹ  |   r  | **r**ad      |  **r**{d      |
+|  ɡ  |   g  | **g**ap      |  **g**{p      |
 |  f  |   f  | **f**ad      |  **f**{d      |
 |  v  |   v  | **v**at      |  **v**{t      |
 |  θ  |   T  | **th**in     |  **T**In      |
@@ -50,6 +47,11 @@ As a result, the APLS subset of DISC doesn't have symbols for [ɾ] or [ʔ]; in N
 |  h  |   h  | **h**ad      |  **h**{d      |
 |  tʃ |   J  | **ch**eap    |  **J**ip      |
 |  dʒ |   _  | **j**eep     |  **\_**ip     |
+|  m  |   m  | **m**ad      |  **m**{d      |
+|  n  |   n  | **n**at      |  **n**{t      |
+|  ŋ  |   N  | ba**ng**     |  b{**N**      |
+|  l  |   l  | **l**ad      |  **l**{d      |
+|  ɹ  |   r  | **r**ad      |  **r**{d      |
 |  w  |   w  | **w**et      |  **w**Et      |
 |  j  |   j  | **y**et      |  **j**Et      |
 {:.disc-table}
@@ -59,7 +61,7 @@ As a result, the APLS subset of DISC doesn't have symbols for [ɾ] or [ʔ]; in N
 
 | IPA | DISC |    English   |      DISC     |
 |-----|------|--------------|---------------|
-|  ɱ̩  |   F  | idealis**m** |  2dilIz**F**  |
+|  m̩  |   F  | idealis**m** |  2dilIz**F**  |
 |  n̩  |   H  | burd**en**   |  b3rd**H**    |
 |  l̩  |   P  | dang**le**   |  d{Ng**P**    |
 {:.disc-table}
@@ -71,16 +73,16 @@ As a result, the APLS subset of DISC doesn't have symbols for [ɾ] or [ʔ]; in N
 
 | IPA | DISC |    English   |      DISC     |
 |-----|------|--------------|---------------|
+|  i  |   i  | fl**ee**ce   |  fl**i**s     |
 |  ɪ  |   I  | k**i**t      |  k**I**t      |
 |  ε  |   E  | dr**e**ss    |  dr**E**s     |
 |  æ  |   {  | tr**a**p     |  tr**{**p     |
-|  ʌ  |   V  | str**u**t    |  str**V**t    |
 |  ɑ  |   Q  | l**o**t      |  l**Q**t      |
-|  ʊ  |   U  | f**oo**t     |  f**U**t      |
-|  ə  |   @  | comm**a**    |  kQm**@**     |
-|  i  |   i  | fl**ee**ce   |  fl**i**s     |
 |  ɔ  |   \$ | th**ough**t  |  T**\$**t     |
+|  ʌ  |   V  | str**u**t    |  str**V**t    |
+|  ʊ  |   U  | f**oo**t     |  f**U**t      |
 |  u  |   u  | g**oo**se    |  g**u**s      |
+|  ə  |   @  | comm**a**    |  kQm**@**     |
 {:.disc-table}
 
 
@@ -88,13 +90,13 @@ As a result, the APLS subset of DISC doesn't have symbols for [ɾ] or [ʔ]; in N
 
 | IPA | DISC |    English   |      DISC     |
 |-----|------|--------------|---------------|
-|  aɹ |  #r  | st**ar**t    |  st**#r**t    |
-|  ɔɹ |  \$r | f**or**ce    |  f**\$r**s    |
-|  ɚ  |  @r  | lett**er**   |  lEt**@r**    |
-|  ɝ  |  3r  | n**ur**se    |  n**3r**s     |
 |  ɪɹ |  7r  | n**ear**     |  n**7r**      |
 |  εɹ |  8r  | squ**are**   |  skw**8r**    |
+|  aɹ |  #r  | st**ar**t    |  st**#r**t    |
+|  ɝ  |  3r  | n**ur**se    |  n**3r**s     |
+|  ɔɹ |  \$r | f**or**ce    |  f**\$r**s    |
 |  ʊɹ |  9r  | c**ure**     |  kj**9r**     |
+|  ɚ  |  @r  | lett**er**   |  lEt**@r**    |
 {:.disc-table}
 
 
@@ -104,9 +106,9 @@ As a result, the APLS subset of DISC doesn't have symbols for [ɾ] or [ʔ]; in N
 |-----|------|--------------|---------------|
 |  eɪ |   1  | f**a**ce     |  f**1**s      |
 |  aɪ |   2  | pr**i**ce    |  pr**2**s     |
+|  aʊ |   6  | m**ou**th    |  m**6**T      |
 |  ɔɪ |   4  | ch**oi**ce   |  J**4**s      |
 |  oʊ |   5  | g**oa**t     |  g**5**t      |
-|  aʊ |   6  | m**ou**th    |  m**6**T      |
 {:.disc-table}
 
 
@@ -133,7 +135,7 @@ Here are some other things to note:
 
 ## Suggesting new dictionary entries
 
-APLS uses two sources to look up phonemic representations: (1) the Unisyn English dictionary (which is supposed to be a universal English dictionary), and (2) a [custom dictionary](https://raw.githubusercontent.com/djvill/APLS/main/files/custom-dictionary/aplsDict.txt).
+APLS uses two sources to look up phonemic representations: (1) the Unisyn English dictionary (which is supposed to be a universal English dictionary), and (2) a [custom dictionary](/APLS/files/custom-entries).
 Occasionally you'll run across a word that needs to be added to APLS's custom dictionary.
 Most often this will be a Pittsburgh/western PA geographic name (e.g., neighborhoods like _Shadyside_, municipalities like _Sewickley_, streets like _Baum_, schools like _Milliones_), a brand name (e.g., _Highmark_, _Panera_), or a Pittsburgh lexical feature (e.g., _redd_, _gumband_).
 However, there are words that aren't Pittsburgh-specific that are absent from Unisyn, sometimes unexpectedly;
@@ -141,7 +143,7 @@ for example, we've had to manually add entries for _artsy_, _bachelorette_, _hom
 
 
 If a word falls into one of the preceding categories, it should be added to the APLS dictionary.
-On the other hand, if a word is unlikely to be used by more than one speaker, it's better to just use an [inline DISC code](Transcription-Convention#novel-words).
+On the other hand, if a word is unlikely to be used by more than one speaker, it's better to just use an [inline pronounce code](transcription-convention#pronounce-codes).
 
 
 Everything from the previous sections applies to new words that you suggest for the custom dictionary, plus the following:
