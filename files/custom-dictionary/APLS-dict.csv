@@ -340,29 +340,3 @@ o~,5
 u~,@
 ou~,6
 oi~,4
-
-
-// Plural letters (for e.g. "D V Ds")
-Bs,'biz
-Cs,'siz
-Ds,'diz
-Es,'iz
-Fs,'Efz
-Gs,'_iz
-Hs,'1-J@z
-Js,'_1z
-Ks,'k1z
-Ls,'Elz
-Ns,'Enz
-Os,'5z
-Ps,'piz
-Qs,'kjuz
-Rs,'#rz
-Ss,'E-s@z
-Ts,'tiz
-Vs,'viz
-Ws,'dV-bP-juz
-Xs,'Ek-s@z
-Ys,'w2z
-Zs,'ziz
-// N.B. [AIMU]s are already specified in Unisyn
