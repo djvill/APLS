@@ -9,6 +9,5 @@ if [ "$currentDir" != "$SCRIPT_DIR" ]
 		exit 1
 fi
 
-# outFiles='c("aplsDict.txt", "custom-entries.md")'
-outFiles='c("the.best")'
+outFiles='c("aplsDict.txt", "custom-entries.md")'
 Rscript -e "source('convertDict.R') ; convertDict('APLS-dict.csv', $outFiles, skip=7)"
