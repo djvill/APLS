@@ -4,7 +4,7 @@ layout: default
 permalink: /files/custom-dictionary
 has_children: yes
 has_toc: no
-last_modified_date: 2023-09-01T11:13:46-04:00
+last_modified_date: 2023-09-06T21:01:54-04:00
 ---
 
 # {{ page.title }}
@@ -27,6 +27,20 @@ The custom dictionary supplements Unisyn, with words in a few categories:
 - Non-Pittsburgh-specific words that are absent from Unisyn, sometimes unexpectedly (_artsy_, _bachelorette_, _homie_, _Kwanzaa_, _microbrew_, _stepdad_, _tarp_, _y'all_)
 - Restricted mini-lexicons specified in the APLS transcription convention: [colloquial spellings](/APLS/doc/Transcription-Convention#colloq-spellings) (e.g., _gonna_), [interjections](/APLS/doc/Transcription-Convention#other-interjections) (e.g., _yup_), and [single-phoneme hesitation codes](/APLS/doc/Transcription-Convention#single-cons-unfinished) (e.g., _f~_ for [f])
 
+## Dictionary file format
+
+The file `APLS-dict.csv` must conform to the following format:
+
+- Lines must consist of _one of_ the following:
+	- An _entry_ of the form `<word-form>,<phonemes>`
+	- A _comment_ of the form `// <comment>`
+	- A _blank line_
+- Word-forms must match the regular expression `/^[A-Za-z'-]+~?$/`
+	- That is, they may consist only of (a) letters of the English alphabet, (b) the characters `'` (apostrophe) or `-` (hyphen), and they may end with an optional `~` (tilde)
+		- Only literal apostrophes or hyphens are acceptable, not lookalikes like `‘` (Unicode U+2018 "curly opening single quote") or `–` (Unicode U+2013 "en dash")
+		- Tildes (hesitation markers) may only come at the end of the word-form
+- Phonemes may only use the [APLS subset of the DISC phonemic alphabet](/APLS/doc/Phonemic-Transcription), including syllabification/stress markers: `pbtdkgNmnlrfvTDszSZjhwJ_CFHPIE{VQU@i$u312456789#'"-`
+- After the header (first 7 rows), comments are interpreted as separating dictionary sections
 
 
 ## (For corpus admins) How to add dictionary entries
@@ -145,10 +159,9 @@ If you supplied multiple entries for the base-form of the word, you should also 
 
 ### Update the Elan file checker's dictionary
 
-This is the easiest part---once you've got your computer set up for it:
-
 1. Pull updates from the [GitHub repository](https://github.com/djvill/APLS)
 2. Run [`updateDict.sh`](https://github.com/djvill/APLS/blob/main/files/custom-dictionary/updateDict.sh)
+	 - If necessary, fix any formatting errors to ensure `APLS-dict.csv` conforms to [APLS specifications](#dictionary-file-format), and re-run `updateDict.sh`
 3. Commit and push your changes to GitHub.
 
 That's it!
