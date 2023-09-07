@@ -12,6 +12,8 @@
 				{% capture target %}
 					{% if link.newtab %}
 						target="_blank"
+					{% else %}
+						target="_parent"
 					{% endif %}
 				{% endcapture %}
 				<li class="item" id="{{ linkid | strip }}">

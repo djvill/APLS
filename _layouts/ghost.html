@@ -11,17 +11,28 @@ layout: table_wrappers
 		{% include icons/icons.html %}
 		<div id="main-content-wrap" class="main-content-wrap" id="top">
 			<div id="main-content" class="main-content" role="main">
-				{%- comment %} Reverses other layouts' heading_anchors behavior and uses page. rather than site. {% endcomment -%}
-				{% if page.heading_anchors == true %}
-					{% include vendor/anchor_headings.html html=content beforeHeading="true" anchorBody="<svg viewBox=\"0 0 16 16\" aria-hidden=\"true\"><use xlink:href=\"#svg-link\"></use></svg>" anchorClass="anchor-heading" anchorAttrs="aria-labelledby=\"%html_id%\"" %}
-				{% else %}
-					{{ content }}
-				{% endif %}
+				<main>
+					{%- comment %} Reverses other layouts' heading_anchors behavior and uses page. rather than site. {% endcomment -%}
+					{% if page.heading_anchors == true %}
+						{% include vendor/anchor_headings.html html=content beforeHeading="true" anchorBody="<svg viewBox=\"0 0 16 16\" aria-hidden=\"true\"><use xlink:href=\"#svg-link\"></use></svg>" anchorClass="anchor-heading" anchorAttrs="aria-labelledby=\"%html_id%\"" %}
+					{% else %}
+						{{ content }}
+					{% endif %}
 
-				{% if page.has_children == true and page.has_toc != false %}
-					{% include components/children_nav.html %}
+					{% if page.has_children == true and page.has_toc != false %}
+						{% include components/children_nav.html %}
+					{% endif %}
+				</main>
+				
+				{% capture footer_custom %}
+					{%- include footer_custom.html -%}
+				{% endcapture %}
+				{% if footer_custom != "" %}
+					<hr>
+					<footer>
+						{{ footer_custom }}
+					</footer>
 				{% endif %}
-
 			</div>
 		</div>
 

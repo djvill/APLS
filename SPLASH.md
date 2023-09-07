@@ -10,9 +10,13 @@ dashlinks:
     image: fa-user-plus.svg
     url: https://docs.google.com/forms/d/e/1FAIpQLSdFclWfbWZ-aM-h3Givrr4mH9T4MjyWaeQ-TpTMriC5mOcoqw/viewform?usp=sf_link
   - text: Documentation
-    image: fa-circle-question.svg
+    image: fa-book.svg
     url: /
     newtab: yes
+  # - text: Tutorial
+    # image: fa-circle-info.svg
+    # url: /tutorial
+    # newtab: yes
 ---
 
 <!-- To be injected via <iframe> into https://apls.pitt.edu/ -->
