@@ -1,4 +1,4 @@
-##Pittsburgh/SWPA geographic names
+## Pittsburgh/SWPA geographic names
 Allderdice
 Ambridge
 Ardmore
@@ -88,7 +88,7 @@ Zelie
 Zelienople
 
 
-##Pittsburgh personal names
+## Pittsburgh personal names
 Bettis
 Bonilla
 Irvis
@@ -99,7 +99,7 @@ Stargell
 Wiggin
 
 
-##Pittsburgh lexicon
+## Pittsburgh lexicon
 'n
 Eat'n
 grinnies
@@ -126,7 +126,7 @@ yinzer
 yinzers
 
 
-##Company/brand names (local or otherwise)
+## Company/brand names (local or otherwise)
 Amiesite
 Applebee
 Applebee's
@@ -159,7 +159,7 @@ Yuengling
 Yuenglings
 
 
-##Unexpected omissions from Unisyn
+## Unexpected omissions from Unisyn
 anchorpeople
 anchorwoman
 anchorwomen
@@ -215,6 +215,7 @@ nonscientific
 popsicle
 popsicles
 rec
+reface
 refacing
 righty
 St
@@ -231,7 +232,7 @@ worldviews
 y'all
 
 
-##Other
+## Other
 babushka
 babushkas
 Blige
@@ -269,14 +270,14 @@ wouldn't've
 Zehner
 
 
-##Allowable colloquial spellings
+## Allowable colloquial spellings
 'nother
 'til
 I'mma
 tryna
 
 
-##Allowable interjections
+## Allowable interjections
 ahh
 aw
 jeez
@@ -286,7 +287,7 @@ oo
 woohoo
 
 
-##Tilde codes
+## Tilde codes
 a~
 b~
 ch~

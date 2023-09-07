@@ -4,7 +4,7 @@ layout: default
 permalink: /files/custom-entries
 parent: Custom dictionary
 search_exclude: true
-last_modified_date: 2023-09-01T11:11:17-04:00
+last_modified_date:
 ---
 
 # {{ page.title }}
@@ -13,7 +13,6 @@ last_modified_date: 2023-09-01T11:11:17-04:00
 {% include page_toc.html collapsible=true %}
 
 ## Pittsburgh/SWPA geographic names
-
 - Allderdice
 - Ambridge
 - Ardmore
@@ -104,7 +103,6 @@ last_modified_date: 2023-09-01T11:11:17-04:00
 {:.wrap .fb-10}
 
 ## Pittsburgh personal names
-
 - Bettis
 - Bonilla
 - Irvis
@@ -116,7 +114,6 @@ last_modified_date: 2023-09-01T11:11:17-04:00
 {:.wrap .fb-10}
 
 ## Pittsburgh lexicon
-
 - 'n
 - Eat'n
 - grinnies
@@ -144,7 +141,6 @@ last_modified_date: 2023-09-01T11:11:17-04:00
 {:.wrap .fb-10}
 
 ## Company/brand names (local or otherwise)
-
 - Amiesite
 - Applebee
 - Applebee's
@@ -178,7 +174,6 @@ last_modified_date: 2023-09-01T11:11:17-04:00
 {:.wrap .fb-10}
 
 ## Unexpected omissions from Unisyn
-
 - anchorpeople
 - anchorwoman
 - anchorwomen
@@ -215,20 +210,26 @@ last_modified_date: 2023-09-01T11:11:17-04:00
 - gummy
 - impatien
 - impatiens
+- intramural
 - jitney
 - jitneys
+- kickboxer
+- kickboxers
 - knick
 - knicks
 - kook
 - kooks
 - Kwanzaa
 - limburger
+- meld
+- melds
 - moonshot
 - moonshots
 - nonscientific
 - popsicle
 - popsicles
 - rec
+- reface
 - refacing
 - righty
 - St
@@ -246,7 +247,6 @@ last_modified_date: 2023-09-01T11:11:17-04:00
 {:.wrap .fb-10}
 
 ## Other
-
 - babushka
 - babushkas
 - Blige
@@ -285,7 +285,6 @@ last_modified_date: 2023-09-01T11:11:17-04:00
 {:.wrap .fb-10}
 
 ## Allowable colloquial spellings
-
 - 'nother
 - 'til
 - I'mma
@@ -293,7 +292,6 @@ last_modified_date: 2023-09-01T11:11:17-04:00
 {:.wrap .fb-10}
 
 ## Allowable interjections
-
 - ahh
 - aw
 - jeez
@@ -304,7 +302,6 @@ last_modified_date: 2023-09-01T11:11:17-04:00
 {:.wrap .fb-10}
 
 ## Tilde codes
-
 - a~
 - b~
 - ch~
