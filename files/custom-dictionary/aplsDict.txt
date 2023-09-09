@@ -209,6 +209,7 @@ Kwanzaa
 limburger
 meld
 melds
+minoring
 moonshot
 moonshots
 nonscientific

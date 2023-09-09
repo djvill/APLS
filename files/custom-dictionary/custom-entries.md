@@ -223,6 +223,7 @@ last_modified_date:
 - limburger
 - meld
 - melds
+- minoring
 - moonshot
 - moonshots
 - nonscientific
