@@ -1,5 +1,6 @@
 ## Pittsburgh/SWPA geographic names
 Allderdice
+Alvernia
 Ambridge
 Ardmore
 Aspinwall
@@ -41,6 +42,7 @@ McCandless
 McKeesport
 McKnightmare
 McMunn
+McNaugher
 Milliones
 Millvale
 Mon
@@ -51,6 +53,7 @@ Morningside
 Mucklerat
 Murrysville
 Negley
+Northview
 Oakmont
 Ossipee
 Overbrook
@@ -95,6 +98,7 @@ Irvis
 Kaufer
 Krenn's
 Kudzma
+Sebak
 Stargell
 Wiggin
 
@@ -219,6 +223,8 @@ rec
 reface
 refacing
 righty
+rotaries
+rotary
 St
 stepdad
 stepdads
@@ -254,8 +260,10 @@ Limbaugh
 Mawr
 McGruder
 meister
+mic
 microbrew
 microbrews
+mics
 Pittsburghy
 reeducation
 rollerskate

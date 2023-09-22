@@ -14,6 +14,7 @@ last_modified_date:
 
 ## Pittsburgh/SWPA geographic names
 - Allderdice
+- Alvernia
 - Ambridge
 - Ardmore
 - Aspinwall
@@ -55,6 +56,7 @@ last_modified_date:
 - McKeesport
 - McKnightmare
 - McMunn
+- McNaugher
 - Milliones
 - Millvale
 - Mon
@@ -65,6 +67,7 @@ last_modified_date:
 - Mucklerat
 - Murrysville
 - Negley
+- Northview
 - Oakmont
 - Ossipee
 - Overbrook
@@ -109,6 +112,7 @@ last_modified_date:
 - Kaufer
 - Krenn's
 - Kudzma
+- Sebak
 - Stargell
 - Wiggin
 {:.wrap .fb-10}
@@ -233,6 +237,8 @@ last_modified_date:
 - reface
 - refacing
 - righty
+- rotaries
+- rotary
 - St
 - stepdad
 - stepdads
@@ -268,8 +274,10 @@ last_modified_date:
 - Mawr
 - McGruder
 - meister
+- mic
 - microbrew
 - microbrews
+- mics
 - Pittsburghy
 - reeducation
 - rollerskate
