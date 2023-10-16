@@ -224,6 +224,7 @@ last_modified_date:
 - kook
 - kooks
 - Kwanzaa
+- Lakers
 - limburger
 - meld
 - melds
