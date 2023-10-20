@@ -32,6 +32,7 @@ Karns
 Kedron
 Kennard
 Kennywood
+Kittaning
 Larimer
 Lawrenceville
 Leetsdale
@@ -218,6 +219,8 @@ minoring
 moonshot
 moonshots
 nonscientific
+pierogie
+pierogies
 popsicle
 popsicles
 rec

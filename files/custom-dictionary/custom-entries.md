@@ -46,6 +46,7 @@ last_modified_date:
 - Kedron
 - Kennard
 - Kennywood
+- Kittaning
 - Larimer
 - Lawrenceville
 - Leetsdale
@@ -232,6 +233,8 @@ last_modified_date:
 - moonshot
 - moonshots
 - nonscientific
+- pierogie
+- pierogies
 - popsicle
 - popsicles
 - rec
