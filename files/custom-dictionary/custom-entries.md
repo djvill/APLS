@@ -27,6 +27,7 @@ last_modified_date:
 - Brushton
 - Carlow
 - Chalfant
+- Crafton
 - Crider's
 - Deener
 - Eastvale
@@ -54,7 +55,7 @@ last_modified_date:
 - Ligonier
 - McArdle
 - McCandless
-- McKee
+- McKees
 - McKeesport
 - McKnightmare
 - McMunn
@@ -172,6 +173,7 @@ last_modified_date:
 - Penn-Mac
 - Pennysaver
 - Poli's
+- Primanti
 - Starbucks
 - Stroh's
 - Sunseri's
@@ -299,6 +301,7 @@ last_modified_date:
 - Shawntae
 - sucky
 - there're
+- treaters
 - underwears
 - wouldn't've
 - Zehner

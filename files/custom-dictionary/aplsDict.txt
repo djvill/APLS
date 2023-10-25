@@ -13,6 +13,7 @@ Brookline
 Brushton
 Carlow
 Chalfant
+Crafton
 Crider's
 Deener
 Eastvale
@@ -40,7 +41,7 @@ Lemington
 Ligonier
 McArdle
 McCandless
-McKee
+McKees
 McKeesport
 McKnightmare
 McMunn
@@ -158,6 +159,7 @@ Pelusi
 Penn-Mac
 Pennysaver
 Poli's
+Primanti
 Starbucks
 Stroh's
 Sunseri's
@@ -285,6 +287,7 @@ scaredy
 Shawntae
 sucky
 there're
+treaters
 underwears
 wouldn't've
 Zehner
