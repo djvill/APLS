@@ -4,7 +4,7 @@ layout: default
 permalink: /files/custom-entries
 parent: Custom dictionary
 search_exclude: true
-last_modified_date:
+last_modified_date: 2023-10-25T11:05:07-04:00
 ---
 
 # {{ page.title }}
@@ -54,6 +54,7 @@ last_modified_date:
 - Ligonier
 - McArdle
 - McCandless
+- McKee
 - McKeesport
 - McKnightmare
 - McMunn
@@ -233,6 +234,7 @@ last_modified_date:
 - moonshot
 - moonshots
 - nonscientific
+- pierogi
 - pierogie
 - pierogies
 - popsicle
@@ -263,12 +265,14 @@ last_modified_date:
 - Blige
 - bro
 - bros
+- co-ed
 - coanchor
 - coanchors
 - collab
 - craneman
 - grandpap
 - grandpaps
+- heart-shaped
 - homie
 - homies
 - hoodie
@@ -282,6 +286,7 @@ last_modified_date:
 - microbrew
 - microbrews
 - mics
+- nickelodeons
 - Pittsburghy
 - reeducation
 - rollerskate
@@ -293,6 +298,7 @@ last_modified_date:
 - Shawntae
 - sucky
 - there're
+- underwears
 - wouldn't've
 - Zehner
 {:.wrap .fb-10}

@@ -6,6 +6,10 @@ _site
 Gemfile*
 
 
+# Unisyn dictionary
+files/custom-dictionary/apls.unisyn
+
+
 #### OSs ####
 
 ## Windows
