@@ -4,7 +4,7 @@ layout: default
 permalink: /files/custom-entries
 parent: Custom dictionary
 search_exclude: true
-last_modified_date: 2023-10-25T11:05:07-04:00
+last_modified_date:
 ---
 
 # {{ page.title }}
@@ -229,6 +229,7 @@ last_modified_date: 2023-10-25T11:05:07-04:00
 - Lakers
 - limburger
 - meld
+- melding
 - melds
 - minoring
 - moonshot
