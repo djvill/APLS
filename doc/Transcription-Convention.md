@@ -4,7 +4,7 @@ layout: default
 permalink: /doc/transcription-convention
 parent: Transcription
 nav_order: 2
-last_modified_date: 2023-09-01T11:11:17-04:00
+last_modified_date: 2023-10-25T12:56:15-04:00
 ---
 
 
@@ -26,7 +26,7 @@ In this document, `fixed-width font` is used for things you actually type into t
 ## File setup
 
 - The transcription file (ending in .eaf if using Elan, .TextGrid if using Praat) should have the same name as the sound file. Pay attention to leading zeros (e.g., `FH01` not <code class="counterex">FH1</code>)
-	- If using Praat, you'll need to import your TextGrid to Elan and submit the .eaf file. In Elan, go to File > Import > Praat TextGrid File. Browse for the file, select "Skip empty intervals / annotations", then click Next > Finish
+	- If using Praat, you'll need to import your TextGrid to Elan after you've finished transcribing and submit the .eaf file. In Elan, go to File > Import > Praat TextGrid File. Browse for the file, select "Skip empty intervals / annotations", then click Next > Finish
 - Create **one tier for each speaker, plus three additional tiers**: `Noise`, `Comment`, and `Redaction`
 	- The tier name for the main speaker(s) should be that speaker's APLS code (e.g., `LV01`). Main speaker(s) are in the sound file name.
 	- The tier name for the interviewer(s) should be the interviewer's name if it's known (`Trista Pennington` for HD interviews, `Barbara Johnstone` or `Jennifer Andrus` for CB/FH/LV interviews). If unknown, use `Interviewer` and the main speaker's APLS code (e.g., `Interviewer HD01`)
@@ -35,10 +35,11 @@ In this document, `fixed-width font` is used for things you actually type into t
 	- Don't forget `Noise`, `Comment`, and `Redaction` tiers!
 	- Pay attention to capitalization, plurals, etc. (e.g., `Redaction` not <code class="counterex">redactions</code>)
 - If using Elan:
-	- For all tiers, add a Participant attribute that's the same as the tier name
-	- Fill in the Annotator attribute on any speaker tiers with the names of all transcribers (including anyone who checked over the entire transcription)
+	- For all tiers, set the Participant attribute to be the same as the tier name
+	- Set the file's Author attribute to the names of all transcribers (including anyone who checked the transcription)
+	- To add tiers and set tier attributes, go to Tier > Add New Tier. To set the file's Author attribute, go to Edit > Set Author
 - If using Praat:
-	- Praat doesn't have tier attributes, only tier names. Add the Participant and Annotator attributes after importing to Elan
+	- Praat doesn't have attributes. Add the Participant and Author attributes after importing to Elan
 
 
 ### Tips
