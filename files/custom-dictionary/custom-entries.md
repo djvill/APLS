@@ -190,8 +190,10 @@ last_modified_date:
 - artsy
 - bachelorette
 - bachelorettes
+- bacterias
 - balled
 - balling
+- capris
 - CD
 - CDs
 - com
@@ -260,6 +262,7 @@ last_modified_date:
 - worldview
 - worldviews
 - y'all
+- y'alls
 {:.wrap .fb-10}
 
 ## Other

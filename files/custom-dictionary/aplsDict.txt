@@ -176,8 +176,10 @@ aneurysms
 artsy
 bachelorette
 bachelorettes
+bacterias
 balled
 balling
+capris
 CD
 CDs
 com
@@ -246,6 +248,7 @@ webcams
 worldview
 worldviews
 y'all
+y'alls
 
 
 ## Other
