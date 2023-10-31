@@ -23,6 +23,7 @@ last_modified_date:
 - Belmar
 - Braddock
 - Brashear
+- Bridgeville
 - Brookline
 - Brushton
 - Carlow
