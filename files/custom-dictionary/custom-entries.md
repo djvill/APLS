@@ -233,6 +233,7 @@ last_modified_date:
 - Kwanzaa
 - Lakers
 - limburger
+- maxes
 - meld
 - melding
 - melds
@@ -240,9 +241,11 @@ last_modified_date:
 - moonshot
 - moonshots
 - nonscientific
+- partier
 - pierogi
 - pierogie
 - pierogies
+- podiatrist
 - popsicle
 - popsicles
 - rec

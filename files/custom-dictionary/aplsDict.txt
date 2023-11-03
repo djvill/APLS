@@ -219,6 +219,7 @@ kooks
 Kwanzaa
 Lakers
 limburger
+maxes
 meld
 melding
 melds
@@ -226,9 +227,11 @@ minoring
 moonshot
 moonshots
 nonscientific
+partier
 pierogi
 pierogie
 pierogies
+podiatrist
 popsicle
 popsicles
 rec
