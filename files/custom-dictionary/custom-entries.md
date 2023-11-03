@@ -153,7 +153,7 @@ last_modified_date:
 - Applebee
 - Applebee's
 - Arby's
-- Chi-Chis
+- Chi-Chi
 - Cigna
 - Damico's
 - Dunkin
