@@ -4,7 +4,7 @@ layout: default
 permalink: /files/custom-entries
 parent: Custom dictionary
 search_exclude: true
-last_modified_date: 2023-10-25T11:05:07-04:00
+last_modified_date:
 ---
 
 # {{ page.title }}
@@ -23,10 +23,12 @@ last_modified_date: 2023-10-25T11:05:07-04:00
 - Belmar
 - Braddock
 - Brashear
+- Bridgeville
 - Brookline
 - Brushton
 - Carlow
 - Chalfant
+- Crafton
 - Crider's
 - Deener
 - Eastvale
@@ -54,7 +56,7 @@ last_modified_date: 2023-10-25T11:05:07-04:00
 - Ligonier
 - McArdle
 - McCandless
-- McKee
+- McKees
 - McKeesport
 - McKnightmare
 - McMunn
@@ -151,6 +153,7 @@ last_modified_date: 2023-10-25T11:05:07-04:00
 - Applebee
 - Applebee's
 - Arby's
+- Chi-Chi
 - Cigna
 - Damico's
 - Dunkin
@@ -172,6 +175,7 @@ last_modified_date: 2023-10-25T11:05:07-04:00
 - Penn-Mac
 - Pennysaver
 - Poli's
+- Primanti
 - Starbucks
 - Stroh's
 - Sunseri's
@@ -188,8 +192,10 @@ last_modified_date: 2023-10-25T11:05:07-04:00
 - artsy
 - bachelorette
 - bachelorettes
+- bacterias
 - balled
 - balling
+- capris
 - CD
 - CDs
 - com
@@ -228,15 +234,19 @@ last_modified_date: 2023-10-25T11:05:07-04:00
 - Kwanzaa
 - Lakers
 - limburger
+- maxes
 - meld
+- melding
 - melds
 - minoring
 - moonshot
 - moonshots
 - nonscientific
+- partier
 - pierogi
 - pierogie
 - pierogies
+- podiatrist
 - popsicle
 - popsicles
 - rec
@@ -257,6 +267,7 @@ last_modified_date: 2023-10-25T11:05:07-04:00
 - worldview
 - worldviews
 - y'all
+- y'alls
 {:.wrap .fb-10}
 
 ## Other
@@ -298,6 +309,7 @@ last_modified_date: 2023-10-25T11:05:07-04:00
 - Shawntae
 - sucky
 - there're
+- treaters
 - underwears
 - wouldn't've
 - Zehner

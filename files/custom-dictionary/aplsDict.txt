@@ -9,10 +9,12 @@ Beechview
 Belmar
 Braddock
 Brashear
+Bridgeville
 Brookline
 Brushton
 Carlow
 Chalfant
+Crafton
 Crider's
 Deener
 Eastvale
@@ -40,7 +42,7 @@ Lemington
 Ligonier
 McArdle
 McCandless
-McKee
+McKees
 McKeesport
 McKnightmare
 McMunn
@@ -137,6 +139,7 @@ Amiesite
 Applebee
 Applebee's
 Arby's
+Chi-Chi
 Cigna
 Damico's
 Dunkin
@@ -158,6 +161,7 @@ Pelusi
 Penn-Mac
 Pennysaver
 Poli's
+Primanti
 Starbucks
 Stroh's
 Sunseri's
@@ -174,8 +178,10 @@ aneurysms
 artsy
 bachelorette
 bachelorettes
+bacterias
 balled
 balling
+capris
 CD
 CDs
 com
@@ -214,15 +220,19 @@ kooks
 Kwanzaa
 Lakers
 limburger
+maxes
 meld
+melding
 melds
 minoring
 moonshot
 moonshots
 nonscientific
+partier
 pierogi
 pierogie
 pierogies
+podiatrist
 popsicle
 popsicles
 rec
@@ -243,6 +253,7 @@ webcams
 worldview
 worldviews
 y'all
+y'alls
 
 
 ## Other
@@ -284,6 +295,7 @@ scaredy
 Shawntae
 sucky
 there're
+treaters
 underwears
 wouldn't've
 Zehner
