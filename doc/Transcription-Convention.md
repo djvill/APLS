@@ -4,7 +4,7 @@ layout: default
 permalink: /doc/transcription-convention
 parent: Transcription
 nav_order: 2
-last_modified_date: 2023-10-25T12:56:15-04:00
+last_modified_date: 2023-11-07T15:44:23-05:00
 ---
 
 
@@ -106,9 +106,12 @@ When we mark a stretch of speech as redacted, LaBB-CAT deletes the audio and rem
 
 ## Annotation
 
-For the most part, these transcriptions are **orthographic**.
+Once you've segmented your transcript into turns, it's time to **annotate**.
+For the most part, APLS transcriptions are **orthographic**.
 That is, they consist mostly of the words that speakers say, written with conventional American English spelling.
-Within that framework, though, there are some important things to consider
+Within that framework, though, there are some important things to consider.
+
+Reminder: In this document, `fixed-width font` is used for things you actually type into the transcription program (Elan or Praat).
 
 
 ### Spelling
