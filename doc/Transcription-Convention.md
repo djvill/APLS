@@ -4,7 +4,7 @@ layout: default
 permalink: /doc/transcription-convention
 parent: Transcription
 nav_order: 2
-last_modified_date: 2023-11-07T15:44:23-05:00
+last_modified_date: 2023-11-09T12:56:42-05:00
 ---
 
 
@@ -23,50 +23,62 @@ In this document, `fixed-width font` is used for things you actually type into t
 {% include page_toc.html collapsible=true %}
 
 
-## File setup
+## General tips
 
-- The transcription file (ending in .eaf if using Elan, .TextGrid if using Praat) should have the same name as the sound file. Pay attention to leading zeros (e.g., `FH01` not <code class="counterex">FH1</code>)
-	- If using Praat, you'll need to import your TextGrid to Elan after you've finished transcribing and submit the .eaf file. In Elan, go to File > Import > Praat TextGrid File. Browse for the file, select "Skip empty intervals / annotations", then click Next > Finish
-- Create **one tier for each speaker, plus three additional tiers**: `Noise`, `Comment`, and `Redaction`
-	- The tier name for the main speaker(s) should be that speaker's APLS code (e.g., `LV01`). Main speaker(s) are in the sound file name.
-	- The tier name for the interviewer(s) should be the interviewer's name if it's known (`Trista Pennington` for HD interviews, `Barbara Johnstone` or `Jennifer Andrus` for CB/FH/LV interviews). If unknown, use `Interviewer` and the main speaker's APLS code (e.g., `Interviewer HD01`)
-	- If the main speaker from a different file shows up in the sound file, name their tier with their speaker code
-	- Any additional speakers should be named `Bystander` + main speaker's APLS code + a number (e.g., `Bystander CB01 1`, `Bystander CB01 2`)
-	- Don't forget `Noise`, `Comment`, and `Redaction` tiers!
-	- Pay attention to capitalization, plurals, etc. (e.g., `Redaction` not <code class="counterex">redactions</code>)
-- If using Elan:
-	- For all tiers, set the Participant attribute to be the same as the tier name
-	- Set the file's Author attribute to the names of all transcribers (including anyone who checked the transcription)
-	- To add tiers and set tier attributes, go to Tier > Add New Tier. To set the file's Author attribute, go to Edit > Set Author
-- If using Praat:
-	- Praat doesn't have attributes. Add the Participant and Author attributes after importing to Elan
-
-
-### Tips
-
-- **Save your work often!**
-	- Elan is known to crash occasionally, so you may want to set an automatic backup interval (File > Automatic Backup)
-- Transcription usually takes longer at the start of the sound file, then it speeds up once you get used to how a speaker talks
+- It's strongly recommended to [segment](#segmentation) the sound file into turns first, then go back and [fill in](#annotation) the transcription
+	- Some transcribers prefer to segment the entire file before annotating, and others prefer to segment and annotate in chunks
+- Transcription usually takes longer at the start of the interview, then it speeds up once you get used to how a speaker talks
 - The majority of the sound file will be relatively easy to transcribe. However, some parts of each file will take disproportionately long to transcribe due to [unfinished words](#pronounce-codes), [overlaps](#overlaps), and/or ambiguous speech
 	- One recommendation is to create a temporary `Recheck` tier where you make note of speech you're having trouble hearing correctly, so you can return to these portions of the transcript with fresh ears after you're done the first pass. Make sure to delete the `Recheck` tier once you're done checking
+- **Save your work often!**
+	- Praat doesn't auto-save your work, unlike some programs you might be used to (Google Docs, Microsoft Office if you use OneDrive). It usually doesn't crash, but better safe than sorry.
 - Once you've finished transcribing, check over your work!
+
+
+## File setup
+
+- The transcription file (ending in .TextGrid if using Praat) should have the same name as the sound file
+- Create **one tier for each speaker, plus four additional tiers**: `Noise`, `Comment`, `Redaction`, and `Author`
+	- The tier name for the main speaker(s) should be that speaker's APLS code (e.g., `LV01`). Main speaker(s) are in the sound file name.
+	- The tier name for the interviewer(s) should be the interviewer's name:
+		- `Trista Pennington` for HD interviews
+		- `Barbara Johnstone` for most CB/FH/LV interviews
+		- `Jennifer Andrus` for CB02 or CB18
+	- In most cases, any additional speakers should be named `Bystander` + main speaker's APLS code + a number (e.g., `Bystander CB01 1`, `Bystander CB01 2`)
+		- The only exception is if the additional speaker is also in APLS (in which case, name their tier with their speaker code). This is very unlikely, so unless you happen to know the additional speaker is in APLS, just assume it's a `Bystander`
+	- Pay attention to capitalization, plurals, and leading zeros (e.g., `Redaction` not <code class="counterex">redactions</code>, `FH01` not <code class="counterex">FH1</code>)
+- The `Author` tier should have a single annotation: the names of all transcribers (including anyone who checked the transcription)
+- You may also want to create a (temporary) `Recheck` tier (see [below](#tips)) while you're transcribing
 
 
 ## Segmentation
 
-- It's strongly recommended to segment the sound file into turns first, then go back and fill in the transcription
-	- Some transcribers prefer to segment the entire file before annotating, and others prefer to segment and annotate in chunks
-	- If using Elan, segment using Annotation Mode or Segmentation Mode, and transcribe using Transcription Mode
-	- Praat doesn't distinguish between empty and non-empty intervals. So when segmenting, add a filler character (e.g., `>`) into each interval you intend to fill later
-	- In files with a single main speaker, the interviewer is always on the left channel and the interviewee is on the right channel. In Praat, you can mute one channel at a time (ctrl/cmd+click on the speaker icon to the right of the waveform)
+Before annotating speech, you should segment the file into turns by creating intervals on the appropriate speaker tier(s).
+(Again, some transcribers prefer to segment the entire file before annotating, and others prefer to segment and annotate in chunks.)
+You can leave the `Noise`, `Comment`, and `Redaction` tiers empty until you're actually ready to annotate.
+
+
+General segmentation tips:
+
+- Praat doesn't distinguish between empty and non-empty intervals. So when segmenting, add a filler character (e.g., `_`) into each interval you intend to fill later
+- Most files are in stereo, with the interviewer on the left channel and the interviewee on the right channel
+	- You can mute one channel at a time (Ctrl+click/Cmd+click on the speaker icon to the right of the waveform)
+	- If you want to hear a single channel in _both_ ears, do the following:
+		- Go to the Praat Objects window, select the sound file, click _Convert_ > _Extract one channel..._, and enter `1` for left (interviewer) or `2` for right (interviewee)
+		- Select the new sound file and the TextGrid, and click _View & Edit_
+		- The new window will keep in sync time-wise with the original one, and any edits you make to the TextGrid will show up on both windows
+- Copying boundaries between tiers is straightforward in Praat:
+	- If you want to copy an existing _boundary_ to a new tier, click the boundary, then either press Ctrl+F_n_/Cmd+F_n_ (where _n_ is the tier number you want to copy to) or click the blue circle on the tier
+	- If you want to copy an existing _interval_ (pair of boundaries) to a new tier, click the interval, then press Ctrl+_n_/Cmd+_n_ (where _n_ is the tier number you want to copy to)
+	- You can also use these tricks to add a new boundary or interval to multiple tiers: position your cursor by clicking or click-and-dragging on the waveform, then press Ctrl/Cmd+_n_ (interval) or Ctrl/Cmd+F_n_ (boundary)
 - In the course of filling in the transcription, you will sometimes find that you want to adjust the turn segmentation
-	- If using Elan, this is easy to do in Segmentation Mode. Double-click the tier you want to adjust. Then drag turn boundaries to adjust them, or right-click on the turn to split/merge the turn
-	- If using Praat, drag turn boundaries to adjust them
+	- Drag boundaries to adjust them
+	- If you want to adjust boundaries on multiple tiers, drag it to the right spot on one tier, copy it to the other tier, delete the old boundary on the other tier, and cut & paste the text if needed
 
 
-### Turns
+### Turns of speech
 
-- Segment interviews into turns based on breath groups, not sentences&mdash;spontaneous speech seldom consists of sentences as we know them from written language!
+- Segment speakers' speech into turns based on breath groups, not sentences&mdash;spontaneous speech seldom consists of sentences as we know them from written language!
 	- Breath groups are stretches of speech in between **longer** breaths; don't break up turns at every breath
 - Turns should be no longer than ~10 seconds, even if there's just one speaker for a long stretch of time
 - In word list sections, don't give each word its own turn but group words into sets of ~5 within a turn
@@ -81,9 +93,9 @@ That is, any audio transcribed as overlapping can't be searched for individual s
 - When speakers overlap speech, make the overlapped portion a separate turn on each of the speakers' tiers
 	- For example, Speaker A speaks continuously from 4:00 to 4:08 and Speaker B speaks from 4:04 to 4:05 (talking over Speaker A). You should create 3 turns for Speaker A (4:00&ndash;4:04, 4:04&ndash;4:05, 4:05&ndash;4:08) and 1 turn for Speaker B (4:04&ndash;4:05)
 	- Don't break up words, even if the speakers only overlap for one syllable
-	- This only applies to when speakers overlap speech; boundaries on the `Noise` or `Comment` tiers don't have to align with speaker tiers
-- Elan doesn't make it easy to precisely sync boundaries across tiers, so just get it close enough
-	- Before transcriptions are uploaded to APLS, they are run through a program that 'snaps together' turn boundaries across tiers
+- This only applies to when speakers overlap speech
+	- Boundaries on the `Noise` or `Comment` tiers don't have to align with speaker tiers
+	- The `Redaction` tier is handled a little differently, as described just below
 
 
 ### Redaction
