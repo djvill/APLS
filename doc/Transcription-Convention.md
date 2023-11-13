@@ -4,7 +4,7 @@ layout: default
 permalink: /doc/transcription-convention
 parent: Transcription
 nav_order: 2
-last_modified_date: 2023-11-09T12:56:42-05:00
+last_modified_date: 2023-11-13T15:31:36-05:00
 ---
 
 
@@ -63,7 +63,7 @@ General segmentation tips:
 - Praat doesn't distinguish between empty and non-empty intervals. So when segmenting, add a filler character (e.g., `_`) into each interval you intend to fill later
 - Most files are in stereo, with the interviewer on the left channel and the interviewee on the right channel
 	- You can mute one channel at a time (Ctrl+click/Cmd+click on the speaker icon to the right of the waveform)
-	- If you want to hear a single channel in _both_ ears, do the following:
+	- <a id="split-channels"/> If you want to hear a single channel in _both_ ears, do the following:
 		- Go to the Praat Objects window, select the sound file, click _Convert_ > _Extract one channel..._, and enter `1` for left (interviewer) or `2` for right (interviewee)
 		- Select the new sound file and the TextGrid, and click _View & Edit_
 		- The new window will keep in sync time-wise with the original one, and any edits you make to the TextGrid will show up on both windows
