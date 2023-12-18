@@ -25,7 +25,7 @@ The custom dictionary supplements Unisyn, with words in a few categories:
 - Brand/business names, whether local (e.g., _Pelusi_) or not (e.g., _Highmark_, _Panera_)
 - Pittsburgh lexical features, whether stereotypical (e.g., _redd_, _gumband_) or not (e.g., _Trib_, _WAMO_)
 - Non-Pittsburgh-specific words that are absent from Unisyn, sometimes unexpectedly (_artsy_, _bachelorette_, _homie_, _Kwanzaa_, _microbrew_, _stepdad_, _tarp_, _y'all_)
-- Restricted mini-lexicons specified in the APLS transcription convention: [colloquial spellings](/APLS/doc/Transcription-Convention#colloq-spellings) (e.g., _gonna_), [interjections](/APLS/doc/Transcription-Convention#other-interjections) (e.g., _yup_), and [single-phoneme hesitation codes](/APLS/doc/Transcription-Convention#single-cons-unfinished) (e.g., _f~_ for [f])
+- Restricted mini-lexicons specified in the APLS transcription convention: [colloquial spellings](/APLS/doc/transcription-convention#colloq-spellings) (e.g., _gonna_), [interjections](/APLS/doc/transcription-convention#other-interjections) (e.g., _yup_), and [single-phoneme hesitation codes](/APLS/doc/transcription-convention#single-cons-unfinished) (e.g., _f~_ for [f])
 
 ## Dictionary file format
 
@@ -39,7 +39,7 @@ The file `APLS-dict.csv` must conform to the following format:
 	- That is, they may consist only of (a) letters of the English alphabet, (b) the characters `'` (apostrophe) or `-` (hyphen), and they may end with an optional `~` (tilde)
 		- Only literal apostrophes or hyphens are acceptable, not lookalikes like `‘` (Unicode U+2018 "curly opening single quote") or `–` (Unicode U+2013 "en dash")
 		- Tildes (hesitation markers) may only come at the end of the word-form
-- Phonemes may only use the [APLS subset of the DISC phonemic alphabet](/APLS/doc/Phonemic-Transcription), including syllabification/stress markers: `pbtdkgNmnlrfvTDszSZjhwJ_CFHPIE{VQU@i$u312456789#'"-`
+- Phonemes may only use the [APLS subset of the DISC phonemic alphabet](/APLS/doc/phonemic-transcription), including syllabification/stress markers: `pbtdkgNmnlrfvTDszSZjhwJ_FHPiIE{Q$VUt@78#3912645'"-`
 - After the header (first 7 rows), comments are interpreted as separating dictionary sections
 
 
@@ -58,7 +58,7 @@ The file `APLS-dict.csv` must conform to the following format:
 ### To add or not to add?
 
 Transcribers will suggest new dictionary entries as they work on transcriptions, typically because a word got flagged by the [Elan file checker's](https://djvill.shinyapps.io/apls_elan_file_checker/) step 2.
-It's up to the corpus maintainer whether to add these entries, or whether transcribers should specify the phonemic transcription inline (see [transcription convention sec. 3.4](/APLS/doc/Transcription-Convention#pronounce-codes)).
+It's up to the corpus maintainer whether to add these entries, or whether transcribers should specify the phonemic transcription inline (see [transcription convention sec. 3.4](/APLS/doc/transcription-convention#pronounce-codes)).
 
 Add the word if:
 
@@ -67,10 +67,10 @@ Add the word if:
    - **Rationale:** If a word gets added to the dictionary, it'll save future transcribers time and ensure quality control
    - **Transcribers should:** Use an inline pronounce code
    - **Note:** This criterion is by far the most subjective! If the word satisfies all the other criteria, err on the side of adding it
-2. It's not a **new [colloquial spelling](/APLS/doc/Transcription-Convention#colloq-spellings) or [interjection](/APLS/doc/Transcription-Convention#other-interjections)**
+2. It's not a **new [colloquial spelling](/APLS/doc/transcription-convention#colloq-spellings) or [interjection](/APLS/doc/transcription-convention#other-interjections)**
    - **Examples:** <span class="badex">dunno</span>  <span class="badex">er</span>  <span class="badex">ahem</span>
    - **Rationale:** We want to avoid "coding while transcribing". If transcribers have the choice between (e.g.) _don't know_ and _dunno_, they'll have to spend time deciding which one the speaker uttered. That's really a question for future sociolinguistic investigation, not something to be decided at the transcription stage
-   - **Transcribers should:** Depending on the situation, use a standard spelling, a [hesitation code](/APLS/doc/Transcription-Convention#pronounce-codes), or a [noise code](/APLS/doc/Transcription-Convention#pronounce-codes)
+   - **Transcribers should:** Depending on the situation, use a standard spelling, a [hesitation code](/APLS/doc/transcription-convention#pronounce-codes), or a [noise code](/APLS/doc/transcription-convention#pronounce-codes)
    - **Note:** We can consider waiving this criterion only if the evidence is really, really strong. See [below](#example-lemme) for an example of this principle in action.
 3. It doesn't **violate existing rules** in the transcription convention
    - **Examples:** <span class="badex">412</span>  <span class="badex">IBM</span>  <span class="badex">colllect</span>  <span class="badex">jumpin'</span>  <span class="badex">résumé</span>  <span class="badex">Picksburgh</span>
@@ -133,7 +133,7 @@ So rather than adding the word to the custom dictionary, we have to change Unisy
 if you have access to the `APLS-Admin` repo, see here for directions: https://github.com/djvill/APLS-Admin/blob/main/doc/dictionary-phonemes/README.md.
 
 
-Note: These "dialect pronunciations" are not the same as [_idiosyncratic pronunciations_](../../doc/Transcription-Convention#pronounce-codes).
+Note: These "dialect pronunciations" are not the same as [_idiosyncratic pronunciations_](../../doc/transcription-convention#pronounce-codes).
 The former are shared by a speech community (or a decent subset thereof);
 the latter are isolated to a single speaker and should be transcribed with an inline pronounce code.
 Of course, what might appear at first blush to be an idiosyncratic pronunciation may, upon further examination, turn out to be more common in the speech community;
@@ -147,11 +147,11 @@ Edit the file in a text editor, **not in Excel**, as Excel will mess up the form
 Simply add a new line under the appropriate category heading: `<word>,<phonemes>`.
 The category headings are semi-arbitrary and don't affect anything meaningful, so just pick whichever one seems right.
 
-Use the DISC phonemic alphabet, as described [here](/APLS/doc/Phonemic-Transcription).
-Please pay attention to the extra considerations for [suggesting new dictionary entries](/APLS/doc/Phonemic-Transcription#suggesting-new-dictionary-entries): multiple phonemic representations per word, the speech community's pronunciation(s), and syllabification/stress.
+Use the DISC phonemic alphabet, as described [here](/APLS/doc/phonemic-transcription).
+Please pay attention to the extra considerations for [suggesting new dictionary entries](/APLS/doc/phonemic-transcription#suggesting-new-dictionary-entries): multiple phonemic representations per word, the speech community's pronunciation(s), and syllabification/stress.
 
 You'll also need to add inflectional forms, like plurals, verbal forms like _-s_, _-ing_, etc.
-You do **not** need to add [cliticized forms](/APLS/doc/Transcription-Convention) (e.g., _Pittsburgh's_);
+You do **not** need to add [cliticized forms](/APLS/doc/transcription-convention) (e.g., _Pittsburgh's_);
 APLS automatically adjusts pronunciations to account for clitics, and the Elan file checker is programmed to ignore _X's_ if _X_ is in the dictionary.
 (The transcription convention says certain clitics can be added to any _noun_, but the implementation of clitics in APLS and the file checker aren't actually restricted to nouns.)
 If you supplied multiple entries for the base-form of the word, you should also add multiple entries for each inflected form.
