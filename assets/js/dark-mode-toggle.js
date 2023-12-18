@@ -6,6 +6,20 @@
 /* Avoid FART (https://css-tricks.com/flash-of-inaccurate-color-theme-fart/) by setting some stuff pre-DOMContentLoaded */
 /* Light/dark scheme functions */
 const COOKIE_NAME = 'darkmode';
+//Avoid too many cookies (from https://stackoverflow.com/a/2144404)
+function get_cookie(name){
+    return document.cookie.split(';').some(c => {
+        return c.trim().startsWith(name + '=');
+    });
+}
+function delete_cookie( name, path, domain ) {
+  if( get_cookie( name ) ) {
+    document.cookie = name + "=" +
+      ((path) ? ";path="+path:"")+
+      ((domain)?";domain="+domain:"") +
+      ";expires=Thu, 01 Jan 1970 00:00:01 GMT";
+  }
+}
 //Pre-rendered theme settings (using .dark-mode class).
 //Toggle button icon is set via _header.scss so it can be visible at render-time.
 //Non-visible non-style settings are set via toggleLight()/toggleDark()
@@ -13,18 +27,20 @@ setLight = function() {
 	jtd.setTheme('apls');
 	document.documentElement.classList.remove('dark-mode');
 	document.documentElement.style.colorScheme = 'light';
+	delete_cookie(COOKIE_NAME);
 	document.cookie = `${COOKIE_NAME}=false; expires=Fri, 31 Dec 9999 23:59:59 GMT;"`
 }
 setDark = function() {
 	jtd.setTheme('apls-dark');
 	document.documentElement.classList.add('dark-mode');
 	document.documentElement.style.colorScheme = 'dark';
+	delete_cookie(COOKIE_NAME);
 	document.cookie = `${COOKIE_NAME}=true; expires=Fri, 31 Dec 9999 23:59:59 GMT;"`
 }
 
 /* Initial scheme setting */
 // If the user has the cookie, respect the cookie
-if (document.cookie.split(';').some((item) => item.trim().startsWith(`${COOKIE_NAME}=true`))) {
+if (document.cookie.split(';').every((item) => item.trim().startsWith(`${COOKIE_NAME}=true`))) {
   setDark();
 } else if (document.cookie.split(';').some((item) => item.trim().startsWith(`${COOKIE_NAME}=false`))) {
 	setLight();
