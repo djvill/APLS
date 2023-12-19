@@ -39,7 +39,7 @@ The file `APLS-dict.csv` must conform to the following format:
 	- That is, they may consist only of (a) letters of the English alphabet, (b) the characters `'` (apostrophe) or `-` (hyphen), and they may end with an optional `~` (tilde)
 		- Only literal apostrophes or hyphens are acceptable, not lookalikes like `‘` (Unicode U+2018 "curly opening single quote") or `–` (Unicode U+2013 "en dash")
 		- Tildes (hesitation markers) may only come at the end of the word-form
-- Phonemes may only use the [APLS subset of the DISC phonemic alphabet](/APLS/doc/phonemic-transcription), including syllabification/stress markers: `pbtdkgNmnlrfvTDszSZjhwJ_FHPiIE{Q$VUt@78#3912645'"-`
+- Phonemes may only use the [APLS subset of the DISC phonemic alphabet](/APLS/doc/phonemic-transcription), including syllabification/stress markers: `pbtdkgNmnlrfvTDszSZjhwJ_FHPiIE{Q$VUu@78#3912645'"-`
 - After the header (first 7 rows), comments are interpreted as separating dictionary sections
 
 
