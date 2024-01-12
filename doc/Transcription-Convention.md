@@ -4,7 +4,7 @@ layout: default
 permalink: /doc/transcription-convention
 parent: Transcription
 nav_order: 2
-last_modified_date: 2023-11-13T15:31:36-05:00
+last_modified_date: 2024-01-12T15:16:15-05:00
 ---
 
 
@@ -38,7 +38,7 @@ In this document, `fixed-width font` is used for things you actually type into t
 ## File setup
 
 - The transcription file (ending in .TextGrid if using Praat) should have the same name as the sound file
-- Create **one tier for each speaker, plus four additional tiers**: `Noise`, `Comment`, `Redaction`, and `Author`
+- Create **one tier for each speaker, plus three additional tiers**: `Noise`, `Comment`, and `Redaction`
 	- The tier name for the main speaker(s) should be that speaker's APLS code (e.g., `LV01`). Main speaker(s) are in the sound file name.
 	- The tier name for the interviewer(s) should be the interviewer's name:
 		- `Trista Pennington` for HD interviews
