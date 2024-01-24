@@ -4,7 +4,7 @@ layout: default
 permalink: /doc/transcription-convention
 parent: Transcription
 nav_order: 2
-last_modified_date: 2024-01-24T16:30:18-05:00
+last_modified_date: 2024-01-24T16:41:12-05:00
 ---
 
 
@@ -294,13 +294,13 @@ Reminder: In this document, `fixed-width font` is used for things you actually t
 
 ## Converting between Elan and Praat
 
-It's sometimes necessary to convert Praat (`.TextGrid`) files to Elan (`.eaf`), or vice versa.
+It's sometimes necessary to convert Praat (`.TextGrid`) files to Elan (`.eaf`), or vice versa.
 Both can be accomplished in Elan.
 
 ### Praat to Elan
 
 1. Import the `.TextGrid` file into Elan
-	 l. In Elan, go to _File_ > _Import_ > _Praat TextGrid File_
+	 1. In Elan, go to _File_ > _Import_ > _Praat TextGrid File_
 	 1. Click _Browse..._ and find the file
 	 1. Select "Skip empty intervals / annotations"
 	 1. Click _Next_, then _Finish_
@@ -313,11 +313,11 @@ Both can be accomplished in Elan.
 	 1. Set the Author attribute at _Edit_ > _Set Author_
 	 1. Set each tier's Participant attribute to be the same as the tier name
 		  1. Click _Tier_ > _Change Tier Attributes_
-			1. Select a tier, add the Participant attribute, and click _Change_
-			1. Repeat for all tiers, then click _Close_
+		  1. Select a tier, add the Participant attribute, and click _Change_
+		  1. Repeat for all tiers, then click _Close_
 	 1. Since we no longer need the `Author` tier, delete it
-			1. Click _Tier_ > _Delete Tier_
-			1. Select the `Author` tier, and click _Delete_
+		  1. Click _Tier_ > _Delete Tier_
+		  1. Select the `Author` tier, and click _Delete_
 1. Save the `.eaf` file
 
 
