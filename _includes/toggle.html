@@ -1,0 +1,50 @@
+<!-- Toggle HTML -->
+<div class="toggle-container">
+	{{ include.leftText }}
+  <span class="toggle-option1" style="width: {{ include.labelWidth }};">{{ include.label1 }}</span>
+  <label id="{{ include.id }}" class="toggle">
+    <input type="checkbox">
+    <span class="slider"></span>
+  </label>
+  <span class="toggle-option2" style="width: {{ include.labelWidth }};">{{ include.label2 }}</span>
+</div>
+<!-- CSS: at page load, show only class1 -->
+{% assign class1 = include.label1 | downcase | replace: " ", "-" %}
+{% assign class2 = include.label2 | downcase | replace: " ", "-" %}
+<style>
+span.{{ class1 }} {
+	display: inline;
+}
+li.{{ class1 }} {
+	display: list-item;
+}
+.{{ class2 }} {
+	display: none;
+}
+</style>
+<!-- Toggle JS: inspired by https://codepen.io/carty/pen/KLPjXm -->
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+	const toggleSwitch = document.getElementById("{{ include.id }}");
+	function toggleHandler(event) {
+		event.preventDefault();
+		event.currentTarget.parentElement.classList.toggle('active');
+		const c1Li = document.querySelectorAll("li.{{ class1 }}");
+		const c1Block = document.querySelectorAll(":not(li).{{ class1 }}");
+		const c2Li = document.querySelectorAll("li.{{ class2 }}");
+		const c2Block = document.querySelectorAll(":not(li).{{ class2 }}");
+		if (event.currentTarget.parentElement.classList.contains("active")) {
+			c1Block.forEach(a => a.style.display = "none");
+			c1Li.forEach(a => a.style.display = "none");
+			c2Block.forEach(a => a.style.display = "inline");
+			c2Li.forEach(a => a.style.display = "list-item");
+		} else {
+			c1Block.forEach(a => a.style.display = "inline");
+			c1Li.forEach(a => a.style.display = "list-item");
+			c2Block.forEach(a => a.style.display = "none");
+			c2Li.forEach(a => a.style.display = "none");
+		}
+	}
+	toggleSwitch.addEventListener('click', toggleHandler);
+});
+</script>
