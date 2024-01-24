@@ -10,8 +10,8 @@ exclude:
 sass:
   style: :compressed
 
-# theme: just-the-docs
-remote_theme: just-the-docs/just-the-docs@v0.5.4
+theme: just-the-docs
+# remote_theme: just-the-docs/just-the-docs@v0.5.4
 
 github:
   private: false
@@ -33,7 +33,7 @@ collections:
 ########################################
 
 ##Favicon
-favicon_ico: /assets/img/1f34e.svg
+favicon_ico: /assets/img/APLS-Logo.svg
 
 ##Search
 ##Config: https://just-the-docs.github.io/just-the-docs/docs/configuration/#search
