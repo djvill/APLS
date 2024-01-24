@@ -4,7 +4,7 @@ layout: default
 permalink: /doc/version-history
 parent: About APLS
 nav_order: 2
-last_modified_date: 2023-08-30T15:48:56-04:00
+last_modified_date: 2024-01-24T17:29:10-05:00
 ---
 
 # {{ page.title }}
@@ -36,7 +36,7 @@ This version of APLS uses LaBB-CAT version {{ curr_ver.labbcat_version }}.
 ## Detailed version history
 {:.no_toc}
 
-{% for version in site.versions | reverse %}
+{% for version in site.versions reversed %}
 {% assign uri = version.version | replace: ".", "_" %}
 
 <h3 id="{{ uri }}" class="no_toc">Version {{ version.version }}</h3>
