@@ -4,7 +4,7 @@ layout: default
 permalink: /doc/phonemic-transcription
 parent: Transcription
 nav_order: 3
-last_modified_date: 2023-09-01T11:11:17-04:00
+last_modified_date: 2024-01-26T14:10:58-05:00
 ---
 
 
@@ -16,7 +16,7 @@ _Unlike_ the IPA, the DISC phonemic alphabet only uses symbols that appear on a 
 
 APLS uses a subset of DISC relevant to North American Englishes.
 In APLS, we use DISC symbols for _phonemic_ representations of sounds, not _phonetic_ representations.
-As a result, the APLS subset of DISC doesn't have symbols for [ɾ] or [ʔ]; in North American Englishes, these surface only as allophones of /t/.
+As a result, the APLS subset of DISC doesn't have symbols for [ɾ] or [ʔ] (flap or glottal stop); in North American Englishes, these surface only as allophones of /t/.
 
 In this document, `fixed-width font` is used for things you actually type into the transcription program (Elan or Praat).
 
@@ -131,7 +131,7 @@ Here are some other things to note:
   - For "schwi", use `@` rather than `I` (e.g., _breathless_ is `brETl@s` not <code class="counterex">brETlIs</code>)
   - Same for _'s_ after a sibilant (e.g., _Lutz's_ is `lVts@z` not <code class="counterex">lVtsIz</code>)
   - Again, use `@` for unstressed mid-central vowels ("schwa") and `@r` pre-/ɹ/
-- There's no [ɾ] symbol; instead, use `t` or `d` as suggested by orthography, even if it doesn't match the voicing of the surface segment (e.g., _Bettis_ is `bEtIs`, not <code class="counterex">bEdIs</code>)
+- There's no [ɾ] (flap) symbol; instead, use `t` or `d` as suggested by orthography, even if it doesn't match the voicing of the surface segment (e.g., _Bettis_ is `bEtIs`, not <code class="counterex">bEdIs</code>)
 
 ## Suggesting new dictionary entries
 
@@ -176,8 +176,6 @@ As mentioned [above](#multiple-phonemic-representations), you can suggest multip
 
 ### Syllabification and stress
 
-Use the following symbols for syllabification and stress **only** if suggesting new entries for the APLS custom dictionary (not for DISC transcription in pronounce codes):
-
 | DISC | Function          |
 |------|-------------------|
 |  `-` | Syllable boundary |
@@ -195,7 +193,7 @@ A few finer points:
 	- Most words don't have secondary stress. Compounds often do have secondary stress (e.g., _Sandcastle_ is `'s{nd-"k{-sP`)
 - Use secondary stress for city-name morphemes _-burg(h)_, _-ville_, _-vale_, _-dale_, _-town_, etc.
 	- Exception: There are derivational affixes that change the stress pattern (e.g., _Pittsburgh_ is `'pIts-"b3rg`, but _Pittsburghese_ is `"pIts-b3r-'giz`)
-- Intervocalic consonants should be syllabified as onsets rather than codas (e.g., 
+- Intervocalic consonants should be syllabified as onsets rather than codas (e.g., _Bettis_ is `'bE-tIs` not <code class="counterex">'bEt-Is</code>)
 	- Exception 1: Intervocalic /ɹ/ should be syllabified as a coda (e.g., _Panera_ is `p@-'n8r-@` not <code class="counterex">p@-'n8-r@</code>)
 	- Exception 2: In environments where prevocalic /t/ becomes [ʔ] (e.g., before /n̩/), the /t/ should be syllabified as a coda (e.g., _outen_ is `'6t-H` not <code class="counterex">'6-tH</code>)
 

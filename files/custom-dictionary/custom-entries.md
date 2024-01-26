@@ -4,7 +4,7 @@ layout: default
 permalink: /files/custom-entries
 parent: Custom dictionary
 search_exclude: true
-last_modified_date:
+last_modified_date: 2024-01-26T14:10:58-05:00
 ---
 
 # {{ page.title }}
@@ -26,6 +26,7 @@ last_modified_date:
 - Bridgeville
 - Brookline
 - Brushton
+- Canonsburg
 - Carlow
 - Chalfant
 - Crafton
@@ -104,6 +105,7 @@ last_modified_date:
 - Wexford
 - Wiley
 - Wilkinsburg
+- Winebiddle
 - Woolslair
 - Zelie
 - Zelienople
@@ -258,10 +260,13 @@ last_modified_date:
 - St
 - stepdad
 - stepdads
+- stepkid
+- stepsibling
 - stogie
 - stogies
 - tarp
 - tarps
+- townie
 - webcam
 - webcams
 - worldview

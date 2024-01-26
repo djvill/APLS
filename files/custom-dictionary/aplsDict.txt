@@ -12,6 +12,7 @@ Brashear
 Bridgeville
 Brookline
 Brushton
+Canonsburg
 Carlow
 Chalfant
 Crafton
@@ -90,6 +91,7 @@ Wendover
 Wexford
 Wiley
 Wilkinsburg
+Winebiddle
 Woolslair
 Zelie
 Zelienople
@@ -244,10 +246,13 @@ rotary
 St
 stepdad
 stepdads
+stepkid
+stepsibling
 stogie
 stogies
 tarp
 tarps
+townie
 webcam
 webcams
 worldview
