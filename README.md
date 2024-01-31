@@ -35,17 +35,27 @@ As a result, the repo doesn't have all the files to preview the page locally (i.
 I decided this limitation was worth not clogging up the repository with a ton of Jekyll code.
 
 
-### Page `last_modified_date`
+### Pre-commit hook
 
-Markdown files that have the `last_modified_date` parameter set in their YAML headers will have "Page last modified: DATE" appear [in the footer](https://github.com/just-the-docs/just-the-docs/blob/main/_includes/components/footer.html#L15-L19).
-(To suppress this, just remove/don't add `last_modified_date` to the header.)
-To have this parameter automatically updated when changes are committed to a page, add a pre-commit hook as the file `.git/hooks/pre-commit`:
+This repo works best with a [pre-commit hook](https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks#_committing_workflow_hooks) that does two things:
+
+- Populates/modifies the `last_modified_date` YAML parameter for Markdown files that have this parameter in their headers
+	- Rendered pages include this date [in their footer](https://github.com/just-the-docs/just-the-docs/blob/main/_includes/components/footer.html#L15-L19)
+	- To suppress this for a given page, just don't add `last_modified_date` to the header.
+- Throws an error if the Jekyll theme is set incorrectly in `_config.yml`, to catch an [un-runnable](https://github.com/djvill/APLS/actions/runs/7646841999) [commit](https://github.com/djvill/APLS/commit/85682ae3a72f2b7727664d36e28366d3325eb1c5#diff-ecec67b0e1d7e17a83587c6d27b6baaaa133f42482b07bd3685c77f34b62d883L13-R14) before it gets pushed to GitHub
+	- If building locally, `theme` parameter needs to be set and `remote_theme` cannot be set
+	- If building on GitHub Pages, it's the opposite
+
+
+_This hook [does not get cloned with the repo](https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks#_client_side_hooks)._
+If you clone this repo, copy the following into `.git/hooks/pre-commit`:
 
 ```bash
 #!/bin/sh
+# Pre-commit hook for https://github.com/djvill/APLS
+
 # Replace `last_modified_date` timestamp with current time
 # Credit: https://mademistakes.com/notes/adding-last-modified-timestamps-with-git/
-
 git diff --cached --name-status | egrep -i "^(A|M).*\.(md)$" | while read a b; do
 	if grep -q ^last_modified_date $b ; then
 		cat $b | sed -b "/---.*/,/---.*/s/^last_modified_date:[0-9T: -]*\(\r\?\)$/last_modified_date: $(date "+%Y-%m-%dT%H:%M:%S%:z")\1/" > tmp
@@ -53,6 +63,22 @@ git diff --cached --name-status | egrep -i "^(A|M).*\.(md)$" | while read a b; d
 		git add $b
 	fi
 done
+
+# Ensure *staged version* of _config.yml has Jekyll theme options set correctly
+theme=$(git show :_config.yml | grep ^theme)
+remotetheme=$(git show :_config.yml | grep ^remote_theme)
+if [ -n "$theme" ] || [ -z "$remotetheme" ] ; then
+	echo "ERROR: Commit not completed."
+	echo "  Ensure _config.yml has theme commented-out and remote_theme uncommented."
+	echo "  Then try committing again."
+	exit 1
+fi
+
+# N.B. From https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks#_client_side_hooks:
+# 	It’s important to note that client-side hooks are not copied when you clone a 
+#		repository. If your intent with these scripts is to enforce a policy, you’ll 
+#		probably want to do that on the server side; see the example in An Example Git-
+#		Enforced Policy. (https://git-scm.com/book/en/v2/Customizing-Git-An-Example-Git-Enforced-Policy#_an_example_git_enforced_policy)
 ```
 
 Solution courtesy of https://mademistakes.com/notes/adding-last-modified-timestamps-with-git/.
