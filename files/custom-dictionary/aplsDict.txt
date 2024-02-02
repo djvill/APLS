@@ -247,7 +247,9 @@ St
 stepdad
 stepdads
 stepkid
+stepkids
 stepsibling
+stepsiblings
 stogie
 stogies
 tarp

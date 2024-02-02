@@ -4,7 +4,7 @@ layout: default
 permalink: /files/custom-entries
 parent: Custom dictionary
 search_exclude: true
-last_modified_date: 2024-01-26T14:10:58-05:00
+last_modified_date: 2024-02-02T14:42:29-05:00
 ---
 
 # {{ page.title }}
@@ -261,7 +261,9 @@ last_modified_date: 2024-01-26T14:10:58-05:00
 - stepdad
 - stepdads
 - stepkid
+- stepkids
 - stepsibling
+- stepsiblings
 - stogie
 - stogies
 - tarp
