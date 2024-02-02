@@ -4,7 +4,7 @@ layout: default
 permalink: /files/custom-entries
 parent: Custom dictionary
 search_exclude: true
-last_modified_date: 2024-02-02T14:42:29-05:00
+last_modified_date: 2024-02-02T17:48:02-05:00
 ---
 
 # {{ page.title }}
@@ -13,6 +13,7 @@ last_modified_date: 2024-02-02T14:42:29-05:00
 {% include page_toc.html collapsible=true %}
 
 ## Pittsburgh/SWPA geographic names
+- Aliquippa
 - Allderdice
 - Alvernia
 - Ambridge
@@ -67,6 +68,7 @@ last_modified_date: 2024-02-02T14:42:29-05:00
 - Mon
 - Monessen
 - Monroeville
+- Montefiore
 - Morganza
 - Morningside
 - Mucklerat
