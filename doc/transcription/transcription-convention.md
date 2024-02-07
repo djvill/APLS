@@ -3,7 +3,7 @@ title: Transcription convention
 layout: default
 permalink: /doc/transcription-convention
 parent: Transcription
-nav_order: 2
+nav_order: 10
 last_modified_date: 2024-01-24T16:41:12-05:00
 ---
 

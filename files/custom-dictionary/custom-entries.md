@@ -3,8 +3,9 @@ title: Custom dictionary entries
 layout: default
 permalink: /files/custom-entries
 parent: Custom dictionary
+grand_parent: Transcription
 search_exclude: true
-last_modified_date: 2024-01-26T14:10:58-05:00
+last_modified_date: 2024-02-07T10:11:05-05:00
 ---
 
 # {{ page.title }}

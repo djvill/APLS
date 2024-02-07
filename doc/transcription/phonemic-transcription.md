@@ -3,7 +3,7 @@ title: Phonemic transcription with the DISC alphabet
 layout: default
 permalink: /doc/phonemic-transcription
 parent: Transcription
-nav_order: 3
+nav_order: 20
 last_modified_date: 2024-01-26T14:10:58-05:00
 ---
 

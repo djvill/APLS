@@ -53,12 +53,6 @@ This is just a sketch!
 	- Extracting acoustic measurements
 	
 	- Looking up dictionary entries
-	
-	- Layer reference
-		
-		Terms (scope, parallel annotations), table, flowchart(s).
-		
-		This could even potentially be a level-1 section.
 		
 	- Citing APLS
 		
@@ -77,13 +71,19 @@ This is just a sketch!
 		
 		This can be a catch-all page, with links to explanations on other pages if needed (e.g., if your search isn't working, check out the search tips first)
 
+- Layer reference
+		
+		Terms (scope, parallel annotations), table, flowchart(s).
+
 - Transcription
 	
 	This is a bit of an orphan as its own level-1 section, but I don't want to clog up "About" with more stuff
 	
+	- Transcription convention
+	
 	- Custom dictionary
 		
-		Move from `/files/` to `/docs/`
+		Move from `/files/` to `/doc/`
 	
 - About APLS
 	
