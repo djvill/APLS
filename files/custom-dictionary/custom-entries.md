@@ -4,7 +4,7 @@ layout: default
 permalink: /files/custom-entries
 parent: Custom dictionary
 search_exclude: true
-last_modified_date: 2024-02-02T17:48:02-05:00
+last_modified_date: 2024-02-09T13:24:44-05:00
 ---
 
 # {{ page.title }}
@@ -286,6 +286,8 @@ last_modified_date: 2024-02-02T17:48:02-05:00
 - bro
 - bros
 - co-ed
+- co-own
+- co-owns
 - coanchor
 - coanchors
 - collab

@@ -272,6 +272,8 @@ Blige
 bro
 bros
 co-ed
+co-own
+co-owns
 coanchor
 coanchors
 collab
