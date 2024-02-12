@@ -1,0 +1,18 @@
+/* Styling for "Try it!" callouts
+   
+	 Similar to normal just-the-docs callouts (https://github.com/just-the-docs/just-the-docs/blob/main/_includes/css/callouts.scss.liquid), just adapted to details-summary node structure
+ */
+
+.try-it {
+	summary {
+		color: $green-300;
+		font-weight: bold;
+		text-transform: uppercase;
+		font-size: .75em;
+		padding-bottom: .125rem;
+		
+		&::marker {
+			color: $body-text-color;
+		}
+	}
+}

@@ -68,6 +68,8 @@ callouts:
   warning:
     title: Warning
     color: red
+  try-it:
+    color: green
 
 ##Google Analytics
 ga_tracking: G-TT6NWBCLVW 
