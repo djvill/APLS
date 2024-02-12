@@ -25,11 +25,6 @@ This is just a sketch!
 		</blockquote>
 		```
 	
-	- Signing up for APLS
-		
-		I'm not sure this needs to be a page, because there's a link to the form on the nav footer already.
-		The "Overview" page can just link straight to the form.
-	
 	- Viewing a transcript
 	
 		- Downloading an entire transcript
@@ -74,6 +69,11 @@ This is just a sketch!
 - Layer reference
 		
 		Terms (scope, parallel annotations), table, flowchart(s).
+		
+		Include _coverage_: how many transcripts have this layer, and of those, what's the time coverage (e.g., what % of the transcript is htk-aligned)
+		
+		There's currently no designated spot for participant or transcript attributes.
+		I could make a "Quick reference guide" level-1 section that includes pages for layers, participant attributes, and transcript attributes (possibly also the glossary).
 
 - Transcription
 	
@@ -83,14 +83,16 @@ This is just a sketch!
 	
 	- Custom dictionary
 		
-		Move from `/files/` to `/doc/`
+		~Move from `/files/` to `/doc/`.~
+		It makes sense as a README for the actual folder.
 	
 - About APLS
 	
-	- Credits
+	- Contributors
 		
-		Both contributors and software.
-		Though for a lot of software, I can refer users to https://apls.pitt.edu/labbcat/credits.
+		This is primarily about humans r/t software (aside from LaBB-CAT itself).
+		For most software credits, I can refer users to https://apls.pitt.edu/labbcat/credits.
+		Layer-specific credits (e.g., using `caret` for auto-coding) can go in layer reference.
 	
 	- Data sources
 	

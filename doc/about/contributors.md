@@ -1,7 +1,7 @@
 ---
-title: Credits
+title: Contributors
 layout: default
-permalink: /doc/credits
+permalink: /doc/Contributors
 parent: About APLS
 nav_order: 10
 last_modified_date: 2024-01-31T11:50:27-05:00
