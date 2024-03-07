@@ -4,8 +4,13 @@ layout: default
 permalink: /doc/version-history
 parent: About APLS
 nav_order: 2
-last_modified_date: 2024-01-24T17:29:10-05:00
+last_modified_date: 2024-03-07T10:51:49-05:00
 ---
+
+{% comment %}
+Don't edit info on individual versions here.
+Instead, add/edit versions in `../_versions/`
+{% endcomment %}
 
 # {{ page.title }}
 {:.no_toc}
