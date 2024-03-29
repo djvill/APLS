@@ -4,7 +4,7 @@ layout: default
 permalink: /files/custom-entries
 parent: Custom dictionary
 search_exclude: true
-last_modified_date: 2024-03-08T13:20:50-05:00
+last_modified_date: 2024-03-29T13:23:27-04:00
 ---
 
 # {{ page.title }}
@@ -22,10 +22,12 @@ last_modified_date: 2024-03-08T13:20:50-05:00
 - Avonworth
 - Beechview
 - Belmar
+- Benedum
 - Braddock
 - Brashear
 - Bridgeville
 - Brookline
+- Brownsville
 - Brushton
 - Canonsburg
 - Carlow
@@ -86,9 +88,11 @@ last_modified_date: 2024-03-08T13:20:50-05:00
 - Portersville
 - Pymatuning
 - Rankin
+- Redstone
 - Renfrew
 - Richland
 - Ringgold
+- Rockville
 - S'Liberty
 - Sandcastle
 - Schenley
@@ -97,9 +101,12 @@ last_modified_date: 2024-03-08T13:20:50-05:00
 - Shaler
 - Sharpsburg
 - Skeetersville
+- Spang's
 - Steeler
 - Steelers
 - Swissvale
+- Thornberry
+- Treesdale
 - Uniontown
 - Warrendale
 - Waynesburg
@@ -120,6 +127,7 @@ last_modified_date: 2024-03-08T13:20:50-05:00
 - Kaufer
 - Krenn's
 - Kudzma
+- Mueller
 - Sebak
 - Stargell
 - Wiggin
@@ -224,6 +232,7 @@ last_modified_date: 2024-03-08T13:20:50-05:00
 - Grier
 - gummies
 - gummy
+- humongous
 - impatien
 - impatiens
 - intramural
@@ -246,6 +255,7 @@ last_modified_date: 2024-03-08T13:20:50-05:00
 - moonshot
 - moonshots
 - nonscientific
+- outdoorsman
 - partier
 - pierogi
 - pierogie
@@ -259,6 +269,7 @@ last_modified_date: 2024-03-08T13:20:50-05:00
 - righty
 - rotaries
 - rotary
+- segue
 - St
 - stepdad
 - stepdads
@@ -320,6 +331,8 @@ last_modified_date: 2024-03-08T13:20:50-05:00
 - Sambo
 - scaredy
 - Shawntae
+- sociolinguist
+- sociolinguists
 - sucky
 - there're
 - treaters

@@ -8,10 +8,12 @@ Aspinwall
 Avonworth
 Beechview
 Belmar
+Benedum
 Braddock
 Brashear
 Bridgeville
 Brookline
+Brownsville
 Brushton
 Canonsburg
 Carlow
@@ -72,9 +74,11 @@ Pittsburghers
 Portersville
 Pymatuning
 Rankin
+Redstone
 Renfrew
 Richland
 Ringgold
+Rockville
 S'Liberty
 Sandcastle
 Schenley
@@ -83,9 +87,12 @@ Shadyside
 Shaler
 Sharpsburg
 Skeetersville
+Spang's
 Steeler
 Steelers
 Swissvale
+Thornberry
+Treesdale
 Uniontown
 Warrendale
 Waynesburg
@@ -106,6 +113,7 @@ Irvis
 Kaufer
 Krenn's
 Kudzma
+Mueller
 Sebak
 Stargell
 Wiggin
@@ -210,6 +218,7 @@ gelatos
 Grier
 gummies
 gummy
+humongous
 impatien
 impatiens
 intramural
@@ -232,6 +241,7 @@ minoring
 moonshot
 moonshots
 nonscientific
+outdoorsman
 partier
 pierogi
 pierogie
@@ -245,6 +255,7 @@ refacing
 righty
 rotaries
 rotary
+segue
 St
 stepdad
 stepdads
@@ -306,6 +317,8 @@ rollerskating
 Sambo
 scaredy
 Shawntae
+sociolinguist
+sociolinguists
 sucky
 there're
 treaters
