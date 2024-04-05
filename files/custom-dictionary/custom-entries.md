@@ -4,7 +4,7 @@ layout: default
 permalink: /files/custom-entries
 parent: Custom dictionary
 search_exclude: true
-last_modified_date: 2024-03-29T13:23:27-04:00
+last_modified_date: 2024-04-05T13:33:16-04:00
 ---
 
 # {{ page.title }}
@@ -116,6 +116,7 @@ last_modified_date: 2024-03-29T13:23:27-04:00
 - Wilkinsburg
 - Winebiddle
 - Woolslair
+- Yost
 - Zelie
 - Zelienople
 {:.wrap .fb-10}
@@ -270,6 +271,7 @@ last_modified_date: 2024-03-29T13:23:27-04:00
 - rotaries
 - rotary
 - segue
+- Septembers
 - St
 - stepdad
 - stepdads
