@@ -4,7 +4,7 @@ layout: default
 permalink: /files/custom-entries
 parent: Custom dictionary
 search_exclude: true
-last_modified_date: 2024-04-10T14:46:18-04:00
+last_modified_date: 2024-04-30T13:56:52-04:00
 ---
 
 # {{ page.title }}
@@ -166,6 +166,7 @@ last_modified_date: 2024-04-10T14:46:18-04:00
 - Applebee
 - Applebee's
 - Arby's
+- Blaw-Knox
 - Chi-Chi
 - Cigna
 - Damico's
@@ -267,6 +268,7 @@ last_modified_date: 2024-04-10T14:46:18-04:00
 - podiatrist
 - popsicle
 - popsicles
+- pre
 - rec
 - reface
 - refacing

@@ -4,7 +4,7 @@ layout: default
 permalink: /doc/transcription-convention
 parent: Transcription
 nav_order: 2
-last_modified_date: 2024-02-09T13:09:15-05:00
+last_modified_date: 2024-04-30T13:56:52-04:00
 ---
 
 
@@ -42,7 +42,7 @@ In this document, `fixed-width font` is used for things you actually type into t
 ## File setup
 
 - The transcription file should have the same name as the sound file and end in <span class="praat">`.TextGrid`</span><span class="elan">`.eaf`</span> (e.g., <span class="praat">`CB20interview3.TextGrid`</span><span class="elan">`CB20interview3.eaf`</span>)
-- Create **one tier for each speaker, plus <span class="praat">four</span><span class="elan">three</span> additional tiers**: `Noise`, `Comment`, <span class="elan">and </span>`Redaction`<span class="praat">, and `Author`</span>
+- Create **one tier for each speaker, plus <span class="praat">four</span><span class="elan">three</span> additional tiers**: `Noise`, `Comment`, <span class="elan">and </span>`Redaction`<span class="praat">, and `Transcriber`</span>
 	- The tier name for the main speaker(s) should be that speaker's APLS code (e.g., `LV01`). Main speaker(s) are in the sound file name.
 	- The tier name for the interviewer(s) should be the interviewer's name:
 		- `Trista Pennington` for HD interviews
@@ -51,7 +51,7 @@ In this document, `fixed-width font` is used for things you actually type into t
 	- In most cases, any additional speakers should be named `Bystander` + main speaker's APLS code + a number (e.g., `Bystander CB01 1`, `Bystander CB01 2`)
 		- The only exception is if the additional speaker is also in APLS (in which case, name their tier with their speaker code). This is very unlikely, so unless you happen to know the additional speaker is in APLS, just assume it's a `Bystander`
 	- Pay attention to capitalization, plurals, and leading zeros (e.g., `Redaction` not <code class="counterex">redactions</code>, `FH01` not <code class="counterex">FH1</code>)
-		<li class="praat">The <code>Author</code> tier should have a single annotation: the names of all transcribers (including anyone who checked the transcription)</li>
+		<li class="praat">The <code>Transcriber</code> tier should have a single annotation: the names of all transcribers (including anyone who checked the transcription)</li>
 	<li class="elan">For all tiers, set the Participant attribute to be the same as the tier name. To add tiers and set tier attributes, go to <em>Tier</em> > <em>Add New Tier</em>.</li>
 	<li class="elan">Set the file's Author attribute to the names of all transcribers (including anyone who checked the transcription) by going to <em>Edit</em> > <em>Set Author</em></li>
 - You may also want to create a (temporary) `Recheck` tier (see [below](#tips)) while you're transcribing
@@ -315,9 +315,9 @@ Both can be accomplished in Elan.
 		  1. Click _Tier_ > _Change Tier Attributes_
 		  1. Select a tier, add the Participant attribute, and click _Change_
 		  1. Repeat for all tiers, then click _Close_
-	 1. Since we no longer need the `Author` tier, delete it
+	 1. Since we no longer need the `Transcriber` tier, delete it
 		  1. Click _Tier_ > _Delete Tier_
-		  1. Select the `Author` tier, and click _Delete_
+		  1. Select the `Transcriber` tier, and click _Delete_
 1. Save the `.eaf` file
 
 
@@ -329,11 +329,11 @@ Both can be accomplished in Elan.
 	 1. Go to _File_ > _Export As_ > _Praat TextGrid_
 	 1. Leave all defaults as-is and click _OK_
 	 1. Browse to where you want to save the file, check that the file name is correct, and click _Save_
-1. Open the `.TextGrid` file in Praat and add an `Author` tier
+1. Open the `.TextGrid` file in Praat and add a `Transcriber` tier
 	 1. Select the file in the Objects window and click _Modify_ > _Insert interval tier..._
-	 1. Fill in "Position:" with `10` and "Name:" with `Author`
+	 1. Fill in "Position:" with `10` and "Name:" with `Transcriber`
 	 1. In the Objects window, click _View & Edit_
-	 1. Click on the `Author` tier and paste the contents of the Author attribute you copied earlier
+	 1. Click on the `Transcriber` tier and paste the contents of the Author attribute you copied earlier
 1. Save the `.TextGrid` file
 
 
