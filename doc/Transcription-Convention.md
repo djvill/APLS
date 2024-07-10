@@ -4,7 +4,7 @@ layout: default
 permalink: /doc/transcription-convention
 parent: Transcription
 nav_order: 2
-last_modified_date: 2024-04-30T13:56:52-04:00
+last_modified_date: 2024-07-10T16:22:05-04:00
 ---
 
 
@@ -189,8 +189,9 @@ Reminder: In this document, `fixed-width font` is used for things you actually t
 - **Don't tidy up the speech**. Leave in the repetitions, fillers, speech errors, bad words, mean sentiments, etc.
 - Don't use capital letters for the start of new sentences. Only use capital letters for proper nouns and the pronoun _I_
 - Write all numbers out in full, with spaces instead of hyphens (e.g., `one hundred and twenty three` not <code class="counterex">123</code> or <code class="counterex">one hundred and twenty-three</code>)
-- When abbreviations or acronyms are used
-	- If each letter is said separately, use capital letters with spaces in between each letter (e.g., `P G H`). If the word is pluralized, just attach the `s` to the last letter (e.g., `D V Ds`).
+- When abbreviations or acronyms are used:
+	- If each letter is said separately, use capital letters with spaces in between each letter (e.g., `P G H`)
+    - If the letter is pluralized, add `s` _plus_ a ["pronounce" code](#pronounce-codes) to the last letter (e.g., `D V Ds[diz]`)
 	- If the word is pronounced as a word, use capitals with no spaces (e.g., `FEMA`)
 - Don't use any diacritics that are not part of the English alphabet (e.g., `fiancee` not <code class="counterex">fiancée</code>)
 - A single word should always be spelled as an entire word, even if there is a pause between syllables. **Never** put a breakpoint in the middle of a word.
