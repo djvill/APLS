@@ -4,7 +4,7 @@ layout: default
 permalink: /files/custom-entries
 parent: Custom dictionary
 search_exclude: true
-last_modified_date: 2024-08-01T09:47:36-04:00
+last_modified_date: 2024-08-01T09:49:24-04:00
 ---
 
 # {{ page.title }}
@@ -237,11 +237,9 @@ last_modified_date: 2024-08-01T09:47:36-04:00
 - gelatos
 - Grier
 - gummies
-- gummy
 - humongous
 - impatien
 - impatiens
-- intramural
 - jitney
 - jitneys
 - kickboxer
@@ -254,9 +252,7 @@ last_modified_date: 2024-08-01T09:47:36-04:00
 - Lakers
 - limburger
 - maxes
-- meld
 - melding
-- melds
 - minoring
 - moonshot
 - moonshots
@@ -276,7 +272,6 @@ last_modified_date: 2024-08-01T09:47:36-04:00
 - refacing
 - righty
 - rotaries
-- rotary
 - segue
 - Septembers
 - St
@@ -306,7 +301,6 @@ last_modified_date: 2024-08-01T09:47:36-04:00
 - babushkas
 - Blige
 - bro
-- bros
 - co-ed
 - co-own
 - co-owns
@@ -341,7 +335,6 @@ last_modified_date: 2024-08-01T09:47:36-04:00
 - Sambo
 - scaredy
 - Shawntae
-- sociolinguist
 - sociolinguists
 - sucky
 - there're

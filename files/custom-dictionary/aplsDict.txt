@@ -223,11 +223,9 @@ gelato
 gelatos
 Grier
 gummies
-gummy
 humongous
 impatien
 impatiens
-intramural
 jitney
 jitneys
 kickboxer
@@ -240,9 +238,7 @@ Kwanzaa
 Lakers
 limburger
 maxes
-meld
 melding
-melds
 minoring
 moonshot
 moonshots
@@ -262,7 +258,6 @@ reface
 refacing
 righty
 rotaries
-rotary
 segue
 Septembers
 St
@@ -292,7 +287,6 @@ babushka
 babushkas
 Blige
 bro
-bros
 co-ed
 co-own
 co-owns
@@ -327,7 +321,6 @@ rollerskating
 Sambo
 scaredy
 Shawntae
-sociolinguist
 sociolinguists
 sucky
 there're
