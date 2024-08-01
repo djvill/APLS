@@ -112,7 +112,7 @@ Bettis
 Bonilla
 Irvis
 Kaufer
-Krenn's
+Krenn
 Kudzma
 Mueller
 Sebak
@@ -309,6 +309,7 @@ hoodie
 hoodies
 Juneteenth
 Limbaugh
+locally-owned
 Mawr
 McGruder
 meister
