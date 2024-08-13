@@ -4,7 +4,7 @@ layout: default
 permalink: /files/custom-entries
 parent: Custom dictionary
 search_exclude: true
-last_modified_date: 2024-08-01T09:49:24-04:00
+last_modified_date: 2024-08-13T14:24:48-04:00
 ---
 
 # {{ page.title }}
@@ -25,6 +25,7 @@ last_modified_date: 2024-08-01T09:49:24-04:00
 - Benedum
 - Braddock
 - Brashear
+- Brereton
 - Bridgeville
 - Brookline
 - Brownsville
@@ -166,19 +167,24 @@ last_modified_date: 2024-08-01T09:49:24-04:00
 - Applebee
 - Applebee's
 - Arby's
+- Baba's
 - Blaw-Knox
 - Chi-Chi
 - Cigna
 - Cutler-Hammer
 - Damico's
+- Donatelli's
 - Dunkin
 - Dunkin'
 - Foodland
+- Groceria
 - Gullifty's
 - Heppenstall
 - Hermanowski's
 - Highmark
 - Isaly's
+- Italiana
+- Klavon's
 - Koppers
 - Loews
 - Lutz's
@@ -274,6 +280,7 @@ last_modified_date: 2024-08-01T09:49:24-04:00
 - rotaries
 - segue
 - Septembers
+- Slovenians
 - St
 - stepdad
 - stepdads
