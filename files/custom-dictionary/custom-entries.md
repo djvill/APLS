@@ -4,7 +4,7 @@ layout: default
 permalink: /files/custom-entries
 parent: Custom dictionary
 search_exclude: true
-last_modified_date: 2024-08-13T14:24:48-04:00
+last_modified_date: 2024-08-20T13:59:53-04:00
 ---
 
 # {{ page.title }}
@@ -113,6 +113,7 @@ last_modified_date: 2024-08-13T14:24:48-04:00
 - Waynesburg
 - Wendover
 - Wexford
+- Whittier
 - Wiley
 - Wilkinsburg
 - Winebiddle
