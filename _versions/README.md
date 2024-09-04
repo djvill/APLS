@@ -1,7 +1,7 @@
 # APLS versioning
 
 This folder contains individual files, each describing a version of APLS.
-It is implemented as a [Jekyll collection](https://jekyllrb.com/docs/collections/) so content can be added dynamically to [`doc/version`](doc/version).
+It is implemented as a [Jekyll collection](https://jekyllrb.com/docs/collections/) so content can be added dynamically to [`doc/version`](../doc/version).
 
 
 ## Numbering scheme
@@ -14,7 +14,7 @@ Versions are numbered with the scheme `major.minor.sub`:
 - The **minor** version should be incremented when layers are added or changed, including when hand-corrections are added.
 - The **sub**version should be incremented when LaBB-CAT is updated, and/or when there are UI/documentation changes that don't affect actual functionality.
 
-The current version (0.1.2) is a pre-release version of APLS that is undated.
+The current version (0.1.3) is a pre-release version of APLS that is undated.
 Once APLS and its documentation pages stabilize, versioning will begin in earnest.
 
 ## Versioning implementation
