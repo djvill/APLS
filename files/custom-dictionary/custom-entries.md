@@ -3,9 +3,8 @@ title: Custom dictionary entries
 layout: default
 permalink: /files/custom-entries
 parent: Custom dictionary
-grand_parent: Transcription
 search_exclude: true
-last_modified_date: 2024-02-07T10:11:05-05:00
+last_modified_date: 2024-09-19T16:57:13-04:00
 ---
 
 # {{ page.title }}
@@ -14,6 +13,7 @@ last_modified_date: 2024-02-07T10:11:05-05:00
 {% include page_toc.html collapsible=true %}
 
 ## Pittsburgh/SWPA geographic names
+- Aliquippa
 - Allderdice
 - Alvernia
 - Ambridge
@@ -22,10 +22,13 @@ last_modified_date: 2024-02-07T10:11:05-05:00
 - Avonworth
 - Beechview
 - Belmar
+- Benedum
 - Braddock
 - Brashear
+- Brereton
 - Bridgeville
 - Brookline
+- Brownsville
 - Brushton
 - Canonsburg
 - Carlow
@@ -68,6 +71,7 @@ last_modified_date: 2024-02-07T10:11:05-05:00
 - Mon
 - Monessen
 - Monroeville
+- Montefiore
 - Morganza
 - Morningside
 - Mucklerat
@@ -85,9 +89,11 @@ last_modified_date: 2024-02-07T10:11:05-05:00
 - Portersville
 - Pymatuning
 - Rankin
+- Redstone
 - Renfrew
 - Richland
 - Ringgold
+- Rockville
 - S'Liberty
 - Sandcastle
 - Schenley
@@ -96,18 +102,23 @@ last_modified_date: 2024-02-07T10:11:05-05:00
 - Shaler
 - Sharpsburg
 - Skeetersville
+- Spang's
 - Steeler
 - Steelers
 - Swissvale
+- Thornberry
+- Treesdale
 - Uniontown
 - Warrendale
 - Waynesburg
 - Wendover
 - Wexford
+- Whittier
 - Wiley
 - Wilkinsburg
 - Winebiddle
 - Woolslair
+- Yost
 - Zelie
 - Zelienople
 {:.wrap .fb-10}
@@ -117,8 +128,9 @@ last_modified_date: 2024-02-07T10:11:05-05:00
 - Bonilla
 - Irvis
 - Kaufer
-- Krenn's
+- Krenn
 - Kudzma
+- Mueller
 - Sebak
 - Stargell
 - Wiggin
@@ -156,17 +168,25 @@ last_modified_date: 2024-02-07T10:11:05-05:00
 - Applebee
 - Applebee's
 - Arby's
+- Baba's
+- Blaw-Knox
+- C-SPAN
 - Chi-Chi
 - Cigna
+- Cutler-Hammer
 - Damico's
+- Donatelli's
 - Dunkin
 - Dunkin'
 - Foodland
+- Groceria
 - Gullifty's
 - Heppenstall
 - Hermanowski's
 - Highmark
 - Isaly's
+- Italiana
+- Klavon's
 - Koppers
 - Loews
 - Lutz's
@@ -198,6 +218,8 @@ last_modified_date: 2024-02-07T10:11:05-05:00
 - bacterias
 - balled
 - balling
+- bling
+- busing
 - capris
 - CD
 - CDs
@@ -215,6 +237,7 @@ last_modified_date: 2024-02-07T10:11:05-05:00
 - DJs
 - docent
 - docents
+- dodgeball
 - DVD
 - DVDs
 - extracurricular
@@ -222,10 +245,9 @@ last_modified_date: 2024-02-07T10:11:05-05:00
 - gelatos
 - Grier
 - gummies
-- gummy
+- humongous
 - impatien
 - impatiens
-- intramural
 - jitney
 - jitneys
 - kickboxer
@@ -238,36 +260,43 @@ last_modified_date: 2024-02-07T10:11:05-05:00
 - Lakers
 - limburger
 - maxes
-- meld
 - melding
-- melds
 - minoring
 - moonshot
 - moonshots
 - nonscientific
+- outdoorsman
 - partier
+- phys
 - pierogi
 - pierogie
 - pierogies
 - podiatrist
 - popsicle
 - popsicles
+- pre
 - rec
 - reface
 - refacing
 - righty
 - rotaries
-- rotary
+- segue
+- Septembers
+- Slovenians
 - St
 - stepdad
 - stepdads
 - stepkid
+- stepkids
 - stepsibling
+- stepsiblings
 - stogie
 - stogies
 - tarp
 - tarps
 - townie
+- unironically
+- uppity
 - webcam
 - webcams
 - worldview
@@ -281,8 +310,9 @@ last_modified_date: 2024-02-07T10:11:05-05:00
 - babushkas
 - Blige
 - bro
-- bros
 - co-ed
+- co-own
+- co-owns
 - coanchor
 - coanchors
 - collab
@@ -296,6 +326,7 @@ last_modified_date: 2024-02-07T10:11:05-05:00
 - hoodies
 - Juneteenth
 - Limbaugh
+- locally-owned
 - Mawr
 - McGruder
 - meister
@@ -313,6 +344,7 @@ last_modified_date: 2024-02-07T10:11:05-05:00
 - Sambo
 - scaredy
 - Shawntae
+- sociolinguists
 - sucky
 - there're
 - treaters

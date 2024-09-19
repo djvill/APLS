@@ -4,7 +4,7 @@ layout: default
 permalink: /doc/transcription-convention
 parent: Transcription
 nav_order: 10
-last_modified_date: 2024-01-24T16:41:12-05:00
+last_modified_date: 2024-09-19T16:57:12-04:00
 ---
 
 
@@ -42,16 +42,16 @@ In this document, `fixed-width font` is used for things you actually type into t
 ## File setup
 
 - The transcription file should have the same name as the sound file and end in <span class="praat">`.TextGrid`</span><span class="elan">`.eaf`</span> (e.g., <span class="praat">`CB20interview3.TextGrid`</span><span class="elan">`CB20interview3.eaf`</span>)
-- Create **one tier for each speaker, plus <span class="praat">four</span><span class="elan">three</span> additional tiers**: `Noise`, `Comment`, <span class="elan">and </span>`Redaction`<span class="praat">, and `Author`</span>
+- Create **one tier for each speaker, plus <span class="praat">four</span><span class="elan">three</span> additional tiers**: `Noise`, `Comment`, <span class="elan">and </span>`Redaction`<span class="praat">, and `Transcriber`</span>
 	- The tier name for the main speaker(s) should be that speaker's APLS code (e.g., `LV01`). Main speaker(s) are in the sound file name.
 	- The tier name for the interviewer(s) should be the interviewer's name:
-		- `Trista Pennington` for HD interviews
+		- `Interviewer HD` for HD interviews
 		- `Barbara Johnstone` for most CB/FH/LV interviews
 		- `Jennifer Andrus` for CB02 or CB18
 	- In most cases, any additional speakers should be named `Bystander` + main speaker's APLS code + a number (e.g., `Bystander CB01 1`, `Bystander CB01 2`)
 		- The only exception is if the additional speaker is also in APLS (in which case, name their tier with their speaker code). This is very unlikely, so unless you happen to know the additional speaker is in APLS, just assume it's a `Bystander`
 	- Pay attention to capitalization, plurals, and leading zeros (e.g., `Redaction` not <code class="counterex">redactions</code>, `FH01` not <code class="counterex">FH1</code>)
-		<li class="praat">The <code>Author</code> tier should have a single annotation: the names of all transcribers (including anyone who checked the transcription)</li>
+		<li class="praat">The <code>Transcriber</code> tier should have a single annotation: the names of all transcribers (including anyone who checked the transcription)</li>
 	<li class="elan">For all tiers, set the Participant attribute to be the same as the tier name. To add tiers and set tier attributes, go to <em>Tier</em> > <em>Add New Tier</em>.</li>
 	<li class="elan">Set the file's Author attribute to the names of all transcribers (including anyone who checked the transcription) by going to <em>Edit</em> > <em>Set Author</em></li>
 - You may also want to create a (temporary) `Recheck` tier (see [below](#tips)) while you're transcribing
@@ -189,8 +189,9 @@ Reminder: In this document, `fixed-width font` is used for things you actually t
 - **Don't tidy up the speech**. Leave in the repetitions, fillers, speech errors, bad words, mean sentiments, etc.
 - Don't use capital letters for the start of new sentences. Only use capital letters for proper nouns and the pronoun _I_
 - Write all numbers out in full, with spaces instead of hyphens (e.g., `one hundred and twenty three` not <code class="counterex">123</code> or <code class="counterex">one hundred and twenty-three</code>)
-- When abbreviations or acronyms are used
-	- If each letter is said separately, use capital letters with spaces in between each letter (e.g., `P G H`). If the word is pluralized, just attach the `s` to the last letter (e.g., `D V Ds`).
+- When abbreviations or acronyms are used:
+  - If each letter is said separately, use capital letters with spaces in between each letter (e.g., `P G H`)
+    - If the letter is pluralized, add `s` _plus_ a ["pronounce" code](#pronounce-codes) to the last letter (e.g., `D V Ds[diz]`)
 	- If the word is pronounced as a word, use capitals with no spaces (e.g., `FEMA`)
 - Don't use any diacritics that are not part of the English alphabet (e.g., `fiancee` not <code class="counterex">fiancée</code>)
 - A single word should always be spelled as an entire word, even if there is a pause between syllables. **Never** put a breakpoint in the middle of a word.
@@ -272,9 +273,9 @@ Reminder: In this document, `fixed-width font` is used for things you actually t
 ### Pronounce codes
 
 - There are 3 situations where you need to attach a "pronounce code" to the end of a word to help LaBB-CAT determine the phonemes that are in the word: (1) words that aren't in the dictionary, (2) idiosyncratic pronunciations, (3) hesitations/incomplete words
-	- Attach the pronounce code with **no space after the word**, in square brackets (e.g., `yinzerific[jInz@rIfIk]`)
+	- Attach the pronounce code with **no space after the word**, in square brackets (e.g., `yinzerific["jIn-z@r-'I-fIk]`)
 	- The pronounce code uses the [DISC phonemic alphabet](phonemic-transcription) to give a phonemic representation of what was said
-- <a id="novel-words"/> If a speaker uses a word that isn't in a standard dictionary or [APLS's custom dictionary](/APLS/files/custom-entries) (a word made up on the spot, a specific road name, etc.), just spell it the best you can, and provide a pronounce code in DISC (e.g., `yinzerific[jInz@rIfIk]`)
+- <a id="novel-words"/> If a speaker uses a word that isn't in a standard dictionary or [APLS's custom dictionary](/APLS/files/custom-entries) (a word made up on the spot, a specific road name, etc.), just spell it the best you can, and provide a pronounce code in DISC (e.g., `yinzerific["jIn-z@r-'I-fIk]`)
 	- If the word is used more than once in a transcript, the DISC code needs to be supplied every time
 	- We can add words to APLS's custom dictionary, but only if it's a word that is likely to be used by more than just one speaker
 - If a speaker pronounces a word in an idiosyncratic way (e.g., _bookshelves_ as _buckshelves_), provide a DISC code
@@ -283,12 +284,12 @@ Reminder: In this document, `fixed-width font` is used for things you actually t
 		- You _can_ use a [comment](#comments-and-noises) to remark upon speakers' performative use of "dialect pronunciations", but this is strictly optional
 	- If the idiosyncratic pronunciation is used more than once in a transcript, the DISC code needs to be supplied every time
 - Unfinished words use a tilde to mark incompleteness, plus a pronounce code and optional lexical code
-	- For example, if the speaker starts to say _hesitate_ but stops after two syllables, either of the following two notations would be acceptable: `hesi~[hEz@]`, `hesi~[hEz@](hesitate)`
+	- For example, if the speaker starts to say _hesitate_ but stops after two syllables, either of the following two notations would be acceptable: `hesi~['hE-z@]`, `hesi~['hE-z@](hesitate)`
 	- Optionally, you can add a lexical code, which uses English spelling to represent the intended word (if known). The lexical code goes in parentheses (`(hesitate)`) with **no space after the pronounce code**
 	- <a id="single-cons-unfinished"/> You can omit pronounce codes for unfinished words that consist of just a consonant, since these are built-in to APLS's dictionary
 		- For example, if the speaker just says [f], you can write just `f~` without a pronounce code
 	- Words do **not** need to be marked as unfinished if their pronunciation is the result of a typical phonological/sociolinguistic process like or consonant cluster deletion
-		- For example, if the speaker says _and_ as [æ**n**] rather than [æ**nd**], transcribe it as just `and`, not <code class="counterex">an~[{n]</code>
+		- For example, if the speaker says _and_ as [æ**n**] rather than [æ**nd**], transcribe it as just `and`, not <code class="counterex">an~['{n]</code>
 		- This is related to the principle that words should be spelled out in their ["dictionary form"](#dict-form)
 
 
@@ -315,9 +316,9 @@ Both can be accomplished in Elan.
 		  1. Click _Tier_ > _Change Tier Attributes_
 		  1. Select a tier, add the Participant attribute, and click _Change_
 		  1. Repeat for all tiers, then click _Close_
-	 1. Since we no longer need the `Author` tier, delete it
+	 1. Since we no longer need the `Transcriber` tier, delete it
 		  1. Click _Tier_ > _Delete Tier_
-		  1. Select the `Author` tier, and click _Delete_
+		  1. Select the `Transcriber` tier, and click _Delete_
 1. Save the `.eaf` file
 
 
@@ -329,11 +330,11 @@ Both can be accomplished in Elan.
 	 1. Go to _File_ > _Export As_ > _Praat TextGrid_
 	 1. Leave all defaults as-is and click _OK_
 	 1. Browse to where you want to save the file, check that the file name is correct, and click _Save_
-1. Open the `.TextGrid` file in Praat and add an `Author` tier
+1. Open the `.TextGrid` file in Praat and add a `Transcriber` tier
 	 1. Select the file in the Objects window and click _Modify_ > _Insert interval tier..._
-	 1. Fill in "Position:" with `10` and "Name:" with `Author`
+	 1. Fill in "Position:" with `10` and "Name:" with `Transcriber`
 	 1. In the Objects window, click _View & Edit_
-	 1. Click on the `Author` tier and paste the contents of the Author attribute you copied earlier
+	 1. Click on the `Transcriber` tier and paste the contents of the Author attribute you copied earlier
 1. Save the `.TextGrid` file
 
 

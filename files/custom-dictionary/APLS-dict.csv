@@ -112,6 +112,19 @@ Crafton,'kr{f-tH
 Bridgeville,'brI_-vIl
 Canonsburg,'k{-nHz-"b3rg
 Winebiddle,'w2n-bI-dP
+Montefiore,'m$n-tI-"fj$r
+Aliquippa,"""{-l@-'kwI-p@"
+Treesdale,'triz-"d1l
+Benedum,'bE-n@-dF
+Spang's,'sp1Nz
+Rockville,'rQk-"vIl
+Brownsville,'br6nz-"vIl
+Redstone,'rEd-"st5n
+Thornberry,'T$rn-"bEr-i
+Yost,'j5st
+Brereton,'br3r-tH
+Whittier,'wI-ti-@r
+Whittier,'wI-t@-k@r
 
 
 // Pittsburgh personal names
@@ -120,10 +133,12 @@ Bonilla,b5-'ni-@
 Kudzma,'kVdz-m@
 Kaufer,'k$-f@r
 Wiggin,'wI-gH
-Krenn's,'krEnz
+Krenn,'krEn
 Bettis,'bE-tIs
 Irvis,'3r-vIs
 Sebak,'si-b{k
+Mueller,'mV-l@r
+Mueller,'mju-l@r
 
 
 // Pittsburgh lexicon
@@ -187,6 +202,15 @@ Cigna,'sIg-n@
 Pennysaver,'pE-ni-"s1-v@r
 Primanti,'prI-m{n-ti
 Chi-Chi,'Ji-"Ji
+Blaw-Knox,'bl$-"nQks
+Cutler-Hammer,"""kVt-l@r-'h{-m@r"
+Klavon's,'kl1-vHz
+Baba's,'bQ-b@z
+Donatelli's,dQ-n@-'tE-liz
+Groceria,"""gr5-s@r-'ri-@"
+Italiana,I-"t{-li-'Qn-@
+C-SPAN,'si-"sp{n
+
 
 // Unexpected omissions from Unisyn
 tarp,'t#rp
@@ -253,18 +277,13 @@ extracurricular,"""Eks-tr@-k@-'rI-kj@-l@r"
 refacing,"""ri-'f1-sIN"
 reface,ri-'f1s"
 gummies,'gV-miz
-gummy,'gV-mi
 webcam,'wEb-k{m
 webcams,'wEb-k{mz
-intramural,In-t@r-'mj3r-P
-meld,'mEld
-melds,'mEldz
 melding,'mEl-dIN
 kickboxer,'kIk-bQk-s@r
 kickboxers,'kIk-bQk-s@rz
 minoring,'m2-n@r-IN
 rotaries,'r5-t@r-iz
-rotary,'r5-t@r-i
 Lakers,'l1-k3rz
 pierogi,p@r-'5-gi
 pierogie,p@r-'5-gi
@@ -276,7 +295,21 @@ maxes,'m{k-s@z
 partier,'p#r-ti-@r
 townie,'t6-ni
 stepsibling,'stEp-"sIb-lIN
+stepsiblings,'stEp-"sIb-lINz
+stepkids,'stEp-"kIdz
 stepkid,'stEp-"kId
+unironically,Vn-2-'rQ-nIk-li
+uppity,'V-pI-ti
+segue,'sEg-w1
+outdoorsman,6t-'d$rz-mH
+humongous,hju-'mVN-g@s
+Septembers,sEp-'tEm-b@rz
+dodgeball,'dQ_-"b$l
+bling,'blIN
+phys,'fIz
+pre,'pri
+busing,'bV-sIN
+Slovenians,sl5-'vi-ni-Nz
 
 
 // Other
@@ -316,7 +349,6 @@ hoodies,'hU-dis
 wouldn't've,'wU-dH-t@v
 Mawr,'m#r
 bro,'br5
-bros,'br5z
 mics,'m2ks
 mic,'m2k
 nickelodeons,"""nI-kP-'5-di@nz"
@@ -325,6 +357,10 @@ co-ed,"""k5-'Ed"
 heart-shaped,'h#rt-"S1pt
 underwears,'Vn-d@r-"w8rz
 treaters,'tri-t@rz
+co-own,'k5-"5n
+co-owns,'k5-"5nz
+sociolinguists,"""s5-si-5-'liN-gwIsts"
+locally-owned,"""l5-k@-li-'5nd"
 
 
 // Allowable colloquial spellings
