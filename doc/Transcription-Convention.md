@@ -4,7 +4,7 @@ layout: default
 permalink: /doc/transcription-convention
 parent: Transcription
 nav_order: 2
-last_modified_date: 2024-07-10T16:22:05-04:00
+last_modified_date: 2024-09-19T12:55:12-04:00
 ---
 
 
@@ -45,7 +45,7 @@ In this document, `fixed-width font` is used for things you actually type into t
 - Create **one tier for each speaker, plus <span class="praat">four</span><span class="elan">three</span> additional tiers**: `Noise`, `Comment`, <span class="elan">and </span>`Redaction`<span class="praat">, and `Transcriber`</span>
 	- The tier name for the main speaker(s) should be that speaker's APLS code (e.g., `LV01`). Main speaker(s) are in the sound file name.
 	- The tier name for the interviewer(s) should be the interviewer's name:
-		- `Trista Pennington` for HD interviews
+		- `Interviewer HD` for HD interviews
 		- `Barbara Johnstone` for most CB/FH/LV interviews
 		- `Jennifer Andrus` for CB02 or CB18
 	- In most cases, any additional speakers should be named `Bystander` + main speaker's APLS code + a number (e.g., `Bystander CB01 1`, `Bystander CB01 2`)
