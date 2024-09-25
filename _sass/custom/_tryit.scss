@@ -3,7 +3,7 @@
 	 Similar to normal just-the-docs callouts (https://github.com/just-the-docs/just-the-docs/blob/main/_includes/css/callouts.scss.liquid), just adapted to details-summary node structure
  */
 
-.try-it {
+.try-it, .try-it-title {
 	summary {
 		color: $green-300;
 		font-weight: bold;
@@ -16,3 +16,4 @@
 		}
 	}
 }
+

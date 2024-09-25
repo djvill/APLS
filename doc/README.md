@@ -3,7 +3,7 @@ layout: default
 nav_exclude: yes
 permalink: /
 num_aw: 4064
-last_modified_date: 2024-09-24T17:05:39-04:00
+last_modified_date: 2024-09-25T14:31:54-04:00
 ---
 
 # Documentation
@@ -27,7 +27,7 @@ APLS is currently under construction, but when complete, it will contain 270 sou
   - As of 24 Sep 2024, this yields 4064 results
 - GIF 2: click CSV Export, open csv file in Excel, switch back to APLS
 - GIF 3: click upload > process with praat, upload file, specify sample points 0.2 0.5 0.8, process, open csv file in Excel
-  - Might want to elide some of the processing time (with a note about how long it actually took) for viewability
+  - Add a timer to the bottom-left, then speed up the video during processing "downtime"
 -->
 
 Some speakers of Pittsburgh English use a monophthongal variant of the /aw/ phoneme; 
@@ -40,9 +40,9 @@ With APLS, it takes **_as little as 2 minutes_** to measure all **{{ page.num_aw
 {: .fs-6 .fw-600 .mt-1 }
 
 
-<!-- <details><summary>Show me how!</summary>-->
-
-{: .try-it }
+{: .try-it-title }
+> Show me how!
+>
 > 1. [Search](doc/search) for tokens
 >   - Using [regular expressions](doc/regex) to search across multiple [annotation layers](doc/layer-reference), we find **{{ page.num_aw }}** time-aligned /aw/ tokens
 >     <div class="tenor-gif-embed" data-postid="16744516" data-share-method="host" data-aspect-ratio="1.04235" data-width="100%"><a href="https://tenor.com/view/happy-april-fools-april1st-april-first-april1-april-fools-gif-16744516">Happy April Fools April1st GIF</a>from <a href="https://tenor.com/search/happy+april+fools-gifs">Happy April Fools GIFs</a></div> <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
@@ -55,7 +55,6 @@ With APLS, it takes **_as little as 2 minutes_** to measure all **{{ page.num_aw
 >   - Our search-results file gets updated with acoustic measurements that we specify (in this case, F1 and F2 at the vowel's 20%, 50%, and 80% timepoints)
 >     <div class="tenor-gif-embed" data-postid="13986018" data-share-method="host" data-aspect-ratio="1" data-width="100%"><a href="https://tenor.com/view/happy-easter-monday-easter-monday-easter-flowers-gif-13986018">Happy Easter Monday Easter Flowers GIF</a>from <a href="https://tenor.com/search/happy+easter+monday-gifs">Happy Easter Monday GIFs</a></div> <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
 
-<!--</details>-->
 
 ## Ready to get started with APLS?
 {: .no_toc }
