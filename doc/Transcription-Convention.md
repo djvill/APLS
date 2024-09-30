@@ -4,7 +4,7 @@ layout: default
 permalink: /doc/transcription-convention
 parent: Transcription
 nav_order: 2
-last_modified_date: 2024-09-19T12:55:12-04:00
+last_modified_date: 2024-09-30T14:43:22-04:00
 ---
 
 
@@ -18,9 +18,9 @@ It also means that we _don't_ transcribe or notate things that LaBB-CAT can do a
 Once you've [set up the transcription file](#file-setup), transcription consists of two tasks: [**segmenting**](#segmentation) the file into turns, and [**annotating**](#annotation) the turns.
 In other words, you first figure out who is speaking when, then you figure what they said.
 
-In this document, `fixed-width font` is used for things you actually type into the transcription program (Elan or Praat), and _italics_ are used for menu commands (i.e., buttons you click).
+In this document, `fixed-width font` is used for things you actually type into the transcription program (Praat or Elan), and _italics_ are used for menu commands (i.e., buttons you click).
 
-{% include toggle.html id="trs-toggle" leftText="Select your transcription program:" label1="Elan" label2="Praat" labelWidth="3em" %}
+{% include toggle.html id="trs-toggle" leftText="Select your transcription program:" label1="Praat" label2="Elan" labelWidth="3em" %}
 
 {% include page_toc.html collapsible=true %}
 
@@ -34,7 +34,7 @@ In this document, `fixed-width font` is used for things you actually type into t
 	- One recommendation is to create a temporary `Recheck` tier where you make note of speech you're having trouble hearing correctly, so you can return to these portions of the transcript with fresh ears after you're done the first pass. Make sure to delete the `Recheck` tier once you're done checking
 - Use the same audio setup each time you transcribe. Some details that are easy to catch with headphones on are inaudible from laptop speakers.
 - **Save your work often!**
-	- <span class="praat">Praat</span><span class="elan">Elan</span> doesn't auto-save your work, unlike some programs you might be used to (Google Docs, Microsoft Office if you use OneDrive). <span class="praat">Praat usually doesn't crash, but better safe than sorry.</span>
+	- <span class="praat">Praat</span><span class="elan">Elan</span> doesn't auto-save your work, unlike some programs you might be used to (e.g., Google Docs). <span class="praat">Praat usually doesn't crash, but better safe than sorry.</span>
 		<li class="elan">Elan is known to crash occasionally, so you may want to set an automatic backup interval (File > Automatic Backup)</li>
 - Once you've finished transcribing, check over your work!
 
