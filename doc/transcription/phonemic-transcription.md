@@ -3,22 +3,40 @@ title: Phonemic transcription with the DISC alphabet
 layout: default
 permalink: /doc/phonemic-transcription
 parent: Transcription
-nav_order: 20
-last_modified_date: 2024-01-26T14:10:58-05:00
+nav_order: 3
+last_modified_date: 2024-10-02T19:45:46-04:00
 ---
 
 
 # {{ page.title }}
 {:.no_toc}
 
-The **DISC phonemic alphabet** represents speech sounds by creating a one-to-one mapping between sounds and symbols, much like the IPA.
-_Unlike_ the IPA, the DISC phonemic alphabet only uses symbols that appear on a standard keyboard.
+<!-- At some point, split this out into its own page for end-users rather than transcribers -->
+APLS primarily uses the **DISC phonemic alphabet**[^celex] for representing speech sounds (specifically, phonemes), rather than the [International Phonetic Alphabet](https://en.wikipedia.org/wiki/International_Phonetic_Alphabet) (IPA).
+DISC creates a one-to-one mapping between sounds and symbols like the IPA, but _unlike_ the IPA, DISC only uses symbols that appear on a standard [QWERTY keyboard](https://en.wikipedia.org/wiki/QWERTY).
+While the IPA is well-recognized among linguists, many IPA characters are hard for end-users to input and difficult for computers to store.[^why-not-ipa]
+As a result, APLS uses DISC internally for _storing_ and _searching_ phonological data, it _exports_ phonological data in DISC, and APLS _transcribers_ use DISC for ["pronounce codes"](https://djvill.github.io/APLS/doc/transcription-convention#pronounce-codes) when a word's pronunciation needs to be specified (e.g., an incomplete word).
+In APLS, IPA is used only for _displaying_ phonological data to end-users.
+
+[^celex]: DISC, developed for the [CELEX](https://catalog.ldc.upenn.edu/LDC96L14) project, stands for **di**stinct **s**ingle **c**haracters. For more details, see CELEX [English documentation](https://catalog.ldc.upenn.edu/docs/LDC96L14/eug_let.pdf), section 2.4.1 (starting on p. 30 of the PDF).
+
+[^why-not-ipa]: For the purpose of representing speech sounds in a database like APLS, IPA has several substantial drawbacks:
+- Variability in representations: What is the IPA transcription for the phoneme in English _prize_? Depending on the author, it might be `aɪ` or `aj` or `ai`. The "ch" affricate might be `t͡ʃ` or `tʃ`; the last sound(s) in _apple_ might be `əl` or `əɫ` or `l̩`. This effectively breaks the one-to-one sound-symbol mapping that is absolutely necessary from a data perspective.
+- Lookalike characters: `g` (typewriter g) is often substituted for `ɡ`, `:` (colon) for `ː`, `'` (apostrophe) for `ˈ`, superscript `j` for `ʲ`, etc. This also breaks the one-to-one mapping, and it can lead to hard-to-detect inconsistencies in the data.
+- Multiple characters per phoneme: Some phonemes are represented with more than one IPA character because they're multi-part sounds (e.g., diphthongs, affricates). This makes it harder to split strings of phonemes into individual phonemes, which has implications for large-scale processing of phonological data.
+It must be said that DISC is not drawback-free:
+- Unfamiliarity and adoption: Very few linguists are familiar with DISC, although [most non-syllabic consonants](#non-syllabic-consonants) match their IPA counterparts.
+- Linguistically limited: Although it's not relevant to APLS, DISC is limited to English, German, and Dutch.
+- Pre-/ɹ/ vowels: In keeping with [Wells lexical sets](https://en.wikipedia.org/wiki/Lexical_set), DISC provides different symbols for (e.g.) the vowels in _near_ and _fleece_. There is phonetic, phonological, and historical evidence for these being different phonemes in even rhotic varieties of English---hence why it was decided that the APLS subset of DISC would retain this distinction---but this may present a learning curve for North American Englishes researchers who aren't accustomed to thinking of these as separate phonemes. ([By convention](#transcribing-words-using-disc), these are always followed by the `r` phoneme in APLS.)
+- Some overlap: Two symbols each correspond to a pair of [Wells lexical sets](https://en.wikipedia.org/wiki/Lexical_set): `@` for commA and lettER, `$` for thought and force. 
+- Escape characters: Some DISC characters have special meaning in regular expressions (e.g., `{`, `$`), so they need to be "escaped" to be interpreted literally. That said, some other ASCII-based phonetic alphabets are much more challenging in this regard (e.g., [X-SAMPA](https://en.wikipedia.org/wiki/X-SAMPA) uses `\`).
 
 APLS uses a subset of DISC relevant to North American Englishes.
 In APLS, we use DISC symbols for _phonemic_ representations of sounds, not _phonetic_ representations.
 As a result, the APLS subset of DISC doesn't have symbols for [ɾ] or [ʔ] (flap or glottal stop); in North American Englishes, these surface only as allophones of /t/.
 
-In this document, `fixed-width font` is used for things you actually type into the transcription program (Elan or Praat).
+In this document, `fixed-width font` is used for symbols you actually type into APLS search fields or a transcription program (Praat or Elan).
+
 
 {% include page_toc.html collapsible=true %}
 
@@ -176,11 +194,12 @@ As mentioned [above](#multiple-phonemic-representations), you can suggest multip
 
 ### Syllabification and stress
 
-| DISC | Function          |
-|------|-------------------|
-|  `-` | Syllable boundary |
-|  `'` | Primary stress    |
-|  `"` | Secondary stress  |
+| DISC | Function          | Note                             |
+|------|-------------------|----------------------------------|
+|  `-` | Syllable boundary |                                  |
+|  `'` | Primary stress    |                                  |
+|  `"` | Secondary stress  |                                  |
+|  `0` | No stress         | Only for the **syllables** layer |
 {:#syll-table .no-bg}
 
 For example, _Pennsylvanian_ is `"pEn-sP-'v1n-jH`. 
@@ -218,3 +237,14 @@ A few finer points:
 	var h = document.querySelectorAll("#main-content code");
 	h.forEach(a => a.innerText = a.innerText.replaceAll("-", "\u2011"));
 </script>
+
+### Pause marker (**foll_segment** only)
+
+| DISC | Function |
+|------|----------|
+|  `.` | Pause    |
+{: .no-bg}
+
+The **foll_segment** layer uses all the usual DISC characters with one addition: `.` as a pause marker. 
+Knowing that a segment is followed by a phone can be useful for categorizing certain phonological effects, and an explicit symbol signals to end-users that this is not missing data.
+`.` was chosen because it is a keyboard (ASCII) character, and it already denotes pauses in similar notation systems: [Extensions to the IPA](https://en.wikipedia.org/wiki/Extensions_to_the_International_Phonetic_Alphabet#Prosodic_notation_and_indeterminate_sounds), [Jeffersonian (conversation analysis) transcription](https://en.wikipedia.org/wiki/Conversation_analysis#Jeffersonian_transcription), etc.
