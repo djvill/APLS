@@ -193,6 +193,7 @@ Yuenglings
 
 
 ## Unexpected omissions from Unisyn
+afros
 anchorpeople
 anchorwoman
 anchorwomen
