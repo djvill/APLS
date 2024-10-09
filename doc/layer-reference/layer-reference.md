@@ -2,8 +2,8 @@
 title: Layer reference
 layout: default
 permalink: /doc/layer-reference
-nav_order: 20
-last_modified_date: 2024-02-07T10:11:05-05:00
+nav_order: 30
+last_modified_date: 2024-10-09T12:00:35-04:00
 ---
 
 # {{ page.title }}

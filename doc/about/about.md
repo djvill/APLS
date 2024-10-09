@@ -4,8 +4,8 @@ layout: default
 permalink: /doc/about
 has_children: yes
 has_toc: no
-nav_order: 40
-last_modified_date: 2023-08-30T15:48:56-04:00
+nav_order: 50
+last_modified_date: 2024-10-09T12:00:35-04:00
 ---
 
 # {{ page.title }}

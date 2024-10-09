@@ -3,7 +3,7 @@ layout: default
 nav_exclude: yes
 permalink: /
 num_aw: 4064
-last_modified_date: 2024-09-25T14:31:54-04:00
+last_modified_date: 2024-10-09T12:00:34-04:00
 ---
 
 # Documentation
@@ -56,8 +56,5 @@ With APLS, it takes **_as little as 2 minutes_** to measure all **{{ page.num_aw
 >     <div class="tenor-gif-embed" data-postid="13986018" data-share-method="host" data-aspect-ratio="1" data-width="100%"><a href="https://tenor.com/view/happy-easter-monday-easter-monday-easter-flowers-gif-13986018">Happy Easter Monday Easter Flowers GIF</a>from <a href="https://tenor.com/search/happy+easter+monday-gifs">Happy Easter Monday GIFs</a></div> <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
 
 
-## Ready to get started with APLS?
-{: .no_toc }
-
-Sign up for a user account [here](https://docs.google.com/forms/d/e/1FAIpQLSdFclWfbWZ-aM-h3Givrr4mH9T4MjyWaeQ-TpTMriC5mOcoqw/viewform){: target="_blank"}.
+Ready to get started with APLS? Click [here](doc/getting-started)
 {: .fs-6 .fw-600 }

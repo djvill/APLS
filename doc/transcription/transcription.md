@@ -4,8 +4,8 @@ layout: default
 permalink: /doc/transcription
 has_children: yes
 has_toc: no
-nav_order: 30 
-last_modified_date: 2024-01-29T16:33:01-05:00
+nav_order: 40 
+last_modified_date: 2024-10-09T12:00:36-04:00
 ---
 
 # {{ page.title }}

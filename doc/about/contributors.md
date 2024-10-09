@@ -1,10 +1,10 @@
 ---
 title: Contributors
 layout: default
-permalink: /doc/Contributors
+permalink: /doc/contributors
 parent: About APLS
 nav_order: 10
-last_modified_date: 2024-01-31T11:50:27-05:00
+last_modified_date: 2024-10-09T12:00:35-04:00
 ---
 
 # {{ page.title }}
