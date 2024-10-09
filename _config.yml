@@ -6,6 +6,7 @@ title: APLS Documentation
 exclude:
   - node_modules
   - script
+  - .Rproj.user
 
 sass:
   style: :compressed
