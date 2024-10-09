@@ -3,7 +3,7 @@ layout: default
 nav_exclude: yes
 permalink: /
 num_aw: 4064
-last_modified_date: 2024-10-09T12:00:34-04:00
+last_modified_date: 2024-10-09T16:58:00-04:00
 ---
 
 # Documentation
@@ -19,7 +19,7 @@ APLS is currently under construction, but when complete, it will contain 270 sou
 <!-- In total, APLS contains 270 sound files totaling 45 hours of audio from 40 speakers. -->
 
 
-## Demo: Measuring F1 and F2 for /aw/ tokens
+## Demo: Measuring F1 and F2 for /aw/ in closed syllables
 {: .no_toc }
 
 <!-- Each step is illustrated with a screen-cap GIF: back-to-back portions of a single continuous screen-cap. Login test-student, clear Downloads folder for screen-cap, regular-size screen.
@@ -30,13 +30,13 @@ APLS is currently under construction, but when complete, it will contain 270 sou
   - Add a timer to the bottom-left, then speed up the video during processing "downtime"
 -->
 
-Some speakers of Pittsburgh English use a monophthongal variant of the /aw/ phoneme; 
-this variable holds important social meanings in Pittsburgh (CITES).
-A pretty typical data task would be to identify all tokens matching a specific linguistic context (say, /aw/ in closed syllables) and extract a set of acoustic measurements (say, F1 and F2 at 3 timepoints).
-Normally, performing this sort of batch acoustic measurement on a dataset this big would take hours, even if you use state-of-the-art speech technologies for automatic speech recognition and segmental alignment.
+Some speakers of Pittsburgh English use a monophthongal variant of the /aw/ phoneme. 
+This variant, stereotyped as "_dahntahn_" for _downtown_, holds important social meanings in Pittsburgh (CITES).
+A pretty typical data task would be to identify all tokens matching a specific linguistic context (say, /aw/ in closed syllables) and extract a set of acoustic measurements (say, [F1 and F2](https://corpus.eduhk.hk/english_pronunciation/index.php/2-2-formants-of-vowels/) at 3 timepoints).
+Normally, performing this sort of batch acoustic measurement on a dataset this big would take hours of manual effort, even if you use state-of-the-art speech technologies for automatic speech recognition and segmental alignment.
 {: .mb-1 }
 
-With APLS, it takes **_as little as 2 minutes_** to measure all **{{ page.num_aw }}** /aw/ tokens in the corpus.
+With APLS, it takes **_as little as 2 minutes_** to measure all **{{ page.num_aw }}** tokens of /aw/ in closed syllables in the corpus.
 {: .fs-6 .fw-600 .mt-1 }
 
 
