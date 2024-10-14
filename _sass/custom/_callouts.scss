@@ -1,11 +1,10 @@
-/* Styling for "Try it!" callouts
+/* Styling for collapsible callouts ("Try it!" and "Design decisions")
    
 	 Similar to normal just-the-docs callouts (https://github.com/just-the-docs/just-the-docs/blob/main/_includes/css/callouts.scss.liquid), just adapted to details-summary node structure
  */
 
-.try-it, .try-it-title {
+.try-it, .try-it-title, .design-decisions {
 	summary {
-		color: $green-300;
 		font-weight: bold;
 		text-transform: uppercase;
 		font-size: .75em;
@@ -14,6 +13,16 @@
 		&::marker {
 			color: $body-text-color;
 		}
+	}
+}
+.try-it, .try-it-title {
+	summary {
+		color: $green-300;
+	}
+}
+.design-decisions {
+	summary {
+		color: $blue-300;
 	}
 }
 

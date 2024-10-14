@@ -28,6 +28,8 @@ lang: en-US
 collections:
   versions:
     sort_by: version
+  layers:
+    sort_by: name
 
 ########################################
 #### Config for just-the-docs theme ####
@@ -71,6 +73,8 @@ callouts:
     color: red
   try-it:
     color: green
+  design-decisions:
+    color: blue
 
 ##Google Analytics
 ga_tracking: G-TT6NWBCLVW 
