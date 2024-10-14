@@ -4,8 +4,8 @@ layout: default
 permalink: /doc/transcript-praat
 parent: Viewing a transcript
 grand_parent: How to use APLS
-nav_order: 20
-last_modified_date: 2024-02-07T10:11:05-05:00
+nav_order: 10
+last_modified_date: 2024-10-14T19:56:24-04:00
 ---
 
 # {{ page.title }}

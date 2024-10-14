@@ -3,7 +3,7 @@ title: Citing and contributing back
 layout: default
 permalink: /doc/citing-contributing
 parent: How to use APLS
-nav_order: 80
+nav_order: 70
 last_modified_date: 2024-02-12T14:49:10-05:00
 ---
 
