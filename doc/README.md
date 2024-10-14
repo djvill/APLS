@@ -2,8 +2,8 @@
 layout: default
 nav_exclude: yes
 permalink: /
-num_aw: 4064
-last_modified_date: 2024-10-09T16:58:00-04:00
+num_aw_closed: 4064
+last_modified_date: 2024-10-14T18:13:56-04:00
 ---
 
 # Documentation
@@ -36,7 +36,7 @@ A pretty typical data task would be to identify all tokens matching a specific l
 Normally, performing this sort of batch acoustic measurement on a dataset this big would take hours of manual effort, even if you use state-of-the-art speech technologies for automatic speech recognition and segmental alignment.
 {: .mb-1 }
 
-With APLS, it takes **_as little as 2 minutes_** to measure all **{{ page.num_aw }}** tokens of /aw/ in closed syllables in the corpus.
+With APLS, it takes **_as little as 2 minutes_** to measure all **{{ page.num_aw_closed }}** tokens of /aw/ in closed syllables in the corpus.
 {: .fs-6 .fw-600 .mt-1 }
 
 
@@ -44,7 +44,7 @@ With APLS, it takes **_as little as 2 minutes_** to measure all **{{ page.num_aw
 > Show me how!
 >
 > 1. [Search](doc/search) for tokens
->   - Using [regular expressions](doc/regex) to search across multiple [annotation layers](doc/layer-reference), we find **{{ page.num_aw }}** time-aligned /aw/ tokens
+>   - Using [regular expressions](doc/regex) to search across multiple [annotation layers](doc/layer-reference), we find **{{ page.num_aw_closed }}** time-aligned /aw/ tokens
 >     <div class="tenor-gif-embed" data-postid="16744516" data-share-method="host" data-aspect-ratio="1.04235" data-width="100%"><a href="https://tenor.com/view/happy-april-fools-april1st-april-first-april1-april-fools-gif-16744516">Happy April Fools April1st GIF</a>from <a href="https://tenor.com/search/happy+april+fools-gifs">Happy April Fools GIFs</a></div> <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
 >     
 > 1. [Extract](doc/export-data) search results to a CSV file
