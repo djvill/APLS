@@ -19,14 +19,23 @@ a:not([class]) {
 }
 
 /* Special navigation styling */
-.keyterm {
+.keyterm > a, .layer > a {
+  color: $body-text-color;
+  
+  &:hover {
+    color: $body-text-color;
+    text-decoration-color: $border-color;
+  }
+}
+.keyterm > a {
   font-weight: bold;
 }
-.layer {
-  text-decoration: underline dotted;
+.layer > a {
+  text-decoration: underline dotted $link-color;
+  text-underline-offset: 2px;
 }
 
-/* External links (page__content only) */
+/* External links (main-content only) */
 /* https://stackoverflow.com/questions/5379752/css-style-external-links */
 #main-content main a[href]:not(:where(
   /* exclude hash only links */
@@ -35,8 +44,8 @@ a:not([class]) {
   [href^="/"]:not([href^="//"]),
   /* domains to exclude */
   [href*="//apls.pitt.edu"],
-  /* pages to exclude */
-  [href*="https://docs.google.com/forms/d/e/1FAIpQLSdFclWfbWZ-aM-h3Givrr4mH9T4MjyWaeQ-TpTMriC5mOcoqw/viewform"],
+  [href^="https://djvill.github.io/APLS"],
+  [href^="https://docs.google.com/forms/"],
   /* serving locally */
   [href*="localhost"]
 )) {
