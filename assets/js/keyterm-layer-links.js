@@ -19,14 +19,16 @@ function addA(node, type) {
   node.innerText = '';
   node.appendChild(a);
   
+  //Normalize name
+  var hrefName = nodeText.replaceAll(" ", "-").toLowerCase();
   //Add href depending on type
   if (type === "keyterm") {
     var page = "/APLS/doc/glossary";
+    //For keyterms, also de-pluralize
+    hrefName = hrefName.replace(/s$/, '');
   } else if (type === "layer") {
     var page = "/APLS/doc/layer-reference";
   }
-  //Normalize name
-  var hrefName = nodeText.replaceAll(" ", "-").toLowerCase();
   a.href = page + "#" + hrefName;
 }
 

@@ -3,13 +3,13 @@ layout: default
 nav_exclude: yes
 permalink: /
 num_aw_closed: 4064
-last_modified_date: 2024-10-15T14:54:57-04:00
+last_modified_date: 2024-10-15T17:04:14-04:00
 ---
 
 # Documentation
 
 Welcome to the documentation homepage for the **Archive of Pittsburgh Language and Speech** (aka **APLS**, pronounced like _apples_)!
-APLS is a linguistic data resource, powered by the open-source linguistic corpus software [LaBB-CAT](https://sourceforge.net/projects/labbcat/), that contains:
+APLS is a linguistic data resource, powered by the open-source linguistic corpus software [LaBB-CAT], that contains:
 - **recordings** of interviews conducted with speakers native to Pittsburgh and surrounding neighborhoods,
 - **annotations** of linguistic information at the level of phrases, words, and individual speech sounds, allowing us to treat these recordings as structured linguistic data, and
 - **metadata** on interviewees and transcripts that facilitate large-scale (socio)linguistic analysis.
@@ -58,3 +58,5 @@ With APLS, it takes **_as little as 2 minutes_** to measure all **{{ page.num_aw
 
 Ready to get started with APLS? Click [here]({{ '/doc/getting-started' | relative_url }})
 {: .fs-6 .fw-600 }
+
+{% include linklist.html %}

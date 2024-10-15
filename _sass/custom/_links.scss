@@ -24,15 +24,22 @@ a:not([class]) {
   
   &:hover {
     color: $body-text-color;
-    text-decoration-color: $border-color;
   }
 }
 .keyterm > a {
   font-weight: bold;
+  
+  &:hover {
+    text-decoration-color: $border-color;
+  }
 }
 .layer > a {
   text-decoration: underline dotted $link-color;
   text-underline-offset: 2px;
+  
+  &:hover {
+    text-decoration-color: $link-color;
+  }
 }
 
 /* External links (main-content only) */
@@ -50,9 +57,16 @@ a:not([class]) {
   [href*="localhost"]
 )) {
   /* Add external-link svg (which one depends on color scheme) */
+  /* https://christianoliff.com/blog/styling-external-links-with-an-icon-in-css/ */
   &:after {
-    content: $external-link-svg;
-	  // vertical-align: super;
-	  // line-height: 0.5;
+    content: "";
+    width: 0.9em;
+    height: 0.9em;
+    margin-left: 0.1em;
+    background-image: $external-link-svg;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: inline-block;
   }
 }

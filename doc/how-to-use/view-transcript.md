@@ -6,7 +6,7 @@ parent: How to use APLS
 has_children: yes
 has_toc: no
 nav_order: 20
-last_modified_date: 2024-10-15T14:54:58-04:00
+last_modified_date: 2024-10-15T17:04:14-04:00
 ---
 
 # {{ page.title }}
@@ -17,8 +17,8 @@ In APLS, each transcript has a single <span class="keyterm">main participant</sp
 Each transcript has its own page in APLS.
 
 {: .try-it }
-> As we'll cover [later](#accessing-transcript-pages), there are a few ways to access individual transcript pages.
-> The easiest is the [_all transcripts_ page]({{ '/doc/browse-transcripts' | relative_url }}) at https://apls.pitt.edu/transcripts. 
+> As we'll cover [below](#accessing-transcript-pages), there are a few ways to access individual transcript pages.
+> The easiest is the [_transcripts_ page]({{ '/doc/browse-transcripts' | relative_url }}) at <https://apls.pitt.edu/transcripts>. 
 > Go to that page and select a transcript to view.
 
 {% include page_toc.html collapsible=true %}

@@ -3,7 +3,7 @@ title: Getting started
 layout: default
 permalink: /doc/getting-started
 nav_order: 10
-last_modified_date: 2024-10-15T14:54:57-04:00
+last_modified_date: 2024-10-15T17:04:14-04:00
 ---
 
 # {{ page.title }}
@@ -21,8 +21,12 @@ Once you have an [APLS login](#sign-up), you can access APLS through your browse
 ## Where APLS audio data comes from
 
 APLS contains audio recordings of one-on-one [sociolinguistic interviews](https://languageandlife.org/about-sociolinguistics/) from fieldwork conducted in 2003--2005 with native Pittsburghers in four Pittsburgh neighborhoods: the Hill District (abbreviated `HD` in APLS), Lawrenceville (`LV`), Forest Hills (`FH`), and Cranberry Township (`CB`).[^neighborhood]
-These interviews typically consisted of [several sections](https://ecampusontario.pressbooks.pub/essentialsoflinguistics2/chapter/10-5-variationist-methods-and-concepts): a long conversation (including chatter about "Pittsburghese" and/or African American English), 1--2 reading tasks, and a minimal pairs task;
-not all interviews had all of these sections.
+These interviews typically consisted of several sections (though not all interviews had all of these):
+
+- A long conversation
+  - Sometimes including chatter about "Pittsburghese" and/or African American English
+- 1--2 reading tasks
+- A [minimal pairs task](https://ecampusontario.pressbooks.pub/essentialsoflinguistics2/chapter/10-5-variationist-methods-and-concepts/)
 
 [^neighborhood]: In keeping with Pittsburgh parlance, we use _neighborhood_ to encompass geographic areas inside or outside Pittsburgh city limits. Technically, only the Hill District and Lawrenceville are within city limits. Forest Hills is a borough within Allegheny County, and Cranberry Township is a township just outside Allegheny County. In the original fieldwork, these sites were chosen to reflect a distinction (between inner-city, inner-ring suburb, and outer-ring suburb) that shows up in some classic sociolinguistic literature ([Bailey diffusion], [Eckert 2000])
 
@@ -33,7 +37,7 @@ In addition, APLS currently contains only files that had just one interviewee.
 
 ## Basic organization
 
-APLS data is organized using the data structures provided by the open-source linguistic corpus software [LaBB-CAT][].
+APLS data is organized using the data structures provided by the open-source linguistic corpus software [LaBB-CAT].
 The most important organizational units in LaBB-CAT corpora are <span class="keyterm">annotations</span>, <span class="keyterm">transcripts</span>, <span class="keyterm">participants</span>, and <span class="keyterm">layers</span>.
 
 - **Annotations** are individual bits of data aligned to specific timestamps in audio files.
@@ -51,7 +55,9 @@ Interviews are divided into several **transcripts** (corresponding to the origin
 For example, the file `FH10pairs.eaf` contains the minimal pairs task from the interviewee FH10.[^eaf]
 Some interview sections are split into multiple transcripts (e.g., `interview1`, `reading2`).
 
-[^eaf]: The `.eaf` part of the transcript name reflects the original transcript file, which was created in the transcription program [Elan](https://archive.mpi.nl/tla/elan).
+[^eaf]: The `.eaf` part of the transcript name reflects the original transcript file, which was created in the transcription program [Elan].
+
+
 
 
 ### Annotations and layers
@@ -99,7 +105,7 @@ In the meantime, here are some tips for navigating this documentation site.
 
 To help you keep APLS terminology straight, key terms are formatted like so (<span class="keyterm">annotation</span>), with links to corresponding entries in the [glossary]({{ '/doc/glossary' | relative_url }}).
 Likewise, there's an extensive [layer reference]({{ '/doc/layer-reference' | relative_url }}), with layers formatted like so (<span class="layer">orthography</span>).
-The symbol <!-- SVG ext --> denotes an external link (i.e., a link that's not to a documentation page or an APLS page), like so ([LaBB-CAT][]).
+The symbol ![]({{ '/assets/img/ext-link-pittblue.svg' | relative_url }}){: style="height: 0.9em;"} denotes an external link (i.e., a link that's not to a documentation page or an APLS page), like so ([LaBB-CAT]).
 `Fixed-width text` is used for something you actually type into APLS, and _italic text_ is used for anything you might click on in APLS (a menu option, a link, etc.).
 
 
@@ -145,3 +151,4 @@ Ready to get started with APLS? Sign up for a user account [here](https://docs.g
 Once you log in for the first time, you'll see a prompt to reset your temporary password.
 If you forget your password, fill out this form: 
 
+{% include linklist.html %}
