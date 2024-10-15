@@ -16,18 +16,24 @@ $pitt-light-gray: #C8C9C7;
 /* Create variables not defined in just-the-docs
  * https://github.com/just-the-docs/just-the-docs/blob/main/_sass/support/_variables.scss
  */
-//Scheme variables, set to apls.scss (light) defaults
+ 
+/* Scheme variables, set to apls.scss (light) defaults */
+//Link colors
 $link-hover-color: $pitt-gold;
 $link-underline-hover-color: $pitt-gold;
 $code-link-underline-color: $pitt-blue;
 $code-link-hover-color: $pitt-gold;
+$external-link-svg: url('/assets/img/ext-link-pittblue.svg');
+
+//Other colors
 $list-marker-color: $pitt-gray;
 $example-bg-color: null; //To help red/green example text better stand out in dark mode
 $footer-text-color: null; //Can't change "Page last modified" color without editing _includes/components/footer.html: https://github.com/just-the-docs/just-the-docs/blob/main/_includes/components/footer.html#L16C15-L16C15
 $toggle-background: $grey-lt-200;
 $toggle-background-hover: $grey-lt-300;
 $toggle-padding: 8px 10.5px;
-//Semantic variables
+
+/* Semantic variables */
 $grey-dk-150: mix($grey-dk-100, $grey-dk-200, 50%);
 $grey-dk-350: #1D1C21 !default;
 $green-contrast: #308c08 !default; //A green that has an equally good color contrast ratio with both white and #121212 backgrounds (tester: https://www.siegemedia.com/contrast-ratio#%23308c08-on-%23121212)

@@ -30,6 +30,10 @@
 - Create JS that makes the `incontext` links work
 
 
+## Site
+
+- Figure out how to create a list of links that should always go to the same spot (using the Markdown link shortcut syntax) so that (e.g.) doing [LaBB-CAT][] always goes to https://apls.pitt.edu/labbcat, or [some text][htk] always goes to the HTK page
+
 ## Style
 
 - Style external links differently
