@@ -4,13 +4,13 @@ layout: default
 permalink: /doc/transcription
 has_children: yes
 has_toc: no
-last_modified_date: 2024-10-15T14:09:02-04:00
+last_modified_date: 2024-10-15T14:12:36-04:00
 ---
 
 # {{ page.title }}
 {:.no_toc}
 
-Before audio data can be uploaded to APLS, it must first be **transcribed** by human transcribers, according to APLS's [transcription convention]({% link doc/Transcription-Convention.md %}).
+Before audio data can be uploaded to APLS, it must first be **transcribed** by human transcribers, according to APLS's [transcription convention]({{ '/doc/transcription-convention' | relative_url }}).
 Transcriptions consist of annotations synced to **turns** ranging in duration from 0 to 10 seconds, typically in the `.eaf` ([Elan](https://archive.mpi.nl/tla/elan)) or `.TextGrid` ([Praat](http://www.fon.hum.uva.nl/praat/)) file formats.
 These turns exist on several **tiers**: one for each speaker (typically just interviewee and interviewer), plus special tiers representing non-speaker noises, transcriber comments, and stretches of speech that should be redacted.
 
