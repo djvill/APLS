@@ -3,6 +3,10 @@
 
 title: APLS Documentation
 
+##URLs (see https://mademistakes.com/mastering-jekyll/site-url-baseurl/)
+url: https://djvill.github.io
+baseurl: /APLS
+
 exclude:
   - node_modules
   - script

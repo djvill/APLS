@@ -5,7 +5,7 @@ permalink: /doc/how-to-use
 has_children: yes
 has_toc: no
 nav_order: 20
-last_modified_date: 2024-10-09T12:00:35-04:00
+last_modified_date: 2024-10-15T14:54:58-04:00
 ---
 
 # {{ page.title }}
@@ -18,7 +18,7 @@ They're meant to be a user-manual/tutorial hybrid, and they don't need to be bro
 
 ## If you're a **new APLS user**
 
-Check out our [Getting started](doc/getting-started) page
+Check out our [Getting started]({{ '/doc/getting-started' | relative_url }}) page
 
 
 ## If you've **used APLS before**
@@ -38,7 +38,7 @@ Here's a quick reference to the pages in this section:
 
 ## If you're **publishing based on APLS**
 
-Please check out the page on [Citing and contributing back](doc/citing-contributing).
+Please check out the page on [Citing and contributing back]({{ '/doc/citing-contributing' | relative_url }}).
 
 
 ## If you have **questions**

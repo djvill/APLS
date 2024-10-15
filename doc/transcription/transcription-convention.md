@@ -4,7 +4,7 @@ layout: default
 permalink: /doc/transcription-convention
 parent: Transcription
 nav_order: 10
-last_modified_date: 2024-09-19T16:57:12-04:00
+last_modified_date: 2024-10-15T14:54:58-04:00
 ---
 
 
@@ -274,8 +274,8 @@ Reminder: In this document, `fixed-width font` is used for things you actually t
 
 - There are 3 situations where you need to attach a "pronounce code" to the end of a word to help LaBB-CAT determine the phonemes that are in the word: (1) words that aren't in the dictionary, (2) idiosyncratic pronunciations, (3) hesitations/incomplete words
 	- Attach the pronounce code with **no space after the word**, in square brackets (e.g., `yinzerific["jIn-z@r-'I-fIk]`)
-	- The pronounce code uses the [DISC phonemic alphabet](phonemic-transcription) to give a phonemic representation of what was said
-- <a id="novel-words"/> If a speaker uses a word that isn't in a standard dictionary or [APLS's custom dictionary](/APLS/files/custom-entries) (a word made up on the spot, a specific road name, etc.), just spell it the best you can, and provide a pronounce code in DISC (e.g., `yinzerific["jIn-z@r-'I-fIk]`)
+	- The pronounce code uses the [DISC phonemic alphabet]({{ '/doc/phonemic-transcription' | relative_url }}) to give a phonemic representation of what was said
+- <a id="novel-words"/> If a speaker uses a word that isn't in a standard dictionary or [APLS's custom dictionary]({{ '/files/custom-entries' | relative_url }}) (a word made up on the spot, a specific road name, etc.), just spell it the best you can, and provide a pronounce code in DISC (e.g., `yinzerific["jIn-z@r-'I-fIk]`)
 	- If the word is used more than once in a transcript, the DISC code needs to be supplied every time
 	- We can add words to APLS's custom dictionary, but only if it's a word that is likely to be used by more than just one speaker
 - If a speaker pronounces a word in an idiosyncratic way (e.g., _bookshelves_ as _buckshelves_), provide a DISC code
