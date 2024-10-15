@@ -3,7 +3,7 @@ title: Getting started
 layout: default
 permalink: /doc/getting-started
 nav_order: 10
-last_modified_date: 2024-10-14T20:00:06-04:00
+last_modified_date: 2024-10-15T12:15:42-04:00
 ---
 
 # {{ page.title }}
@@ -41,35 +41,50 @@ The most important organizational units in LaBB-CAT corpora are <span class="key
 - **Participants** are speakers, plus metadata like demographic info.
 - **Layers** are series of time-aligned annotations in transcripts corresponding to a single type of linguistic data (e.g., pronunciations, part-of-speech tags).
 
-The **participants** in APLS are the interviewees, the interviewers, and occasionally a bystander whose speech is captured on tape.
+
+### Participants and transcripts
+
+The **participants** in APLS are the interviewees, the interviewers, and occasionally a bystander whose speech is captured in the recording.
 Interviewees in APLS are identified by an anonymized <span class="keyterm">speaker code</span> that includes their neighborhood abbrevation (e.g., `CB01`, `HD17`).
 
-Interviews are divided into several **transcripts** (corresponding to the original tape files), named after the interviewee and interview section.
+Interviews are divided into several **transcripts** (corresponding to the original recording files), named after the interviewee and interview section.
 For example, the file `FH10pairs.eaf` contains the minimal pairs task from the interviewee FH10.[^eaf]
 Some interview sections are split into multiple transcripts (e.g., `interview1`, `reading2`).
 
 [^eaf]: The `.eaf` part of the transcript name reflects the original transcript file, which was created in the transcription program [Elan](https://archive.mpi.nl/tla/elan).
 
-To illustrate **annotations** and **layers** in APLS, below is a screen-grab of a single <span class="keyterm">line</span> of speech from the transcript `HD07interview3.eaf`.
-On the left-hand side is `HD07`, the participant who uttered this line.
-To the right of this speaker code are three layers.
-On the bottom is the <span class="layer">word</span> layer, containing the words that HD07 spoke, spelled in normal English.
-Each word has a single annotation on the <span class="layer">word</span> layer.
-Above that is the <span class="layer">part_of_speech</span> layer, which encodes each word's part of speech in [symbols developed for the Penn Treebank](doc/notation-systems#penn-treebank-pos-tags) project (e.g., `UH` for interjections, `CC` for coordinating conjunctions).
-Most words has a single <span class="layer">part_of_speech</span> annotation, but the word _don't_ has two (since it consists of both a present-tense verb, _do_, and an adverb, _not_).
-On top is the <span class="layer">speech_rate</span> layer (measured in syllables per second).
-Because APLS measures the average speech rate over an entire line, there is just one <span class="layer">speech_rate</span> annotation for this line (as indicated by the curved bracket).
-Finally, the cursor is hovering over the `NN` annotation, bringing up a tooltip with several pieces of information:
-this annotation is on the <span class="layer">part_of_speech</span> layer, it's part of a line (aka an <span class="layer">utterance</span>) that begins at 7.92 seconds into the transcript and lasts around 3.29 seconds, and there's a [menu](doc/view-transcript#word-menu) that can be brought up by clicking on the annotation.
 
-![A partial screenshot from Google Chrome (as it appeared in 2024), showing the page https://apls.pitt.edu/labbcat/transcript?transcript=HD07interview3.eaf and a single line of dialogue from participant HD07. Three lines of information are shown. The first is a black bracket encompassing the entire line with the label "6.5068"; the second shows symbols "UH CC PRP VBD TO VB DT NN VBN IN PRP VBP RB VB DT NN NN"; and the third shows "yeah and I used to get the Trib delivered 'cause I don't like the Post Gazette". At the end of the second line, a cursor is hovering over the text "NN" with a tooltip "part_of_speech - utterance at 7.92 for 3.2900000000000001s - click for menu" ](assets/img/demo-page.png)
+### Annotations and layers
+
+To illustrate **annotations** and **layers** in APLS, below is a screen-grab of a single <span class="keyterm">line</span> of speech from the transcript `HD07interview3.eaf`:
+![A partial screenshot from Google Chrome (as it appeared in 2024), showing the page https://apls.pitt.edu/labbcat/transcript?transcript=HD07interview3.eaf and a single line of dialogue from participant HD07. Three lines of information are shown. The first is a black bracket encompassing the entire line with the label "6.5068"; the second shows symbols "UH CC PRP VBD TO VB DT NN VBN IN PRP VBP RB VB DT NN NN"; and the third shows "yeah and I used to get the Trib delivered 'cause I don't like the Post Gazette". At the end of the second line, a cursor is hovering over the text "NN" with a tooltip "part_of_speech - utterance at 7.92 for 3.2900000000000001s - click for menu"](/assets/img/demo-page.png){: .screengrab }
 <!-- A better screen-grab would: (a) be narrower (not take up as much x-axis real estate), (b) be from a line that doesn't have an annoying duration -->
 
 
-### From audio data to APLS
+Let's break down what we can see:
+
+- On the left-hand side is `HD07`, the participant who uttered this line.
+- To the right of this speaker code are three layers. From bottom to top, these are <span class="layer">word</span>, <span class="layer">part_of_speech</span>, and <span class="layer">speech_rate</span>.
+  - <span class="layer">word</span> layer (bottom):
+    - This layer contains the words that HD07 spoke, spelled in normal English.
+    - Each word has a single annotation on the <span class="layer">word</span> layer.
+  - <span class="layer">part_of_speech</span> layer (middle):
+    - This layer encodes each word's part of speech in [symbols developed for the Penn Treebank](doc/notation-systems#penn-treebank-pos-tags) project (e.g., `UH` for interjections, `CC` for coordinating conjunctions).
+    - Most words have a single <span class="layer">part_of_speech</span> annotation. The word _don't_ has two annotations (`VBP RB`), since consists of both a present-tense verb (_do_) and an adverb (_not_).
+  - <span class="layer">speech_rate</span> (top)
+    - This layer contains a measurement (in syllables per second) of how quickly HD07 uttered this line
+    - Because APLS measures the speech rate over an entire line of the transcript, there is just one <span class="layer">speech_rate</span> annotation for this line (as indicated by the curved bracket).
+- The cursor is hovering over the `NN` annotation, bringing up a tooltip with several pieces of information:
+  - The selected annotation is on the <span class="layer">part_of_speech</span> layer
+  - This annotation is part of a line (aka an <span class="layer">utterance</span>) that begins at 7.92 seconds into the transcript and lasts around 3.29 seconds
+  - There's a [menu](doc/view-transcript#word-menu) that can be brought up by clicking on the annotation
+
+
+## From audio data to APLS
 
 To get an audio file into APLS, it is first [transcribed](doc/transcription) by a research assistant according to a specific set of conventions that facilitate analysis in LaBB-CAT.
-The transcription file is then uploaded with its audio file to APLS, where they are converted into an APLS transcript.
+(This takes a **ton** of time and effort!)
+The transcription file is then uploaded with its audio file to APLS, where it is converted into an APLS transcript.
 APLS generates numerous layers for the transcript, based on dictionaries for looking up representations of words (e.g., morphological parses), machine learning models (e.g., the [Hidden Markov Toolkit][htk] for determining time-alignments of individual speech sounds), and/or other layers.
 Finally, participant and transcript metadata is uploaded to APLS.
 
