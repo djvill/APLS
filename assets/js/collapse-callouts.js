@@ -1,6 +1,6 @@
 /* collapse-callouts.js 
 	 
-	 Make "Try it!" and "Design decisions" callouts collapsible
+	 Make "Try it!" and "Under the hood" callouts collapsible
 */
 
 function collapsible(node) {
@@ -27,8 +27,8 @@ function collapsible(node) {
 	  titleNode.remove();
 	} else if (newCallout.classList.contains("try-it")) {
 	  s.textContent = "Try it!";
-	} else if (newCallout.classList.contains("design-decisions")) {
-	  s.textContent = "Design decisions";
+	} else if (newCallout.classList.contains("under-the-hood")) {
+	  s.textContent = "Under the hood";
 	}
 	
 	//Remove copy of original node
@@ -39,6 +39,6 @@ function collapsible(node) {
 }
 
 window.addEventListener('DOMContentLoaded', () => {
-	var callouts = document.querySelectorAll(":is(.try-it, .try-it-title, .design-decisions)");
+	var callouts = document.querySelectorAll(":is(.try-it, .try-it-title, .under-the-hood)");
 	callouts.forEach(collapsible);
 });

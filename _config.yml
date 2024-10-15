@@ -73,7 +73,7 @@ callouts:
     color: red
   try-it:
     color: green
-  design-decisions:
+  under-the-hood:
     color: blue
 
 ##Google Analytics

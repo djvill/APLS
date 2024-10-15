@@ -1,9 +1,9 @@
-/* Styling for collapsible callouts ("Try it!" and "Design decisions")
+/* Styling for collapsible callouts ("Try it!" and "Under the hood")
    
 	 Similar to normal just-the-docs callouts (https://github.com/just-the-docs/just-the-docs/blob/main/_includes/css/callouts.scss.liquid), just adapted to details-summary node structure
  */
 
-.try-it, .try-it-title, .design-decisions {
+.try-it, .try-it-title, .under-the-hood {
 	summary {
 		font-weight: bold;
 		text-transform: uppercase;
@@ -20,7 +20,7 @@
 		color: $green-300;
 	}
 }
-.design-decisions {
+.under-the-hood {
 	summary {
 		color: $blue-300;
 	}

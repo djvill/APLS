@@ -3,14 +3,14 @@ title: Getting started
 layout: default
 permalink: /doc/getting-started
 nav_order: 10
-last_modified_date: 2024-10-14T18:51:09-04:00
+last_modified_date: 2024-10-14T20:00:06-04:00
 ---
 
 # {{ page.title }}
 {:.no_toc}
 
 APLS contains sound files alongside annotations that allow us to treat these audio files as structured linguistic data.
-Once you have an [APLS login](#sign-up), you can access APLS through your browser at https://apls.pitt.edu/labbcat.[^r-python]
+Once you have an [APLS login](#sign-up), you can access APLS through your browser at <https://apls.pitt.edu/labbcat>.[^r-python]
 <!-- APLS works just like any other webpage: you can use the back/forward buttons to navigate, create bookmarks, load multiple pages in tabs, etc. -->
 
 [^r-python]: Advanced users can also access APLS via the [`nzilbb.labbcat` package](https://nzilbb.github.io/labbcat-R/) for R, or the [`nzilbb-labbcat` library](https://nzilbb.github.io/labbcat-py/) for Python. These packages have most of the functionality of the browser-based graphical user interface (https://apls.pitt.edu/labbcat), with some added benefits such as reproducibility (e.g., a particular set of [search](doc/search) criteria can be encoded in R/Python code rather than described for copy/paste). Even if you plan to mostly use these interfaces, however, it's a good idea to learn the browser-based GUI first, as it will help you build an intuitive sense for how APLS data is organized.
@@ -102,7 +102,7 @@ In the top bar, you can search the documentation (you can type the `/` key to mo
 
 Throughout these pages are collapsible "callout" boxes to help you understand how to use APLS and how it works.
 Green "Try it!" boxes give you step-by-step instructions on doing some task in APLS.
-Blue "Design decisions" boxes give some behind-the-scenes details about decisions that were made in designing APLS.
+Blue "Under the hood" boxes give some details about technical details, design decisions, and/or the history of APLS's development.
 For example:
 
 {: .try-it }
@@ -111,6 +111,10 @@ For example:
 > Go to https://apls.pitt.edu/labbcat.
 > You should see a login box pop up:
 > <!-- SCREEN GRAB login box -->
+
+{: .under-the-hood }
+> APLS's original URL was https://labb-cat.linguistics.pitt.edu/labbcat.
+> But the https://apls.pitt.edu/labbcat URL was chosen as an alias because it's shorter, easier to remember, and less prone to typos.
 
 
 <!-- ## Terms of use -->
