@@ -84,6 +84,11 @@ fi
 Solution courtesy of https://mademistakes.com/notes/adding-last-modified-timestamps-with-git/.
 
 
+### Sass deprecation patch
+
+As of just-the-docs version 0.10.0, building the site locally will yield deprecation warnings about Sass `darken()`: https://github.com/just-the-docs/just-the-docs/issues/1541.
+As a patch for these deprecation warnings, modify `Gemfile.lock` so it pins the `sass-embedded` gem to version 1.78.0.
+
 
 ## Repo contents
 

@@ -3,8 +3,13 @@ title: Transcription convention
 layout: default
 permalink: /doc/transcription-convention
 parent: Transcription
+<<<<<<< HEAD:doc/Transcription-Convention.md
 nav_order: 2
 last_modified_date: 2024-09-30T14:43:22-04:00
+=======
+nav_order: 10
+last_modified_date: 2024-10-15T14:54:58-04:00
+>>>>>>> pages-in-progress:doc/transcription/transcription-convention.md
 ---
 
 
@@ -190,7 +195,11 @@ Reminder: In this document, `fixed-width font` is used for things you actually t
 - Don't use capital letters for the start of new sentences. Only use capital letters for proper nouns and the pronoun _I_
 - Write all numbers out in full, with spaces instead of hyphens (e.g., `one hundred and twenty three` not <code class="counterex">123</code> or <code class="counterex">one hundred and twenty-three</code>)
 - When abbreviations or acronyms are used:
+<<<<<<< HEAD:doc/Transcription-Convention.md
 	- If each letter is said separately, use capital letters with spaces in between each letter (e.g., `P G H`)
+=======
+  - If each letter is said separately, use capital letters with spaces in between each letter (e.g., `P G H`)
+>>>>>>> pages-in-progress:doc/transcription/transcription-convention.md
     - If the letter is pluralized, add `s` _plus_ a ["pronounce" code](#pronounce-codes) to the last letter (e.g., `D V Ds[diz]`)
 	- If the word is pronounced as a word, use capitals with no spaces (e.g., `FEMA`)
 - Don't use any diacritics that are not part of the English alphabet (e.g., `fiancee` not <code class="counterex">fiancée</code>)
@@ -274,8 +283,13 @@ Reminder: In this document, `fixed-width font` is used for things you actually t
 
 - There are 3 situations where you need to attach a "pronounce code" to the end of a word to help LaBB-CAT determine the phonemes that are in the word: (1) words that aren't in the dictionary, (2) idiosyncratic pronunciations, (3) hesitations/incomplete words
 	- Attach the pronounce code with **no space after the word**, in square brackets (e.g., `yinzerific["jIn-z@r-'I-fIk]`)
+<<<<<<< HEAD:doc/Transcription-Convention.md
 	- The pronounce code uses the [DISC phonemic alphabet](phonemic-transcription) to give a phonemic representation of what was said
 - <a id="novel-words"/> If a speaker uses a word that isn't in a standard dictionary or [APLS's custom dictionary](/APLS/files/custom-entries) (a word made up on the spot, a specific road name, etc.), just spell it the best you can, and provide a pronounce code in DISC (e.g., `yinzerific["jIn-z@r-'I-fIk]`)
+=======
+	- The pronounce code uses the [DISC phonemic alphabet]({{ '/doc/phonemic-transcription' | relative_url }}) to give a phonemic representation of what was said
+- <a id="novel-words"/> If a speaker uses a word that isn't in a standard dictionary or [APLS's custom dictionary]({{ '/files/custom-entries' | relative_url }}) (a word made up on the spot, a specific road name, etc.), just spell it the best you can, and provide a pronounce code in DISC (e.g., `yinzerific["jIn-z@r-'I-fIk]`)
+>>>>>>> pages-in-progress:doc/transcription/transcription-convention.md
 	- If the word is used more than once in a transcript, the DISC code needs to be supplied every time
 	- We can add words to APLS's custom dictionary, but only if it's a word that is likely to be used by more than just one speaker
 - If a speaker pronounces a word in an idiosyncratic way (e.g., _bookshelves_ as _buckshelves_), provide a DISC code

@@ -1,0 +1,20 @@
+Transcript:
+  short_definition: A collection of time-aligned annotations across several layers corresponding to a single sound file, plus metadata about the sound file.
+  definition: |
+    In APLS, each transcript corresponds to part of a sociolinguistic interview with a single interviewee.
+    Interviews are split into transcripts according to the original recording files.
+    
+    Transcripts are named with the interviewee's speaker code, the interview section, an optional numeric suffix if that interview section took up more than recording file, and `.eaf` (the [Elan][] transcription file format).
+    
+    Transcripts can be viewed on [transcript pages](doc/view-transcript).
+  incontext:
+    - links to **auto-generated** anchors
+    - on pages
+    - where the term appears
+    - (once per page)
+  related:
+    - In APLS, each transcript has one [main participant](#main-participant)
+    - "[Transcript attributes](#transcript-attributes): Metadata about the sound file"
+    - Not to be confused with [transcriptions](#transcription), data files external to APLS
+    - "[Layer](#layer)"
+    - "[Annotation](#annotation)"   

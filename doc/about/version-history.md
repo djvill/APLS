@@ -3,8 +3,8 @@ title: Version history
 layout: default
 permalink: /doc/version-history
 parent: About APLS
-nav_order: 2
-last_modified_date: 2024-03-07T10:51:49-05:00
+nav_order: 30
+last_modified_date: 2024-09-19T16:57:12-04:00
 ---
 
 {% comment %}

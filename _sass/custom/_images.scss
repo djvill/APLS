@@ -1,0 +1,10 @@
+/* Embedded images */
+
+//Put border around screengrabs (in light mode only)
+img.screengrab {
+  border: $screengrab-border;
+}
+//But never in callouts
+.try-it img.screengrab, .under-the-hood img.screengrab {
+  border: none;
+}

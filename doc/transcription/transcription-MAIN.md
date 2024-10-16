@@ -4,7 +4,8 @@ layout: default
 permalink: /doc/transcription
 has_children: yes
 has_toc: no
-last_modified_date: 2024-10-15T14:12:36-04:00
+nav_order: 40 
+last_modified_date: 2024-10-15T14:54:58-04:00
 ---
 
 # {{ page.title }}
@@ -21,7 +22,7 @@ For example, the English _-ing_ ending is transcribed as `ing`, regardless of wh
 The avoidance of "coding while transcribing" not only makes transcription faster, it more importantly facilitates specifying the search context for linguistic patterns once the transcription is uploaded to APLS (e.g., when searching for _-ing_ tokens, the end-user only has to look for /ɪŋ/, rather than both [ɪŋ] and [ɪn]).
 
 In instances where transcribers do need to specify phonemic representations (e.g., novel words or hesitations), they do so using the **DISC phonemic alphabet**.
-APLS's [DISC specification](phonemic-transcription) is based on the original DISC spec from CELEX (see [English lexicon user's guide](https://catalog.ldc.upenn.edu/docs/LDC96L14/eug_let.pdf), pp. 31--32).
+APLS's [DISC specification]({{ '/doc/phonemic-transcription' | relative_url }}) is based on the original DISC spec from CELEX (see [English lexicon user's guide](https://catalog.ldc.upenn.edu/docs/LDC96L14/eug_let.pdf), pp. 31--32).
 Both specs use ASCII characters exclusively while maintaining a one-to-one mapping between symbols and English phonemes.
 APLS uses DISC to represent phonological layers internally, and end-users use DISC to perform searches on phonological layers.
 

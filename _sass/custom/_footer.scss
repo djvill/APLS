@@ -9,3 +9,18 @@
 .main footer {
 	color: $footer-text-color;
 }
+
+//Footnote separator
+.footnotes {
+  border-top: 1.5px $border-color solid;
+  margin-top: 2em;
+}
+.footnotes::before {
+  content: "Notes";
+  text-transform: uppercase;
+  font-style: italic;
+}
+//Line above footer
+main + hr {
+  height: 2px;
+}

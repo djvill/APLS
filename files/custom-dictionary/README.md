@@ -1,17 +1,19 @@
 ---
 title: Custom dictionary
 layout: default
-permalink: /files/custom-dictionary
+permalink: /doc/custom-dictionary
+parent: Transcription
 has_children: yes
 has_toc: no
-last_modified_date: 2023-09-06T21:01:54-04:00
+nav_order: 30
+last_modified_date: 2024-10-16T11:47:58-04:00
 ---
 
 # {{ page.title }}
 {:.no_toc}
 
 
-The folder [`/files/custom-dictionary/`](https://github.com/djvill/APLS/tree/main/files/custom-dictionary) contains files for APLS's custom dictionary.
+On the APLS GitHub repository, the folder [`/files/custom-dictionary/`](https://github.com/djvill/APLS/tree/main/files/custom-dictionary) contains files for APLS's custom dictionary.
 
 {% include page_toc.html collapsible=true %}
 
@@ -36,10 +38,10 @@ The file `APLS-dict.csv` must conform to the following format:
 	- A _comment_ of the form `// <comment>`
 	- A _blank line_
 - Word-forms must match the regular expression `/^[A-Za-z'-]+~?$/`
-	- That is, they may consist only of (a) letters of the English alphabet, (b) the characters `'` (apostrophe) or `-` (hyphen), and they may end with an optional `~` (tilde)
+	- That is, they may consist only of letters of the English alphabet and/or the characters `'` (apostrophe) or `-` (hyphen), and they may end with an optional `~` (tilde)
 		- Only literal apostrophes or hyphens are acceptable, not lookalikes like `‘` (Unicode U+2018 "curly opening single quote") or `–` (Unicode U+2013 "en dash")
 		- Tildes (hesitation markers) may only come at the end of the word-form
-- Phonemes may only use the [APLS subset of the DISC phonemic alphabet](/APLS/doc/phonemic-transcription), including syllabification/stress markers: `pbtdkgNmnlrfvTDszSZjhwJ_FHPiIE{Q$VUu@78#3912645'"-`
+- Phonemic representations may only use the [APLS subset of the DISC phonemic alphabet](/APLS/doc/phonemic-transcription), including syllabification/stress markers: `pbtdkgNmnlrfvTDszSZjhwJ_FHPiIE{Q$VUu@78#3912645'"-`
 - After the header (first 7 rows), comments are interpreted as separating dictionary sections
 
 

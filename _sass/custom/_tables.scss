@@ -5,14 +5,6 @@
 .table-wrapper {
 	//All tables
 	&:has(.disc-table), &:has(#syll-table) {
-		//Smaller cells
-		th, td {
-			padding: 5px;
-			min-width: 0px;
-			border-left: none;
-			border-right: none;
-		}
-		
 		//Row borders
 		padding: 2px;
 		table {
@@ -23,6 +15,14 @@
 		}
 		tr:not(:last-child) {
 			border-bottom: 1px solid $border-color;
+		}
+    
+		//Smaller cells
+		th, td {
+			padding: 5px;
+			min-width: 0px;
+			border-left: none;
+			border-right: none;
 		}
 	}
 	

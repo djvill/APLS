@@ -9,6 +9,9 @@ Gemfile*
 # Unisyn dictionary
 files/custom-dictionary/apls.unisyn
 
+# Rproj
+*.Rproj
+.Rproj.user
 
 #### OSs ####
 
@@ -85,3 +88,4 @@ Temporary Items
 
 # .nfs files are created when an open file is removed but is still being accessed
 .nfs*
+

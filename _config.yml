@@ -10,6 +10,7 @@ baseurl: /APLS
 exclude:
   - node_modules
   - script
+  - .Rproj.user
 
 sass:
   style: :compressed
@@ -31,6 +32,8 @@ lang: en-US
 collections:
   versions:
     sort_by: version
+  layers:
+    sort_by: name
 
 ########################################
 #### Config for just-the-docs theme ####
@@ -72,6 +75,10 @@ callouts:
   warning:
     title: Warning
     color: red
+  try-it:
+    color: green
+  under-the-hood:
+    color: blue
 
 ##Google Analytics
 ga_tracking: G-TT6NWBCLVW 

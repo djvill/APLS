@@ -1,0 +1,16 @@
+transcript:
+  short_definition: A single NP (which may benefit from further context that it doesn't get here).
+  # category (MAYBE): Section of the glossary where the word will be found. Either "LaBB-CAT" (e.g., _transcript_), "Linguistics" (e.g., _sociolinguistic interview_), or "Data science" (e.g., _unique identifier_)
+  definition: |
+    Using multiple paragraphs if necessary.
+    
+    Can also include Markdown styling (incl. callouts)
+  incontext:
+    - links to **auto-generated** anchors
+    - on pages
+    - where the term appears
+    - (once per page)
+  related:
+    - similar concepts
+    - and/or
+    - terms that could be easily confused (e.g., _transcript_ vs. _transcription_)
