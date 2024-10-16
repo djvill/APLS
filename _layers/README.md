@@ -16,7 +16,7 @@ These files, in turn, will get used to populate the layer reference pages in `do
 
 ## YAML attributes
 
-- `title`: Layer name
+- `name`: Layer name
 - `synced`: Attributes from layer definitions saved to APLS, automatically synced by `sync-layers.R`
 - `parallel`: Whether there are parallel tags per annotation (e.g., multiple possible phonemic representations)
 - `notation`: Notation system used (links to `doc/notation-systems`)
