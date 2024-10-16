@@ -3,13 +3,8 @@ title: Transcription convention
 layout: default
 permalink: /doc/transcription-convention
 parent: Transcription
-<<<<<<< HEAD:doc/Transcription-Convention.md
-nav_order: 2
-last_modified_date: 2024-09-30T14:43:22-04:00
-=======
 nav_order: 10
-last_modified_date: 2024-10-15T14:54:58-04:00
->>>>>>> pages-in-progress:doc/transcription/transcription-convention.md
+last_modified_date: 2024-10-16T11:50:54-04:00
 ---
 
 
