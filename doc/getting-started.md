@@ -3,7 +3,7 @@ title: Getting started
 layout: default
 permalink: /doc/getting-started
 nav_order: 10
-last_modified_date: 2024-10-16T11:36:01-04:00
+last_modified_date: 2024-10-16T11:39:10-04:00
 ---
 
 # {{ page.title }}
@@ -105,10 +105,10 @@ This site uses special formatting to denote specific types of information:
 
 - **Key terms**
   - Example: <span class="keyterm">annotation</span>
-  - Linked to corresponding entries in the [glossary]({{ '/doc/glossary' | relative_url }})
+  <!-- - Linked to corresponding entries in the [glossary]({{ '/doc/glossary' | relative_url }}) -->
 - **Layers**
   - Example: <span class="layer">orthography</span>
-  - Linked to an extensive [layer reference]({{ '/doc/layer-reference' | relative_url }})
+  <!-- - Linked to an extensive [layer reference]({{ '/doc/layer-reference' | relative_url }}) -->
 - **External links** (i.e., a link that's not to a documentation page or an APLS page)
   - Example: [LaBB-CAT]
 - **Input/output text** (i.e., something you actually type into APLS, or information that APLS displays like a speaker code)

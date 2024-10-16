@@ -29,7 +29,7 @@ function addA(node, type) {
   } else if (type === "layer") {
     var page = "/APLS/doc/layer-reference";
   }
-  a.href = page + "#" + hrefName;
+  // a.href = page + "#" + hrefName;
 }
 
 //Add anchors once page loads
