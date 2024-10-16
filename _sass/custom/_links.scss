@@ -53,6 +53,7 @@ a:not([class]) {
   [href*="//apls.pitt.edu"],
   [href^="https://djvill.github.io/APLS"],
   [href^="https://docs.google.com/forms/"],
+  [href*="//labb-cat.linguistics.pitt.edu"],
   /* serving locally */
   [href*="localhost"]
 )) {
