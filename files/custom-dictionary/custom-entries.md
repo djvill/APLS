@@ -4,7 +4,7 @@ layout: default
 permalink: /files/custom-entries
 parent: Custom dictionary
 search_exclude: true
-last_modified_date: 2024-10-15T14:10:53-04:00
+last_modified_date: 2024-10-18T13:35:18-04:00
 ---
 
 # {{ page.title }}
@@ -45,6 +45,7 @@ last_modified_date: 2024-10-15T14:10:53-04:00
 - Glassport
 - Glenshaw
 - Greensburg
+- Hagerstown
 - Haine
 - Herron
 - Homewood
@@ -106,11 +107,13 @@ last_modified_date: 2024-10-15T14:10:53-04:00
 - Spang's
 - Steeler
 - Steelers
+- Swisshelm
 - Swissvale
 - Thornberry
 - Treesdale
 - Uniontown
 - Warrendale
+- Waynesboro
 - Waynesburg
 - Wendover
 - Wexford
@@ -247,6 +250,7 @@ last_modified_date: 2024-10-15T14:10:53-04:00
 - gelatos
 - Grier
 - gummies
+- homeschool
 - humongous
 - impatien
 - impatiens
@@ -319,6 +323,7 @@ last_modified_date: 2024-10-15T14:10:53-04:00
 - coanchors
 - collab
 - craneman
+- Ec
 - grandpap
 - grandpaps
 - heart-shaped

@@ -31,6 +31,7 @@ Filmore
 Glassport
 Glenshaw
 Greensburg
+Hagerstown
 Haine
 Herron
 Homewood
@@ -92,11 +93,13 @@ Skeetersville
 Spang's
 Steeler
 Steelers
+Swisshelm
 Swissvale
 Thornberry
 Treesdale
 Uniontown
 Warrendale
+Waynesboro
 Waynesburg
 Wendover
 Wexford
@@ -233,6 +236,7 @@ gelato
 gelatos
 Grier
 gummies
+homeschool
 humongous
 impatien
 impatiens
@@ -305,6 +309,7 @@ coanchor
 coanchors
 collab
 craneman
+Ec
 grandpap
 grandpaps
 heart-shaped
