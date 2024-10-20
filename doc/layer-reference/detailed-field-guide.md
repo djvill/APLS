@@ -1,13 +1,13 @@
 ---
-title: Notation systems
+title: Detailed field guide
 layout: default
-permalink: /doc/notation-systems
+permalink: /doc/detailed-field-guide
 parent: Layer reference
-nav_order: 30
+nav_order: 20
 last_modified_date: 2024-10-20T15:07:54-04:00
 ---
 
 # Layers: {{ page.title }}
 {:.no_toc}
 
-{% include page_toc.html collapsible=true %}
+<!-- Detailed layer reference built from _layers -->
