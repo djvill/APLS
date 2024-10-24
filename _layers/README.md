@@ -51,7 +51,7 @@ These files, in turn, will get used to populate the layer reference pages in `do
        - The "quick reference card" table at `doc/quick-reference-card`
   1. Run `sync-layers.R` to create a Markdown file for the new layer and populate its YAML header
      - If you want to test out a layer config **without the layer showing up in `doc/`, add it to the `testing` project** (you're probably doing that anyway!). While all layers in APLS get a Markdown file, those with `project: testing` get ignored
-  1. Fill the following YAML fields manually: `inputs`, `downstream layers`, `notation`
+  1. Manually fill the non-`synced` YAML fields
   1. Fill the body of the Markdown file with a longer description
      - Any headings should be level-3
 - If you **change _anything_ about a layer config in APLS**:
