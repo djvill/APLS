@@ -4,7 +4,7 @@ layout: default
 permalink: /doc/phonemic-transcription
 parent: Transcription
 nav_order: 3
-last_modified_date: 2024-10-02T19:45:46-04:00
+last_modified_date: 2024-10-26T16:15:12-04:00
 ---
 
 
@@ -20,16 +20,20 @@ In APLS, IPA is used only for _displaying_ phonological data to end-users.
 
 [^celex]: DISC, developed for the [CELEX](https://catalog.ldc.upenn.edu/LDC96L14) project, stands for **di**stinct **s**ingle **c**haracters. For more details, see CELEX [English documentation](https://catalog.ldc.upenn.edu/docs/LDC96L14/eug_let.pdf), section 2.4.1 (starting on p. 30 of the PDF).
 
-[^why-not-ipa]: For the purpose of representing speech sounds in a database like APLS, IPA has several substantial drawbacks:
-- Variability in representations: What is the IPA transcription for the phoneme in English _prize_? Depending on the author, it might be `aɪ` or `aj` or `ai`. The "ch" affricate might be `t͡ʃ` or `tʃ`; the last sound(s) in _apple_ might be `əl` or `əɫ` or `l̩`. This effectively breaks the one-to-one sound-symbol mapping that is absolutely necessary from a data perspective.
-- Lookalike characters: `g` (typewriter g) is often substituted for `ɡ`, `:` (colon) for `ː`, `'` (apostrophe) for `ˈ`, superscript `j` for `ʲ`, etc. This also breaks the one-to-one mapping, and it can lead to hard-to-detect inconsistencies in the data.
-- Multiple characters per phoneme: Some phonemes are represented with more than one IPA character because they're multi-part sounds (e.g., diphthongs, affricates). This makes it harder to split strings of phonemes into individual phonemes, which has implications for large-scale processing of phonological data.
-It must be said that DISC is not drawback-free:
-- Unfamiliarity and adoption: Very few linguists are familiar with DISC, although [most non-syllabic consonants](#non-syllabic-consonants) match their IPA counterparts.
-- Linguistically limited: Although it's not relevant to APLS, DISC is limited to English, German, and Dutch.
-- Pre-/ɹ/ vowels: In keeping with [Wells lexical sets](https://en.wikipedia.org/wiki/Lexical_set), DISC provides different symbols for (e.g.) the vowels in _near_ and _fleece_. There is phonetic, phonological, and historical evidence for these being different phonemes in even rhotic varieties of English---hence why it was decided that the APLS subset of DISC would retain this distinction---but this may present a learning curve for North American Englishes researchers who aren't accustomed to thinking of these as separate phonemes. ([By convention](#transcribing-words-using-disc), these are always followed by the `r` phoneme in APLS.)
-- Some overlap: Two symbols each correspond to a pair of [Wells lexical sets](https://en.wikipedia.org/wiki/Lexical_set): `@` for commA and lettER, `$` for thought and force. 
-- Escape characters: Some DISC characters have special meaning in regular expressions (e.g., `{`, `$`), so they need to be "escaped" to be interpreted literally. That said, some other ASCII-based phonetic alphabets are much more challenging in this regard (e.g., [X-SAMPA](https://en.wikipedia.org/wiki/X-SAMPA) uses `\`).
+[^why-not-ipa]: 
+    For the purpose of representing speech sounds in a database like APLS, IPA has several substantial drawbacks:
+
+    - Variability in representations: What is the IPA transcription for the phoneme in English _prize_? Depending on the author, it might be `aɪ` or `aj` or `ai`. The "ch" affricate might be `t͡ʃ` or `tʃ`; the last sound(s) in _apple_ might be `əl` or `əɫ` or `l̩`. This effectively breaks the one-to-one sound-symbol mapping that is absolutely necessary from a data perspective.
+    - Lookalike characters: `g` (typewriter g) is often substituted for `ɡ`, `:` (colon) for `ː`, `'` (apostrophe) for `ˈ`, superscript `j` for `ʲ`, etc. This also breaks the one-to-one mapping, and it can lead to hard-to-detect inconsistencies in the data.
+    - Multiple characters per phoneme: Some phonemes are represented with more than one IPA character because they're multi-part sounds (e.g., diphthongs, affricates). This makes it harder to split strings of phonemes into individual phonemes, which has implications for large-scale processing of phonological data.
+    
+    It must be said that DISC is not drawback-free:
+    
+    - Unfamiliarity and adoption: Very few linguists are familiar with DISC, although [most non-syllabic consonants](#non-syllabic-consonants) match their IPA counterparts.
+    - Linguistically limited: Although it's not relevant to APLS, DISC is limited to English, German, and Dutch.
+    - Pre-/ɹ/ vowels: In keeping with [Wells lexical sets](https://en.wikipedia.org/wiki/Lexical_set), DISC provides different symbols for (e.g.) the vowels in _near_ and _fleece_. There is phonetic, phonological, and historical evidence for these being different phonemes in even rhotic varieties of English---hence why it was decided that the APLS subset of DISC would retain this distinction---but this may present a learning curve for North American Englishes researchers who aren't accustomed to thinking of these as separate phonemes. ([By convention](#transcribing-words-using-disc), these are always followed by the `r` phoneme in APLS.)
+    - Some overlap: Two symbols each correspond to a pair of [Wells lexical sets](https://en.wikipedia.org/wiki/Lexical_set): `@` for commA and lettER, `$` for thought and force. 
+    - Escape characters: Some DISC characters have special meaning in regular expressions (e.g., `{`, `$`), so they need to be "escaped" to be interpreted literally. That said, some other ASCII-based phonetic alphabets are much more challenging in this regard (e.g., [X-SAMPA](https://en.wikipedia.org/wiki/X-SAMPA) uses `\`).
 
 APLS uses a subset of DISC relevant to North American Englishes.
 In APLS, we use DISC symbols for _phonemic_ representations of sounds, not _phonetic_ representations.
