@@ -32,8 +32,8 @@ inputs:
     type: layer
 versions:
   first_appeared: 0.1.0
-  last_updated: 0.1.0
-last_modified_date: 2024-10-22T15:39:09-04:00
+  last_updated: 0.1.2
+last_modified_date: 2024-10-28T09:51:13-04:00
 ---
 
 This layer contains all possible phonemic representations of the word.
@@ -69,5 +69,5 @@ If there are multiple possible phonemic representations, the aligner chooses the
 ## How it's generated
 
 1. The word's <span class="layer">{{ page.inputs[0].input }}</span> annotation is used to look up phonemic representations in the [{{ page.inputs[1].input }}] and [{{ page.inputs[2].input }}]({{ 'doc/custom-dictionary-entries/' | relative_url }}), returning multiple entries if applicable.
-1. If the <span class="layer">{{ page.inputs[0].input }}</span> annotation ends in one or more clitics (*'s*, _s'_, _'d_, _'ll_, *'ve*) and there's no corresponding dictionary entry, a form of this annotation _without_ any clitics (<span class="layer">{{ page.inputs[3].input }}</span>) is used to look up phonemic representations in the dictionaries (<span class="layer">{{ page.inputs[4].input }}</span>). 
+1. If the <span class="layer">{{ page.inputs[0].input }}</span> annotation ends in one or more clitics (*'s*, _s'_, _'d_, _'ll_, _'ve_, _'d've_, *'ll've*) and there's no corresponding dictionary entry, a form of this annotation _without_ any clitics (<span class="layer">{{ page.inputs[3].input }}</span>) is used to look up phonemic representations in the dictionaries (<span class="layer">{{ page.inputs[4].input }}</span>). 
 1. If the word has a <span class="layer">{{ page.inputs[5].input }}</span> annotation, this overrides the output of the previous steps.

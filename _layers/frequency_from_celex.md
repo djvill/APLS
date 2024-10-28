@@ -1,6 +1,6 @@
 ---
 synced:
-  short_description: Word frequency in CELEX English reference corpus
+  short_description: How often the current word appears in the CELEX English reference corpus
   layer_id: 63
   alignment: complete interval
   project: lexicon
@@ -16,23 +16,18 @@ synced:
     ON cxen_wordformortho.IdNum \\= cxen_wordform.IdNum\\r\\n WHERE cxen_wordformortho.WordDia
     \\= ?\\r\\n ORDER BY cxen_wordform.Cob DESC\r\nPronounceOverridesCelex=false\r\nLayerId=2\r\n"
 last_sync_modified_date: 2024-10-24T16:25:31-0400
-parallel: Whether there are parallel tags per annotation (e.g., multiple possible
-  phonemic representations)
+parallel: yes
 notation:
-  primary: Main category of notation system (e.g., English, downcased English, Penn
-    Treebank tags, DISC); links to `doc/notation-systems`
-  additional: _If applicable_, symbols that augment the primary notation system (e.g.,
-    transcription prosody symbols, morpheme marker, DISC syllabification/stress, foll_segment
-    pause symbol). Delete if not applicable
-  missing: How missing values should be interpreted
+  primary: Counts
+  missing: Word is not in CELEX
 inputs:
-  - input: Name of input
-    type: '`layer`, `dictionary`, `algorithm`, `transcription`, or `other`'
-  - input: Name of input
-    type: '`layer`, `dictionary`, `algorithm`, `transcription`, or `other`'
+  - input: orthography
+    type: layer
+  - input: CELEX English
+    type: dictionary
 versions:
-  first_appeared: Where layer first appeared
-  last_modified: Where layer was last modified
+  first_appeared: 0.1.0
+  last_modified: 0.1.0
 last_modified_date: Handled by Git pre-commit hook
 ---
 

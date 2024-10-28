@@ -153,9 +153,9 @@ blankAttr <- list(last_sync_modified_date = Sys.time() |>
                                   additional = "_If applicable_, symbols that augment the primary notation system (e.g., transcription prosody symbols, morpheme marker, DISC syllabification/stress, foll_segment pause symbol). Delete if not applicable",
                                   missing = "How missing values should be interpreted"),
                   inputs = list(list(input = "Name of input",
-                                     type = "`layer`, `dictionary`, `algorithm`, `transcription`, or `other`"),
+                                     type = "layer, dictionary, algorithm, script, transcription, or other"),
                                 list(input = "Name of input",
-                                     type = "`layer`, `dictionary`, `algorithm`, `transcription`, or `other`")),
+                                     type = "layer, dictionary, algorithm, script, transcription, or other")),
                   versions = list(first_appeared = "Where layer first appeared",
                                   last_modified = "Where layer was last modified"),
                   last_modified_date = "Handled by Git pre-commit hook")

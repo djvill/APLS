@@ -34,7 +34,7 @@ These files, in turn, will get used to populate the layer reference pages in `do
   - `missing`: How missing values should be interpreted
 - `inputs`: Layers and/or other inputs (e.g., APLS custom dictionary) that go into the layer. In a bulleted list where each entry has:
   - `input`: Name of input
-  - `type`: `layer`, `dictionary`, `algorithm`, `transcription`, or `other`
+  - `type`: `layer`, `dictionary`, `algorithm`, `script`, `transcription`, or `other`
 - `versions`: APLS versions (once versioning begins in earnest), where layer...
   - `first_appeared`
   - `last_modified`
