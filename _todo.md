@@ -2,7 +2,12 @@
 
 ## Layer reference
 
-- Write `sync-layers.R` (see [`_layers/README.md`](_layers/README.md))
+- In links JS, add layers' `short_description` as `title` attribute
+
+
+### Down the line
+
+It'd be cool to have `sync-layers.R` report on the number of annotations and/or a sampling of the most common annotations.
 
 
 ## Glossary

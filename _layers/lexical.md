@@ -16,7 +16,7 @@ last_sync_modified_date: 2024-10-24T16:25:31-0400
 parallel: no
 notation:
   primary: English spelling
-  additional: `~` for incomplete words"
+  additional: "`~` for incomplete words"
   missing: None supplied in original transcription
 inputs:
   - input: Manually transcribed

@@ -17,7 +17,7 @@ parallel: no
 notation:
   primary: English spelling
   additional: 
-    - `~` for hesitations
+    - "`~` for hesitations"
     - Transcription pause markers
 inputs:
   - input: Manually transcribed
