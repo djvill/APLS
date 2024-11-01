@@ -33,6 +33,7 @@ Glenshaw
 Greensburg
 Hagerstown
 Haine
+Heldman
 Herron
 Homewood
 Idlewild
@@ -103,6 +104,7 @@ Waynesboro
 Waynesburg
 Wendover
 Wexford
+Whiteside
 Whittier
 Wiley
 Wilkinsburg
@@ -181,6 +183,7 @@ Koppers
 Loews
 Lutz's
 Mariani's
+McCrory's
 Mezzanotte
 Panera
 Parma's
@@ -209,6 +212,7 @@ bachelorettes
 bacterias
 balled
 balling
+Black-owned
 bling
 busing
 capris
@@ -287,6 +291,7 @@ stogies
 tarp
 tarps
 townie
+transracial
 unironically
 uppity
 webcam
@@ -336,6 +341,7 @@ rollerskates
 rollerskating
 Sambo
 scaredy
+Shaka
 Shawntae
 sociolinguists
 sucky

@@ -4,7 +4,7 @@ layout: default
 permalink: /files/custom-entries
 parent: Custom dictionary
 search_exclude: true
-last_modified_date: 2024-10-18T13:35:18-04:00
+last_modified_date: 2024-11-01T13:16:59-04:00
 ---
 
 # {{ page.title }}
@@ -47,6 +47,7 @@ last_modified_date: 2024-10-18T13:35:18-04:00
 - Greensburg
 - Hagerstown
 - Haine
+- Heldman
 - Herron
 - Homewood
 - Idlewild
@@ -117,6 +118,7 @@ last_modified_date: 2024-10-18T13:35:18-04:00
 - Waynesburg
 - Wendover
 - Wexford
+- Whiteside
 - Whittier
 - Wiley
 - Wilkinsburg
@@ -195,6 +197,7 @@ last_modified_date: 2024-10-18T13:35:18-04:00
 - Loews
 - Lutz's
 - Mariani's
+- McCrory's
 - Mezzanotte
 - Panera
 - Parma's
@@ -223,6 +226,7 @@ last_modified_date: 2024-10-18T13:35:18-04:00
 - bacterias
 - balled
 - balling
+- Black-owned
 - bling
 - busing
 - capris
@@ -301,6 +305,7 @@ last_modified_date: 2024-10-18T13:35:18-04:00
 - tarp
 - tarps
 - townie
+- transracial
 - unironically
 - uppity
 - webcam
@@ -350,6 +355,7 @@ last_modified_date: 2024-10-18T13:35:18-04:00
 - rollerskating
 - Sambo
 - scaredy
+- Shaka
 - Shawntae
 - sociolinguists
 - sucky
