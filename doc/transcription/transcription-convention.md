@@ -4,7 +4,7 @@ layout: default
 permalink: /doc/transcription-convention
 parent: Transcription
 nav_order: 10
-last_modified_date: 2024-10-18T13:34:55-04:00
+last_modified_date: 2024-11-04T12:16:14-05:00
 ---
 
 
@@ -297,6 +297,9 @@ Reminder: In this document, `fixed-width font` is used for things you actually t
 
 It's sometimes necessary to convert Praat (`.TextGrid`) files to Elan (`.eaf`), or vice versa.
 Both can be accomplished in Elan.
+
+{: .note }
+> LVC students: You can ignore this section. You'll submit your transcriptions as `.TextGrid`, so no need to convert.
 
 ### Praat to Elan
 
