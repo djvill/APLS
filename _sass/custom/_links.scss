@@ -9,7 +9,7 @@ a:not([class]) {
 	code {
 		text-decoration: underline;
 		text-decoration-color: $code-link-underline-color;
-		text-underline-offset: 2px;
+		text-underline-offset: 0.12em;
 		
 		&:hover {
 			color: $code-link-hover-color;
@@ -34,8 +34,8 @@ a:not([class]) {
   }
 }
 .layer > a {
-  text-decoration: underline dotted $link-color;
-  text-underline-offset: 2px;
+  text-decoration: underline 0.1em dotted $link-color;
+  text-underline-offset: 0.12em;
   
   &:hover {
     text-decoration-color: $link-color;
