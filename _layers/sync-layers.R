@@ -49,36 +49,10 @@ layers <- layers |>
   mutate(across(where(is.character), ~ na_if(.x, ""))) |>
   ##Nicer column names
   rename(short_description = description, project = category, parent = parentId, 
-         data_type = type) |>
+         data_type = type, vertical_peers = peers) |>
   ##Nicer column order
   relocate(id, short_description, layer_id, .before=1) |>
   relocate(extra, .after=last_col())
-
-
-##Add user-interaction behaviors
-layers |>
-  filter(!str_detect(id, "^(participant|transcript)_")) |> 
-  mutate(
-    id,
-    ##Do count boxes show up in matches > CSV Export?
-    ##  https://github.com/nzilbb/labbcat-server/blob/9ee4cb3/user-interface/src/main/angular/projects/labbcat-common/src/lib/layer-checkboxes/layer-checkboxes.component.html#L187-L190
-    includeCounts = case_when(
-      id %in% c("turn", "utterance") ~ NA, ##Not shown in matches > CSV Export
-      id %in% c("participant", "corpus", "word") ~ FALSE,
-      peers ~ TRUE,
-      .default=FALSE),
-    ##Do "anchor" symbols show up in matches > CSV Export?
-    ##  https://github.com/nzilbb/labbcat-server/blob/9ee4cb3/user-interface/src/main/angular/projects/labbcat-common/src/lib/layer-checkboxes/layer-checkboxes.component.ts#L162-L169
-    includeAnchorSharing = case_when(
-      id %in% c("turn", "utterance") ~ NA, ##Not shown in matches > CSV Export
-      id=="word" ~ FALSE,
-      !(scope %in% c("M", "W", "S")) ~ FALSE,
-      alignment != 2 ~ FALSE,
-      peers ~ TRUE,
-      .default=FALSE),
-    .keep="used") |>
-  arrange(pick(-id), id) |>
-  print(n=Inf)
 
 ##Get relevant subset of layers/columns
 transcript_layers <-
@@ -92,12 +66,13 @@ transcript_layers <-
     searchable, access, label, notes,
     ##List-columns
     validLabels, validLabelsDefinition,
-    ##Graph-algebraic columns (see https://doi.org/10.1016/j.csl.2017.01.004)
-    parentIncludes, peers, peersOverlap, saturated,
+    ##Graph-algebraic columns (see https://doi.org/10.1016/j.csl.2017.01.004 )
+    parentIncludes, peersOverlap, saturated,
     ##enabled is often subject to change
     enabled,
     ##I can't figure out what subtype does
     subtype))
+
 
 ##Translate columns to more readable format
 transcript_layers <- transcript_layers |>
@@ -128,7 +103,7 @@ transcript_layers <- transcript_layers |>
            ##  the hidden scopes 'C' for corpus, 'E' for episode, 'G' for
            ##  participant/main_participant/transcript, though they never show
            ##  up with layer icons)
-           # !(scope %in% c("M", "W", "S")) ~ "complete interval",
+           # scope %in% c("non-transcript", "span") ~ "complete interval",
            
            ##Straightforward translations
            .x==0 ~ "complete interval",
@@ -140,9 +115,11 @@ transcript_layers <- transcript_layers |>
   ##All layers can be exported from https://apls.pitt.edu/labbcat/transcripts
   ##  (though some appear in weird ways--or not at all--depending on the format)
   mutate(transcripts_exportable = TRUE,
+         
          ##main_participant, turn, and utterance can't be exported from
          ##  https://apls.pitt.edu/labbcat/matches
          matches_exportable = !(id %in% c("main_participant", "turn", "utterance")),
+         
          ##How layer can be used in https://apls.pitt.edu/labbcat/search
          searchable = case_when(
            ##Via filters
@@ -151,10 +128,29 @@ transcript_layers <- transcript_layers |>
            id %in% c("turn","utterance") ~ "anchor-only",
            ##In search matrix
            TRUE ~ "search-matrix"),
+         
          ##Whether layer can be selected/deselected in 
          ##  https://apls.pitt.edu/labbcat/transcript (FALSE means that it's
          ##  displayed through other means)
          viewable = !(id %in% c("comment", "noise")) & layer_id >= 0,
+         
+         ##Do count boxes show up in matches > CSV Export?
+         ##  https://github.com/nzilbb/labbcat-server/blob/9ee4cb3/user-interface/src/main/angular/projects/labbcat-common/src/lib/layer-checkboxes/layer-checkboxes.component.html#L187-L190
+         export_includeCounts = case_when(
+           !matches_exportable ~ NA, ##Not shown in matches > CSV Export
+           id %in% c("participant", "corpus", "word") ~ FALSE,
+           vertical_peers ~ TRUE,
+           .default=FALSE),
+         
+         ##Do "anchor" symbols show up in matches > CSV Export?
+         ##  https://github.com/nzilbb/labbcat-server/blob/9ee4cb3/user-interface/src/main/angular/projects/labbcat-common/src/lib/layer-checkboxes/layer-checkboxes.component.ts#L162-L169
+         export_includeAnchorSharing = case_when(
+           !matches_exportable ~ NA, ##Not shown in matches > CSV Export
+           id=="word" ~ FALSE,
+           scope %in% c("non-transcript", "span") ~ FALSE,
+           alignment != "sub-interval(s)" ~ FALSE,
+           vertical_peers ~ TRUE,
+           .default=FALSE),
          .before=extra)
 
 
@@ -179,6 +175,11 @@ old_synced <-
             ##Make sure NULL attributes don't get removed
             map(~ replace(.x, is.null(.x), NA)),
           .id="id")
+##If needed, add blank columns to old_synced to match transcript_layers
+new_cols <- setdiff(colnames(transcript_layers), colnames(old_synced))
+old_synced <- old_synced |>
+  add_column(!!!set_names(rep(NA, length(new_cols)), new_cols))
+
 
 ##Identify layers that need new files & layers that need updated files
 to_create <- anti_join(transcript_layers, old_synced, "id")
@@ -190,7 +191,6 @@ to_update <- anti_join(old_synced, transcript_layers, colnames(old_synced)[-1])
 ##Add blank attributes (to be filled in manually for new layers)
 blankAttr <- list(last_sync_modified_date = Sys.time() |>
                     format("%Y-%m-%dT%H:%M:%S%z"),
-                  parallel = "Whether there are parallel tags per annotation (e.g., multiple possible phonemic representations)",
                   notation = list(primary = "Main category of notation system (e.g., English, downcased English, Penn Treebank tags, DISC); links to `doc/notation-systems`",
                                   additional = "_If applicable_, symbols that augment the primary notation system (e.g., transcription prosody symbols, morpheme marker, DISC syllabification/stress, foll_segment pause symbol). Delete if not applicable",
                                   missing = "How missing values should be interpreted"),
