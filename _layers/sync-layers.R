@@ -54,6 +54,32 @@ layers <- layers |>
   relocate(id, short_description, layer_id, .before=1) |>
   relocate(extra, .after=last_col())
 
+
+##Add user-interaction behaviors
+layers |>
+  filter(!str_detect(id, "^(participant|transcript)_")) |> 
+  mutate(
+    id,
+    ##Do count boxes show up in matches > CSV Export?
+    ##  https://github.com/nzilbb/labbcat-server/blob/9ee4cb3/user-interface/src/main/angular/projects/labbcat-common/src/lib/layer-checkboxes/layer-checkboxes.component.html#L187-L190
+    includeCounts = case_when(
+      id %in% c("turn", "utterance") ~ NA, ##Not shown in matches > CSV Export
+      id %in% c("participant", "corpus", "word") ~ FALSE,
+      peers ~ TRUE,
+      .default=FALSE),
+    ##Do "anchor" symbols show up in matches > CSV Export?
+    ##  https://github.com/nzilbb/labbcat-server/blob/9ee4cb3/user-interface/src/main/angular/projects/labbcat-common/src/lib/layer-checkboxes/layer-checkboxes.component.ts#L162-L169
+    includeAnchorSharing = case_when(
+      id %in% c("turn", "utterance") ~ NA, ##Not shown in matches > CSV Export
+      id=="word" ~ FALSE,
+      !(scope %in% c("M", "W", "S")) ~ FALSE,
+      alignment != 2 ~ FALSE,
+      peers ~ TRUE,
+      .default=FALSE),
+    .keep="used") |>
+  arrange(pick(-id), id) |>
+  print(n=Inf)
+
 ##Get relevant subset of layers/columns
 transcript_layers <-
   layers |>
@@ -88,10 +114,26 @@ transcript_layers <- transcript_layers |>
                                        "string" ~ "text",
                                        "ipa" ~ "phonological",
                                        "number" ~ "numeric")),
-         across(alignment, ~ case_match(.x, 
-                                        0 ~ "complete interval",
-                                        1 ~ "timepoint(s)",
-                                        2 ~ "sub-interval(s)")))
+         across(alignment, ~ case_when(
+           ##turn/word/segment *technically* have alignment=2 because that's
+           ##  relative to their parents (participant/turn/word), but
+           ##  *conceptually* they correspond to a "full" phrase/word/segment
+           ##However, LaBB-CAT uses the underlying alignment to style layer
+           ##  icons, so for now, keep this as-is.
+           # id %in% c("turn","word","segment") ~ "complete interval",
+           
+           ##Same story for phrase layers---LaBB-CAT uses the sub-intervals
+           ##  icon; for exporting matches to CSV, it treats phrase layers as
+           ##  though they can't have horizontal peers (and actually, ditto for
+           ##  the hidden scopes 'C' for corpus, 'E' for episode, 'G' for
+           ##  participant/main_participant/transcript, though they never show
+           ##  up with layer icons)
+           # !(scope %in% c("M", "W", "S")) ~ "complete interval",
+           
+           ##Straightforward translations
+           .x==0 ~ "complete interval",
+           .x==1 ~ "timepoint(s)",
+           .x==2 ~ "sub-interval(s)")))
 
 ##Add attributes pertaining to how users can interact with layers
 transcript_layers <- transcript_layers |>
