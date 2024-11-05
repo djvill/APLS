@@ -1,7 +1,7 @@
 ---
 synced:
   short_description: All possible phonemic representations of the word, translated
-    to Montreal Forced Aligner US English IPA phoneset.
+    to Montreal Forced Aligner US English IPA phoneset
   layer_id: 82
   alignment: complete interval
   project: testing
@@ -33,3 +33,19 @@ Any headings should be level-3
 
 
 {% include linklist.html %}
+
+## Notes
+
+Developed based on:
+
+- MFA US English IPA phoneset: https://mfa-models.readthedocs.io/en/latest/dictionary/English/English%20%28US%29%20MFA%20dictionary%20v2_2_1.html
+- LaBB-CAT's DISC-to-IPA mapping: https://nzilbb.github.io/ag/apidocs/nzilbb/encoding/package-summary.html
+
+## Inputs
+
+(1) **ipa_phonemes** layer
+
+
+## Downstream layers
+
+Used by **mfa** for aligning the **mfaPhone** and **mfaWord** layers

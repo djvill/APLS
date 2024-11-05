@@ -44,3 +44,22 @@ Any headings should be level-3
 
 
 {% include linklist.html %}
+
+### How it's generated
+
+1. The word's <span class="layer">{{ page.inputs[0].input }}</span> annotation is used to look up phonemic representations in the [{{ page.inputs[1].input }}] and [{{ page.inputs[2].input }}]({{ 'doc/custom-dictionary-entries/' | relative_url }}), returning multiple entries if applicable.
+1. If the <span class="layer">{{ page.inputs[0].input }}</span> annotation ends in one or more clitics (*'s*, _s'_, _'d_, _'ll_, _'ve_, _'d've_, *'ll've*) and there's no corresponding dictionary entry, a form of this annotation _without_ any clitics (<span class="layer">{{ page.inputs[3].input }}</span>) is used to look up phonemic representations in the dictionaries (<span class="layer">{{ page.inputs[4].input }}</span>). 
+1. If the word has a <span class="layer">{{ page.inputs[5].input }}</span> annotation, this overrides the output of the previous steps.
+
+## Inputs
+
+(1) **segment** layer
+(2) (a) Unisyn APLS lexicon; (b) Supplemental APLS dictionary
+(3) **pronounce** layer
+
+
+### Input notes
+
+- (1) is matched against entries in (2) to build up syllable intervals.
+- (2b) is checked only if the wordform is not present in (2a).
+- An annotation in (3) overrides the output of the previous step.
