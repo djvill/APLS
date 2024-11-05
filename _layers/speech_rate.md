@@ -18,7 +18,6 @@ synced:
   extra: "#Mon Sep 16 12:57:50 EDT 2024\r\nLayerId=66\r\nParticipants=\r\nPattern=\r\nTranscripts=\r\nUtterances=true\r\nStatistic=Word
     Rate (per second)\r\nMillisecondsPauseThreshold=\r\nMainSpeakerOnly=false\r\nCorpora=false\r\nScopeLayerId=\r\nTranscriptParticipants=false\r\nTurns=false\r\nExcludedTranscriptTypes=-1\r\nSecondsContext=\r\n"
 last_sync_modified_date: 2024-11-05T15:56:24-0500
-parallel: no
 notation:
   primary: Numeric (syllables per second)
   missing: The current utterance doesn't have any <span class="layer">segment</span>

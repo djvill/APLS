@@ -23,7 +23,6 @@ synced:
     PronounceOverridesCelex=false
     LayerId=2
 last_sync_modified_date: 2024-11-05T15:56:24-0500
-parallel: yes
 notation:
   primary: English spelling (lowercase)
   missing: Word is not in CELEX

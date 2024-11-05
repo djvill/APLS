@@ -1,6 +1,6 @@
 ---
 synced:
-  short_description: The word's part of speech
+  short_description: The word's part(s) of speech
   layer_id: 89
   alignment: sub-interval(s)
   project: syntax
@@ -15,8 +15,7 @@ synced:
   export_includeCounts: no
   export_includeAnchorSharing: no
   extra: (none)
-last_sync_modified_date: 2024-11-05T15:56:24-0500
-parallel: yes
+last_sync_modified_date: 2024-11-05T16:02:47-0500
 notation:
   primary: Treebank part-of-speech tags
   missing: Word is redacted or an incomplete word

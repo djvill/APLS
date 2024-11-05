@@ -33,7 +33,6 @@ synced:
     RightPattern=Barbara Johnstone|Trista Pennington|.*
     OtherGroupBy=Not Aligned
 last_sync_modified_date: 2024-11-05T15:56:24-0500
-parallel: no
 notation:
   primary: Time/date
   missing: Force-alignment failed for this utterance (line)

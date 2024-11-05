@@ -17,7 +17,6 @@ synced:
   export_includeAnchorSharing: no
   extra: "#Mon Jul 31 14:26:51 EDT 2023\r\nLanguage=\r\nLexiconId=5\r\nFirstOnly=false\r\nField=pron_disc\r\nRecoverSyllables=false\r\nStripSyllStress=true\r\nLayerId=61\r\n"
 last_sync_modified_date: 2024-11-05T15:56:24-0500
-parallel: yes
 notation:
   primary: DISC
   missing: Word does not end in a clitic

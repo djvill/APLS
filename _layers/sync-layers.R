@@ -189,7 +189,10 @@ old_synced <- old_synced |>
 
 ##Identify layers that need new files & layers that need updated files
 to_create <- anti_join(transcript_layers, old_synced, "id")
-to_update <- anti_join(transcript_layers, old_synced, colnames(transcript_layers)[-1])
+to_update <- 
+  transcript_layers |>
+  mutate(across(scope, ~ replace_na(.x, ""))) |>
+  anti_join(old_synced, colnames(transcript_layers)[-1])
 
 ##Get last_sync_modified_date
 last_sync_modified_date <- 
@@ -240,7 +243,6 @@ if (write_new_files) {
 
 ##Make to_update structure match yaml
 to_update <- to_update |> 
-  mutate(across(scope, ~ replace_na(.x, ""))) |>
   nest(synced = -id) |>
   pull(synced, id) |>
   map(~ list(synced = .x))

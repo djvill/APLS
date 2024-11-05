@@ -16,7 +16,6 @@ synced:
   export_includeAnchorSharing: no
   extra: (none)
 last_sync_modified_date: 2024-11-05T15:56:24-0500
-parallel: no
 notation:
   primary: English spelling
   additional:

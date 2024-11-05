@@ -20,7 +20,6 @@ synced:
     ON cxen_wordformortho.IdNum \\= cxen_wordform.IdNum\\r\\n WHERE cxen_wordformortho.WordDia
     \\= ?\\r\\n ORDER BY cxen_wordform.Cob DESC\r\nPronounceOverridesCelex=false\r\nLayerId=2\r\n"
 last_sync_modified_date: 2024-11-05T15:56:24-0500
-parallel: yes
 notation:
   primary: Counts
   missing: Word is not in CELEX
