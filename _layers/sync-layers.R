@@ -162,11 +162,17 @@ md <-
   str_subset("README\\.md", negate=TRUE) |>
   set_names(~ str_remove(basename(.x), "\\.md$")) |>
   map(read_lines)
-##Extract YAML headers (lines between 1st & 2nd "---") as lists
+
+##Separate YAML header (lines between 1st & 2nd "---") & Markdown body
 yaml_bounds <- map(md, ~ str_which(.x, "^---$"))
+##YAML as list
 yaml <- map2(md, yaml_bounds, 
              ~ .x[(.y[1]+1):(.y[2]-1)] |>
                yaml.load())
+##Extract Markdown body
+body_md <- map2(md, yaml_bounds,
+                ~ .x[-c(1:.y[2])])
+
 ##Get "synced" attributes as a single dataframe
 old_synced <-
   yaml |>
@@ -175,22 +181,25 @@ old_synced <-
             ##Make sure NULL attributes don't get removed
             map(~ replace(.x, is.null(.x), NA)),
           .id="id")
+
 ##If needed, add blank columns to old_synced to match transcript_layers
 new_cols <- setdiff(colnames(transcript_layers), colnames(old_synced))
 old_synced <- old_synced |>
   add_column(!!!set_names(rep(NA, length(new_cols)), new_cols))
 
-
 ##Identify layers that need new files & layers that need updated files
 to_create <- anti_join(transcript_layers, old_synced, "id")
-to_update <- anti_join(old_synced, transcript_layers, colnames(old_synced)[-1])
+to_update <- anti_join(transcript_layers, old_synced, colnames(transcript_layers)[-1])
 
+##Get last_sync_modified_date
+last_sync_modified_date <- 
+  Sys.time() |>
+  format("%Y-%m-%dT%H:%M:%S%z")
 
 # Create files for new layers ---------------------------------------------
 
 ##Add blank attributes (to be filled in manually for new layers)
-blankAttr <- list(last_sync_modified_date = Sys.time() |>
-                    format("%Y-%m-%dT%H:%M:%S%z"),
+blankAttr <- list(last_sync_modified_date = last_sync_modified_date,
                   notation = list(primary = "Main category of notation system (e.g., English, downcased English, Penn Treebank tags, DISC); links to `doc/notation-systems`",
                                   additional = "_If applicable_, symbols that augment the primary notation system (e.g., transcription prosody symbols, morpheme marker, DISC syllabification/stress, foll_segment pause symbol). Delete if not applicable",
                                   missing = "How missing values should be interpreted"),
@@ -223,9 +232,32 @@ to_create <- to_create |>
 ##Optionally write new Markdown files
 if (write_new_files) {
   to_create |>
-    iwalk(~ write_lines(.x, paste0(.y, ".md")))
+    iwalk(~ write_lines(.x, paste0(.y, ".md"), sep="\r\n"))
 }
 
 
 # Update files for existing layers ----------------------------------------
 
+##Make to_update structure match yaml
+to_update <- to_update |> 
+  mutate(across(scope, ~ replace_na(.x, ""))) |>
+  nest(synced = -id) |>
+  pull(synced, id) |>
+  map(~ list(synced = .x))
+
+##For layers in to_update, replace "synced" YAML sublists with to_update
+new_yaml <- yaml |>
+  list_modify(!!!to_update) |>
+  map(~ assign_in(.x, "last_sync_modified_date", last_sync_modified_date)) |>
+  keep_at(names(to_update)) |>
+  map(as.yaml, indent.mapping.sequence=TRUE)
+
+##Add Markdown body
+new_md <- map2(new_yaml, keep_at(body_md, names(new_yaml)),
+               ~ c("---", str_remove(.x, "\n$"), "---", .y))
+
+##Optionally write updated Markdown files
+if (update_existing_files) {
+  new_md |>
+    iwalk(~ write_lines(.x, paste0(.y, ".md"), sep="\r\n"))
+}

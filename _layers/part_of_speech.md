@@ -4,15 +4,18 @@ synced:
   layer_id: 89
   alignment: sub-interval(s)
   project: syntax
-  data_type: text
   parent: word
+  vertical_peers: no
+  data_type: text
   scope: word
   transcripts_exportable: yes
   matches_exportable: yes
   searchable: search-matrix
   viewable: yes
-  extra:
-last_sync_modified_date: 
+  export_includeCounts: no
+  export_includeAnchorSharing: no
+  extra: (none)
+last_sync_modified_date: 2024-11-05T15:56:24-0500
 parallel: yes
 notation:
   primary: Treebank part-of-speech tags
@@ -25,7 +28,7 @@ inputs:
 versions:
   first_appeared: 0.1.1
   last_updated: 0.1.2
-last_modified_date: 2024-10-28T09:51:17-04:00
+last_modified_date: '2024-10-28T09:51:17-04:00'
 ---
 
 
