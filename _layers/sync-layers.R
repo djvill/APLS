@@ -107,7 +107,7 @@ transcript_layers <- transcript_layers |>
            
            ##Straightforward translations
            .x==0 ~ "complete interval",
-           .x==1 ~ "timepoint(s)",
+           .x==1 ~ "timepoint",
            .x==2 ~ "sub-interval(s)")))
 
 ##Add attributes pertaining to how users can interact with layers
