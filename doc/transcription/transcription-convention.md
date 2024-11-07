@@ -4,7 +4,7 @@ layout: default
 permalink: /doc/transcription-convention
 parent: Transcription
 nav_order: 10
-last_modified_date: 2024-11-04T12:16:14-05:00
+last_modified_date: 2024-11-06T22:17:55-05:00
 ---
 
 
@@ -54,7 +54,7 @@ In this document, `fixed-width font` is used for things you actually type into t
 		<li class="praat">The <code>Transcriber</code> tier should have a single annotation: the names of all transcribers (including anyone who checked the transcription)</li>
 	<li class="elan">For all tiers, set the Participant attribute to be the same as the tier name. To add tiers and set tier attributes, go to <em>Tier</em> > <em>Add New Tier</em>.</li>
 	<li class="elan">Set the file's Author attribute to the names of all transcribers (including anyone who checked the transcription) by going to <em>Edit</em> > <em>Set Author</em></li>
-- You may also want to create a (temporary) `Recheck` tier (see [below](#tips)) while you're transcribing
+- You may also want to create a (temporary) `Recheck` tier (see [above](#general-tips)) while you're transcribing
 	- Make sure to delete this tier when you're ready to submit the file
 
 
