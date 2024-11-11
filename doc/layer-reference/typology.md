@@ -4,7 +4,9 @@ layout: default
 permalink: /doc/typology
 parent: Layer reference
 nav_order: 10
-last_modified_date: 2024-11-11T10:24:44-05:00
+layer_props:
+  scope: ['span', 'phrase', 'word', 'segment']
+last_modified_date: 2024-11-11T10:34:35-05:00
 ---
 
 # Layers: {{ page.title }}
@@ -45,31 +47,20 @@ In APLS, you'll see layer scopes on the search, X, and Y pages. <!-- WITH SCREEN
 
 {% assign layers = site.layers | where_exp: "item", "item.synced.project != 'temp' and item.synced.project != 'testing'" %}
 
-<!-- For now, exclude "non-transcript" layers -->
-{% assign layers = layers | where_exp: "item", "item.synced.scope != ''" %}
-
-{% assign by_scope = layers | group_by_exp: "item", "item.synced.scope | capitalize" %}
-
-<!-- Reorder scopes -->
-{% assign by_scope_sp = by_scope | pop | pop | pop %}
-{% assign by_scope_ph = by_scope | shift | shift | shift %}
-{% assign by_scope_ws = by_scope | pop | shift %}
-{% assign by_scope = by_scope_sp | concat: by_scope_ph | concat: by_scope_ws %}
-
-
 <table class="layers-by-attr" id="layers-by-scope">
   <thead>
     <tr>
-      {% for scope in by_scope %}
-      <th>{{ scope.name }}</th>
+      {% for scope in page.layer_props.scope %}
+      <th>{{ scope | capitalize }}</th>
       {% endfor %}
     </tr>
   </thead>
   <tbody>
     <tr>
-      {% for scope in by_scope %}
+      {% for scope in page.layer_props.scope %}
+      {% assign scope_layers = layers | where: "synced.scope", scope %}
       <td>
-        <ul>{% for layer in scope.items %}<li><span class="layer">{{ layer.path | remove: "_layers/" | remove: ".md" }}</span></li>{% endfor %}</ul>
+        <ul>{% for layer in scope_layers %}<li><span class="layer">{{ layer.path | remove: "_layers/" | remove: ".md" }}</span></li>{% endfor %}</ul>
       </td>
       {% endfor %}
     </tr>
