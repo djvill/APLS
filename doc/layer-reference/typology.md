@@ -4,7 +4,7 @@ layout: default
 permalink: /doc/typology
 parent: Layer reference
 nav_order: 10
-last_modified_date: 2024-11-06T09:15:21-05:00
+last_modified_date: 2024-11-11T10:24:44-05:00
 ---
 
 # Layers: {{ page.title }}
@@ -25,6 +25,7 @@ This distinction is captured by layer <span class="keyterm">scope</span>.
 Layers can have one of four possible scopes, defined by how long (in time) they can span.
 From longest to shortest, these are:
 
+<!-- Add a scope for "non-transcript" layers? (participant, main_participant, transcript, episode, corpus) If so, come up with a better term than "non-transcript" -->
 - <span class="keyterm">Span layers</span>: Annotations can span beyond an individual turn of talk, up to the length of the entire transcript.
 - <span class="keyterm">Phrase layers</span>: Annotations can span beyond an individual word, up to the length of an entire turn.
 - <span class="keyterm">Word layers</span>: Annotations _usually_ span the length of a word.
@@ -32,45 +33,48 @@ From longest to shortest, these are:
 - <span class="keyterm">Segment layers</span>: Annotations span the length of a speech sound.
 
 
+In APLS, you'll see layer scopes on the search, X, and Y pages. <!-- WITH SCREENSHOTS -->
+<!-- The exception is "non-transcript" layers -->
+
+
 ### Examples
+
 
 
 ### Layers by scope
 
 {% assign layers = site.layers | where_exp: "item", "item.synced.project != 'temp' and item.synced.project != 'testing'" %}
 
-{% assign span_layers = layers | where: "synced.scope", "span" %}
-{% assign phrase_layers = layers | where: "synced.scope", "phrase" %}
-{% assign word_layers = layers | where: "synced.scope", "word" %}
-{% assign segment_layers = layers | where: "synced.scope", "segment" %}
+<!-- For now, exclude "non-transcript" layers -->
+{% assign layers = layers | where_exp: "item", "item.synced.scope != ''" %}
+
+{% assign by_scope = layers | group_by_exp: "item", "item.synced.scope | capitalize" %}
+
+<!-- Reorder scopes -->
+{% assign by_scope_sp = by_scope | pop | pop | pop %}
+{% assign by_scope_ph = by_scope | shift | shift | shift %}
+{% assign by_scope_ws = by_scope | pop | shift %}
+{% assign by_scope = by_scope_sp | concat: by_scope_ph | concat: by_scope_ws %}
+
 
 <table class="layers-by-attr" id="layers-by-scope">
   <thead>
     <tr>
-      <th>Span</th>
-      <th>Phrase</th>
-      <th>Word</th>
-      <th>Segment</th>
+      {% for scope in by_scope %}
+      <th>{{ scope.name }}</th>
+      {% endfor %}
     </tr>
   </thead>
   <tbody>
     <tr>
+      {% for scope in by_scope %}
       <td>
-        <ul>{% for layer in span_layers %}<li><span class="layer">{{ layer.path | remove: "_layers/" | remove: ".md" }}</span></li>{% endfor %}</ul>
+        <ul>{% for layer in scope.items %}<li><span class="layer">{{ layer.path | remove: "_layers/" | remove: ".md" }}</span></li>{% endfor %}</ul>
       </td>
-      <td>
-        <ul>{% for layer in phrase_layers %}<li><span class="layer">{{ layer.path | remove: "_layers/" | remove: ".md" }}</span></li>{% endfor %}</ul>
-      </td>
-      <td>
-        <ul>{% for layer in word_layers %}<li><span class="layer">{{ layer.path | remove: "_layers/" | remove: ".md" }}</span></li>{% endfor %}</ul>
-      </td>
-      <td>
-        <ul>{% for layer in segment_layers %}<li><span class="layer">{{ layer.path | remove: "_layers/" | remove: ".md" }}</span></li>{% endfor %}</ul>
-      </td>
+      {% endfor %}
     </tr>
   </tbody>
 </table>
-
 
 
 ## Alignment and horizontal peers
