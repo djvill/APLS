@@ -4,9 +4,7 @@ layout: default
 permalink: /doc/typology
 parent: Layer reference
 nav_order: 10
-layer_props:
-  scope: ['span', 'phrase', 'word', 'segment']
-last_modified_date: 2024-11-11T10:34:35-05:00
+last_modified_date: 2024-11-11T17:03:15-05:00
 ---
 
 # Layers: {{ page.title }}
@@ -68,6 +66,10 @@ In APLS, you'll see layer scopes on the search, X, and Y pages. <!-- WITH SCREEN
 </table>
 
 
+### Layers by scope 2
+
+{% include layer-table.html property="scope" categories="span,phrase,word,segment" exclude_proj="temp,testing" %}
+
 ## Alignment and horizontal peers
 
 Some annotations take up just part of their scope, and some annotations take up their entire scope.
@@ -94,7 +96,7 @@ A layer's alignment also affects things like [search]({{ '/doc/search' | relativ
 
 ### Layers by alignment
 
-
+{% include layer-table.html property="alignment" categories="complete interval,sub-interval(s)" exclude_proj="temp,testing" %}
 
 There aren't currently any timepoint layers in APLS.
 

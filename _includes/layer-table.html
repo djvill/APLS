@@ -1,0 +1,39 @@
+<!-- Begin _includes/layer-table.html -->
+
+{% comment %}
+Example usage: {% include layer-table.html property="scope" categories="span,phrase,word,segment" exclude_proj="temp,testing" %}
+{% endcomment %}
+
+{% assign categories = include.categories | split: "," %}
+
+{% assign layers = site.layers %}
+{% if include.exclude_proj %}
+  {% assign excl = include.exclude_proj | split: "," %}
+  {% for proj in excl %}
+    {% assign excl_string = "item.synced.project != '" | append: proj | append: "'" %}
+    {% assign layers = layers | where_exp: "item", excl_string %}
+  {% endfor %}
+{% endif %}
+
+{% assign where_loc = "synced." | append: include.property %}
+
+<table class="layers-by-attr" id="layers-by-{{ include.property }}">
+  <thead>
+    <tr>
+      {% for cat_name in categories %}
+      <th>{{ cat_name | capitalize }}</th>
+      {% endfor %}
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      {% for cat_name in categories %}
+      {% assign cat_layers = layers | where: where_loc, cat_name %}
+      <td>
+        <ul>{% for layer in cat_layers %}<li><span class="layer">{{ layer.path | remove: "_layers/" | remove: ".md" }}</span></li>{% endfor %}</ul>
+      </td>
+      {% endfor %}
+    </tr>
+  </tbody>
+</table>
+
