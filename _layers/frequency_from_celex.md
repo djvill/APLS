@@ -21,7 +21,7 @@ synced:
     \\= ?\\r\\n ORDER BY cxen_wordform.Cob DESC\r\nPronounceOverridesCelex=false\r\nLayerId=2\r\n"
 last_sync_modified_date: 2024-11-05T15:56:24-0500
 notation:
-  primary: Counts
+  primary: Count
   missing: Word is not in CELEX
 inputs:
   - input: orthography

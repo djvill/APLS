@@ -17,7 +17,7 @@ synced:
   extra: (none)
 last_sync_modified_date: 2024-11-05T15:56:24-0500
 notation:
-  primary: Numeric (number of seconds)
+  primary: Decimal
   missing: |
     Either:
 

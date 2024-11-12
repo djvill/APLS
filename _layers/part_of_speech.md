@@ -17,7 +17,7 @@ synced:
   extra: (none)
 last_sync_modified_date: 2024-11-05T16:02:47-0500
 notation:
-  primary: Treebank part-of-speech tags
+  primary: Treebank part-of-speech tag
   missing: Word is redacted or an incomplete word
 inputs:
   - input: orthography

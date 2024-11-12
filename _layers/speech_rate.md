@@ -19,7 +19,7 @@ synced:
     Rate (per second)\r\nMillisecondsPauseThreshold=\r\nMainSpeakerOnly=false\r\nCorpora=false\r\nScopeLayerId=\r\nTranscriptParticipants=false\r\nTurns=false\r\nExcludedTranscriptTypes=-1\r\nSecondsContext=\r\n"
 last_sync_modified_date: 2024-11-05T15:56:24-0500
 notation:
-  primary: Numeric (syllables per second)
+  primary: Decimal
   missing: The current utterance doesn't have any <span class="layer">segment</span>
     annotations
 inputs:

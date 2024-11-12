@@ -4,7 +4,7 @@ layout: default
 permalink: /doc/typology
 parent: Layer reference
 nav_order: 10
-last_modified_date: 2024-11-11T17:03:15-05:00
+last_modified_date: 2024-11-12T10:13:11-05:00
 ---
 
 # Layers: {{ page.title }}
@@ -43,32 +43,8 @@ In APLS, you'll see layer scopes on the search, X, and Y pages. <!-- WITH SCREEN
 
 ### Layers by scope
 
-{% assign layers = site.layers | where_exp: "item", "item.synced.project != 'temp' and item.synced.project != 'testing'" %}
-
-<table class="layers-by-attr" id="layers-by-scope">
-  <thead>
-    <tr>
-      {% for scope in page.layer_props.scope %}
-      <th>{{ scope | capitalize }}</th>
-      {% endfor %}
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      {% for scope in page.layer_props.scope %}
-      {% assign scope_layers = layers | where: "synced.scope", scope %}
-      <td>
-        <ul>{% for layer in scope_layers %}<li><span class="layer">{{ layer.path | remove: "_layers/" | remove: ".md" }}</span></li>{% endfor %}</ul>
-      </td>
-      {% endfor %}
-    </tr>
-  </tbody>
-</table>
-
-
-### Layers by scope 2
-
 {% include layer-table.html property="scope" categories="span,phrase,word,segment" exclude_proj="temp,testing" %}
+
 
 ## Alignment and horizontal peers
 
@@ -88,7 +64,7 @@ Layers can have one of three possible alignments:
 
 
 In APLS, alignment is represented by these symbols: <!-- SYMBOLS -->.
-A layer's alignment also affects things like [search]({{ '/doc/search' | relative_url }}) and [export]({{ '/doc/export' | relative_url }}).
+A layer's alignment also affects things like [search]({{ '/doc/search' | relative_url }}) and [export]({{ '/doc/export-data' | relative_url }}).
 
 
 ### Examples
@@ -109,8 +85,8 @@ Unlike <span class="keyterm">horizontal peers</span>, which divide the timespan 
 
 In APLS, a layer with vertical peers is represented by this symbol: <!-- SYMBOL -->.
 When [viewing a transcript]({{ '/doc/view-transcript' | relative_url }}) in APLS, only one vertical peer is shown;
-for example, the <span class="layer">dictionary_phonemes</span> layer only shows <!-- WHICH --> for the word _the_, even though _the_ has two <span class="layer">dictionary_phonemes</span> annotations.
-This also affects things like [search]({{ '/doc/search' | relative_url }}) and [export]({{ '/doc/export' | relative_url }}).
+for example, the <span class="layer">dictionary_phonemes</span> layer only shows `ðə` for the word _the_, even though _the_ has two <span class="layer">dictionary_phonemes</span> annotations.
+This also affects things like [search]({{ '/doc/search' | relative_url }}) and [export]({{ '/doc/export-data' | relative_url }}).
 
 
 ### Examples
@@ -118,6 +94,7 @@ This also affects things like [search]({{ '/doc/search' | relative_url }}) and [
 
 ### Layers by vertical peers
 
+{% include layer-table.html property="vertical_peers" categories="true,false" exclude_proj="temp,testing" %}
 
 
 ## Data type
@@ -125,7 +102,19 @@ This also affects things like [search]({{ '/doc/search' | relative_url }}) and [
 [text vs. phono vs. number]
 [Mostly important for search]
 
+### Examples
+
+
+
+### Layers by data type
+
+{% include layer-table.html property="data_type" categories="text,phonological,numeric" exclude_proj="temp,testing" %}
+
 
 ## Project
 
-[arbitrary categories]
+[arbitrary categories, reduce visual clutter]
+
+### Layers by project
+
+{% include layer-table.html property="project" categories="(none),syntax,lexicon,timing,phonology,imported,temp,testing" nocaps=true %}
