@@ -24,6 +24,7 @@ notation:
 inputs:
   - input: Manually transcribed
     type: transcription
+alignment_dependent: no
 versions:
   first_appeared: 0.1.0
   last_modified: 0.1.0

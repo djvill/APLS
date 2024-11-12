@@ -24,6 +24,7 @@ inputs:
     type: layer
   - input: phonemes.py
     type: script
+alignment_dependent: yes
 versions:
   first_appeared: 0.1.0
   last_modified: 0.1.3

@@ -33,6 +33,7 @@ inputs:
     type: layer
   - input: CELEX English
     type: dictionary
+alignment_dependent: no
 versions:
   first_appeared: 0.1.0
   last_modified: 0.1.0

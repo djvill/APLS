@@ -15,15 +15,21 @@ Example usage: {% include layer-table.html property="scope" categories="span,phr
   {% endfor %}
 {% endif %}
 
-{% assign where_loc = "synced." | append: include.property %}
+{% assign not_synced = include.not_synced | default: false %}
+{% if not_synced %}
+  {% assign where_loc = include.property %}
+{% else %}
+  {% assign where_loc = "synced." | append: include.property %}
+{% endif %}
 
-{% assign nocaps = include.nocaps | default: false %}
+
+{% assign no_caps = include.no_caps | default: false %}
 
 <table class="layers-by-attr" id="layers-by-{{ include.property }}">
   <thead>
     <tr>
       {% for cat_name in categories %}
-      <th>{% if nocaps %}{{ cat_name }}{% else %}{{ cat_name | capitalize }}{% endif %}</th>
+      <th>{% if no_caps %}{{ cat_name }}{% else %}{{ cat_name | capitalize }}{% endif %}</th>
       {% endfor %}
     </tr>
   </thead>

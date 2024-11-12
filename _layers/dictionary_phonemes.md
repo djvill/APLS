@@ -32,6 +32,7 @@ inputs:
     type: layer
   - input: pronounce
     type: layer
+alignment_dependent: no
 versions:
   first_appeared: 0.1.0
   last_updated: 0.1.2

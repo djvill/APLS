@@ -16,6 +16,7 @@ synced:
   export_includeAnchorSharing: .na
   extra: (none)
 last_sync_modified_date: 2024-11-05T15:56:24-0500
+alignment_dependent: no
 versions:
   first_appeared: 0.1.0
   last_modified: 0.1.0

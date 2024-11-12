@@ -24,6 +24,7 @@ inputs:
     type: layer
   - input: Stanford POS Tagger
     type: algorithm
+alignment_dependent: no
 versions:
   first_appeared: 0.1.1
   last_updated: 0.1.2

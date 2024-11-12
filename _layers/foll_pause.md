@@ -1,6 +1,6 @@
 ---
 synced:
-  short_description: Pause (if any) following the current word
+  short_description: Duration of pause (in seconds) following the current word
   layer_id: 93
   alignment: complete interval
   project: timing
@@ -15,7 +15,7 @@ synced:
   export_includeCounts: no
   export_includeAnchorSharing: no
   extra: (none)
-last_sync_modified_date: 2024-11-05T15:56:24-0500
+last_sync_modified_date: 2024-11-12T10:22:11-0500
 notation:
   primary: Decimal
   missing: |
@@ -29,6 +29,7 @@ inputs:
     type: layer
   - input: foll_pause.py
     type: script
+alignment_dependent: yes
 versions:
   first_appeared: 0.1.2
   last_modified: 0.1.2

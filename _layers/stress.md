@@ -22,6 +22,7 @@ notation:
 inputs:
   - input: syllables
     type: layer
+alignment_dependent: yes
 versions:
   first_appeared: 0.1.0
   last_modified: 0.1.0

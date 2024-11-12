@@ -4,7 +4,7 @@ layout: default
 permalink: /doc/typology
 parent: Layer reference
 nav_order: 10
-last_modified_date: 2024-11-12T10:13:11-05:00
+last_modified_date: 2024-11-12T10:33:30-05:00
 ---
 
 # Layers: {{ page.title }}
@@ -111,10 +111,22 @@ This also affects things like [search]({{ '/doc/search' | relative_url }}) and [
 {% include layer-table.html property="data_type" categories="text,phonological,numeric" exclude_proj="temp,testing" %}
 
 
+## Alignment dependency
+
+
+### Examples
+
+
+
+### Layers by alignment dependency
+
+{% include layer-table.html property="alignment_dependent" categories="true,false" exclude_proj="temp,testing" not_synced=true %}
+
+
 ## Project
 
 [arbitrary categories, reduce visual clutter]
 
 ### Layers by project
 
-{% include layer-table.html property="project" categories="(none),syntax,lexicon,timing,phonology,imported,temp,testing" nocaps=true %}
+{% include layer-table.html property="project" categories="(none),syntax,lexicon,timing,phonology,imported,temp,testing" no_caps=true %}

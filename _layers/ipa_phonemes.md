@@ -22,6 +22,7 @@ notation:
 inputs:
   - input: dictionary_phonemes
     type: layer
+alignment_dependent: no
 versions:
   first_appeared: 0.1.1
   last_modified: 0.1.2

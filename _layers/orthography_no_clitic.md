@@ -22,6 +22,7 @@ notation:
 inputs:
   - input: orthography
     type: layer
+alignment_dependent: no
 versions:
   first_appeared: 0.1.0
   last_modified: 0.1.0
