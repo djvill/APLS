@@ -2,7 +2,7 @@
 synced:
   short_description: Comments about speech created by original transcribers
   layer_id: 31
-  alignment: sub-interval(s)
+  alignment: sub-interval
   project: imported
   parent: transcript
   vertical_peers: yes
@@ -11,11 +11,12 @@ synced:
   transcripts_exportable: yes
   matches_exportable: yes
   searchable: search-matrix
+  search_targetable: span
   viewable: no
   export_includeCounts: yes
   export_includeAnchorSharing: no
   extra: (none)
-last_sync_modified_date: 2024-11-05T15:56:24-0500
+last_sync_modified_date: 2024-11-12T17:04:07-0500
 notation:
   primary: English spelling
 inputs:

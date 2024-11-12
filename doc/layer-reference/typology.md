@@ -4,7 +4,7 @@ layout: default
 permalink: /doc/typology
 parent: Layer reference
 nav_order: 10
-last_modified_date: 2024-11-12T10:33:30-05:00
+last_modified_date: 2024-11-12T17:07:07-05:00
 ---
 
 # Layers: {{ page.title }}
@@ -57,7 +57,7 @@ This distinction is captured by layer <span class="keyterm">alignment</span>.
 Layers can have one of three possible alignments:
 
 - <span class="keyterm">Complete interval</span>: Annotations span their entire scope
-- <span class="keyterm">Sub-interval(s)</span> (aka <span class="keyterm">horizontal peers</span>): Annotations span part (or all) of their scope
+- <span class="keyterm">Sub-interval</span> (aka <span class="keyterm">horizontal peers</span>): Annotations span part (or all) of their scope
   - There may or may not be gaps between annotations within a scope. For example, there are usually long gaps between <span class="layer">comment</span> annotations within a transcript
 - <span class="keyterm">Timepoint</span>: Annotations don't have a start and end time, just a time
   - There aren't currently any timepoint layers in APLS. If we wanted to store vowel measurements in a layer, then we might do so in a timepoint layer (i.e., at the vowel's midpoint).
@@ -72,7 +72,7 @@ A layer's alignment also affects things like [search]({{ '/doc/search' | relativ
 
 ### Layers by alignment
 
-{% include layer-table.html property="alignment" categories="complete interval,sub-interval(s)" exclude_proj="temp,testing" %}
+{% include layer-table.html property="alignment" categories="complete interval,sub-interval" exclude_proj="temp,testing" %}
 
 There aren't currently any timepoint layers in APLS.
 

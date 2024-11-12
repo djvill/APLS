@@ -84,7 +84,7 @@ transcript_layers <- transcript_layers |>
                                     "S" ~ "segment",
                                     "M" ~ "phrase",
                                     "F" ~ "span",
-                                    NA ~ "non-transcript")),
+                                    .default="super")),
          across(data_type, ~ case_match(.x, 
                                        "string" ~ "text",
                                        "ipa" ~ "phonological",
@@ -108,7 +108,7 @@ transcript_layers <- transcript_layers |>
            ##Straightforward translations
            .x==0 ~ "complete interval",
            .x==1 ~ "timepoint",
-           .x==2 ~ "sub-interval(s)")))
+           .x==2 ~ "sub-interval")))
 
 ##Add attributes pertaining to how users can interact with layers
 transcript_layers <- transcript_layers |>
@@ -122,12 +122,25 @@ transcript_layers <- transcript_layers |>
          
          ##How layer can be used in https://apls.pitt.edu/labbcat/search
          searchable = case_when(
+           ##corpus would normally be searchable via transcript filters, but
+           ##  that's disabled in APLS (Corpus column hidden on /transcripts)
+           ##  since there's currently only one corpus
+           id=="corpus" ~ "no",
            ##Via filters
            layer_id < 0 ~ "filters",
            ##In search matrix, but only for anchoring matches
            id %in% c("turn","utterance") ~ "anchor-only",
            ##In search matrix
            TRUE ~ "search-matrix"),
+         
+         ##Whether layer can the target of a search (https://github.com/nzilbb/labbcat-server/blob/b70d69/user-interface/src/main/angular/projects/labbcat-view/src/app/search-matrix/search-matrix.component.ts#L187-L194)
+         search_targetable = case_when(
+           layer_id < 0 ~ "no",
+           id=="orthography" ~ "word",
+           scope=="segment" ~ "segment",
+           id %in% c("turn","utterance") ~ "no",
+           alignment != "complete interval" ~ scope,
+           .default="no"),
          
          ##Whether layer can be selected/deselected in 
          ##  https://apls.pitt.edu/labbcat/transcript (FALSE means that it's
@@ -148,7 +161,7 @@ transcript_layers <- transcript_layers |>
            !matches_exportable ~ NA, ##Not shown in matches > CSV Export
            id=="word" ~ FALSE,
            scope %in% c("non-transcript", "span") ~ FALSE,
-           alignment != "sub-interval(s)" ~ FALSE,
+           alignment != "sub-interval" ~ FALSE,
            vertical_peers ~ TRUE,
            .default=FALSE),
          .before=extra)

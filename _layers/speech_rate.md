@@ -3,7 +3,7 @@ synced:
   short_description: Syllables per second of the entire utterance (line), skipping
     over pauses
   layer_id: 95
-  alignment: sub-interval(s)
+  alignment: sub-interval
   project: timing
   parent: turn
   vertical_peers: no
@@ -12,12 +12,13 @@ synced:
   transcripts_exportable: yes
   matches_exportable: yes
   searchable: search-matrix
+  search_targetable: phrase
   viewable: yes
   export_includeCounts: no
   export_includeAnchorSharing: no
   extra: "#Mon Sep 16 12:57:50 EDT 2024\r\nLayerId=66\r\nParticipants=\r\nPattern=\r\nTranscripts=\r\nUtterances=true\r\nStatistic=Word
     Rate (per second)\r\nMillisecondsPauseThreshold=\r\nMainSpeakerOnly=false\r\nCorpora=false\r\nScopeLayerId=\r\nTranscriptParticipants=false\r\nTurns=false\r\nExcludedTranscriptTypes=-1\r\nSecondsContext=\r\n"
-last_sync_modified_date: 2024-11-05T15:56:24-0500
+last_sync_modified_date: 2024-11-12T17:04:07-0500
 notation:
   primary: Decimal
   missing: The current utterance doesn't have any <span class="layer">segment</span>

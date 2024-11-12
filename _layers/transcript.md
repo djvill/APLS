@@ -2,20 +2,21 @@
 synced:
   short_description: Transcript
   layer_id: -1
-  alignment: sub-interval(s)
+  alignment: sub-interval
   project: (none)
   parent: transcript
   vertical_peers: no
   data_type: text
-  scope: ''
+  scope: super
   transcripts_exportable: yes
   matches_exportable: yes
   searchable: filters
+  search_targetable: 'no'
   viewable: no
   export_includeCounts: no
   export_includeAnchorSharing: no
   extra: (none)
-last_sync_modified_date: 2024-11-05T15:56:24-0500
+last_sync_modified_date: 2024-11-12T17:04:07-0500
 versions:
   first_appeared: 0.1.0
   last_modified: 0.1.0

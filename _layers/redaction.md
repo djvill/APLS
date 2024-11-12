@@ -3,7 +3,7 @@ synced:
   short_description: Speech redacted from the transcript (e.g., personally identifying
     information)
   layer_id: 45
-  alignment: sub-interval(s)
+  alignment: sub-interval
   project: imported
   parent: turn
   vertical_peers: no
@@ -12,11 +12,12 @@ synced:
   transcripts_exportable: yes
   matches_exportable: yes
   searchable: search-matrix
+  search_targetable: phrase
   viewable: yes
   export_includeCounts: no
   export_includeAnchorSharing: no
   extra: (none)
-last_sync_modified_date: 2024-11-05T15:56:24-0500
+last_sync_modified_date: 2024-11-12T17:04:07-0500
 notation:
   primary: English spelling
   missing: Speech does not contain personally identifying information
