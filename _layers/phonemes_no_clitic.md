@@ -11,13 +11,13 @@ synced:
   scope: word
   transcripts_exportable: yes
   matches_exportable: yes
-  searchable: search-matrix
+  searchable: regex
   search_targetable: 'no'
-  viewable: yes
+  transcript_selectable: yes
   export_includeCounts: yes
   export_includeAnchorSharing: no
   extra: "#Mon Jul 31 14:26:51 EDT 2023\r\nLanguage=\r\nLexiconId=5\r\nFirstOnly=false\r\nField=pron_disc\r\nRecoverSyllables=false\r\nStripSyllStress=true\r\nLayerId=61\r\n"
-last_sync_modified_date: 2024-11-12T17:03:17-0500
+last_sync_modified_date: 2024-11-13T14:35:08-0500
 notation:
   primary: DISC
   missing: Word does not end in a clitic

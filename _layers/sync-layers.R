@@ -36,13 +36,13 @@ if (nchar(Sys.getenv(username))==0 || nchar(Sys.getenv(pw))==0) {
 invisible(labbcatCredentials(lc, Sys.getenv(username), Sys.getenv(pw)))
 
 
-# Download & shape layer data ---------------------------------------------
+# Download & categorize layer data -------------------------------------------
 
-##Get layer data
-layers <- getLayers(lc)
+##Get data on all "layers" (which include transcript/participant attributes)
+all_layers <- getLayers(lc)
 
-##Wrangle layer data
-layers <- layers |>
+##Wrangle all-layer data
+all_layers <- all_layers |>
   ##Make into a tibble
   as_tibble() |>
   ##NAs for blanks
@@ -54,12 +54,27 @@ layers <- layers |>
   relocate(id, short_description, layer_id, .before=1) |>
   relocate(extra, .after=last_col())
 
-##Get relevant subset of layers/columns
-transcript_layers <-
-  layers |>
+##Separate layers, transcript attributes, and participant attributes
+##main_participant is hard to categorize for user-facing purposes
+all_layers <- all_layers |>
+  filter(id != "main_participant")
+transcript_attr <-
+  all_layers |>
+  filter(str_detect(id, "^(transcript_|corpus$|episode$|transcript$)"))
+participant_attr <-
+  all_layers |>
+  filter(str_detect(id, "^(participant_|participant$)"))
+layers <-
+  all_layers |>
   ##Remove participant/transcript attributes
-  filter(!str_detect(id, "^(participant|transcript)_")) |> 
-  ##Remove columns
+  anti_join(transcript_attr, "id") |>
+  anti_join(participant_attr, "id")
+
+
+# Wrangle transcript layers -----------------------------------------------
+
+##Remove columns
+layers <- layers |>
   select(-c(
     ##Relevant only to participant/transcript attributes
     style, layer_manager_id, class_id, attribute, hint, display_order, 
@@ -75,7 +90,7 @@ transcript_layers <-
 
 
 ##Translate columns to more readable format
-transcript_layers <- transcript_layers |>
+layers <- layers |>
   ##For now, only keep the first line of description as short_description
   mutate(across(short_description, ~ str_remove(.x, regex("\n.+", dotall=TRUE))),
          across(c(project, extra), ~ replace_na(.x, "(none)")),
@@ -83,8 +98,7 @@ transcript_layers <- transcript_layers |>
                                     "W" ~ "word",
                                     "S" ~ "segment",
                                     "M" ~ "phrase",
-                                    "F" ~ "span",
-                                    .default="super")),
+                                    "F" ~ "span")),
          across(data_type, ~ case_match(.x, 
                                        "string" ~ "text",
                                        "ipa" ~ "phonological",
@@ -103,7 +117,7 @@ transcript_layers <- transcript_layers |>
            ##  the hidden scopes 'C' for corpus, 'E' for episode, 'G' for
            ##  participant/main_participant/transcript, though they never show
            ##  up with layer icons)
-           # scope %in% c("non-transcript", "span") ~ "complete interval",
+           # scope=="span" ~ "complete interval",
            
            ##Straightforward translations
            .x==0 ~ "complete interval",
@@ -111,31 +125,26 @@ transcript_layers <- transcript_layers |>
            .x==2 ~ "sub-interval")))
 
 ##Add attributes pertaining to how users can interact with layers
-transcript_layers <- transcript_layers |>
+layers <- layers |>
   ##All layers can be exported from https://apls.pitt.edu/labbcat/transcripts
   ##  (though some appear in weird ways--or not at all--depending on the format)
   mutate(transcripts_exportable = TRUE,
          
-         ##main_participant, turn, and utterance can't be exported from
+         ##turn and utterance can't be exported from
          ##  https://apls.pitt.edu/labbcat/matches
-         matches_exportable = !(id %in% c("main_participant", "turn", "utterance")),
+         matches_exportable = !(id %in% c("turn", "utterance")),
          
          ##How layer can be used in https://apls.pitt.edu/labbcat/search
          searchable = case_when(
-           ##corpus would normally be searchable via transcript filters, but
-           ##  that's disabled in APLS (Corpus column hidden on /transcripts)
-           ##  since there's currently only one corpus
-           id=="corpus" ~ "no",
-           ##Via filters
-           layer_id < 0 ~ "filters",
            ##In search matrix, but only for anchoring matches
            id %in% c("turn","utterance") ~ "anchor-only",
-           ##In search matrix
-           TRUE ~ "search-matrix"),
+           ##In search matrix with a minimum & maximum
+           data_type=="numeric" ~ "min_max",
+           ##In search matrix with a regex
+           TRUE ~ "regex"),
          
          ##Whether layer can the target of a search (https://github.com/nzilbb/labbcat-server/blob/b70d69/user-interface/src/main/angular/projects/labbcat-view/src/app/search-matrix/search-matrix.component.ts#L187-L194)
          search_targetable = case_when(
-           layer_id < 0 ~ "no",
            id=="orthography" ~ "word",
            scope=="segment" ~ "segment",
            id %in% c("turn","utterance") ~ "no",
@@ -145,13 +154,13 @@ transcript_layers <- transcript_layers |>
          ##Whether layer can be selected/deselected in 
          ##  https://apls.pitt.edu/labbcat/transcript (FALSE means that it's
          ##  displayed through other means)
-         viewable = !(id %in% c("comment", "noise")) & layer_id >= 0,
+         transcript_selectable = !(id %in% c("comment", "noise")),
          
          ##Do count boxes show up in matches > CSV Export?
          ##  https://github.com/nzilbb/labbcat-server/blob/9ee4cb3/user-interface/src/main/angular/projects/labbcat-common/src/lib/layer-checkboxes/layer-checkboxes.component.html#L187-L190
          export_includeCounts = case_when(
            !matches_exportable ~ NA, ##Not shown in matches > CSV Export
-           id %in% c("participant", "corpus", "word") ~ FALSE,
+           id=="word" ~ FALSE,
            vertical_peers ~ TRUE,
            .default=FALSE),
          
@@ -160,7 +169,7 @@ transcript_layers <- transcript_layers |>
          export_includeAnchorSharing = case_when(
            !matches_exportable ~ NA, ##Not shown in matches > CSV Export
            id=="word" ~ FALSE,
-           scope %in% c("non-transcript", "span") ~ FALSE,
+           scope=="span" ~ FALSE,
            alignment != "sub-interval" ~ FALSE,
            vertical_peers ~ TRUE,
            .default=FALSE),
@@ -195,17 +204,17 @@ old_synced <-
             map(~ replace(.x, is.null(.x), NA)),
           .id="id")
 
-##If needed, add blank columns to old_synced to match transcript_layers
-new_cols <- setdiff(colnames(transcript_layers), colnames(old_synced))
+##If needed, add blank columns to old_synced to match layers
+new_cols <- setdiff(colnames(layers), colnames(old_synced))
 old_synced <- old_synced |>
   add_column(!!!set_names(rep(NA, length(new_cols)), new_cols))
 
 ##Identify layers that need new files & layers that need updated files
-to_create <- anti_join(transcript_layers, old_synced, "id")
+to_create <- anti_join(layers, old_synced, "id")
 to_update <- 
-  transcript_layers |>
+  layers |>
   mutate(across(scope, ~ replace_na(.x, ""))) |>
-  anti_join(old_synced, colnames(transcript_layers)[-1])
+  anti_join(old_synced, colnames(layers)[-1])
 
 ##Get last_sync_modified_date
 last_sync_modified_date <- 

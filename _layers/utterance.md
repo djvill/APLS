@@ -12,11 +12,11 @@ synced:
   matches_exportable: no
   searchable: anchor-only
   search_targetable: 'no'
-  viewable: yes
+  transcript_selectable: yes
   export_includeCounts: .na
   export_includeAnchorSharing: .na
   extra: (none)
-last_sync_modified_date: 2024-11-12T17:04:07-0500
+last_sync_modified_date: 2024-11-13T14:35:08-0500
 alignment_dependent: no
 versions:
   first_appeared: 0.1.0
