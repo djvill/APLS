@@ -22,7 +22,7 @@ if (basename(getwd()) != "_layers") {
 }
 
 ##Packages
-library(tidyverse)
+suppressPackageStartupMessages(library(tidyverse))
 library(nzilbb.labbcat)
 library(yaml)
 
@@ -99,10 +99,11 @@ layers <- layers |>
                                     "S" ~ "segment",
                                     "M" ~ "phrase",
                                     "F" ~ "span")),
-         across(data_type, ~ case_match(.x, 
-                                       "string" ~ "text",
-                                       "ipa" ~ "phonological",
-                                       "number" ~ "numeric")),
+         across(data_type, ~ case_when(
+           id %in% c("turn","utterance") ~ "timing-only",
+           data_type=="ipa" ~ "phonological",
+           data_type=="number" ~ "numeric",
+           data_type=="string" ~ "text")),
          across(alignment, ~ case_when(
            ##turn/word/segment *technically* have alignment=2 because that's
            ##  relative to their parents (participant/turn/word), but
@@ -135,13 +136,13 @@ layers <- layers |>
          matches_exportable = !(id %in% c("turn", "utterance")),
          
          ##How layer can be used in https://apls.pitt.edu/labbcat/search
-         searchable = case_when(
-           ##In search matrix, but only for anchoring matches
-           id %in% c("turn","utterance") ~ "anchor-only",
-           ##In search matrix with a minimum & maximum
-           data_type=="numeric" ~ "min_max",
-           ##In search matrix with a regex
-           TRUE ~ "regex"),
+         searchable = case_match(data_type,
+                                 ##In search matrix, but only for anchoring matches
+                                 "timing-only" ~ "anchor-only",
+                                 ##In search matrix with a minimum & maximum
+                                 "numeric" ~ "min_max",
+                                 ##In search matrix with a regex
+                                 c("phonological", "text") ~ "regex"),
          
          ##Whether layer can the target of a search (https://github.com/nzilbb/labbcat-server/blob/b70d69/user-interface/src/main/angular/projects/labbcat-view/src/app/search-matrix/search-matrix.component.ts#L187-L194)
          search_targetable = case_when(

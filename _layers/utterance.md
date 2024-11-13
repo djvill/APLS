@@ -6,7 +6,7 @@ synced:
   project: timing
   parent: turn
   vertical_peers: yes
-  data_type: text
+  data_type: timing-only
   scope: phrase
   transcripts_exportable: yes
   matches_exportable: no
@@ -16,7 +16,7 @@ synced:
   export_includeCounts: .na
   export_includeAnchorSharing: .na
   extra: (none)
-last_sync_modified_date: 2024-11-13T14:35:08-0500
+last_sync_modified_date: 2024-11-13T16:45:30-0500
 alignment_dependent: no
 versions:
   first_appeared: 0.1.0
