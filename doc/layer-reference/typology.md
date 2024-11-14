@@ -4,7 +4,7 @@ layout: default
 permalink: /doc/typology
 parent: Layer reference
 nav_order: 10
-last_modified_date: 2024-11-12T17:07:07-05:00
+last_modified_date: 2024-11-14T09:58:41-05:00
 ---
 
 # Layers: {{ page.title }}
@@ -25,7 +25,6 @@ This distinction is captured by layer <span class="keyterm">scope</span>.
 Layers can have one of four possible scopes, defined by how long (in time) they can span.
 From longest to shortest, these are:
 
-<!-- Add a scope for "non-transcript" layers? (participant, main_participant, transcript, episode, corpus) If so, come up with a better term than "non-transcript" -->
 - <span class="keyterm">Span layers</span>: Annotations can span beyond an individual turn of talk, up to the length of the entire transcript.
 - <span class="keyterm">Phrase layers</span>: Annotations can span beyond an individual word, up to the length of an entire turn.
 - <span class="keyterm">Word layers</span>: Annotations _usually_ span the length of a word.
@@ -33,11 +32,11 @@ From longest to shortest, these are:
 - <span class="keyterm">Segment layers</span>: Annotations span the length of a speech sound.
 
 
+### What you'll see in APLS
+
 In APLS, you'll see layer scopes on the search, X, and Y pages. <!-- WITH SCREENSHOTS -->
-<!-- The exception is "non-transcript" layers -->
 
 
-### Examples
 
 
 
@@ -63,11 +62,12 @@ Layers can have one of three possible alignments:
   - There aren't currently any timepoint layers in APLS. If we wanted to store vowel measurements in a layer, then we might do so in a timepoint layer (i.e., at the vowel's midpoint).
 
 
+### What you'll see in APLS
+
 In APLS, alignment is represented by these symbols: <!-- SYMBOLS -->.
 A layer's alignment also affects things like [search]({{ '/doc/search' | relative_url }}) and [export]({{ '/doc/export-data' | relative_url }}).
 
 
-### Examples
 
 
 ### Layers by alignment
@@ -84,12 +84,14 @@ For example, since the word _the_ can be pronounced [ði] or [ðə] <!-- Maybe p
 Unlike <span class="keyterm">horizontal peers</span>, which divide the timespan of their scope, vertical peers are "vertical" because we can think of them as being "stacked" on top of one another.
 
 In APLS, a layer with vertical peers is represented by this symbol: <!-- SYMBOL -->.
+
+### What you'll see in APLS
+
 When [viewing a transcript]({{ '/doc/view-transcript' | relative_url }}) in APLS, only one vertical peer is shown;
 for example, the <span class="layer">dictionary_phonemes</span> layer only shows `ðə` for the word _the_, even though _the_ has two <span class="layer">dictionary_phonemes</span> annotations.
 This also affects things like [search]({{ '/doc/search' | relative_url }}) and [export]({{ '/doc/export-data' | relative_url }}).
 
 
-### Examples
 
 
 ### Layers by vertical peers
@@ -99,22 +101,65 @@ This also affects things like [search]({{ '/doc/search' | relative_url }}) and [
 
 ## Data type
 
-[text vs. phono vs. number]
-[Mostly important for search]
+Each layer has one of four different types of data:
 
-### Examples
+- <span class="keyterm">Phonological data</span>: Annotations are labeled with speech sounds
+  - Some phonological layers' annotations are individual sounds (like <span class="layer">segment</span>) and others' are strings of sounds (like <span class="layer">syllables</span>)
+- <span class="keyterm">Numeric data</span>: Annotations are labeled with a measurement
+  - Some numeric layers' annotations are counts (like <span class="layer">frequency_in_corpus</span>), and others' are decimal numbers (like <span class="layer">foll_pause</span>)
+- <span class="keyterm">Text data</span>: Annotations are labeled with text
+  - Most text layers' annotations are normal English spelling (like <span class="layer">word</span>) or lowercase English spelling (like <span class="layer">orthography</span>)
+- <span class="keyterm">Timing only</span>: Annotations don't have a label, only a start/end time
+  - The two timing-only layers represent temporal subdivisions of a transcript: <span class="layer">turn</span> and <span class="layer">utterance</span>
+
+
+In APLS, data type is represented by these symbols: <!-- SYMBOLS -->.
+
+
+### What you'll see in APLS
+
+This distinction is mostly important for [search]({{ '/doc/search' | relative_url }}).
+
 
 
 
 ### Layers by data type
 
-{% include layer-table.html property="data_type" categories="text,phonological,numeric" exclude_proj="temp,testing" %}
+{% include layer-table.html property="data_type" categories="phonological,numeric,text,timing-only" exclude_proj="temp,testing" %}
+
+
+## Notation system
+
+
+
+
+### What you'll see in APLS
+
+
+### Layers by notation system
+
+[This is a little complicated because of the primary/additional distinction]
 
 
 ## Alignment dependency
 
+Some layers need information about individual speech sounds: which sounds are in a word, and where these sounds begin and end.
+For example, a word's <span class="layer">phonemes</span> annotation is only possible if the word has <span class="layer">segment</span> annotations.
+Other layers (like <span class="layer">part_of_speech</span>) don't depend on <span class="layer">segment</span> annotations.
+This distinction is captured by <span class="keyterm">alignment dependency</span>:
 
-### Examples
+- <span class="keyterm">Alignment-dependent</span>: Annotations are only present if the layer's scope contains <span class="layer">segment</span> annotations---in other words, if the layer's scope is <span class="keyterm">aligned</span>
+- Not <span class="keyterm">alignment-dependent</span>: Annotations can be present even if the layer's scope is not <span class="keyterm">aligned</span>
+
+In APLS, <span class="keyterm">alignment</span> is generally on a line-by-line basis, meaning that most lines are either completely aligned or completely _not_ aligned.
+Lines that are completely _not_ aligned won't have _any_ annotations on alignment-dependent layers.
+
+Layers can be alignment-dependent even if the <span class="layer">segment</span> layer isn't a direct input.
+For example, <span class="layer">speech_rate</span> (a phrase layer) takes <span class="layer">syllables</span> as input, which takes <span class="layer">segment</span> as input;
+if <span class="layer">segment</span> has no annotations in a turn, then <span class="layer">syllables</span> won't have any annotations, which means <span class="layer">speech_rate</span> won't have any annotations.
+
+### What you'll see in APLS
+
 
 
 
@@ -126,6 +171,10 @@ This also affects things like [search]({{ '/doc/search' | relative_url }}) and [
 ## Project
 
 [arbitrary categories, reduce visual clutter]
+
+### What you'll see in APLS
+
+
 
 ### Layers by project
 
