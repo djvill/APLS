@@ -19,7 +19,7 @@ synced:
 last_sync_modified_date: 2024-11-13T14:35:08-0500
 notation:
   primary: DISC
-  additional: '`.` for pauses'
+  additional: DISC pause
   missing: There's no <span class="layer">segment</span> or <span class="layer">foll_pause</span>
     annotation
 inputs:

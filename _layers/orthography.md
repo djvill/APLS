@@ -19,7 +19,7 @@ synced:
 last_sync_modified_date: 2024-11-13T14:35:08-0500
 notation:
   primary: English spelling (lowercase)
-  additional: '`~` for incomplete words'
+  additional: Hesitation marker
   missing: Word is redacted
 inputs:
   - input: word

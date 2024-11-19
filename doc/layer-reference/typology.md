@@ -4,7 +4,7 @@ layout: default
 permalink: /doc/typology
 parent: Layer reference
 nav_order: 10
-last_modified_date: 2024-11-14T17:11:00-05:00
+last_modified_date: 2024-11-19T12:41:23-05:00
 ---
 
 # Layers: {{ page.title }}
@@ -13,7 +13,7 @@ last_modified_date: 2024-11-14T17:11:00-05:00
 The <span class="keyterm">layers</span> in APLS can be categorized along some important properties, in terms of how they appear, how they're generated, how they can be searched, and other properties.
 This page outlines those categories.
 
-{% include page_toc.html collapsible=true open=true %}
+{% include page_toc.html collapsible=true %}
 
 
 ## Scope
@@ -66,7 +66,6 @@ Layers can have one of three possible alignments:
 
 ### What you'll see in APLS
 
-In APLS, alignment is represented by these symbols: <!-- SYMBOLS -->.
 A layer's alignment also affects things like [search]({{ '/doc/search' | relative_url }}) and [export]({{ '/doc/export-data' | relative_url }}).
 
 
@@ -82,7 +81,10 @@ There aren't currently any timepoint layers in APLS.
 ## Vertical peers
 
 Some layers allow for <span class="keyterm">vertical peers</span>: 2 or more annotations that occupy an identical timespan.
-For example, since the word _the_ can be pronounced [ði] or [ðə] <!-- Maybe pick a word w/ fewer scary IPA symbols? Slash one that's not an allophonic difference but a proper phonemic difference? -->, it is represented on the <span class="layer">dictionary_phonemes</span> layer by two annotations.
+For example, the <span class="layer">dictionary_phonemes</span> layer represents _all possible_ phonemic representations of a word, while the <span class="layer">phonemes</span> layer represents the speech sounds _actually in_ a word.
+<!-- Maybe pick a word w/ fewer scary IPA symbols? Slash one that's not an allophonic difference but a proper phonemic difference? -->
+Since the word _the_ can be pronounced /ði/ or /ðə/, _the_ has two annotations on the <span class="layer">dictionary_phonemes</span> layer---but since only one of these is how the word was _actually pronounced_, _the_ only has one <span class="layer">phonemes</span> annotation.
+
 Unlike <span class="keyterm">horizontal peers</span>, which divide the timespan of their scope, we can think of vertical peers as being "stacked" on top of one another within the same timespan.
 
 | Allow for vertical peers? | Symbol | Meaning |
@@ -108,7 +110,9 @@ This also affects things like [search]({{ '/doc/search' | relative_url }}) and [
 
 ## Data type
 
-Different layers contain different types of data:
+Different layers contain different kinds of annotations.
+For example, <span class="layer">foll_segment</span> annotations are speech sounds, while <span class="layer">foll_pause</span> annotations are numbers.
+This distinction is captured by a layer's <span class="keyterm">data type</span>:
 
 | Data type | Symbol | Meaning | Notes |
 |-----------|--------|---------|-------|
@@ -133,15 +137,56 @@ This distinction is mostly important for [search]({{ '/doc/search' | relative_ur
 
 ## Notation system
 
+While [data type](#data-type) describes the _kinds_ of annotation that different layers contain, <span class="keyterm">notation systems</span> are what those annotations actually _look like_.
+In other words, notation systems are the _details_ of how layers represent their data.
+For example, the <span class="layer">phonemes</span> layer represents speech sounds as symbols in the [DISC phonemic alphabet]({{ '/doc/notation-systems#disc-alphabet' | relative_url }}), such as `fIS` for the word _fish_.
 
+Almost all layers have a <span class="keyterm">primary notation system</span>.
+(The exceptions are the <span class="keyterm">timing-only layers</span>, <span class="layer">turn</span> and <span class="layer">utterance</span>, since their annotations don't have labels---see [above](#data-type).)
+Some layers have <span class="keyterm">additional notation</span>, depending on what their annotations need to represent.
+For example, the <span class="layer">syllables</span> layer uses the [DISC phonemic alphabet]({{ '/doc/notation-systems#disc-alphabet' | relative_url }}) for speech sounds _plus_ [stress markers]({{ '/doc/notation-systems#disc-extensions' | relative_url }}) for stress, such as `'fIS` for the word _fish_.
 
+Here are _brief_ descriptions of primary notation systems, with links to more details on the [notation systems]({{ '/doc/notation-systems' | relative_url }}) page:
+
+| Primary notation | Brief description |
+|------------------|-------------------|
+| Boolean          | `True` or `False` |
+| Count            | Positive whole numbers |
+| DISC             | DISC phonemic alphabet |
+| Decimal          | Decimal numbers |
+| English spelling | Conventional English spelling |
+| English spelling (lowercase) | Conventional English spelling, lowercase |
+| Stress markers   | `'` (primary stress)<br>`"` (secondary stress)<br>`0` (unstressed) |
+| Treebank part-of-speech tags | Abbreviations that describe part of speech |
+{: .layer-props .no-keyterm }
+
+Here are additional notations:
+
+| Additional notation | Brief description |
+|---------------------|-------------------|
+| DISC pause          | `.`               |
+| Hesitation marker   | `~` (at the end of an incomplete word) |
+| Morpheme boundary   | `+` |
+| Stress markers      | `'` (primary stress)<br>`"` (secondary stress)<br>`0` (unstressed) |
+| Syllable boundary   | `-` |
+| Transcription pause/question markers | `.` (short pause)<br>`-` (long pause)<br>`?` (question) |
+{: .layer-props .no-keyterm }
 
 ### What you'll see in APLS
 
 
+Understanding a layer's notation system is important for search
+
 ### Layers by notation system
 
-[This is a little complicated because of the primary/additional distinction]
+**Primary** notation system:
+
+{% include layer-table.html property="notation.primary" categories="Boolean,Count,DISC,Decimal,English spelling,English spelling (lowercase),Stress markers,Treebank part-of-speech tags" exclude_proj="temp,testing" not_synced=true no_caps=true %}
+
+
+**Additional** notation:
+
+{% include layer-table.html property="notation.additional" categories="DISC pause,Hesitation marker,Morpheme boundary,Stress markers,Transcription pause/question markers" not_synced=true no_caps=true %}
 
 
 ## Alignment dependency
@@ -151,15 +196,21 @@ For example, a word's <span class="layer">phonemes</span> annotation is only pos
 Other layers (like <span class="layer">part_of_speech</span>) don't depend on <span class="layer">segment</span> annotations.
 This distinction is captured by <span class="keyterm">alignment dependency</span>:
 
-- <span class="keyterm">Alignment-dependent</span>: Annotations are only present if the layer's scope contains <span class="layer">segment</span> annotations---in other words, if the layer's scope is <span class="keyterm">aligned</span>
-- Not <span class="keyterm">alignment-dependent</span>: Annotations can be present even if the layer's scope is not <span class="keyterm">aligned</span>
+| Alignment-dependent? | Meaning |
+|----------------------|---------|
+| True                 | Annotations are only present if the line contains <span class="layer">segment</span> annotations---in other words, if the line is <span class="keyterm">aligned</span> |
+| False                | Annotations can be present even if the line is not <span class="keyterm">aligned</span> |
+{: .layer-props .no-keyterm }
 
+<!--
 In APLS, <span class="keyterm">alignment</span> is generally on a line-by-line basis, meaning that most lines are either completely aligned or completely _not_ aligned.
 Lines that are completely _not_ aligned won't have _any_ annotations on alignment-dependent layers.
+-->
 
-Layers can be alignment-dependent even if the <span class="layer">segment</span> layer isn't a direct input.
+A layer can be alignment-dependent even if the <span class="layer">segment</span> layer isn't an input to the layer.
 For example, <span class="layer">speech_rate</span> (a phrase layer) takes <span class="layer">syllables</span> as input, which takes <span class="layer">segment</span> as input;
 if <span class="layer">segment</span> has no annotations in a turn, then <span class="layer">syllables</span> won't have any annotations, which means <span class="layer">speech_rate</span> won't have any annotations.
+
 
 ### What you'll see in APLS
 
@@ -173,12 +224,33 @@ if <span class="layer">segment</span> has no annotations in a turn, then <span c
 
 ## Project
 
-[arbitrary categories, reduce visual clutter]
+Different layers pertain to different levels of linguistic representation.
+For example, <span class="layer">morphemes</span> annotations pertain to how words are represented in the lexicon, while <span class="layer">speech_rate</span> annotations pertain to the timing of a particular line of speech.
+As a result, APLS categorizes layers into <span class="keyterm">projects</span>:
+
+| Project   | Meaning | Notes |
+|-----------|---------|-------|
+| syntax    | Annotations pertain to syntactic structure | |
+| lexicon   | Annotations pertain to how words are represented in the lexicon | |
+| timing    | Annotations pertain to timing/rhythm of speech and speaker turns | |
+| phonology | Annotations pertain to the speech sounds in a word | All of these layers are <span class="keyterm">phonological layers</span>, see [data type](#data-type) above |
+| imported  | Annotations were imported from the original transcription | |
+| temp      | Annotations are either metadata on how other layers were generated, or their only job is to provide data for other layers | |
+| testing   | Test layers that aren't "ready for prime time" | |
+| (none)    | Layers whose check-boxes are always shown by default on the [search]({{ '/doc/search' | relative_url }}) and [transcript]({{ '/doc/view-transcript' | relative_url }}) pages | |
+{: .layer-props .no-keyterm }
+
 
 ### What you'll see in APLS
 
+The main reason projects exist is to reduce visual clutter on the [search]({{ '/doc/search' | relative_url }}) and [transcript]({{ '/doc/view-transcript' | relative_url }}) pages.
+
+Unlike other layer properties, projects don't affect _anything_ about how layers are represented, how you need to search for them, export them, etc.
+<!-- So while these categories are somewhat arbitrary, -->
 
 
 ### Layers by project
 
 {% include layer-table.html property="project" categories="(none),syntax,lexicon,timing,phonology,imported,temp,testing" no_caps=true %}
+
+Note: "temp" and "testing" layers aren't meaningful for end-users, so they've been omitted from the other "layers by property" tables on this page.

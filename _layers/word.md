@@ -20,8 +20,8 @@ last_sync_modified_date: 2024-11-13T14:35:08-0500
 notation:
   primary: English spelling
   additional:
-    - '`~` for hesitations'
-    - Transcription pause markers
+    - Hesitation marker
+    - Transcription pause/question markers
 inputs:
   - input: Manually transcribed
     type: transcription

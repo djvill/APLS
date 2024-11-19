@@ -19,7 +19,7 @@ synced:
 last_sync_modified_date: 2024-11-13T14:35:08-0500
 notation:
   primary: English spelling
-  additional: '`~` for incomplete words'
+  additional: Hesitation marker
   missing: None supplied in original transcription
 inputs:
   - input: Manually transcribed

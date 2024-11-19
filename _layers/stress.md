@@ -18,7 +18,7 @@ synced:
   extra: (none)
 last_sync_modified_date: 2024-11-13T16:54:52-0500
 notation:
-  primary: Stress marker
+  primary: Stress markers
   missing: The current word doesn't have any <span class="layer">segment</span> annotations
 inputs:
   - input: syllables

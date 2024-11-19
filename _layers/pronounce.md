@@ -21,7 +21,7 @@ notation:
   primary: DISC
   additional:
     - Stress markers
-    - '`-` for syllable boundaries'
+    - Syllable boundary
   missing: None supplied in original transcription
 inputs:
   - input: Manually transcribed
