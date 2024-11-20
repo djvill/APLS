@@ -9,6 +9,7 @@ synced:
   vertical_peers: no
   data_type: text
   scope: phrase
+  layer_manager: Python
   transcripts_exportable: yes
   matches_exportable: yes
   searchable: regex
@@ -17,7 +18,7 @@ synced:
   export_includeCounts: no
   export_includeAnchorSharing: no
   extra: (none)
-last_sync_modified_date: 2024-11-13T14:35:08-0500
+last_sync_modified_date: 2024-11-20T10:20:29-0500
 notation:
   primary: Boolean
 inputs:
@@ -27,7 +28,7 @@ alignment_dependent: no
 versions:
   first_appeared: 0.1.2
   last_modified: 0.1.2
-last_modified_date: 2024-11-20T10:15:03-05:00
+last_modified_date: 2024-11-20T10:21:45-05:00
 ---
 
 **Fill longer description here**

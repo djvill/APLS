@@ -49,7 +49,8 @@ all_layers <- all_layers |>
   mutate(across(where(is.character), ~ na_if(.x, ""))) |>
   ##Nicer column names
   rename(short_description = description, project = category, parent = parentId, 
-         data_type = type, vertical_peers = peers) |>
+         data_type = type, vertical_peers = peers, 
+         layer_manager = layer_manager_id) |>
   ##Nicer column order
   relocate(id, short_description, layer_id, .before=1) |>
   relocate(extra, .after=last_col())
@@ -77,7 +78,7 @@ layers <-
 layers <- layers |>
   select(-c(
     ##Relevant only to participant/transcript attributes
-    style, layer_manager_id, class_id, attribute, hint, display_order, 
+    style, class_id, attribute, hint, display_order, 
     searchable, access, label, notes,
     ##List-columns
     validLabels, validLabelsDefinition,
@@ -123,7 +124,12 @@ layers <- layers |>
            ##Straightforward translations
            .x==0 ~ "complete interval",
            .x==1 ~ "timepoint",
-           .x==2 ~ "sub-interval")))
+           .x==2 ~ "sub-interval")),
+         ##Recode shorter layer_manager values
+         across(layer_manager, ~ case_match(.x,
+                                            "CELEX-EN" ~ "CELEX-English",
+                                            "py" ~ "Python",
+                                            .default=.x)))
 
 ##Add attributes pertaining to how users can interact with layers
 layers <- layers |>
@@ -278,7 +284,9 @@ new_yaml <- yaml |>
   list_modify(!!!to_update) |>
   map(~ assign_in(.x, "last_sync_modified_date", last_sync_modified_date)) |>
   keep_at(names(to_update)) |>
-  map(as.yaml, indent.mapping.sequence=TRUE)
+  map(as.yaml, indent.mapping.sequence=TRUE) |>
+  ##Remove quotes added around last_modified_date
+  map(~ str_replace(.x, "last_modified_date: '(.+?)'", "last_modified_date: \\1"))
 
 ##Add Markdown body
 new_md <- map2(new_yaml, keep_at(body_md, names(new_yaml)),

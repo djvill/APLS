@@ -8,6 +8,7 @@ synced:
   vertical_peers: yes
   data_type: text
   scope: word
+  layer_manager: Python
   transcripts_exportable: yes
   matches_exportable: yes
   searchable: regex
@@ -16,8 +17,8 @@ synced:
   export_includeCounts: yes
   export_includeAnchorSharing: no
   extra: (none)
-last_sync_modified_date: 2024-11-13T14:35:08-0500
-last_modified_date: 2024-11-20T10:15:05-05:00
+last_sync_modified_date: 2024-11-20T10:20:29-0500
+last_modified_date: 2024-11-20T10:21:46-05:00
 ---
 
 **Fill longer description here**

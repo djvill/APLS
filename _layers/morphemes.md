@@ -8,6 +8,7 @@ synced:
   vertical_peers: yes
   data_type: text
   scope: word
+  layer_manager: CELEX-English
   transcripts_exportable: yes
   matches_exportable: yes
   searchable: regex
@@ -24,7 +25,7 @@ synced:
     \\= cxen_lemma.IdNumLemma\\r\\n INNER JOIN cxen_lemmamorphologyparse ON cxen_wordform.IdNumLemma
     \\= cxen_lemmamorphologyparse.IdNumLemma\\r\\n WHERE cxen_wordformortho.WordDia
     \\= ?\\r\\n ORDER BY cxen_lemma.Cob DESC\r\nPronounceOverridesCelex=false\r\nLayerId=2\r\n"
-last_sync_modified_date: 2024-11-13T14:35:08-0500
+last_sync_modified_date: 2024-11-20T10:20:29-0500
 notation:
   primary: English spelling (lowercase)
   additional: Morpheme boundary
@@ -38,7 +39,7 @@ alignment_dependent: no
 versions:
   first_appeared: 0.1.0
   last_modified: 0.1.0
-last_modified_date: 2024-11-20T10:15:02-05:00
+last_modified_date: 2024-11-20T10:21:44-05:00
 ---
 
 **Fill longer description here**
