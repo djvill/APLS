@@ -38,7 +38,7 @@ alignment_dependent: no
 versions:
   first_appeared: 0.1.0
   last_modified: 0.1.0
-last_modified_date: Handled by Git pre-commit hook
+last_modified_date: 2024-11-20T10:15:02-05:00
 ---
 
 **Fill longer description here**

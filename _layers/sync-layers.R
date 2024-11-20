@@ -246,7 +246,10 @@ to_create <- to_create |>
           ##Add blank attributes
           blankAttr) |>
         ##As a list of YAML headers
-        as.yaml(indent.mapping.sequence=TRUE))
+        as.yaml(indent.mapping.sequence=TRUE) |>
+        ##Remove "Handled by Git pre-commit hook" text so pre-commit hook will
+        ##  actually work
+        str_remove("Handled by Git pre-commit hook"))
 
 ##List of Markdown files to be created
 to_create <- to_create |>

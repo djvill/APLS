@@ -37,7 +37,7 @@ alignment_dependent: no
 versions:
   first_appeared: 0.1.0
   last_updated: 0.1.2
-last_modified_date: '2024-11-05T15:44:38-05:00'
+last_modified_date: 2024-11-20T10:15:00-05:00
 ---
 
 This layer contains all possible phonemic representations of the word.
