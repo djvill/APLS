@@ -4,7 +4,7 @@ layout: default
 permalink: /doc/typology
 parent: Layer reference
 nav_order: 10
-last_modified_date: 2024-11-19T12:41:23-05:00
+last_modified_date: 2024-11-20T12:02:16-05:00
 ---
 
 # Layers: {{ page.title }}
@@ -35,10 +35,23 @@ From longest to shortest, these are:
 
 ### What you'll see in APLS
 
-In APLS, you'll see layer scopes on the search, X, and Y pages. <!-- WITH SCREENSHOTS -->
-
-
-
+- [Individual transcripts]({{ '/doc/view-transcript' | relative_url }})
+  - You can usually tell what each layer's scope is by just glancing at the transcript. Take the following screengrab as an example: 
+  ![]({{ '/assets/img/transcript-layer-scope.png' | relative_url }}){: .screengrab }
+    - The <span class="layer">noise</span> annotations aren't bounded by a single line, so <span class="layer">noise</span> is clearly a <span class="keyterm">span layer</span>. (Note that transcripts always display <span class="layer">noise</span> annotations.)
+    - Both <span class="layer">overlap</span> and <span class="layer">speech_rate</span> have annotations that span multiple words, so they are clearly <span class="keyterm">phrase layers</span>. You can tell where these annotations start and end because of the colored arcs above each line.
+    - Each <span class="layer">foll_pause</span> annotation is lined up above each <span class="layer">word</span> annotation, so <span class="layer">foll_pause</span> is clearly a <span class="keyterm">word layer</span>
+    - <span class="keyterm">Segment layers</span> like <span class="layer">segment</span> aren't quite as obvious as the other scopes, but you can tell them apart because they're plain text rather than links, and they're always underneath <span class="layer">word</span>
+    - Finally, note that layers are always in scope order from longest to shortest
+  
+- [Search]({{ '/doc/search' | relative_url }})
+  - In the layered search matrix, layers are organized into columns by scope, as in the following screengrab.
+  ![]({{ '/assets/img/search-matrix.png' | relative_url }}){: .screengrab }
+  Only a few layers appear when you first load the search page, but you can select <span class="keyterm">projects</span> to show more (see [below](#project)).
+  
+- [Exporting data]({{ '/doc/export-data' | relative_url }})
+  - Layers are organized into columns by scope. Depending on how you're exporting data, there might be additional columns. For example, when [exporting a formatted transcript]({{ '/doc/export-data#export-formatted-transcript' | relative_url }}) as in the following screengrab, you can also export participant and transcript attributes. 
+  ![]({{ '/assets/img/transcripts-export-format.png' | relative_url }}){: .screengrab }
 
 
 ### Layers by scope
