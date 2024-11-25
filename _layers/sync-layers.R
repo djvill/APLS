@@ -94,7 +94,7 @@ layers <- layers |>
 layers <- layers |>
   ##For now, only keep the first line of description as short_description
   mutate(across(short_description, ~ str_remove(.x, regex("\n.+", dotall=TRUE))),
-         across(c(project, extra), ~ replace_na(.x, "(none)")),
+         across(c(project, layer_manager, extra), ~ replace_na(.x, "(none)")),
          across(scope, ~ case_match(.x, 
                                     "W" ~ "word",
                                     "S" ~ "segment",

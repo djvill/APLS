@@ -8,6 +8,7 @@ synced:
   vertical_peers: yes
   data_type: phonological
   scope: segment
+  layer_manager: (none)
   transcripts_exportable: yes
   matches_exportable: yes
   searchable: regex
@@ -16,7 +17,7 @@ synced:
   export_includeCounts: yes
   export_includeAnchorSharing: yes
   extra: (none)
-last_sync_modified_date: 2024-11-13T14:35:08-0500
+last_sync_modified_date: 2024-11-25T13:56:27-0500
 notation:
   primary: DISC
   missing: Force-alignment failed for this utterance (line)
@@ -31,7 +32,7 @@ alignment_dependent: yes
 versions:
   first_appeared: 0.1.0
   last_modified: 0.1.0
-last_modified_date: 2024-11-20T10:15:04-05:00
+last_modified_date: 2024-11-25T14:02:31-05:00
 ---
 
 **Fill longer description here**
