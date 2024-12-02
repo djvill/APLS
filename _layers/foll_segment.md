@@ -2,7 +2,7 @@
 synced:
   short_description: Segment or pause following the current segment
   layer_id: 67
-  alignment: sub-interval
+  alignment: complete interval
   project: phonology
   parent: segment
   vertical_peers: no
@@ -17,7 +17,7 @@ synced:
   export_includeCounts: no
   export_includeAnchorSharing: no
   extra: (none)
-last_sync_modified_date: 2024-11-20T10:20:29-0500
+last_sync_modified_date: 2024-12-02T14:16:37-0500
 notation:
   primary: DISC
   additional: DISC pause
@@ -34,7 +34,7 @@ alignment_dependent: yes
 versions:
   first_appeared: 0.1.0
   last_modified: 0.1.2
-last_modified_date: 2024-11-20T10:21:43-05:00
+last_modified_date: 2024-12-02T14:18:09-05:00
 ---
 
 **Fill longer description here**
