@@ -4,7 +4,7 @@ layout: default
 permalink: /doc/typology
 parent: Layer reference
 nav_order: 10
-last_modified_date: 2024-11-20T12:02:16-05:00
+last_modified_date: 2024-12-02T12:15:01-05:00
 ---
 
 # Layers: {{ page.title }}
@@ -35,7 +35,7 @@ From longest to shortest, these are:
 
 ### What you'll see in APLS
 
-- [Individual transcripts]({{ '/doc/view-transcript' | relative_url }})
+- [Individual transcript pages]({{ '/doc/view-transcript' | relative_url }})
   - You can usually tell what each layer's scope is by just glancing at the transcript. Take the following screengrab as an example: 
   ![]({{ '/assets/img/transcript-layer-scope.png' | relative_url }}){: .screengrab }
     - The <span class="layer">noise</span> annotations aren't bounded by a single line, so <span class="layer">noise</span> is clearly a <span class="keyterm">span layer</span>. (Note that transcripts always display <span class="layer">noise</span> annotations.)
@@ -69,18 +69,24 @@ This distinction is captured by layer <span class="keyterm">alignment</span>.
 
 Layers can have one of three possible alignments:
 
-| Alignment | Symbol | Meaning | Notes |
+| Alignment | Symbol[*](#fn:align){: .footnote } | Meaning | Notes |
 |-----------|--------|---------|-------|
 | Complete interval | ![]({{ '/assets/img/alignment-0.svg' | relative_url }}) | Annotations always span their entire scope | |
 | Sub-interval | ![]({{ '/assets/img/alignment-2.svg' | relative_url }}) | Annotations _may_ span part of their scope.<br>Annotations that share their scope with other annotations are called <span class="keyterm">horizontal peers</span> | There may or may not be gaps between annotations within a scope. For example, there are usually long gaps between <span class="layer">comment</span> annotations within a transcript |
 | Timepoint | ![]({{ '/assets/img/alignment-1.svg' | relative_url }}) | Annotations don't have a start and end time, just a time | There aren't currently any timepoint layers in APLS. If we wanted to store vowel measurements in a layer, then we might do so in a timepoint layer (i.e., at the vowel's midpoint) |
 {: .layer-props }
 
+<a id="fn:align"/>\* Used on [individual transcript pages]({{ '/doc/view-transcript' | relative_url }}) and the [search]({{ '/doc/search' | relative_url }}) page
+
 
 ### What you'll see in APLS
 
-A layer's alignment also affects things like [search]({{ '/doc/search' | relative_url }}) and [export]({{ '/doc/export-data' | relative_url }}).
+- [Individual transcript pages]({{ '/doc/view-transcript' | relative_url }})
+  - In the layer selector, alignment is denoted by the symbols in the previous table
 
+- [Search]({{ '/doc/search' | relative_url }})
+
+- [Exporting data]({{ '/doc/export-data' | relative_url }})
 
 
 
@@ -100,18 +106,29 @@ Since the word _the_ can be pronounced /ði/ or /ðə/, _the_ has two annotation
 
 Unlike <span class="keyterm">horizontal peers</span>, which divide the timespan of their scope, we can think of vertical peers as being "stacked" on top of one another within the same timespan.
 
-| Allow for vertical peers? | Symbol | Meaning |
+| Allow for vertical peers? | Symbol[*](#fn:peers){: .footnote } | Meaning |
 |---------------------------|--------|---------|
 | True                      | ![]({{ '/assets/img/vertical-peers.svg' | relative_url }}) | A single timespan _may_ contain multiple annotations |
 | False                     | (none) | A single timespan can contain at most one annotation |
 {: .layer-props .no-keyterm }
 
+<a id="fn:peers"/>\* Used on [individual transcript pages]({{ '/doc/view-transcript' | relative_url }})
+
 
 ### What you'll see in APLS
 
-When [viewing a transcript]({{ '/doc/view-transcript' | relative_url }}) in APLS, only one vertical peer is shown;
-for example, the <span class="layer">dictionary_phonemes</span> layer only shows `ðə` for the word _the_, even though _the_ has two <span class="layer">dictionary_phonemes</span> annotations.
-This also affects things like [search]({{ '/doc/search' | relative_url }}) and [export]({{ '/doc/export-data' | relative_url }}).
+- [Individual transcript pages]({{ '/doc/view-transcript' | relative_url }})
+  - In the layer selector, the symbol ![]({{ '/assets/img/vertical-peers.svg' | relative_url }}){: style="height:1rem;"} denotes layers that allow for vertical peers
+  - **Only one vertical peer is shown**
+    - For example, the <span class="layer">dictionary_phonemes</span> layer only shows `ðə` for the word _the_, even though _the_ has two <span class="layer">dictionary_phonemes</span> annotations
+    - To check for vertical peers, view the transcript fragment in Praat instead
+
+- [Transcript fragments]({{ '/doc/transcript-praat' | relative_url }})
+
+- [Search]({{ '/doc/search' | relative_url }})
+
+- [Exporting data]({{ '/doc/export-data' | relative_url }})
+
 
 
 
@@ -127,7 +144,7 @@ Different layers contain different kinds of annotations.
 For example, <span class="layer">foll_segment</span> annotations are speech sounds, while <span class="layer">foll_pause</span> annotations are numbers.
 This distinction is captured by a layer's <span class="keyterm">data type</span>:
 
-| Data type | Symbol | Meaning | Notes |
+| Data type | Symbol[*](#fn:data-type){: .footnote } | Meaning | Notes |
 |-----------|--------|---------|-------|
 | Phonological layers | ![]({{ '/assets/img/word_layer_D.png' | relative_url }}) | Annotations are labeled with speech sounds | Some phonological layers' annotations are _individual_ sounds (like <span class="layer">segment</span>); others' are _sequences_ of sounds (like <span class="layer">syllables</span>). |
 | Numeric layers | ![]({{ '/assets/img/word_layer_N.png' | relative_url }}) | Annotations are labeled with a measurement | Some numeric layers' annotations are counts (like <span class="layer">frequency_in_corpus</span>); others' are decimal numbers (like <span class="layer">foll_pause</span>). |
@@ -135,12 +152,17 @@ This distinction is captured by a layer's <span class="keyterm">data type</span>
 | Timing-only layers | (none) | Annotations don't have a label, only a start/end time | The two timing-only layers represent temporal subdivisions of a transcript: <span class="layer">turn</span> and <span class="layer">utterance</span> |
 {: .layer-props }
 
+<a id="fn:data-type"/>\* Used on [individual transcript pages]({{ '/doc/view-transcript' | relative_url }})
+
 
 ### What you'll see in APLS
 
 This distinction is mostly important for [search]({{ '/doc/search' | relative_url }}).
 
+- [Individual transcript pages]({{ '/doc/view-transcript' | relative_url }})
+  - In the layer selector, alignment is denoted by the symbols in the previous table
 
+- [Search]({{ '/doc/search' | relative_url }})
 
 
 ### Layers by data type
@@ -159,36 +181,37 @@ Almost all layers have a <span class="keyterm">primary notation system</span>.
 Some layers have <span class="keyterm">additional notation</span>, depending on what their annotations need to represent.
 For example, the <span class="layer">syllables</span> layer uses the [DISC phonemic alphabet]({{ '/doc/notation-systems#disc-alphabet' | relative_url }}) for speech sounds _plus_ [stress markers]({{ '/doc/notation-systems#disc-extensions' | relative_url }}) for stress, such as `'fIS` for the word _fish_.
 
-Here are _brief_ descriptions of primary notation systems, with links to more details on the [notation systems]({{ '/doc/notation-systems' | relative_url }}) page:
+Here are brief descriptions of primary notation systems, with links to more details on the [notation systems]({{ '/doc/notation-systems' | relative_url }}) page if applicable:
 
-| Primary notation | Brief description |
+| Primary notation | Description       |
 |------------------|-------------------|
 | Boolean          | `True` or `False` |
 | Count            | Positive whole numbers |
-| DISC             | DISC phonemic alphabet |
+| DISC             | [DISC phonemic alphabet]({{ '/doc/notation-systems#disc-alphabet' | relative_url }}) |
 | Decimal          | Decimal numbers |
-| English spelling | Conventional English spelling |
-| English spelling (lowercase) | Conventional English spelling, lowercase |
-| Stress markers   | `'` (primary stress)<br>`"` (secondary stress)<br>`0` (unstressed) |
-| Treebank part-of-speech tags | Abbreviations that describe part of speech |
+| [English spelling]({{ '/doc/notation-systems#english-spelling' | relative_url }}) | |
+| [English spelling]({{ '/doc/notation-systems#english-spelling' | relative_url }}) (lowercase) | |
+| [Stress markers]({{ '/doc/notation-systems#disc-extensions' | relative_url }}) | `'` (primary stress)<br>`"` (secondary stress)<br>`0` (unstressed) |
+| [Treebank part-of-speech tags]({{ '/doc/notation-systems#treebank-pos' | relative_url }}) | |
 {: .layer-props .no-keyterm }
 
 Here are additional notations:
 
 | Additional notation | Brief description |
 |---------------------|-------------------|
-| DISC pause          | `.`               |
+| [DISC pause]({{ '/doc/notation-systems#disc-extensions' | relative_url }}) | `.`               |
 | Hesitation marker   | `~` (at the end of an incomplete word) |
 | Morpheme boundary   | `+` |
-| Stress markers      | `'` (primary stress)<br>`"` (secondary stress)<br>`0` (unstressed) |
-| Syllable boundary   | `-` |
+| [Stress markers]({{ '/doc/notation-systems#disc-extensions' | relative_url }}) | `'` (primary stress)<br>`"` (secondary stress)<br>`0` (unstressed) |
+| [Syllable boundary]({{ '/doc/notation-systems#disc-extensions' | relative_url }}) | `-` |
 | Transcription pause/question markers | `.` (short pause)<br>`-` (long pause)<br>`?` (question) |
 {: .layer-props .no-keyterm }
 
 ### What you'll see in APLS
 
+- [Search]({{ '/doc/search' | relative_url }})
+  - [More about how users will interact w/ notation systems than what they'll see]
 
-Understanding a layer's notation system is important for search
 
 ### Layers by notation system
 
@@ -199,7 +222,7 @@ Understanding a layer's notation system is important for search
 
 **Additional** notation:
 
-{% include layer-table.html property="notation.additional" categories="DISC pause,Hesitation marker,Morpheme boundary,Stress markers,Transcription pause/question markers" not_synced=true no_caps=true %}
+{% include layer-table.html property="notation.additional" categories="DISC pause,Hesitation marker,Morpheme boundary,Stress markers,Syllable boundary,Transcription pause/question markers" not_synced=true no_caps=true %}
 
 
 ## Alignment dependency
@@ -227,7 +250,11 @@ if <span class="layer">segment</span> has no annotations in a turn, then <span c
 
 ### What you'll see in APLS
 
+- [Individual transcript pages]({{ '/doc/view-transcript' | relative_url }})
+  - [Whole turns w/ big chunks of no annotations]
 
+- [Search]({{ '/doc/search' | relative_url }})
+  - [False negatives in search because turn isn't aligned]
 
 
 ### Layers by alignment dependency
@@ -257,6 +284,8 @@ As a result, APLS categorizes layers into <span class="keyterm">projects</span>:
 ### What you'll see in APLS
 
 The main reason projects exist is to reduce visual clutter on the [search]({{ '/doc/search' | relative_url }}) and [transcript]({{ '/doc/view-transcript' | relative_url }}) pages.
+When the page loads, only a few layers are selectable (those without a project): [IMAGE]
+Click a layer's project to make the layer selectable: [IMAGE]
 
 Unlike other layer properties, projects don't affect _anything_ about how layers are represented, how you need to search for them, export them, etc.
 <!-- So while these categories are somewhat arbitrary, -->
