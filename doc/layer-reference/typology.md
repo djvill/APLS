@@ -4,7 +4,7 @@ layout: default
 permalink: /doc/typology
 parent: Layer reference
 nav_order: 10
-last_modified_date: 2024-12-02T12:15:01-05:00
+last_modified_date: 2024-12-04T12:53:36-05:00
 ---
 
 # Layers: {{ page.title }}
@@ -37,8 +37,8 @@ From longest to shortest, these are:
 
 - [Individual transcript pages]({{ '/doc/view-transcript' | relative_url }})
   - You can usually tell what each layer's scope is by just glancing at the transcript. Take the following screengrab as an example: 
-  ![]({{ '/assets/img/transcript-layer-scope.png' | relative_url }}){: .screengrab }
-    - The <span class="layer">noise</span> annotations aren't bounded by a single line, so <span class="layer">noise</span> is clearly a <span class="keyterm">span layer</span>. (Note that transcripts always display <span class="layer">noise</span> annotations.)
+  ![]({{ '/assets/screengrab/transcript-layer-scope.png' | relative_url }}){: .screengrab }
+    - The <span class="layer">noise</span> annotations aren't bounded by a single line, so <span class="layer">noise</span> is clearly a <span class="keyterm">span layer</span>. (Note that transcripts always display the <span class="layer">noise</span> and <span class="layer">comment</span> layers.)
     - Both <span class="layer">overlap</span> and <span class="layer">speech_rate</span> have annotations that span multiple words, so they are clearly <span class="keyterm">phrase layers</span>. You can tell where these annotations start and end because of the colored arcs above each line.
     - Each <span class="layer">foll_pause</span> annotation is lined up above each <span class="layer">word</span> annotation, so <span class="layer">foll_pause</span> is clearly a <span class="keyterm">word layer</span>
     - <span class="keyterm">Segment layers</span> like <span class="layer">segment</span> aren't quite as obvious as the other scopes, but you can tell them apart because they're plain text rather than links, and they're always underneath <span class="layer">word</span>
@@ -46,12 +46,12 @@ From longest to shortest, these are:
   
 - [Search]({{ '/doc/search' | relative_url }})
   - In the layered search matrix, layers are organized into columns by scope, as in the following screengrab.
-  ![]({{ '/assets/img/search-matrix.png' | relative_url }}){: .screengrab }
+  ![]({{ '/assets/screengrab/search-matrix.png' | relative_url }}){: .screengrab }
   Only a few layers appear when you first load the search page, but you can select <span class="keyterm">projects</span> to show more (see [below](#project)).
   
 - [Exporting data]({{ '/doc/export-data' | relative_url }})
   - Layers are organized into columns by scope. Depending on how you're exporting data, there might be additional columns. For example, when [exporting a formatted transcript]({{ '/doc/export-data#export-formatted-transcript' | relative_url }}) as in the following screengrab, you can also export participant and transcript attributes. 
-  ![]({{ '/assets/img/transcripts-export-format.png' | relative_url }}){: .screengrab }
+  ![]({{ '/assets/screengrab/transcripts-export-format.png' | relative_url }}){: .screengrab }
 
 
 ### Layers by scope
@@ -72,7 +72,7 @@ Layers can have one of three possible alignments:
 | Alignment | Symbol[*](#fn:align){: .footnote } | Meaning | Notes |
 |-----------|--------|---------|-------|
 | Complete interval | ![]({{ '/assets/img/alignment-0.svg' | relative_url }}) | Annotations always span their entire scope | |
-| Sub-interval | ![]({{ '/assets/img/alignment-2.svg' | relative_url }}) | Annotations _may_ span part of their scope.<br>Annotations that share their scope with other annotations are called <span class="keyterm">horizontal peers</span> | There may or may not be gaps between annotations within a scope. For example, there are usually long gaps between <span class="layer">comment</span> annotations within a transcript |
+| Sub-interval | ![]({{ '/assets/img/alignment-2.svg' | relative_url }}) | Annotations can span part of their scope, or their entire scope<br>Annotations that share their scope with other annotations are called <span class="keyterm">horizontal peers</span> | There may or may not be gaps between annotations within a scope. For example, there are usually long gaps between <span class="layer">comment</span> annotations within a transcript |
 | Timepoint | ![]({{ '/assets/img/alignment-1.svg' | relative_url }}) | Annotations don't have a start and end time, just a time | There aren't currently any timepoint layers in APLS. If we wanted to store vowel measurements in a layer, then we might do so in a timepoint layer (i.e., at the vowel's midpoint) |
 {: .layer-props }
 
@@ -82,9 +82,12 @@ Layers can have one of three possible alignments:
 ### What you'll see in APLS
 
 - [Individual transcript pages]({{ '/doc/view-transcript' | relative_url }})
-  - In the layer selector, alignment is denoted by the symbols in the previous table
+  - In the layer selector, the symbols ![]({{ '/assets/img/alignment-0.svg' | relative_url }}){: style="height:1rem;" } ![]({{ '/assets/img/alignment-2.svg' | relative_url }}){: style="height:1rem;" } ![]({{ '/assets/img/alignment-1.svg' | relative_url }}){: style="height:1rem;" } denote alignments
+  - [You can see multiple annotations within a scope]
 
 - [Search]({{ '/doc/search' | relative_url }})
+  - In the layer selector, the symbols ![]({{ '/assets/img/alignment-0.svg' | relative_url }}){: style="height:1rem;" } ![]({{ '/assets/img/alignment-2.svg' | relative_url }}){: style="height:1rem;" } ![]({{ '/assets/img/alignment-1.svg' | relative_url }}){: style="height:1rem;" } denote alignments
+  - [Like with cross-scope search, you can do anchoring] [But you can't do e.g. multiple syllables within a word]
 
 - [Exporting data]({{ '/doc/export-data' | relative_url }})
 
@@ -119,9 +122,9 @@ Unlike <span class="keyterm">horizontal peers</span>, which divide the timespan 
 
 - [Individual transcript pages]({{ '/doc/view-transcript' | relative_url }})
   - In the layer selector, the symbol ![]({{ '/assets/img/vertical-peers.svg' | relative_url }}){: style="height:1rem;"} denotes layers that allow for vertical peers
-  - **Only one vertical peer is shown**
+  - **Only one vertical peer is visible on the transcript page**
     - For example, the <span class="layer">dictionary_phonemes</span> layer only shows `ðə` for the word _the_, even though _the_ has two <span class="layer">dictionary_phonemes</span> annotations
-    - To check for vertical peers, view the transcript fragment in Praat instead
+    - To check whether an annotation has vertical peers, view the transcript fragment in Praat instead
 
 - [Transcript fragments]({{ '/doc/transcript-praat' | relative_url }})
 

@@ -3,7 +3,7 @@ title: Troubleshooting
 layout: default
 permalink: /doc/troubleshooting
 parent: How to use APLS
-last_modified_date: 2024-10-16T11:47:57-04:00
+last_modified_date: 2024-12-04T12:53:36-05:00
 ---
 
 # {{ page.title }}
@@ -21,7 +21,7 @@ If you don't see your issue here, please [contact us](mailto:d.vill@pitt.edu?sub
 | -------- | ----------- | -------- |
 | You get an error message like "apls.pitt.edu redirected you too many times" or "Could not open the page, too many redirects" | This indicates an issue with the server that APLS runs on.<br>(Contrary to the error message, clearing your cookies will generally _not_ fix the issue.) | [Email Dan](mailto:d.vill@pitt.edu?subject=APLS error: Too many redirects&body=Please fix this error. Thanks!) |
 
-![A Google Chrome browser window that shows https://apls.pitt.edu/labbcat/www.pitt.edu in the URL bar, with the page showing the text "This page isn’t working. apls.pitt.edu redirected you too many times. Try clearing your cookies. ERR_TOO_MANY_REDIRECTS"]({{ '/assets/img/NoLoad-Redirect.png' | relative_url }}){: .screengrab }
+![A Google Chrome browser window that shows https://apls.pitt.edu/labbcat/www.pitt.edu in the URL bar, with the page showing the text "This page isn’t working. apls.pitt.edu redirected you too many times. Try clearing your cookies. ERR_TOO_MANY_REDIRECTS"]({{ '/assets/screengrab/NoLoad-Redirect.png' | relative_url }}){: .screengrab }
 
 
 ### Username/password incorrect
