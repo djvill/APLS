@@ -1,3 +1,25 @@
+- screengrab: demo-page.png
+  instructions:
+    - Log in as test-student
+    - Set browser zoom to 100%
+    - Load https://apls.pitt.edu/labbcat/transcript?transcript=CB01reading2.eaf
+    - Select speech_rate, part_of_speech, word
+    - "`window.scrollTo(0, 690); document.getElementById('players').remove();`"
+    - Put cursor over bottom-right corner of last NN
+    - Wait for tooltip to load
+    - Save
+  offset_x: 0
+  offset_y: 60
+  width: 1540
+  height: 205
+  overlay: 
+    - image: _pointer.png
+      offset_x: 885
+      offset_y: 200
+    ##Multiple overlays are supported
+    # - image: pointer.png
+      # offset_x: 985
+      # offset_y: 200
 - screengrab: search-matrix.png
   instructions:
     - Log in as test-student
