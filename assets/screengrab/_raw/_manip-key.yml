@@ -1,0 +1,11 @@
+- screengrab: search-matrix.png
+  instructions:
+    - Log in as test-student
+    - Set browser zoom to 100%
+    - Load https://apls.pitt.edu/labbcat/search
+    - "`window.scrollTo(0, 100);`"
+    - Save
+  offset_x: 545
+  offset_y: 475
+  width: 800
+  height: 425
