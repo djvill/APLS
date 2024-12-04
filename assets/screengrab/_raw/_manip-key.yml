@@ -9,7 +9,7 @@
     - Wait for tooltip to load
     - Save
   offset_x: 0
-  offset_y: 60
+  offset_y: 60  ##Top of address bar
   width: 1540
   height: 205
   overlay: 
@@ -20,6 +20,28 @@
     # - image: pointer.png
       # offset_x: 985
       # offset_y: 200
+
+- screengrab: login.png
+  instructions:
+    - Unpin browser extensions
+    - Make browser take up half-screen
+    - Load https://apls.pitt.edu/labbcat (don't log in)
+    - Save
+  offset_x: 0
+  offset_y: 0
+  width: 760
+  height: 515
+
+- screengrab: password-reset.png
+  instructions:
+    - In an *incognito* window, log in as test-student
+    - Load https://apls.pitt.edu/labbcat/security
+    - Save
+  offset_x: 605
+  offset_y: 130  ##Top of display frame
+  width: 760
+  height: 275
+
 - screengrab: search-matrix.png
   instructions:
     - Log in as test-student
@@ -31,3 +53,28 @@
   offset_y: 475
   width: 800
   height: 425
+
+- screengrab: transcript-layer-scope.png
+  instructions:
+    - Log in as test-student
+    - Set browser zoom to 100%
+    - Load https://apls.pitt.edu/labbcat/transcript?transcript=CB01pairs.eaf
+    - "Hide watermark: In Chrome console, select `html` element and deselect `background-image`"
+    - Select overlap, speech_rate, foll_pause, part_of_speech, word, segment
+    - "`window.scrollTo(0, 170); document.getElementById('players').remove()`"
+    - Save
+  offset_x: 155
+  offset_y: 130  ##Top of display frame
+  width: 1580
+  height: 815
+
+- screengrab: transcripts-export-format.png
+  instructions:
+    - Log in as test-student
+    - Set browser zoom to 100%
+    - Load https://apls.pitt.edu/labbcat/transcripts
+    - Save
+  offset_x: 185
+  offset_y: 200
+  width: 1520
+  height: 455
