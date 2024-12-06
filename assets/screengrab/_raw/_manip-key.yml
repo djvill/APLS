@@ -54,6 +54,19 @@
   width: 800
   height: 425
 
+- screengrab: transcript-layer-alignment.png
+  instructions:
+    - Log in as test-student
+    - Set browser zoom to 100%
+    - Load https://apls.pitt.edu/labbcat/transcript?transcript=LV04interview2.eaf
+    - Select part_of_speech, syllables, word
+    - "`window.scrollTo(0, 14165);`"
+    - Save
+  offset_x: 0
+  offset_y: 130  ##Top of display frame
+  width: 770
+  height: 110
+
 - screengrab: transcript-layer-scope.png
   instructions:
     - Log in as test-student

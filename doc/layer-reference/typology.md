@@ -4,7 +4,7 @@ layout: default
 permalink: /doc/typology
 parent: Layer reference
 nav_order: 10
-last_modified_date: 2024-12-04T12:53:36-05:00
+last_modified_date: 2024-12-06T12:17:27-05:00
 ---
 
 # Layers: {{ page.title }}
@@ -36,7 +36,7 @@ From longest to shortest, these are:
 ### What you'll see in APLS
 
 - [Individual transcript pages]({{ '/doc/view-transcript' | relative_url }})
-  - You can usually tell what each layer's scope is by just glancing at the transcript. Take the following screengrab as an example: 
+  - You can usually tell what each layer's scope is by just glancing at the transcript. For example: 
   ![]({{ '/assets/screengrab/transcript-layer-scope.png' | relative_url }}){: .screengrab }
     - The <span class="layer">noise</span> annotations aren't bounded by a single line, so <span class="layer">noise</span> is clearly a <span class="keyterm">span layer</span>. (Note that transcripts always display the <span class="layer">noise</span> and <span class="layer">comment</span> layers.)
     - Both <span class="layer">overlap</span> and <span class="layer">speech_rate</span> have annotations that span multiple words, so they are clearly <span class="keyterm">phrase layers</span>. You can tell where these annotations start and end because of the colored arcs above each line.
@@ -45,12 +45,13 @@ From longest to shortest, these are:
     - Finally, note that layers are always in scope order from longest to shortest
   
 - [Search]({{ '/doc/search' | relative_url }})
-  - In the layered search matrix, layers are organized into columns by scope, as in the following screengrab.
+  - In the layered search matrix, layers are organized into columns by scope:
   ![]({{ '/assets/screengrab/search-matrix.png' | relative_url }}){: .screengrab }
   Only a few layers appear when you first load the search page, but you can select <span class="keyterm">projects</span> to show more (see [below](#project)).
   
 - [Exporting data]({{ '/doc/export-data' | relative_url }})
-  - Layers are organized into columns by scope. Depending on how you're exporting data, there might be additional columns. For example, when [exporting a formatted transcript]({{ '/doc/export-data#export-formatted-transcript' | relative_url }}) as in the following screengrab, you can also export participant and transcript attributes. 
+  - Layers are organized into columns by scope
+  - Depending on how you're exporting data, there might be additional columns. For example, when [exporting a formatted transcript]({{ '/doc/export-data#export-formatted-transcript' | relative_url }}), you can also export participant and transcript attributes:
   ![]({{ '/assets/screengrab/transcripts-export-format.png' | relative_url }}){: .screengrab }
 
 
@@ -83,7 +84,10 @@ Layers can have one of three possible alignments:
 
 - [Individual transcript pages]({{ '/doc/view-transcript' | relative_url }})
   - In the layer selector, the symbols ![]({{ '/assets/img/alignment-0.svg' | relative_url }}){: style="height:1rem;" } ![]({{ '/assets/img/alignment-2.svg' | relative_url }}){: style="height:1rem;" } ![]({{ '/assets/img/alignment-1.svg' | relative_url }}){: style="height:1rem;" } denote alignments
-  - [You can see multiple annotations within a scope]
+  - When multiple annotations share a word, they crowd into the space above the word (with spaces separating labels). For example:
+    ![]({{ '/assets/screengrab/transcript-layer-alignment.png' | relative_url }}){: .screengrab }
+    - Most words in this line have one <span class="layer">part_of_speech</span> annotation, but _don't_ and _it's_ each have two (_n't_ is an adverb, and _'s_ is a present-tense 3rd-person-singular verb)
+    - Most words in this line are monosyllabic and just have one <span class="layer">syllables</span> annotation, but _Family_ has three <span class="layer">syllables</span> annotations and _Dollar_ has two.
 
 - [Search]({{ '/doc/search' | relative_url }})
   - In the layer selector, the symbols ![]({{ '/assets/img/alignment-0.svg' | relative_url }}){: style="height:1rem;" } ![]({{ '/assets/img/alignment-2.svg' | relative_url }}){: style="height:1rem;" } ![]({{ '/assets/img/alignment-1.svg' | relative_url }}){: style="height:1rem;" } denote alignments
@@ -95,7 +99,7 @@ Layers can have one of three possible alignments:
 
 ### Layers by alignment
 
-{% include layer-table.html property="alignment" categories="complete interval,sub-interval" exclude_proj="temp,testing" %}
+{% include layer-table.html property="alignment" categories="complete interval,sub-interval" row_property="scope" row_categories="span,phrase,word,segment" exclude_proj="temp,testing" %}
 
 There aren't currently any timepoint layers in APLS.
 
