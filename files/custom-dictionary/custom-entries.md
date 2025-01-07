@@ -4,11 +4,15 @@ layout: default
 permalink: /files/custom-entries
 parent: Custom dictionary
 search_exclude: true
-last_modified_date: 2024-11-01T13:16:59-04:00
+last_modified_date: 2025-01-07T11:50:53-05:00
 ---
 
 # {{ page.title }}
 {:.no_toc}
+
+These dictionary entries supplement APLS's default dictionary, the [Unisyn](https://www.cstr.ed.ac.uk/projects/unisyn/) lexicon for American English.
+With over 110,000 entries, Unisyn covers the vast majority of the words in any given transcript.
+These custom entries just fill in the gaps.
 
 {% include page_toc.html collapsible=true %}
 

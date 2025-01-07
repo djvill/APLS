@@ -6,7 +6,7 @@ parent: Transcription
 has_children: yes
 has_toc: no
 nav_order: 30
-last_modified_date: 2024-10-16T11:47:58-04:00
+last_modified_date: 2025-01-07T11:50:53-05:00
 ---
 
 # {{ page.title }}
@@ -20,7 +20,7 @@ On the APLS GitHub repository, the folder [`/files/custom-dictionary/`](https://
 ## Intro
 
 APLS uses **pronouncing dictionaries** to match individual words in a transcript to their phonemic representations.
-Its 'default' dictionary is the [Unisyn](https://www.cstr.ed.ac.uk/projects/unisyn/) lexicon for American English, which covers most of the words in any given transcript.
+Its default dictionary is the [Unisyn](https://www.cstr.ed.ac.uk/projects/unisyn/) lexicon for American English, which covers the vast majority of the words in any given transcript.
 The custom dictionary supplements Unisyn, with words in a few categories:
 
 - Names from Pittsburgh/western PA physical geography, human geography, and/or culture (e.g., neighborhoods like _Shadyside_, municipalities like _Sewickley_, streets like _Baum_, schools like _Milliones_, notable local figures like _Stargell_)

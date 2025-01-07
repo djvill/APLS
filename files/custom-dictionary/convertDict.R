@@ -102,6 +102,10 @@ convertDict <- function(x, outFile=NULL, skip=0) {
                     "# {{ page.title }}",
                     "{:.no_toc}",
                     "",
+                    "These dictionary entries supplement APLS's default dictionary, the [Unisyn](https://www.cstr.ed.ac.uk/projects/unisyn/) lexicon for American English.",
+                    "With over 110,000 entries, Unisyn covers the vast majority of the words in any given transcript.",
+                    "These custom entries just fill in the gaps.",
+                    "",
                     "{% include page_toc.html collapsible=true %}",
                     "")
         dictMD <- c(mdHead, dictMD)
