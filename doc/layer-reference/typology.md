@@ -4,7 +4,7 @@ layout: default
 permalink: /doc/typology
 parent: Layer reference
 nav_order: 10
-last_modified_date: 2025-01-09T11:37:45-05:00
+last_modified_date: 2025-01-09T12:49:22-05:00
 ---
 
 # Layers: {{ page.title }}
@@ -221,7 +221,7 @@ Here are additional notations:
 - [Search]({{ '/doc/search' | relative_url }})
   - [More about how users will interact w/ notation systems than what they'll see]
 
-{% comment %}
+
 ### Layers by notation system
 
 **Primary** notation system:
@@ -232,7 +232,7 @@ Here are additional notations:
 **Additional** notation:
 
 {% include layer-table.html property="notation.additional" categories="DISC pause,Hesitation marker,Morpheme boundary,Stress markers,Syllable boundary,Transcription pause/question markers" not_synced=true no_caps=true %}
-{% endcomment %}
+
 
 ## Alignment dependency
 
