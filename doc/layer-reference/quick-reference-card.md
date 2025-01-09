@@ -11,7 +11,7 @@ last_modified_date: 2024-11-20T18:19:34-05:00
 {:.no_toc}
 
 {% assign layers = site.layers %}
-{% assign layers = layers | where_exp: "item", "item.synced.project != 'temp' and item.synced.project != 'testing'" %}
+{% assign layers = layers | where_exp: "item", "item.synced.project != 'temp'" | where_exp: "item", "item.synced.project != 'testing'" %}
 
 To understand what each of these properties mean, check out the [layer typology]({{ '/doc/typology' | relative_url }}).
 
