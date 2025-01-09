@@ -15,7 +15,7 @@ This page outlines those categories.
 
 {% include page_toc.html collapsible=true %}
 
-{% comment %}
+
 ## Scope
 
 Not all annotations in a transcript are equally "wide" (in duration).
@@ -145,7 +145,7 @@ Unlike <span class="keyterm">horizontal peers</span>, which divide the timespan 
 ### Layers by vertical peers
 
 {% include layer-table.html property="vertical_peers" categories="true,false" exclude_proj="temp,testing" %}
-{% endcomment %}
+{% comment %}
 
 ## Data type
 
@@ -305,3 +305,4 @@ Unlike other layer properties, projects don't affect _anything_ about how layers
 {% include layer-table.html property="project" categories="(none),syntax,lexicon,timing,phonology,imported,temp,testing" no_caps=true %}
 
 Note: "temp" and "testing" layers aren't meaningful for end-users, so they've been omitted from the other "layers by property" tables on this page.
+{% endcomment %}
