@@ -11,7 +11,7 @@
 {% endcomment %}
 
 {% assign categories = include.categories | split: "," %}
-{% assign row_categories = include.row_categories | split: "," | default: "justone" %}
+{% assign row_categories = include.row_categories | default: "justone" | split: "," %}
 
 {% assign layers = site.layers %}
 {% if include.exclude_proj %}
