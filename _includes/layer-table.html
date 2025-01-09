@@ -40,6 +40,12 @@
 
 <table class="layers-by-attr{% if include.row_property %} two-attr{% endif %}" id="layers-by-{{ include.property }}{% if include.row_property %}-and-{{ include.row_property }}{% endif %}">
   <thead>
+    {% if include.row_property %}
+      <tr>
+        <th rowspan=2>{{ include.row_property | capitalize }}</th>
+        <th colspan={{ categories | size }}>{{ include.property | capitalize }}</th>
+      </tr>
+    {% endif %}
     <tr>
       {% for cat_name in categories %}
       <th>{% if no_caps %}{{ cat_name }}{% else %}{{ cat_name | capitalize }}{% endif %}</th>
@@ -47,14 +53,20 @@
     </tr>
   </thead>
   <tbody>
+    {% for row_cat_name in row_categories %}
       <tr>
+        {% if include.row_property %}<td>{{ row_cat_name | capitalize }}</td>{% endif %}
         {% for cat_name in categories %}
           {% assign cat_layers = layers | where: where_loc, cat_name %}
+          {% if include.row_property %}
+            {% assign cat_layers = cat_layers | where: row_where_loc, row_cat_name %}
+          {% endif %}
           <td>
             <ul>{% for layer in cat_layers %}<li><span class="layer">{{ layer.path | remove: "_layers/" | remove: ".md" }}</span></li>{% endfor %}</ul>
           </td>
         {% endfor %}
       </tr>
+    {% endfor %}
   </tbody>
 </table>
 
