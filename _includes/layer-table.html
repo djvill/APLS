@@ -48,7 +48,6 @@
   </thead>
   <tbody>
       <tr>
-        {% comment %}{% if include.row_property %}<td>{{ row_cat_name | capitalize }}</td>{% endif %}{% comment %}
         {% for cat_name in categories %}
           {% assign cat_layers = layers | where: where_loc, cat_name %}
           <td>
