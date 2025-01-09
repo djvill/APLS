@@ -4,7 +4,7 @@ layout: default
 permalink: /doc/typology
 parent: Layer reference
 nav_order: 10
-last_modified_date: 2024-12-06T12:17:27-05:00
+last_modified_date: 2025-01-09T11:37:45-05:00
 ---
 
 # Layers: {{ page.title }}
@@ -98,6 +98,8 @@ Layers can have one of three possible alignments:
 
 
 ### Layers by alignment
+
+Since alignment is relative to the layer's scope, these are broken down by scope too:
 
 {% include layer-table.html property="alignment" categories="complete interval,sub-interval" row_property="scope" row_categories="span,phrase,word,segment" exclude_proj="temp,testing" %}
 
