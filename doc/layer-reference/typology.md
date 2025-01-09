@@ -15,7 +15,7 @@ This page outlines those categories.
 
 {% include page_toc.html collapsible=true %}
 
-
+{% comment %}
 ## Scope
 
 Not all annotations in a transcript are equally "wide" (in duration).
@@ -145,7 +145,7 @@ Unlike <span class="keyterm">horizontal peers</span>, which divide the timespan 
 ### Layers by vertical peers
 
 {% include layer-table.html property="vertical_peers" categories="true,false" exclude_proj="temp,testing" %}
-
+{% endcomment %}
 
 ## Data type
 
