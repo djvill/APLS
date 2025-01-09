@@ -145,7 +145,7 @@ Unlike <span class="keyterm">horizontal peers</span>, which divide the timespan 
 ### Layers by vertical peers
 
 {% include layer-table.html property="vertical_peers" categories="true,false" exclude_proj="temp,testing" %}
-{% comment %}
+
 
 ## Data type
 
@@ -221,7 +221,7 @@ Here are additional notations:
 - [Search]({{ '/doc/search' | relative_url }})
   - [More about how users will interact w/ notation systems than what they'll see]
 
-
+{% comment %}
 ### Layers by notation system
 
 **Primary** notation system:
@@ -232,7 +232,7 @@ Here are additional notations:
 **Additional** notation:
 
 {% include layer-table.html property="notation.additional" categories="DISC pause,Hesitation marker,Morpheme boundary,Stress markers,Syllable boundary,Transcription pause/question markers" not_synced=true no_caps=true %}
-
+{% endcomment %}
 
 ## Alignment dependency
 
@@ -305,4 +305,3 @@ Unlike other layer properties, projects don't affect _anything_ about how layers
 {% include layer-table.html property="project" categories="(none),syntax,lexicon,timing,phonology,imported,temp,testing" no_caps=true %}
 
 Note: "temp" and "testing" layers aren't meaningful for end-users, so they've been omitted from the other "layers by property" tables on this page.
-{% endcomment %}
