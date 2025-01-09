@@ -3,7 +3,7 @@ title: Getting started
 layout: default
 permalink: /doc/getting-started
 nav_order: 10
-last_modified_date: 2024-10-16T11:47:56-04:00
+last_modified_date: 2024-12-04T12:53:36-05:00
 ---
 
 # {{ page.title }}
@@ -61,7 +61,7 @@ Some interview sections are split into multiple transcripts (e.g., `interview1`,
 ### Annotations and layers
 
 To illustrate **annotations** and **layers** in APLS, below is a screen-grab of a single <span class="keyterm">line</span> of speech from the transcript `HD07interview3.eaf`:
-![A partial screenshot from Google Chrome (as it appeared in 2024), showing the page https://apls.pitt.edu/labbcat/transcript?transcript=HD07interview3.eaf and a single line of dialogue from participant HD07. Three lines of information are shown. The first is a black bracket encompassing the entire line with the label "6.5068"; the second shows symbols "UH CC PRP VBD TO VB DT NN VBN IN PRP VBP RB VB DT NN NN"; and the third shows "yeah and I used to get the Trib delivered 'cause I don't like the Post Gazette". At the end of the second line, a cursor is hovering over the text "NN" with a tooltip "part_of_speech - utterance at 7.92 for 3.2900000000000001s - click for menu"]({{ '/assets/img/demo-page.png' | relative_url }}){: .screengrab }
+![A partial screenshot from Google Chrome (as it appeared in 2024), showing the page https://apls.pitt.edu/labbcat/transcript?transcript=HD07interview3.eaf and a single line of dialogue from participant HD07. Three lines of information are shown. The first is a black bracket encompassing the entire line with the label "6.5068"; the second shows symbols "UH CC PRP VBD TO VB DT NN VBN IN PRP VBP RB VB DT NN NN"; and the third shows "yeah and I used to get the Trib delivered 'cause I don't like the Post Gazette". At the end of the second line, a cursor is hovering over the text "NN" with a tooltip "part_of_speech - utterance at 7.92 for 3.2900000000000001s - click for menu"]({{ '/assets/screengrab/demo-page.png' | relative_url }}){: .screengrab }
 <!-- A better screen-grab would: (a) be narrower (not take up as much x-axis real estate), (b) be from a line that doesn't have an annoying duration -->
 
 
@@ -139,7 +139,7 @@ For example:
 >
 > Go to <https://apls.pitt.edu/labbcat>.
 > You should see a login box pop up:
-> ![]({{ '/assets/img/login.png' | relative_url }}){: .screengrab }
+> ![]({{ '/assets/screengrab/login.png' | relative_url }}){: .screengrab }
 
 {: .under-the-hood }
 > APLS's original URL was <https://labb-cat.linguistics.pitt.edu/labbcat>.
@@ -159,16 +159,16 @@ We'll send you a username and temporary password within 1 US business day.
 
 Once you have a username and temporary password, you can log in to <https://apls.pitt.edu/labbcat>:
 
-![]({{ '/assets/img/login.png' | relative_url }}){: .screengrab }
+![]({{ '/assets/screengrab/login.png' | relative_url }}){: .screengrab }
 
 
 There are two additional things you'll only need to do the **first** time you log in:
 
 1. You'll see a license (below). Scroll to the bottom and click _I Agree_.
-   ![]({{ '/assets/img/license.png' | relative_url }}){: .screengrab }
+   ![]({{ '/assets/screengrab/license.png' | relative_url }}){: .screengrab }
    
 1. Then you'll see a prompt to reset your temporary password. Enter your new password and click _Change Pass Phrase_.
-    ![]({{ '/assets/img/password-reset.png' | relative_url }}){: .screengrab }
+    ![]({{ '/assets/screengrab/password-reset.png' | relative_url }}){: .screengrab }
 
 
 ### Forget your password?

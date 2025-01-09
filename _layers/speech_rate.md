@@ -3,29 +3,35 @@ synced:
   short_description: Syllables per second of the entire utterance (line), skipping
     over pauses
   layer_id: 95
-  alignment: sub-interval(s)
+  alignment: sub-interval
   project: timing
   parent: turn
+  vertical_peers: no
   data_type: numeric
   scope: phrase
+  layer_manager: Statistics
   transcripts_exportable: yes
   matches_exportable: yes
-  searchable: search-matrix
-  viewable: yes
+  searchable: min_max
+  search_targetable: phrase
+  transcript_selectable: yes
+  export_includeCounts: no
+  export_includeAnchorSharing: no
   extra: "#Mon Sep 16 12:57:50 EDT 2024\r\nLayerId=66\r\nParticipants=\r\nPattern=\r\nTranscripts=\r\nUtterances=true\r\nStatistic=Word
     Rate (per second)\r\nMillisecondsPauseThreshold=\r\nMainSpeakerOnly=false\r\nCorpora=false\r\nScopeLayerId=\r\nTranscriptParticipants=false\r\nTurns=false\r\nExcludedTranscriptTypes=-1\r\nSecondsContext=\r\n"
-last_sync_modified_date: 2024-10-24T16:25:31-0400
-parallel: no
+last_sync_modified_date: 2024-11-20T10:20:29-0500
 notation:
-  primary: Numeric (syllables per second)
-  missing: "The current utterance doesn't have any <span class=\"layer\">segment</span> annotations"
+  primary: Decimal
+  missing: The current utterance doesn't have any <span class="layer">segment</span>
+    annotations
 inputs:
   - input: syllables
     type: layer
+alignment_dependent: yes
 versions:
   first_appeared: 0.1.4
   last_modified: 0.1.4
-last_modified_date: Handled by Git pre-commit hook
+last_modified_date: 2024-11-20T10:21:46-05:00
 ---
 
 **Fill longer description here**

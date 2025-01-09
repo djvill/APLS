@@ -1,0 +1,72 @@
+<!-- Begin _includes/layer-table.html -->
+
+{% comment %}
+  Example usages: 
+  
+    {% include layer-table.html property="scope" categories="span,phrase,word,segment" exclude_proj="temp,testing" %}
+    
+    {% include layer-table.html property="alignment_dependent" categories="true,false" exclude_proj="temp,testing" not_synced=true %}
+    
+    {% include layer-table.html property="alignment" categories="complete interval,sub-interval" row_property="scope" row_categories="span,phrase,word,segment" exclude_proj="temp,testing" %}
+{% endcomment %}
+
+{% assign categories = include.categories | split: "," %}
+{% assign row_categories = include.row_categories | split: "," | default: "justone" %}
+
+{% assign layers = site.layers %}
+{% if include.exclude_proj %}
+  {% assign excl = include.exclude_proj | split: "," %}
+  {% for proj in excl %}
+    {% assign excl_string = "item.synced.project != '" | append: proj | append: "'" %}
+    {% assign layers = layers | where_exp: "item", excl_string %}
+  {% endfor %}
+{% endif %}
+
+{% assign not_synced = include.not_synced | default: false %}
+{% if not_synced %}
+  {% assign where_loc = include.property %}
+{% else %}
+  {% assign where_loc = "synced." | append: include.property %}
+{% endif %}
+{% assign row_not_synced = include.row_not_synced | default: false %}
+{% if row_not_synced %}
+  {% assign row_where_loc = include.row_property %}
+{% else %}
+  {% assign row_where_loc = "synced." | append: include.row_property %}
+{% endif %}
+
+
+{% assign no_caps = include.no_caps | default: false %}
+
+<table class="layers-by-attr{% if include.row_property %} two-attr{% endif %}" id="layers-by-{{ include.property }}{% if include.row_property %}-and-{{ include.row_property }}{% endif %}">
+  <thead>
+    {% if include.row_property %}
+      <tr>
+        <th rowspan=2>{{ include.row_property | capitalize }}</th>
+        <th colspan={{ categories | size }}>{{ include.property | capitalize }}</th>
+      </tr>
+    {% endif %}
+    <tr>
+      {% for cat_name in categories %}
+      <th>{% if no_caps %}{{ cat_name }}{% else %}{{ cat_name | capitalize }}{% endif %}</th>
+      {% endfor %}
+    </tr>
+  </thead>
+  <tbody>
+    {% for row_cat_name in row_categories %}
+      <tr>
+        {% if include.row_property %}<td>{{ row_cat_name | capitalize }}</td>{% endif %}
+        {% for cat_name in categories %}
+          {% assign cat_layers = layers | where: where_loc, cat_name %}
+          {% if include.row_property %}
+            {% assign cat_layers = cat_layers | where: row_where_loc, row_cat_name %}
+          {% endif %}
+          <td>
+            <ul>{% for layer in cat_layers %}<li><span class="layer">{{ layer.path | remove: "_layers/" | remove: ".md" }}</span></li>{% endfor %}</ul>
+          </td>
+        {% endfor %}
+      </tr>
+    {% endfor %}
+  </tbody>
+</table>
+

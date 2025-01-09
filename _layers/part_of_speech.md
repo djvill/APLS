@@ -1,19 +1,23 @@
 ---
 synced:
-  short_description: The word's part of speech
+  short_description: The word's part(s) of speech
   layer_id: 89
-  alignment: sub-interval(s)
+  alignment: sub-interval
   project: syntax
-  data_type: text
   parent: word
+  vertical_peers: no
+  data_type: text
   scope: word
+  layer_manager: StanfordPosTagger
   transcripts_exportable: yes
   matches_exportable: yes
-  searchable: search-matrix
-  viewable: yes
-  extra:
-last_sync_modified_date: 
-parallel: yes
+  searchable: regex
+  search_targetable: word
+  transcript_selectable: yes
+  export_includeCounts: no
+  export_includeAnchorSharing: no
+  extra: (none)
+last_sync_modified_date: 2024-11-20T10:20:29-0500
 notation:
   primary: Treebank part-of-speech tags
   missing: Word is redacted or an incomplete word
@@ -22,10 +26,11 @@ inputs:
     type: layer
   - input: Stanford POS Tagger
     type: algorithm
+alignment_dependent: no
 versions:
   first_appeared: 0.1.1
   last_updated: 0.1.2
-last_modified_date: 2024-10-28T09:51:17-04:00
+last_modified_date: 2024-11-20T10:21:45-05:00
 ---
 
 

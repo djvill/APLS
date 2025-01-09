@@ -43,7 +43,11 @@ This is just a sketch!
 	
 	- Exporting data
 		
-		Covers both _search_ > export options and _upload_ > export options
+		- _search_ > export
+    
+    - _upload_ > export
+    
+    - _transcripts_ > _Export Format_
 	
 	- Extracting acoustic measurements
 	

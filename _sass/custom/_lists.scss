@@ -1,5 +1,5 @@
 /* Use darker numbers for numbered lists */
-li::before {
+ol > li::before {
 	color: $list-marker-color !important;
 	font-weight: bold;
 }
