@@ -49,7 +49,7 @@ all_layers <- all_layers |>
   mutate(across(where(is.character), ~ na_if(.x, ""))) |>
   ##Nicer column names
   rename(short_description = description, project = category, parent = parentId, 
-         data_type = type, vertical_peers = peers, 
+         data_type = type, vertical_peers = peersOverlap,
          layer_manager = layer_manager_id) |>
   ##Nicer column order
   relocate(id, short_description, layer_id, .before=1) |>
@@ -83,7 +83,7 @@ layers <- layers |>
     ##List-columns
     validLabels, validLabelsDefinition,
     ##Graph-algebraic columns (see https://doi.org/10.1016/j.csl.2017.01.004 )
-    parentIncludes, peersOverlap, saturated,
+    parentIncludes, saturated,
     ##enabled is often subject to change
     enabled,
     ##I can't figure out what subtype does
@@ -168,7 +168,7 @@ layers <- layers |>
          export_includeCounts = case_when(
            !matches_exportable ~ NA, ##Not shown in matches > CSV Export
            id=="word" ~ FALSE,
-           vertical_peers ~ TRUE,
+           peers ~ TRUE,
            .default=FALSE),
          
          ##Do "anchor" symbols show up in matches > CSV Export?
@@ -178,7 +178,7 @@ layers <- layers |>
            id=="word" ~ FALSE,
            scope=="span" ~ FALSE,
            alignment != "sub-interval" ~ FALSE,
-           vertical_peers ~ TRUE,
+           peers ~ TRUE,
            .default=FALSE),
          .before=extra)
 

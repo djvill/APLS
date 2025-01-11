@@ -5,6 +5,7 @@ synced:
   alignment: complete interval
   project: timing
   parent: word
+  peers: no
   vertical_peers: no
   data_type: numeric
   scope: word
@@ -17,7 +18,7 @@ synced:
   export_includeCounts: no
   export_includeAnchorSharing: no
   extra: (none)
-last_sync_modified_date: 2024-11-20T10:20:29-0500
+last_sync_modified_date: 2025-01-11T16:50:28-0500
 notation:
   primary: Decimal
   missing: |
@@ -35,7 +36,7 @@ alignment_dependent: yes
 versions:
   first_appeared: 0.1.2
   last_modified: 0.1.2
-last_modified_date: 2024-11-20T10:21:43-05:00
+last_modified_date: 2025-01-11T16:51:52-05:00
 ---
 
 **within-participant**

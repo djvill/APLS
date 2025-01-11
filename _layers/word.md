@@ -5,7 +5,8 @@ synced:
   alignment: sub-interval
   project: (none)
   parent: turn
-  vertical_peers: yes
+  peers: yes
+  vertical_peers: no
   data_type: text
   scope: word
   layer_manager: TranscriberManager
@@ -17,7 +18,7 @@ synced:
   export_includeCounts: no
   export_includeAnchorSharing: no
   extra: (none)
-last_sync_modified_date: 2024-11-20T10:20:29-0500
+last_sync_modified_date: 2025-01-11T16:50:28-0500
 notation:
   primary: English spelling
   additional:
@@ -30,7 +31,7 @@ alignment_dependent: no
 versions:
   first_appeared: 0.1.0
   last_modified: 0.1.0
-last_modified_date: 2024-12-02T09:56:28-05:00
+last_modified_date: 2025-01-11T16:52:04-05:00
 ---
 
 **Fill longer description here**

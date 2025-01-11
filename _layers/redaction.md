@@ -6,7 +6,8 @@ synced:
   alignment: sub-interval
   project: imported
   parent: turn
-  vertical_peers: no
+  peers: yes
+  vertical_peers: yes
   data_type: text
   scope: phrase
   layer_manager: (none)
@@ -15,10 +16,10 @@ synced:
   searchable: regex
   search_targetable: phrase
   transcript_selectable: yes
-  export_includeCounts: no
-  export_includeAnchorSharing: no
+  export_includeCounts: yes
+  export_includeAnchorSharing: yes
   extra: (none)
-last_sync_modified_date: 2024-11-25T13:56:27-0500
+last_sync_modified_date: 2025-01-11T16:50:28-0500
 notation:
   primary: English spelling
   missing: Speech does not contain personally identifying information
@@ -29,7 +30,7 @@ alignment_dependent: no
 versions:
   first_appeared: 0.1.0
   last_modified: 0.1.0
-last_modified_date: 2024-12-02T09:56:28-05:00
+last_modified_date: 2025-01-11T16:52:00-05:00
 ---
 
 https://djvill.github.io/APLS/doc/transcription-convention#redaction

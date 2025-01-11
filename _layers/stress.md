@@ -5,6 +5,7 @@ synced:
   alignment: sub-interval
   project: phonology
   parent: word
+  peers: yes
   vertical_peers: no
   data_type: phonological
   scope: word
@@ -14,10 +15,10 @@ synced:
   searchable: regex
   search_targetable: word
   transcript_selectable: yes
-  export_includeCounts: no
-  export_includeAnchorSharing: no
+  export_includeCounts: yes
+  export_includeAnchorSharing: yes
   extra: (none)
-last_sync_modified_date: 2024-11-20T10:20:29-0500
+last_sync_modified_date: 2025-01-11T16:50:28-0500
 notation:
   primary: Stress markers
   missing: The current word doesn't have any <span class="layer">segment</span> annotations
@@ -28,7 +29,7 @@ alignment_dependent: yes
 versions:
   first_appeared: 0.1.0
   last_modified: 0.1.0
-last_modified_date: 2024-11-20T10:21:46-05:00
+last_modified_date: 2025-01-11T16:52:02-05:00
 ---
 
 **Fill longer description here**

@@ -6,6 +6,7 @@ synced:
   alignment: sub-interval
   project: timing
   parent: turn
+  peers: yes
   vertical_peers: no
   data_type: numeric
   scope: phrase
@@ -15,11 +16,11 @@ synced:
   searchable: min_max
   search_targetable: phrase
   transcript_selectable: yes
-  export_includeCounts: no
-  export_includeAnchorSharing: no
-  extra: "#Mon Sep 16 12:57:50 EDT 2024\r\nLayerId=66\r\nParticipants=\r\nPattern=\r\nTranscripts=\r\nUtterances=true\r\nStatistic=Word
+  export_includeCounts: yes
+  export_includeAnchorSharing: yes
+  extra: "#Tue Dec 03 14:38:45 EST 2024\r\nLayerId=66\r\nParticipants=participant_speech_rate\r\nPattern=\r\nTranscripts=\r\nUtterances=true\r\nStatistic=Word
     Rate (per second)\r\nMillisecondsPauseThreshold=\r\nMainSpeakerOnly=false\r\nCorpora=false\r\nScopeLayerId=\r\nTranscriptParticipants=false\r\nTurns=false\r\nExcludedTranscriptTypes=-1\r\nSecondsContext=\r\n"
-last_sync_modified_date: 2024-11-20T10:20:29-0500
+last_sync_modified_date: 2025-01-11T16:50:28-0500
 notation:
   primary: Decimal
   missing: The current utterance doesn't have any <span class="layer">segment</span>
@@ -31,7 +32,7 @@ alignment_dependent: yes
 versions:
   first_appeared: 0.1.4
   last_modified: 0.1.4
-last_modified_date: 2024-11-20T10:21:46-05:00
+last_modified_date: 2025-01-11T16:52:01-05:00
 ---
 
 **Fill longer description here**

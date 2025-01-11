@@ -5,7 +5,8 @@ synced:
   alignment: complete interval
   project: testing
   parent: word
-  vertical_peers: yes
+  peers: yes
+  vertical_peers: no
   data_type: text
   scope: word
   layer_manager: Python
@@ -17,10 +18,10 @@ synced:
   export_includeCounts: yes
   export_includeAnchorSharing: no
   extra: (none)
-last_sync_modified_date: 2024-11-20T10:20:29-0500
+last_sync_modified_date: 2025-01-11T16:50:28-0500
 notation:
-  primary: 'N/A'
-last_modified_date: 2025-01-09T13:13:13-05:00
+  primary: N/A
+last_modified_date: 2025-01-11T16:52:03-05:00
 ---
 
 **Fill longer description here**

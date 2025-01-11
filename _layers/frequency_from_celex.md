@@ -6,6 +6,7 @@ synced:
   alignment: complete interval
   project: lexicon
   parent: word
+  peers: yes
   vertical_peers: yes
   data_type: numeric
   scope: word
@@ -21,7 +22,7 @@ synced:
     cxen_wordform.Cob\\r\\n FROM cxen_wordform\\r\\n INNER JOIN cxen_wordformortho\\r\\n
     ON cxen_wordformortho.IdNum \\= cxen_wordform.IdNum\\r\\n WHERE cxen_wordformortho.WordDia
     \\= ?\\r\\n ORDER BY cxen_wordform.Cob DESC\r\nPronounceOverridesCelex=false\r\nLayerId=2\r\n"
-last_sync_modified_date: 2024-11-20T10:20:29-0500
+last_sync_modified_date: 2025-01-11T16:50:28-0500
 notation:
   primary: Count
   missing: Word is not in CELEX
@@ -34,7 +35,7 @@ alignment_dependent: no
 versions:
   first_appeared: 0.1.0
   last_modified: 0.1.0
-last_modified_date: 2024-11-20T10:21:43-05:00
+last_modified_date: 2025-01-11T16:51:53-05:00
 ---
 
 **Fill longer description here**

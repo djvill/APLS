@@ -5,7 +5,8 @@ synced:
   alignment: sub-interval
   project: timing
   parent: turn
-  vertical_peers: yes
+  peers: yes
+  vertical_peers: no
   data_type: timing-only
   scope: phrase
   layer_manager: (none)
@@ -17,9 +18,9 @@ synced:
   export_includeCounts: .na
   export_includeAnchorSharing: .na
   extra: (none)
-last_sync_modified_date: 2024-11-25T13:56:27-0500
+last_sync_modified_date: 2025-01-11T16:50:28-0500
 notation:
-  primary: 'N/A'
+  primary: N/A
 inputs:
   - input: Original transcription
     type: transcription
@@ -27,7 +28,7 @@ alignment_dependent: no
 versions:
   first_appeared: 0.1.0
   last_modified: 0.1.0
-last_modified_date: 2025-01-09T13:08:10-05:00
+last_modified_date: 2025-01-11T16:52:04-05:00
 ---
 
 **Fill longer description here**
