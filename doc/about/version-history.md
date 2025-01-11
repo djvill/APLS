@@ -4,7 +4,7 @@ layout: default
 permalink: /doc/version-history
 parent: About APLS
 nav_order: 30
-last_modified_date: 2024-09-19T16:57:12-04:00
+last_modified_date: 2025-01-11T09:54:59-05:00
 ---
 
 {% comment %}
@@ -16,7 +16,7 @@ Instead, add/edit versions in `../_versions/`
 {:.no_toc}
 
 {% assign curr_ver = site.versions | last %}
-APLS's current pre-release is **version {{ curr_ver.version }}** (dated {{ curr_ver.date | date: "%e %b %Y" }}).
+APLS's current **preview version** is **{{ curr_ver.version }}** (dated {{ curr_ver.date | date: "%e %b %Y" }}).
 This version of APLS uses LaBB-CAT version {{ curr_ver.labbcat_version }}.
 
 <table id="version-summary">
