@@ -3,13 +3,13 @@ title: Troubleshooting
 layout: default
 permalink: /doc/troubleshooting
 parent: How to use APLS
-last_modified_date: 2024-12-04T12:53:36-05:00
+last_modified_date: 2025-01-21T10:46:42-05:00
 ---
 
 # {{ page.title }}
 {:.no_toc}
 
-If you don't see your issue here, please [contact us](mailto:d.vill@pitt.edu?subject=APLS troubleshooting: Some other issue)!
+If you don't see your issue here, please [contact us](mailto:apls@pitt.edu?subject=Troubleshooting: Some other issue)!
 
 {% include page_toc.html collapsible=true %}
 
@@ -19,7 +19,7 @@ If you don't see your issue here, please [contact us](mailto:d.vill@pitt.edu?sub
 
 | Symptoms | Explanation | Solution |
 | -------- | ----------- | -------- |
-| You get an error message like "apls.pitt.edu redirected you too many times" or "Could not open the page, too many redirects" | This indicates an issue with the server that APLS runs on.<br>(Contrary to the error message, clearing your cookies will generally _not_ fix the issue.) | [Email Dan](mailto:d.vill@pitt.edu?subject=APLS error: Too many redirects&body=Please fix this error. Thanks!) |
+| You get an error message like "apls.pitt.edu redirected you too many times" or "Could not open the page, too many redirects" | This indicates an issue with the server that APLS runs on.<br>(Contrary to the error message, clearing your cookies will generally _not_ fix the issue.) | [Email Dan](mailto:apls@pitt.edu?subject=Error: Too many redirects&body=Please fix this error. Thanks!) |
 
 ![A Google Chrome browser window that shows https://apls.pitt.edu/labbcat/www.pitt.edu in the URL bar, with the page showing the text "This page isn’t working. apls.pitt.edu redirected you too many times. Try clearing your cookies. ERR_TOO_MANY_REDIRECTS"]({{ '/assets/screengrab/NoLoad-Redirect.png' | relative_url }}){: .screengrab }
 
@@ -54,4 +54,4 @@ APLS might be running slowly for you if:
 
 You can always run the benchmark search mentioned above to see if APLS is running slower than usual (cases #2--4).
 If so, we'd recommend waiting a little bit and trying again.
-If APLS is _still_ slower than expected for even the benchmark search, please [email Dan](mailto:d.vill@pitt.edu?subject=APLS is slow&body=APLS is running slowly right now. I ran the benchmark search mentioned at https://djvill.github.io/APLS/doc/troubleshooting#apls-is-slow and it took about SECONDS seconds to run. Thanks!).
+If APLS is _still_ slower than expected for even the benchmark search, please [email us](mailto:apls@pitt.edu?subject=APLS is slow&body=APLS is running slowly right now. I ran the benchmark search mentioned at https://djvill.github.io/APLS/doc/troubleshooting#apls-is-slow and it took about SECONDS seconds to run. Thanks!).
