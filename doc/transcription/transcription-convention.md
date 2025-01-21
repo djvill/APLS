@@ -4,12 +4,14 @@ layout: default
 permalink: /doc/transcription-convention
 parent: Transcription
 nav_order: 10
-last_modified_date: 2025-01-07T11:00:32-05:00
+last_modified_date: 2025-01-21T10:36:11-05:00
 ---
 
 
 # {{ page.title }}
 {:.no_toc}
+
+_Note: This page is a how-to for transcribers. If you want a higher-level overview for end-users, read the [transcription]({{ '/doc/transcription' | relative_url }}) page._
 
 The purpose of transcription for APLS is to **facilitate large-scale processing of speech data** through the **LaBB-CAT** corpus analysis tool.
 This means that we need to report speech as faithfully as possible and be consistent about little details like file names.
