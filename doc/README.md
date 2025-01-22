@@ -15,14 +15,13 @@ APLS is a linguistic data resource, powered by the open-source linguistic corpus
 - **metadata** on interviewees and transcripts that facilitate large-scale (socio)linguistic analysis.
 
 APLS is (and will always be) **free to use**.
-APLS is currently under construction, but when complete, it will contain 270 sound files totaling 45 hours of audio from 40 speakers.
+APLS currently contains 211 sound files totaling 32.75 hours of audio from 33 interviewees.
+APLS is currently under construction; when complete, it will contain 270 sound files totaling 45 hours of audio from 40 interviewees.
 <!-- In total, APLS contains 270 sound files totaling 45 hours of audio from 40 speakers. -->
+{: .mb-1 }
 
 Ready to get started with APLS? Click [here]({{ '/doc/getting-started' | relative_url }}).
-{: .fs-7 .fw-600 }
-
-Or check out the [demo](#demo-measuring-f1-and-f2-for-aw-in-closed-syllables) below for an example of working with APLS!
-{: .fs-6 .fw-600 }
+{: .fs-7 .fw-600 .mt-1 }
 
 ## Demo: Measuring F1 and F2 for /aw/ in closed syllables
 {: .no_toc }
@@ -35,9 +34,11 @@ Or check out the [demo](#demo-measuring-f1-and-f2-for-aw-in-closed-syllables) be
   - Add a timer to the bottom-left, then speed up the video during processing "downtime"
 -->
 
-Some speakers of Pittsburgh English use a monophthongal variant of the /aw/ phoneme. 
-This variant, stereotyped as "_dahntahn_" for _downtown_, holds important social meanings in Pittsburgh (e.g., [Johnstone et al. 2006](https://doi.org/10.1177/0075424206290692)).
-A pretty typical data task would be to identify all tokens matching a specific linguistic context (say, /aw/ in closed syllables) and extract a set of acoustic measurements (say, [F1 and F2](https://corpus.eduhk.hk/english_pronunciation/index.php/2-2-formants-of-vowels/) at 3 timepoints).
+Some speakers of Pittsburgh English pronounce the /aw/ vowel (the vowel sound in words like _out_ and _downtown_) more like "ah" (stereotyped as "_aht_" and "_dahntahn_").
+This pronunciation is noticeable to Pittsburghers as a marker of Pittsburgh identity and social meanings like working-class status (e.g., [Johnstone et al. 2006](https://doi.org/10.1177/0075424206290692)).
+
+Let's say we wanted to investigate how different speakers pronounce /aw/ in different situations.
+A pretty typical data task would be to identify all tokens (individual instances in speech) matching a specific linguistic context (for example, when /aw/ is followed by a consonant in the same syllable) and extract a set of acoustic measurements (for example, [F1 and F2](https://corpus.eduhk.hk/english_pronunciation/index.php/2-2-formants-of-vowels/) at 3 timepoints).
 Normally, performing this sort of batch acoustic measurement on a dataset this big would take hours of manual effort, even if you use state-of-the-art speech technologies for automatic speech recognition and segmental alignment.
 {: .mb-1 }
 
