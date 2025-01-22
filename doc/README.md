@@ -3,21 +3,26 @@ layout: default
 nav_exclude: yes
 permalink: /
 num_aw_closed: 4420
-last_modified_date: 2024-10-16T11:47:55-04:00
+last_modified_date: 2025-01-21T17:32:23:z
 ---
 
-# Documentation
+# APLS Documentation
 
 Welcome to the documentation homepage for the **Archive of Pittsburgh Language and Speech** (aka **APLS**, pronounced like _apples_)!
 APLS is a linguistic data resource, powered by the open-source linguistic corpus software [LaBB-CAT], that contains:
 - **recordings** of interviews conducted with speakers native to Pittsburgh and surrounding neighborhoods,
-- **annotations** of linguistic information at the level of phrases, words, and individual speech sounds, allowing us to treat these recordings as structured linguistic data, and
+- **annotated transcripts** with information at the phrase, word, and individual speech sound levels, allowing these recordings to be used as structured linguistic data, and
 - **metadata** on interviewees and transcripts that facilitate large-scale (socio)linguistic analysis.
 
 APLS is (and will always be) **free to use**.
 APLS is currently under construction, but when complete, it will contain 270 sound files totaling 45 hours of audio from 40 speakers.
 <!-- In total, APLS contains 270 sound files totaling 45 hours of audio from 40 speakers. -->
 
+Ready to get started with APLS? Click [here]({{ '/doc/getting-started' | relative_url }}).
+{: .fs-7 .fw-600 }
+
+Or check out the [demo](#demo-measuring-f1-and-f2-for-aw-in-closed-syllables) below for an example of working with APLS!
+{: .fs-6 .fw-600 }
 
 ## Demo: Measuring F1 and F2 for /aw/ in closed syllables
 {: .no_toc }
@@ -54,10 +59,6 @@ With APLS, it takes **_as little as 2 minutes_** to measure all **{{ page.num_aw
 > 1. [Upload]({{ '/doc/extract-acoustics' | relative_url }}) search results to APLS's built-in Praat module
 >   - Our search-results file gets updated with acoustic measurements that we specify (in this case, F1 and F2 at the vowel's 20%, 50%, and 80% timepoints)
 >     <!-- GIF 3 -->
-
-
-Ready to get started with APLS? Click [here]({{ '/doc/getting-started' | relative_url }})
-{: .fs-6 .fw-600 }
 
 
 {% include linklist.html %}
