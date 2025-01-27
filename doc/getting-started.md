@@ -3,13 +3,13 @@ title: Getting started
 layout: default
 permalink: /doc/getting-started
 nav_order: 10
-last_modified_date: 2024-12-04T12:53:36-05:00
+last_modified_date: 2025-01-23T16:07:57:z
 ---
 
 # {{ page.title }}
 {:.no_toc}
 
-APLS contains sound files alongside annotations that allow us to treat these audio files as structured linguistic data.
+APLS contains sound files with accompanying annotated transcripts that allow the corpus files to be used as structured linguistic data.
 Once you have an [APLS login](#sign-up), you can access APLS through your browser at <https://apls.pitt.edu/labbcat>.[^r-python]
 <!-- APLS works just like any other webpage: you can use the back/forward buttons to navigate, create bookmarks, load multiple pages in tabs, etc. -->
 
@@ -18,84 +18,9 @@ Once you have an [APLS login](#sign-up), you can access APLS through your browse
 {% include page_toc.html collapsible=true open=true %}
 
 
-## Where APLS audio data comes from
-
-APLS contains audio recordings of one-on-one [sociolinguistic interviews](https://languageandlife.org/about-sociolinguistics/) from fieldwork conducted in 2003--2005 with native Pittsburghers in four Pittsburgh neighborhoods: the Hill District (abbreviated `HD` in APLS), Lawrenceville (`LV`), Forest Hills (`FH`), and Cranberry Township (`CB`).[^neighborhood]
-These interviews typically consisted of several sections (though not all interviews had all of these):
-
-- A long conversation
-  - Sometimes including chatter about "Pittsburghese" and/or African American English
-- 1--2 reading tasks
-- A [minimal pairs task](https://ecampusontario.pressbooks.pub/essentialsoflinguistics2/chapter/10-5-variationist-methods-and-concepts/)
-
-[^neighborhood]: In keeping with Pittsburgh parlance, we use _neighborhood_ to encompass geographic areas inside or outside Pittsburgh city limits. Technically, only the Hill District and Lawrenceville are within city limits. Forest Hills is a borough within Allegheny County, and Cranberry Township is a township just outside Allegheny County. In the original fieldwork, these sites were chosen to reflect a distinction (between inner-city, inner-ring suburb, and outer-ring suburb) that shows up in some classic sociolinguistic literature (e.g., [Bailey et al. 1993](https://doi.org/10.1017/S095439450000154X), [Eckert 2000](https://www.wiley.com/en-us/Language+Variation+as+Social+Practice%3A+The+Linguistic+Construction+of+Identity+in+Belten+High-p-9780631186038))
-
-APLS includes just a subset of the audio files from this fieldwork.
-All interviewees in APLS are natives of the Pittsburgh area, and all interviewees consented to make their data publicly available.
-In addition, APLS currently contains only files that had just one interviewee.
-
-
-## Basic organization
-
-APLS data is organized using the data structures provided by the open-source linguistic corpus software [LaBB-CAT].
-The most important organizational units in LaBB-CAT corpora are <span class="keyterm">annotations</span>, <span class="keyterm">transcripts</span>, <span class="keyterm">participants</span>, and <span class="keyterm">layers</span>.
-
-- **Annotations** are individual bits of data aligned to specific timestamps in audio files.
-- **Transcripts** hold data for a single audio file and all of its annotations, plus metadata like when the audio file was recorded.
-- **Participants** are speakers, plus metadata like demographic info.
-- **Layers** are series of time-aligned annotations in transcripts corresponding to a single type of linguistic data (e.g., pronunciations, part-of-speech tags).
-
-
-### Participants and transcripts
-
-The **participants** in APLS are the interviewees, the interviewers, and occasionally a bystander whose speech is captured in the recording.
-Interviewees in APLS are identified by an anonymized <span class="keyterm">speaker code</span> that includes their neighborhood abbrevation (e.g., `CB01`, `HD17`).
-
-Interviews are divided into several **transcripts** (corresponding to the original recording files), named after the interviewee and interview section.
-For example, the file `FH10pairs.eaf` contains the minimal pairs task from the interviewee FH10.[^eaf]
-Some interview sections are split into multiple transcripts (e.g., `interview1`, `reading2`).
-
-[^eaf]: The `.eaf` part of the transcript name reflects the original transcript file, which was created in the transcription program [Elan].
-
-
-### Annotations and layers
-
-To illustrate **annotations** and **layers** in APLS, below is a screen-grab of a single <span class="keyterm">line</span> of speech from the transcript `HD07interview3.eaf`:
-![A partial screenshot from Google Chrome (as it appeared in 2024), showing the page https://apls.pitt.edu/labbcat/transcript?transcript=HD07interview3.eaf and a single line of dialogue from participant HD07. Three lines of information are shown. The first is a black bracket encompassing the entire line with the label "6.5068"; the second shows symbols "UH CC PRP VBD TO VB DT NN VBN IN PRP VBP RB VB DT NN NN"; and the third shows "yeah and I used to get the Trib delivered 'cause I don't like the Post Gazette". At the end of the second line, a cursor is hovering over the text "NN" with a tooltip "part_of_speech - utterance at 7.92 for 3.2900000000000001s - click for menu"]({{ '/assets/screengrab/demo-page.png' | relative_url }}){: .screengrab }
-<!-- A better screen-grab would: (a) be narrower (not take up as much x-axis real estate), (b) be from a line that doesn't have an annoying duration -->
-
-
-Let's break down what we can see:
-
-- On the left-hand side is `HD07`, the participant who uttered this speech.
-- To the right of this speaker code are three layers. From bottom to top, these are <span class="layer">word</span>, <span class="layer">part_of_speech</span>, and <span class="layer">speech_rate</span>.
-  - <span class="layer">word</span> layer (bottom):
-    - This layer contains the words that HD07 spoke, spelled in normal English.
-    - Each word has a single annotation on the <span class="layer">word</span> layer.
-  - <span class="layer">part_of_speech</span> layer (middle):
-    - This layer encodes each word's part of speech in [symbols developed for the Penn Treebank]({{ '/doc/notation-systems#penn-treebank-pos-tags' | relative_url }}) project (e.g., `UH` for interjections, `CC` for coordinating conjunctions).
-    - Most words have a single <span class="layer">part_of_speech</span> annotation. The word _don't_ has two annotations (`VBP RB`), since consists of both a present-tense verb (_do_) and an adverb (_not_).
-  - <span class="layer">speech_rate</span> (top)
-    - This layer contains a measurement (in syllables per second) of how quickly HD07 uttered this line
-    - Because APLS measures the speech rate over an entire line of the transcript, there is just one <span class="layer">speech_rate</span> annotation for this line (as indicated by the curved bracket).
-- The cursor is hovering over the `NN` annotation, bringing up a tooltip with several pieces of information:
-  - The selected annotation is on the <span class="layer">part_of_speech</span> layer
-  - This annotation is part of a line (aka an <span class="layer">utterance</span>) that begins at 7.92 seconds into the transcript and lasts around 3.29 seconds
-  - There's a [menu]({{ '/doc/view-transcript#word-menu' | relative_url }}) that can be brought up by clicking on the annotation
-
-
-## From audio data to APLS
-
-To get an audio file into APLS, it is first [transcribed]({{ '/doc/transcription' | relative_url }}) by a research assistant according to a specific set of conventions that facilitate analysis in LaBB-CAT.
-(This takes a **ton** of time and effort!)
-The transcription file is then uploaded with its audio file to APLS, where it is converted into an APLS transcript.
-APLS generates numerous layers for the transcript, based on dictionaries for looking up representations of words (e.g., morphological parses), machine learning models (e.g., the [Hidden Markov Toolkit][htk] for determining time-alignments of individual speech sounds), and/or other layers.
-Finally, participant and transcript metadata is uploaded to APLS.
-
-
 ## Navigating documentation site
 
-We'll get into navigating APLS itself once you have a [user account](#sign-up).
+We'll get into [using APLS itself]({{ '/doc/how-to-use' | relative_url }}) once you have a [user account](#sign-up).
 In the meantime, here are some tips for navigating this documentation site.
 
 
@@ -109,13 +34,15 @@ This site uses special formatting to denote specific types of information:
 - **Layers**
   - Example: <span class="layer">orthography</span>
   <!-- - Linked to an extensive [layer reference]({{ '/doc/layer-reference' | relative_url }}) -->
+- **Internal links** (i.e., a link to a specific location or page in the APLS documentation)
+  - Example: [Special formatting](#special-formatting)
 - **External links** (i.e., a link that's not to a documentation page or an APLS page)
   - Example: [LaBB-CAT]
-- **Input/output text** (i.e., something you actually type into APLS, or information that APLS displays like a speaker code)
+- **Input/output text** (i.e., something you actually type into APLS or information that APLS displays)
   - Example: `CB01`
 - **Things you click on in APLS** (e.g., a menu option or a link)
   - Example: The _transcripts_ page
-
+  
 
 ### Navigation across and within pages
 
