@@ -4,7 +4,7 @@ layout: default
 permalink: /doc/contributors
 parent: About APLS
 nav_order: 10
-last_modified_date: 2024-11-13T11:59:11-05:00
+last_modified_date: 2025-01-28T16:55:00-05:00
 ---
 
 # {{ page.title }}
@@ -27,3 +27,8 @@ Funding and resources for the Archive of Pittsburgh Language and Speech was/is p
 - Office of Research (via Pitt Momentum Funds), University of Pittsburgh
 - Center for Research Computing, University of Pittsburgh
 - New Zealand Institute of Language, Brain, and Behaviour, University of Canterbury
+
+
+## Technological tools
+
+https://lingmethodshub.github.io/content/python/speaker-diarization-for-linguistics/
