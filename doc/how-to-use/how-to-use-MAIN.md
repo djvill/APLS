@@ -5,7 +5,7 @@ permalink: /doc/how-to-use
 has_children: yes
 has_toc: no
 nav_order: 20
-last_modified_date: 2025-01-28T11:24:30-05:00
+last_modified_date: 2025-01-28T16:52:48-05:00
 ---
 
 # {{ page.title }}
@@ -29,9 +29,10 @@ Here's a quick reference to the pages in this section:
 
 - home: The homepage
 - search: Search for annotations (e.g., individual words, phonemes)
-- upload: Upload search results to get more data (e.g., extracting a list of audio clips)
+- extract: Extract audio, transcript, annotation, or acoustic data
 - participants: View information on participants
 - transcripts: Browse transcripts
+- documentation: Links to the [documentation homepage]({{ '/' | relative_url }})
 
 
 ## If you're **publishing based on APLS**
