@@ -5,8 +5,8 @@ permalink: /doc/search
 parent: How to use APLS
 has_children: yes
 has_toc: no
-nav_order: 20
-last_modified_date: 2024-10-24T16:24:52-04:00
+nav_order: 40
+last_modified_date: 2025-01-28T11:24:30-05:00
 ---
 
 # {{ page.title }}
