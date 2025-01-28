@@ -32,6 +32,18 @@
   width: 760
   height: 515
 
+- screengrab: noload-redirect.png
+  instructions:
+    - Unpin browser extensions
+    - Set browser zoom to 100%
+    - Log into server and stop Tomcat
+    - Load https://apls.pitt.edu/labbcat
+    - Save
+  offset_x: 0
+  offset_y: 0
+  width: 970
+  height: 660
+
 - screengrab: password-reset.png
   instructions:
     - In an *incognito* window, log in as test-student
