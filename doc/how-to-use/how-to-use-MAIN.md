@@ -5,7 +5,7 @@ permalink: /doc/how-to-use
 has_children: yes
 has_toc: no
 nav_order: 20
-last_modified_date: 2024-10-16T11:47:57-04:00
+last_modified_date: 2025-01-28T11:01:59-05:00
 ---
 
 # {{ page.title }}
@@ -32,7 +32,6 @@ Here's a quick reference to the pages in this section:
 - upload: Upload search results to get more data (e.g., extracting a list of audio clips)
 - participants: View information on participants
 - transcripts: Browse transcripts
-- dictionaries: Get information from dictionaries such as the CELEX lexical database
 - documentation: Basic information on the corpus
 
 
