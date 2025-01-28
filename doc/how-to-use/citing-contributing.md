@@ -4,7 +4,7 @@ layout: default
 permalink: /doc/citing-contributing
 parent: How to use APLS
 nav_order: 70
-last_modified_date: 2024-10-16T11:47:56-04:00
+last_modified_date: 2025-01-28T16:54:20-05:00
 ---
 
 # {{ page.title }}
@@ -67,7 +67,7 @@ This covers two main cases:
 - Correcting issues in current annotations
 	- This could cover either [human-generated or computer-generated](data-sources#humans-and-computers) <!-- check heading link later --> annotations
 	- Examples:
-		- Identifying transcription errors, or tdentifying correct transcriptions for passages marked `[unclear]`
+		- Identifying transcription errors, or identifying correct transcriptions for passages marked `[unclear]`
 		- Correcting morphemic parses or segmental alignments
 		- Running part-of-speech tagging through a different POS algorithm of your choice
 
