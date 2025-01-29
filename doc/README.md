@@ -2,8 +2,8 @@
 layout: default
 nav_exclude: yes
 permalink: /
-num_aw_closed: 4420
-last_modified_date: 2025-01-21T17:32:23:z
+num_aw_closed: 4543
+last_modified_date: 2025-01-29T15:45:24-05:00
 ---
 
 # APLS Documentation
@@ -15,7 +15,7 @@ APLS is a linguistic data resource, powered by the open-source linguistic corpus
 - **metadata** on interviewees and transcripts that facilitate large-scale (socio)linguistic analysis.
 
 APLS is (and will always be) **free to use**.
-APLS currently contains 211 sound files totaling 32.75 hours of audio from 33 interviewees.
+APLS currently contains 218 sound files totaling 34 hours of audio from 34 interviewees.
 APLS is currently under construction; when complete, it will contain 270 sound files totaling 45 hours of audio from 40 interviewees.
 <!-- In total, APLS contains 270 sound files totaling 45 hours of audio from 40 speakers. -->
 {: .mb-1 }
@@ -28,7 +28,7 @@ Ready to get started with APLS? Click [here]({{ '/doc/getting-started' | relativ
 
 <!-- Each step is illustrated with a screen-cap GIF: back-to-back portions of a single continuous screen-cap. Login test-student, clear Downloads folder for screen-cap, regular-size screen.
 - GIF 1: search for orthography ``, segment `6` _from IPA picker_, syllables `.*6[pbtdkgfvTDszSZhJ_mnNlrwjFHP]`, and the results page that pops up
-  - As of 16 Oct 2024, this yields 4420 results
+  - As of version 0.2.1, this yields 4543 results
 - GIF 2: click CSV Export, open csv file in Excel, switch back to APLS
 - GIF 3: click upload > process with praat, upload file, specify sample points 0.2 0.5 0.8, process, open csv file in Excel
   - Add a timer to the bottom-left, then speed up the video during processing "downtime"
