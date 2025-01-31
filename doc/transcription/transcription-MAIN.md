@@ -1,6 +1,5 @@
 ---
 title: Transcription
-layout: default
 permalink: /doc/transcription
 has_children: yes
 has_toc: no

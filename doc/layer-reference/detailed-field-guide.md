@@ -1,6 +1,5 @@
 ---
 title: Detailed field guide
-layout: default
 permalink: /doc/detailed-field-guide
 parent: Layer reference
 nav_order: 20

@@ -1,6 +1,5 @@
 ---
 title: Custom dictionary entries
-layout: default
 permalink: /files/custom-entries
 parent: Custom dictionary
 search_exclude: true

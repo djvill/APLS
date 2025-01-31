@@ -1,6 +1,5 @@
 ---
 title: Notation systems
-layout: default
 permalink: /doc/notation-systems
 parent: Layer reference
 nav_order: 30

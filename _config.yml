@@ -35,6 +35,12 @@ collections:
   layers:
     sort_by: name
 
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: "default"
+
 ########################################
 #### Config for just-the-docs theme ####
 ########################################

@@ -1,6 +1,5 @@
 ---
 title: Browsing participants
-layout: default
 permalink: /doc/browse-participants
 parent: How to use APLS
 nav_order: 40

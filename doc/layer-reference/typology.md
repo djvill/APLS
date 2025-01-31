@@ -1,6 +1,5 @@
 ---
 title: Typology
-layout: default
 permalink: /doc/typology
 parent: Layer reference
 nav_order: 10

@@ -1,6 +1,5 @@
 ---
 title: Getting started
-layout: default
 permalink: /doc/getting-started
 nav_order: 10
 last_modified_date: 2025-01-27T13:44:13-05:00

@@ -1,6 +1,5 @@
 ---
 title: Viewing a transcript
-layout: default
 permalink: /doc/view-transcript
 parent: How to use APLS
 has_children: yes

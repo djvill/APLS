@@ -1,6 +1,5 @@
 ---
 title: How to use APLS
-layout: default
 permalink: /doc/how-to-use
 has_children: yes
 has_toc: no

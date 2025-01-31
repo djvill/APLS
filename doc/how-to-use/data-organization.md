@@ -1,6 +1,5 @@
 ---
 title: Data organization in APLS
-layout: default
 permalink: /doc/data-organization
 parent: How to use APLS
 nav_order: 10

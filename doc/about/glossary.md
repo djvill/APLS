@@ -1,6 +1,5 @@
 ---
 title: Glossary 
-layout: default
 permalink: /doc/glossary
 parent: About APLS
 nav_order: 40

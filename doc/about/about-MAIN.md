@@ -1,6 +1,5 @@
 ---
 title: About APLS
-layout: default
 permalink: /doc/about
 has_children: yes
 has_toc: no

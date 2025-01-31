@@ -1,6 +1,5 @@
 ---
 title: Viewing transcript fragments in Praat
-layout: default
 permalink: /doc/transcript-praat
 parent: Viewing a transcript
 grand_parent: How to use APLS

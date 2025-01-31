@@ -1,6 +1,5 @@
 ---
 title: Searching the corpus 
-layout: default
 permalink: /doc/search
 parent: How to use APLS
 has_children: yes

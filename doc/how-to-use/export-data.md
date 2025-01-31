@@ -1,6 +1,5 @@
 ---
 title: Exporting data
-layout: default
 permalink: /doc/export-data
 parent: How to use APLS
 nav_order: 50

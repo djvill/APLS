@@ -1,6 +1,5 @@
 ---
 title: Where APLS data comes from
-layout: default
 permalink: /doc/data-sources
 parent: About APLS
 nav_order: 20

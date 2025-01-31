@@ -1,6 +1,5 @@
 ---
 title: Troubleshooting
-layout: default
 permalink: /doc/troubleshooting
 parent: How to use APLS
 last_modified_date: 2025-01-28T15:40:02-05:00

@@ -1,6 +1,5 @@
 ---
 title: Version history
-layout: default
 permalink: /doc/version-history
 parent: About APLS
 nav_order: 30

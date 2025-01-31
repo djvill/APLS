@@ -1,6 +1,5 @@
 ---
 title: Extracting acoustic measurements
-layout: default
 permalink: /doc/extract-acoustics
 parent: How to use APLS
 nav_order: 60

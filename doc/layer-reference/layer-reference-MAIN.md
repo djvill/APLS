@@ -1,6 +1,5 @@
 ---
 title: Layer reference
-layout: default
 permalink: /doc/layer-reference
 has_children: yes
 has_toc: no

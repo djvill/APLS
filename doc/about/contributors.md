@@ -1,6 +1,5 @@
 ---
 title: Contributors
-layout: default
 permalink: /doc/contributors
 parent: About APLS
 nav_order: 10

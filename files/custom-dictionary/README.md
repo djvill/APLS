@@ -1,6 +1,5 @@
 ---
 title: Custom dictionary
-layout: default
 permalink: /doc/custom-dictionary
 parent: Transcription
 has_children: yes

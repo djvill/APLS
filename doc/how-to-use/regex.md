@@ -1,6 +1,5 @@
 ---
 title: Regular expressions 
-layout: default
 permalink: /doc/regex
 parent: Searching the corpus
 grand_parent: How to use APLS

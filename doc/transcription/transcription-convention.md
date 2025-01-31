@@ -1,6 +1,5 @@
 ---
 title: Transcription convention
-layout: default
 permalink: /doc/transcription-convention
 parent: Transcription
 nav_order: 10

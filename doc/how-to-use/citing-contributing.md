@@ -1,6 +1,5 @@
 ---
 title: Citing and contributing back
-layout: default
 permalink: /doc/citing-contributing
 parent: How to use APLS
 nav_order: 70

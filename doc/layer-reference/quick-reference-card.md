@@ -1,6 +1,5 @@
 ---
 title: Quick reference card
-layout: default
 permalink: /doc/quick-reference-card
 parent: Layer reference
 nav_order: 40

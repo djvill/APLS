@@ -1,6 +1,5 @@
 ---
 title: Browsing transcripts
-layout: default
 permalink: /doc/browse-transcripts
 parent: How to use APLS
 nav_order: 30

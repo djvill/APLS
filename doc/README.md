@@ -1,6 +1,5 @@
 ---
 title: APLS Documentation
-layout: default
 nav_exclude: yes
 permalink: /
 num_aw_closed: 4543
