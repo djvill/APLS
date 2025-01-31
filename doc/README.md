@@ -1,12 +1,14 @@
 ---
+title: APLS Documentation
 layout: default
 nav_exclude: yes
 permalink: /
 num_aw_closed: 4543
-last_modified_date: 2025-01-29T15:45:24-05:00
+last_modified_date: 2025-01-31T12:03:53-05:00
 ---
 
-# APLS Documentation
+# {{ page.title }}
+{:.no_toc}
 
 Welcome to the documentation homepage for the **Archive of Pittsburgh Language and Speech** (aka **APLS**, pronounced like _apples_)!
 APLS is a linguistic data resource, powered by the open-source linguistic corpus software [LaBB-CAT], that contains:
