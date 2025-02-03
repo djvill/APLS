@@ -2,7 +2,7 @@
 title: Getting started
 permalink: /doc/getting-started
 nav_order: 10
-last_modified_date: 2025-01-27T13:44:13-05:00
+last_modified_date: 2025-02-03T10:33:44-05:00
 ---
 
 # {{ page.title }}
@@ -65,7 +65,7 @@ For example:
 >
 > Go to <https://apls.pitt.edu/labbcat>.
 > You should see a login box pop up:
-> ![]({{ '/assets/screengrab/login.png' | relative_url }}){: .screengrab }
+> ![]({{ '/assets/screengrab/login.png' | relative_url }})
 
 {: .under-the-hood }
 > APLS's original URL was <https://labb-cat.linguistics.pitt.edu/labbcat>.
@@ -85,16 +85,16 @@ We'll send you a username and temporary password within 1 US business day.
 
 Once you have a username and temporary password, you can log in to <https://apls.pitt.edu/labbcat>:
 
-![]({{ '/assets/screengrab/login.png' | relative_url }}){: .screengrab }
+![]({{ '/assets/screengrab/login.png' | relative_url }})
 
 
 There are two additional things you'll only need to do the **first** time you log in:
 
 1. You'll see a license (below). Scroll to the bottom and click _I Agree_.
-   ![]({{ '/assets/screengrab/license.png' | relative_url }}){: .screengrab }
+   ![]({{ '/assets/screengrab/license.png' | relative_url }})
    
 1. Then you'll see a prompt to reset your temporary password. Enter your new password and click _Change Pass Phrase_.
-    ![]({{ '/assets/screengrab/password-reset.png' | relative_url }}){: .screengrab }
+    ![]({{ '/assets/screengrab/password-reset.png' | relative_url }})
 
 
 ### Forget your password?

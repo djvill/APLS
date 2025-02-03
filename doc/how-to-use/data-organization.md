@@ -3,7 +3,7 @@ title: Data organization in APLS
 permalink: /doc/data-organization
 parent: How to use APLS
 nav_order: 10
-last_modified_date: 2025-01-23T16:07:57:z
+last_modified_date: 2025-02-03T10:33:45-05:00
 ---
 
 # {{ page.title }}
@@ -33,7 +33,7 @@ Some interview sections are split into multiple transcripts (e.g., `interview1`,
 ## Layers and annotations
 
 To illustrate **layers** and **annotations** in APLS, let's look at a screen-grab of a single <span class="keyterm">line</span> of speech (aka an <span class="layer">utterance</span>) from the transcript `HD07interview3.eaf`:
-![A partial screenshot from Google Chrome (as it appeared in 2024), showing the page https://apls.pitt.edu/labbcat/transcript?transcript=HD07interview3.eaf and a single line of dialogue from participant HD07. Three lines of information are shown. The first is a black bracket encompassing the entire line with the label "6.5068"; the second shows symbols "UH CC PRP VBD TO VB DT NN VBN IN PRP VBP RB VB DT NN NN"; and the third shows "yeah and I used to get the Trib delivered 'cause I don't like the Post Gazette". At the end of the second line, a cursor is hovering over the text "NN" with a tooltip "part_of_speech - utterance at 7.92 for 3.2900000000000001s - click for menu"]({{ '/assets/screengrab/demo-page.png' | relative_url }}){: .screengrab }
+![A partial screenshot from Google Chrome (as it appeared in 2024), showing the page https://apls.pitt.edu/labbcat/transcript?transcript=HD07interview3.eaf and a single line of dialogue from participant HD07. Three lines of information are shown. The first is a black bracket encompassing the entire line with the label "6.5068"; the second shows symbols "UH CC PRP VBD TO VB DT NN VBN IN PRP VBP RB VB DT NN NN"; and the third shows "yeah and I used to get the Trib delivered 'cause I don't like the Post Gazette". At the end of the second line, a cursor is hovering over the text "NN" with a tooltip "part_of_speech - utterance at 7.92 for 3.2900000000000001s - click for menu"]({{ '/assets/screengrab/demo-page.png' | relative_url }})
 <!-- A better screen-grab would: (a) be narrower (not take up as much x-axis real estate), (b) be from a line that doesn't have an annoying duration -->
 
 On the left-hand side of the image is `HD07`, the speaker code for the participant who uttered this speech.
