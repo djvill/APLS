@@ -1,9 +1,10 @@
 ---
 title: Custom dictionary entries
+layout: default
 permalink: /files/custom-entries
 parent: Custom dictionary
 search_exclude: true
-last_modified_date: 2025-01-07T11:50:53-05:00
+last_modified_date: 2025-02-03T15:12:59-05:00
 ---
 
 # {{ page.title }}
@@ -200,6 +201,7 @@ These custom entries just fill in the gaps.
 - Loews
 - Lutz's
 - Mariani's
+- Maxx
 - McCrory's
 - Mezzanotte
 - Panera
