@@ -103,3 +103,40 @@
   offset_y: 200
   width: 1520
   height: 455
+
+- screengrab: vertical-peers-fragment-1.png
+  instructions:
+    - Log in
+    - Load https://apls.pitt.edu/labbcat/transcript?transcript=CB17interview3.eaf#ew_0_775495
+    - Select lemma, word
+    - Open TextGrid in Praat
+    - "Save window **directly to folder**"
+
+- screengrab: vertical-peers-fragment-2.png
+  instructions:
+    - Log in
+    - Load https://apls.pitt.edu/labbcat/transcript?transcript=CB17interview3.eaf#ew_0_775577
+    - Select lemma, word
+    - Open TextGrid in Praat
+    - "Save window **directly to folder**"
+    
+- screengrab: vertical-peers-textgrid.png
+  instructions:
+    - Log in
+    - On https://apls.pitt.edu/labbcat/transcripts, export CB17interview3.eaf to TextGrid with layers utterance, word, lemma
+    - Open TextGrid in Praat
+    - Zoom out to view the whole TextGrid
+    - "Save window **directly to folder**"
+
+- screengrab: vertical-peers-transcript.png
+  instructions:
+    - Log in as test-student
+    - Set browser zoom to 100%
+    - Load https://apls.pitt.edu/labbcat/transcript?transcript=CB17interview5.eaf
+    - Select dictionary_phonemes, word
+    - "`window.scrollTo(0, 24480);`"
+    - Save
+  offset_x: 160
+  offset_y: 135
+  width: 305
+  height: 70

@@ -3,7 +3,7 @@ title: Typology
 permalink: /doc/typology
 parent: Layer reference
 nav_order: 10
-last_modified_date: 2025-02-03T10:33:45-05:00
+last_modified_date: 2025-02-03T11:25:43-05:00
 ---
 
 # Layers: {{ page.title }}
@@ -109,15 +109,14 @@ There aren't currently any timepoint layers in APLS.
 
 Some layers allow for <span class="keyterm">vertical peers</span>: 2 or more annotations that occupy an identical timespan.
 For example, the <span class="layer">dictionary_phonemes</span> layer represents _all possible_ phonemic representations of a word, while the <span class="layer">phonemes</span> layer represents the speech sounds _actually in_ a word.
-<!-- Maybe pick a word w/ fewer scary IPA symbols? Slash one that's not an allophonic difference but a proper phonemic difference? -->
 Since the word _the_ can be pronounced /ði/ or /ðə/, _the_ has two annotations on the <span class="layer">dictionary_phonemes</span> layer---but since only one of these is how the word was _actually pronounced_, _the_ only has one <span class="layer">phonemes</span> annotation.
 
 Unlike <span class="keyterm">horizontal peers</span>, which divide the timespan of their scope, we can think of vertical peers as being "stacked" on top of one another within the same timespan.
 
-| Allow for vertical peers? | Symbol[*](#fn:peers){: .footnote } | Meaning |
-|---------------------------|--------|---------|
-| True                      | ![]({{ '/assets/img/vertical-peers.svg' | relative_url }}) | A single timespan _may_ contain multiple annotations |
-| False                     | (none) | A single timespan can contain at most one annotation |
+| Allow vertical peers? | Symbol[*](#fn:peers){: .footnote } | Meaning |
+|-----------------------|--------|---------|
+| True                  | ![]({{ '/assets/img/vertical-peers.svg' | relative_url }}) | A single timespan _may_ contain multiple annotations |
+| False                 | (none) | A single timespan can contain at most one annotation |
 {: .layer-props .no-keyterm }
 
 <a id="fn:peers"/>\* Used on [individual transcript pages]({{ '/doc/view-transcript' | relative_url }})
@@ -126,14 +125,30 @@ Unlike <span class="keyterm">horizontal peers</span>, which divide the timespan 
 ### What you'll see in APLS
 
 - [Individual transcript pages]({{ '/doc/view-transcript' | relative_url }})
-  - In the layer selector, the symbol ![]({{ '/assets/img/vertical-peers.svg' | relative_url }}){: style="height:1rem;"} denotes layers that allow for vertical peers
-  - **Only one vertical peer is visible on the transcript page**
-    - For example, the <span class="layer">dictionary_phonemes</span> layer only shows `ðə` for the word _the_, even though _the_ has two <span class="layer">dictionary_phonemes</span> annotations
-    - To check whether an annotation has vertical peers, view the transcript fragment in Praat instead
+  - In the layer selector, the symbol ![]({{ '/assets/img/vertical-peers.svg' | relative_url }}){: style="height:1rem;"} denotes layers that allow vertical peers
+  - **Only one vertical peer is visible on the transcript page**, whichever is first in alphabetical order
+    - _Example_: The <span class="layer">dictionary_phonemes</span> layer only shows `ðə` for the word _the_, even though _the_ has two <span class="layer">dictionary_phonemes</span> annotations:
+      ![]({{ '/assets/screengrab/vertical-peers-transcript.png' | relative_url }})
+    - To check whether an annotation has vertical peers, [export the line to TextGrid]({{ '/doc/transcript-praat' | relative_url }}) instead
 
-- [Transcript fragments]({{ '/doc/transcript-praat' | relative_url }})
+- [Transcripts or fragments exported to Praat TextGrids]({{ '/doc/transcript-praat' | relative_url }})
+  - Normally, TextGrid transcripts/fragments show one tier per layer per speaker. However, if a layer allows vertical peers, then that layer can **have _multiple_ tiers per speaker**.
+    - _Example_: The word _times_ has two <span class="layer">lemma</span> annotations, _time_ and _times_,[^why-times] so this TextGrid shows two <span class="layer">lemma</span> tiers for CB17:
+      ![]({{ '/assets/screengrab/vertical-peers-fragment-1.png' | relative_url }})
+  - If a layer _allows_ multiple peers, but the exported transcript/fragment doesn't actually _have_ vertical peers on that layer, then that layer will only have one tier. 
+    - _Example_: None of the words in this fragment have multiple <span class="layer">lemma</span> annotations, so this TextGrid shows just one <span class="layer">lemma</span> tier for CB17: 
+      ![]({{ '/assets/screengrab/vertical-peers-fragment-2.png' | relative_url }})
+  - An exported TextGrid will only show as many tiers per layer as there are vertical peers on that layer _in the exported transcript/fragment_. As a result, longer transcripts/fragments tend to have more tiers.
+    - _Example_: When the entire transcript for CB17interview3.eaf is exported to TextGrid, there are three <span class="layer">lemma</span> tiers for CB17 for the whole TextGrid, even though there is only one word in the transcript with three <span class="layer">lemma</span> annotations
+      ![]({{ '/assets/screengrab/vertical-peers-textgrid.png' | relative_url }})
+
+[^why-times]: The <span class="layer">lemma</span> layer represents all possible base forms of the word. Depending on context, the word _times_ could be the plural of the base form _time_, or _times_ could be the base form itself (as in "two times four"), hence the multiple annotations.
 
 - [Search]({{ '/doc/search' | relative_url }})
+  - Searching a layer that allows vertical peers will **match _any_ of the vertical peers** for a given word
+    - _Example_: All tokens of _the_ have two <span class="layer">dictionary_phonemes</span> annotations: `D@` and `Di`. Thus, a search for `the` on <span class="layer">orthography</span> and `D@` on <span class="layer">dictionary_phonemes</span> returns the same set of matches as `the` on <span class="layer">orthography</span> and `Di` on <span class="layer">dictionary_phonemes</span>
+    - As a result, "doesn't match" searches on a layer that allows vertical peers can return false positives
+      - _Example_: Searching _doesn't match_ `D@` on <span class="layer">dictionary_phonemes</span> will still return all _the_ tokens, because the `Di` vertical peer doesn't match `D@`
 
 - [Exporting data]({{ '/doc/export-data' | relative_url }})
 
