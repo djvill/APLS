@@ -3,7 +3,7 @@ title: Typology
 permalink: /doc/typology
 parent: Layer reference
 nav_order: 10
-last_modified_date: 2025-02-03T11:25:43-05:00
+last_modified_date: 2025-02-04T16:02:50-05:00
 ---
 
 # Layers: {{ page.title }}
@@ -107,7 +107,7 @@ There aren't currently any timepoint layers in APLS.
 
 ## Vertical peers
 
-Some layers allow for <span class="keyterm">vertical peers</span>: 2 or more annotations that occupy an identical timespan.
+Some layers allow <span class="keyterm">vertical peers</span>: 2 or more annotations that occupy an identical timespan.
 For example, the <span class="layer">dictionary_phonemes</span> layer represents _all possible_ phonemic representations of a word, while the <span class="layer">phonemes</span> layer represents the speech sounds _actually in_ a word.
 Since the word _the_ can be pronounced /ði/ or /ðə/, _the_ has two annotations on the <span class="layer">dictionary_phonemes</span> layer---but since only one of these is how the word was _actually pronounced_, _the_ only has one <span class="layer">phonemes</span> annotation.
 
