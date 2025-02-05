@@ -2,7 +2,7 @@
 title: Getting started
 permalink: /doc/getting-started
 nav_order: 10
-last_modified_date: 2025-02-05T11:12:49-05:00
+last_modified_date: 2025-02-05T16:53:42-05:00
 ---
 
 # {{ page.title }}
@@ -32,7 +32,8 @@ This site uses special formatting to denote specific types of information:
   <!-- - Linked to corresponding entries in the [glossary]({{ '/doc/glossary' | relative_url }}) -->
 - **Layers**
   - Example: <span class="layer">orthography</span>
-  <!-- - Linked to an extensive [layer reference]({{ '/doc/layer-reference' | relative_url }}) -->
+  - If you hover over a layer name, a tooltip will pop up with a short description of the layer
+  - Clicking on the layer name will load its entry in the [layer field guide]({{ '/doc/detailed-field-guide' | relative_url }})
 - **Internal links** (i.e., a link to a specific location or page in the APLS documentation)
   - Example: [Special formatting](#special-formatting)
 - **External links** (i.e., a link that's not to a documentation page or an APLS page)
