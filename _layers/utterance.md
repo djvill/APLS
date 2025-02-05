@@ -1,6 +1,6 @@
 ---
 synced:
-  short_description: Utterances
+  short_description: Line in the transcript
   layer_id: 12
   alignment: sub-interval
   project: timing
@@ -18,7 +18,7 @@ synced:
   export_includeCounts: .na
   export_includeAnchorSharing: .na
   extra: (none)
-last_sync_modified_date: 2025-01-11T16:50:28-0500
+last_sync_modified_date: 2025-02-05T16:03:26-0500
 notation:
   primary: N/A
 inputs:
@@ -28,7 +28,7 @@ alignment_dependent: no
 versions:
   first_appeared: 0.1.0
   last_modified: 0.1.0
-last_modified_date: 2025-01-11T16:52:04-05:00
+last_modified_date: 2025-02-05T16:04:48-05:00
 ---
 
 **Fill longer description here**

@@ -1,6 +1,7 @@
 ---
 synced:
-  short_description: Raw word tokens
+  short_description: The word as originally transcribed, including pause/question
+    markers
   layer_id: 0
   alignment: sub-interval
   project: (none)
@@ -18,7 +19,7 @@ synced:
   export_includeCounts: no
   export_includeAnchorSharing: no
   extra: (none)
-last_sync_modified_date: 2025-01-11T16:50:28-0500
+last_sync_modified_date: 2025-02-05T16:45:13-0500
 notation:
   primary: English spelling
   additional:
@@ -31,7 +32,7 @@ alignment_dependent: no
 versions:
   first_appeared: 0.1.0
   last_modified: 0.1.0
-last_modified_date: 2025-01-11T16:52:04-05:00
+last_modified_date: 2025-02-05T16:50:57-05:00
 ---
 
 **Fill longer description here**

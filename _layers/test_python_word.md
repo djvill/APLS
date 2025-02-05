@@ -5,7 +5,7 @@ synced:
   alignment: complete interval
   project: testing
   parent: word
-  peers: yes
+  peers: no
   vertical_peers: no
   data_type: text
   scope: word
@@ -15,13 +15,13 @@ synced:
   searchable: regex
   search_targetable: 'no'
   transcript_selectable: yes
-  export_includeCounts: yes
+  export_includeCounts: no
   export_includeAnchorSharing: no
   extra: (none)
-last_sync_modified_date: 2025-01-11T16:50:28-0500
+last_sync_modified_date: 2025-02-05T16:03:26-0500
 notation:
   primary: N/A
-last_modified_date: 2025-01-11T16:52:03-05:00
+last_modified_date: 2025-02-05T16:04:47-05:00
 ---
 
 **Fill longer description here**
