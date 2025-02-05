@@ -1,44 +1,65 @@
 /* collapse-callouts.js 
 	 
-	 Make "Try it!" and "Under the hood" callouts collapsible
+	 Make "Try it!", "Under the hood", and "Note" callouts collapsible
+   
+   If callout has additional class no-collapse, just adds title
 */
 
 function collapsible(node) {
-  //Create new details-summary node to replace current try-it
-	var newCallout = document.createElement("blockquote"),
-			d = document.createElement("details"),
-			s = document.createElement("summary"),
-			nodeCopy = node.cloneNode(true);
-	d.appendChild(s);
-	newCallout.appendChild(d);
-	
-	//Move contents and class to details node
-	if (nodeCopy.children.length === 0) {
-		d.appendChild(nodeCopy);
-	} else {
-		Array.from(nodeCopy.children).map(c => d.appendChild(c));
+  //Get title: either default title or from first paragraph
+  var cl = node.classList,
+      title;
+	if (cl.contains("try-it-title")) {
+	  title = node.querySelector("p").innerText;
+	} else if (cl.contains("try-it")) {
+	  title = "Try it!";
+	} else if (cl.contains("under-the-hood")) {
+	  title = "Under the hood";
+	} else if (cl.contains("note")) {
+	  title = "Note";
 	}
-	newCallout.classList = nodeCopy.classList;
-	
-	//Add title: either default title or from first paragraph
-	if (newCallout.classList.contains("try-it-title")) {
-	  titleNode = d.querySelector("p");
-	  s.textContent = titleNode.innerText;
-	  titleNode.remove();
-	} else if (newCallout.classList.contains("try-it")) {
-	  s.textContent = "Try it!";
-	} else if (newCallout.classList.contains("under-the-hood")) {
-	  s.textContent = "Under the hood";
-	}
-	
-	//Remove copy of original node
-	nodeCopy.remove();
-	
-	//Add new node in place of original
-	node.parentElement.replaceChild(newCallout, node);
+  
+  //If not collapsible, just add title as first p element
+  if (cl.contains("no-collapse")) {
+    var newTitle = document.createElement("p");
+    newTitle.innerText = title;
+    node.prepend(newTitle);
+  } else {
+    //If collapsible...
+  
+    //Create new details-summary node to replace current try-it
+    var newCallout = document.createElement("blockquote"),
+        d = document.createElement("details"),
+        s = document.createElement("summary"),
+        nodeCopy = node.cloneNode(true);
+    d.appendChild(s);
+    newCallout.appendChild(d);
+    
+    //Move contents and class to details node
+    if (nodeCopy.children.length === 0) {
+      d.appendChild(nodeCopy);
+    } else {
+      Array.from(nodeCopy.children).map(c => d.appendChild(c));
+    }
+    newCallout.classList = nodeCopy.classList;
+    
+    //Add title
+    s.textContent = title;
+    
+    //For try-it-title, remove first paragraph (old title)
+    if (cl.contains("try-it-title")) {
+      d.querySelector("p").remove();
+    }
+    
+    //Remove copy of original node
+    nodeCopy.remove();
+    
+    //Add new node in place of original
+    node.parentElement.replaceChild(newCallout, node);
+  }
 }
 
 window.addEventListener('DOMContentLoaded', () => {
-	var callouts = document.querySelectorAll(":is(.try-it, .try-it-title, .under-the-hood)");
+	var callouts = document.querySelectorAll(":is(.try-it, .try-it-title, .under-the-hood, .note)");
 	callouts.forEach(collapsible);
 });

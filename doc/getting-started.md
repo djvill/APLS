@@ -2,7 +2,7 @@
 title: Getting started
 permalink: /doc/getting-started
 nav_order: 10
-last_modified_date: 2025-02-03T10:33:44-05:00
+last_modified_date: 2025-02-05T11:12:49-05:00
 ---
 
 # {{ page.title }}
@@ -55,22 +55,28 @@ In the top bar, you can search the documentation (you can type the `/` key to mo
 
 ### Callout boxes
 
-Throughout these pages are collapsible "callout" boxes to help you understand how to use APLS and how it works.
-Green "Try it!" boxes give you step-by-step instructions on doing some task in APLS.
-Blue "Under the hood" boxes give some details about technical details, design decisions, and/or the history of APLS's development.
-For example:
+Throughout these pages are "callout" boxes to help you understand how to use APLS and how it works:
 
-{: .try-it }
-> Even if you don't have an APLS login yet, you can still load the page in your browser.
->
-> Go to <https://apls.pitt.edu/labbcat>.
-> You should see a login box pop up:
-> ![]({{ '/assets/screengrab/login.png' | relative_url }})
+- Yellow "Note" boxes give important information that might otherwise interrupt the flow of the text.
+  
+  {: .note }
+  > APLS is powered by the open-source corpus software [LaBB-CAT].
+  > Throughout this documentation, we'll use the term _LaBB-CAT_ when we're talking about the LaBB-CAT software or LaBB-CAT corpora more generally, and _APLS_ for this corpus specifically.
 
-{: .under-the-hood }
-> APLS's original URL was <https://labb-cat.linguistics.pitt.edu/labbcat>.
-> But the <https://apls.pitt.edu/labbcat> URL was chosen as an alias because it's shorter, easier to remember, and less prone to typos.
+- Green "Try it!" boxes give you step-by-step instructions on doing some task in APLS. These are especially useful for hands-on learners, but you can skip them if you just need a refresher.
+  
+  {: .try-it }
+  > Even if you don't have an APLS login yet, you can still load the page in your browser.
+  >
+  > Go to <https://apls.pitt.edu/labbcat>.
+  > You should see a login box pop up:
+  > ![]({{ '/assets/screengrab/login.png' | relative_url }})
 
+- Blue "Under the hood" boxes give some details about technical details, design decisions, and/or the history of APLS's development. They're meant for especially curious readers, but they're not crucial to understanding how to use APLS or how it works.
+  
+  {: .under-the-hood }
+  > APLS's original URL was <https://labb-cat.linguistics.pitt.edu/labbcat>.
+  > But the <https://apls.pitt.edu/labbcat> URL was chosen as an alias because it's shorter, easier to remember, and less prone to typos.
 
 <!-- ## Terms of use -->
 

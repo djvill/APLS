@@ -75,11 +75,8 @@ color_scheme: apls
 ##Config: https://just-the-docs.github.io/just-the-docs/docs/configuration/#callouts
 callouts:
   note:
-    title: Note
     color: yellow
-    icon: /assets/img/fa-circle-info.png  # Not implemented yet. Need to use JS to inject icon into .note::before
   warning:
-    title: Warning
     color: red
   try-it:
     color: green

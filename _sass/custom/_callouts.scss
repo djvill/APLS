@@ -1,9 +1,9 @@
-/* Styling for collapsible callouts ("Try it!" and "Under the hood")
+/* Styling for collapsible callouts ("Try it!", "Under the hood", "Note")
    
 	 Similar to normal just-the-docs callouts (https://github.com/just-the-docs/just-the-docs/blob/main/_includes/css/callouts.scss.liquid), just adapted to details-summary node structure
  */
 
-.try-it, .try-it-title, .under-the-hood {
+.try-it, .try-it-title, .under-the-hood, .note {
 	summary {
 		font-weight: bold;
 		text-transform: uppercase;
@@ -14,15 +14,37 @@
 			color: $body-text-color;
 		}
 	}
+  
+  &.no-collapse > p:first-child {
+    font-weight: bold;
+		text-transform: uppercase;
+		font-size: .75em;
+		padding-bottom: .125rem;
+  }
 }
 .try-it, .try-it-title {
 	summary {
 		color: $green-300;
 	}
+  &.no-collapse > p:first-child {
+		color: $green-300;
+  }
 }
 .under-the-hood {
 	summary {
 		color: $blue-300;
 	}
+  
+  &.no-collapse > p:first-child {
+		color: $blue-300;
+  }
 }
-
+.note {
+	summary {
+		color: $yellow-300;
+	}
+  
+  &.no-collapse > p:first-child {
+		color: $yellow-300;
+  }
+}
