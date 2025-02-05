@@ -26,10 +26,15 @@ function addA(node, type) {
     var page = "/APLS/doc/glossary";
     //For keyterms, also de-pluralize
     hrefName = hrefName.replace(/s$/, '');
+    // a.href = page + "#" + hrefName;
   } else if (type === "layer") {
-    var page = "/APLS/doc/layer-reference";
+    //For layers, don't add a href if it's an h2 *on* the field-guide page
+    //(but keep the <a> for consistency w/rt stylesheets)
+    var page = "/APLS/doc/detailed-field-guide";
+    if (!(location.href.endsWith(page) && node.parentElement.nodeName == "H2")) {
+      a.href = page + "#" + hrefName;
+    }
   }
-  // a.href = page + "#" + hrefName;
 }
 
 //Add anchors once page loads
