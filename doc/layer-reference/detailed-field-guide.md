@@ -3,7 +3,7 @@ title: Detailed field guide
 permalink: /doc/detailed-field-guide
 parent: Layer reference
 nav_order: 20
-last_modified_date: 2025-02-05T14:57:47-05:00
+last_modified_date: 2025-02-05T14:59:37-05:00
 ---
 
 # Layers: {{ page.title }}
@@ -33,6 +33,8 @@ _{{ layer.synced.short_description }}_
 
 {% include layer-props.html layers=layer excl_name=true %}
 
+{% comment %}
 {{ layer.content }}
+{% endcomment %}
 
 {% endfor %}
