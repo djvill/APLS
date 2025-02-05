@@ -1,0 +1,60 @@
+<!-- Begin _includes/layer-props.html -->
+
+{% comment %}
+  Example usages:
+  
+  - An array of layers (as in doc/quick-reference-card):
+    {% include layer-props.html layers=site.layers %}
+  
+  - A single layer (as in doc/detailed-field-guide):
+    {% for layer in site.layers %}
+      {% include layer-props.html layers=layer excl_name=true %}
+    {% endfor %}
+{% endcomment %}
+
+{% assign excl_name = include.excl_name | default: false %}
+
+<table class="layer-props{% if excl_name %} excl-layer-name{% endif %}">
+  <thead>
+    <tr>
+      {% unless include.excl_name %}<th>Layer</th>{% endunless %}
+      <th>Scope</th>
+      <th>Alignment</th>
+      <th>Vertical peers</th>
+      <th>Data type</th>
+      <th>Primary notation</th>
+      <th>Alignment-dependent</th>
+      <th>Project</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% unless include.layers.size %}
+      {% assign layer = include.layers %}
+      <tr>
+        {% unless excl_name %}<td><span class="layer">{{ layer.path | remove: "_layers/" | remove: ".md" }}</span></td>{% endunless %}
+        <td>{{ layer.synced.scope | capitalize }}</td>
+        <td>{{ layer.synced.alignment | capitalize }}</td>
+        <td>{{ layer.synced.vertical_peers | capitalize }}</td>
+        <td>{{ layer.synced.data_type | capitalize }}</td>
+        <td>{{ layer.notation.primary }}</td>
+        <td>{{ layer.alignment_dependent | capitalize }}</td>
+        <td>{{ layer.synced.project }}</td>
+      </tr>
+    {% else %}
+      {% for layer in include.layers %}
+        <tr>
+          {% unless excl_name %}<td><span class="layer">{{ layer.path | remove: "_layers/" | remove: ".md" }}</span></td>{% endunless %}
+          <td>{{ layer.synced.scope | capitalize }}</td>
+          <td>{{ layer.synced.alignment | capitalize }}</td>
+          <td>{{ layer.synced.vertical_peers | capitalize }}</td>
+          <td>{{ layer.synced.data_type | capitalize }}</td>
+          <td>{{ layer.notation.primary }}</td>
+          <td>{{ layer.alignment_dependent | capitalize }}</td>
+          <td>{{ layer.synced.project }}</td>
+        </tr>
+      {% endfor %}
+    {% endunless %}
+  </tbody>
+</table>
+
+<!-- End _includes/layer-props.html -->

@@ -3,7 +3,7 @@ title: Typology
 permalink: /doc/typology
 parent: Layer reference
 nav_order: 10
-last_modified_date: 2025-02-04T16:02:50-05:00
+last_modified_date: 2025-02-05T14:24:00-05:00
 ---
 
 # Layers: {{ page.title }}
@@ -318,4 +318,5 @@ Unlike other layer properties, projects don't affect _anything_ about how layers
 
 {% include layer-table.html property="project" categories="(none),syntax,lexicon,timing,phonology,imported,temp,testing" no_caps=true %}
 
-Note: "temp" and "testing" layers aren't meaningful for end-users, so they've been omitted from the other "layers by property" tables on this page.
+{: .note .no-collapse }
+> Layers in the "temp" and "testing" projects aren't meaningful for end-users, so the other "layers by property" tables on this page omit these layers.
