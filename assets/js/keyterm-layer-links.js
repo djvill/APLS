@@ -56,7 +56,7 @@ function addA(node, type) {
           title = `How often the current word appears in the CELEX English reference corpus`;
           break;
         case 'frequency_in_corpus':
-          title = `How often the current word appears in "interview" and "metalinguistic" transcripts`;
+          title = `How often the current word appears in 'interview' and 'metalinguistic' transcripts`;
           break;
         case 'morphemes':
           title = `All possible ways to break down the current word into morphemes`;
@@ -134,10 +134,12 @@ function addA(node, type) {
   }
 }
 
+
 //Add anchors once page loads
 window.addEventListener('DOMContentLoaded', () => {
-  var keyterms = document.querySelectorAll(".keyterm"),
-      layers = document.querySelectorAll(".layer");
+  var keyterms = document.querySelectorAll("span.keyterm"),
+      layers = document.querySelectorAll("span.layer");
   keyterms.forEach(a => addA(a, "keyterm"));
   layers.forEach(a => addA(a, "layer"));
 });
+

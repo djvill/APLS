@@ -31,7 +31,7 @@ var pxCutoff = convertRemToPixels(50);
 
 // window.resize callback function
 function setSearchText() {
-	var t = (window.innerWidth >= pxCutoff) ? 'Type / to search documentation' : 'Search documentation'
+	var t = (window.innerWidth >= pxCutoff) ? 'Type / to search documentation' : 'Search documentation';
 	document.querySelector("#search-input").placeholder = t;
 }
 
