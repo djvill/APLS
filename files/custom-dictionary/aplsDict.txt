@@ -22,6 +22,7 @@ Castlegate
 Chalfant
 Crafton
 Crider's
+Cuyahoga
 Deener
 Eastvale
 Edinboro
@@ -157,6 +158,7 @@ yinzers
 
 ## Company/brand names (local or otherwise)
 Amiesite
+Ammon
 Applebee
 Applebee's
 Arby's
@@ -168,6 +170,7 @@ Cigna
 Cutler-Hammer
 Damico's
 Donatelli's
+Dowe's
 Dunkin
 Dunkin'
 Foodland
@@ -239,6 +242,7 @@ DVDs
 extracurricular
 gelato
 gelatos
+great-grandparents
 Grier
 gummies
 homeschool
@@ -277,6 +281,8 @@ reface
 refacing
 righty
 rotaries
+sarcoid
+sarcoidosis
 segue
 Septembers
 Slovenians

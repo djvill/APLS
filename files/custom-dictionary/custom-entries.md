@@ -4,7 +4,7 @@ layout: default
 permalink: /files/custom-entries
 parent: Custom dictionary
 search_exclude: true
-last_modified_date: 2025-02-03T15:12:59-05:00
+last_modified_date: 2025-02-07T11:59:11-05:00
 ---
 
 # {{ page.title }}
@@ -40,6 +40,7 @@ These custom entries just fill in the gaps.
 - Chalfant
 - Crafton
 - Crider's
+- Cuyahoga
 - Deener
 - Eastvale
 - Edinboro
@@ -175,6 +176,7 @@ These custom entries just fill in the gaps.
 
 ## Company/brand names (local or otherwise)
 - Amiesite
+- Ammon
 - Applebee
 - Applebee's
 - Arby's
@@ -186,6 +188,7 @@ These custom entries just fill in the gaps.
 - Cutler-Hammer
 - Damico's
 - Donatelli's
+- Dowe's
 - Dunkin
 - Dunkin'
 - Foodland
@@ -257,6 +260,7 @@ These custom entries just fill in the gaps.
 - extracurricular
 - gelato
 - gelatos
+- great-grandparents
 - Grier
 - gummies
 - homeschool
@@ -295,6 +299,8 @@ These custom entries just fill in the gaps.
 - refacing
 - righty
 - rotaries
+- sarcoid
+- sarcoidosis
 - segue
 - Septembers
 - Slovenians
