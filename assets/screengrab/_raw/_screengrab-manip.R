@@ -13,7 +13,6 @@ library(yaml)
 library(purrr)
 suppressPackageStartupMessages(library(dplyr))
 suppressWarnings(suppressPackageStartupMessages(library(magick)))
-library(tidyr)
 
 ##Check that all arguments are files defined in manip_key
 to_manip <- commandArgs(trailingOnly = TRUE)
@@ -31,11 +30,16 @@ manip <-
   map_dfr(~ .x |>
             discard_at("instructions") |>
             modify_at(c("overlay", "drawing"), ~ list(map_dfr(.x, as_tibble))) |>
-            as_tibble()) |>
-  ##Set up images
-  mutate(in_image = map(screengrab, image_read),
-         out_image = in_image)
-##Set up paths
+            as_tibble())
+
+##Set up I/O paths
+if ("in_path" %in% colnames(manip)) {
+  manip <- manip |>
+    mutate(in_path = coalesce(in_path, screengrab))
+} else {
+  manip <- manip |>
+    mutate(in_path = screengrab)
+}
 if ("dir" %in% colnames(manip)) {
   manip <- manip |>
     mutate(out_path = file.path(coalesce(dir, out_dir), screengrab))
@@ -43,6 +47,10 @@ if ("dir" %in% colnames(manip)) {
   manip <- manip |>
     mutate(out_path = file.path(out_dir, screengrab))
 }
+##Set up images
+manip <- manip |>
+  mutate(in_image = map(in_path, image_read),
+         out_image = in_image)
 
 ##Optionally overlay additional images
 if ("overlay" %in% colnames(manip)) {

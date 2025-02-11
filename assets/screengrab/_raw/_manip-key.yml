@@ -193,3 +193,12 @@
       border: '#00AD6E'
       lty: dashed
       lwd: 3
+
+- screengrab: view-transcript-projects-layers.png
+  instructions: See view-transcript-overview.png
+  in_path: view-transcript-overview.png
+  dir: ../view-transcript
+  offset_x: 110
+  offset_y: 270
+  width: 1200
+  height: 405
