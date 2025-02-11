@@ -13,6 +13,7 @@ library(yaml)
 library(purrr)
 suppressPackageStartupMessages(library(dplyr))
 suppressWarnings(suppressPackageStartupMessages(library(magick)))
+library(tidyr)
 
 ##Check that all arguments are files defined in manip_key
 to_manip <- commandArgs(trailingOnly = TRUE)
@@ -23,18 +24,25 @@ if (length(unmanipable) > 0) {
   stop("The following file(s) are not defined in ", manip_key, ": ", paste(unmanipable, collapse=" "))
 }
 
-##Wrangle YAML to tibble (with list-column for overlay, if applicable)
+##Wrangle YAML to tibble (with list-columns for overlay & drawing, if applicable)
 manip <-
   yaml |>
   keep(~ .x$screengrab %in% to_manip) |>
   map_dfr(~ .x |>
             discard_at("instructions") |>
-            modify_at("overlay", ~ list(map_dfr(.x, as_tibble))) |>
+            modify_at(c("overlay", "drawing"), ~ list(map_dfr(.x, as_tibble))) |>
             as_tibble()) |>
-  ##Set up images & paths
+  ##Set up images
   mutate(in_image = map(screengrab, image_read),
-         out_image = in_image,
-         out_path = file.path(out_dir, screengrab))
+         out_image = in_image)
+##Set up paths
+if ("dir" %in% colnames(manip)) {
+  manip <- manip |>
+    mutate(out_path = file.path(coalesce(dir, out_dir), screengrab))
+} else {
+  manip <- manip |>
+    mutate(out_path = file.path(out_dir, screengrab))
+}
 
 ##Optionally overlay additional images
 if ("overlay" %in% colnames(manip)) {
@@ -48,6 +56,26 @@ if ("overlay" %in% colnames(manip)) {
         reduce2(.init=img, map(ov$image, image_read), 
                 geometry_point(ov$offset_x, ov$offset_y),
                 \(x, y, z) image_composite(x, y, offset=z))
+      }}
+    ))
+}
+
+##Optionally do additional drawing
+if ("drawing" %in% colnames(manip)) {
+  manip <- manip |>
+    mutate(out_image = map2(out_image, drawing, \(img, draw) {
+      if (is.null(draw)) {
+        ##If no drawing, return out_image
+        img
+      } else {
+        ##If drawing, create a graphics device and perform drawings in order
+        img <- image_draw(img)
+        draw |> 
+          rowwise() |> 
+          group_split() |> 
+          walk(~ do.call(.x$func, .x[-1]))
+        dev.off()
+        img
       }}
     ))
 }
