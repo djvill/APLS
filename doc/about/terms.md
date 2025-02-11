@@ -3,13 +3,14 @@ title: Terms of use
 permalink: /doc/terms
 parent: About APLS
 nav_order: 50
-last_modified_date: 2025-01-31T12:05:03-05:00
+last_modified_date: 2025-02-10T14:52:11-05:00
 ---
 
 # {{ page.title }}
 {:.no_toc}
 
 By using the Archive of Pittsburgh Language and Speech (APLS), you agree that you have read and will abide by the following terms of use.[^tou-sources]
+This document also serves as the license agreement for APLS (save for [this documentation site]({{ '/' | relative_url }}), which is distributed under a [Creative Commons BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/) license).
 
 {: .try-it-title }
 > Definitions used in this document
