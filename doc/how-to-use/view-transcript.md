@@ -5,7 +5,7 @@ parent: How to use APLS
 has_children: yes
 has_toc: no
 nav_order: 20
-last_modified_date: 2025-02-04T16:47:29:z
+last_modified_date: 2025-02-11T10:54:12-05:00
 ---
 
 # {{ page.title }}
@@ -17,7 +17,7 @@ Each transcript has its own page in APLS.
 
 {: .try-it }
 > As we'll cover [below](#accessing-transcript-pages), there are a few ways to access individual transcript pages.
-> The easiest is the [_transcripts_ page]({{ '/doc/browse-transcripts' | relative_url }}) at <https://apls.pitt.edu/transcripts>. 
+> The easiest is the [_transcripts_ page]({{ '/doc/browse-transcripts' | relative_url }}) at <https://apls.pitt.edu/labbcat/transcripts>. 
 > Go to that page and select a transcript to view.
 
 {% include page_toc.html collapsible=true %}
@@ -26,7 +26,7 @@ Each transcript has its own page in APLS.
 
 There are multiple ways to access the Transcript View page for individual transcripts.
 
-The easiest is the [_transcripts_ page]({{ '/doc/browse-transcripts' | relative_url }}) at <https://apls.pitt.edu/transcripts>. 
+The easiest is the [_transcripts_ page]({{ '/doc/browse-transcripts' | relative_url }}) at <https://apls.pitt.edu/labbcat/transcripts>. 
 
 Once you have a transcript open in a Transcript View page, you can use navigation arrows to move to a different transcript, as described [below](#media-player-and-navigation-arrows).
 
