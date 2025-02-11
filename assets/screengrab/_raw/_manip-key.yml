@@ -140,3 +140,65 @@
   offset_y: 135
   width: 305
   height: 70
+
+- screengrab: view-transcript-overview.png
+  instructions:
+    - Log in as test-student
+    - Set browser zoom to 100%
+    - Load https://apls.pitt.edu/labbcat/transcript?transcript=CB01interview3.eaf
+    - Save
+  dir: ../view-transcript
+  offset_x: 0
+  offset_y: 130
+  width: 1920
+  height: 890
+  drawing:
+    - func: rect
+      xleft: 110
+      ytop: 270
+      xright: 1310
+      ybottom: 675
+      border: '#F7911E' # from https://www.brand.pitt.edu/visual-identity/color-palettes
+      lty: dashed
+      lwd: 3
+    - func: rect
+      xleft: 1440
+      ytop: 215
+      xright: 1895
+      ybottom: 395
+      border: '#66B2E3'
+      lty: dashed
+      lwd: 3
+    - func: rect
+      xleft: 0
+      ytop: 575
+      xright: 35
+      ybottom: 610
+      border: '#66B2E3'
+      lty: dashed
+      lwd: 3
+    - func: rect
+      xleft: 1860
+      ytop: 575
+      xright: 1895
+      ybottom: 610
+      border: '#66B2E3'
+      lty: dashed
+      lwd: 3
+    - func: rect
+      xleft: 110
+      ytop: 695
+      xright: 1380
+      ybottom: 1025 # off the page
+      border: '#00AD6E'
+      lty: dashed
+      lwd: 3
+
+- screengrab: view-transcript-projects-layers.png
+  instructions: See view-transcript-overview.png
+  in_path: view-transcript-overview.png
+  dir: ../view-transcript
+  offset_x: 110
+  offset_y: 270
+  width: 1200
+  height: 405

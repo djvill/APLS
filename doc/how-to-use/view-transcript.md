@@ -5,7 +5,7 @@ parent: How to use APLS
 has_children: yes
 has_toc: no
 nav_order: 20
-last_modified_date: 2025-02-11T10:54:12-05:00
+last_modified_date: 2025-02-11T16:19:05-05:00
 ---
 
 # {{ page.title }}
@@ -21,18 +21,6 @@ Each transcript has its own page in APLS.
 > Go to that page and select a transcript to view.
 
 {% include page_toc.html collapsible=true %}
-
-## Accessing transcript pages
-
-There are multiple ways to access the Transcript View page for individual transcripts.
-
-The easiest is the [_transcripts_ page]({{ '/doc/browse-transcripts' | relative_url }}) at <https://apls.pitt.edu/labbcat/transcripts>. 
-
-Once you have a transcript open in a Transcript View page, you can use navigation arrows to move to a different transcript, as described [below](#media-player-and-navigation-arrows).
-
-You can access transcripts through the Search results page by clicking on hyperlinked text, as described on the [Searching the corpus]({{ '/doc/search' | relative_url }}) documentation page.
-
-You can also get to the Transcript View page for a transcript by navigating directly to the page's URL, which is in the form of `https://apls.pitt.edu/labbcat/transcript?transcript=` followed by the transcript's file name (e.g., the direct link for transcript file `CB01interview1.eaf` is `https://apls.pitt.edu/labbcat/transcript?transcript=CB01interview1.eaf`)
 
 ## Transcript View page layout
 
@@ -155,3 +143,16 @@ An example of this is shown below.
 {: .note }
 > It is possible to use CTRL+F to search a transcript page for singular words but not for multi-word strings due to the underlying HTML of the transcript view pages (e.g., CTRL+F will work to find the word 'filing' but it won't find the phrase 'filing cabinet').
 
+## Accessing transcript pages
+
+There are multiple ways to access the Transcript View page for individual transcripts.
+
+The easiest is the [_transcripts_ page]({{ '/doc/browse-transcripts' | relative_url }}) at <https://apls.pitt.edu/labbcat/transcripts>. 
+
+Once you have a transcript open in a Transcript View page, you can use navigation arrows to move to a different transcript, as described [above](#media-player-and-navigation-arrows).
+
+You can access transcripts through the Search results page by clicking on hyperlinked text, as described on the [Searching the corpus]({{ '/doc/search' | relative_url }}) documentation page.
+
+You can also get to the Transcript View page for a transcript by navigating directly to the page's URL, which is in the form of `https://apls.pitt.edu/labbcat/transcript?transcript=` followed by the transcript's file name (e.g., the direct link for transcript file `CB01interview1.eaf` is `https://apls.pitt.edu/labbcat/transcript?transcript=CB01interview1.eaf`)
+
+{% include linklist.html %}
