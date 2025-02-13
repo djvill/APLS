@@ -3,7 +3,7 @@ title: Typology
 permalink: /doc/typology
 parent: Layer reference
 nav_order: 10
-last_modified_date: 2025-02-13T13:44:05-05:00
+last_modified_date: 2025-02-13T17:44:15-05:00
 ---
 
 # Layers: {{ page.title }}
@@ -206,28 +206,28 @@ For example, the <span class="layer">syllables</span> layer uses the [DISC phone
 
 Here are brief descriptions of primary notation systems, with links to more details on the [notation systems]({{ '/doc/notation-systems' | relative_url }}) page if applicable:
 
-| Primary notation | Description       |
-|------------------|-------------------|
-| Boolean          | `True` or `False` |
-| Count            | Positive whole numbers |
-| DISC             | [DISC phonemic alphabet]({{ '/doc/notation-systems#disc-alphabet' | relative_url }}) |
-| Decimal          | Decimal numbers |
-| [English spelling]({{ '/doc/notation-systems#english-spelling' | relative_url }}) | |
-| [English spelling]({{ '/doc/notation-systems#english-spelling' | relative_url }}) (lowercase) | |
-| [Stress markers]({{ '/doc/notation-systems#disc-extensions' | relative_url }}) | `'` (primary stress)<br>`"` (secondary stress)<br>`0` (unstressed) |
-| [Treebank part-of-speech tags]({{ '/doc/notation-systems#treebank-pos' | relative_url }}) | |
+| Data type    | Primary notation | Description       |
+|--------------|------------------|-------------------|
+| Phonological | DISC             | [DISC phonemic alphabet]({{ '/doc/notation-systems#disc-alphabet' | relative_url }}) |
+| Phonological | [Stress markers]({{ '/doc/notation-systems#disc-extensions' | relative_url }}) | `'` (primary stress)<br>`"` (secondary stress)<br>`0` (unstressed) |
+| Numeric      | Count            | Positive whole numbers |
+| Numeric      | Decimal          | Decimal numbers |
+| Text         | Boolean          | `True` or `False` |
+| Text         | [English spelling]({{ '/doc/notation-systems#english-spelling' | relative_url }}) | |
+| Text         | [English spelling]({{ '/doc/notation-systems#english-spelling' | relative_url }}) (lowercase) | |
+| Text         | [Treebank part-of-speech tags]({{ '/doc/notation-systems#treebank-pos' | relative_url }}) | |
 {: .layer-props .no-keyterm }
 
 Here are additional notations:
 
-| Additional notation | Brief description |
-|---------------------|-------------------|
-| [DISC pause]({{ '/doc/notation-systems#disc-extensions' | relative_url }}) | `.`               |
-| Hesitation marker   | `~` (at the end of an incomplete word) |
-| Morpheme boundary   | `+` |
-| [Stress markers]({{ '/doc/notation-systems#disc-extensions' | relative_url }}) | `'` (primary stress)<br>`"` (secondary stress)<br>`0` (unstressed) |
-| [Syllable boundary]({{ '/doc/notation-systems#disc-extensions' | relative_url }}) | `-` |
-| Transcription pause/question markers | `.` (short pause)<br>`-` (long pause)<br>`?` (question) |
+| Data type    | Additional notation | Brief description |
+|--------------|---------------------|-------------------|
+| Phonological | [DISC pause]({{ '/doc/notation-systems#disc-extensions' | relative_url }}) | `.`               |
+| Phonological | [Stress markers]({{ '/doc/notation-systems#disc-extensions' | relative_url }}) | `'` (primary stress)<br>`"` (secondary stress)<br>`0` (unstressed) |
+| Phonological | [Syllable boundary]({{ '/doc/notation-systems#disc-extensions' | relative_url }}) | `-` |
+| Text         | Hesitation marker   | `~` (at the end of an incomplete word) |
+| Text         | Morpheme boundary   | `+` |
+| Text         | Transcription pause/question markers | `.` (short pause)<br>`-` (long pause)<br>`?` (question) |
 {: .layer-props .no-keyterm }
 
 ### What you'll see in APLS
