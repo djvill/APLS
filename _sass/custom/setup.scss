@@ -1,17 +1,23 @@
 /* Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=Rubik:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap');
 
-/* Pitt colors
- * https://www.brand.pitt.edu/visual-identity/color-palettes/primary-palette
- * https://web.archive.org/web/20230810115822/https://www.brand.pitt.edu/visual-identity/color-palettes/secondary-palette
- */
+/* Pitt colors */
+//https://www.brand.pitt.edu/visual-identity/color-palettes/
 $pitt-blue: #003594;
 $pitt-gold: #FFB81C;
-
+//https://web.archive.org/web/20230810115822/https://www.brand.pitt.edu/visual-identity/color-palettes/secondary-palette
 $pitt-charcoal: #75787B;
 $pitt-gray: #97999B;
 $pitt-light-gray: #C8C9C7;
 
+/* Colors for highlights
+ * https://colorbrewer2.org/?type=qualitative&scheme=Set1&n=5
+ */
+$highlight-1: #e41a1c;
+$highlight-2: #377eb8;
+$highlight-3: #4daf4a;
+$highlight-4: #984ea3;
+$highlight-5: #ff7f00;
 
 /* Create variables not defined in just-the-docs
  * https://github.com/just-the-docs/just-the-docs/blob/main/_sass/support/_variables.scss

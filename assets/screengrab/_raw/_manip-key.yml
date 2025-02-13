@@ -85,11 +85,11 @@
     - Set browser zoom to 100%
     - Load https://apls.pitt.edu/labbcat/transcript?transcript=CB01pairs.eaf
     - "Hide watermark: In Chrome console, select `html` element and deselect `background-image`"
-    - Select overlap, speech_rate, foll_pause, part_of_speech, word, segment
-    - "`window.scrollTo(0, 170); document.getElementById('players').remove()`"
+    - Select overlap, speech_rate, foll_pause, word, segment
+    - "`window.scrollTo(0, 150); document.getElementById('players').remove()`"
     - Save
   offset_x: 155
-  offset_y: 130  ##Top of display frame
+  offset_y: 210
   width: 1580
   height: 815
 
@@ -98,6 +98,7 @@
     - Log in as test-student
     - Set browser zoom to 100%
     - Load https://apls.pitt.edu/labbcat/transcripts
+    - Click "Export Formatted"
     - Save
   offset_x: 185
   offset_y: 200
@@ -153,46 +154,50 @@
   width: 1920
   height: 890
   drawing:
+      # header
     - func: rect
       xleft: 110
       ytop: 270
       xright: 1310
-      ybottom: 675
-      border: '#F7911E' # from https://www.brand.pitt.edu/visual-identity/color-palettes
+      ybottom: 640
+      border: '#e41a1c'
       lty: dashed
-      lwd: 3
+      lwd: 5
+      # body
+    - func: rect
+      xleft: 110
+      ytop: 660
+      xright: 1380
+      ybottom: 1025 # off the page
+      border: '#377eb8'
+      lty: dashed
+      lwd: 5
+      # media player
     - func: rect
       xleft: 1440
       ytop: 215
       xright: 1895
       ybottom: 395
-      border: '#66B2E3'
+      border: '#4daf4a'
       lty: dashed
-      lwd: 3
+      lwd: 5
+      # arrows
     - func: rect
       xleft: 0
       ytop: 575
       xright: 35
       ybottom: 610
-      border: '#66B2E3'
+      border: '#984ea3'
       lty: dashed
-      lwd: 3
+      lwd: 5
     - func: rect
       xleft: 1860
       ytop: 575
       xright: 1895
       ybottom: 610
-      border: '#66B2E3'
+      border: '#984ea3'
       lty: dashed
-      lwd: 3
-    - func: rect
-      xleft: 110
-      ytop: 695
-      xright: 1380
-      ybottom: 1025 # off the page
-      border: '#00AD6E'
-      lty: dashed
-      lwd: 3
+      lwd: 5
 
 - screengrab: view-transcript-projects-layers.png
   instructions: See view-transcript-overview.png

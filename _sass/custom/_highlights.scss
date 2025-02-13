@@ -1,0 +1,28 @@
+/* Highlights */
+/* From https://colorbrewer2.org/?type=qualitative&scheme=Set1&n=5 */
+
+%highlight {
+  color: white;
+  padding: 0 0.1em;
+}
+
+.hl-1, .hl-red {
+  @extend %highlight;
+  background-color: $highlight-1;
+}
+.hl-2, .hl-blue {
+  @extend %highlight;
+  background-color: $highlight-2;
+}
+.hl-3, .hl-green {
+  @extend %highlight;
+  background-color: $highlight-3;
+}
+.hl-4, .hl-purple {
+  @extend %highlight;
+  background-color: $highlight-4;
+}
+.hl-5, .hl-orange {
+  @extend %highlight;
+  background-color: $highlight-5;
+}
