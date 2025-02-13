@@ -10,12 +10,12 @@ last_modified_date: 2025-02-07T16:39:30:z
 # {{ page.title }}
 {:.no_toc}
 
-A useful feature of APLS is its in-browser integration with the speech analysis software [Praat](http://www.fon.hum.uva.nl/praat/). 
+A useful feature of APLS is its in-browser integration with the speech analysis software [Praat]. 
 By setting up Praat integration for APLS, you can open audio clips and their accompanying TextGrids in Praat directly from APLS webpages.
 Praat integration is supported when viewing [transcript pages]({{ '/doc/view-transcript' | relative_url }}).
 
 {: .note .no-collapse}
-> Praat Integration is supported for Google Chrome, Mozilla Firefox, and [Chromium-based browsers](https://en.wikipedia.org/wiki/Chromium_(web_browser)#Browsers_based_on_Chromium) Praat Integration **does not work with Safari**, due to Safari no longer supporting Java. 
+> Praat Integration is supported for Google Chrome, Mozilla Firefox, & [Chromium-based browsers](https://en.wikipedia.org/wiki/Chromium_(web_browser)#Browsers_based_on_Chromium). Praat Integration **does not work with Safari**, due to Safari no longer supporting Java. 
 
 On this page, we cover the configuration steps for Praat integration depending on the web browser you are using. 
 If you are looking for information about interpreting the exported TextGrids, go to the [Exporting data]({{ '/doc/export-data' | relative_url }}) documentation page.
@@ -26,7 +26,7 @@ If you are looking for information about interpreting the exported TextGrids, go
 
 Regardless of the web browser you are using to access APLS, there are two pre-requisites you must have installed on your local computer to use Praat integration:
 
-1. [Praat](http://www.fon.hum.uva.nl/praat/) (your Praat installation must be at least version 6.2.05 or newer)
+1. [Praat] (your Praat installation must be at least version 6.2.05 or newer)
 1. [Java](http://www.java.com/) (Java is used to send the files from your web browser to Praat)
 
 ### Configuration steps for Google Chrome (and Chromium-based browsers)
@@ -40,7 +40,7 @@ The steps to install these are:
 
 1. Navigate to the Praat Integration extension page on the [Chrome Web Store directly](https://chromewebstore.google.com/detail/Praat%20Integration/hmmnebkieionilgpepijmfabdickmnig) or by clicking the Praat icon in the upper-right corner of the APLS media player.
 1. On the Praat Integration extension page, click the button that says "Add to Chrome" (or "Add to [BROWSER NAME]").
-   ![]({{ '/assets/screengrab/praat-integration/praat-integration--add-to-chrome.png' | relative_url }})
+   ![]({{ '/assets/screengrab/praat-integration/praat-integration-add-to-chrome.png' | relative_url }})
 1. A message will appear asking if you want to add the Praat Integration extension. Click the "Add extension" button.
    ![]({{ '/assets/screengrab/praat-integration/praat-integration-add-extension-chrome.png' | relative_url }})
 1. Download and save the file [`install-jsendpraat.jar`](chrome-extension://hmmnebkieionilgpepijmfabdickmnig/install-jsendpraat.jar)
@@ -87,9 +87,10 @@ To verify that the Praat Integration functionality is correctly installed:
 
 1. Open the [transcript page for `CB01interview1.eaf`](https://apls.pitt.edu/labbcat/transcript?transcript=CB01interview1.eaf) 
 1. Click on the first word in the transcript body (*manipulate*). 
-1. The [Word Menu]({{ '/doc/view-transcript/turns-utterances-noises-and-overlaps' | relative_url }}) should display options to open files in Praat. 
+1. The [Word Menu]({{ '/doc/view-transcript#turns-utterances-noises-and-overlaps' | relative_url }}) should display options to open files in Praat. 
    ![]({{ '/assets/screengrab/praat-integration/praat-integration-install-verification.png' | relative_url }})
    1. If you do not see Praat options in the Word Menu, this most likely means there is an issue with the web browser extension installation.
 1. Clicking *Open in Praat* should open the utterance's audio file in your local version of Praat.
    1. If the Praat Integration options are available in the Word Menu but clicking them does not open the utterance in Praat, this most likely means there is an issue with the `jsendpraat.jar` installation.
    
+{% include linklist.html %}
