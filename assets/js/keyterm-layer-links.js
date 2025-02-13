@@ -77,7 +77,7 @@ function addA(node, type) {
           title = `Segment or pause following the current segment`;
           break;
         case 'turn':
-          title = `Speaker turn`;
+          title = `Series of uninterrupted utterances from the same speaker`;
           break;
         case 'utterance':
           title = `Line in the transcript`;
@@ -123,9 +123,6 @@ function addA(node, type) {
           break;
         case 'mfa_phonemes':
           title = `All possible phonemic representations of the word, translated to Montreal Forced Aligner US English IPA phoneset`;
-          break;
-        case 'test_python_word':
-          title = `A sandbox for testing Python-managed word layers`;
           break;
       }
       a.title = title;
