@@ -3,7 +3,7 @@ title: Typology
 permalink: /doc/typology
 parent: Layer reference
 nav_order: 10
-last_modified_date: 2025-02-05T14:24:00-05:00
+last_modified_date: 2025-02-13T13:44:05-05:00
 ---
 
 # Layers: {{ page.title }}
@@ -56,7 +56,7 @@ From longest to shortest, these are:
 
 ### Layers by scope
 
-{% include layer-table.html property="scope" categories="span,phrase,word,segment" exclude_proj="temp,testing" %}
+{% include layer-table.html property="scope" categories="span,phrase,word,segment" exclude_proj="temp" %}
 
 
 ## Alignment and horizontal peers
@@ -100,7 +100,7 @@ Layers can have one of three possible alignments:
 
 Since alignment is relative to the layer's scope, these are broken down by scope too:
 
-{% include layer-table.html property="alignment" categories="complete interval,sub-interval" row_property="scope" row_categories="span,phrase,word,segment" exclude_proj="temp,testing" %}
+{% include layer-table.html property="alignment" categories="complete interval,sub-interval" row_property="scope" row_categories="span,phrase,word,segment" exclude_proj="temp" %}
 
 There aren't currently any timepoint layers in APLS.
 
@@ -158,7 +158,7 @@ Unlike <span class="keyterm">horizontal peers</span>, which divide the timespan 
 
 ### Layers by vertical peers
 
-{% include layer-table.html property="vertical_peers" categories="true,false" exclude_proj="temp,testing" %}
+{% include layer-table.html property="vertical_peers" categories="true,false" exclude_proj="temp" %}
 
 
 ## Data type
@@ -190,7 +190,7 @@ This distinction is mostly important for [search]({{ '/doc/search' | relative_ur
 
 ### Layers by data type
 
-{% include layer-table.html property="data_type" categories="phonological,numeric,text,timing-only" exclude_proj="temp,testing" %}
+{% include layer-table.html property="data_type" categories="phonological,numeric,text,timing-only" exclude_proj="temp" %}
 
 
 ## Notation system
@@ -240,7 +240,7 @@ Here are additional notations:
 
 **Primary** notation system:
 
-{% include layer-table.html property="notation.primary" categories="Boolean,Count,DISC,Decimal,English spelling,English spelling (lowercase),Stress markers,Treebank part-of-speech tags" exclude_proj="temp,testing" not_synced=true no_caps=true %}
+{% include layer-table.html property="notation.primary" categories="Boolean,Count,DISC,Decimal,English spelling,English spelling (lowercase),Stress markers,Treebank part-of-speech tags" exclude_proj="temp" not_synced=true no_caps=true %}
 
 
 **Additional** notation:
@@ -282,7 +282,7 @@ if <span class="layer">segment</span> has no annotations in a turn, then <span c
 
 ### Layers by alignment dependency
 
-{% include layer-table.html property="alignment_dependent" categories="true,false" exclude_proj="temp,testing" not_synced=true %}
+{% include layer-table.html property="alignment_dependent" categories="true,false" exclude_proj="temp" not_synced=true %}
 
 
 ## Project
@@ -299,7 +299,6 @@ As a result, APLS categorizes layers into <span class="keyterm">projects</span>:
 | phonology | Annotations pertain to the speech sounds in a word | All of these layers are <span class="keyterm">phonological layers</span>, see [data type](#data-type) above |
 | imported  | Annotations were imported from the original transcription | |
 | temp      | Annotations are either metadata on how other layers were generated, or their only job is to provide data for other layers | |
-| testing   | Test layers that aren't "ready for prime time" | |
 | (none)    | Layers whose check-boxes are always shown by default on the [search]({{ '/doc/search' | relative_url }}) and [transcript]({{ '/doc/view-transcript' | relative_url }}) pages | |
 {: .layer-props .no-keyterm }
 
@@ -316,7 +315,7 @@ Unlike other layer properties, projects don't affect _anything_ about how layers
 
 ### Layers by project
 
-{% include layer-table.html property="project" categories="(none),syntax,lexicon,timing,phonology,imported,temp,testing" no_caps=true %}
+{% include layer-table.html property="project" categories="(none),syntax,lexicon,timing,phonology,imported,temp" no_caps=true %}
 
 {: .note .no-collapse }
-> Layers in the "temp" and "testing" projects aren't meaningful for end-users, so the other "layers by property" tables on this page omit these layers.
+> Layers in the "temp" project isn't meaningful for end-users, so the other "layers by property" tables on this page omit these layers.

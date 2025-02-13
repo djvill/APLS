@@ -4,7 +4,7 @@ synced:
     to Montreal Forced Aligner US English IPA phoneset
   layer_id: 82
   alignment: complete interval
-  project: testing
+  project: temp
   parent: word
   peers: yes
   vertical_peers: yes
@@ -19,7 +19,7 @@ synced:
   export_includeCounts: yes
   export_includeAnchorSharing: no
   extra: (none)
-last_sync_modified_date: 2025-01-11T16:50:28-0500
+last_sync_modified_date: 2025-02-13T13:40:21-0500
 notation:
   primary: MFA IPA for English
   missing: No dictionary entry found
@@ -30,7 +30,7 @@ alignment_dependent: no
 versions:
   first_appeared: 0.1.1
   last_modified: 0.1.2
-last_modified_date: 2025-01-11T16:51:55-05:00
+last_modified_date: 2025-02-13T13:44:04-05:00
 ---
 
 **Fill longer description here**

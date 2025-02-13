@@ -3,13 +3,13 @@ title: Detailed field guide
 permalink: /doc/detailed-field-guide
 parent: Layer reference
 nav_order: 20
-last_modified_date: 2025-02-05T16:53:43-05:00
+last_modified_date: 2025-02-13T13:44:05-05:00
 ---
 
 # Layers: {{ page.title }}
 {:.no_toc}
 
-{% assign layers = site.layers | where_exp: "item", "item.synced.project != 'temp'" | where_exp: "item", "item.synced.project != 'testing'" %}
+{% assign layers = site.layers | where_exp: "item", "item.synced.project != 'temp'" %}
 
 {% comment %}Spoof TOC because {:toc} tag doesn't work with headings in span.layer{% endcomment %}
 <details markdown="block">
