@@ -93,6 +93,19 @@
   width: 1580
   height: 815
 
+- screengrab: transcript-word-menu.png
+  instructions:
+    - Log in as test-student
+    - Set browser zoom to 100%
+    - Load https://apls.pitt.edu/labbcat/transcript?transcript=CB01interview3.eaf
+    - "`window.scrollTo(0, 40);`"
+    - "Click _individual_"
+    - Save
+  offset_x: 690
+  offset_y: 710
+  width: 455
+  height: 250
+
 - screengrab: transcripts-export-format.png
   instructions:
     - Log in as test-student

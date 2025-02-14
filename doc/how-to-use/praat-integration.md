@@ -4,7 +4,7 @@ permalink: /doc/praat-integration
 parent: Viewing a transcript
 grand_parent: How to use APLS
 nav_order: 10
-last_modified_date: 2025-02-07T16:39:30:z
+last_modified_date: 2025-02-14T15:02:39-05:00
 ---
 
 # {{ page.title }}
@@ -88,7 +88,7 @@ To verify that the Praat Integration functionality is correctly installed:
 1. Open the [transcript page for `CB01interview1.eaf`](https://apls.pitt.edu/labbcat/transcript?transcript=CB01interview1.eaf) 
 1. Click on the first word in the transcript body (*manipulate*). 
 1. The [Word Menu]({{ '/doc/view-transcript#turns-utterances-noises-and-overlaps' | relative_url }}) should display options to open files in Praat. 
-   ![]({{ '/assets/screengrab/praat-integration/praat-integration-install-verification.png' | relative_url }})
+   ![]({{ '/assets/screengrab/transcript-word-menu.png' | relative_url }})
    1. If you do not see Praat options in the Word Menu, this most likely means there is an issue with the web browser extension installation.
 1. Clicking *Open in Praat* should open the utterance's audio file in your local version of Praat.
    1. If the Praat Integration options are available in the Word Menu but clicking them does not open the utterance in Praat, this most likely means there is an issue with the `jsendpraat.jar` installation.
