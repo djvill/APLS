@@ -44,56 +44,65 @@ invisible(labbcatCredentials(lc, Sys.getenv(username), Sys.getenv(pw)))
 # Download & categorize layer data -------------------------------------------
 
 ##Get data on all "layers" (which include transcript/participant attributes)
-all_layers <- getLayers(lc)
+lc_layers <- getLayers(lc)
 
-##Wrangle all-layer data
-all_layers <- all_layers |>
+##Columns and names
+all_layers <- 
+  lc_layers |>
   ##Make into a tibble
   as_tibble() |>
-  ##NAs for blanks
-  mutate(across(where(is.character), ~ na_if(.x, ""))) |>
-  ##Nicer column names
-  rename(short_description = description, project = category, parent = parentId, 
-         data_type = type, vertical_peers = peersOverlap,
-         layer_manager = layer_manager_id) |>
+  ##Nicer column name
+  rename(parent = parentId) |>
   ##Nicer column order
-  relocate(id, short_description, layer_id, .before=1) |>
-  relocate(extra, .after=last_col())
-
-##Separate layers, transcript attributes, and participant attributes
-##main_participant is hard to categorize for user-facing purposes
-all_layers <- all_layers |>
-  filter(id != "main_participant")
-transcript_attr <-
-  all_layers |>
-  filter(str_detect(id, "^(transcript_|corpus$|episode$|transcript$)"))
-participant_attr <-
-  all_layers |>
-  filter(str_detect(id, "^(participant_|participant$)"))
-layers <-
-  all_layers |>
-  ##Remove participant/transcript attributes
-  anti_join(transcript_attr, "id") |>
-  anti_join(participant_attr, "id")
-
-
-# Wrangle transcript layers -----------------------------------------------
-
-##Remove columns
-layers <- layers |>
+  relocate(id, layer_id, description, .before=1) |>
+  relocate(extra, .after=last_col()) |>
+  ##Remove columns
   select(-c(
-    ##Relevant only to participant/transcript attributes
-    style, class_id, attribute, hint, display_order, 
-    searchable, access, label, notes,
-    ##List-columns
-    validLabels, validLabelsDefinition,
+    ##Redundant or uninformative
+    class_id, attribute, label, notes,
     ##Graph-algebraic columns (see https://doi.org/10.1016/j.csl.2017.01.004 )
     parentIncludes, saturated,
-    ##enabled is often subject to change
-    enabled,
-    ##I can't figure out what subtype does
-    subtype))
+    ##Not needed right now
+    validLabelsDefinition, ##TMI for YAMLs
+    style, ##Only pertains to attribute display
+    enabled ##enabled is often subject to change
+  ))
 
+##Translate columns to more readable format
+all_layers <- all_layers |>
+  ##NAs for blanks
+  mutate(across(where(is.character), ~ na_if(.x, "")),
+         ##Categorize attributes
+         attrib_type = case_when(
+           id %in% c("corpus", "episode", "transcript") ~ "transcript",
+           startsWith(id, "transcript_") ~ "transcript",
+           id == "participant" ~ "participant",
+           startsWith(id, "participant_") ~ "participant",
+           ##main_participant is hard to categorize for user-facing purposes
+           id == "main_participant" ~ "main_participant",
+           .default=NA))
+
+##Separate layers from attributes
+attrib <-
+  all_layers |>
+  filter(!is.na(attrib_type))
+layers <-
+  all_layers |>
+  filter(is.na(attrib_type))
+
+# Wrangle layers ------------------------------------------------------------
+
+##Columns and names
+layers <- layers |>
+  ##Remove columns relevant only to participant/transcript attributes
+  select(-c(validLabels, subtype, hint, display_order, searchable, access,
+            attrib_type)) |>
+  ##Rename
+  rename(project = category,
+         short_description = description, 
+         vertical_peers = peersOverlap,
+         data_type = type,
+         layer_manager = layer_manager_id)
 
 ##Translate columns to more readable format
 layers <- layers |>
@@ -136,7 +145,7 @@ layers <- layers |>
                                             "py" ~ "Python",
                                             .default=.x)))
 
-##Add attributes pertaining to how users can interact with layers
+##Add properties pertaining to how users can interact with layers
 layers <- layers |>
   ##All layers can be exported from https://apls.pitt.edu/labbcat/transcripts
   ##  (though some appear in weird ways--or not at all--depending on the format)
@@ -186,6 +195,61 @@ layers <- layers |>
            peers ~ TRUE,
            .default=FALSE),
          .before=extra)
+
+
+# Wrangle attributes ----------------------------------------------------------
+
+##Columns and names
+attrib <- attrib |>
+  ##Remove columns relevant only to transcript layers
+  select(-c(alignment, category, peersOverlap, type, scope, layer_manager_id, extra)) |>
+  ##Rename
+  rename(display_title = description,
+         multi_select = peers,
+         valid_labels = validLabels,
+         data_type = subtype,
+         short_description = hint,
+         filterable = searchable)
+
+##Translate columns to more readable format
+attrib <- attrib |>
+  mutate(across(id, ~ str_remove(.x, "^(transcript|participant)_")),
+         across(valid_labels, ~ .x |>
+                  as.list() |>
+                  list_transpose() |>
+                  map(~ .x |>
+                        discard(is.na) |>
+                        enframe("label", "description") |>
+                        mutate(across(description, 
+                                      ~ str_replace_all(.x, c("\\[" = "\\(",
+                                                              "\\]" = "\\)")))))),
+         across(data_type, ~ case_when(id == "corpus" ~ "select",
+                                       data_type == "R" ~ "string",
+                                       is.na(data_type) ~ "select",
+                                       TRUE ~ data_type)))
+
+##Add properties pertaining to how users can interact with attributes
+attrib <- attrib |>
+  ##All attributes can be exported from https://apls.pitt.edu/labbcat/transcripts
+  ##  (though some appear in weird ways--or not at all--depending on the format)
+  mutate(transcripts_exportable = TRUE,
+         
+         ##Whether attribute is a filterable column on https://apls.pitt.edu/labbcat/transcripts or https://apls.pitt.edu/labbcat/participants
+         ##  (N.B. episode is filterable for participants despite being a transcript attribute)
+         filterable = case_when(
+           id %in% c("episode", "participant", "transcript", "type") ~ TRUE,
+           is.na(filterable) ~ FALSE,
+           TRUE ~ as.logical(as.numeric(filterable))),
+         
+         ##Whether attribute can be exported search matches
+         matches_exportable = id != "main_participant",
+         
+         ##Do count boxes show up in matches > CSV Export?
+         export_includeCounts = case_when(
+           !matches_exportable ~ NA, ##Not shown in matches > CSV Export
+           multi_select ~ TRUE,
+           .default=FALSE)
+  )
 
 
 # Identify files to create/update -----------------------------------------
