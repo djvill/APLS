@@ -2,19 +2,25 @@
 ## sync-layers.R
 ## Dan Villarreal (d.vill@pitt.edu)
 ##
-## Download layer definitions from APLS to create/update Markdown files for use
-## in APLS documentation, and inject JavaScript code that allows for layer
-## descriptions in tooltips
+## Download layer/attribute definitions from APLS to create/update Markdown
+## files for use in APLS documentation, and inject JavaScript code that allows
+## for layer/attribute descriptions in tooltips
 ##
 
 ##Parameters
-##Directory for Markdown files
-md_dir <- "."
+##Directories for Markdown files
+md_dir_layers <- "."
+md_dir_attrib <- "../_attributes"
+
 ##Whether or not to write/update Markdown files
-write_new_md_files <- TRUE
-update_existing_md_files <- TRUE
+write_new_md_layers <- TRUE
+update_existing_md_layers <- TRUE
+write_new_md_attrib <- TRUE
+update_existing_md_attrib <- TRUE
+
 ##Path to JavaScript file
 js_path <- "../assets/js/keyterm-layer-links.js"
+
 ##Whether or not to write/update JavaScript file
 update_existing_js_file <- TRUE
 
@@ -44,7 +50,9 @@ if (nchar(Sys.getenv(username))==0 || nchar(Sys.getenv(pw))==0) {
 invisible(labbcatCredentials(lc, Sys.getenv(username), Sys.getenv(pw)))
 
 
-# Download & categorize layer data -------------------------------------------
+# Get layer & attribute data ------------------------------------------------
+
+## Download & categorize layer data =========================================
 
 ##Get data on all "layers" (which include transcript/participant attributes)
 lc_layers <- getLayers(lc)
@@ -93,7 +101,8 @@ layers <-
   all_layers |>
   filter(is.na(attrib_type))
 
-# Wrangle layers ------------------------------------------------------------
+
+## Wrangle layers ============================================================
 
 ##Columns and names
 layers <- layers |>
@@ -200,7 +209,7 @@ layers <- layers |>
          .before=extra)
 
 
-# Wrangle attributes ----------------------------------------------------------
+## Wrangle attributes ======================================================
 
 ##Columns and names
 attrib <- attrib |>
@@ -217,6 +226,7 @@ attrib <- attrib |>
 ##Translate columns to more readable format
 attrib <- attrib |>
   mutate(across(attribute, ~ if_else(is.na(.x), str_remove(id, "transcript_"), .x)),
+         across(short_description, ~ replace_na(.x, "(none)")),
          across(valid_labels, ~ .x |>
                   as.list() |>
                   list_transpose() |>
@@ -225,9 +235,14 @@ attrib <- attrib |>
                         enframe("label", "description") |>
                         mutate(across(description, 
                                       ~ str_replace_all(.x, c("\\[" = "\\(",
-                                                              "\\]" = "\\)")))))),
+                                                              "\\]" = "\\)")))) |>
+                        ##Each element is a list of one-row tibbles (yields
+                        ##  nicer YAML)
+                        rowwise() |>
+                        group_map(~ .x))),
          across(data_type, ~ case_when(attribute == "corpus" ~ "select",
-                                       data_type == "R" ~ "string",
+                                       data_type == "R" ~ "text",
+                                       data_type == "string" ~ "text",
                                        is.na(data_type) ~ "select",
                                        TRUE ~ data_type)),
          across(access, ~ .x |>
@@ -272,72 +287,133 @@ attrib <- attrib |>
 
 # Identify files to create/update -----------------------------------------
 
+## Layers =================================================================
+
 ##Get existing Markdown files
-md <- 
-  dir(md_dir, "\\.md$", full.names=TRUE) |>
+md_layers <- 
+  dir(md_dir_layers, "\\.md$", full.names=TRUE) |>
   str_subset("README\\.md", negate=TRUE) |>
   set_names(~ str_remove(basename(.x), "\\.md$")) |>
   map(read_lines)
 
 ##Separate YAML header (lines between 1st & 2nd "---") & Markdown body
-yaml_bounds <- map(md, ~ str_which(.x, "^---$"))
+yaml_bounds_layers <- map(md_layers, ~ str_which(.x, "^---$"))
 ##YAML as list
-yaml <- map2(md, yaml_bounds, 
-             ~ .x[(.y[1]+1):(.y[2]-1)] |>
-               yaml.load())
+yaml_layers <- map2(md_layers, yaml_bounds_layers, 
+                    ~ .x[(.y[1]+1):(.y[2]-1)] |>
+                      yaml.load())
 ##Extract Markdown body
-body_md <- map2(md, yaml_bounds,
-                ~ .x[-c(1:.y[2])])
+body_md_layers <- map2(md_layers, yaml_bounds_layers,
+                       ~ .x[-c(1:.y[2])])
 
 ##Get "synced" attributes as a single dataframe
-old_synced <-
-  yaml |>
+old_synced_layers <-
+  yaml_layers |>
   map_dfr(~ .x |>
             pluck("synced") |>
             ##Make sure NULL attributes don't get removed
             map(~ replace(.x, is.null(.x), NA)),
           .id="id")
 
-##If needed, add blank columns to old_synced to match layers
-new_cols <- setdiff(colnames(layers), colnames(old_synced))
-old_synced <- old_synced |>
-  add_column(!!!set_names(rep(NA, length(new_cols)), new_cols))
+##If needed, add blank columns to old_synced_layers to match layers
+new_cols_layers <- 
+  layers |>
+  select(-any_of(colnames(old_synced_layers))) |>
+  slice(0)
+if (nrow(old_synced_layers) > 0) {
+  new_cols_layers <- add_row(new_cols_layers)
+}
+old_synced_layers <- bind_cols(old_synced_layers, new_cols_layers)
 
 ##Identify layers that need new files & layers that need updated files
-to_create <- anti_join(layers, old_synced, "id")
-to_update <- 
+to_create_layers <- anti_join(layers, old_synced_layers, "id")
+to_update_layers <- 
   layers |>
+  anti_join(to_create_layers, "id") |>
   mutate(across(scope, ~ replace_na(.x, ""))) |>
-  anti_join(old_synced, colnames(layers)[-1])
+  anti_join(old_synced_layers, colnames(layers)[-1])
+
+
+## Attributes =============================================================
+
+##Get existing Markdown files
+md_attrib <- 
+  dir(md_dir_attrib, "\\.md$", full.names=TRUE) |>
+  str_subset("README\\.md", negate=TRUE) |>
+  set_names(~ str_remove(basename(.x), "\\.md$")) |>
+  map(read_lines)
+
+##Separate YAML header (lines between 1st & 2nd "---") & Markdown body
+yaml_bounds_attrib <- map(md_attrib, ~ str_which(.x, "^---$"))
+##YAML as list
+yaml_attrib <- map2(md_attrib, yaml_bounds_attrib, 
+                    ~ .x[(.y[1]+1):(.y[2]-1)] |>
+                      yaml.load())
+##Extract Markdown body
+body_md_attrib <- map2(md_attrib, yaml_bounds_attrib,
+                       ~ .x[-c(1:.y[2])])
+
+##Get "synced" attributes as a single dataframe
+old_synced_attrib <-
+  yaml_attrib |>
+  map_dfr(~ .x |>
+            pluck("synced") |>
+            ##Make sure NULL attributes don't get removed
+            map(~ replace(.x, is.null(.x), NA)),
+          .id="id")
+
+##If needed, add blank columns to old_synced_attrib to match attrib
+new_cols_attrib <- 
+  attrib |>
+  select(-any_of(colnames(old_synced_attrib))) |>
+  slice(0)
+if (nrow(old_synced_attrib) > 0) {
+  new_cols_attrib <- add_row(new_cols_attrib)
+}
+old_synced_attrib <- bind_cols(old_synced_attrib, new_cols_attrib)
+
+##Identify attributes that need new files & attributes that need updated files
+public_attrib <- 
+  attrib |>
+  filter(access)
+to_create_attrib <- anti_join(public_attrib, old_synced_attrib, "id")
+to_update_attrib <- 
+  public_attrib |>
+  anti_join(to_create_attrib, "id") |>
+  anti_join(old_synced_attrib, colnames(attrib)[-1])
+
+
+# Create files for new layers/attributes -------------------------------------
 
 ##Get last_sync_modified_date
 last_sync_modified_date <- 
   Sys.time() |>
   format("%Y-%m-%dT%H:%M:%S%z")
 
-# Create files for new layers ---------------------------------------------
 
-##Add blank attributes (to be filled in manually for new layers)
-blankAttr <- list(last_sync_modified_date = last_sync_modified_date,
-                  notation = list(primary = "Main category of notation system (e.g., English, downcased English, Penn Treebank tags, DISC); links to `doc/notation-systems`",
-                                  additional = "_If applicable_, symbols that augment the primary notation system (e.g., transcription prosody symbols, morpheme marker, DISC syllabification/stress, foll_segment pause symbol). Delete if not applicable",
-                                  missing = "How missing values should be interpreted"),
-                  inputs = list(list(input = "Name of input",
-                                     type = "layer, dictionary, algorithm, script, transcription, or other"),
-                                list(input = "Name of input",
-                                     type = "layer, dictionary, algorithm, script, transcription, or other")),
-                  versions = list(first_appeared = "Where layer first appeared",
-                                  last_modified = "Where layer was last modified"),
-                  last_modified_date = "Handled by Git pre-commit hook")
+## Layers ===================================================================
+
+##Add blank properties (to be filled in manually for new layers)
+blank_props_layers <- list(last_sync_modified_date = last_sync_modified_date,
+                           notation = list(primary = "Main category of notation system (e.g., English, downcased English, Penn Treebank tags, DISC); links to `doc/notation-systems`",
+                                           additional = "_If applicable_, symbols that augment the primary notation system (e.g., transcription prosody symbols, morpheme marker, DISC syllabification/stress, foll_segment pause symbol). Delete if not applicable",
+                                           missing = "How missing values should be interpreted"),
+                           inputs = list(list(input = "Name of input",
+                                              type = "layer, dictionary, algorithm, script, transcription, or other"),
+                                         list(input = "Name of input",
+                                              type = "layer, dictionary, algorithm, script, transcription, or other")),
+                           versions = list(first_appeared = "Where layer first appeared",
+                                           last_modified = "Where layer was last modified"),
+                           last_modified_date = "Handled by Git pre-commit hook")
 
 ##List of to-be-created YAML headers
-to_create <- to_create |>
-  ##Nest synced attributes w/in "synced" element
+to_create_layers <- to_create_layers |>
+  ##Nest synced properties w/in "synced" element
   nest(data = -id) |>
   pull(data, id) |>
   map(~ c(synced = list(.x),
-          ##Add blank attributes
-          blankAttr) |>
+          ##Add blank properties
+          blank_props_layers) |>
         ##As a list of YAML headers
         as.yaml(indent.mapping.sequence=TRUE) |>
         ##Remove "Handled by Git pre-commit hook" text so pre-commit hook will
@@ -345,45 +421,119 @@ to_create <- to_create |>
         str_remove("Handled by Git pre-commit hook"))
 
 ##List of Markdown files to be created
-to_create <- to_create |>
+to_create_layers <- to_create_layers |>
   map(~ c("---", paste0(.x, "---"), "",
           "**Fill longer description here**", "",
           "Any headings should be level-3", "", "",
           "{% include linklist.html %}"))
 
 ##Optionally write new Markdown files
-if (write_new_md_files) {
-  to_create |>
-    iwalk(~ write_lines(.x, paste0(.y, ".md"), sep="\r\n"))
+if (write_new_md_layers) {
+  to_create_layers |>
+    iwalk(~ write_lines(.x, file.path(md_dir_layers, paste0(.y, ".md")), 
+                        sep="\r\n"))
 }
 
 
-# Update files for existing layers ----------------------------------------
+## Attributes ===============================================================
 
-##Make to_update structure match yaml
-to_update <- to_update |> 
+##Add blank properties
+blank_props_attrib <- list(last_sync_modified_date = last_sync_modified_date,
+                           last_modified_date = "Handled by Git pre-commit hook")
+
+##List of to-be-created YAML headers
+to_create_attrib <- to_create_attrib |>
+  ##Nest synced properties w/in "synced" element
+  nest(data = -id) |>
+  pull(data, id) |>
+  map(~ c(synced = .x |>
+            ##Discard properties that aren't applicable
+            discard(is.na) |>
+            discard(~ length(.x[[1]])==0) |>
+            list(),
+          ##Add blank properties
+          blank_props_attrib) |>
+        ##As a list of YAML headers
+        as.yaml(indent.mapping.sequence=TRUE) |>
+        ##Remove "Handled by Git pre-commit hook" text so pre-commit hook will
+        ##  actually work
+        str_remove("Handled by Git pre-commit hook"))
+
+##List of Markdown files to be created
+to_create_attrib <- to_create_attrib |>
+  map(~ c("---", paste0(.x, "---")))
+
+##Optionally write new Markdown files
+if (write_new_md_attrib) {
+  to_create_attrib |>
+    iwalk(~ write_lines(.x, file.path(md_dir_attrib, paste0(.y, ".md")), 
+                        sep="\r\n"))
+}
+
+
+# Update files for existing layers/attributes -------------------------------
+
+## Layers ===================================================================
+
+##Make to_update_layers structure match yaml
+to_update_layers <- to_update_layers |> 
   nest(synced = -id) |>
   pull(synced, id) |>
   map(~ list(synced = .x))
 
-##For layers in to_update, replace "synced" YAML sublists with to_update
-new_yaml <- yaml |>
-  list_modify(!!!to_update) |>
+##For layers in to_update_layers, replace "synced" YAML sublists with
+##  to_update_layers
+new_yaml_layers <- yaml_layers |>
+  list_modify(!!!to_update_layers) |>
   map(~ assign_in(.x, "last_sync_modified_date", last_sync_modified_date)) |>
-  keep_at(names(to_update)) |>
+  keep_at(names(to_update_layers)) |>
   map(as.yaml, indent.mapping.sequence=TRUE) |>
   ##Remove quotes added around last_modified_date
   map(~ str_replace(.x, "last_modified_date: '(.+?)'", "last_modified_date: \\1"))
 
 ##Add Markdown body
-new_md <- map2(new_yaml, keep_at(body_md, names(new_yaml)),
-               ~ c("---", str_remove(.x, "\n$"), "---", .y))
+new_md_layers <- map2(new_yaml_layers, 
+                      keep_at(body_md_layers, names(new_yaml_layers)),
+                      ~ c("---", str_remove(.x, "\n$"), "---", .y))
 
 ##Optionally write updated Markdown files
-if (update_existing_md_files) {
-  new_md |>
-    iwalk(~ write_lines(.x, paste0(.y, ".md"), sep="\r\n"))
+if (update_existing_md_layers) {
+  new_md_layers |>
+    iwalk(~ write_lines(.x, file.path(md_dir_layers, paste0(.y, ".md")), 
+                        sep="\r\n"))
 }
+
+
+## Attributes ==============================================================
+
+##Make to_update_attrib structure match yaml
+to_update_attrib <- to_update_attrib |> 
+  nest(synced = -id) |>
+  pull(synced, id) |>
+  map(~ list(synced = .x))
+
+##For attributes in to_update_attrib, replace "synced" YAML sublists with
+##  to_update_attrib
+new_yaml_attrib <- yaml_attrib |>
+  list_modify(!!!to_update_attrib) |>
+  map(~ assign_in(.x, "last_sync_modified_date", last_sync_modified_date)) |>
+  keep_at(names(to_update_attrib)) |>
+  map(as.yaml, indent.mapping.sequence=TRUE) |>
+  ##Remove quotes added around last_modified_date
+  map(~ str_replace(.x, "last_modified_date: '(.+?)'", "last_modified_date: \\1"))
+
+##Add Markdown body
+new_md_attrib <- map2(new_yaml_attrib, 
+                      keep_at(body_md_attrib, names(new_yaml_attrib)),
+                      ~ c("---", str_remove(.x, "\n$"), "---", .y))
+
+##Optionally write updated Markdown files
+if (update_existing_md_attrib) {
+  new_md_attrib |>
+    iwalk(~ write_lines(.x, file.path(md_dir_attrib, paste0(.y, ".md")), 
+                        sep="\r\n"))
+}
+
 
 # Create JavaScript for layer title ------------------------------------------
 
@@ -392,8 +542,12 @@ js_top <- c("var title;",
             "switch (hrefName) {")
 js_bottom <- c("}",
                "a.title = title;")
+combined <- bind_rows(layers |> 
+                        select(id, short_description),
+                      public_attrib |>
+                        select(id, short_description))
 js_middle <-
-  layers |>
+  combined |>
   rowwise() |>
   mutate(new = list(c(paste0("  case '", id, "':"),
                       paste0("    title = `", short_description, "`;"),
