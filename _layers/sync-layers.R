@@ -18,6 +18,9 @@ js_path <- "../assets/js/keyterm-layer-links.js"
 ##Whether or not to write/update JavaScript file
 update_existing_js_file <- TRUE
 
+##Path to file for writing session info (NULL to skip)
+session_info <- "_session-info_sync-layers.txt"
+
 
 # Preliminaries -----------------------------------------------------------
 
@@ -399,4 +402,11 @@ new_js <- c(js_before,
 ##Optionally write updated JavaScript file
 if (update_existing_js_file) {
   write_lines(new_js, js_path)
+}
+
+
+# Optionally write session info -------------------------------------------
+
+if (!is.null(session_info)) {
+  writeLines(capture.output(sessionInfo()), session_info)
 }

@@ -9,7 +9,7 @@ This directory holds:
     - Attributes from layer definitions saved to APLS (`synced`)
     - Manually-input attributes
 - `sync-layers.R`, an R script that creates files and populates/updates files' YAML headers based on layer definitions saved to APLS
-  - `session-info.txt`, output of `sessionInfo()` within `sync-layers.R`
+  - `_session-info_sync-layers.txt`, output of `sessionInfo()` within `sync-layers.R`
 
 These files, in turn, will get used to populate the layer reference pages in `doc/`.
 (Not _all_ the YAML fields will necessarily go into those pages.)
