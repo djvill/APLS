@@ -57,12 +57,12 @@ all_layers <-
   ##Nicer column name
   rename(parent = parentId) |>
   ##Nicer column order
-  relocate(id, layer_id, description, .before=1) |>
+  relocate(id, layer_id, attribute, description, .before=1) |>
   relocate(extra, .after=last_col()) |>
   ##Remove columns
   select(-c(
     ##Redundant or uninformative
-    class_id, attribute, label, notes,
+    class_id, label, notes,
     ##Graph-algebraic columns (see https://doi.org/10.1016/j.csl.2017.01.004 )
     parentIncludes, saturated,
     ##Not needed right now
@@ -98,8 +98,8 @@ layers <-
 ##Columns and names
 layers <- layers |>
   ##Remove columns relevant only to participant/transcript attributes
-  select(-c(validLabels, subtype, hint, display_order, searchable, access,
-            attrib_type)) |>
+  select(-c(attribute, validLabels, subtype, hint, display_order, searchable, 
+            access, attrib_type)) |>
   ##Rename
   rename(project = category,
          short_description = description, 
@@ -216,7 +216,7 @@ attrib <- attrib |>
 
 ##Translate columns to more readable format
 attrib <- attrib |>
-  mutate(across(id, ~ str_remove(.x, "^(transcript|participant)_")),
+  mutate(across(attribute, ~ if_else(is.na(.x), str_remove(id, "transcript_"), .x)),
          across(valid_labels, ~ .x |>
                   as.list() |>
                   list_transpose() |>
@@ -226,26 +226,41 @@ attrib <- attrib |>
                         mutate(across(description, 
                                       ~ str_replace_all(.x, c("\\[" = "\\(",
                                                               "\\]" = "\\)")))))),
-         across(data_type, ~ case_when(id == "corpus" ~ "select",
+         across(data_type, ~ case_when(attribute == "corpus" ~ "select",
                                        data_type == "R" ~ "string",
                                        is.na(data_type) ~ "select",
-                                       TRUE ~ data_type)))
+                                       TRUE ~ data_type)),
+         across(access, ~ .x |>
+                  as.numeric() |>
+                  as.logical() |>
+                  replace_na(TRUE)))
 
 ##Add properties pertaining to how users can interact with attributes
 attrib <- attrib |>
-  ##All attributes can be exported from https://apls.pitt.edu/labbcat/transcripts
+  ##All **public** attributes can be exported from https://apls.pitt.edu/labbcat/transcripts
   ##  (though some appear in weird ways--or not at all--depending on the format)
-  mutate(transcripts_exportable = TRUE,
+  mutate(transcripts_exportable = access,
          
          ##Whether attribute is a filterable column on https://apls.pitt.edu/labbcat/transcripts or https://apls.pitt.edu/labbcat/participants
          ##  (N.B. episode is filterable for participants despite being a transcript attribute)
          filterable = case_when(
-           id %in% c("episode", "participant", "transcript", "type") ~ TRUE,
-           is.na(filterable) ~ FALSE,
+           !access ~ NA,
+           attribute %in% c("episode", "participant", "transcript", "type") ~ TRUE,
+           attribute %in% c("corpus", "main_participant") ~ FALSE,
            TRUE ~ as.logical(as.numeric(filterable))),
          
-         ##Whether attribute can be exported search matches
-         matches_exportable = id != "main_participant",
+         ##Whether attribute shows up on https://apls.pitt.edu/labbcat/transcript/attributes?id=<ID>
+         ##  or https://apls.pitt.edu/labbcat/participant?id=<ID>
+         attrib_page_viewable = case_when(
+           !access ~ "none",
+           attribute == "main_participant" ~ "none",
+           attrib_type == "transcript" & !is.na(layer_id) ~ "none",
+           attrib_type == "transcript" & is.na(layer_id) ~ "transcript",
+           attrib_type == "participant" ~ "participant"
+         ),
+         
+         ##Whether attribute can be exported in search matches
+         matches_exportable = access & attribute != "main_participant",
          
          ##Do count boxes show up in matches > CSV Export?
          export_includeCounts = case_when(
