@@ -2,8 +2,8 @@
 title: Citing and contributing back
 permalink: /doc/citing-contributing
 parent: How to use APLS
-nav_order: 70
-last_modified_date: 2025-01-28T16:54:20-05:00
+nav_order: 80
+last_modified_date: 2025-02-18T10:53:29-05:00
 ---
 
 # {{ page.title }}
