@@ -1,7 +1,7 @@
 ---
-title: Typology
-permalink: /doc/typology
-parent: Layer reference
+title: Layer typology
+permalink: /doc/layer-typology
+parent: Layers and attributes
 nav_order: 10
 last_modified_date: 2025-02-13T17:44:15-05:00
 ---

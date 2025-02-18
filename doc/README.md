@@ -3,7 +3,7 @@ title: APLS Documentation
 nav_exclude: yes
 permalink: /
 num_aw_closed: 4543
-last_modified_date: 2025-01-31T12:03:53-05:00
+last_modified_date: 2025-02-19T10:56:57-05:00
 ---
 
 # {{ page.title }}
@@ -51,14 +51,14 @@ With APLS, it takes **_as little as 2 minutes_** to measure all **{{ page.num_aw
 > Show me how!
 >
 > 1. [Search]({{ '/doc/search' | relative_url }}) for tokens
->   - Using [regular expressions]({{ '/doc/regex' | relative_url }}) to search across multiple [annotation layers]({{ '/doc/layer-reference' | relative_url }}), we find **{{ page.num_aw_closed }}** time-aligned /aw/ tokens
+>   - Using [regular expressions]({{ '/doc/regex' | relative_url }}) to search across multiple [annotation layers]({{ '/doc/layers-and-attributes' | relative_url }}), we find **{{ page.num_aw_closed }}** time-aligned /aw/ tokens
 >     <!-- GIF 1 -->
 >     
-> 1. [Extract]({{ '/doc/export-data' | relative_url }}) search results to a CSV file
->   - We get a search-results file with one token per row, and columns for different [annotation layers]({{ '/doc/layer-reference' | relative_url }})
+> 1. [Export]({{ '/doc/export-data' | relative_url }}) search results to a CSV file
+>   - We get a search-results file with one token per row, and columns for different [annotation layers]({{ '/doc/layers-and-attributes' | relative_url }})
 >     <!-- GIF 2 -->
 >     
-> 1. [Upload]({{ '/doc/extract-acoustics' | relative_url }}) search results to APLS's built-in Praat module
+> 1. [Extract]({{ '/doc/extract-acoustics' | relative_url }}) acoustic measurements for search results using APLS's built-in Praat module
 >   - Our search-results file gets updated with acoustic measurements that we specify (in this case, F1 and F2 at the vowel's 20%, 50%, and 80% timepoints)
 >     <!-- GIF 3 -->
 

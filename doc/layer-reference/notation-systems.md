@@ -1,9 +1,9 @@
 ---
-title: Notation systems
-permalink: /doc/notation-systems
-parent: Layer reference
-nav_order: 30
-last_modified_date: 2024-12-02T12:15:00-05:00
+title: Layer notation systems
+permalink: /doc/layer-notation-systems
+parent: Layers and attributes
+nav_order: 20
+last_modified_date: 2025-02-19T10:56:59-05:00
 ---
 
 # Layers: {{ page.title }}

@@ -30,7 +30,7 @@ function addA(node, type) {
   } else if (type === "layer") {
     //For layers, don't add a href or title if it's an h2 *on* the field-guide page
     //(but keep the <a> for consistency w/rt stylesheets)
-    var page = "/APLS/doc/detailed-field-guide";
+    var page = "/APLS/doc/layer-field-guide";
     if (!(location.href.endsWith(page) && node.parentElement.nodeName == "H2")) {
       a.href = page + "#" + hrefName;
       
