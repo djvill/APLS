@@ -3,7 +3,7 @@ title: Attribute reference
 permalink: /doc/attribute-reference
 parent: Layer reference
 nav_order: 50
-last_modified_date: 2025-02-18T12:16:13-05:00
+last_modified_date: 2025-02-18T12:48:29-05:00
 ---
 
 # {{ page.title }}
@@ -19,6 +19,8 @@ Attributes aren't nearly as complicated as <span class="keyterm">layers</span>, 
 
 
 ## Attributes at a glance
+
+<!-- TODO: Sort by type reverse-alpha, then by name -->
 
 <details>
   <summary class="text-delta">Show table</summary>
@@ -104,36 +106,16 @@ If you export attributes to CSV (either on their own or in search matches), the 
 ## Transcript attributes
 
 {% assign transcript_attr = site.attributes | where_exp: "item", "item.synced.attrib_type == 'transcript'" %}
-
 {% for attrib in transcript_attr %}
-
-### <span class="transcript-attr">{{ attrib.synced.attribute }}</span>
-
-_{{ attrib.synced.short_description }}_
-{: .text-gamma .fw-600 }
-
-{% include attribute-props.html attributes=attrib excl_name=true excl_scope=true excl_descrip=true %}
-
-{{ attrib.content }}
-
+  {% include attribute-entry.html attribute=attrib %}
 {% endfor %}
 
 
 ## Participant attributes
 
-{% assign participant_attr = site.attributes | where_exp: "item", "item.synced.attrib_type == 'participant'" %}
-
+{% assign participant_attr = site.attributes | where_exp: "item", "item.synced.attrib_type == 'transcript'" %}
 {% for attrib in participant_attr %}
-
-### <span class="participant-attr">{{ attrib.synced.attribute }}</span>
-
-_{{ attrib.synced.short_description }}_
-{: .text-gamma .fw-600 }
-
-{% include attribute-props.html attributes=attrib excl_name=true excl_scope=true excl_descrip=true %}
-
-{{ attrib.content }}
-
+  {% include attribute-entry.html attribute=attrib %}
 {% endfor %}
 
 
@@ -141,16 +123,11 @@ _{{ attrib.synced.short_description }}_
 
 As mentioned [above](#scope), <span class="main_participant-attr">main_participant</span> gets its own category because, unlike all other attributes, it's a property of _both_ the participant _and_ the transcript.
 
-{% assign main_participant_attr = site.attributes | where_exp: "item", "item.synced.attrib_type == 'main_participant'" %}
+{% assign main_participant_attr = site.attributes | where_exp: "item", "item.synced.attribute == 'main_participant'" %}
 
 {% for attrib in main_participant_attr %}
+  {% include attribute-props.html attributes=attrib excl_name=true excl_scope=true excl_descrip=true %}
 
-_{{ attrib.synced.short_description }}_
-{: .text-gamma .fw-600 }
-
-{% include attribute-props.html attributes=attrib excl_name=true excl_scope=true excl_descrip=true %}
-
-{{ attrib.content }}
-
+  {{ attrib.content }}
 {% endfor %}
 
