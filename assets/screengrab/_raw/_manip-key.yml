@@ -1,3 +1,17 @@
+- screengrab: attributes-multiselect-export.png
+  instructions:
+    - Log in
+    - Load https://apls.pitt.edu/labbcat/participantsExport?participant_expression=%5B%27CB01%27%2C%27CB17%27%2C%27CB06%27%2C%27CB08%27%2C%27CB10%27%2C%27CB05%27%5D.includes(id)&participants=6%20selected%20participants
+    - Select Gender, Ethnicities
+    - Click Participant Data
+    - Open CSV in Excel
+    - Make columns fit width, cell height 43.5, formula bar height 3, select C4
+    - Save
+  offset_x: 0
+  offset_y: 120
+  width: 655
+  height: 690
+
 - screengrab: demo-page.png
   instructions:
     - Log in as test-student

@@ -34,6 +34,8 @@ collections:
     sort_by: version
   layers:
     sort_by: name
+  attributes:
+    sort_by: attribute
 
 defaults:
   - scope:

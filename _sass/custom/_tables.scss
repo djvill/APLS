@@ -62,8 +62,8 @@
 	}
 }
 
-/* Layer tables in doc/typology */
-.layer-props, .layers-by-attr {
+/* Layer tables/attribute tables in doc/typology */
+.layer-props, .layers-by-prop, .attrib-props {
   tr > th, tr > td {
     font-size: 1rem !important;
     min-width: 5rem;
@@ -93,24 +93,24 @@
       }
     }
   }
+}
   
-  &.two-attr {
-    th[rowspan="2"] {
-      vertical-align: bottom;
-    }
-    
-    tr:nth-child(2) > th {
-      border-left: $border $border-color;
-    }
-    
-    td:first-child {
-      font-weight: bold;
-      text-align: right;
-    }
-    
-    //Make left column take up less space
-    th[rowspan="2"], td:first-child {
-      width: 15%;
-    }
+.layers-by-prop.two-prop {
+  th[rowspan="2"] {
+    vertical-align: bottom;
+  }
+  
+  tr:nth-child(2) > th {
+    border-left: $border $border-color;
+  }
+  
+  td:first-child {
+    font-weight: bold;
+    text-align: right;
+  }
+  
+  //Make left column take up less space
+  th[rowspan="2"], td:first-child {
+    width: 15%;
   }
 }

@@ -38,7 +38,7 @@
 
 {% assign no_caps = include.no_caps | default: false %}
 
-<table class="layers-by-attr{% if include.row_property %} two-attr{% endif %}" id="layers-by-{{ include.property }}{% if include.row_property %}-and-{{ include.row_property }}{% endif %}">
+<table class="layers-by-prop{% if include.row_property %} two-prop{% endif %}" id="layers-by-{{ include.property }}{% if include.row_property %}-and-{{ include.row_property }}{% endif %}">
   <thead>
     {% if include.row_property %}
       <tr>

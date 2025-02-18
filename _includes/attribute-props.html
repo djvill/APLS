@@ -1,0 +1,102 @@
+<!-- Begin _includes/attribute-props.html -->
+
+{% comment %}
+  Example usages:
+  
+  - An array of attributes (as in doc/attribute-reference#attributes-at-a-glance):
+    {% include attribute-props.html attributes=site.attributes %}
+    N.B. excl_labels is automatically false if include.attributes is an array
+  
+  - A single attribute (as in doc/attribute-reference#transcript-attributes):
+    {% for attrib in transcript_attr %}
+      {% include attribute-props.html attributes=attribute excl_name=true excl_scope=true excl_descrip=true %}
+    {% endfor %}
+{% endcomment %}
+
+{% assign excl_name = include.excl_name | default: false %}
+{% assign excl_scope = include.excl_scope | default: false %}
+{% assign excl_descrip = include.excl_descrip | default: false %}
+{% assign excl_labels = include.excl_labels | default: false %}
+
+<table class="attrib-props">
+  <thead>
+    <tr>
+      {% unless include.excl_scope %}<th>Scope</th>{% endunless %}
+      {% unless include.excl_name %}<th>Attribute</th>{% endunless %}
+      <th>Display title</th>
+      {% unless include.excl_descrip %}<th>Description</th>{% endunless %}
+      <th>Export name</th>
+      <th>Filterable</th>
+      <th>Multiple values</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% unless include.attributes.size %}
+      {% assign attribute = include.attributes %}
+      <tr>
+        {% unless excl_scope %}<td>{{ attribute.synced.attrib_type | capitalize }}</td>{% endunless %}
+        {% unless excl_name %}<td><span class="{{ attribute.synced.attrib_type }}-attr">{{ attribute.synced.attribute }}</span></td>{% endunless %}
+        <td>{{ attribute.synced.display_title }}</td>
+        {% unless excl_descrip %}<td>{{ attribute.synced.short_description }}</td>{% endunless %}
+        <td><code class="language-plaintext highlighter-rouge">{{ attribute.path | remove: "_attributes/" | remove: ".md" }}</code></td>
+        <td>{{ attribute.synced.filterable | capitalize }}</td>
+        <td>{{ attribute.synced.multi_select | capitalize }}</td>
+      </tr>
+    {% else %}
+      {% for attribute in include.attributes %}
+        <tr>
+          {% unless excl_scope %}<td>{{ attribute.synced.attrib_type | capitalize }}</td>{% endunless %}
+          {% unless excl_name %}<td><span class="{{ attribute.synced.attrib_type }}-attr">{{  attribute.synced.attribute }}</span></td>{% endunless %}
+          <td>{{ attribute.synced.display_title }}</td>
+          {% unless excl_descrip %}<td>{{ attribute.synced.short_description }}</td>{% endunless %}
+          <td><code class="language-plaintext highlighter-rouge">{{ attribute.path | remove: "_attributes/" | remove: ".md" }}</code></td>
+          <td>{{ attribute.synced.filterable | capitalize }}</td>
+          <td>{{ attribute.synced.multi_select | capitalize }}</td>
+        </tr>
+      {% endfor %}
+    {% endunless %}
+  </tbody>
+</table>
+
+{% unless include.attributes.size or excl_labels %}
+  {% assign valid_labels = include.attributes.synced.valid_labels %}
+  {% if valid_labels %}
+    {% comment %}Determine if there are descriptions that aren't just the labels{% endcomment %}
+    {% assign hasDescrip = false %}
+    {% for label in valid_labels[0] %}
+      {% if label.description != "" and label.description != label.label %}
+        {% assign hasDescrip = true %}
+        {% break %}
+      {% endif %}
+    {% endfor %}
+  <p class="text-delta">Option codes{% if hasDescrip %} and descriptions{% endif %}</p>
+  {% if hasDescrip %}
+  <table class="attr-descrip">
+    <thead>
+      <tr>
+        <th>Code</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for label in valid_labels[0] %}
+        <tr>
+          <td><code class="language-plaintext highlighter-rouge">{{ label.label }}</code></td>
+          <td>{% if label.description != label.label %}{{ label.description }}{% endif %}</td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  {% else %}
+  <ul>
+    {% for label in valid_labels[0] %}
+      <li>
+        <code class="language-plaintext highlighter-rouge">{{ label.label }}</code>
+      </li>
+    {% endfor %}
+  </ul>
+  {% endif %}
+  {% endif %}
+{% endunless %}
+
+<!-- End _includes/attribute-props.html -->
