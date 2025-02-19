@@ -546,9 +546,11 @@ if (update_existing_md_attrib) {
 
 ##Construct new JavaScript
 js_top <- c("var title;",
-            "switch (hrefName) {")
+            "switch (exportName) {")
 js_bottom <- c("}",
-               "a.title = title;")
+               "if (title !== undefined) {",
+               "  a.title = title;",
+               "}")
 combined <- bind_rows(layers |> 
                         select(id, short_description),
                       public_attrib |>
