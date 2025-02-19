@@ -5,11 +5,8 @@ synced:
   display_title: Participant
   parent: transcript
   multi_select: no
-  valid_labels:
-    - []
   data_type: text
-  short_description: (none)
-  display_order: .na.integer
+  short_description: APLS speaker code
   filterable: yes
   access: yes
   attrib_type: participant
@@ -17,6 +14,6 @@ synced:
   attrib_page_viewable: participant
   matches_exportable: yes
   export_includeCounts: no
-last_sync_modified_date: 2025-02-19T12:48:51-0500
-last_modified_date: 2025-02-19T12:49:47-05:00
+last_sync_modified_date: 2025-02-19T15:54:06-0500
+last_modified_date: 2025-02-19T15:55:35-05:00
 ---

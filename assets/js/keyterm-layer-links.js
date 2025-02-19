@@ -154,16 +154,16 @@ function addA(node, type) {
       title = `All possible phonemic representations of the word, translated to Montreal Forced Aligner US English IPA phoneset`;
       break;
     case 'corpus':
-      title = `(none)`;
+      title = `Collection of transcripts from a single research project`;
       break;
     case 'episode':
-      title = `(none)`;
+      title = `Series of transcripts from a single sociolinguistic interview`;
       break;
     case 'main_participant':
-      title = `(none)`;
+      title = `APLS speaker code for the participant being interviewed in a given transcript`;
       break;
     case 'participant':
-      title = `(none)`;
+      title = `APLS speaker code`;
       break;
     case 'participant_education':
       title = `Five-way classification of highest educational attainment`;
@@ -202,7 +202,7 @@ function addA(node, type) {
       title = `Year of birth`;
       break;
     case 'transcript':
-      title = `(none)`;
+      title = `Transcript file name`;
       break;
     case 'transcript_duration':
       title = `Transcript duration in seconds`;
@@ -226,7 +226,7 @@ function addA(node, type) {
       title = `AI tool(s) used to assist human transcription`;
       break;
     case 'transcript_type':
-      title = `(none)`;
+      title = `Sociolinguistic interview section`;
       break;
     case 'transcript_version_date':
       title = `Date the transcript was last edited`;

@@ -7,9 +7,11 @@ synced:
   multi_select: no
   valid_labels:
     - - label: pgh0307
-        description: pgh0307
+        description: 'Sociolinguistic interviews conducted between 2003 and 2007 in
+          four Pittsburgh-area neighborhoods: Cranberry Township, Forest Hills, the
+          Hill District, and Lawrenceville'
   data_type: select
-  short_description: (none)
+  short_description: Collection of transcripts from a single research project
   filterable: no
   access: yes
   attrib_type: transcript
@@ -17,6 +19,6 @@ synced:
   attrib_page_viewable: none
   matches_exportable: yes
   export_includeCounts: no
-last_sync_modified_date: 2025-02-17T14:18:55-0500
-last_modified_date: 2025-02-17T14:19:56-05:00
+last_sync_modified_date: 2025-02-19T15:54:06-0500
+last_modified_date: 2025-02-19T15:55:23-05:00
 ---

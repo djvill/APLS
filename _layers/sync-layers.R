@@ -227,13 +227,13 @@ attrib <- attrib |>
 attrib <- attrib |>
   mutate(across(attribute, ~ if_else(is.na(.x), str_remove(id, "transcript_"), .x)),
          across(multi_select, ~ if_else(id=="participant", FALSE, .x)),
-         across(short_description, ~ replace_na(.x, "(none)")),
          across(valid_labels, ~ .x |>
                   as.list() |>
                   list_transpose() |>
                   map(~ .x |>
                         discard(is.na) |>
                         enframe("label", "description") |>
+                        arrange(tolower(label)) |>
                         mutate(across(description, 
                                       ~ str_replace_all(.x, c("\\[" = "\\(",
                                                               "\\]" = "\\)")))) |>
@@ -253,6 +253,21 @@ attrib <- attrib |>
                   as.numeric() |>
                   as.logical() |>
                   replace_na(TRUE)))
+
+##Manually set corpus label (can't be set upstream in LaBB-CAT or SQL)
+attrib$valid_labels[[1]][[1]]$description <- "Sociolinguistic interviews conducted between 2003 and 2007 in four Pittsburgh-area neighborhoods: Cranberry Township, Forest Hills, the Hill District, and Lawrenceville"
+##Manually set short descriptions for quasi-layers
+short_desc_attrib <- tribble(
+  ~id,  ~short_description,
+  "corpus", "Collection of transcripts from a single research project",
+  "episode", "Series of transcripts from a single sociolinguistic interview",
+  "main_participant", "APLS speaker code for the participant being interviewed in a given transcript",
+  "participant", "APLS speaker code",
+  "transcript", "Transcript file name",
+  "transcript_type", "Sociolinguistic interview section"
+)
+attrib <- attrib |>
+  rows_patch(short_desc_attrib, "id")
 
 ##Add properties pertaining to how users can interact with attributes
 attrib <- attrib |>
@@ -517,7 +532,10 @@ if (update_existing_md_layers) {
 to_update_attrib <- to_update_attrib |> 
   nest(synced = -id) |>
   pull(synced, id) |>
-  map(~ list(synced = .x))
+  map(~ list(synced = .x |>
+               ##Discard properties that aren't applicable
+               discard(is.na) |>
+               discard(~ length(.x[[1]])==0)))
 
 ##For attributes in to_update_attrib, replace "synced" YAML sublists with
 ##  to_update_attrib
