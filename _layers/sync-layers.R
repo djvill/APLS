@@ -226,6 +226,7 @@ attrib <- attrib |>
 ##Translate columns to more readable format
 attrib <- attrib |>
   mutate(across(attribute, ~ if_else(is.na(.x), str_remove(id, "transcript_"), .x)),
+         across(multi_select, ~ if_else(id=="participant", FALSE, .x)),
          across(short_description, ~ replace_na(.x, "(none)")),
          across(valid_labels, ~ .x |>
                   as.list() |>
@@ -239,7 +240,10 @@ attrib <- attrib |>
                         ##Each element is a list of one-row tibbles (yields
                         ##  nicer YAML)
                         rowwise() |>
-                        group_map(~ .x))),
+                        group_map(~ .x)) |>
+                  ##Remove attributes from empty lists (for comparison to old
+                  ##  synced attributes)
+                  map_if(~ length(.x)==0, ~ list())),
          across(data_type, ~ case_when(attribute == "corpus" ~ "select",
                                        data_type == "R" ~ "text",
                                        data_type == "string" ~ "text",
@@ -360,7 +364,9 @@ old_synced_attrib <-
             pluck("synced") |>
             ##Make sure NULL attributes don't get removed
             map(~ replace(.x, is.null(.x), NA)),
-          .id="id")
+          .id="id") |>
+  ##Make sure valid_labels are comparable
+  mutate(across(valid_labels, ~ map_depth(.x, 2, as_tibble, .ragged=TRUE)))
 
 ##If needed, add blank columns to old_synced_attrib to match attrib
 new_cols_attrib <- 
@@ -375,7 +381,8 @@ old_synced_attrib <- bind_cols(old_synced_attrib, new_cols_attrib)
 ##Identify attributes that need new files & attributes that need updated files
 public_attrib <- 
   attrib |>
-  filter(access)
+  filter(access) |>
+  arrange(id)
 to_create_attrib <- anti_join(public_attrib, old_synced_attrib, "id")
 to_update_attrib <- 
   public_attrib |>
