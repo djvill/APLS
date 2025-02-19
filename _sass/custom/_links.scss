@@ -19,11 +19,13 @@ a:not([class]) {
 }
 
 /* Special navigation styling */
-.keyterm > a, .layer > a {
-  color: $body-text-color;
-  
-  &:hover {
+.keyterm, .layer, .transcript-attr, .participant-attr, .main_participant-attr {
+  &> a {
     color: $body-text-color;
+    
+    &:hover {
+      color: $body-text-color;
+    }
   }
 }
 .keyterm > a {
@@ -33,12 +35,14 @@ a:not([class]) {
     text-decoration-color: $border-color;
   }
 }
-.layer > a {
-  text-decoration: underline 0.1em dotted $link-color;
-  text-underline-offset: 0.12em;
-  
-  &:hover {
-    text-decoration-color: $link-color;
+.layer, .transcript-attr, .participant-attr, .main_participant-attr {
+  &> a {
+    text-decoration: underline 0.1em dotted $link-color;
+    text-underline-offset: 0.12em;
+    
+    &:hover {
+      text-decoration-color: $link-color;
+    }
   }
 }
 
