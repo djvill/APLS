@@ -7,14 +7,14 @@ synced:
   valid_labels:
     - - label: interview
         description: interview
-      - label: reading
-        description: reading
-      - label: pairs
-        description: pairs
       - label: metalinguistic
         description: metalinguistic
+      - label: pairs
+        description: pairs
+      - label: reading
+        description: reading
   data_type: select
-  short_description: (none)
+  short_description: Sociolinguistic interview section
   filterable: yes
   access: yes
   attrib_type: transcript
@@ -22,6 +22,6 @@ synced:
   attrib_page_viewable: transcript
   matches_exportable: yes
   export_includeCounts: no
-last_sync_modified_date: 2025-02-17T14:18:55-0500
-last_modified_date: 2025-02-17T14:20:05-05:00
+last_sync_modified_date: 2025-02-19T15:54:06-0500
+last_modified_date: 2025-02-19T15:55:24-05:00
 ---

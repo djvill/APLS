@@ -36,20 +36,19 @@ synced:
       - label: Lithuanian
         description: Lithuanian
       - label: other nonspecified
-        description: 'other nonspecified: Includes non-descriptors like "hybrid",
-          "American", or "none"'
+        description: Includes non-descriptors like "hybrid", "American", or "none"
       - label: Polish
         description: Polish
       - label: Russian
         description: Russian
       - label: Scotch-Irish
-        description: Scotch-Irish (aka Scots-Irish or Ulster Scots)
+        description: aka Scots-Irish or Ulster Scots
       - label: Scottish
         description: Scottish
       - label: Serbian
         description: Serbian
       - label: Slavish (Rusyn)
-        description: Slavish /slɑvɪʃ/ (also known as Rusyns or Carpatho-Rusyns)
+        description: Pronounced /slɑvɪʃ/ (also known as Rusyns or Carpatho-Rusyns)
       - label: Slovak
         description: Slovak
       - label: Swiss
@@ -66,6 +65,6 @@ synced:
   attrib_page_viewable: participant
   matches_exportable: yes
   export_includeCounts: yes
-last_sync_modified_date: 2025-02-17T14:18:55-0500
-last_modified_date: 2025-02-17T14:19:58-05:00
+last_sync_modified_date: 2025-02-19T15:54:06-0500
+last_modified_date: 2025-02-19T15:55:24-05:00
 ---

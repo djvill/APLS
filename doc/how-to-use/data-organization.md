@@ -3,7 +3,7 @@ title: Data organization in APLS
 permalink: /doc/data-organization
 parent: How to use APLS
 nav_order: 10
-last_modified_date: 2025-02-03T10:33:45-05:00
+last_modified_date: 2025-02-19T10:56:58-05:00
 ---
 
 # {{ page.title }}
@@ -51,7 +51,7 @@ To the right of the speaker code are three layers. From top to bottom, these are
   - This layer contains the words that HD07 spoke, spelled in normal English.
   - Each word has a single annotation on the <span class="layer">word</span> layer.
 
-Layers are covered in more detail in the [Layer reference section]({{ '/doc/layer-reference' | relative_url }}) of the APLS documentation.
+Layers are covered in more detail in the [Layers and attributes section]({{ '/doc/layers-and-attributes' | relative_url }}) of the APLS documentation.
 
 ### Annotations
 

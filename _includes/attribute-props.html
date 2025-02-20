@@ -16,7 +16,6 @@
 {% assign excl_name = include.excl_name | default: false %}
 {% assign excl_scope = include.excl_scope | default: false %}
 {% assign excl_descrip = include.excl_descrip | default: false %}
-{% assign excl_labels = include.excl_labels | default: false %}
 
 <table class="attrib-props">
   <thead>
@@ -58,45 +57,5 @@
   </tbody>
 </table>
 
-{% unless include.attributes.size or excl_labels %}
-  {% assign valid_labels = include.attributes.synced.valid_labels %}
-  {% if valid_labels %}
-    {% comment %}Determine if there are descriptions that aren't just the labels{% endcomment %}
-    {% assign hasDescrip = false %}
-    {% for label in valid_labels[0] %}
-      {% if label.description != "" and label.description != label.label %}
-        {% assign hasDescrip = true %}
-        {% break %}
-      {% endif %}
-    {% endfor %}
-  <p class="text-delta">Option codes{% if hasDescrip %} and descriptions{% endif %}</p>
-  {% if hasDescrip %}
-  <table class="attr-descrip">
-    <thead>
-      <tr>
-        <th>Code</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      {% for label in valid_labels[0] %}
-        <tr>
-          <td><code class="language-plaintext highlighter-rouge">{{ label.label }}</code></td>
-          <td>{% if label.description != label.label %}{{ label.description }}{% endif %}</td>
-        </tr>
-      {% endfor %}
-    </tbody>
-  </table>
-  {% else %}
-  <ul>
-    {% for label in valid_labels[0] %}
-      <li>
-        <code class="language-plaintext highlighter-rouge">{{ label.label }}</code>
-      </li>
-    {% endfor %}
-  </ul>
-  {% endif %}
-  {% endif %}
-{% endunless %}
 
 <!-- End _includes/attribute-props.html -->

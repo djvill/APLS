@@ -1,0 +1,61 @@
+<!-- Begin _includes/attribute-entry.html -->
+
+{% comment %}
+  For a single attribute
+{% endcomment %}
+
+{% assign attribute = include.attribute %}
+{% assign attrib_type = attribute.synced.attrib_type %}
+{% assign excl_labels = include.excl_labels | default: false %}
+
+## <span class="{{ attrib_type }}-attr">{{ attribute.synced.attribute }}</span>
+
+_{{ attribute.synced.short_description }}_
+{: .text-gamma .fw-600 }
+
+{% include attribute-props.html attributes=attribute excl_name=true excl_scope=true excl_descrip=true %}
+
+{% unless excl_labels %}
+  {% assign valid_labels = attribute.synced.valid_labels %}
+  {% if valid_labels %}
+    {% comment %}Determine if there are descriptions that aren't just the labels{% endcomment %}
+    {% assign hasDescrip = false %}
+    {% for label in valid_labels[0] %}
+      {% if label.description != "" and label.description != label.label %}
+        {% assign hasDescrip = true %}
+        {% break %}
+      {% endif %}
+    {% endfor %}
+  <p class="text-delta">Option codes{% if hasDescrip %} and descriptions{% endif %}</p>
+  {% if hasDescrip %}
+  <table class="attr-descrip">
+    <thead>
+      <tr>
+        <th>Code</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for label in valid_labels[0] %}
+        <tr>
+          <td><code class="language-plaintext highlighter-rouge">{{ label.label }}</code></td>
+          <td>{% if label.description != label.label %}{{ label.description }}{% endif %}</td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  {% else %}
+  <ul class="fs-3">
+    {% for label in valid_labels[0] %}
+      <li>
+        <code class="language-plaintext highlighter-rouge">{{ label.label }}</code>
+      </li>
+    {% endfor %}
+  </ul>
+  {% endif %}
+  {% endif %}
+{% endunless %}
+
+{{ attribute.content }}
+
+<!-- End _includes/attribute-entry.html -->

@@ -226,20 +226,24 @@ attrib <- attrib |>
 ##Translate columns to more readable format
 attrib <- attrib |>
   mutate(across(attribute, ~ if_else(is.na(.x), str_remove(id, "transcript_"), .x)),
-         across(short_description, ~ replace_na(.x, "(none)")),
+         across(multi_select, ~ if_else(id=="participant", FALSE, .x)),
          across(valid_labels, ~ .x |>
                   as.list() |>
                   list_transpose() |>
                   map(~ .x |>
                         discard(is.na) |>
                         enframe("label", "description") |>
+                        arrange(tolower(label)) |>
                         mutate(across(description, 
                                       ~ str_replace_all(.x, c("\\[" = "\\(",
                                                               "\\]" = "\\)")))) |>
                         ##Each element is a list of one-row tibbles (yields
                         ##  nicer YAML)
                         rowwise() |>
-                        group_map(~ .x))),
+                        group_map(~ .x)) |>
+                  ##Remove attributes from empty lists (for comparison to old
+                  ##  synced attributes)
+                  map_if(~ length(.x)==0, ~ list())),
          across(data_type, ~ case_when(attribute == "corpus" ~ "select",
                                        data_type == "R" ~ "text",
                                        data_type == "string" ~ "text",
@@ -249,6 +253,21 @@ attrib <- attrib |>
                   as.numeric() |>
                   as.logical() |>
                   replace_na(TRUE)))
+
+##Manually set corpus label (can't be set upstream in LaBB-CAT or SQL)
+attrib$valid_labels[[1]][[1]]$description <- "Sociolinguistic interviews conducted between 2003 and 2007 in four Pittsburgh-area neighborhoods: Cranberry Township, Forest Hills, the Hill District, and Lawrenceville"
+##Manually set short descriptions for quasi-layers
+short_desc_attrib <- tribble(
+  ~id,  ~short_description,
+  "corpus", "Collection of transcripts from a single research project",
+  "episode", "Series of transcripts from a single sociolinguistic interview",
+  "main_participant", "APLS speaker code for the participant being interviewed in a given transcript",
+  "participant", "APLS speaker code",
+  "transcript", "Transcript file name",
+  "transcript_type", "Sociolinguistic interview section"
+)
+attrib <- attrib |>
+  rows_patch(short_desc_attrib, "id")
 
 ##Add properties pertaining to how users can interact with attributes
 attrib <- attrib |>
@@ -360,7 +379,9 @@ old_synced_attrib <-
             pluck("synced") |>
             ##Make sure NULL attributes don't get removed
             map(~ replace(.x, is.null(.x), NA)),
-          .id="id")
+          .id="id") |>
+  ##Make sure valid_labels are comparable
+  mutate(across(valid_labels, ~ map_depth(.x, 2, as_tibble, .ragged=TRUE)))
 
 ##If needed, add blank columns to old_synced_attrib to match attrib
 new_cols_attrib <- 
@@ -375,7 +396,8 @@ old_synced_attrib <- bind_cols(old_synced_attrib, new_cols_attrib)
 ##Identify attributes that need new files & attributes that need updated files
 public_attrib <- 
   attrib |>
-  filter(access)
+  filter(access) |>
+  arrange(id)
 to_create_attrib <- anti_join(public_attrib, old_synced_attrib, "id")
 to_update_attrib <- 
   public_attrib |>
@@ -510,7 +532,10 @@ if (update_existing_md_layers) {
 to_update_attrib <- to_update_attrib |> 
   nest(synced = -id) |>
   pull(synced, id) |>
-  map(~ list(synced = .x))
+  map(~ list(synced = .x |>
+               ##Discard properties that aren't applicable
+               discard(is.na) |>
+               discard(~ length(.x[[1]])==0)))
 
 ##For attributes in to_update_attrib, replace "synced" YAML sublists with
 ##  to_update_attrib
@@ -539,9 +564,11 @@ if (update_existing_md_attrib) {
 
 ##Construct new JavaScript
 js_top <- c("var title;",
-            "switch (hrefName) {")
+            "switch (exportName) {")
 js_bottom <- c("}",
-               "a.title = title;")
+               "if (title !== undefined) {",
+               "  a.title = title;",
+               "}")
 combined <- bind_rows(layers |> 
                         select(id, short_description),
                       public_attrib |>

@@ -1,14 +1,13 @@
 ---
-title: Quick reference card
-permalink: /doc/quick-reference-card
-parent: Layer reference
-nav_order: 40
+title: Layers
+permalink: /doc/layer-reference-card
+parent: Quick reference cards
+nav_order: 10
 last_modified_date: 2025-02-13T13:44:05-05:00
 ---
 
-# Layers: {{ page.title }}
+# Quick reference card: {{ page.title }}
 {:.no_toc}
-
 
 To understand what each of these properties mean, check out the [layer typology]({{ '/doc/typology' | relative_url }}).
 
