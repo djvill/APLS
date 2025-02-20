@@ -3,7 +3,7 @@ title: Citing and contributing back
 permalink: /doc/citing-contributing
 parent: How to use APLS
 nav_order: 80
-last_modified_date: 2025-02-18T10:53:29-05:00
+last_modified_date: 2025-02-20T13:46:50-05:00
 ---
 
 # {{ page.title }}
@@ -40,6 +40,7 @@ If you downloaded any CSV files, the first column should contain the APLS versio
 |-------|--------------------------|
 | [Unified stylesheet for linguistics](https://www.linguisticsociety.org/sites/default/files/style-sheet_0.pdf) | Formatted |
 | [APA 7th edition](https://owl.purdue.edu/owl/research_and_citation/apa_style/apa_style_introduction.html) | Formatted |
+
 
 ## Contributing back
 
@@ -95,3 +96,11 @@ More importantly, we think it's the right thing to do, since you can save future
 <!-- Maybe mention some Open Methods-y stuff here -->
 As with other forms of Open Methods, contributing back helps to encourage contributors to adopt reproducible research practices.
 Finally, if your contribution gets accepted, your name gets added to APLS's [contributors page](contributors)---a feather in your cap!
+
+
+## Citing documentation
+
+In most cases where you want to cite APLS, your citation will be to APLS itself (see [above](#citing-apls)).
+However, if you need to cite _this documentation website_, please use the following citation:
+
+<!-- CITE -->
