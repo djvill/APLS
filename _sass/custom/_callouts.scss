@@ -29,6 +29,11 @@
   &.no-collapse > p:first-child {
 		color: $green-300;
   }
+  
+  //https://www.siegemedia.com/contrast-ratio#%23bbbebd-on-rgba%2865%2C214%2C147%29
+  hr {
+    background-color: #bbbebd;
+  }
 }
 .under-the-hood {
 	summary {
