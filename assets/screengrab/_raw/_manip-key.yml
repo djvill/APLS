@@ -169,6 +169,120 @@
   width: 305
   height: 70
 
+- screengrab: view-transcript-attributes.png
+  instructions:
+    - Log in as test-student
+    - Set browser zoom to 100%
+    - Load https://apls.pitt.edu/labbcat/transcript?transcript=CB01interview3.eaf
+    - Click transcript attributes
+    - Save
+  dir: ../view-transcript
+  offset_x: 110
+  offset_y: 310
+  width: 985
+  height: 375
+
+- screengrab: view-transcript-attribute-hover.png
+  instructions:
+    - Log in as test-student
+    - Set browser zoom to 100%
+    - Load https://apls.pitt.edu/labbcat/transcript?transcript=CB01interview3.eaf
+    - Click transcript attributes
+    - Put cursor over the middle of N in Neighborhood
+    - Wait for tooltip to load
+    - Save
+  dir: ../view-transcript
+  offset_x: 110
+  offset_y: 310
+  width: 985
+  height: 375
+  overlay: 
+    - image: _arrow.png
+      offset_x: 163
+      offset_y: 457
+
+- screengrab: view-transcript-export-formatted.png
+  instructions:
+    - Log in as test-student
+    - Set browser zoom to 100%
+    - Load https://apls.pitt.edu/labbcat/transcript?transcript=CB01interview3.eaf
+    - Click export formatted
+    - Save
+  dir: ../view-transcript
+  offset_x: 110
+  offset_y: 270
+  width: 315
+  height: 410
+
+- screengrab: view-transcript-header.png
+  in_path: view-transcript-overview.png
+  instructions: See view-transcript-overview.png
+  dir: ../view-transcript
+  offset_x: 110
+  offset_y: 190
+  width: 1200
+  height: 450
+  drawing:
+      # projects and layers
+    - func: rect
+      xleft: 500
+      ytop: 385
+      xright: 1305
+      ybottom: 635
+      border: '#e41a1c'
+      lty: dashed
+      lwd: 5
+      # export formatted
+    - func: rect
+      xleft: 110
+      ytop: 270
+      xright: 335
+      ybottom: 300
+      border: '#377eb8'
+      lty: dashed
+      lwd: 5
+      # transcript attributes
+    - func: rect
+      xleft: 110
+      ytop: 310
+      xright: 335
+      ybottom: 340
+      border: '#4daf4a'
+      lty: dashed
+      lwd: 5
+      # participants
+    - func: rect
+      xleft: 110
+      ytop: 385
+      xright: 335
+      ybottom: 560
+      border: '#984ea3'
+      lty: dashed
+      lwd: 5
+
+- screengrab: view-transcript-no-praat-player.png
+  in_path: view-transcript-no-praat.png
+  instructions:
+    - In an *incognito* window, log in as test-student
+    - Set browser zoom to 100%
+    - Load https://apls.pitt.edu/labbcat/transcript?transcript=CB01interview3.eaf
+    - Click the first word in the transcript (okay)
+    - Save
+  dir: ../view-transcript
+  offset_x: 1440
+  offset_y: 215
+  width: 455
+  height: 150
+
+- screengrab: view-transcript-no-praat-word-menu.png
+  in_path: view-transcript-no-praat.png
+  instructions: See view-transcript-no-praat-player.png
+  dir: ../view-transcript
+  offset_x: 319
+  offset_y: 770
+  width: 185
+  height: 160
+
 - screengrab: view-transcript-overview.png
   instructions:
     - Log in as test-student
@@ -184,7 +298,7 @@
       # header
     - func: rect
       xleft: 110
-      ytop: 270
+      ytop: 190
       xright: 1310
       ybottom: 640
       border: '#e41a1c'
