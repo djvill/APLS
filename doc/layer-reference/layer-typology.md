@@ -3,7 +3,7 @@ title: Layer typology
 permalink: /doc/layer-typology
 parent: Layers and attributes
 nav_order: 10
-last_modified_date: 2025-02-13T17:44:15-05:00
+last_modified_date: 2025-02-24T16:43:26-05:00
 ---
 
 # Layers: {{ page.title }}
@@ -144,7 +144,7 @@ Unlike <span class="keyterm">horizontal peers</span>, which divide the timespan 
 
 [^why-times]: The <span class="layer">lemma</span> layer represents all possible base forms of the word. Depending on context, the word _times_ could be the plural of the base form _time_, or _times_ could be the base form itself (as in "two times four"), hence the multiple annotations.
 
-- [Search]({{ '/doc/search' | relative_url }})
+- [Search]({{ '/doc/search' | relative_url }}) <a id="vertical-peers-search" />
   - Searching a layer that allows vertical peers will **match _any_ of the vertical peers** for a given word
     - _Example_: All tokens of _the_ have two <span class="layer">dictionary_phonemes</span> annotations: `D@` and `Di`. Thus, a search for `the` on <span class="layer">orthography</span> and `D@` on <span class="layer">dictionary_phonemes</span> returns the same set of matches as `the` on <span class="layer">orthography</span> and `Di` on <span class="layer">dictionary_phonemes</span>
     - As a result, "doesn't match" searches on a layer that allows vertical peers can return false positives
