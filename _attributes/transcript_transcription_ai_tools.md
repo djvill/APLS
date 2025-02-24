@@ -27,5 +27,8 @@ synced:
   matches_exportable: yes
   export_includeCounts: yes
 last_sync_modified_date: 2025-02-19T15:54:06-0500
-last_modified_date: 2025-02-19T15:55:24-05:00
+last_modified_date: 2025-02-24T12:58:31-05:00
 ---
+
+{: .note .no-collapse }
+> For more context on how transcriptions were created, see [here]({{ '/doc/transcription' | relative_url }}).
