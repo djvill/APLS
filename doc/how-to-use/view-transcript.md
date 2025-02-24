@@ -5,7 +5,7 @@ parent: How to use APLS
 has_children: yes
 has_toc: no
 nav_order: 20
-last_modified_date: 2025-02-24T13:13:59-05:00
+last_modified_date: 2025-02-24T13:58:33-05:00
 ---
 
 # {{ page.title }}
@@ -167,13 +167,9 @@ This panel shows' <span class="keyterm">transcript attributes</span> display tit
 
 ![]({{ '/assets/screengrab/view-transcript/view-transcript-attributes.png' | relative_url }})
 
-You can hover over a display title for a short description of that attribute.
+If you hover over a display title, a tooltip will pop up with the attribute's [export name]({{ '/doc/attribute-typology#export-name'}}) and short description.
 
 ![]({{ '/assets/screengrab/view-transcript/view-transcript-attribute-hover.png' | relative_url }})
-
-{% comment %}
-(I want to change the UI for this.)
-{% endcomment %}
 
 Blanks in the right-hand column mean that this transcript doesn't have any value for that attribute.
 For example, the previous screengrabs show a blank for `Transcription AI tool(s)` because the <span class="transcript-attr">transcription_ai_tools</span> attribute is empty for `CB01interview3.eaf`;

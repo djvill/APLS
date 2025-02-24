@@ -179,7 +179,7 @@
   dir: ../view-transcript
   offset_x: 110
   offset_y: 310
-  width: 985
+  width: 1050
   height: 375
 
 - screengrab: view-transcript-attribute-hover.png
@@ -194,7 +194,7 @@
   dir: ../view-transcript
   offset_x: 110
   offset_y: 310
-  width: 985
+  width: 1050
   height: 375
   overlay: 
     - image: _arrow.png
