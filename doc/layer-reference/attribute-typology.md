@@ -3,7 +3,7 @@ title: Attribute typology
 permalink: /doc/attribute-typology
 parent: Layers and attributes
 nav_order: 30
-last_modified_date: 2025-02-18T13:33:54-05:00
+last_modified_date: 2025-02-25T12:40:34-05:00
 ---
 
 # {{ page.title }}
@@ -31,7 +31,7 @@ it identifies the primary participant in a transcript, so it's a property of _bo
 ## Display title
 
 Each attribute has a longer display title.
-Display titles show up on a transcript's or participant's attribute page (or the _transcript attributes_ dropdown on a [transcript page]({{ '/doc/view-transcript#attributes' | relative_url }})) in the left-hand column.
+Display titles show up on a transcript's or participant's attributes page (or the _transcript attributes_ dropdown on a [transcript page]({{ '/doc/view-transcript#attributes' | relative_url }})) in the left-hand column.
 If the attribute is [filterable](#filterability), the display title shows up in the column headers on the _transcripts_ or _participants_ page (see [Browsing transcripts]({{ '/doc/browse-transcripts' | relative_url }}), [Browsing participants]({{ '/doc/browse-participants' | relative_url }})).
 For example, the transcript attribute <span class="transcript-attr">duration</span> shows up on the _transcripts_ page as `Duration (sec)`.
 If you hover over an attribute's display title in APLS, you can see the attribute's name and short description.
@@ -58,8 +58,8 @@ This is the attribute's <span class="keyterm">export name</span>.
 
 Some attributes are <span class="keyterm">filterable</span>: they're in columns on the _transcripts_ or _participants_ page that can be used to filter by that attribute (see [Browsing transcripts]({{ '/doc/browse-transcripts' | relative_url }}), [Browsing participants]({{ '/doc/browse-participants' | relative_url }})).
 Other attributes are left off the _transcripts_ or _participants_ page to save room on the page;
-those attributes are viewable on a transcript's or participant's attribute page.
-(Some attributes aren't viewable on any attribute page: <span class="transcript-attr">corpus</span>, <span class="transcript-attr">episode</span>, <span class="transcript-attr">transcript</span>, and <span class="main_participant-attr">main_participant</span>.)
+those attributes are viewable on a transcript's or participant's attributes page.
+(Some attributes aren't viewable on any attributes page: <span class="transcript-attr">corpus</span>, <span class="transcript-attr">episode</span>, <span class="transcript-attr">transcript</span>, and <span class="main_participant-attr">main_participant</span>.)
 
 {: .note }
 > <span class="transcript-attr">episode</span> is a transcript attribute, but it is filterable on the _participants_ page.
@@ -85,6 +85,6 @@ For example, the <span class="participant-attr">neighborhood</span> `CB` is shor
 
 On the _participants_ page, the `Neighborhood`, `Education`, and `Speaker type` columns all have option codes;
 if you hover over an option code, a tooltip will pop up with the option description.
-On a transcript's or participant's attribute page, attributes with option codes and descriptions are displayed as `<code> (<description>)` in the right-hand column.
+On a transcript's or participant's attributes page, attributes with option codes and descriptions are displayed as `<code> (<description>)` in the right-hand column.
 If you export attributes to CSV (either on their own or in search matches), the file will contain the option codes, not the option descriptions.
 
