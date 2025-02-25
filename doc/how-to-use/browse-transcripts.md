@@ -3,7 +3,7 @@ title: Browsing transcripts
 permalink: /doc/browse-transcripts
 parent: How to use APLS
 nav_order: 30
-last_modified_date: 2025-02-25T14:42:35:z
+last_modified_date: 2025-02-25T14:53:49:z
 ---
 
 # {{ page.title }}
@@ -60,7 +60,7 @@ The "delete" button (shown as ![]({{ '/assets/img/delete.svg' | relative_url }})
 ## Exporting and searching transcripts
 
 The <span class="keyterm">export menu</span> allows you to download transcripts in a variety of formats and perform [searches]({{ '/doc/search' | relative_url }}) on transcripts.
-The export menu is located below the [filter menu](#filtering-transcipts).
+The export menu is located below the [filter menu](#filtering-transcripts).
 
 ![]({{ '/assets/screengrab/browse-transcripts/browse-transcripts-export-menu.png' | relative_url }})
 
@@ -144,7 +144,7 @@ The columns in the transcript list, from left to right, are:
 - The content <span class="transcript-attr">type</span> of the transcript.
 - The <span class="transcript-attr">neighborhood</span> of the transcript.
 - The <span class="transcript-attr">duration</span> of the transcript in seconds.
-- A clickable *attributes icon* that will open that [transcript's attributes page](#transcript-attribute-pages).
+- A clickable *attributes icon* that will open that [transcript's attributes page](#transcript-attributes-pages).
 
 {: .try-it }
 > Go to the [_transcripts_ page](https://apls.pitt.edu/labbcat/transcripts) and click *CB05pairs.eaf* to view that transcript's [transcript page]({{ '/doc/view-transcript' | relative_url }}).
