@@ -5,7 +5,7 @@ parent: How to use APLS
 has_children: yes
 has_toc: no
 nav_order: 20
-last_modified_date: 2025-02-24T13:58:33-05:00
+last_modified_date: 2025-02-25T12:42:10-05:00
 ---
 
 # {{ page.title }}
@@ -24,6 +24,10 @@ Each transcript has its own page in APLS.
 > Go to that page and select a transcript to view.
 
 {% include page_toc.html collapsible=true %}
+
+## What you can do on the transcript page
+
+
 
 ## Transcript page layout
 
@@ -87,7 +91,7 @@ The _export formatted ▼_ drop-down menu allows you to download the current tra
 ![]({{ '/assets/screengrab/view-transcript/view-transcript-export-formatted.png' | relative_url }})
 
 {: .try-it }
-> On the `CB01interview3.eaf` transcript page (https://apls.pitt.edu/labbcat/transcript?transcript=CB01interview3.eaf):
+> On the `CB01interview3.eaf` transcript page (<https://apls.pitt.edu/labbcat/transcript?transcript=CB01interview3.eaf>):
 > 
 > 1. Make sure only the <span class="layer">word</span> layer is selected.
 > 1. Click _export formatted ▼_.
@@ -97,12 +101,13 @@ The _export formatted ▼_ drop-down menu allows you to download the current tra
 At a minimum, the exported file will include the <span class="layer">utterance</span> and <span class="layer">word</span> layers.
 It will also include any layers you have [selected](#layer-selector) to show in the transcript body.
 Some transcript formats also show additional layers from the [original uploaded transcription]({{ '/doc/transcription' | relative_url }}): <span class="layer">noise</span>, <span class="layer">comment</span>, and <span class="layer">pronounce</span>.
+<!-- Show what this looks like, just in text -->
 
 {: .note }
 > If you need greater control over which layers to export, use the [_Export Formatted_ menu on the _transcripts_ page]({{ '/doc/browse-transcripts#export-formatted' | relative_url }}).
 
 The file format affects not only _which_ layers are included, but _how_ they are displayed.
-For example, in *[Praat] TextGrid*s and *[Elan] EAF Transcript*s, there is one tier for each speaker's <span class="layer">utterance</span> annotations (labeled, for example, `Barbara Johnstone` tier and one `CB01` tier) and one tier for each speaker's <span class="layer">word</span> annotations (e.g., `word - Barbara Johnstone` and `word - CB01`);
+For example, in *Praat TextGrid*s and *Elan EAF Transcript*s, there is one tier for each speaker's <span class="layer">utterance</span> annotations (labeled, for example, `Barbara Johnstone` tier and one `CB01` tier) and one tier for each speaker's <span class="layer">word</span> annotations (e.g., `word - Barbara Johnstone` and `word - CB01`);
 these annotations are all time-aligned.
 In *Plain Text Document*s and *PDF Document*s, <span class="layer">utterance</span>s are separated by line breaks and <span class="layer">word</span>s are simply listed within each utterance;
 these annotations are _not_ time-aligned and there's no way to tell whether speech is overlapping.
@@ -143,7 +148,8 @@ Unlike in the transcript body, phonological layers (like <span class="layer">seg
 > 1. Open the TextGrid in Praat.
 >
 > Compared to the previous try-it, you should see two new tiers: a `segment - ` tier for each speaker.
-> If you zoom in on an individual word, you should see that each of the segments has its own interval:
+> If you zoom in on an individual word, you should see that each of the segments has its own interval.
+> <!-- These segments are displayed in DISC, so `5k1` is /oUkeI/ -->
 >
 > ![]({{ '/assets/screengrab/view-transcript/view-transcript-export-praat-3.png' | relative_url }})
 
@@ -157,7 +163,9 @@ Finally, if a layer allows [vertical peers]({{ '/doc/layer-typology#vertical-pee
 >
 > You should see **three** `dictionary_phonemes - ` tiers per speaker.
 > This is because some words have more than one possible phonemic representation, such as /æz/ or /əz/ for _as_.
-> ![]({{ '/assets/screengrab/view-transcript/view-transcript-export-praat-3.png' | relative_url }})
+> ![]({{ '/assets/screengrab/view-transcript/view-transcript-export-praat-4.png' | relative_url }})
+
+<!-- Mention how to get full tier names in TextGrid view -->
 
 
 ### [transcript attributes] panel
