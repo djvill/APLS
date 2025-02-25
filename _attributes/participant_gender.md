@@ -20,5 +20,8 @@ synced:
   matches_exportable: yes
   export_includeCounts: no
 last_sync_modified_date: 2025-02-17T14:18:55-0500
-last_modified_date: 2025-02-17T14:19:58-05:00
+last_modified_date: 2025-02-25T12:38:34-05:00
 ---
+
+{: .note .no-collapse }
+> All speakers in APLS self-identified as either women or men at the time of recording.
