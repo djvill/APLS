@@ -4,7 +4,7 @@ permalink: /doc/transcription
 has_children: yes
 has_toc: no
 nav_order: 40 
-last_modified_date: 2024-10-15T14:54:58-04:00
+last_modified_date: 2025-02-28T10:55:15-05:00
 ---
 
 # {{ page.title }}
@@ -29,7 +29,9 @@ Most transcriptions were created by undergraduate research assistants at Pitt wh
 Some transcriptions were initially created by undergraduate students at Pitt and Swarthmore College as part of class assignments, then extensively hand-checked and corrected by trained research assistants.
 In some cases, transcribers used AI tools to assist with different transcription tasks: [CLOx](https://clox.ling.washington.edu/#/) or [Batchalign](https://github.com/TalkBank/batchalign) for speech annotation, [pyannote](https://github.com/pyannote/pyannote-audio) for segmentation;
 transcribers hand-checked and corrected any AI predictions.
-As of 2024, transcribers were primarily using a combination of Batchalign annotation filled into pyannote segmentation via a purpose-built [Shiny app](https://djvill.shinyapps.io/fill-batchalign-words/).
+As of 2024, transcribers were primarily using a combination of Batchalign annotation filled into pyannote segmentation via a purpose-built [Shiny app][fill-batchalign-words].
 In rare cases, there existed pre-existing transcriptions that transcribers translated to the APLS convention.
 Most transcriptions were initially created in Elan, with some created in Praat.
-Transcriptions were all checked via a purpose-built [Shiny app](https://djvill.shinyapps.io/apls_elan_file_checker/) to ensure files were well-formatted.
+Transcriptions were all checked via a purpose-built [Shiny app][file-checker] to ensure files were well-formatted.
+
+{% include linklist.html %}
