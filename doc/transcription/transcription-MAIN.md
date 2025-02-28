@@ -4,7 +4,7 @@ permalink: /doc/transcription
 has_children: yes
 has_toc: no
 nav_order: 40 
-last_modified_date: 2025-02-28T10:45:19-05:00
+last_modified_date: 2025-02-28T10:55:15-05:00
 ---
 
 # {{ page.title }}
@@ -33,3 +33,5 @@ As of 2024, transcribers were primarily using a combination of Batchalign annota
 In rare cases, there existed pre-existing transcriptions that transcribers translated to the APLS convention.
 Most transcriptions were initially created in Elan, with some created in Praat.
 Transcriptions were all checked via a purpose-built [Shiny app][file-checker] to ensure files were well-formatted.
+
+{% include linklist.html %}
