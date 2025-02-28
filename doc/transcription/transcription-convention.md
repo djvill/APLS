@@ -3,7 +3,7 @@ title: Transcription convention
 permalink: /doc/transcription-convention
 parent: Transcription
 nav_order: 10
-last_modified_date: 2025-01-21T10:36:11-05:00
+last_modified_date: 2025-02-28T10:45:19-05:00
 ---
 
 
@@ -327,7 +327,8 @@ Both can be accomplished in Elan.
 ### Elan to Praat
 
 1. Open the `.eaf` file in Elan
-1. Copy the contents of the Author attribute to a blank document so you can use it later
+1. If you've already completed your transcription in Elan, copy the contents of the Author attribute to a blank document so you can use it later.
+   - If you're just converting a file from the [Beautiful Monster][fill-batchalign-words], don't worry about this step.
 1. Export the file to `.TextGrid`
 	 1. Go to _File_ > _Export As_ > _Praat TextGrid_
 	 1. Leave all defaults as-is and click _OK_
