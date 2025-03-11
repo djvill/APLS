@@ -3,7 +3,7 @@ title: Layers and attributes
 permalink: /doc/layers-and-attributes
 has_toc: no
 nav_order: 30
-last_modified_date: 2025-02-19T10:56:58-05:00
+last_modified_date: 2025-03-11T15:08:24-04:00
 ---
 
 # {{ page.title }}
@@ -24,7 +24,7 @@ The pages in this section break down how layers and attributes work:
 1. Detailed [field guides]({{ '/doc/detailed-field-guides' | relative_url }}) that contain all the information you need to know about each layer and attribute.
 1. [Quick reference cards]({{ '/doc/quick-reference-cards' | relative_url }}) that are useful for refreshing your memory about how each layer and attribute works.
 
-[As a reminder]({{ '/doc/getting-started#special-formatting' | relative_url }}), text formatted with a dotted underline, like <span class="layer">dictionary_phonemes</span>, refers to a layer or attribute.
+[As a reminder]({{ '/doc/doc-navigation#special-formatting' | relative_url }}), text formatted with a dotted underline, like <span class="layer">dictionary_phonemes</span>, refers to a layer or attribute.
 If you hover over a layer/attribute name, a tooltip will pop up with a short description of the layer/attribute.
 Clicking on the name will load its field guide entry.
 

@@ -3,7 +3,7 @@ title: APLS Documentation
 nav_exclude: yes
 permalink: /
 num_aw_closed: 4543
-last_modified_date: 2025-02-19T10:56:57-05:00
+last_modified_date: 2025-03-11T15:08:23-04:00
 ---
 
 # {{ page.title }}
@@ -20,9 +20,6 @@ APLS currently contains 218 sound files totaling 34 hours of audio from 34 inter
 APLS is currently under construction; when complete, it will contain 270 sound files totaling 45 hours of audio from 40 interviewees.
 <!-- In total, APLS contains 270 sound files totaling 45 hours of audio from 40 speakers. -->
 {: .mb-1 }
-
-Ready to get started with APLS? Click [here]({{ '/doc/getting-started' | relative_url }}).
-{: .fs-7 .fw-600 .mt-1 }
 
 ## Demo: Measuring F1 and F2 for /aw/ in closed syllables
 {: .no_toc }
@@ -62,5 +59,7 @@ With APLS, it takes **_as little as 2 minutes_** to measure all **{{ page.num_aw
 >   - Our search-results file gets updated with acoustic measurements that we specify (in this case, F1 and F2 at the vowel's 20%, 50%, and 80% timepoints)
 >     <!-- GIF 3 -->
 
+## Ready to get started with APLS? Click [here]({{ '/doc/apls-101-getting-started' | relative_url }})!
+{: .no_toc }
 
 {% include linklist.html %}
