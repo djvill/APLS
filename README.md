@@ -56,7 +56,7 @@ If you clone this repo, copy the following into `.git/hooks/pre-commit`:
 
 # Replace `last_modified_date` timestamp with current time
 # Credit: https://mademistakes.com/notes/adding-last-modified-timestamps-with-git/
-git diff --cached --name-status | egrep -i "^(A|M).*\.(md)$" | while read a b; do
+git diff --cached --name-status | egrep -i "^(A|M|R).*\.(md)$" | while read a b; do
 	if grep -q ^last_modified_date $b ; then
 		cat $b | sed -b "/---.*/,/---.*/s/^last_modified_date:[0-9Tz: -]*\(\r\?\)$/last_modified_date: $(date "+%Y-%m-%dT%H:%M:%S%:z")\1/" > tmp
 		mv tmp $b
