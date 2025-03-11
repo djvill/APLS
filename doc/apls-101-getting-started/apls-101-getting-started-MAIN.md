@@ -4,7 +4,7 @@ permalink: /doc/apls-101-getting-started
 has_children: yes
 has_toc: no
 nav_order: 10
-last_modified_date: 2025-03-11T12:55:44-04:00
+last_modified_date: 2025-03-11T15:08:24-04:00
 ---
 
 # {{ page.title }}
@@ -15,7 +15,7 @@ We recommend reading the pages in this section in order for a guided introductio
 
 1. How to [sign up]({{ '/doc/sign-up' | relative_url }}) for APLS.
 1. Background on the [sociolinguistic fieldwork in Pittsburgh]({{ '/doc/pittsburgh-interviews' | relative_url }}) that yielded these audio files.
-1. The basics of [data is organized]({{ '/doc/data-organization' | relative_url }}) in [LaBB-CAT] corpora like APLS.
+1. The basics of how [data is organized]({{ '/doc/data-organization' | relative_url }}) in [LaBB-CAT] corpora like APLS.
 1. Information on how to [navigate the documentation site]({{ '/doc/doc-navigation' | relative_url }}) you're reading right now.
 1. A breakdown of how to [navigate APLS]({{ '/doc/navigation' | relative_url }}) and the APLS homepage.
 
