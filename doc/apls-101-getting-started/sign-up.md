@@ -3,7 +3,7 @@ title: Signing up for APLS
 permalink: /doc/sign-up
 parent: APLS 101/Getting started
 nav_order: 10
-last_modified_date: 2025-03-11T12:15:18-04:00
+last_modified_date: 2025-03-11T12:55:45-04:00
 ---
 
 # {{ page.title }}
@@ -55,6 +55,7 @@ If you close the tab(s) for APLS but don't close your browser completely, you ca
 If you forget your password, fill out the [password-reset form][password reset]{: target="_blank"}.
 We'll reset your password within 1 US business day.
 
+[Next page: **Pittsburgh interviews**]({{ '/doc/pittsburgh-interviews' | relative_url }}){: .btn .next-page }
 
 {% include linklist.html %}
 

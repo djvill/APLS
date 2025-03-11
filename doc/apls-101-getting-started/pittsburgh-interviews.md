@@ -3,7 +3,7 @@ title: Pittsburgh interviews
 permalink: /doc/pittsburgh-interviews
 parent: APLS 101/Getting started
 nav_order: 20
-last_modified_date: 2025-03-11T12:15:18-04:00
+last_modified_date: 2025-03-11T12:55:45-04:00
 ---
 
 # {{ page.title }}
@@ -24,6 +24,8 @@ APLS includes just a subset of the audio files from this fieldwork.
 All interviewees in APLS are natives of the Pittsburgh area, and all interviewees consented to make their data publicly available.
 In addition, APLS currently contains only files that had just one interviewee.
 For more information about how these files turned into the structured linguistic data in APLS, see [this page]({{ '/doc/data-sources' | relative_url }}).
+
+[Next page: **Data organization in LaBB-CAT**]({{ '/doc/data-organization' | relative_url }}){: .btn .next-page }
 
 {% include linklist.html %}
 

@@ -3,7 +3,7 @@ title: Navigating documentation
 permalink: /doc/doc-navigation
 parent: APLS 101/Getting started
 nav_order: 40
-last_modified_date: 2025-03-11T12:21:10-04:00
+last_modified_date: 2025-03-11T12:55:45-04:00
 ---
 
 # {{ page.title }}
@@ -71,6 +71,8 @@ Throughout these pages are "callout" boxes to help you understand how to use APL
   > APLS's original URL was <https://labb-cat.linguistics.pitt.edu/labbcat>.
   > But the <https://apls.pitt.edu/labbcat> URL was chosen as an alias because it's shorter, easier to remember, and less prone to typos.
 
+
+[Next page: **Navigating APLS**]({{ '/doc/navigation' | relative_url }}){: .btn .next-page }
 
 {% include linklist.html %}
 

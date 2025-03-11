@@ -3,7 +3,7 @@ title: Data organization in LaBB-CAT
 permalink: /doc/data-organization
 parent: APLS 101/Getting started
 nav_order: 30
-last_modified_date: 2025-03-11T12:21:10-04:00
+last_modified_date: 2025-03-11T12:55:44-04:00
 ---
 
 # {{ page.title }}
@@ -59,6 +59,8 @@ The cursor in the screen-grab is hovering over the `NN` annotation, which brings
   - The selected annotation is on the <span class="layer">part_of_speech</span> layer.
   - This annotation is part of an utterance that begins at 7.92 seconds into the transcript and lasts around 3.29 seconds.
   - Clicking on the annotation will bring up a [menu]({{ '/doc/view-transcript#word-menu' | relative_url }}) with additional options.
+
+[Next page: **Navigating documentation**]({{ '/doc/doc-navigation' | relative_url }}){: .btn .next-page }
 
 {% include linklist.html %}
 

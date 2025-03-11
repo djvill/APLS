@@ -75,3 +75,27 @@ a:not([class]) {
     display: inline-block;
   }
 }
+
+/* Theme-ize button shadow */
+/* Not working yet
+.btn, .btn-outline {
+  &:focus, &.selected:focus {
+    box-shadow: 0 0 0 3px $link-color;
+  }
+  
+  &:disabled,
+  &.disabled {
+    &,
+    &:hover {
+      box-shadow: none;
+    }
+  }
+}
+*/
+
+/* "Next page" buttons in apls-101-getting-started */
+p:has(> .btn.next-page) {
+  display: flex;
+  justify-content: flex-end;
+  @include fs-6;
+}

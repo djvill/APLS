@@ -4,7 +4,7 @@ permalink: /doc/apls-101-getting-started
 has_children: yes
 has_toc: no
 nav_order: 10
-last_modified_date: 2025-03-11T12:15:18-04:00
+last_modified_date: 2025-03-11T12:55:44-04:00
 ---
 
 # {{ page.title }}
@@ -20,5 +20,7 @@ We recommend reading the pages in this section in order for a guided introductio
 1. A breakdown of how to [navigate APLS]({{ '/doc/navigation' | relative_url }}) and the APLS homepage.
 
 Once you've read through this section, you can go on to learn more about [how to use APLS]({{ '/doc/how-to-use' | relative_url }}).
+
+[Next page: **Signing up for APLS**]({{ '/doc/sign-up' | relative_url }}){: .btn .next-page }
 
 {% include linklist.html %}
