@@ -3,13 +3,13 @@ title: Navigating APLS
 permalink: /doc/navigation
 parent: APLS 101/Getting started
 nav_order: 50
-last_modified_date: 2025-03-11T13:35:29:z
+last_modified_date: 2025-03-11T16:02:27-04:00
 ---
 
 # {{ page.title }}
 {:.no_toc}
 
-After your [initial login]({{ '/doc/sign-up#initial-login' | relative_url }}) to [APLS](https://apls.pitt.edu/labbcat/), logging in at <https://apls.pitt.edu/labbcat> will bring you to the _home_ page for APLS.
+After your [initial login]({{ '/doc/sign-up#initial-login' | relative_url }}), logging in at <https://apls.pitt.edu/labbcat> will bring you to the _home_ page for APLS.
 
 This documentation page covers the basics of navigating APLS and the layout of the _home_ page.
 
