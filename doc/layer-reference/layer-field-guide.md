@@ -3,13 +3,16 @@ title: Layers
 permalink: /doc/layer-field-guide
 parent: Detailed field guides
 nav_order: 10
-last_modified_date: 2025-02-13T13:44:05-05:00
+last_modified_date: 2025-03-11T10:37:59-04:00
 ---
 
 # Field guide: {{ page.title }}
 {:.no_toc}
 
-{% include page_toc.html collapsible=true open=true %}
+This page contains detailed descriptions of transcript <span class="keyterm">layers</span>.
+For more information about how layers work, and what the columns in the following tables mean, read the [layer typology]({{ '/doc/layer-typology' | relative_url }}).
+
+{% include page_toc.html collapsible=true %}
 
 {% assign layers = site.layers | where_exp: "item", "item.synced.project != 'temp'" %}
 {% for layer in layers %}
