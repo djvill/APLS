@@ -1,9 +1,9 @@
 ---
-title: Data organization in APLS
+title: Data organization in LaBB-CAT
 permalink: /doc/data-organization
-parent: How to use APLS
-nav_order: 10
-last_modified_date: 2025-02-19T10:56:58-05:00
+parent: APLS 101/Getting started
+nav_order: 30
+last_modified_date: 2025-03-11T12:21:10-04:00
 ---
 
 # {{ page.title }}
@@ -12,7 +12,7 @@ last_modified_date: 2025-02-19T10:56:58-05:00
 APLS data is organized using the data structures provided by the open-source linguistic corpus software [LaBB-CAT].
 The most important organizational units in LaBB-CAT corpora are <span class="keyterm">participants</span>, <span class="keyterm">transcripts</span>, <span class="keyterm">layers</span>, and <span class="keyterm">annotations</span>.
 
-- [**Participants**](#participants) are speakers in the audio files, along with metadata like demographic info.
+- [**Participants**](#participants) are speakers in the audio files (both interviewers and interviewees), along with metadata like demographic info.
 - [**Transcripts**](#transcripts) are data objects for individual audio files and all of their annotations, plus metadata like when the audio file was recorded.
 - [**Layers**](#layers) are series of time-aligned annotations in transcripts corresponding to a single type of linguistic data (e.g., pronunciations, part-of-speech tags).
 - [**Annotations**](#annotations) are individual bits of data aligned to specific timestamps in audio files.
@@ -26,7 +26,7 @@ Interviewees in APLS are identified by an anonymized <span class="keyterm">speak
 
 Interviews are divided into several **transcripts** (corresponding to the original recording files), named after the interviewee and interview section.
 For example, the file `FH10pairs.eaf` contains the minimal pairs task from the interviewee FH10.[^eaf]
-Some interview sections are split into multiple transcripts (e.g., `interview1`, `reading2`).
+Some sections are split into multiple transcripts (e.g., `interview1`, `reading2`).
 
 [^eaf]: The `.eaf` part of the transcript name reflects the original transcript file, which was created in the transcription program [Elan].
 
