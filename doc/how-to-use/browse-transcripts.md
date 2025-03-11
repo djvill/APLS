@@ -3,7 +3,7 @@ title: Browsing transcripts
 permalink: /doc/browse-transcripts
 parent: How to use APLS
 nav_order: 30
-last_modified_date: 2025-02-28T16:01:29:z
+last_modified_date: 2025-03-11T10:06:21-04:00
 ---
 
 # {{ page.title }}
@@ -48,7 +48,7 @@ The columns in the transcript list, from left to right, are:
 {: .try-it }
 > Go to the [_transcripts_ page](https://apls.pitt.edu/labbcat/transcripts) and click *CB05pairs.eaf* to view that transcript's [transcript page]({{ '/doc/view-transcript' | relative_url }}).
 
-You can read more about transcript attributes in the [Transcript attributes]({{ '/doc/attribute-reference#transcript-attributes' | relative_url }}) section of the [Attribute reference]({{ '/doc/attribute-reference' | relative_url }}) documentation page.
+You can read more about transcript attributes in the [field guide]({{ '/doc/transcript-attributes' | relative_url }}).
 
 ## Filtering transcripts
 
@@ -70,10 +70,10 @@ The four filter fields correspond to the columns in the transcript list directly
   > To view all transcripts with higher attention to speech, go to the [_transcripts_ page](https://apls.pitt.edu/labbcat/transcripts) and select *reading* and *pairs* from the Transcript type drop-down list.
 - The "Transcript neighborhood" multi-choice menu filters transcripts according to the Pittsburgh <span class="transcript-attr">neighborhood</span> where the participant was recruited from.
 - The "Duration (sec)" text fields filter transcripts by their <span class="transcript-attr">duration</span> in seconds. 
-  - To view transcripts with...
-    -  _at least_ `X` <span class="transcript-attr">duration</span>: enter `X` in the *From* box (leave *To* blank)
-    - _at most_ `Y` <span class="transcript-attr">duration</span>: enter `Y` in the *To* box (leave *From* blank)
-    - _between_ `X` and `Y` <span class="transcript-attr">duration</span> (inclusive): enter `X` in the *From* box and `Y` in the *To* box
+  - To view transcripts that are...
+    -  _at least_ `X` seconds long: enter `X` in the *From* box (leave *To* blank)
+    - _at most_ `Y` seconds long: enter `Y` in the *To* box (leave *From* blank)
+    - _between_ `X` and `Y` seconds long (inclusive): enter `X` in the *From* box and `Y` in the *To* box
 
   {: .try-it }
   > Go to the [_transcripts_ page](https://apls.pitt.edu/labbcat/transcripts) and enter `50`"into the *From* text field and leave the *To* text field blank.
@@ -109,7 +109,7 @@ Clicking the *Export Attributes* button will bring up a multi-select menu that e
 
 ![]({{ '/assets/screengrab/browse-transcripts/browse-transcripts-export-attributes.png' | relative_url }})
 
-Descriptions of the different transcript attributes can be found in the [Transcript attributes]({{ '/doc/attribute-reference#transcript-attributes' | relative_url }}) section of the [Attribute reference]({{ '/doc/attribute-reference' | relative_url }}) documentation page.
+Descriptions of the different transcript attributes can be found in the [field guide]({{ '/doc/transcript-attributes' | relative_url }}).
 
 After selecting the attribute data you would like to export, click the *Export Attributes* button again to download the attributes for all selected transcripts as a single `.csv` file.
 
@@ -122,8 +122,8 @@ The *Export Formatted* option allows you to download <span class="keyterm">layer
 Clicking the checkbox next to a <span class="keyterm">layer</span> in this menu will select that <span class="keyterm">layer</span> to be included in the downloaded files. 
 You can use `Shift`+`Click` to select multiple checkboxes at once in this menu.
 
-The [Attribute reference]({{ '/doc/attribute-reference' | relative_url }}) documentation page provides descriptions of [transcript attributes]({{ '/doc/attribute-reference#transcript-attributes' | relative_url }}) and [participant attributes]({{ '/doc/attribute-reference#participant-attributes' | relative_url }}).
-The [detailed field guide]({{ '/doc/detailed-field-guide' | relative_url }}) documentation page provides descriptions of all <span class="keyterm">layers</span> in APLS.
+The attribute [typology]({{ '/doc/attribute-typology' | relative_url }}) and field guides provide descriptions of [transcript attributes]({{ '/doc/transcript-attributes' | relative_url }}) and [participant attributes]({{ '/doc/participant-attributes' | relative_url }}).
+The [layer field guide]({{ '/doc/layer-field-guide' | relative_url }}) documentation page provides descriptions of all <span class="keyterm">layers</span> in APLS.
 
 Below the <span class="keyterm">layers</span> selection menu, there is a drop-down menu that allows you to select the file format for the transcript export download.
 
@@ -171,7 +171,7 @@ The *Participants* hyperlink will open the [Participants page]({{ '/doc/browse-p
 > 1. Click the *attributes icon* for CB01reading1.eaf to view the transcript's attributes page.
 > 1. Click *Participants* to view CB01 on the [Participants page]({{ '/doc/browse-participants' | relative_url }}).
 
-A detailed description of the different transcript attributes can be found in the [Transcript attributes]({{ '/doc/attribute-reference#transcript-attributes' | relative_url }}) section of the [Attribute reference]({{ '/doc/attribute-reference' | relative_url }}) documentation page.
+A detailed description of the different transcript attributes can be found in the [field guide]({{ '/doc/transcript-attributes' | relative_url }}).
 
 
 {% include linklist.html %}

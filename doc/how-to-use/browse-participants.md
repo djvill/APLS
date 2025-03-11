@@ -3,7 +3,7 @@ title: Browsing participants
 permalink: /doc/browse-participants
 parent: How to use APLS
 nav_order: 40
-last_modified_date: 2025-02-28T16:01:29:z
+last_modified_date: 2025-03-11T10:06:21-04:00
 ---
 
 # {{ page.title }}
@@ -47,7 +47,7 @@ The columns in the participant list, from left to right, are:
 - The participant's speaker <span class="participant-attr">type</span>.
 - The total <span class="participant-attr">transcript_duration</span> (measured in seconds) for that participant.
 
-You can read more about participant attribute data in the [Participant attributes]({{ '/doc/attribute-reference#participant-attributes' | relative_url }}) section of the [Attribute reference]({{ '/doc/attribute-reference' | relative_url }}) documentation page.
+You can read more about participant attribute data in the [field guide]({{ '/doc/participant-attributes' | relative_url }}).
 
 ## Filtering participants
 
@@ -138,7 +138,7 @@ The search filter options on this page allow you to choose which transcripts to 
 - The option *Only include transcripts for which these are the main participants* limits the search to transcripts where the selected participants are designated as the "Main speaker".
   Turning this option off will search all transcripts for any utterances from the selected participants.
 - The other four options allow to select the transcript <span class="transcript-attr">type</span> you would like to include in the search.
-  More information about transcript <span class="transcript-attr">type</span> can be found in the [Attribute reference]({{ '/doc/attribute-reference' | relative_url }}) documentation section.
+  More information about transcript <span class="transcript-attr">type</span> can be found in the [attribute field guide]({{ '/doc/transcript-attributes#type' | relative_url }}).
 
 Clicking the *List* button will search APLS for all utterances from the selected participants that meet your search criteria.
 
@@ -154,30 +154,30 @@ The *Export Attributes* option allows you to download participant data, transcri
 {: .note .no-collapse}
 > If no participants are selected, the *Export Attributes* option will include all participants that match your current filter criteria.
 
-Clicking *Export Attributes* will bring up the **export participant data** page, which has three different panels.
+Clicking *Export Attributes* will bring up the **export participant data** page, which has three different tabs.
 
 #### *participant attributes*
 
-*participant attributes* is the first panel on the **export participant data** page.
+*participant attributes* is the first tab on the **export participant data** page.
 
 ![]({{ '/assets/screengrab/browse-participants/browse-participants-export-participant-data.png' | relative_url }})
 
-This panel allows you to export [participant attribute data]({{ '/doc/attribute-reference#participant-attributes' | relative_url }}) according to the attribute fields you select. 
+This tab allows you to export [participant attribute data]({{ '/doc/attribute-typology' | relative_url }}) according to the attribute fields you select. 
 
-APLS speaker codes are always included in exported file, which is why the checkbox is grayed-out.
+APLS speaker codes are always included in the exported file, which is why the checkbox is grayed-out.
 
 After selecting the attributes you would like to export, clicking the *Export Attributes* button will download a `.csv` with the selected data. 
 By default, the `.csv` uses commas as field delimiters, but you can use the drop-down menu to export the `.csv` with semicolon delimiters or tab delimiters.
 
-Participant attribute data is explained in more detail in the [Participant attributes]({{ '/doc/attribute-reference#participant-attributes' | relative_url }}) section of the [Attribute reference]({{ '/doc/attribute-reference' | relative_url }}) documentation page.
+Participant attribute data is explained in more detail in the [field guide]({{ '/doc/participant-attributes' | relative_url }}).
 
 #### *transcript attributes*
 
-*transcript attributes* is the second panel on the **export participant data** page.
+*transcript attributes* is the second tab on the **export participant data** page.
 
 ![]({{ '/assets/screengrab/browse-participants/browse-participants-export-transcript-data.png' | relative_url }})
 
-This panel allows you to export participants' [transcript attribute data]({{ '/doc/attribute-reference#transcript-attributes' | relative_url }}) according to the attribute fields you select.
+This tab allows you to export participants' [transcript attribute data]({{ '/doc/attribute-typology' | relative_url }}) according to the attribute fields you select.
 
 Transcript file names are always included in exported file, which is why the checkbox is grayed-out.
 At least one additional attribute must be selected to export transcript data.
@@ -185,15 +185,15 @@ At least one additional attribute must be selected to export transcript data.
 After selecting the attributes you would like to export, clicking the *Export Attributes* button will download a `.csv` with the selected data. 
 By default, the `.csv` uses commas as field delimiters, but you can use the drop-down menu to export the `.csv` with semicolon delimiters or tab delimiters.
 
-A detailed description of the different transcript attributes can be found in the [Transcript attributes]({{ '/doc/attribute-reference#transcript-attributes' | relative_url }}) section of the [Attribute reference]({{ '/doc/attribute-reference' | relative_url }}) documentation page.
+A detailed description of the different transcript attributes can be found in the [field guide]({{ '/doc/transcript-attributes' | relative_url }}).
 
 #### *transcript media*
 
-*transcript media* is the third panel on the **export participant data** page.
+*transcript media* is the third tab on the **export participant data** page.
 
 ![]({{ '/assets/screengrab/browse-participants/browse-participants-export-media.png' | relative_url }})
 
-This panel allows you to export all recordings for the selected participants as a `.zip` file by clicking the *Export Media* button.
+This tab allows you to export all recordings for the selected participants as a `.zip` file by clicking the *Export Media* button.
 
 ### *List Transcripts*
 
@@ -236,4 +236,4 @@ The *All Utterances* hyperlink will open the ["All Utterances" page](#all-uttera
 > 1. After the search is complete, click *Display results*.
 > 1. This will show all of CB10's utterances that occured in "pairs" <span class="transcript-attr">type</span> transcripts.
 
-A detailed description of the different participant attributes can be found in the [Participant attributes]({{ '/doc/attribute-reference#participant-attributes' | relative_url }}) section of the [Attribute reference]({{ '/doc/attribute-reference' | relative_url }}) documentation page.
+Detailed descriptions of participant attributes can be found in the [field guide]({{ '/doc/participant-attributes' | relative_url }}).
