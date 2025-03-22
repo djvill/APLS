@@ -3,7 +3,7 @@ title: Layer typology
 permalink: /doc/layer-typology
 parent: Layers and attributes
 nav_order: 10
-last_modified_date: 2025-03-22T14:13:34-04:00
+last_modified_date: 2025-03-22T14:31:05-04:00
 ---
 
 # Layers: {{ page.title }}
@@ -227,9 +227,9 @@ Here are additional notations:
 | Phonological | [DISC pause]({{ '/doc/notation-systems#disc-extensions' | relative_url }}) | `.`               |
 | Phonological | [Stress markers]({{ '/doc/notation-systems#disc-extensions' | relative_url }}) | `'` (primary stress)<br>`"` (secondary stress)<br>`0` (unstressed) |
 | Phonological | [Syllable boundary]({{ '/doc/notation-systems#disc-extensions' | relative_url }}) | `-` |
-| Text         | Hesitation marker   | `~` (at the end of an incomplete word) |
-| Text         | Transcription pause/question markers | `.` (short pause)<br>`-` (long pause)<br>`?` (question) |
-| Text         | Redaction marker   | `___` |
+| Text         | [Hesitation marker]({{ '/doc/notation-systems#transcription' | relative_url }})   | `~` (at the end of an incomplete word) |
+| Text         | [Transcription pause/question markers]({{ '/doc/notation-systems#transcription' | relative_url }}) | `.` (short pause)<br>`-` (long pause)<br>`?` (question) |
+| Text         | [Redaction marker]({{ '/doc/notation-systems#transcription' | relative_url }})   | `___` |
 | Text         | Morpheme boundary   | `+` |
 {: .layer-props .no-keyterm }
 
