@@ -176,7 +176,7 @@ layers <- layers |>
                                  ##In search matrix with a regex
                                  c("phonological", "text") ~ "regex"),
          
-         ##Whether layer can the target of a search (https://github.com/nzilbb/labbcat-server/blob/b70d69/user-interface/src/main/angular/projects/labbcat-view/src/app/search-matrix/search-matrix.component.ts#L187-L194)
+         ##Whether layer can be the target of a search (https://github.com/nzilbb/labbcat-server/blob/b70d69/user-interface/src/main/angular/projects/labbcat-view/src/app/search-matrix/search-matrix.component.ts#L187-L194)
          search_targetable = case_when(
            id=="orthography" ~ "word",
            scope=="segment" ~ "segment",
