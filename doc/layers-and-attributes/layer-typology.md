@@ -3,7 +3,7 @@ title: Layer typology
 permalink: /doc/layer-typology
 parent: Layers and attributes
 nav_order: 10
-last_modified_date: 2025-03-22T14:46:53-04:00
+last_modified_date: 2025-03-22T14:49:48-04:00
 ---
 
 # Layers: {{ page.title }}
@@ -201,10 +201,9 @@ For example, the <span class="layer">phonemes</span> layer represents speech sou
 
 Almost all layers have a <span class="keyterm">primary notation system</span>.
 (The exceptions are the <span class="keyterm">timing-only layers</span>, since their annotations don't have labels---see [above](#data-type).)
-Some layers have <span class="keyterm">additional notation</span>, depending on what their annotations need to represent.
+Some layers have <span class="keyterm">additional notations</span>, depending on what their annotations need to represent.
 For example, the <span class="layer">syllables</span> layer uses the [DISC phonemic alphabet]({{ '/doc/notation-systems#disc-alphabet' | relative_url }}) for speech sounds _plus_ [stress markers]({{ '/doc/notation-systems#disc-extensions' | relative_url }}) for stress, such as `'fIS` for the word _fish_.
-Some additional notation systems are only used for a single layer, such as the morpheme boundary (`+`) for <span class="layer">morphemes</span>.
-<!-- TODO change "additional notation systems" to "additional symbols" -->
+Some additional notations are only used for a single layer, such as the morpheme boundary (`+`) for <span class="layer">morphemes</span>.
 
 Here are brief descriptions of primary notation systems, with links to more details on the [notation systems]({{ '/doc/notation-systems' | relative_url }}) page if applicable:
 
