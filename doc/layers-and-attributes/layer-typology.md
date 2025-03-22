@@ -3,7 +3,7 @@ title: Layer typology
 permalink: /doc/layer-typology
 parent: Layers and attributes
 nav_order: 10
-last_modified_date: 2025-03-22T14:31:05-04:00
+last_modified_date: 2025-03-22T14:46:53-04:00
 ---
 
 # Layers: {{ page.title }}
@@ -200,7 +200,7 @@ In other words, notation systems are the _details_ of how layers represent their
 For example, the <span class="layer">phonemes</span> layer represents speech sounds as symbols in the [DISC phonemic alphabet]({{ '/doc/notation-systems#disc-alphabet' | relative_url }}), such as `fIS` for the word _fish_.
 
 Almost all layers have a <span class="keyterm">primary notation system</span>.
-(The exceptions are the <span class="keyterm">timing-only layers</span>, <span class="layer">turn</span> and <span class="layer">utterance</span>, since their annotations don't have labels---see [above](#data-type).)
+(The exceptions are the <span class="keyterm">timing-only layers</span>, since their annotations don't have labels---see [above](#data-type).)
 Some layers have <span class="keyterm">additional notation</span>, depending on what their annotations need to represent.
 For example, the <span class="layer">syllables</span> layer uses the [DISC phonemic alphabet]({{ '/doc/notation-systems#disc-alphabet' | relative_url }}) for speech sounds _plus_ [stress markers]({{ '/doc/notation-systems#disc-extensions' | relative_url }}) for stress, such as `'fIS` for the word _fish_.
 Some additional notation systems are only used for a single layer, such as the morpheme boundary (`+`) for <span class="layer">morphemes</span>.
@@ -218,6 +218,7 @@ Here are brief descriptions of primary notation systems, with links to more deta
 | Text         | [English spelling]({{ '/doc/notation-systems#english-spelling' | relative_url }}) | |
 | Text         | [English spelling]({{ '/doc/notation-systems#english-spelling' | relative_url }}) (lowercase) | |
 | Text         | [Treebank part-of-speech tags]({{ '/doc/notation-systems#treebank-pos' | relative_url }}) | |
+| Timing-only  | (none)           | By definition, timing-only layers don't have labels |
 {: .layer-props .no-keyterm }
 
 Here are additional notations:
@@ -243,7 +244,7 @@ Here are additional notations:
 
 **Primary** notation system:
 
-{% include layer-table.html property="notation.primary" categories="DISC,Stress markers,Count,Decimal,Boolean,English spelling,English spelling (lowercase),Treebank part-of-speech tags" exclude_proj="temp" not_synced=true no_caps=true %}
+{% include layer-table.html property="notation.primary" categories="DISC,Stress markers,Count,Decimal,Boolean,English spelling,English spelling (lowercase),Treebank part-of-speech tags,(none)" exclude_proj="temp" not_synced=true no_caps=true %}
 
 
 **Additional** notation:
