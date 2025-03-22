@@ -5,7 +5,7 @@ parent: How to use APLS
 has_children: yes
 has_toc: no
 nav_order: 50
-last_modified_date: 2025-03-19T14:51:07:z
+last_modified_date: 2025-03-22T13:14:19:z
 ---
 
 # {{ page.title }}
@@ -17,6 +17,8 @@ Once you create a search, you can [export the results]({{ '/doc/export-data' | r
 
 [^patterns]: The term "patterns" is used throughout this page because the search function is capable of matching exact words, affixes, individual sound segments, stress, part of speech, and much more!
 
+If you are looking for information on the search results page, go to the [Exporting data]({{ '/doc/export-data' | relative_url }}) documentation.
+
 {% include page_toc.html collapsible=true %}
 
 ## Anatomy of the _search_ page
@@ -25,7 +27,7 @@ There are four main sections of the _search_ page, top to bottom:
 1. [Participants and transcripts filters](#participants-and-transcripts-filters)
 1. [Layered search matrix](#layered-search-matrix)
 1. [Match and display options](#match-and-display-options)
-1. Search progress bar
+1. [Search progress bar](#search-progress-bar)
 
 ![]({{ '/assets/screengrab/search/search-page-layout.png' | relative_url }})
 
@@ -121,8 +123,7 @@ At the top-left of the input field section, you'll see the name of the layer tha
 By default, the list of results will contain one match for each __word token__ that matches your search. 
 For certain layers, a target icon (![]({{ '/assets/img/target.svg' | relative_url }}){: style="height:1rem;"}) will appear next to the layer name or the _matches_ drop-down menu.
 Clicking this icon will cause that layer to be the "target" layer, which will cause the results to contain one row for each match on the target layer.
-<!-- what actually determines if a layer can be targeted? it might complicated and be better in an under-the-hood. 
-maybe instead state in plain english that the target focuses the search to the token of interest -->
+In other words, the target icon (![]({{ '/assets/img/target.svg' | relative_url }}){: style="height:1rem;"}) determines what the "token of interest" is for your search.
 
 {: .try-it }
 > 1. Go to the [_search_ page](https://apls.pitt.edu/labbcat/search).
@@ -130,13 +131,21 @@ maybe instead state in plain english that the target focuses the search to the t
 > 1. Enter `really` into the orthography input field and `i` into the segment input field.
 > 1. Click the target icon (![]({{ '/assets/img/target.svg' | relative_url }}){: style="height:1rem;"}) next to the _matches_ drop-down menu for the segment input field.
 > 1. Click the _Search_ button.
-> 1. This will generate search results with matches for both /i/ vowels in the word "really", so that every instance of "really" appears twice.
->    1. If you conduct the same search with the __orthography layer__ as the target layer, you will get half the number of results because the search is only matching each instance of the word "really" once.
+> This will generate search results with matches for both /i/ vowels in the word "really", so that every instance of "really" appears twice.
+> If you conduct the same search with the __orthography layer__ as the target layer, you will get half the number of results because the search is only matching each instance of the word "really" once.
 
 The _matches_ drop-down menu is located below the layer name of the input field.
 This drop-down menu lets you select whether the search will identify annotations that match your input expression or annotations that don't match your input expression.
 
-<!-- try it here to illustrate how doesn't match can be used usefully, especially in combination with other filters that do match -->
+{: .try-it }
+> If you wanted to find all matches for the segment /u/ that don't have primary stress, you could do this with the following steps:
+> 1. Go to the [_search_ page](https://apls.pitt.edu/labbcat/search).
+> 1. Click the checkbox for the <span class="layer">segment</span> layer to make the segment input field appear.
+> 1. Enter `u` into the segment input field.
+> 1. Select the `phonology` project in the layer selection menu and click the checkbox for the <span class="layer">stress</span> layer to make the stress input field appear.
+> 1. Click the drop-down selection menu on the right side of the stress input field and select _primary_.
+> 1. Click the _matches_ drop-down menu for the stress input field and select _doesn't match_.
+> 1. Click the _Search_ button.
 
 The text field next to the _matches_ drop-down menu allows you to specify the pattern you would like to search that layer for.
 The text fields support the use of regular expressions, which are described in more detail on the [Regular expressions]({{ '/doc/regex' | relative_url }}) documentation page.
@@ -149,12 +158,17 @@ The text fields support the use of regular expressions, which are described in m
 #### Layers with input fields similar to the orthography layer
 
 The following layers have pattern input fields that work similarly to the <span class="layer">orthography</span> layer:
-<!-- Dan response: redactions are actually the comments about the `___`s that are on the word tier -->
-- <span class="layer">redaction</span>  (all redactions are annotated as `___`)
 - <span class="layer">word</span> 
 - <span class="layer">lemma</span> 
 - <span class="layer">morphemes</span> 
 - <span class="layer">lexical</span> 
+- <span class="layer">redaction</span>  
+
+{:.note}
+> The <span class="layer">redaction</span> search targets the comments that are made for redactions on the word layer.
+> All redactions are annotated as `___` on the word layer, which is what appears on the search results page for redactions.
+> However, the pattern for <span class="layer">redaction</span> must match the comments in the <span class="layer">redaction</span> layer.
+> Therefore, searching for `___` on the <span class="layer">redaction</span> layer won't display any results but searching `.*name.*` will show all redactions that contain "name" in the comment.
 
 #### Layers with drop-down selection input fields
 
@@ -196,14 +210,18 @@ The following layers have pattern input fields that work similarly to the <span 
 The following layers have anchoring as their _only_ search parameter:
 - <span class="layer">turn</span>
 - <span class="layer">utterance</span>
-<!--- have a try-it that using these can restrict searches to turn-initial/final or utterance-initial/final -->
 
+{: .try-it }
+> 1. Go to the [_search_ page](https://apls.pitt.edu/labbcat/search).
+> 1. Select the `timing` project in the layer selection menu and click the checkbox for the <span class="layer">turn</span> layer to make the turn input field appear.
+> 1. Click the lock icon on the left side of the turn input field.
+> 1. Enter `yes` into the orthography input field.
+> 1. Click the _Search_ button.
+> This search will give you all the results for the word "yes" that occur at the beginning of speaker turns.
 
 In addition to their functionalities described in previous sections, the following layers also support anchoring:
 - <span class="layer">segment</span>
 - <span class="layer">foll_segment</span>
-- <span class="layer">speech_rate</span>
-<!--- ??? why the heck does speech rate have anchoring? this might become a moot point if the speech_rate is changed to match to a whole turn -->
 
 ### Making searches wider
 
@@ -221,12 +239,15 @@ Clicking the `-` button makes your search narrower by removing a word from your 
 > 1. Click the `+` button to make your search pattern one word wider.
 > 1. Enter `not` in the first orthography layer text field and enter `even` in the second orthography layer text field.
 > 1. Click the _Search_ button.
-> 1. This will generate search results with matches for every instance of the word "not" immediately followed by the word "even".
+> This will generate search results with matches for every instance of the word "not" immediately followed by the word "even".
 
 ### Within-word searches
 
 There are two layers that support searching for patterns within words: the <span class="layer">segment</span> and <span class="layer">foll_segment</span> layers.
-<!-- NOTE: don't mix-and-match within-word segment and following segment searches -->
+
+{:.note}
+> It is strongly recommended to not attempt within-word searches for <span class="layer">segment</span> and <span class="layer">foll_segment</span> at the same time.
+> Because of how these searches look for matches, specifying within-word patterns for both <span class="layer">segment</span> and <span class="layer">foll_segment</span> will most likely return no results or result in an error message.
 
 Similar to [making searches wider](#making-searches-wider), clicking the `+` button on the right side of the segment input field adds another input field for the segment that immediately follows the previous segment.
 
@@ -237,7 +258,7 @@ Similar to [making searches wider](#making-searches-wider), clicking the `+` but
 > 1. Enter `s` in the first segment field and `t` in the second segment field.
 > 1. Click the lock on the right side of the segment input field.
 > 1. Click the _Search_ button.
-> 1. This will generate search results with matches for every instance of /s/ followed by /t/ that occurs at the end of words.
+> This will generate search results with matches for every instance of /s/ followed by /t/ that occurs at the end of words.
 
 ### Searches across multiple words and multiple layers
 
@@ -256,7 +277,7 @@ An example of a more complex search, finding all verbs that begin with a consona
 > 1. Click the lock button on the left side of the second segment input field to specify that you only want to match words that begin with a consonant segment.
 > 1. Click the target icon (![]({{ '/assets/img/target.svg' | relative_url }}){: style="height:1rem;"}) for the second part_of_speech input field to select the second word as the target of your search (as opposed to targeting "the").
 > 1. Click the _Search_ button.
-> 1. This will generate search results with matches for every consonant-initial verb that is preceded by the word "the".
+> This will generate search results with matches for every consonant-initial verb that is preceded by the word "the".
 
 ## Search match options
 
@@ -265,10 +286,7 @@ In order, these options are:
 - Only include transcripts for which these are the main participants.
     - This checkbox only applies when you have specified a subset of participants for your search, and it restricts the search to transcripts where your participant subset are main participants.
 - Only match words that are aligned.
-  - If forced alignment has been done, this checkbox can be used to restrict the search to only words/segments that have been aligned in this way, and exclude any tokens that have not been aligned yet.
-
-<!-- are all words in APLS aligned? NO. Not all of the words get aligned for various reasons (like htk messed up) -->
-  
+  - This checkbox restricts your search to only match tokens that have been force-aligned, ignoring any tokens that have not been force-aligned yet.
 - Only one match per transcript.
   - This checkbox restricts the search results to one match per transcript, allowing you to identify transcripts that contain a given pattern without listing all instances of that pattern in the transcript.
 - Exclude utterances with more than n% overlap
@@ -277,7 +295,15 @@ In order, these options are:
 - No matches, only a summary of results
   - This checkbox will prevent the search from automatically opening a page displaying the results (although results can still be viewed by clicking on `Display results` underneath the search bar)
 
-## Search results
+## Search progress bar
 
-<!-- this will go on extract data page  -->
+The search progress bar appears at the bottom of the page only after you've specified your search and clicked the _Search_ button.
 
+![]({{ '/assets/screengrab/search/search-progress-bar.png' | relative_url }})
+
+Above the progress bar itself is text displaying the patterns of your search.
+
+The progress bar fills itself in to reflect the current state of your search, such as if the search is being initialized or if the APLS data is being queried.
+
+After the search is complete, the number of results found is displayed beneath the progress bar and a link to _Display results_ is shown that will take you to the search results page.
+For information on using the search results page, go to the [Exporting data]({{ '/doc/export-data' | relative_url }}) documentation.
