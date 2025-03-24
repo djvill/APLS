@@ -3,7 +3,7 @@ title: Layer typology
 permalink: /doc/layer-typology
 parent: Layers and attributes
 nav_order: 10
-last_modified_date: 2025-03-24T12:22:15-04:00
+last_modified_date: 2025-03-24T12:29:23-04:00
 ---
 
 # Layers: {{ page.title }}
@@ -169,10 +169,10 @@ This distinction is captured by a layer's <span class="keyterm">data type</span>
 
 | Data type | Symbol[*](#fn:data-type){: .footnote } | Meaning | Notes |
 |-----------|--------|---------|-------|
-| Phonological layers | ![]({{ '/assets/img/word_layer_D.png' | relative_url }}) | Annotations are labeled with speech sounds | Some phonological layers' annotations are _individual_ sounds (like <span class="layer">segment</span>); others' are _sequences_ of sounds (like <span class="layer">syllables</span>). |
-| Numeric layers | ![]({{ '/assets/img/word_layer_N.png' | relative_url }}) | Annotations are labeled with a measurement | Some numeric layers' annotations are counts (like <span class="layer">frequency_in_corpus</span>); others' are decimal numbers (like <span class="layer">foll_pause</span>). |
-| Text layers | ![]({{ '/assets/img/word_layer_T.png' | relative_url }}) | Annotations are labeled with text | Most text layers' annotations are normal English spelling (like <span class="layer">word</span>) or lowercase English spelling (like <span class="layer">orthography</span>) |
-| Timing-only layers | (none) | Annotations don't have a label, only a start/end time | The two timing-only layers represent temporal subdivisions of a transcript: <span class="layer">turn</span> and <span class="layer">utterance</span> |
+| Phonological layers | ![]({{ '/assets/img/data-type-phonological.png' | relative_url }}) | Annotations are labeled with speech sounds | Some phonological layers' annotations are _individual_ sounds (like <span class="layer">segment</span>); others' are _sequences_ of sounds (like <span class="layer">syllables</span>). |
+| Numeric layers | ![]({{ '/assets/img/data-type-numeric.png' | relative_url }}) | Annotations are labeled with a measurement | Some numeric layers' annotations are counts (like <span class="layer">frequency_in_corpus</span>); others' are decimal numbers (like <span class="layer">foll_pause</span>). |
+| Text layers | ![]({{ '/assets/img/data-type-text.png' | relative_url }}) | Annotations are labeled with text | Most text layers' annotations are normal English spelling (like <span class="layer">word</span>) or lowercase English spelling (like <span class="layer">orthography</span>) |
+| Timing-only layers | ![]({{ '/assets/img/data-type-timing-only.png' | relative_url }}) | Annotations don't have a label, only a start/end time | The two timing-only layers represent temporal subdivisions of a transcript: <span class="layer">turn</span> and <span class="layer">utterance</span> |
 {: .layer-props }
 
 <a id="fn:data-type"/>\* Used on [individual transcript pages]({{ '/doc/view-transcript' | relative_url }})
