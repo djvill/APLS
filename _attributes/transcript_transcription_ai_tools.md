@@ -18,7 +18,7 @@ synced:
           with some post-processing
   data_type: select
   short_description: AI tool(s) used to assist human transcription
-  display_order: 108
+  display_order: 107
   filterable: no
   access: yes
   attrib_type: transcript
@@ -26,8 +26,8 @@ synced:
   attrib_page_viewable: transcript
   matches_exportable: yes
   export_includeCounts: yes
-last_sync_modified_date: 2025-02-19T15:54:06-0500
-last_modified_date: 2025-02-24T12:58:31-05:00
+last_sync_modified_date: 2025-03-24T12:51:03-0400
+last_modified_date: 2025-03-24T12:51:56-04:00
 ---
 
 {: .note .no-collapse }
