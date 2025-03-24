@@ -147,12 +147,6 @@ function addA(node, type) {
     case 'phonemes_no_clitic':
       title = `All possible phonemic representations of the word, after removing all clitics`;
       break;
-    case 'ipa_phonemes':
-      title = `IPA phonemes`;
-      break;
-    case 'mfa_phonemes':
-      title = `All possible phonemic representations of the word, translated to Montreal Forced Aligner US English IPA phoneset`;
-      break;
     case 'corpus':
       title = `Collection of transcripts from a single research project`;
       break;

@@ -3,7 +3,7 @@ title: Layers
 permalink: /doc/layer-field-guide
 parent: Detailed field guides
 nav_order: 10
-last_modified_date: 2025-03-11T11:04:28-04:00
+last_modified_date: 2025-03-24T12:22:15-04:00
 ---
 
 # Field guide: {{ page.title }}
@@ -12,7 +12,10 @@ last_modified_date: 2025-03-11T11:04:28-04:00
 This page contains detailed descriptions of annotation <span class="keyterm">layers</span>.
 For more information about how layers work, and what the columns in the following tables mean, read the [layer typology]({{ '/doc/layer-typology' | relative_url }}).
 
-{% include page_toc.html collapsible=true %}
+{: .note .no-collapse }
+> Layers in the "temp" project aren't meaningful for end-users, so they're not included on this page
+
+{% include page_toc.html collapsible=true open=true %}
 
 {% assign layers = site.layers | where_exp: "item", "item.synced.project != 'temp'" %}
 {% for layer in layers %}

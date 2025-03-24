@@ -3,7 +3,7 @@ title: Layer typology
 permalink: /doc/layer-typology
 parent: Layers and attributes
 nav_order: 10
-last_modified_date: 2025-02-24T16:43:26-05:00
+last_modified_date: 2025-03-24T12:22:15-04:00
 ---
 
 # Layers: {{ page.title }}
@@ -200,15 +200,16 @@ In other words, notation systems are the _details_ of how layers represent their
 For example, the <span class="layer">phonemes</span> layer represents speech sounds as symbols in the [DISC phonemic alphabet]({{ '/doc/notation-systems#disc-alphabet' | relative_url }}), such as `fIS` for the word _fish_.
 
 Almost all layers have a <span class="keyterm">primary notation system</span>.
-(The exceptions are the <span class="keyterm">timing-only layers</span>, <span class="layer">turn</span> and <span class="layer">utterance</span>, since their annotations don't have labels---see [above](#data-type).)
-Some layers have <span class="keyterm">additional notation</span>, depending on what their annotations need to represent.
+(The exceptions are the <span class="keyterm">timing-only layers</span>, since their annotations don't have labels---see [above](#data-type).)
+Some layers have <span class="keyterm">additional notations</span>, depending on what their annotations need to represent.
 For example, the <span class="layer">syllables</span> layer uses the [DISC phonemic alphabet]({{ '/doc/notation-systems#disc-alphabet' | relative_url }}) for speech sounds _plus_ [stress markers]({{ '/doc/notation-systems#disc-extensions' | relative_url }}) for stress, such as `'fIS` for the word _fish_.
+Some additional notations are only used for a single layer, such as the morpheme boundary (`+`) for <span class="layer">morphemes</span>.
 
 Here are brief descriptions of primary notation systems, with links to more details on the [notation systems]({{ '/doc/notation-systems' | relative_url }}) page if applicable:
 
 | Data type    | Primary notation | Description       |
 |--------------|------------------|-------------------|
-| Phonological | DISC             | [DISC phonemic alphabet]({{ '/doc/notation-systems#disc-alphabet' | relative_url }}) |
+| Phonological | [DISC]({{ '/doc/notation-systems#disc-alphabet' | relative_url }}) | DISC phonemic alphabet |
 | Phonological | [Stress markers]({{ '/doc/notation-systems#disc-extensions' | relative_url }}) | `'` (primary stress)<br>`"` (secondary stress)<br>`0` (unstressed) |
 | Numeric      | Count            | Positive whole numbers |
 | Numeric      | Decimal          | Decimal numbers |
@@ -216,6 +217,7 @@ Here are brief descriptions of primary notation systems, with links to more deta
 | Text         | [English spelling]({{ '/doc/notation-systems#english-spelling' | relative_url }}) | |
 | Text         | [English spelling]({{ '/doc/notation-systems#english-spelling' | relative_url }}) (lowercase) | |
 | Text         | [Treebank part-of-speech tags]({{ '/doc/notation-systems#treebank-pos' | relative_url }}) | |
+| Timing-only  | (none)           | By definition, timing-only layers don't have labels |
 {: .layer-props .no-keyterm }
 
 Here are additional notations:
@@ -225,9 +227,10 @@ Here are additional notations:
 | Phonological | [DISC pause]({{ '/doc/notation-systems#disc-extensions' | relative_url }}) | `.`               |
 | Phonological | [Stress markers]({{ '/doc/notation-systems#disc-extensions' | relative_url }}) | `'` (primary stress)<br>`"` (secondary stress)<br>`0` (unstressed) |
 | Phonological | [Syllable boundary]({{ '/doc/notation-systems#disc-extensions' | relative_url }}) | `-` |
-| Text         | Hesitation marker   | `~` (at the end of an incomplete word) |
+| Text         | [Hesitation marker]({{ '/doc/notation-systems#transcription' | relative_url }})   | `~` (at the end of an incomplete word) |
+| Text         | [Transcription pause/question markers]({{ '/doc/notation-systems#transcription' | relative_url }}) | `.` (short pause)<br>`-` (long pause)<br>`?` (question) |
+| Text         | [Redaction marker]({{ '/doc/notation-systems#transcription' | relative_url }})   | `___` |
 | Text         | Morpheme boundary   | `+` |
-| Text         | Transcription pause/question markers | `.` (short pause)<br>`-` (long pause)<br>`?` (question) |
 {: .layer-props .no-keyterm }
 
 ### What you'll see in APLS
@@ -240,12 +243,12 @@ Here are additional notations:
 
 **Primary** notation system:
 
-{% include layer-table.html property="notation.primary" categories="Boolean,Count,DISC,Decimal,English spelling,English spelling (lowercase),Stress markers,Treebank part-of-speech tags" exclude_proj="temp" not_synced=true no_caps=true %}
+{% include layer-table.html property="notation.primary" categories="DISC,Stress markers,Count,Decimal,Boolean,English spelling,English spelling (lowercase),Treebank part-of-speech tags,(none)" exclude_proj="temp" not_synced=true no_caps=true %}
 
 
 **Additional** notation:
 
-{% include layer-table.html property="notation.additional" categories="DISC pause,Hesitation marker,Morpheme boundary,Stress markers,Syllable boundary,Transcription pause/question markers" not_synced=true no_caps=true %}
+{% include layer-table.html property="notation.additional" categories="DISC pause,Stress markers,Syllable boundary,Hesitation marker,Transcription pause/question markers,Redaction marker,Morpheme boundary" not_synced=true no_caps=true %}
 
 
 ## Alignment dependency
@@ -318,4 +321,4 @@ Unlike other layer properties, projects don't affect _anything_ about how layers
 {% include layer-table.html property="project" categories="(none),syntax,lexicon,timing,phonology,imported,temp" no_caps=true %}
 
 {: .note .no-collapse }
-> Layers in the "temp" project isn't meaningful for end-users, so the other "layers by property" tables on this page omit these layers.
+> Layers in the "temp" project aren't meaningful for end-users, so the other "layers by property" tables on this page omit these layers.

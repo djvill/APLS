@@ -6,7 +6,7 @@ synced:
   multi_select: no
   data_type: number
   short_description: Transcript duration in seconds
-  display_order: 106
+  display_order: 104
   filterable: yes
   access: yes
   attrib_type: transcript
@@ -14,6 +14,6 @@ synced:
   attrib_page_viewable: transcript
   matches_exportable: yes
   export_includeCounts: no
-last_sync_modified_date: 2025-02-17T14:18:55-0500
-last_modified_date: 2025-02-17T14:20:02-05:00
+last_sync_modified_date: 2025-03-24T12:51:03-0400
+last_modified_date: 2025-03-24T12:51:55-04:00
 ---

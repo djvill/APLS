@@ -29,7 +29,8 @@ alignment_dependent: no
 versions:
   first_appeared: 0.1.1
   last_modified: 0.1.2
-last_modified_date: 2025-01-11T16:51:54-05:00
+  deleted: 0.2.1
+last_modified_date: 2025-03-24T12:07:52-04:00
 ---
 
 **Fill longer description here**
