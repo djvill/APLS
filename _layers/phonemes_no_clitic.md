@@ -34,12 +34,20 @@ alignment_dependent: no
 versions:
   first_appeared: 0.1.0
   last_modified: 0.1.0
-last_modified_date: 2025-01-11T16:51:59-05:00
+last_modified_date: 2025-03-24T11:44:57-04:00
 ---
 
-**Fill longer description here**
+### Notes
 
-Any headings should be level-3
+A word are tagged only if its **orthography** annotation ends in the following: _'s_, _s'_, _'d_, _'ll_, _'ve_, _'d've_, _'ll've_.
+Otherwise, words are un-tagged (meaning the large majority of words are un-tagged).
+
+This layer exists solely to provide data for the **dictionary_phonemes** layer.
+
+
+### Downstream layers
+
+Used by **dictionary_phonemes** for tagging phonemic representations of cliticized forms.
 
 
 {% include linklist.html %}
