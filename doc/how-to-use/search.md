@@ -5,7 +5,7 @@ parent: How to use APLS
 has_children: yes
 has_toc: no
 nav_order: 50
-last_modified_date: 2025-03-28T14:44:46:z
+last_modified_date: 2025-03-28T15:59:39:z
 ---
 
 # {{ page.title }}
@@ -34,7 +34,8 @@ The _search_ page allows you to...
 - [Search APLS data for specific patterns](#layered-search-matrix).
   - These patterns can target: 
     - [single words](#searching-text-layers)
-    - [segments within words](#searching-within-words)
+    - [phonological and syntactic features](#searching-phonological-and-syntactic-layers)
+    - [segments within words](#searching-segments-within-words)
     - [multiple words](#searching-multiple-words)
     - [multiple layers](#searching-multiple-layers)
     - [multiple words and layers](#searching-multiple-words-and-layers)
@@ -152,7 +153,7 @@ We'll begin with the input field for the <span class="layer">orthography</span> 
 At the top-left of the input field section, you will see the name of the layer that input field will apply to.
 
 Certain layers have a target icon (![]({{ '/assets/img/target.svg' | relative_url }}){: style="height:1rem;"}) that determines what the "token of interest" is for your search.
-The target (![]({{ '/assets/img/target.svg' | relative_url }}){: style="height:1rem;"}) option is mostly useful for [searching multiple words](#searching-multiple-words), [searching within words](#searching-within-words), [searching multiple layers](#searching-multiple-layers), and [searching multiple words and multiple layers](#searching-multiple-words-and-multiple-layers).
+The target (![]({{ '/assets/img/target.svg' | relative_url }}){: style="height:1rem;"}) option is mostly useful for [searching multiple words](#searching-multiple-words), [searching within words](#searching-segments-within-words), [searching multiple layers](#searching-multiple-layers), and [searching multiple words and multiple layers](#searching-multiple-words-and-multiple-layers).
 
 The _matches_ drop-down menu is located below the layer name of the input field.
 This drop-down menu lets you select whether the search will identify annotations that match your input pattern or annotations that don't match your input pattern.
@@ -242,30 +243,78 @@ Other text layers that have regular expressions as their only pattern input are:
   > However, the pattern for <span class="layer">redaction</span> must match the comments in the <span class="layer">redaction</span> layer.
   > Therefore, searching for `___` on the <span class="layer">redaction</span> layer won't display any results but searching `.*name.*` will show all redactions that contain "name" in the comment.
 
-<!-- 
-Make the sections verb-y like "searching text layers" and "searching layers with specific notation systems" and "searching numerical layers"
-could also have a section on phonological layers in addition to drop-down menus
-make section titles consistently verb-y
--->
+#### Searching phonological and syntactic layers
 
+Phonological and syntactic layers have `Regular expression` input fields, like text layers, but they additionally include drop-down menus (shown with a (![]({{ '/assets/img/expand-down.svg' | relative_url }}){: style="height:1rem;"}) icon) containing valid input for that layer. 
 
-#### Searching layers with specific notation systems
+![]({{ '/assets/screengrab/search/search-dropdown-menu.png' | relative_url }})
 
-Some layers have pattern input fields that include a drop-down menu of valid input for that layer. 
+![]({{ '/assets/screengrab/search/search-dropdown-menu-expanded.png' | relative_url }})
+
 This saves you the trouble of needing to memorize things like the DISC alphabet or part-of-speech tags to use all of the _search_ page's functionalities!
 
 The following layers have drop-down selection menus as part of their pattern input fields (followed by a short description of what is included in the drop-down menu):
 - <span class="layer">part_of_speech</span> (part-of-speech tags)
+
+  {: .try-it }
+  > To find matches for every superlative adjective in APLS:
+  > 1. Go to the [_search_ page](https://apls.pitt.edu/labbcat/search).
+  > 1. Select the <span class="layer">syntax</span> layer in the selection menu to make the part_of_speech pattern input field appear.
+  > 1. Click the checkbox for the <span class="layer">part_of_speech</span> layer to make the segment input field appear.
+  > 1. Click the drop-down menu button (![]({{ '/assets/img/expand-down.svg' | relative_url }}){: style="height:1rem;"}) and select `JJS`.
+  > 1. Click the _Search_ button.
+
 - <span class="layer">phonemes</span> (IPA symbols that are not on QWERTY keyboards)
-- <span class="layer">dictionary_phonemes</span> (IPA symbols that are not on QWERTY keyboards)
-- <span class="layer">syllables</span> (IPA symbols that are not on QWERTY keyboards and stress markers)
-- <span class="layer">pronounce</span> (IPA symbols that are not on QWERTY keyboards and stress markers)
 - <span class="layer">stress</span> (stress markers)
+- <span class="layer">syllables</span> (IPA symbols that are not on QWERTY keyboards and stress markers)
+
+  {: .try-it }
+  > To find all matches for syllables with /ʊ/ that have secondary stress:
+  > 1. Go to the [_search_ page](https://apls.pitt.edu/labbcat/search).
+  > 1. Select the <span class="layer">phonology</span> layer in the selection menu to make the syllables pattern input field appear.
+  > 1. Click the checkbox for the <span class="layer">syllables</span> layer to make the segment input field appear.
+  > 1. Click the drop-down menu button (![]({{ '/assets/img/expand-down.svg' | relative_url }}){: style="height:1rem;"}) and select `secondary` under the `STRESS` heading.
+  > 1. Enter `.*` after `"` in the syllables input field.
+  > 1. Click the drop-down menu button (![]({{ '/assets/img/expand-down.svg' | relative_url }}){: style="height:1rem;"}) and select `ʊ` under the `VOWEL` heading.
+  > 1. Enter `.*` after `".*U` in the sylablles input field.
+  > 1. Click the _Search_ button.
+
+- <span class="layer">dictionary_phonemes</span> (IPA symbols that are not on QWERTY keyboards)
+- <span class="layer">pronounce</span> (IPA symbols that are not on QWERTY keyboards and stress markers)
+<!-- 
+should we have a try-it for dictionary_phonemes and pronounce codes?
+-->
 - <span class="layer">overlap</span> (TRUE or FALSE)
+  - <span class="layer">overlap</span> is technically a timing layer, but it operates differently than other timing layers.
 
 {: .under-the-hood }
 > The drop-down menus are displayed as IPA symbols, but they are input into the text fields using the DISC alphabet.
 > Because the purpose of DISC is to make phonetic transcription more machine-readable, the only characters that are different from IPA are the ones that aren't found on QWERTY keyboards.
+
+#### Searching segments within words
+
+<!-- 
+break this up into searching for a single segment and searching multiple segments within a word
+-->
+
+There are two layers that support searching for patterns within words: 
+- <span class="layer">segment</span> 
+- <span class="layer">foll_segment</span>
+
+{:.note}
+> It is strongly recommended to not attempt within-word searches for <span class="layer">segment</span> and <span class="layer">foll_segment</span> at the same time.
+> Because of how these searches look for matches, specifying within-word patterns for both <span class="layer">segment</span> and <span class="layer">foll_segment</span> will most likely return no results or result in an error message.
+
+Similar to [Searching multiple words](#searching-multiple-words), clicking the `+` button on the right side of the segment input field adds another input field for the segment that immediately follows the previous segment.
+
+{: .try-it }
+> To find matches for every instance of /s/ followed by /t/ that occurs at the end of words:
+> 1. Go to the [_search_ page](https://apls.pitt.edu/labbcat/search).
+> 1. Select the <span class="layer">segment</span> layer in the selection menu to make the segment pattern input field appear.
+> 1. Click the `+` button inside of the segment box to make another segment input field appear.
+> 1. Enter `s` in the first segment field and `t` in the second segment field.
+> 1. Click the lock on the right side of the segment input field.
+> 1. Click the _Search_ button.
 
 #### Searching numerical layers
 
@@ -342,30 +391,7 @@ Clicking the `-` button makes your search narrower by removing a word from your 
 > 1. Enter `not` in the first orthography layer text field and enter `even` in the second orthography layer text field.
 > 1. Click the _Search_ button.
 
-### Searching within words
 
-<!-- 
-break this up into searching for a single segment and searching multiple segments within a word
--->
-
-There are two layers that support searching for patterns within words: 
-- <span class="layer">segment</span> 
-- <span class="layer">foll_segment</span>
-
-{:.note}
-> It is strongly recommended to not attempt within-word searches for <span class="layer">segment</span> and <span class="layer">foll_segment</span> at the same time.
-> Because of how these searches look for matches, specifying within-word patterns for both <span class="layer">segment</span> and <span class="layer">foll_segment</span> will most likely return no results or result in an error message.
-
-Similar to [Searching multiple words](#searching-multiple-words), clicking the `+` button on the right side of the segment input field adds another input field for the segment that immediately follows the previous segment.
-
-{: .try-it }
-> To find matches for every instance of /s/ followed by /t/ that occurs at the end of words:
-> 1. Go to the [_search_ page](https://apls.pitt.edu/labbcat/search).
-> 1. Select the <span class="layer">segment</span> layer in the selection menu to make the segment pattern input field appear.
-> 1. Click the `+` button inside of the segment box to make another segment input field appear.
-> 1. Enter `s` in the first segment field and `t` in the second segment field.
-> 1. Click the lock on the right side of the segment input field.
-> 1. Click the _Search_ button.
 
 ### Searching multiple layers
 
