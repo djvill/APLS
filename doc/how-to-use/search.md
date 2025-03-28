@@ -5,7 +5,7 @@ parent: How to use APLS
 has_children: yes
 has_toc: no
 nav_order: 50
-last_modified_date: 2025-03-28T14:43:20:z
+last_modified_date: 2025-03-28T14:44:46:z
 ---
 
 # {{ page.title }}
@@ -34,7 +34,7 @@ The _search_ page allows you to...
 - [Search APLS data for specific patterns](#layered-search-matrix).
   - These patterns can target: 
     - [single words](#searching-text-layers)
-    - [segments within words](#within-word-searches)
+    - [segments within words](#searching-within-words)
     - [multiple words](#searching-multiple-words)
     - [multiple layers](#searching-multiple-layers)
     - [multiple words and layers](#searching-multiple-words-and-layers)
@@ -342,7 +342,7 @@ Clicking the `-` button makes your search narrower by removing a word from your 
 > 1. Enter `not` in the first orthography layer text field and enter `even` in the second orthography layer text field.
 > 1. Click the _Search_ button.
 
-### Within-word searches
+### Searching within words
 
 <!-- 
 break this up into searching for a single segment and searching multiple segments within a word
