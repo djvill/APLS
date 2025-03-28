@@ -5,7 +5,7 @@ parent: How to use APLS
 has_children: yes
 has_toc: no
 nav_order: 50
-last_modified_date: 2025-03-28T14:33:38:z
+last_modified_date: 2025-03-28T14:43:20:z
 ---
 
 # {{ page.title }}
@@ -35,9 +35,9 @@ The _search_ page allows you to...
   - These patterns can target: 
     - [single words](#searching-text-layers)
     - [segments within words](#within-word-searches)
-    - [multiple words](#making-searches-wider)
+    - [multiple words](#searching-multiple-words)
     - [multiple layers](#searching-multiple-layers)
-    - [multiple words and layers](#searching-across-multiple-words-and-layers)
+    - [multiple words and layers](#searching-multiple-words-and-layers)
 - [Filter searches by specific participants and transcripts](#participants-and-transcripts-filters).
 - Configure your search with different [match and display options](#match-and-display-options).
 
@@ -143,7 +143,7 @@ The pattern input fields enable you to specify the pattern you'd like to search 
 {:.note .no-collapse}
 > Pattern input fields look for matches in the corpus by invidual word, rather than entire utterances. 
 > For example, if you entered `not even` into the orthography input field, you would not get any results because "not even" will never match a single word in any transcript.
-> However, you can expand the size of your search to include multiple words, as explained in the [Making searches wider](#making-searches-wider) section.
+> However, you can expand the size of your search to include multiple words, as explained in the [Searching multiple words](#searching-multiple-words) section.
 
 We'll begin with the input field for the <span class="layer">orthography</span> layer because it is selected by default.
 
@@ -152,7 +152,7 @@ We'll begin with the input field for the <span class="layer">orthography</span> 
 At the top-left of the input field section, you will see the name of the layer that input field will apply to.
 
 Certain layers have a target icon (![]({{ '/assets/img/target.svg' | relative_url }}){: style="height:1rem;"}) that determines what the "token of interest" is for your search.
-The target (![]({{ '/assets/img/target.svg' | relative_url }}){: style="height:1rem;"}) option is mostly useful for [searching within words](#searching-within-words), [searching multiple layers](#searching-multiple-layers), and [searching multiple words and multiple layers](#searching-across-multiple-words-and-multiple-layers).
+The target (![]({{ '/assets/img/target.svg' | relative_url }}){: style="height:1rem;"}) option is mostly useful for [searching multiple words](#searching-multiple-words), [searching within words](#searching-within-words), [searching multiple layers](#searching-multiple-layers), and [searching multiple words and multiple layers](#searching-multiple-words-and-multiple-layers).
 
 The _matches_ drop-down menu is located below the layer name of the input field.
 This drop-down menu lets you select whether the search will identify annotations that match your input pattern or annotations that don't match your input pattern.
@@ -243,17 +243,13 @@ Other text layers that have regular expressions as their only pattern input are:
   > Therefore, searching for `___` on the <span class="layer">redaction</span> layer won't display any results but searching `.*name.*` will show all redactions that contain "name" in the comment.
 
 <!-- 
-this could be a good way to tie together the 'layers like orthography' and 'dropdown menu' sections
 Make the sections verb-y like "searching text layers" and "searching layers with specific notation systems" and "searching numerical layers"
 could also have a section on phonological layers in addition to drop-down menus
 make section titles consistently verb-y
 -->
 
-<!-- 
-turns out I forgot to include overlap, but actually overlap is a boolean variable that only accepts true and false anyway
--->
 
-#### Layers with drop-down selection input fields
+#### Searching layers with specific notation systems
 
 Some layers have pattern input fields that include a drop-down menu of valid input for that layer. 
 This saves you the trouble of needing to memorize things like the DISC alphabet or part-of-speech tags to use all of the _search_ page's functionalities!
@@ -265,12 +261,13 @@ The following layers have drop-down selection menus as part of their pattern inp
 - <span class="layer">syllables</span> (IPA symbols that are not on QWERTY keyboards and stress markers)
 - <span class="layer">pronounce</span> (IPA symbols that are not on QWERTY keyboards and stress markers)
 - <span class="layer">stress</span> (stress markers)
+- <span class="layer">overlap</span> (TRUE or FALSE)
 
 {: .under-the-hood }
 > The drop-down menus are displayed as IPA symbols, but they are input into the text fields using the DISC alphabet.
 > Because the purpose of DISC is to make phonetic transcription more machine-readable, the only characters that are different from IPA are the ones that aren't found on QWERTY keyboards.
 
-#### Layers with numeric range input fields
+#### Searching numerical layers
 
 Some layers contain numeric data, instead of text data.
 As a result, the pattern input fields for these layers allow you to define a numerical range you would like to search for.
@@ -323,10 +320,10 @@ The following [segment layers]({{ '/doc/layer-typology#scope' | relative_url }})
 - <span class="layer">segment</span>
 - <span class="layer">foll_segment</span>
 
-### Making searches wider
+### Searching multiple words
 
 <!-- 
-change this section to something like "searching across multiple words" and should also discuss targeting here because it is relevant to what gets matched
+should also discuss targeting here because it is relevant to what gets matched
 -->
 
 Clicking the `+` button on the right side of the input fields makes the search "wider" by adding another word to your search pattern.
@@ -359,7 +356,7 @@ There are two layers that support searching for patterns within words:
 > It is strongly recommended to not attempt within-word searches for <span class="layer">segment</span> and <span class="layer">foll_segment</span> at the same time.
 > Because of how these searches look for matches, specifying within-word patterns for both <span class="layer">segment</span> and <span class="layer">foll_segment</span> will most likely return no results or result in an error message.
 
-Similar to [making searches wider](#making-searches-wider), clicking the `+` button on the right side of the segment input field adds another input field for the segment that immediately follows the previous segment.
+Similar to [Searching multiple words](#searching-multiple-words), clicking the `+` button on the right side of the segment input field adds another input field for the segment that immediately follows the previous segment.
 
 {: .try-it }
 > To find matches for every instance of /s/ followed by /t/ that occurs at the end of words:
@@ -370,7 +367,7 @@ Similar to [making searches wider](#making-searches-wider), clicking the `+` but
 > 1. Click the lock on the right side of the segment input field.
 > 1. Click the _Search_ button.
 
-### Searching across multiple layers
+### Searching multiple layers
 
 <!-- 
 Say more stuff here.
@@ -401,7 +398,7 @@ Clicking the target icon (![]({{ '/assets/img/target.svg' | relative_url }}){: s
 > 1. Click the _matches_ drop-down menu for the stress input field and select _doesn't match_.
 > 1. Click the _Search_ button.
 
-### Searching across multiple words and multiple layers
+### Searching multiple words and multiple layers
 
 Because the _search_ page uses a matrix of expressions to find search matches, searches can be simple (one word wide and one layer deep) or complex (multiple words wide and multiple layers deep).
 This allows the search function to find very specific matches based on multiple different criteria.
