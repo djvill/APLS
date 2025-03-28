@@ -4,7 +4,7 @@ layout: default
 permalink: /files/custom-entries
 parent: Custom dictionary
 search_exclude: true
-last_modified_date: 2025-02-07T11:59:11-05:00
+last_modified_date: 2025-03-28T11:11:01-04:00
 ---
 
 # {{ page.title }}
@@ -42,6 +42,8 @@ These custom entries just fill in the gaps.
 - Crider's
 - Cuyahoga
 - Deener
+- Devilliers
+- Dinwiddie
 - Eastvale
 - Edinboro
 - Emsworth
@@ -52,6 +54,7 @@ These custom entries just fill in the gaps.
 - Greensburg
 - Hagerstown
 - Haine
+- Hallett
 - Heldman
 - Herron
 - Homewood
@@ -71,6 +74,7 @@ These custom entries just fill in the gaps.
 - McCandless
 - McKees
 - McKeesport
+- McKelvy
 - McKnightmare
 - McMunn
 - McNaugher
@@ -92,6 +96,7 @@ These custom entries just fill in the gaps.
 - Passavant
 - Pennsylvanian
 - Pennsylvanians
+- Pine-Richland
 - Pittsburgher
 - Pittsburghers
 - Portersville
@@ -187,6 +192,7 @@ These custom entries just fill in the gaps.
 - Cigna
 - Cutler-Hammer
 - Damico's
+- Deroy
 - Donatelli's
 - Dowe's
 - Dunkin
@@ -273,6 +279,8 @@ These custom entries just fill in the gaps.
 - kickboxers
 - knick
 - knicks
+- knucklehead
+- knuckleheads
 - kook
 - kooks
 - Kwanzaa
@@ -303,6 +311,7 @@ These custom entries just fill in the gaps.
 - sarcoidosis
 - segue
 - Septembers
+- Seventh-day
 - Slovenians
 - St
 - stepdad
@@ -316,6 +325,7 @@ These custom entries just fill in the gaps.
 - tarp
 - tarps
 - townie
+- transitioned
 - transracial
 - unironically
 - uppity
@@ -347,6 +357,7 @@ These custom entries just fill in the gaps.
 - homies
 - hoodie
 - hoodies
+- in-migration
 - Juneteenth
 - Limbaugh
 - locally-owned
@@ -358,7 +369,9 @@ These custom entries just fill in the gaps.
 - microbrews
 - mics
 - nickelodeons
+- out-migration
 - Pittsburghy
+- reality-based
 - reeducation
 - rollerskate
 - rollerskated
