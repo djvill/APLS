@@ -5,7 +5,7 @@ parent: How to use APLS
 has_children: yes
 has_toc: no
 nav_order: 50
-last_modified_date: 2025-03-28T20:13:52:z
+last_modified_date: 2025-03-28T20:52:49:z
 ---
 
 # {{ page.title }}
@@ -158,6 +158,16 @@ The target (![]({{ '/assets/img/target.svg' | relative_url }}){: style="height:1
 The _matches_ drop-down menu is located below the layer name of the input field.
 This drop-down menu lets you select whether the search will identify annotations that match your input pattern or annotations that don't match your input pattern.
 
+{: .try-it }
+> To find all matches for the segment /u/ that don't have primary stress:
+> 1. Go to the [_search_ page](https://apls.pitt.edu/labbcat/search).
+> 1. Click the checkbox for the <span class="layer">segment</span> layer to make the segment input field appear.
+> 1. Enter `u` into the segment input field.
+> 1. Select the `phonology` project in the layer selection menu and click the checkbox for the <span class="layer">stress</span> layer to make the stress input field appear.
+> 1. Click the drop-down selection menu on the right side of the stress input field and select _primary_.
+> 1. Click the _matches_ drop-down menu for the stress input field and select _doesn't match_.
+> 1. Click the _Search_ button.
+
 #### Searching text layers
 
 Pattern input fields that have `Regular expression` text fields allow you to specify patterns you would like to search that layer for.
@@ -297,34 +307,46 @@ The <span class="layer">overlap</span> layer is part of the [timing project]({{ 
 
 #### Searching segments within words
 
+The <span class="layer">segment</span> and <span class="layer">foll_segment</span> layers are similar to [phonological layers](#phonological-layers), but they have two additional features: 
+- They look for matches at the segment level, instead of at the word level.
+- They can be used to create within-word patterns.
+
+##### Searching for a single segment
+
+The difference between matching to segments and matching to words is that segments don't need to have their surrounding context defined.
+For instance, if you wanted to search for every instance of /j/ using the <span class="layer">phonemes</span> layer, you would need to enter the regex `.*j.*` to find words containing /j/.
+With the <span class="layer">segment</span> layer, you would only to search `j` because the search is looking for segments that match and not entire words.
 <!-- 
-break this up into searching for a single segment and searching multiple segments within a word
+not sure how I feel about the wording of this explanation.
 -->
 
-There are two layers that support searching for patterns within words: 
-- <span class="layer">segment</span> 
-- <span class="layer">foll_segment</span>
+{: .try-it }
+> To find matches for every instance of /ɔɪ/:
+> 1. Go to the [_search_ page](https://apls.pitt.edu/labbcat/search).
+> 1. Select the <span class="layer">segment</span> layer in the selection menu to make the segment pattern input field appear.
+> 1. Click the drop-down menu button (![]({{ '/assets/img/expand-down.svg' | relative_url }}){: style="height:1rem;"}) and select `ɔɪ` from the `DIPHTHONGS` section.
+> 1. Click the _Search_ button.
 
-<!-- 
-the section below should be part of the section on searching multiple segments within a word
--->
+##### Searching for multiple segments within a word
+
+Next to the the drop-down menu button (![]({{ '/assets/img/expand-down.svg' | relative_url }}){: style="height:1rem;"}) for the <span class="layer">segment</span> and <span class="layer">foll_segment</span> layers is a `+` button.
+Clicking the `+` button on the right side of the segment input field adds another input field for the segment that immediately follows the previous segment.
+This allows you to construct patterns that search for a sequence of segments within a word.
+
 {:.note}
 > It is strongly recommended to not attempt within-word searches for <span class="layer">segment</span> and <span class="layer">foll_segment</span> at the same time.
 > Because of how these searches look for matches, specifying within-word patterns for both <span class="layer">segment</span> and <span class="layer">foll_segment</span> will most likely return no results or result in an error message.
 
-Similar to [Searching multiple words](#searching-multiple-words), 
-Clicking the `+` button on the right side of the segment input field adds another input field for the segment that immediately follows the previous segment.
-
-
-
 {: .try-it }
-> To find matches for every instance of /s/ followed by /t/ that occurs at the end of words:
+> To find matches for every instance of /l/ followed by /t/:
 > 1. Go to the [_search_ page](https://apls.pitt.edu/labbcat/search).
 > 1. Select the <span class="layer">segment</span> layer in the selection menu to make the segment pattern input field appear.
 > 1. Click the `+` button inside of the segment box to make another segment input field appear.
-> 1. Enter `s` in the first segment field and `t` in the second segment field.
-> 1. Click the lock on the right side of the segment input field.
+> 1. Enter `l` in the first segment field and `t` in the second segment field.
 > 1. Click the _Search_ button.
+
+You can designate one of the segments in your within-word search as your "token of interest" by clicking the target icon (![]({{ '/assets/img/target.svg' | relative_url }}){: style="height:1rem;"}) for that segment.
+This will not affect the number of matches that are found, but it will affect what information is included when [exporting data]({{ '/doc/export-data' | relative_url }}).
 
 #### Searching numerical layers
 
@@ -379,10 +401,22 @@ The following [segment layers]({{ '/doc/layer-typology#scope' | relative_url }})
 - <span class="layer">segment</span>
 - <span class="layer">foll_segment</span>
 
+{: .try-it }
+> To find matches for every instance of /s/ followed by /t/ that occurs at the end of words:
+> 1. Go to the [_search_ page](https://apls.pitt.edu/labbcat/search).
+> 1. Select the <span class="layer">segment</span> layer in the selection menu to make the segment pattern input field appear.
+> 1. Click the `+` button inside of the segment box to make another segment input field appear.
+> 1. Enter `s` in the first segment field and `t` in the second segment field.
+> 1. Click the lock on the right side of the segment input field.
+> 1. Click the _Search_ button.
+
 ### Searching multiple words
 
 <!-- 
-should also discuss targeting here because it is relevant to what gets matched
+should also discuss targeting here because it is relevant to what gets matched.
+This is what was copied from a previous section:
+"By default, the list of results will contain one match for each __word token__ that matches your search. 
+Clicking the target icon (![]({{ '/assets/img/target.svg' | relative_url }}){: style="height:1rem;"}) will cause that layer to be the "target" layer, which will cause the results to contain one row for each match on the target layer."
 -->
 
 Clicking the `+` button on the right side of the input fields makes the search "wider" by adding another word to your search pattern.
@@ -401,15 +435,10 @@ Clicking the `-` button makes your search narrower by removing a word from your 
 > 1. Enter `not` in the first orthography layer text field and enter `even` in the second orthography layer text field.
 > 1. Click the _Search_ button.
 
-
-
 ### Searching multiple layers
 
 <!-- 
 Say more stuff here.
-This is what was copied from a previous section:
-"By default, the list of results will contain one match for each __word token__ that matches your search. 
-Clicking the target icon (![]({{ '/assets/img/target.svg' | relative_url }}){: style="height:1rem;"}) will cause that layer to be the "target" layer, which will cause the results to contain one row for each match on the target layer."
 -->
 
 {: .try-it }
@@ -421,18 +450,6 @@ Clicking the target icon (![]({{ '/assets/img/target.svg' | relative_url }}){: s
 > 1. Click the _Search_ button.
 >
 > If you conduct this same search with the __orthography layer__ as the target layer, you will get half the number of results because the search is only matching each instance of the word "really" once.
-
-
-<!-- this might not be the best place for this try it -->
-{: .try-it }
-> To find all matches for the segment /u/ that don't have primary stress:
-> 1. Go to the [_search_ page](https://apls.pitt.edu/labbcat/search).
-> 1. Click the checkbox for the <span class="layer">segment</span> layer to make the segment input field appear.
-> 1. Enter `u` into the segment input field.
-> 1. Select the `phonology` project in the layer selection menu and click the checkbox for the <span class="layer">stress</span> layer to make the stress input field appear.
-> 1. Click the drop-down selection menu on the right side of the stress input field and select _primary_.
-> 1. Click the _matches_ drop-down menu for the stress input field and select _doesn't match_.
-> 1. Click the _Search_ button.
 
 ### Searching multiple words and multiple layers
 
