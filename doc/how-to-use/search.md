@@ -5,7 +5,7 @@ parent: How to use APLS
 has_children: yes
 has_toc: no
 nav_order: 50
-last_modified_date: 2025-03-28T15:59:39:z
+last_modified_date: 2025-03-28T20:13:52:z
 ---
 
 # {{ page.title }}
@@ -245,7 +245,7 @@ Other text layers that have regular expressions as their only pattern input are:
 
 #### Searching phonological and syntactic layers
 
-Phonological and syntactic layers have `Regular expression` input fields, like text layers, but they additionally include drop-down menus (shown with a (![]({{ '/assets/img/expand-down.svg' | relative_url }}){: style="height:1rem;"}) icon) containing valid input for that layer. 
+Phonological and syntactic layers have `Regular expression` input fields, like text layers, but they additionally include drop-down selection menus (shown with a (![]({{ '/assets/img/expand-down.svg' | relative_url }}){: style="height:1rem;"}) icon) containing valid input for that layer. 
 
 ![]({{ '/assets/screengrab/search/search-dropdown-menu.png' | relative_url }})
 
@@ -253,43 +253,47 @@ Phonological and syntactic layers have `Regular expression` input fields, like t
 
 This saves you the trouble of needing to memorize things like the DISC alphabet or part-of-speech tags to use all of the _search_ page's functionalities!
 
-The following layers have drop-down selection menus as part of their pattern input fields (followed by a short description of what is included in the drop-down menu):
-- <span class="layer">part_of_speech</span> (part-of-speech tags)
-
-  {: .try-it }
-  > To find matches for every superlative adjective in APLS:
-  > 1. Go to the [_search_ page](https://apls.pitt.edu/labbcat/search).
-  > 1. Select the <span class="layer">syntax</span> layer in the selection menu to make the part_of_speech pattern input field appear.
-  > 1. Click the checkbox for the <span class="layer">part_of_speech</span> layer to make the segment input field appear.
-  > 1. Click the drop-down menu button (![]({{ '/assets/img/expand-down.svg' | relative_url }}){: style="height:1rem;"}) and select `JJS`.
-  > 1. Click the _Search_ button.
-
-- <span class="layer">phonemes</span> (IPA symbols that are not on QWERTY keyboards)
-- <span class="layer">stress</span> (stress markers)
-- <span class="layer">syllables</span> (IPA symbols that are not on QWERTY keyboards and stress markers)
-
-  {: .try-it }
-  > To find all matches for syllables with /ʊ/ that have secondary stress:
-  > 1. Go to the [_search_ page](https://apls.pitt.edu/labbcat/search).
-  > 1. Select the <span class="layer">phonology</span> layer in the selection menu to make the syllables pattern input field appear.
-  > 1. Click the checkbox for the <span class="layer">syllables</span> layer to make the segment input field appear.
-  > 1. Click the drop-down menu button (![]({{ '/assets/img/expand-down.svg' | relative_url }}){: style="height:1rem;"}) and select `secondary` under the `STRESS` heading.
-  > 1. Enter `.*` after `"` in the syllables input field.
-  > 1. Click the drop-down menu button (![]({{ '/assets/img/expand-down.svg' | relative_url }}){: style="height:1rem;"}) and select `ʊ` under the `VOWEL` heading.
-  > 1. Enter `.*` after `".*U` in the sylablles input field.
-  > 1. Click the _Search_ button.
-
-- <span class="layer">dictionary_phonemes</span> (IPA symbols that are not on QWERTY keyboards)
-- <span class="layer">pronounce</span> (IPA symbols that are not on QWERTY keyboards and stress markers)
-<!-- 
-should we have a try-it for dictionary_phonemes and pronounce codes?
--->
-- <span class="layer">overlap</span> (TRUE or FALSE)
-  - <span class="layer">overlap</span> is technically a timing layer, but it operates differently than other timing layers.
-
 {: .under-the-hood }
 > The drop-down menus are displayed as IPA symbols, but they are input into the text fields using the DISC alphabet.
 > Because the purpose of DISC is to make phonetic transcription more machine-readable, the only characters that are different from IPA are the ones that aren't found on QWERTY keyboards.
+
+##### Phonological layers
+
+The phonology layers (and what is included in their drop-down menus) in APLS are:
+- <span class="layer">phonemes</span> (IPA symbols that are not on QWERTY keyboards)
+- <span class="layer">dictionary_phonemes</span> (IPA symbols that are not on QWERTY keyboards)
+- <span class="layer">stress</span> (stress markers)
+- <span class="layer">syllables</span> (IPA symbols that are not on QWERTY keyboards and stress markers)
+
+{:.note .no-collapse}
+> <span class="layer">segment</span> and <span class="layer">foll_segment</span> layers are similar to the phonology layers in this section, but they have additional capabilities that are described in [Searching segments within words](#searching-segments-within-words).
+
+{: .try-it }
+> To find all matches for syllables with /ʊ/ that have secondary stress:
+> 1. Go to the [_search_ page](https://apls.pitt.edu/labbcat/search).
+> 1. Select the `phonology` layer in the layer selection menu and click the checkbox for the <span class="layer">syllables</span> layer to make the syllables input field appear.
+> 1. Click the drop-down menu button (![]({{ '/assets/img/expand-down.svg' | relative_url }}){: style="height:1rem;"}) and select `secondary` under the `STRESS` heading.
+> 1. Enter `.*` after `"` in the syllables input field.
+> 1. Click the drop-down menu button (![]({{ '/assets/img/expand-down.svg' | relative_url }}){: style="height:1rem;"}) and select `ʊ` under the `VOWEL` heading.
+> 1. Enter `.*` after `".*U` in the sylablles input field.
+> 1. Click the _Search_ button.
+
+The <span class="layer">pronounce</span> layer also has a drop-down selection menu with IPA symbols that are not on QWERTY keyboards and stress markers because it is an [imported layer]({{ '/doc/layer-typology#project' | relative_url }}) containing phonological information.
+<!-- should we have a try-it for pronounce codes? -->
+
+##### Syntactic layers
+
+The only syntax layer in APLS is the <span class="layer">part_of_speech</span> layer, which has a selection menu for accepted part-of-speech tags.
+{: .try-it }
+> To find matches for every superlative adjective in APLS:
+> 1. Go to the [_search_ page](https://apls.pitt.edu/labbcat/search).
+> 1. Select the `syntax` project in the layer selection menu and click the checkbox for the <span class="layer">part_of_speech</span> layer to make the part_of_speech input field appear.
+> 1. Click the drop-down menu button (![]({{ '/assets/img/expand-down.svg' | relative_url }}){: style="height:1rem;"}) and select `JJS`.
+> 1. Click the _Search_ button.
+
+##### Overlap
+
+The <span class="layer">overlap</span> layer is part of the [timing project]({{ '/doc/layer-typology#project' | relative_url }}), but it has a drop-down selection menu because the only valid search inputs for <span class="layer">overlap</span> are `TRUE` and `FALSE`.
 
 #### Searching segments within words
 
@@ -301,11 +305,17 @@ There are two layers that support searching for patterns within words:
 - <span class="layer">segment</span> 
 - <span class="layer">foll_segment</span>
 
+<!-- 
+the section below should be part of the section on searching multiple segments within a word
+-->
 {:.note}
 > It is strongly recommended to not attempt within-word searches for <span class="layer">segment</span> and <span class="layer">foll_segment</span> at the same time.
 > Because of how these searches look for matches, specifying within-word patterns for both <span class="layer">segment</span> and <span class="layer">foll_segment</span> will most likely return no results or result in an error message.
 
-Similar to [Searching multiple words](#searching-multiple-words), clicking the `+` button on the right side of the segment input field adds another input field for the segment that immediately follows the previous segment.
+Similar to [Searching multiple words](#searching-multiple-words), 
+Clicking the `+` button on the right side of the segment input field adds another input field for the segment that immediately follows the previous segment.
+
+
 
 {: .try-it }
 > To find matches for every instance of /s/ followed by /t/ that occurs at the end of words:
