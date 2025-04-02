@@ -5,7 +5,7 @@ parent: How to use APLS
 has_children: yes
 has_toc: no
 nav_order: 50
-last_modified_date: 2025-03-28T20:52:49:z
+last_modified_date: 2025-04-02T19:43:33:z
 ---
 
 # {{ page.title }}
@@ -15,11 +15,15 @@ last_modified_date: 2025-03-28T20:52:49:z
 can generally use more screengrabs throughout
 -->
 
+<!--
+note about the eventual intro ortho section: Talk about case insensitivity 
+-->
+
 APLS provides powerful search capabilities for finding linguistic patterns[^patterns] in the interview data.
 It all starts from the _search_ page: <https://apls.pitt.edu/labbcat/search>.
 Once you create a search, you can [export the results]({{ '/doc/export-data' | relative_url }}) in a variety of formats.
 
-[^patterns]: The term "patterns" is used throughout this page because the search function is capable of matching exact words, affixes, individual sound segments, stress, part of speech, and much more!
+[^patterns]: The term _patterns_ is used throughout this page because the search function is capable of matching exact words, affixes, individual sound segments, stress, part of speech, and much more!
 
 Because the _search_ page has many options that will be of interest to a variety of different researchers, this documentation page is more focused on giving users an understanding of the _search_ page capabilities through `TRY IT!` tutorials.
 If you would like to understand the data structure that the _search_ page relies on, read the [Layers and attributes]({{ '/doc/layers-and-attributes' | relative_url }}) and [Layer typology]({{ '/doc/layer-typology' | relative_url }}) documentation pages.
@@ -42,10 +46,6 @@ The _search_ page allows you to...
 - [Filter searches by specific participants and transcripts](#participants-and-transcripts-filters).
 - Configure your search with different [match and display options](#match-and-display-options).
 
-<!-- 
-Make sure to update relative links after changing the section names
--->
-
 ### Layout
 
 There are four main sections of the _search_ page, from top to bottom:
@@ -54,10 +54,13 @@ There are four main sections of the _search_ page, from top to bottom:
 1. [Match and display options](#match-and-display-options)
 1. [Search progress bar](#search-progress-bar)
 
-![]({{ '/assets/screengrab/search/search-page-layout.png' | relative_url }})
+Only the first three sections are displayed when you first load the _search_ page, as shown in the screengrab below.
 
-When you first load _search_, you'll only see the first three;
-the progress bar only pops up once you actually click _Search_.
+![]({{ '/assets/screengrab/search/search-page-layout1.png' | relative_url }})
+
+The progress bar only pops up once you actually click _Search_, like in the screengrab below.
+
+![]({{ '/assets/screengrab/search/search-page-layout2.png' | relative_url }})
 
 ## Participants and transcripts filters
 
@@ -74,6 +77,7 @@ There are two ways to select participants for this filter on the _search_ page:
 
 - Clicking _Participants_ will take you to the [_participants_ page]({{ '/doc/browse-participants' | relative_url }}).
   From this page, click the checkboxes for all participants you would like to include in your search and then click the _Layered Search_ button to return to the _search_ page.
+  If you specify a filter for the _participants_ page and don't click any checkboxes, then it will select all participants in the filter.
   More information about the _participants_ page can be found on the [Browsing participants]({{ '/doc/browse-participants' | relative_url }}) documentation page.
 - You can also upload a `.csv` file containing participant codes to the participants filter by clicking the _Choose File_ button.
   - For the `.csv` upload filter to work, participant codes must be in the first column of the `.csv`. 
@@ -82,7 +86,13 @@ There are two ways to select participants for this filter on the _search_ page:
     Additionally, the `.csv` upload option treats multiple rows of the same participant code as if they were a single row.
     If there is an error in the column, it will be ignored (e.g., if the column contains `CB96` instead of `CB06`, the filter will simply ignore `CB96` because it is not a valid participant code).
 
-<!-- this is now described on the new apls-dev search page -->
+{: .try-it }
+> 1. Go to the [_participants_ page](https://apls.pitt.edu/labbcat/participants).
+> 1. Click the checkboxes for CB01, CB05, and CB06.
+> 1. Click the _Export Attributes_ button at the top of the page and then click _Export Attributes_ on the __Export participant data__ page to download the `participants.csv` file.
+>    1. You can learn more about the options of the __Export participant data__ page on the [Browsing participants]({{ '/doc/browse-participants#exporting-and-searching-participants' | relative_url }}) documentation page.
+> 1. Go to the [_search_ page](https://apls.pitt.edu/labbcat/search).
+> 1. Click `Choose File` in the Participants filter tab and select the `participants.csv` file.
 
 ### Transcripts filter
 
@@ -90,7 +100,7 @@ The transcripts filter is located beneath the participants filter.
 
 ![]({{ '/assets/screengrab/search/search-transcripts-filter.png' | relative_url }})
 
-Clicking _Transcripts_ will take you to the [_transcripts_ page]({{ '/doc/browse-transcrips' | relative_url }}).
+Clicking _Transcripts_ will take you to the [_transcripts_ page]({{ '/doc/browse-transcripts' | relative_url }}).
 From this page, click the checkboxes for all transcripts you would like to include in your search and then click the _Layered Search_ button to return to the _search_ page.
 More information about the _transcripts_ page can be found on the [Browsing transcripts]({{ '/doc/browse-transcripts' | relative_url }}) documentation page.
 
@@ -98,26 +108,36 @@ More information about the _transcripts_ page can be found on the [Browsing tran
 
 {:.note}
 > If you've selected participants for the participants filter, only the transcripts for those participants will be displayed when using the transcripts filter.
-> Additionally, if you select transcripts before selecting participants, then selected participants will cause your transcripts filter to be overwritten.
+> Additionally, if you select transcripts before selecting participants, then your transcripts filter will be overwritten.
 
 <!-- the apls-dev page gives you a warning if you try to do this -->
 
 ## Layered search matrix
 
 The layered search matrix can be divided into two parts:
-- The [layer selection menu](#layer-selection-menu) for the search.
+- The [layer selector](#layer-selector) for the search.
 - [Pattern input fields](#pattern-input-fields) for specifying the search.
 
-### Layer selection menu
+### Layer selector
 
-By default, the layer selection menu has the <span class="layer">orthography</span> layer already selected.
+The layer selector on the _search_ page is similar to the [layer selector on transcript pages]({{ '/doc/view-transcript#layer-selector' | relative_url }}), with some minor differences.[^differences]
 
-![]({{ '/assets/screengrab/search/search-layer-selection-menu.png' | relative_url }})
+[^differences]: The main difference is that transcript pages always have the <span class="layer">word</span>, <span class="layer">turn</span>, and <span class="layer">utterance</span> layers selected and they cannot be de-selected. The _search_ page allows these layers to be toggled on and off.
+<!-- also there's no option to toggle between IPA & DISC labels but idk if it's worth mentioning here -->
+
+![]({{ '/assets/screengrab/search/search-layer-selector.png' | relative_url }})
+
+By default, the layer selector has the <span class="layer">orthography</span> layer already selected.
 
 To make more [layers]({{ '/doc/layer-typology' | relative_url }}) appear, you have to select the [project]({{ '/doc/layer-typology#project' | relative_url }}) corresponding with that layer in the `Projects` column.
 
 {: .under-the-hood }
 > The <span class="layer">orthography</span>, <span class="layer">word</span>, and <span class="layer">segment</span> layers are displayed without selecting any projects because these layers are not associated with a project.
+
+Selecting a layer in the layer selector will make an input field for that layer appear in the [pattern input fields](#pattern-input-fields) section.
+
+{:.note}
+> Layers that are selected with the layer selector are only applied to the search if input is entered into their pattern input fields.
 
 The screengrab below has the projects that are most useful to users toggled on to show all the layers that are useful for searching APLS.
 
@@ -130,21 +150,11 @@ Hovering over the names of the layers will display a tooltip giving a brief desc
 For an overview of how layers work in APLS, start with the [Layers and attributes]({{ '/doc/layers-and-attributes' | relative_url }}) documentation section.
 In-depth descriptions of the different layers in APLS can be found in the [field guide]({{ '/doc/layer-field-guide' | relative_url }}).
 
-Selecting a layer in the layer selection menu will make an input field for that layer appear in the pattern input fields section.
-
-{:.note}
-> Layers that are selected with the layer selection menu are only applied to the search if input is entered into their pattern input fields.
-
 <!-- the apls-dev search page now has more layer icons and the option to hide layer icons -->
 
 ### Pattern input fields
 
 The pattern input fields enable you to specify the pattern you'd like to search for.
-
-{:.note .no-collapse}
-> Pattern input fields look for matches in the corpus by invidual word, rather than entire utterances. 
-> For example, if you entered `not even` into the orthography input field, you would not get any results because "not even" will never match a single word in any transcript.
-> However, you can expand the size of your search to include multiple words, as explained in the [Searching multiple words](#searching-multiple-words) section.
 
 We'll begin with the input field for the <span class="layer">orthography</span> layer because it is selected by default.
 
@@ -163,10 +173,15 @@ This drop-down menu lets you select whether the search will identify annotations
 > 1. Go to the [_search_ page](https://apls.pitt.edu/labbcat/search).
 > 1. Click the checkbox for the <span class="layer">segment</span> layer to make the segment input field appear.
 > 1. Enter `u` into the segment input field.
-> 1. Select the `phonology` project in the layer selection menu and click the checkbox for the <span class="layer">stress</span> layer to make the stress input field appear.
+> 1. Select the `phonology` project in the layer selector and click the checkbox for the <span class="layer">stress</span> layer to make the stress input field appear.
 > 1. Click the drop-down selection menu on the right side of the stress input field and select _primary_.
 > 1. Click the _matches_ drop-down menu for the stress input field and select _doesn't match_.
 > 1. Click the _Search_ button.
+
+{:.note .no-collapse}
+> Pattern input fields look for matches in the corpus by invidual word, rather than entire utterances. 
+> For example, if you entered `not even` into the orthography input field, you would not get any results because "not even" will never match a single word in any transcript.
+> However, you can expand the size of your search to include multiple words, as explained in the [Searching multiple words](#searching-multiple-words) section.
 
 #### Searching text layers
 
@@ -204,7 +219,7 @@ Some of the most useful metacharacters (and their functions) for searching APLS 
   {: .try-it }
   > To search for every word that has the "-ition" affix as a morpheme:
   > 1. Go to the [_search_ page](https://apls.pitt.edu/labbcat/search).
-  > 1. Select the `lexicon` project in the layer selection menu and click the checkbox for the <span class="layer">morphemes</span> layer to make the turn input field appear.
+  > 1. Select the `lexicon` project in the layer selector and click the checkbox for the <span class="layer">morphemes</span> layer to make the turn input field appear.
   > 1. Enter `.+ition` into the morphemes input field.
   > 1. Click the _Search_ button.
   
@@ -214,6 +229,14 @@ Some of the most useful metacharacters (and their functions) for searching APLS 
   > To search for every word that begins with "run", including the word "run" itself:
   > 1. Go to the [_search_ page](https://apls.pitt.edu/labbcat/search).
   > 1. Enter `run.*` into the orthography input field.
+  > 1. Click the _Search_ button.
+
+- `()` (causes the characters in the brackets to be treated as a unit)
+
+  {: .try-it }
+  > To search for every instance of "pittsburgh" and "pittsburgher":
+  > 1. Go to the [_search_ page](https://apls.pitt.edu/labbcat/search).
+  > 1. Enter `pittsburgh(er)?` into the orthography input field.
   > 1. Click the _Search_ button.
 
 - `[]` (matches any characters inside the brackets)
@@ -233,7 +256,12 @@ Some of the most useful metacharacters (and their functions) for searching APLS 
   > 1. Click the _Search_ button.
 
 {:.note}
-> It is recommended to use the APLS search [anchor options](#anchoring-searches) instead of the regex anchors `^` and `$` because not all layers support anchoring and `$` is the DISC symbol for /ɔ/.
+> If you're familiar with regular expressions, then you may know that `^` and `$` can be used to anchor matches to the start and end of the pattern. 
+> These aren't necessary in APLS because regular expressions always match the entire annotation. 
+> This is why if you want words that start with a string, you need to use .* at the end. 
+>
+> A separate but related topic is anchoring a search match to a larger annotation, such as finding words at the start of a turn. 
+> This is covered in the [Anchoring searches](#anchoring-searches) section of this page.
 
 More information about using regular expressions with APLS can be found on the [Regular expressions]({{ '/doc/regex' | relative_url }}) documentation page.
 
@@ -256,6 +284,10 @@ Other text layers that have regular expressions as their only pattern input are:
 #### Searching phonological and syntactic layers
 
 Phonological and syntactic layers have `Regular expression` input fields, like text layers, but they additionally include drop-down selection menus (shown with a (![]({{ '/assets/img/expand-down.svg' | relative_url }}){: style="height:1rem;"}) icon) containing valid input for that layer. 
+
+<!--- 
+Should mention in symbol picker menu descriptions that you can mouse over and get a tooltip description
+--->
 
 ![]({{ '/assets/screengrab/search/search-dropdown-menu.png' | relative_url }})
 
@@ -281,7 +313,7 @@ The phonology layers (and what is included in their drop-down menus) in APLS are
 {: .try-it }
 > To find all matches for syllables with /ʊ/ that have secondary stress:
 > 1. Go to the [_search_ page](https://apls.pitt.edu/labbcat/search).
-> 1. Select the `phonology` layer in the layer selection menu and click the checkbox for the <span class="layer">syllables</span> layer to make the syllables input field appear.
+> 1. Select the `phonology` layer in the layer selector and click the checkbox for the <span class="layer">syllables</span> layer to make the syllables input field appear.
 > 1. Click the drop-down menu button (![]({{ '/assets/img/expand-down.svg' | relative_url }}){: style="height:1rem;"}) and select `secondary` under the `STRESS` heading.
 > 1. Enter `.*` after `"` in the syllables input field.
 > 1. Click the drop-down menu button (![]({{ '/assets/img/expand-down.svg' | relative_url }}){: style="height:1rem;"}) and select `ʊ` under the `VOWEL` heading.
@@ -294,10 +326,11 @@ The <span class="layer">pronounce</span> layer also has a drop-down selection me
 ##### Syntactic layers
 
 The only syntax layer in APLS is the <span class="layer">part_of_speech</span> layer, which has a selection menu for accepted part-of-speech tags.
+
 {: .try-it }
 > To find matches for every superlative adjective in APLS:
 > 1. Go to the [_search_ page](https://apls.pitt.edu/labbcat/search).
-> 1. Select the `syntax` project in the layer selection menu and click the checkbox for the <span class="layer">part_of_speech</span> layer to make the part_of_speech input field appear.
+> 1. Select the `syntax` project in the layer selector and click the checkbox for the <span class="layer">part_of_speech</span> layer to make the part_of_speech input field appear.
 > 1. Click the drop-down menu button (![]({{ '/assets/img/expand-down.svg' | relative_url }}){: style="height:1rem;"}) and select `JJS`.
 > 1. Click the _Search_ button.
 
@@ -362,7 +395,7 @@ The following layers use numeric range input fields:
 {: .try-it }
 > To find every word that only appears in the corpus one to two times:
 > 1. Go to the [_search_ page](https://apls.pitt.edu/labbcat/search).
-> 1. Select the `lexicon` project in the layer selection menu and click the checkbox for the <span class="layer">frequency_in_corpus</span> layer to make the frequency_in_corpus input field appear.
+> 1. Select the `lexicon` project in the layer selector and click the checkbox for the <span class="layer">frequency_in_corpus</span> layer to make the frequency_in_corpus input field appear.
 > 1. Enter `1` in the frequency_in_corpus _Minimum_ input field and enter `2` in the frequency_in_corpus _Maximum_ input field.
 > 1. Click the _Search_ button.
 > - This search will include incomplete words as well.
@@ -384,7 +417,7 @@ The following [phrase layers]({{ '/doc/layer-typology#scope' | relative_url }}) 
 {: .try-it }
 > To search for the word "yes" occurring at the beginning of speaker turns:
 > 1. Go to the [_search_ page](https://apls.pitt.edu/labbcat/search).
-> 1. Select the `timing` project in the layer selection menu and click the checkbox for the <span class="layer">turn</span> layer to make the turn input field appear.
+> 1. Select the `timing` project in the layer selector and click the checkbox for the <span class="layer">turn</span> layer to make the turn input field appear.
 > 1. Click the lock icon on the left side of the turn input field.
 > 1. Enter `yes` into the orthography input field.
 > 1. Click the _Search_ button.
@@ -459,7 +492,7 @@ This allows the search function to find very specific matches based on multiple 
 {: .try-it }
 > To find matches for every consonant-initial verb that is preceded by the word "the":
 > 1. Go to the [_search_ page](https://apls.pitt.edu/labbcat/search).
-> 1. Select the `syntax` project in the layer selection menu to make the <span class="layer">part_of_speech</span> layer appear in the selection menu.
+> 1. Select the `syntax` project in the layer selector to make the <span class="layer">part_of_speech</span> layer appear in the selection menu.
 > 1. Select the <span class="layer">part_of_speech</span> layer in the selection menu to make the part_of_speech pattern input field appear.
 > 1. Enter `the` in the orthography layer text field.
 > 1. Click the `+` button to make the search pattern one word wider.
