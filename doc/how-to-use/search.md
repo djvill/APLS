@@ -5,7 +5,7 @@ parent: How to use APLS
 has_children: yes
 has_toc: no
 nav_order: 50
-last_modified_date: 2025-04-03T15:23:39:z
+last_modified_date: 2025-04-03T16:00:58:z
 ---
 
 # {{ page.title }}
@@ -101,7 +101,7 @@ The _matches_ and _doesn't match_ options are most powerful when used with more 
 This drop-down menu lets you select whether the search will identify annotations that match your input pattern or annotations that don't match your input pattern.
 
 {:.note .no-collapse}
-> Pattern input fields look for matches in the corpus by invidual word, rather than entire utterances. 
+> Pattern input fields look for matches in the corpus by individual word, rather than entire utterances. 
 > For example, if you entered `not even` into the orthography input field, you would not get any results because "not even" will never match a single word in any transcript.
 > However, you can expand the size of your search to include multiple words, as explained in the [Searching multiple words](#searching-multiple-words) section.
 
@@ -493,21 +493,33 @@ The following [segment layers]({{ '/doc/layer-typology#scope' | relative_url }})
 > 1. Click the _Search_ button.
 
 
-## Layer scope?
-### Searching segments within words
+## Searching segments within words
 
-The <span class="layer">segment</span> and <span class="layer">foll_segment</span> layers are similar to [phonological layers](#phonological-layers), but they have two additional features: 
-- They look for matches at the segment level, instead of at the word level.
-- They can be used to create within-word patterns.
+<!--- this is meant to be the "Layer scope" section but "Searching by layer scope" felt too opaque --->
 
-#### Searching for a single segment
+Layers in APLS have different [scopes]({{ '/doc/layer-typology#scope' | relative_url }}): <span class="keyterm">span</span>, <span class="keyterm">phrase</span>, <span class="keyterm">word</span>, and <span class="keyterm">segment</span>.
+You may notice that these are the column names at the top of the layer selector!
+
+The searches discussed so far have been in the first three scopes (<span class="keyterm">span</span>, <span class="keyterm">phrase</span>, and <span class="keyterm">word</span>).
+This is because the _search_ page looks for matches word-by-word, 
+so <span class="keyterm">span</span> and <span class="keyterm">phrase</span> layer searches give results at the <span class="keyterm">word</span> level even though <span class="keyterm">span</span> and <span class="keyterm">phrase</span> scopes are larger than <span class="keyterm">word</span> scope.
+
+{: .note}
+> For instance, if you did a search to find all the overlaps in APLS using the <span class="keyterm">overlap</span> layer, you would get results for each individual word that occurs in a stretch of overlapped speech, even though the actual <span class="keyterm">overlap</span> annotation might be longer than a single word.
+
+{: .under-the-hood}
+> Some <span class="keyterm">word</span> layers, like <span class="layer">syllables</span>, may seem like they would be <span class="keyterm">segment</span> layers, but they are actually sub-interval <span class="keyterm">word</span> annotations.
+> These are also called <span class="keyterm">horizontal peers</span>, which are explained on the [Layer typology]({{ '/doc/layer-typology#alignment-and-horizontal-peers' | relative_url }}) documentation page.
+
+<span class="layer">segment</span> and <span class="layer">foll_segment</span> are the two <span class="keyterm">segment</span> layers in APLS.
+These <span class="keyterm">segment</span> layers can be used to find matches for [individual speech sound segments](#searching-for-a-single-segment) and to create [within-word segment patterns](#searching-for-multiple-segments-within-a-word).
+
+### Searching for a single segment
 
 The difference between matching to segments and matching to words is that segments don't need to have their surrounding context defined.
+
 For instance, if you wanted to search for every instance of /j/ using the <span class="layer">phonemes</span> layer, you would need to enter the regex `.*j.*` to find words containing /j/.
-With the <span class="layer">segment</span> layer, you would only to search `j` because the search is looking for segments that match and not entire words.
-<!-- 
-not sure how I feel about the wording of this explanation.
--->
+With the <span class="layer">segment</span> layer, you would only to search `j` because the search is looking at individual speech sounds to find matching segments.
 
 {: .try-it }
 > To find matches for every instance of /ɔɪ/:
@@ -516,7 +528,7 @@ not sure how I feel about the wording of this explanation.
 > 1. Click the drop-down menu button (![]({{ '/assets/img/expand-down.svg' | relative_url }}){: style="height:1rem;"}) and select `ɔɪ` from the `DIPHTHONGS` section.
 > 1. Click the _Search_ button.
 
-#### Searching for multiple segments within a word
+### Searching for multiple segments within a word
 
 Next to the the drop-down menu button (![]({{ '/assets/img/expand-down.svg' | relative_url }}){: style="height:1rem;"}) for the <span class="layer">segment</span> and <span class="layer">foll_segment</span> layers is a `+` button.
 Clicking the `+` button on the right side of the segment input field adds another input field for the segment that immediately follows the previous segment.
