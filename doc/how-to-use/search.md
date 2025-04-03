@@ -5,7 +5,7 @@ parent: How to use APLS
 has_children: yes
 has_toc: no
 nav_order: 50
-last_modified_date: 2025-04-02T19:43:33:z
+last_modified_date: 2025-04-03T11:35:51:z
 ---
 
 # {{ page.title }}
@@ -38,10 +38,20 @@ The _search_ page allows you to...
 - [Search APLS data for specific patterns](#layered-search-matrix).
   - These patterns can target: 
     - [single words](#searching-text-layers)
+      
+      {: .try-it }
+      > To search for every instance of the word "pittsburgh" in APLS:
+      > 1. Go to the [_search_ page](https://apls.pitt.edu/labbcat/search).
+      > 1. Enter `pittsburgh` into the orthography input field.
+      > 1. Click the _Search_ button.
+      
     - [phonological and syntactic features](#searching-phonological-and-syntactic-layers)
+      - Such as finding [syllables with specific stress](#phonological-layers) or [all words tagged as a certain part-of-speech](#syntactic-layers).
     - [segments within words](#searching-segments-within-words)
+      - Such as finding [all instances of a specific vowel](#searching-for-a-single-segment) or [all instances of a consonant cluster](#searching-for-multiple-segments-within-a-word).
     - [multiple words](#searching-multiple-words)
     - [multiple layers](#searching-multiple-layers)
+      - Such as finding [a specific word tagged as a certain part-of-speech](#searching-multiple-layers).
     - [multiple words and layers](#searching-multiple-words-and-layers)
 - [Filter searches by specific participants and transcripts](#participants-and-transcripts-filters).
 - Configure your search with different [match and display options](#match-and-display-options).
@@ -65,7 +75,7 @@ The progress bar only pops up once you actually click _Search_, like in the scre
 ## Participants and transcripts filters
 
 The _search_ page by default will conduct searches on all data in APLS.
-The participants and transcripts filters enable you to limit your search to a selection of [participants]({{ '/doc/data-organization#participants' | relative_url }}) and/or [transcripts]({{ '/doc/data-organization#transcripts' | relative_url }}).
+You can limit your search to a selection of [participants]({{ '/doc/data-organization#participants' | relative_url }}) and/or [transcripts]({{ '/doc/data-organization#transcripts' | relative_url }}) using the participants and transcripts filters.
 
 ### Participants filter
 
@@ -108,7 +118,7 @@ More information about the _transcripts_ page can be found on the [Browsing tran
 
 {:.note}
 > If you've selected participants for the participants filter, only the transcripts for those participants will be displayed when using the transcripts filter.
-> Additionally, if you select transcripts before selecting participants, then your transcripts filter will be overwritten.
+> Additionally, if you select transcripts *and then* select participants, your transcripts filter will be overwritten.
 
 <!-- the apls-dev page gives you a warning if you try to do this -->
 
@@ -120,7 +130,7 @@ The layered search matrix can be divided into two parts:
 
 ### Layer selector
 
-The layer selector on the _search_ page is similar to the [layer selector on transcript pages]({{ '/doc/view-transcript#layer-selector' | relative_url }}), with some minor differences.[^differences]
+The <span class="keyword">layer selector</span> on the _search_ page is similar to the [layer selector on transcript pages]({{ '/doc/view-transcript#layer-selector' | relative_url }}), with some minor differences.[^differences]
 
 [^differences]: The main difference is that transcript pages always have the <span class="layer">word</span>, <span class="layer">turn</span>, and <span class="layer">utterance</span> layers selected and they cannot be de-selected. The _search_ page allows these layers to be toggled on and off.
 <!-- also there's no option to toggle between IPA & DISC labels but idk if it's worth mentioning here -->
@@ -137,7 +147,7 @@ To make more [layers]({{ '/doc/layer-typology' | relative_url }}) appear, you ha
 Selecting a layer in the layer selector will make an input field for that layer appear in the [pattern input fields](#pattern-input-fields) section.
 
 {:.note}
-> Layers that are selected with the layer selector are only applied to the search if input is entered into their pattern input fields.
+> If you select a layer but don't enter anything into its pattern input field, it doesn't get applied to the search.
 
 The screengrab below has the projects that are most useful to users toggled on to show all the layers that are useful for searching APLS.
 
@@ -154,7 +164,7 @@ In-depth descriptions of the different layers in APLS can be found in the [field
 
 ### Pattern input fields
 
-The pattern input fields enable you to specify the pattern you'd like to search for.
+You can specify the pattern you'd like to search for using the <span class="keyword">pattern input fields</span>.
 
 We'll begin with the input field for the <span class="layer">orthography</span> layer because it is selected by default.
 
@@ -168,15 +178,9 @@ The target (![]({{ '/assets/img/target.svg' | relative_url }}){: style="height:1
 The _matches_ drop-down menu is located below the layer name of the input field.
 This drop-down menu lets you select whether the search will identify annotations that match your input pattern or annotations that don't match your input pattern.
 
-{: .try-it }
-> To find all matches for the segment /u/ that don't have primary stress:
-> 1. Go to the [_search_ page](https://apls.pitt.edu/labbcat/search).
-> 1. Click the checkbox for the <span class="layer">segment</span> layer to make the segment input field appear.
-> 1. Enter `u` into the segment input field.
-> 1. Select the `phonology` project in the layer selector and click the checkbox for the <span class="layer">stress</span> layer to make the stress input field appear.
-> 1. Click the drop-down selection menu on the right side of the stress input field and select _primary_.
-> 1. Click the _matches_ drop-down menu for the stress input field and select _doesn't match_.
-> 1. Click the _Search_ button.
+<!-- 
+put a simple try it here
+-->
 
 {:.note .no-collapse}
 > Pattern input fields look for matches in the corpus by invidual word, rather than entire utterances. 
@@ -188,12 +192,6 @@ This drop-down menu lets you select whether the search will identify annotations
 Pattern input fields that have `Regular expression` text fields allow you to specify patterns you would like to search that layer for.
 A regular expression (or 'regex') is a way of finding a pattern in a string of text.
 In regular expressions, letters and numbers are literal characters that match themselves -- the regex `apples` will match the literal text "apples".
-
-{: .try-it }
-> To search for every instance of the word "pittsburgh" in APLS:
-> 1. Go to the [_search_ page](https://apls.pitt.edu/labbcat/search).
-> 1. Enter `pittsburgh` into the orthography input field.
-> 1. Click the _Search_ button.
 
 What makes regular expressions more powerful than normal searches are metacharacters that have special functions.
 Some of the most useful metacharacters (and their functions) for searching APLS are:
@@ -474,6 +472,27 @@ Clicking the `-` button makes your search narrower by removing a word from your 
 Say more stuff here.
 -->
 
+
+<!-- 
+include a try-it to find all isntances of `can` as a noun
+-->
+
+{: .try-it }
+> To find all matches for the segment /u/ that don't have primary stress:
+> 1. Go to the [_search_ page](https://apls.pitt.edu/labbcat/search).
+> 1. Click the checkbox for the <span class="layer">segment</span> layer to make the segment input field appear.
+> 1. Enter `u` into the segment input field.
+> 1. Select the `phonology` project in the layer selector and click the checkbox for the <span class="layer">stress</span> layer to make the stress input field appear.
+> 1. Click the drop-down selection menu on the right side of the stress input field and select _primary_.
+> 1. Click the _matches_ drop-down menu for the stress input field and select _doesn't match_.
+> 1. Click the _Search_ button.
+
+
+
+
+<!-- 
+maybe this try-it should go somewhere else
+-->
 {: .try-it }
 > To generate search results with matches for both /i/ vowels in the word "really", so that every instance of "really" appears twice:
 > 1. Go to the [_search_ page](https://apls.pitt.edu/labbcat/search).
