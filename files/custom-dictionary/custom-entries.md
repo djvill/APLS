@@ -4,7 +4,7 @@ layout: default
 permalink: /files/custom-entries
 parent: Custom dictionary
 search_exclude: true
-last_modified_date: 2025-03-28T11:11:01-04:00
+last_modified_date: 2025-03-28T19:46:05:z
 ---
 
 # {{ page.title }}
