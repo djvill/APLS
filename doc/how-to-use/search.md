@@ -5,7 +5,7 @@ parent: How to use APLS
 has_children: yes
 has_toc: no
 nav_order: 50
-last_modified_date: 2025-04-03T16:00:58:z
+last_modified_date: 2025-04-03T17:26:53:z
 ---
 
 # {{ page.title }}
@@ -106,9 +106,11 @@ This drop-down menu lets you select whether the search will identify annotations
 > However, you can expand the size of your search to include multiple words, as explained in the [Searching multiple words](#searching-multiple-words) section.
 
 ## Search matches
+
 <!-- 
 now that the sections are next to each other, I'm realizing that "Search matches", "Search options", and "Searching with the _matches_ drop-down menu" are all a little similar
 -->
+
 The search progress bar appears at the bottom of the page only after you've specified your search and clicked the _Search_ button.
 
 ![]({{ '/assets/screengrab/search/search-progress-bar.png' | relative_url }})
@@ -275,7 +277,6 @@ The first step in doing so is to use the <span class="keyterm">layer selector</s
 The <span class="keyterm">layer selector</span> on the _search_ page is similar to the [layer selector on transcript pages]({{ '/doc/view-transcript#layer-selector' | relative_url }}), with some minor differences.[^differences]
 
 [^differences]: The main difference is that transcript pages always have the <span class="layer">word</span>, <span class="layer">turn</span>, and <span class="layer">utterance</span> layers selected and they cannot be de-selected. The _search_ page allows these layers to be toggled on and off.
-<!-- also there's no option to toggle between IPA & DISC labels but idk if it's worth mentioning here -->
 
 ![]({{ '/assets/screengrab/search/search-layer-selector.png' | relative_url }})
 
@@ -333,7 +334,7 @@ The primary notation systems by data type are:
   
 You can read more about notation systems on the [Layer typology]({{ '/doc/layer-typology#notation-system' | relative_url }}) and [Layer notation systems]({{ '/doc/Layer-notation-systems' | relative_url }}) documentation pages.
 
-Pattern input fields for layers that don't use English spelling or numbers include drop-down selection menus (shown with a (![]({{ '/assets/img/expand-down.svg' | relative_url }}){: style="height:1rem;"}) icon) that contain valid input for that layer. 
+Pattern input fields for layers that don't use English spelling or numbers include drop-down selection menus (shown with a ![]({{ '/assets/img/expand-down.svg' | relative_url }}){: style="height:1rem;"} icon) that contain valid input for that layer. 
 
 ![]({{ '/assets/screengrab/search/search-dropdown-menu.png' | relative_url }})
 
@@ -439,59 +440,20 @@ However, a simple search for non-matches could be to find all the words in APLS 
 > 1. Click the _matches_ drop-down menu for the orthography input field and select _doesn't match_.
 > 1. Click the _Search_ button.
 
-<!---
-The issue I'm having with talking about the _doesn't match_ option is that its most interesting when used with multiple layers/words
-which makes it feel strange to describe at this point in the documentation
---->
-
-A more complex search could use the _matches_ drop-down menu with multiple layers.
-An example is given in the try-it below using the <span class="layer">segment</span> layer and the <span class="layer">stress</span> layer.
+Non-matching searches can also be combined with [regex patterns](#searching-with-regular-expressions) to specify a range of values to not match.
+For example, you could find all non-consonantal words in APLS by using a _doesn't match_ search on the <span class="layer">phonemes</span> layer:
 
 {: .try-it }
-> To find all matches for the segment /u/ that don't have primary stress:
+> To find all matches for non-consonantal words:
 > 1. Go to the [_search_ page](https://apls.pitt.edu/labbcat/search).
-> 1. Click the checkbox for the <span class="layer">segment</span> layer to make the segment input field appear.
-> 1. Enter `u` into the segment input field.
-> 1. Select the `phonology` project in the layer selector and click the checkbox for the <span class="layer">stress</span> layer to make the stress input field appear.
-> 1. Click the drop-down selection menu on the right side of the stress input field and select _primary_.
+> 1. Select the `phonology` project in the layer selector and click the checkbox for the <span class="layer">phonemes</span> layer to make the phonemes input field appear.
+> 1. Enter `.*` in the phonemes input field.
+> 1. Click the drop-down selection menu on the right side of the phonemes input field and select _CONSONANT:_.
+> 1. Enter `.*` again at the end of the phonemes input field.
 > 1. Click the _matches_ drop-down menu for the stress input field and select _doesn't match_.
 > 1. Click the _Search_ button.
 
-## Anchoring searches
-
-Some layers contain annotations that can span multiple words or can include multiple annotations per word.
-These layers allow you to "anchor" your search pattern to match the beginning or the end of that layer's [scope]({{ '/doc/layer-typology#scope' | relative_url }}) using the lock icons (shown as unlocked when not active (![]({{ '/assets/img/lock-unlocked.svg' | relative_url }}){: style="height:1rem;"}) and locked when active (![]({{ '/assets/img/lock-locked.svg' | relative_url }}){: style="height:1rem;"})).
-
-The following [phrase layers]({{ '/doc/layer-typology#scope' | relative_url }}) layers have anchoring as their _only_ search parameter:
-- <span class="layer">turn</span>
-- <span class="layer">utterance</span>
-
-{: .try-it }
-> To search for the word "yes" occurring at the beginning of speaker turns:
-> 1. Go to the [_search_ page](https://apls.pitt.edu/labbcat/search).
-> 1. Select the `timing` project in the layer selector and click the checkbox for the <span class="layer">turn</span> layer to make the turn input field appear.
-> 1. Click the lock (![]({{ '/assets/img/lock-unlocked.svg' | relative_url }}){: style="height:1rem;"}) icon on the left side of the turn input field.
-> 1. Enter `yes` into the orthography input field.
-> 1. Click the _Search_ button.
-> - To compare this with the number of results for "yes" without <span class="layer">turn</span> layer anchoring, click the lock (![]({{ '/assets/img/lock-locked.svg' | relative_url }}){: style="height:1rem;"}) icon again to turn off anchoring and click the _Search_ button.
-
-The following [span layers]({{ '/doc/layer-typology#scope' | relative_url }}) have pattern input fields that are like the <span class="layer">orthography</span> layer, with the addition of anchoring options:
-- <span class="layer">comment</span>
-- <span class="layer">noise</span>
-
-The following [segment layers]({{ '/doc/layer-typology#scope' | relative_url }}) also support anchoring to beginning or end of words:
-- <span class="layer">segment</span>
-- <span class="layer">foll_segment</span>
-
-{: .try-it }
-> To find matches for every instance of /s/ followed by /t/ that occurs at the end of words:
-> 1. Go to the [_search_ page](https://apls.pitt.edu/labbcat/search).
-> 1. Select the <span class="layer">segment</span> layer in the selection menu to make the segment pattern input field appear.
-> 1. Click the `+` button inside of the segment box to make another segment input field appear.
-> 1. Enter `s` in the first segment field and `t` in the second segment field.
-> 1. Click the lock (![]({{ '/assets/img/lock-unlocked.svg' | relative_url }}){: style="height:1rem;"}) icon on the right side of the segment input field.
-> 1. Click the _Search_ button.
-
+The _doesn't match_ option is also useful when used with multiple layers, as described in the [Searching multiple layers](#searching-multiple-layers) section of this page.
 
 ## Searching segments within words
 
@@ -546,23 +508,50 @@ This allows you to construct patterns that search for a sequence of segments wit
 > 1. Enter `l` in the first segment field and `t` in the second segment field.
 > 1. Click the _Search_ button.
 
-You can designate one of the segments in your within-word search as your "token of interest" by clicking the target icon (![]({{ '/assets/img/target.svg' | relative_url }}){: style="height:1rem;"}) for that segment.
+You can designate one of the segments in your within-word search as your "token of interest" by clicking the target ![]({{ '/assets/img/target.svg' | relative_url }}){: style="height:1rem;"} for that segment.
 This will not affect the number of matches that are found, but it will affect what information is included when [exporting data]({{ '/doc/export-data' | relative_url }}).
 
+## Anchoring searches
 
+Some layers contain annotations that can span multiple words or can include multiple annotations per word.
+These layers allow you to "anchor" your search pattern to match the beginning or the end of that layer's [scope]({{ '/doc/layer-typology#scope' | relative_url }}) using the lock icons (shown as unlocked when not active ![]({{ '/assets/img/lock-unlocked.svg' | relative_url }}){: style="height:1rem;"} and locked when active ![]({{ '/assets/img/lock-locked.svg' | relative_url }}){: style="height:1rem;"}).
 
+The following [phrase layers]({{ '/doc/layer-typology#scope' | relative_url }}) layers have anchoring as their _only_ search parameter:
+- <span class="layer">turn</span>
+- <span class="layer">utterance</span>
 
+{: .try-it }
+> To search for the word "yes" occurring at the beginning of speaker turns:
+> 1. Go to the [_search_ page](https://apls.pitt.edu/labbcat/search).
+> 1. Select the `timing` project in the layer selector and click the checkbox for the <span class="layer">turn</span> layer to make the turn input field appear.
+> 1. Click the lock ![]({{ '/assets/img/lock-unlocked.svg' | relative_url }}){: style="height:1rem;"} on the left side of the turn input field.
+> 1. Enter `yes` into the orthography input field.
+> 1. Click the _Search_ button.
+> - To compare this with the number of results for "yes" without <span class="layer">turn</span> layer anchoring, click the lock ![]({{ '/assets/img/lock-locked.svg' | relative_url }}){: style="height:1rem;"} again to turn off anchoring and click the _Search_ button.
+
+The following [span layers]({{ '/doc/layer-typology#scope' | relative_url }}) have pattern input fields that are like the <span class="layer">orthography</span> layer, with the addition of anchoring options:
+- <span class="layer">comment</span>
+- <span class="layer">noise</span>
+
+The following [segment layers]({{ '/doc/layer-typology#scope' | relative_url }}) also support anchoring to beginning or end of words:
+- <span class="layer">segment</span>
+- <span class="layer">foll_segment</span>
+
+{: .try-it }
+> To find matches for every instance of /s/ followed by /t/ that occurs at the end of words:
+> 1. Go to the [_search_ page](https://apls.pitt.edu/labbcat/search).
+> 1. Select the <span class="layer">segment</span> layer in the selection menu to make the segment pattern input field appear.
+> 1. Click the `+` button inside of the segment box to make another segment input field appear.
+> 1. Enter `s` in the first segment field and `t` in the second segment field.
+> 1. Click the lock ![]({{ '/assets/img/lock-unlocked.svg' | relative_url }}){: style="height:1rem;"} on the right side of the segment input field.
+> 1. Click the _Search_ button.
 
 ## Searching multiple words
 
-<!-- 
-should also discuss targeting here because it is relevant to what gets matched.
-This is what was copied from a previous section:
-"By default, the list of results will contain one match for each __word token__ that matches your search. 
-Clicking the target icon (![]({{ '/assets/img/target.svg' | relative_url }}){: style="height:1rem;"}) will cause that layer to be the "target" layer, which will cause the results to contain one row for each match on the target layer."
--->
+Earlier in the documentation, we said that searching `not even` in the <span class="layer">orthography</span> layer would not return any matches because there are no single words that match "not even".
+The way to search for multiple words is to make the search "wider".
 
-Clicking the `+` button on the right side of the input fields makes the search "wider" by adding another word to your search pattern.
+Clicking the `+` button on the right side of the input fields makes the search wider by adding another word to your search pattern.
 
 ![]({{ '/assets/screengrab/search/search-input-field-orthography2.png' | relative_url }})
 
@@ -578,31 +567,49 @@ Clicking the `-` button makes your search narrower by removing a word from your 
 > 1. Enter `not` in the first orthography layer text field and enter `even` in the second orthography layer text field.
 > 1. Click the _Search_ button.
 
+Similar to [multiple segment searches](#searching-for-multiple-segments-within-a-word), you can designate one of the words in your multi-word search as your "token of interest" by clicking the target ![]({{ '/assets/img/target.svg' | relative_url }}){: style="height:1rem;"} for that word.
+This will not affect the number of matches that are found, but it will affect what information is included when [exporting data]({{ '/doc/export-data' | relative_url }}).
+
 ## Searching multiple layers
 
-<!-- 
-Say more stuff here.
--->
+Up to this point in the documentation, most of the _search_ page capabilities have been demonstrated with single layer searches.
+Many researchers, however, will be interested in finding patterns that match multiple types of criteria.
+Constructing a search using multiple layers makes this possible.
 
+For example, the `TRY IT!` below uses the <span class="layer">orthography</span> layer and the <span class="layer">part_of_speech</span> layer to find all instances of "run" as a noun.
 
-<!-- 
-include a try-it to find all instances of `can` as a noun
--->
+{: .try-it }
+> To find matches for all instances of "run" used as a noun:
+> 1. Go to the [_search_ page](https://apls.pitt.edu/labbcat/search).
+> 1. Select the `syntax` project in the layer selector and click the checkbox for the <span class="layer">part_of_speech</span> layer to make the part_of_speech input field appear.
+> 1. Enter `can` into the orthography input field. 
+> 1. Click the part_of_speech drop-down menu button (![]({{ '/assets/img/expand-down.svg' | relative_url }}){: style="height:1rem;"}) and select _NN_ from the _NOUN:_ section.
+> 1. Click the _Search_ button.
 
+You can also use the _matches_ drop-down menus to find results that match on some layers and don't match on other layers.
+An example is given in the `TRY IT!` below using the <span class="layer">segment</span> layer and the <span class="layer">stress</span> layer to find /u/ without primary stress.
 
+{: .try-it }
+> To find all matches for the segment /u/ that don't have primary stress:
+> 1. Go to the [_search_ page](https://apls.pitt.edu/labbcat/search).
+> 1. Click the checkbox for the <span class="layer">segment</span> layer to make the segment input field appear.
+> 1. Enter `u` into the segment input field.
+> 1. Select the `phonology` project in the layer selector and click the checkbox for the <span class="layer">stress</span> layer to make the stress input field appear.
+> 1. Click the drop-down selection menu on the right side of the stress input field and select _primary_.
+> 1. Click the _matches_ drop-down menu for the stress input field and select _doesn't match_.
+> 1. Click the _Search_ button.
 
+The target ![]({{ '/assets/img/target.svg' | relative_url }}){: style="height:1rem;"} option becomes particularly useful when doing multi-layer searches that include segment layers.
+As mentioned in [Searching segments within words](#searching-segments-within-words), segment layers search for individual speech sound matches and all other layers search for word matches.
+By default, multi-layer searches will look for one match per word.
+If you want the results to contain matches for every instance of a segment(s), you should click the target ![]({{ '/assets/img/target.svg' | relative_url }}){: style="height:1rem;"} for the segment input field.
 
-
-
-<!-- 
-maybe this try-it should go somewhere else
--->
 {: .try-it }
 > To generate search results with matches for both /i/ vowels in the word "really", so that every instance of "really" appears twice:
 > 1. Go to the [_search_ page](https://apls.pitt.edu/labbcat/search).
 > 1. Click the checkbox for the <span class="layer">segment</span> layer to make the segment input field appear.
 > 1. Enter `really` into the orthography input field and `i` into the segment input field.
-> 1. Click the target icon (![]({{ '/assets/img/target.svg' | relative_url }}){: style="height:1rem;"}) next to the _matches_ drop-down menu for the segment input field.
+> 1. Click the target ![]({{ '/assets/img/target.svg' | relative_url }}){: style="height:1rem;"} for the segment input field.
 > 1. Click the _Search_ button.
 >
 > If you conduct this same search with the __orthography layer__ as the target layer, you will get half the number of results because the search is only matching each instance of the word "really" once.
@@ -619,20 +626,14 @@ This allows the search function to find very specific matches based on multiple 
 > 1. Select the <span class="layer">part_of_speech</span> layer in the selection menu to make the part_of_speech pattern input field appear.
 > 1. Enter `the` in the orthography layer text field.
 > 1. Click the `+` button to make the search pattern one word wider.
-> 1. Open the drop-down menu for the second part_of_speech input field and click `VERB:` to add a regex pattern that will match all adjectival POS tags.
-> 1. Open the drop-down menu for the second segment input field and click `CONSONANT:` to add a regex pattern that will match all consonant segments.
-> 1. Click the lock (![]({{ '/assets/img/lock-unlocked.svg' | relative_url }}){: style="height:1rem;"}) icon on the left side of the second segment input field to specify that you only want to match words that begin with a consonant segment.
-> 1. Click the target icon (![]({{ '/assets/img/target.svg' | relative_url }}){: style="height:1rem;"}) for the second part_of_speech input field to select the second word as the target of your search (as opposed to targeting "the").
+> 1. Open the drop-down menu for the second part_of_speech input field and click _VERB:_ to add a regex pattern that will match all adjectival POS tags.
+> 1. Open the drop-down menu for the second segment input field and click _CONSONANT_ to add a regex pattern that will match all consonant segments.
+> 1. Click the lock ![]({{ '/assets/img/lock-unlocked.svg' | relative_url }}){: style="height:1rem;"} on the left side of the second segment input field to specify that you only want to match words that begin with a consonant segment.
+> 1. Click the target ![]({{ '/assets/img/target.svg' | relative_url }}){: style="height:1rem;"} for the second part_of_speech input field to select the second word as the target of your search (as opposed to targeting "the").
 > 1. Click the _Search_ button.
 
-<!--- old section titles (to help with updating relative links):
-## Layered search matrix
+## Tips, Tricks, and FAQ
 
-### Layer selector
+More to come in this section soon!
+Eventually it will be a big basket of random helpful notes, like that you'll have to do some trial and error, refining your search via false positives and false negatives, and maybe some troubleshooting notes.
 
-### Pattern input fields
-
-Searching text layers
-
-## Search match options
---->
