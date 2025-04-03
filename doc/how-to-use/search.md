@@ -5,7 +5,7 @@ parent: How to use APLS
 has_children: yes
 has_toc: no
 nav_order: 50
-last_modified_date: 2025-04-03T14:13:29:z
+last_modified_date: 2025-04-03T15:23:39:z
 ---
 
 # {{ page.title }}
@@ -460,11 +460,7 @@ An example is given in the try-it below using the <span class="layer">segment</s
 ## Anchoring searches
 
 Some layers contain annotations that can span multiple words or can include multiple annotations per word.
-These layers allow you to "anchor" your search pattern to match the beginning or the end of that layer's [scope]({{ '/doc/layer-typology#scope' | relative_url }}) using the lock icons.
-
-<!-- 
-make liberal use of images like the lock icon
--->
+These layers allow you to "anchor" your search pattern to match the beginning or the end of that layer's [scope]({{ '/doc/layer-typology#scope' | relative_url }}) using the lock icons (shown as unlocked when not active (![]({{ '/assets/img/lock-unlocked.svg' | relative_url }}){: style="height:1rem;"}) and locked when active (![]({{ '/assets/img/lock-locked.svg' | relative_url }}){: style="height:1rem;"})).
 
 The following [phrase layers]({{ '/doc/layer-typology#scope' | relative_url }}) layers have anchoring as their _only_ search parameter:
 - <span class="layer">turn</span>
@@ -474,13 +470,10 @@ The following [phrase layers]({{ '/doc/layer-typology#scope' | relative_url }}) 
 > To search for the word "yes" occurring at the beginning of speaker turns:
 > 1. Go to the [_search_ page](https://apls.pitt.edu/labbcat/search).
 > 1. Select the `timing` project in the layer selector and click the checkbox for the <span class="layer">turn</span> layer to make the turn input field appear.
-> 1. Click the lock icon on the left side of the turn input field.
+> 1. Click the lock (![]({{ '/assets/img/lock-unlocked.svg' | relative_url }}){: style="height:1rem;"}) icon on the left side of the turn input field.
 > 1. Enter `yes` into the orthography input field.
 > 1. Click the _Search_ button.
-
-<!-- 
-can give this more oomph by pointing out how many hits you get for "yes" without a timing layer compared to with turn anchoring
--->
+> - To compare this with the number of results for "yes" without <span class="layer">turn</span> layer anchoring, click the lock (![]({{ '/assets/img/lock-locked.svg' | relative_url }}){: style="height:1rem;"}) icon again to turn off anchoring and click the _Search_ button.
 
 The following [span layers]({{ '/doc/layer-typology#scope' | relative_url }}) have pattern input fields that are like the <span class="layer">orthography</span> layer, with the addition of anchoring options:
 - <span class="layer">comment</span>
@@ -496,18 +489,18 @@ The following [segment layers]({{ '/doc/layer-typology#scope' | relative_url }})
 > 1. Select the <span class="layer">segment</span> layer in the selection menu to make the segment pattern input field appear.
 > 1. Click the `+` button inside of the segment box to make another segment input field appear.
 > 1. Enter `s` in the first segment field and `t` in the second segment field.
-> 1. Click the lock on the right side of the segment input field.
+> 1. Click the lock (![]({{ '/assets/img/lock-unlocked.svg' | relative_url }}){: style="height:1rem;"}) icon on the right side of the segment input field.
 > 1. Click the _Search_ button.
 
 
-### Layer scope?
-#### Searching segments within words
+## Layer scope?
+### Searching segments within words
 
 The <span class="layer">segment</span> and <span class="layer">foll_segment</span> layers are similar to [phonological layers](#phonological-layers), but they have two additional features: 
 - They look for matches at the segment level, instead of at the word level.
 - They can be used to create within-word patterns.
 
-##### Searching for a single segment
+#### Searching for a single segment
 
 The difference between matching to segments and matching to words is that segments don't need to have their surrounding context defined.
 For instance, if you wanted to search for every instance of /j/ using the <span class="layer">phonemes</span> layer, you would need to enter the regex `.*j.*` to find words containing /j/.
@@ -523,7 +516,7 @@ not sure how I feel about the wording of this explanation.
 > 1. Click the drop-down menu button (![]({{ '/assets/img/expand-down.svg' | relative_url }}){: style="height:1rem;"}) and select `ɔɪ` from the `DIPHTHONGS` section.
 > 1. Click the _Search_ button.
 
-##### Searching for multiple segments within a word
+#### Searching for multiple segments within a word
 
 Next to the the drop-down menu button (![]({{ '/assets/img/expand-down.svg' | relative_url }}){: style="height:1rem;"}) for the <span class="layer">segment</span> and <span class="layer">foll_segment</span> layers is a `+` button.
 Clicking the `+` button on the right side of the segment input field adds another input field for the segment that immediately follows the previous segment.
@@ -548,7 +541,7 @@ This will not affect the number of matches that are found, but it will affect wh
 
 
 
-### Searching multiple words
+## Searching multiple words
 
 <!-- 
 should also discuss targeting here because it is relevant to what gets matched.
@@ -573,7 +566,7 @@ Clicking the `-` button makes your search narrower by removing a word from your 
 > 1. Enter `not` in the first orthography layer text field and enter `even` in the second orthography layer text field.
 > 1. Click the _Search_ button.
 
-### Searching multiple layers
+## Searching multiple layers
 
 <!-- 
 Say more stuff here.
@@ -602,7 +595,7 @@ maybe this try-it should go somewhere else
 >
 > If you conduct this same search with the __orthography layer__ as the target layer, you will get half the number of results because the search is only matching each instance of the word "really" once.
 
-### Searching multiple words and multiple layers
+## Searching multiple words and multiple layers
 
 Because the _search_ page uses a matrix of expressions to find search matches, searches can be simple (one word wide and one layer deep) or complex (multiple words wide and multiple layers deep).
 This allows the search function to find very specific matches based on multiple different criteria.
@@ -616,7 +609,7 @@ This allows the search function to find very specific matches based on multiple 
 > 1. Click the `+` button to make the search pattern one word wider.
 > 1. Open the drop-down menu for the second part_of_speech input field and click `VERB:` to add a regex pattern that will match all adjectival POS tags.
 > 1. Open the drop-down menu for the second segment input field and click `CONSONANT:` to add a regex pattern that will match all consonant segments.
-> 1. Click the lock button on the left side of the second segment input field to specify that you only want to match words that begin with a consonant segment.
+> 1. Click the lock (![]({{ '/assets/img/lock-unlocked.svg' | relative_url }}){: style="height:1rem;"}) icon on the left side of the second segment input field to specify that you only want to match words that begin with a consonant segment.
 > 1. Click the target icon (![]({{ '/assets/img/target.svg' | relative_url }}){: style="height:1rem;"}) for the second part_of_speech input field to select the second word as the target of your search (as opposed to targeting "the").
 > 1. Click the _Search_ button.
 
