@@ -5,7 +5,7 @@ parent: How to use APLS
 has_children: yes
 has_toc: no
 nav_order: 50
-last_modified_date: 2025-04-03T17:26:53:z
+last_modified_date: 2025-04-07T19:06:28:z
 ---
 
 # {{ page.title }}
@@ -32,7 +32,7 @@ If you are looking for information on the search results page, go to the [Export
 ## What you can do on the _search_ page
 
 The _search_ page allows you to...
-- [Search APLS data for specific patterns](#layered-search-matrix).
+- [Search APLS data for specific patterns](#your-first-search).
   - These patterns can target: 
     - [single words](#searching-text-layers)
       
@@ -42,8 +42,8 @@ The _search_ page allows you to...
       > 1. Enter `pittsburgh` into the orthography input field.
       > 1. Click the _Search_ button.
       
-    - [phonological and syntactic features](#searching-phonological-and-syntactic-layers)
-      - Such as finding [syllables with specific stress](#phonological-layers) or [all words tagged as a certain part-of-speech](#syntactic-layers).
+    - [part-of-speech tags](#using-part-of-speech-tags)
+    - [phonological features](#searching-phonological-layers)
     - [segments within words](#searching-segments-within-words)
       - Such as finding [all instances of a specific vowel](#searching-for-a-single-segment) or [all instances of a consonant cluster](#searching-for-multiple-segments-within-a-word).
     - [multiple words](#searching-multiple-words)
@@ -51,17 +51,22 @@ The _search_ page allows you to...
       - Such as finding [a specific word tagged as a certain part-of-speech](#searching-multiple-layers).
     - [multiple words and layers](#searching-multiple-words-and-layers)
 - [Filter searches by specific participants and transcripts](#participants-and-transcripts-filters).
-- Configure your search with different [match and display options](#match-and-display-options).
+- Configure your search with different [search options](#search-options).
 
 ### Layout
 
-There are four main sections of the _search_ page, from top to bottom:
+<!-- 
+this is one section in particular that will need to be updated with the new search page UI
+-->
+
+There are five main sections of the _search_ page:
 1. [Participants and transcripts filters](#participants-and-transcripts-filters)
-1. [Layered search matrix](#layered-search-matrix)
-1. [Match and display options](#match-and-display-options)
+1. [Search options](#search-options)
+1. [Layer selector](#selecting-other-layers-to-search)
+1. [Pattern input fields](#your-first-search)
 1. [Search progress bar](#search-matches)
 
-Only the first three sections are displayed when you first load the _search_ page, as shown in the screengrab below.
+Only the first four sections are displayed when you first load the _search_ page, as shown in the screengrab below.
 
 ![]({{ '/assets/screengrab/search/search-page-layout1.png' | relative_url }})
 
@@ -96,7 +101,7 @@ Certain layers have a target icon (![]({{ '/assets/img/target.svg' | relative_ur
 The target (![]({{ '/assets/img/target.svg' | relative_url }}){: style="height:1rem;"}) option is mostly useful for [searching multiple words](#searching-multiple-words), [searching within words](#searching-segments-within-words), [searching multiple layers](#searching-multiple-layers), and [searching multiple words and multiple layers](#searching-multiple-words-and-multiple-layers).
 
 The _matches_ drop-down menu is located below the layer name of the input field.
-The _matches_ and _doesn't match_ options are most powerful when used with more complex searches, as explained in [Searching with the _matches_ drop-down menu](#searching-with-the-matches-menu).
+The _matches_ and _doesn't match_ options are most powerful when used with more complex searches, as explained in [Searching with the _matches_ drop-down menu](#searching-with-the-matches-drop-down-menu).
 
 This drop-down menu lets you select whether the search will identify annotations that match your input pattern or annotations that don't match your input pattern.
 
@@ -286,7 +291,7 @@ To make more [layers]({{ '/doc/layer-typology' | relative_url }}) appear, you ha
 {: .under-the-hood }
 > The <span class="layer">orthography</span>, <span class="layer">word</span>, and <span class="layer">segment</span> layers are displayed without selecting any projects because these layers are not associated with a project.
 
-Selecting a layer in the layer selector will make an input field for that layer appear in the [pattern input fields](#pattern-input-fields) section.
+Selecting a layer in the layer selector will make a [pattern input field](#your-first-search) for that layer appear.
 
 {:.note}
 > If you select a layer but don't enter anything into its pattern input field, it doesn't get applied to the search.
