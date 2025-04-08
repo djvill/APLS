@@ -5,7 +5,7 @@ parent: How to use APLS
 has_children: yes
 has_toc: no
 nav_order: 50
-last_modified_date: 2025-04-07T19:06:28:z
+last_modified_date: 2025-04-07T20:10:32:z
 ---
 
 # {{ page.title }}
@@ -206,64 +206,6 @@ A regular expression (or 'regex') is a way of finding a pattern in a string of t
 In regular expressions, letters and numbers are literal characters that match themselves -- the regex `apples` will match the literal text "apples".
 
 What makes regular expressions more powerful than normal searches are metacharacters that have special functions.
-Some of the most useful metacharacters (and their functions) for searching APLS are:
-- `.` (matches any character)
-
-  {: .try-it }
-  > To find every 14 letter word in APLS:
-  > 1. Go to the [_search_ page](https://apls.pitt.edu/labbcat/search).
-  > 1. Enter `..............` into the orthography input field.
-  > 1. Click the _Search_ button.
-  
-- `?` (makes the previous character optional; i.e. it can occur 0 or 1 times)
-  
-  {: .try-it }
-  > To search for every instance of "pirate" and "pirates":
-  > 1. Go to the [_search_ page](https://apls.pitt.edu/labbcat/search).
-  > 1. Enter `pirate(s)?` into the orthography input field.
-  >   1. The parentheses around `s` aren't strictly necessary, but they help clarify what is being targeted by `?`.
-  > 1. Click the _Search_ button.
-
-- `+` (lets the previous character repeat; i.e. it can occur 1 or more times)
-  
-  {: .try-it }
-  > To search for every word that has the "-ition" affix as a morpheme:
-  > 1. Go to the [_search_ page](https://apls.pitt.edu/labbcat/search).
-  > 1. Select the `lexicon` project in the layer selector and click the checkbox for the <span class="layer">morphemes</span> layer to make the turn input field appear.
-  > 1. Enter `.+ition` into the morphemes input field.
-  > 1. Click the _Search_ button.
-  
-- `*` (lets the previous character be optional or repeat; i.e. it can occur any number of times, including 0)
-  
-  {: .try-it }
-  > To search for every word that begins with "pittsburgh", including the word "pittsburgh" itself:
-  > 1. Go to the [_search_ page](https://apls.pitt.edu/labbcat/search).
-  > 1. Enter `pittsburgh.*` into the orthography input field.
-  > 1. Click the _Search_ button.
-
-- `()` (causes the characters in the brackets to be treated as a unit)
-
-  {: .try-it }
-  > To search for every instance of "pittsburgh" and "pittsburghese":
-  > 1. Go to the [_search_ page](https://apls.pitt.edu/labbcat/search).
-  > 1. Enter `pittsburgh(ese)?` into the orthography input field.
-  > 1. Click the _Search_ button.
-
-- `[]` (matches any characters inside the brackets)
-
-  {: .try-it }
-  > To search for every instance of "don't" and "won't":
-  > 1. Go to the [_search_ page](https://apls.pitt.edu/labbcat/search).
-  > 1. Enter `[dw]on't` into the orthography input field.
-  > 1. Click the _Search_ button.
-
-- `|` (lets the search match the pattern on either side of the vertical bar)
-
-  {: .try-it }
-  > To search for every instance of "steeler" and "penguin":
-  > 1. Go to the [_search_ page](https://apls.pitt.edu/labbcat/search).
-  > 1. Enter `steeler|penguin` into the orthography input field.
-  > 1. Click the _Search_ button.
 
 {:.note}
 > If you're familiar with regular expressions, then you may know that `^` and `$` can be used to anchor matches to the start and end of the pattern. 
@@ -272,6 +214,39 @@ Some of the most useful metacharacters (and their functions) for searching APLS 
 >
 > A separate but related topic is anchoring a search match to a larger annotation, such as finding words at the start of a turn. 
 > This is covered in the [Anchoring searches](#anchoring-searches) section of this page.
+
+Some useful metacharacters, and their meanings, for searching APLS are:
+
+| Metacharacter | Meaning |
+|-------|---------|
+| `.`  | Any single character |
+| `?` | The character before `?` is optional; i.e. it can occur 0 or 1 times |
+| `+`  | The character before `+` can repeat; i.e. it can occur 1 or more times |
+| `*`  | The character before `*` can be optional or repeat; i.e. it can occur any number of times, including 0 |
+| `()`  | Characters inside the parentheses are treated as a unit |
+| `[]`  | Any characters inside the brackets are possible matches |
+| `|`  | The search can match the pattern on either side of the vertical bar |
+| `\`  | The character after `\` is **not** treated as a metacharacter; i.e., the character is treated literally |
+
+{:.note}
+> Because of the [notation systems used by certain layers]({{ '/doc/layer-typology#notation-system' | relative_url }}), the characters in APLS that you may need to use `\` to match literally are: `+` (morpheme boundaries), `.` (short pause), `-` (long pause and syllable boundaries), `?` (question marker), `{` and `$` (DISC vowels), and `$` (used in part-of-speech tags).
+
+The table below gives some examples of how characters and metacharacters can be combined to form regex search patterns:
+
+| Pattern | What it will match |
+|-------|---------|
+| `do.`  | Any three-letter word that begins with `do` |
+| `pittsburgh(ese)?`  | The word `pittsburgh` or the word `pittsburghese` |
+| `pittsburgh.+`  | Any word that begins with `pittsburgh`, **not** including the word `pittsburgh` |
+| `pittsburgh.*`  | Any word that begins with `pittsburgh`, including the word `pittsburgh` |
+| `[dw]on't`  | The word `don't` or the word `won't` |
+| `steeler|penguin`  | The word `steeler` or the word `penguin` |
+
+{: .try-it }
+> To search for every instance of "town", "downtown", and "hometown":
+> 1. Go to the [_search_ page](https://apls.pitt.edu/labbcat/search).
+> 1. Enter `(down|home)?town` into the orthography input field.
+> 1. Click the _Search_ button.
 
 More information about using regular expressions with APLS can be found on the [Regular expressions]({{ '/doc/regex' | relative_url }}) documentation page.
 
