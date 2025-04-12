@@ -5,7 +5,7 @@ parent: How to use APLS
 has_children: yes
 has_toc: no
 nav_order: 50
-last_modified_date: 2025-04-12T15:53:35:z
+last_modified_date: 2025-04-12T17:16:42:z
 ---
 
 # {{ page.title }}
@@ -43,7 +43,7 @@ The _search_ page allows you to...
       > 1. Click the _Search_ button.
       
     - [part-of-speech tags]({{ '/doc/searching-other-layers#using-part-of-speech-tags' | relative_url }})
-    - [phonological features]({{ '/doc/searching-other-layers#searching-phonological-layers | relative_url }})
+    - [phonological features]({{ '/doc/searching-other-layers#searching-phonological-layers' | relative_url }})
     - [segments within words]({{ '/doc/searching-segments-within-words' | relative_url }})
       - Such as finding [all instances of a specific vowel]({{ '/doc/searching-segments-within-words#searching-for-a-single-segment' | relative_url }}) or [all instances of a consonant cluster]({{ '/doc/searching-segments-within-words#searching-for-multiple-segments-within-a-word' | relative_url }}).
     - [multiple words]({{ '/doc/searching-complex-patterns#searching-multiple-words' | relative_url }})
