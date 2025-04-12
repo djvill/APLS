@@ -4,7 +4,7 @@ permalink: /doc/regex
 parent: Searching the corpus
 grand_parent: How to use APLS
 nav_order: 30
-last_modified_date: 2025-04-12T15:53:35:z
+last_modified_date: 2025-04-12T17:08:38:z
 ---
 
 # {{ page.title }}
@@ -65,4 +65,42 @@ The table below gives some examples of how characters and metacharacters can be 
 > To search for every instance of "town", "downtown", and "hometown":
 > 1. Go to the [_search_ page](https://apls.pitt.edu/labbcat/search).
 > 1. Enter `(down|home)?town` into the orthography input field.
+> 1. Click the _Search_ button.
+
+## Practicing regex in APLS
+
+<!-- 
+I have a note from the recent meeting that says "Flesh out regex page" but I can't remember how it was supposed to be fleshed out.
+This is the best I was able to come up with
+-->
+
+Now that you're familiar with some of the most useful regex characters, it's time for you to try searching APLS with regex patterns on your own!
+You can find some practice search questions below, with solutions included as `TRY IT!`s.
+
+- How would you find all words that start with vowels that are at least 2 letters long?
+
+{: .try-it }
+> 1. Go to the [_search_ page](https://apls.pitt.edu/labbcat/search).
+> 1. Enter `[aeiou].+` into the orthography input field.
+> 1. Click the _Search_ button.
+
+- How would you find all words that end with either _-ing_ or _-ize_?
+
+{: .try-it }
+> 1. Go to the [_search_ page](https://apls.pitt.edu/labbcat/search).
+> 1. Enter `.+i(ng|ze)` into the orthography input field.
+> 1. Click the _Search_ button.
+
+- How would you find all words that have three consecutive orthographic vowels?
+
+{: .try-it }
+> 1. Go to the [_search_ page](https://apls.pitt.edu/labbcat/search).
+> 1. Enter `.*[aeiou][aeiou][aeiou].*` into the orthography input field.
+> 1. Click the _Search_ button.
+
+- How would you find all words that start with _q_ or end with _x_, excluding instances of _q_ and _x_ on their own?
+
+{: .try-it }
+> 1. Go to the [_search_ page](https://apls.pitt.edu/labbcat/search).
+> 1. Enter `q.+|.+x` into the orthography input field.
 > 1. Click the _Search_ button.
