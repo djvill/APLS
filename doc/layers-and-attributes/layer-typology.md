@@ -3,7 +3,7 @@ title: Layer typology
 permalink: /doc/layer-typology
 parent: Layers and attributes
 nav_order: 10
-last_modified_date: 2025-03-24T12:22:15-04:00
+last_modified_date: 2025-04-01T12:14:30-04:00
 ---
 
 # Layers: {{ page.title }}
@@ -197,26 +197,26 @@ This distinction is mostly important for [search]({{ '/doc/search' | relative_ur
 
 While [data type](#data-type) describes the _kinds_ of annotation that different layers contain, <span class="keyterm">notation systems</span> are what those annotations actually _look like_.
 In other words, notation systems are the _details_ of how layers represent their data.
-For example, the <span class="layer">phonemes</span> layer represents speech sounds as symbols in the [DISC phonemic alphabet]({{ '/doc/notation-systems#disc-alphabet' | relative_url }}), such as `fIS` for the word _fish_.
+For example, the <span class="layer">phonemes</span> layer represents speech sounds as symbols in the [DISC phonemic alphabet]({{ '/doc/layer-notation-systems#disc-alphabet' | relative_url }}), such as `fIS` for the word _fish_.
 
 Almost all layers have a <span class="keyterm">primary notation system</span>.
 (The exceptions are the <span class="keyterm">timing-only layers</span>, since their annotations don't have labels---see [above](#data-type).)
 Some layers have <span class="keyterm">additional notations</span>, depending on what their annotations need to represent.
-For example, the <span class="layer">syllables</span> layer uses the [DISC phonemic alphabet]({{ '/doc/notation-systems#disc-alphabet' | relative_url }}) for speech sounds _plus_ [stress markers]({{ '/doc/notation-systems#disc-extensions' | relative_url }}) for stress, such as `'fIS` for the word _fish_.
+For example, the <span class="layer">syllables</span> layer uses the [DISC phonemic alphabet]({{ '/doc/layer-notation-systems#disc-alphabet' | relative_url }}) for speech sounds _plus_ [stress markers]({{ '/doc/layer-notation-systems#disc-extensions' | relative_url }}) for stress, such as `'fIS` for the word _fish_.
 Some additional notations are only used for a single layer, such as the morpheme boundary (`+`) for <span class="layer">morphemes</span>.
 
-Here are brief descriptions of primary notation systems, with links to more details on the [notation systems]({{ '/doc/notation-systems' | relative_url }}) page if applicable:
+Here are brief descriptions of primary notation systems, with links to more details on the [notation systems]({{ '/doc/layer-notation-systems' | relative_url }}) page if applicable:
 
 | Data type    | Primary notation | Description       |
 |--------------|------------------|-------------------|
-| Phonological | [DISC]({{ '/doc/notation-systems#disc-alphabet' | relative_url }}) | DISC phonemic alphabet |
-| Phonological | [Stress markers]({{ '/doc/notation-systems#disc-extensions' | relative_url }}) | `'` (primary stress)<br>`"` (secondary stress)<br>`0` (unstressed) |
+| Phonological | [DISC]({{ '/doc/layer-notation-systems#disc-alphabet' | relative_url }}) | DISC phonemic alphabet |
+| Phonological | [Stress markers]({{ '/doc/layer-notation-systems#disc-extensions' | relative_url }}) | `'` (primary stress)<br>`"` (secondary stress)<br>`0` (unstressed) |
 | Numeric      | Count            | Positive whole numbers |
 | Numeric      | Decimal          | Decimal numbers |
 | Text         | Boolean          | `True` or `False` |
-| Text         | [English spelling]({{ '/doc/notation-systems#english-spelling' | relative_url }}) | |
-| Text         | [English spelling]({{ '/doc/notation-systems#english-spelling' | relative_url }}) (lowercase) | |
-| Text         | [Treebank part-of-speech tags]({{ '/doc/notation-systems#treebank-pos' | relative_url }}) | |
+| Text         | [English spelling]({{ '/doc/layer-notation-systems#english-spelling' | relative_url }}) | |
+| Text         | [English spelling]({{ '/doc/layer-notation-systems#english-spelling' | relative_url }}) (lowercase) | |
+| Text         | [Treebank part-of-speech tags]({{ '/doc/layer-notation-systems#treebank-pos' | relative_url }}) | |
 | Timing-only  | (none)           | By definition, timing-only layers don't have labels |
 {: .layer-props .no-keyterm }
 
@@ -224,12 +224,12 @@ Here are additional notations:
 
 | Data type    | Additional notation | Brief description |
 |--------------|---------------------|-------------------|
-| Phonological | [DISC pause]({{ '/doc/notation-systems#disc-extensions' | relative_url }}) | `.`               |
-| Phonological | [Stress markers]({{ '/doc/notation-systems#disc-extensions' | relative_url }}) | `'` (primary stress)<br>`"` (secondary stress)<br>`0` (unstressed) |
-| Phonological | [Syllable boundary]({{ '/doc/notation-systems#disc-extensions' | relative_url }}) | `-` |
-| Text         | [Hesitation marker]({{ '/doc/notation-systems#transcription' | relative_url }})   | `~` (at the end of an incomplete word) |
-| Text         | [Transcription pause/question markers]({{ '/doc/notation-systems#transcription' | relative_url }}) | `.` (short pause)<br>`-` (long pause)<br>`?` (question) |
-| Text         | [Redaction marker]({{ '/doc/notation-systems#transcription' | relative_url }})   | `___` |
+| Phonological | [DISC pause]({{ '/doc/layer-notation-systems#disc-extensions' | relative_url }}) | `.`               |
+| Phonological | [Stress markers]({{ '/doc/layer-notation-systems#disc-extensions' | relative_url }}) | `'` (primary stress)<br>`"` (secondary stress)<br>`0` (unstressed) |
+| Phonological | [Syllable boundary]({{ '/doc/layer-notation-systems#disc-extensions' | relative_url }}) | `-` |
+| Text         | [Hesitation marker]({{ '/doc/layer-notation-systems#transcription' | relative_url }})   | `~` (at the end of an incomplete word) |
+| Text         | [Transcription pause/question markers]({{ '/doc/layer-notation-systems#transcription' | relative_url }}) | `.` (short pause)<br>`-` (long pause)<br>`?` (question) |
+| Text         | [Redaction marker]({{ '/doc/layer-notation-systems#transcription' | relative_url }})   | `___` |
 | Text         | Morpheme boundary   | `+` |
 {: .layer-props .no-keyterm }
 

@@ -3,7 +3,7 @@ title: Layers and attributes
 permalink: /doc/layers-and-attributes
 has_toc: no
 nav_order: 30
-last_modified_date: 2025-03-11T15:08:24-04:00
+last_modified_date: 2025-04-01T12:14:30-04:00
 ---
 
 # {{ page.title }}
@@ -19,7 +19,7 @@ Attributes aren't nearly as complicated as layers, but you can use them for filt
 The pages in this section break down how layers and attributes work:
 
 1. A [typology of layers]({{ '/doc/layer-typology' | relative_url }}) with the fundamentals of how layers work (such as the difference between <span class="keyterm">word layers</span> and <span class="keyterm">segment layers</span>) and how you can interact with them in APLS.
-1. A rundown of [layer notation systems]({{ '/doc/layer-notation-systems' | relative_url }}) so you can decode the symbols that different layers use, such as the [DISC phonemic alphabet]({{ '/doc/notation-systems#disc-phonemic-alphabet' | relative_url }}).
+1. A rundown of [layer notation systems]({{ '/doc/layer-notation-systems' | relative_url }}) so you can decode the symbols that different layers use, such as the [DISC phonemic alphabet]({{ '/doc/layer-notation-systems#disc-phonemic-alphabet' | relative_url }}).
 1. A [typology of attributes]({{ '/doc/attribute-typology' | relative_url }}) that breaks down how attributes work.
 1. Detailed [field guides]({{ '/doc/detailed-field-guides' | relative_url }}) that contain all the information you need to know about each layer and attribute.
 1. [Quick reference cards]({{ '/doc/quick-reference-cards' | relative_url }}) that are useful for refreshing your memory about how each layer and attribute works.
