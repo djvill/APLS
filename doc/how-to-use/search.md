@@ -5,7 +5,7 @@ parent: How to use APLS
 has_children: yes
 has_toc: no
 nav_order: 50
-last_modified_date: 2025-04-12T17:16:42:z
+last_modified_date: 2025-04-13T14:45:50:z
 ---
 
 # {{ page.title }}
@@ -52,6 +52,13 @@ The _search_ page allows you to...
     - [multiple words and layers]({{ '/doc/searching-complex-patterns#searching-multiple-words-and-layers' | relative_url }})
 - [Filter searches by specific participants and transcripts]({{ '/doc/search-filters-and-options' | relative_url }})
 - Configure your search with different [search options]({{ '/doc/search-filters-and-options' | relative_url }})
+
+<!-- 
+I have two notes that I *think* are possible ideas for the search gallery that will go on this page?
+1. searching orthography for matches of `.*ing` and part_of_speech for non-matches of `VBG`
+2. searching orthography for matches of `.*a.*` and phonemes for non-matches of `.*[1@Q\$\{#].*`
+these could also go on the "Searching complex patterns" page but that already has a lot of try-its
+-->
 
 ### Layout
 
