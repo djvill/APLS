@@ -1,10 +1,10 @@
 ---
-title: Your first search
+title: Your first search - Orthography
 permalink: /doc/your-first-search
 parent: Searching the corpus
 grand_parent: How to use APLS
 nav_order: 10
-last_modified_date: 2025-04-12T15:53:35:z
+last_modified_date: 2025-04-15T13:11:29:z
 ---
 
 # {{ page.title }}

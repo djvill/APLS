@@ -5,7 +5,7 @@ parent: How to use APLS
 has_children: yes
 has_toc: no
 nav_order: 50
-last_modified_date: 2025-04-13T14:45:50:z
+last_modified_date: 2025-04-15T13:11:29:z
 ---
 
 # {{ page.title }}
@@ -35,13 +35,6 @@ The _search_ page allows you to...
 - [Search APLS data for specific patterns]({{ '/doc/your-first-search' | relative_url }}).
   - These patterns can target: 
     - [single words]({{ '/doc/searching-other-layers#searching-text-layers' | relative_url }})
-      
-      {: .try-it }
-      > To search for every instance of the word "pittsburgh" in APLS:
-      > 1. Go to the [_search_ page](https://apls.pitt.edu/labbcat/search).
-      > 1. Enter `pittsburgh` into the orthography input field.
-      > 1. Click the _Search_ button.
-      
     - [part-of-speech tags]({{ '/doc/searching-other-layers#using-part-of-speech-tags' | relative_url }})
     - [phonological features]({{ '/doc/searching-other-layers#searching-phonological-layers' | relative_url }})
     - [segments within words]({{ '/doc/searching-segments-within-words' | relative_url }})
