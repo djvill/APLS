@@ -64,6 +64,7 @@ Milliones
 Millvale
 Mon
 Monessen
+Monongahela
 Monroeville
 Montefiore
 Morganza
@@ -187,6 +188,7 @@ Hermanowski's
 Highmark
 Isaly's
 Italiana
+Kinko's
 Klavon's
 Koppers
 Loews
@@ -252,7 +254,9 @@ great-grandparents
 Grier
 gummies
 homeschool
+howitzers
 humongous
+igniters
 impatien
 impatiens
 jitney

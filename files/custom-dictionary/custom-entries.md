@@ -4,7 +4,7 @@ layout: default
 permalink: /files/custom-entries
 parent: Custom dictionary
 search_exclude: true
-last_modified_date: 2025-03-28T11:11:01-04:00
+last_modified_date: 2025-04-16T11:46:10-04:00
 ---
 
 # {{ page.title }}
@@ -82,6 +82,7 @@ These custom entries just fill in the gaps.
 - Millvale
 - Mon
 - Monessen
+- Monongahela
 - Monroeville
 - Montefiore
 - Morganza
@@ -205,6 +206,7 @@ These custom entries just fill in the gaps.
 - Highmark
 - Isaly's
 - Italiana
+- Kinko's
 - Klavon's
 - Koppers
 - Loews
@@ -270,7 +272,9 @@ These custom entries just fill in the gaps.
 - Grier
 - gummies
 - homeschool
+- howitzers
 - humongous
+- igniters
 - impatien
 - impatiens
 - jitney
