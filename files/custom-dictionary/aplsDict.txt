@@ -46,7 +46,7 @@ Karns
 Kedron
 Kennard
 Kennywood
-Kittaning
+Kittanning
 Larimer
 Lawrenceville
 Leetsdale
@@ -163,6 +163,7 @@ yinzers
 
 
 ## Company/brand names (local or otherwise)
+Allis-Chalmers
 Amiesite
 Ammon
 Applebee
@@ -354,6 +355,7 @@ mic
 microbrew
 microbrews
 mics
+mid-fifties
 nickelodeons
 out-migration
 Pittsburghy
@@ -372,6 +374,7 @@ sucky
 there're
 treaters
 underwears
+Wigilia
 wouldn't've
 Zehner
 

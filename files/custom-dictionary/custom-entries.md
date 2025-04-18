@@ -4,7 +4,7 @@ layout: default
 permalink: /files/custom-entries
 parent: Custom dictionary
 search_exclude: true
-last_modified_date: 2025-04-16T11:46:10-04:00
+last_modified_date: 2025-04-18T11:45:59-04:00
 ---
 
 # {{ page.title }}
@@ -64,7 +64,7 @@ These custom entries just fill in the gaps.
 - Kedron
 - Kennard
 - Kennywood
-- Kittaning
+- Kittanning
 - Larimer
 - Lawrenceville
 - Leetsdale
@@ -181,6 +181,7 @@ These custom entries just fill in the gaps.
 {:.wrap .fb-10}
 
 ## Company/brand names (local or otherwise)
+- Allis-Chalmers
 - Amiesite
 - Ammon
 - Applebee
@@ -372,6 +373,7 @@ These custom entries just fill in the gaps.
 - microbrew
 - microbrews
 - mics
+- mid-fifties
 - nickelodeons
 - out-migration
 - Pittsburghy
@@ -390,6 +392,7 @@ These custom entries just fill in the gaps.
 - there're
 - treaters
 - underwears
+- Wigilia
 - wouldn't've
 - Zehner
 {:.wrap .fb-10}
