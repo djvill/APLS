@@ -4,7 +4,7 @@ layout: default
 permalink: /files/custom-entries
 parent: Custom dictionary
 search_exclude: true
-last_modified_date: 2025-03-28T19:46:05:z
+last_modified_date: 2025-04-18T19:19:33:z
 ---
 
 # {{ page.title }}
@@ -64,7 +64,7 @@ These custom entries just fill in the gaps.
 - Kedron
 - Kennard
 - Kennywood
-- Kittaning
+- Kittanning
 - Larimer
 - Lawrenceville
 - Leetsdale
@@ -82,6 +82,7 @@ These custom entries just fill in the gaps.
 - Millvale
 - Mon
 - Monessen
+- Monongahela
 - Monroeville
 - Montefiore
 - Morganza
@@ -180,6 +181,7 @@ These custom entries just fill in the gaps.
 {:.wrap .fb-10}
 
 ## Company/brand names (local or otherwise)
+- Allis-Chalmers
 - Amiesite
 - Ammon
 - Applebee
@@ -205,6 +207,7 @@ These custom entries just fill in the gaps.
 - Highmark
 - Isaly's
 - Italiana
+- Kinko's
 - Klavon's
 - Koppers
 - Loews
@@ -270,7 +273,9 @@ These custom entries just fill in the gaps.
 - Grier
 - gummies
 - homeschool
+- howitzers
 - humongous
+- igniters
 - impatien
 - impatiens
 - jitney
@@ -368,6 +373,7 @@ These custom entries just fill in the gaps.
 - microbrew
 - microbrews
 - mics
+- mid-fifties
 - nickelodeons
 - out-migration
 - Pittsburghy
@@ -386,6 +392,7 @@ These custom entries just fill in the gaps.
 - there're
 - treaters
 - underwears
+- Wigilia
 - wouldn't've
 - Zehner
 {:.wrap .fb-10}

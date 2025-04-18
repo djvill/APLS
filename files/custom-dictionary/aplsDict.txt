@@ -46,7 +46,7 @@ Karns
 Kedron
 Kennard
 Kennywood
-Kittaning
+Kittanning
 Larimer
 Lawrenceville
 Leetsdale
@@ -64,6 +64,7 @@ Milliones
 Millvale
 Mon
 Monessen
+Monongahela
 Monroeville
 Montefiore
 Morganza
@@ -162,6 +163,7 @@ yinzers
 
 
 ## Company/brand names (local or otherwise)
+Allis-Chalmers
 Amiesite
 Ammon
 Applebee
@@ -187,6 +189,7 @@ Hermanowski's
 Highmark
 Isaly's
 Italiana
+Kinko's
 Klavon's
 Koppers
 Loews
@@ -252,7 +255,9 @@ great-grandparents
 Grier
 gummies
 homeschool
+howitzers
 humongous
+igniters
 impatien
 impatiens
 jitney
@@ -350,6 +355,7 @@ mic
 microbrew
 microbrews
 mics
+mid-fifties
 nickelodeons
 out-migration
 Pittsburghy
@@ -368,6 +374,7 @@ sucky
 there're
 treaters
 underwears
+Wigilia
 wouldn't've
 Zehner
 
