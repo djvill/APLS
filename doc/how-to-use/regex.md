@@ -4,7 +4,7 @@ permalink: /doc/regex
 parent: Searching the corpus
 grand_parent: How to use APLS
 nav_order: 30
-last_modified_date: 2025-04-15T20:52:20:z
+last_modified_date: 2025-04-18T19:54:18:z
 ---
 
 # {{ page.title }}
@@ -32,7 +32,7 @@ If you are...
 
 | Character | Meaning |
 |-------|---------|
-| Letter & numbers <br> (`A`-`z`, `1`-`9`) | Themselves |
+| Letter & numbers (`A`-`Z`, `a`-`z`, `0`-`9`) | Themselves |
 | `.`  | Any single character |
 | `?` | The character before `?` is optional; i.e. it can occur 0 or 1 times |
 | `+`  | The character before `+` can repeat; i.e. it can occur 1 or more times |
@@ -43,8 +43,7 @@ If you are...
 | `ab|cd`  | Match `ab` _or_ `cd` |
 | `\`  | The character after `\` is **not** treated as a metacharacter; i.e., the character is treated literally |
 
-{:.note .no-collapse}
-> Because of the [notation systems used by certain layers]({{ '/doc/layer-typology#notation-system' | relative_url }}), the characters in APLS that you may need to use `\` to match literally are: `+` (morpheme boundaries), `.` (short pause), `-` (long pause and syllable boundaries), `?` (question marker), `{` and `$` (DISC vowels), and `$` (used in part-of-speech tags).
+Because of the [notation systems used by certain layers]({{ '/doc/layer-typology#notation-system' | relative_url }}), the characters in APLS that you may need to use `\` to match literally are: `+` (morpheme boundaries), `.` (short pause), `-` (long pause and syllable boundaries), `?` (question marker), `{` and `$` (DISC vowels), and `$` (used in part-of-speech tags).
 
 {:.note .no-collapse}
 > If you have a regex with an open parenthesis/bracket that hasn't been escaped with `\`, the regex will be highlighted in red and you will get an error message if you click the _Search_ button.
@@ -56,6 +55,7 @@ These are the patterns you're most likely to need when searching APLS:
 - Dot-asterisk (`.*`): Match anything or nothing
 - Dot-plus (`.+`): Match one or more of any character (doesn't have to be the same character)
 - Square brackets (`[]`): Match one of the characters in the brackets
+- Inverted square brackets (`[^]`): Match anything other than the characters in the brackets
 - Vertical pipe (`|`): Match one of the strings on either side of the pipe
 
 ### Dot-asterisk (`.*`)
@@ -91,9 +91,12 @@ The characters within the brackets are a <span class="keyterm">character set</sp
 |---------|-------------|----------|
 | `do[tg]` | Any 3-letter word that starts with `do` and ends with `t` _or_ `g` | <span class="goodex">dot</span> <span class="goodex">dog</span><br> <span class="badex">do</span> <span class="badex">doe</span> <span class="badex">dotted</span>  |
 | `[dw]on't`  | Any 4-letter word that starts with `d` _or_ `w` and ends with `on't` | <span class="goodex">don't</span> <span class="goodex">won't</span><br><span class="badex">donut</span> <span class="badex">want</span> |
-| `.*[oa][td]`  | Any word that ends with `o` _or_ `u` followed by `t` _or_ `d` | <span class="goodex">cot</span> <span class="goodex">glad</span> <span class="goodex">float</span><br><span class="badex">cost</span> <span class="badex">cots</span> |
+| `.*[oa][td]`  | Any word that ends with `o` _or_ `a` followed by `t` _or_ `d` | <span class="goodex">cot</span> <span class="goodex">glad</span> <span class="goodex">float</span><br><span class="badex">cost</span> <span class="badex">cots</span> <span class="badex">cut</span> |
 
-Square brackets can also be modified with `^` to match anything _other_ than the characters in the brackets.
+### Inverted square brackets (`[^]`)
+
+Square brackets can be inverted with `^` to match anything _other_ than the characters in the brackets.
+Inverted square brackets will still only match a single character, similar to normal square brackets.
 
 | Pattern | Explanation | Examples |
 |---------|-------------|----------|
@@ -108,7 +111,7 @@ These can be useful when you'd like to find multiple words with the same search.
 | Pattern | Explanation | Examples |
 |---------|-------------|----------|
 | `steeler|penguin` | The word `steeler` _or_ the word `penguin` | <span class="goodex">steeler</span> <span class="goodex">penguin</span> <br><span class="badex">steel</span> <span class="badex">penguins</span> <span class="badex">pirate</span>  |
-| `steel.*|pen.*` | Any word that starts with `steel` _or_ `penguin` | <span class="goodex">steelers</span> <span class="goodex">pencil</span> <br><span class="badex">steer</span> <span class="badex">ballpen</span> <span class="badex">pirate</span>  |
+| `steel.*|pen.*` | Any word that starts with `steel` _or_ `pen` | <span class="goodex">steelers</span> <span class="goodex">pencil</span> <br><span class="badex">steer</span> <span class="badex">bullpen</span> <span class="badex">pirate</span>  |
 | `b(oo|ea)t` | Any word that starts with `b`, followed by `oo` _or_ `ea` and ends with `t` | <span class="goodex">boot</span> <span class="goodex">beat</span> <br><span class="badex">boat</span> <span class="badex">bet</span> <span class="badex">bit</span>  |
 | `(wh|th|sh).*` | Any word that starts with `wh` _or_ `th` _or_ `sh` | <span class="goodex">what</span> <span class="goodex">though</span> <span class="goodex">short</span> <br><span class="badex">other</span> <span class="badex">slush</span>  |
 
@@ -160,7 +163,7 @@ For more examples of building regex search patterns, go to [Common regex idioms]
 Now that you're familiar with the basics of regex, it's time for you to try searching APLS with regex patterns on your own!
 You can find some practice search questions below, with solutions included as `TRY IT!`s.
 
-- How would you find all words that start with vowels that are at least 2 letters long?
+- How would you find all words that (1) start with vowels _and_ (2) are at least 2 letters long?
 
 {: .try-it }
 > 1. Go to the [_search_ page](https://apls.pitt.edu/labbcat/search).
@@ -181,7 +184,7 @@ You can find some practice search questions below, with solutions included as `T
 > 1. Enter `.*[aeiou][aeiou][aeiou].*` into the orthography input field.
 > 1. Click the _Search_ button.
 
-- How would you find all words that start with _q_ or end with _x_, excluding instances of _q_ and _x_ on their own?
+- How would you find all words that either start with _q_ or end with _x_, excluding instances of _q_ and _x_ on their own?
 
 {: .try-it }
 > 1. Go to the [_search_ page](https://apls.pitt.edu/labbcat/search).
@@ -214,18 +217,33 @@ A separate but related topic is anchoring a search match to a larger annotation,
 This is covered on the [Anchoring searches]({{ '/doc/anchoring-searches' | relative_url }}) page.
 
 
-<!-- 
-can point out that the dictionary export option lets you get a list of every unique item that matched your search 
--->
+## Regex tips and tricks
 
-## Other resources for learning about regex
+Here we've collected some tips and tricks for using regex with APLS that are broadly helpful for users at any level of regex proficiency!
+
+### Checking your search matches
+
+When you perform a search and the [search results page]({{ '/doc/export-data#search-results-page' | relative_url }}) contains a handful of matches, it can be easy to manually check how many unique items your search matched.
+APLS contains over 400,000 word tokens, so often a search will result in a lot more than a handful of matches!
+
+The ![]({{ '/assets/img/book.svg' | relative_url }}){: style="height:1rem;"} _Dictionary_ export option on the [search results page]({{ '/doc/export-data#search-results-page' | relative_url }}) lets you download a `.txt` file of every unique individual item that your search matched.
+This can be helpful for quickly checking that the matches you got line up with what you were expecting!
+
+{: .try-it }
+> 1. Go to the [_search_ page](https://apls.pitt.edu/labbcat/search).
+> 1. Enter `don.*` into the orthography input field.
+> 1. Click the _Search_ button.
+> 1. On the search results page generated by your search, click the ![]({{ '/assets/img/book.svg' | relative_url }}){: style="height:1rem;"} _Dictionary_ button.
+> 1. Save and view the file to see what words in APLS match the `don.*` orthography search pattern.
+
+### Other resources for learning about regex
 
 This page is only meant to be an introduction to regular expressions (and the [ways that regex is different in APLS](#regex-in-APLS-vs-regex-elsewhere)).
 There are lots of resources out there for learning and practicing regex if you would like more than this page can provide!
 
 A few places that we would recommend are:
-- [www.regexone.com](https://www.regexone.com/) or [regexlearn.com](https://regexlearn.com/) for learning regex by practicing with simple, interactive exercises.
-- [www.regular-expressions.info tutorial](https://www.regular-expressions.info/tutorial.html) for more details about basic regex concepts.
+- [regexone.com](https://www.regexone.com/) or [regexlearn.com](https://regexlearn.com/) for learning regex by practicing with simple, interactive exercises.
+- [regular-expressions.info tutorial](https://www.regular-expressions.info/tutorial.html) for more details about basic regex concepts.
   - The regular-expressions website also has resources for learning about more advanced regex concepts!
 - [regex crosswords](https://regexcrossword.com/) for practicing regex skills with crossword-like puzzles.
 - [regex101.com](https://regex101.com/) for testing out different regex patterns.
