@@ -3,7 +3,7 @@ title: Browsing participants
 permalink: /doc/browse-participants
 parent: How to use APLS
 nav_order: 40
-last_modified_date: 2025-03-11T10:06:21-04:00
+last_modified_date: 2025-04-14T19:30:51:z
 ---
 
 # {{ page.title }}
@@ -21,7 +21,7 @@ On this documentation page, we cover the functionality and layout of the _partic
 The _participants_ page allows you to...
 - [View demographic information](#participant-list) for participants.
 - [Filter participants](#filtering-participants) according to certain criteria.
-- [Export participant data](#exporting-and-searching-participants) in a variety of formats.
+- [Export participant data](#exporting-and-searching-participant-data) in a variety of formats.
 - [Select participants to search](#layered-search).
 
 ### Layout
