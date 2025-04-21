@@ -1,0 +1,37 @@
+---
+layout: default
+---
+
+<!-- BEGIN layout: default -->
+{{ content }}
+<!-- END layout: default -->
+
+<!-- Extra content from layout: page -->
+<!-- Modal-image solution adapted from https://www.w3schools.com/howto/howto_css_modal_images.asp -->
+<div id="modal">
+  <span id="modal-close">&times;</span>
+  <img id="modal-img">
+</div>
+
+<style>
+
+</style>
+<script>
+const modal = document.getElementById("modal"),
+      modalImg = document.getElementById("modal-img"),
+      modalClose = document.getElementById("modal-close");
+modalClose.onclick = function() { 
+  modal.style.display = "none";
+};
+/* Make screengrabs maximizable to modal image */
+window.addEventListener('DOMContentLoaded', () => {
+  var s = document.querySelectorAll(".screengrab");
+  s.forEach(a => {
+    a.addEventListener("click", function(e) {
+      modal.style.display = "block";
+      modalImg.src = this.src;
+    });
+    a.alt = 'hi there';
+  });
+});
+</script>
