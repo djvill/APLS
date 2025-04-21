@@ -107,6 +107,12 @@ layers <-
 
 ## Wrangle layers ============================================================
 
+##Remove language layer
+##language has no annotations; it's only in the APLS schema because it's
+##  required by some layer managers; and it's hidden from all layer selectors
+layers <- layers |>
+  filter(id != "language")
+
 ##Columns and names
 layers <- layers |>
   ##Remove columns relevant only to participant/transcript attributes
