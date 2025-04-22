@@ -4,7 +4,7 @@ permalink: /doc/regex
 parent: Searching the corpus
 grand_parent: How to use APLS
 nav_order: 30
-last_modified_date: 2025-04-18T19:54:18:z
+last_modified_date: 2025-04-22T12:49:18:z
 ---
 
 # {{ page.title }}
@@ -32,7 +32,8 @@ If you are...
 
 | Character | Meaning |
 |-------|---------|
-| Letter & numbers (`A`-`Z`, `a`-`z`, `0`-`9`) | Themselves |
+| Letters & numbers (`A`-`Z`, `a`-`z`, `0`-`9`) | Themselves |
+| Most special characters used in [layer notation systems]({{ '/doc/layer-typology#notation-system' | relative_url }})  | Themselves |
 | `.`  | Any single character |
 | `?` | The character before `?` is optional; i.e. it can occur 0 or 1 times |
 | `+`  | The character before `+` can repeat; i.e. it can occur 1 or more times |
@@ -43,10 +44,23 @@ If you are...
 | `ab|cd`  | Match `ab` _or_ `cd` |
 | `\`  | The character after `\` is **not** treated as a metacharacter; i.e., the character is treated literally |
 
-Because of the [notation systems used by certain layers]({{ '/doc/layer-typology#notation-system' | relative_url }}), the characters in APLS that you may need to use `\` to match literally are: `+` (morpheme boundaries), `.` (short pause), `-` (long pause and syllable boundaries), `?` (question marker), `{` and `$` (DISC vowels), and `$` (used in part-of-speech tags).
+Because of the [notation systems used by certain layers]({{ '/doc/layer-typology#notation-system' | relative_url }}), the characters in APLS that you may need to use `\` to match literally are: 
+
+| Layer(s) | Character | Meaning |
+|----------|-----------|---------|
+| <span class="layer">morphemes</span> | `+` | Morpheme boundary |
+| <span class="layer">word</span> | `.` | Short pause |
+| <span class="layer">word</span> | `-` | Long pause |
+| <span class="layer">word</span> | `?` | Question mark |
+| <span class="layer">foll_segment</span> | `.` | Following pause |
+| <span class="layer">pronounce</span> | `-` | Syllable boundary |
+| <span class="layer">segment</span>, <span class="layer">foll_segment</span>, <span class="layer">syllables</span>, <span class="layer">phonemes</span>, <span class="layer">dictionary_phonemes</span>, <span class="layer">pronounce</span> | `{` | DISC symbol for the IPA /æ/ vowel |
+| <span class="layer">segment</span>, <span class="layer">foll_segment</span>, <span class="layer">syllables</span>, <span class="layer">phonemes</span>, <span class="layer">dictionary_phonemes</span>, <span class="layer">pronounce</span> | `$` | DISC symbol for the IPA /ɔ/ vowel |
+| <span class="layer">part_of_speech</span> | `$` | Used in the part-of-speech tags `$` (currency symbols), `PRP$` (possessive pronoun), `WP$` (possessive wh- pronoun) |
 
 {:.note .no-collapse}
-> If you have a regex with an open parenthesis/bracket that hasn't been escaped with `\`, the regex will be highlighted in red and you will get an error message if you click the _Search_ button.
+> If you enter an invalid regex pattern, the regex will be displayed with red text and you will get an error message if you click the _Search_ button.
+> Additionally, hovering over the red text will make a tooltip appear that gives a brief explanation of why the regex is invalid.
 
 ## Common regex idioms
 
@@ -193,9 +207,8 @@ You can find some practice search questions below, with solutions included as `T
 
 ## Regex in APLS vs. regex elsewhere
 
-The most important difference between regex in APLS and regex elsewhere, is that APLS (almost) always[^segment-exception] matches patterns to the **whole** word.
-
-[^segment-exception]: The only times that APLS does not look for matches by whole words is for the <span class="layer">segment</span> and <span class="layer">foll_segment</span> layers.
+The most important difference between regex in APLS and regex elsewhere, is that APLS matches patterns to **whole** [annotations]({{ '/layer-typology#scope' | relative_url }}).
+Most annotations you can search in APLS are one word in length, but some annotation layers can be larger than one word (such as <span class="layer">noise</span>) or smaller than one word (such as <span class="layer">segment</span>).
 
 If you've used regex in other contexts, you are probably used to patterns matching with any part of a string.
 For instance, the regex `the` could find matches in the strings `the`, `these`, or `other`.
@@ -225,6 +238,7 @@ Here we've collected some tips and tricks for using regex with APLS that are bro
 
 When you perform a search and the [search results page]({{ '/doc/export-data#search-results-page' | relative_url }}) contains a handful of matches, it can be easy to manually check how many unique items your search matched.
 APLS contains over 400,000 word tokens, so often a search will result in a lot more than a handful of matches!
+Even if you export your search results as a `.csv`, it can be difficult to identify all the unique item matches if one or two items are much more frequent than the rest.
 
 The ![]({{ '/assets/img/book.svg' | relative_url }}){: style="height:1rem;"} _Dictionary_ export option on the [search results page]({{ '/doc/export-data#search-results-page' | relative_url }}) lets you download a `.txt` file of every unique individual item that your search matched.
 This can be helpful for quickly checking that the matches you got line up with what you were expecting!
