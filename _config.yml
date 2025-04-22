@@ -41,7 +41,7 @@ defaults:
   - scope:
       path: ""
     values:
-      layout: "default"
+      layout: "page"
 
 ########################################
 #### Config for just-the-docs theme ####
