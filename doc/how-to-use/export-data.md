@@ -3,7 +3,7 @@ title: Exporting data
 permalink: /doc/export-data
 parent: How to use APLS
 nav_order: 60
-last_modified_date: 2025-04-26T15:23:56:z
+last_modified_date: 2025-04-28T12:40:16:z
 ---
 
 # {{ page.title }}
@@ -140,39 +140,33 @@ These lock icons let you anchor the data exported for that layer to the start or
 > Selecting _both_ lock icons will cause that layer to export data only for annotations that do not have any [horizontal peers]({{ '/doc/layer-typology#alignment-and-horizontal-peers' | relative_url }}).
 
 
-#### _Dictionary_ Export
+#### _Dictionary Export_
 
-Clicking the _Dictionary_ button will download information about all the results of the search as a `.txt` file.
+Clicking the _Dictionary Export_ button will download information about all the results of the search as a `.txt` file.
 
-The default option for _Dictionary_ is <span class="layer">frequency_from_corpus</span>, which creates a `.txt` file containing every **unique** item matched by the search followed by the number of times the item appears in APLS.
-
-{:.note}
-> The _Dictionary_ `.txt` file contains results in alphabetic order by token, not by frequency counts of tokens.
+The default option for _Dictionary Export_ is _[just orthography, no entries]_, which creates a `.txt` file containing the <span class="layer">orthography</span> layer spelling for every **unique** item matched by the search without additional information from other layers.
 
 {: .try-it }
-> To find frequency counts for all unique words that follow the word "not" in APLS:
+> To find all unique words that follow the word "not" in APLS:
 > 1. Go to the [_search_ page](https://apls.pitt.edu/labbcat/search).
 > 1. Enter `not` into the orthography input field.
 > 1. Click the `+` button on the right side of the input field to make the search one word wider.
 > 1. Enter `.*` into the second orthography input field.
 > 1. Click the _Search_ button.
-> 1. Click the _Dictionary_ button and download the `.txt` to view the unique matches for the search followed by corpus frequency counts.
-> - The `.txt` will also contain a frequency count for the number of times that the word "not" appears in the results.
+> 1. Click the _Dictionary Export_ button and download the `.txt` to view the unique matches for the search.
 
-<!-- I have made a request to Dan to make frequency_in_corpus the default option -->
-
-Clicking the ▼ button next to _Dictionary_ allows you to select the [layer]({{ '/doc/layer-field-guide' | relative_url }}) information that you would like to export in the `.txt` file.
+Clicking the ▼ button next to _Dictionary Export_ allows you to select the [layer]({{ '/doc/layer-field-guide' | relative_url }}) information that you would like to export in the `.txt` file.
 
 These [layer]({{ '/doc/layer-field-guide' | relative_url }}) options will include the information that is **present** for that layer.
-This means that if there is not any information in the selected layer for your search matches, then the _Dictionary_ `.txt` will not include that match in the file.
+This means that if there is not any information in the selected layer for your search matches, then the _Dictionary Export_ `.txt` will not include that match in the file.
 
 {: .try-it }
 > To find words that start with "cranberry" and have a custom DISC pronounciation on the <span class="layer">pronounce</span> layer:
 > 1. Go to the [_search_ page](https://apls.pitt.edu/labbcat/search).
 > 1. Enter `cranberry.*` into the orthography input field.
 > 1. Click the _Search_ button.
-> 1. Click the ▼ button next to _Dictionary_ and select <span class="layer">pronounce</span>.
-> 1. Click the _Dictionary_ button and download the `.txt` to view the unique matches for the search that have information on the <span class="layer">pronounce</span> layer.
+> 1. Click the ▼ button next to _Dictionary Export_ and select <span class="layer">pronounce</span>.
+> 1. Click the _Dictionary Export_ button and download the `.txt` to view the unique matches for the search that have information on the <span class="layer">pronounce</span> layer.
 > - The `.txt` file should not have entries for words like "cranberry" or "cranberry's" because those words don't have a custom DISC pronounciation in APLS.
 
 
