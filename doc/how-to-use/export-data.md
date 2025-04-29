@@ -3,7 +3,7 @@ title: Exporting data
 permalink: /doc/export-data
 parent: How to use APLS
 nav_order: 60
-last_modified_date: 2025-04-28T12:40:16:z
+last_modified_date: 2025-04-29T14:05:59:z
 ---
 
 # {{ page.title }}
@@ -98,10 +98,6 @@ This box allows you to choose the number of related annotations to include.
 For layers with [vertical peers]({{ '/doc/layer-typology#vertical-peers' | relative_url }}) ![]({{ '/assets/img/vertical-peers.svg' | relative_url }}){: style="height:1rem;"}, the additional annotations will be annotations that occupy an identical timespan *if there are any*.
 If there are less vertical peers in the layer for the match than the number specified in the numeric box, then the `.csv` will still contain the number of columns you specified but the columns will be empty.
 
-<!-- 
-maybe dan or rob made some updates? `comment` no longer has a numeric box
--->
-
 {: .try-it }
 > 1. Go to the [_search_ page](https://apls.pitt.edu/labbcat/search).
 > 1. Enter `polish` into the orthography input field.
@@ -126,9 +122,6 @@ If there are less sub-interval annotations in the layer for the match than the n
 > - If you view the "Target part_of_speech" columns of the `.csv`, you will see that there are entries in the first 2 columns but the third column is empty.
 >   This is because the <span class="layer">part_of_speech</span> layer only has two sub-interval annotations for the word "wouldn't".
 
-<!-- 
-based on my (limited) testing, it seems like `speech_rate` only ever has one annotation AND using any of the anchoring options causes it to not have any values at all
--->
 
 Sub-interval alignment ![]({{ '/assets/img/alignment-2.svg' | relative_url }}){: style="height:1rem;"} layers will also display lock ![]({{ '/assets/img/lock-unlocked.svg' | relative_url }}){: style="height:1rem;"} icons on the sides of the annotation count selector.
 These lock icons let you anchor the data exported for that layer to the start or end of the match target.
@@ -197,7 +190,7 @@ _Tag targets_ creates an additional "Target" tier in the exported transcript fil
 At least one of the layers in your search pattern must be selected in the "Layers to export" menu for _Tag targets_ to create the additional "Target" tier.
 
 {:.note}
-> _Tag targets_ only applies to transcripts formats that support tiered annotations.
+> _Tag targets_ only applies to transcript formats that support tiered annotations.
 
 
 #### _Audio Export_
