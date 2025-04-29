@@ -4,7 +4,7 @@ permalink: /doc/extract-with-csv
 parent: Exporting data
 grand_parent: How to use APLS
 nav_order: 10
-last_modified_date: 2025-04-29T14:27:29:z
+last_modified_date: 2025-04-29T15:01:03:z
 ---
 
 # {{ page.title }}
@@ -56,13 +56,11 @@ If the file is not the one you wanted to select, you can click the button again 
 <!-- clicking upload without selecting a file will cause a javascript error -->
 <!-- if you upload a file that ISNT a csv, APLS will coerce it into being a csv but the resulting options will make no sense -->
 
-After you have selected your desired file, clicking the _Upload_ button will bring you to the settings page for _Extract audio for time intervals_.
-
-<!-- don't call it a page, just say that the settings appear -->
+After you have selected your desired file, clicking the _Upload_ button will bring you to the settings for _Extract audio for time intervals_.
 
 ![]({{ '/assets/screengrab/extract-with-csv/extract-audio-for-time-intervals-2.png' | relative_url }})
 
-On this page, the setting for the "Transcript Name column" should be set to the column in your `.csv` containing the file names of transcripts.
+The setting for the "Transcript Name column" should be set to the column in your `.csv` containing the file names of transcripts.
 If your `.csv` has a column named _Transcript_, APLS will automatically select that column for this setting.
 
 The settings for the "Start Time column" and "End Time column" should be set to the columns in your `.csv` that specify the time intervals of the audio you'd like to extract.
@@ -99,11 +97,11 @@ After selecting your `.csv` with the _Choose File_ button, the button's text wil
 This allows you to verify that the correct file has been selected.
 If the file is not the one you wanted to select, you can click the button again to select a different file.
 
-After you have selected your desired file, clicking the _Upload_ button will bring you to the settings page for _Extract transcripts for time intervals_.
+After you have selected your desired file, clicking the _Upload_ button will bring you to the settings for _Extract transcripts for time intervals_.
 
 ![]({{ '/assets/screengrab/extract-with-csv/extract-transcripts-for-time-intervals-2.png' | relative_url }})
 
-On this page, the setting for the "Transcript Name column" should be set to the column in your `.csv` containing the file names of transcripts.
+The setting for the "Transcript Name column" should be set to the column in your `.csv` containing the file names of transcripts.
 If your `.csv` has a column named _Transcript_, APLS will automatically select that column for this setting.
 
 The settings for the "Start Time column" and "End Time column" should be set to the columns in your `.csv` that specify the time intervals of the transcripts you'd like to extract.
@@ -126,7 +124,7 @@ At least one layer must be selected to be included in the exported transcripts.
 <!-- the tooltips for the layers on this page are different than the tooltips on the search page for some reason -->
 <!-- you also can't shift-select multiple layers at once? -->
 
-The drop-down menu at the bottom of the page allows you to select the file format for the exported transcripts.
+The drop-down menu at the bottom of the settings allows you to select the file format for the exported transcripts.
 
 After specifying your desired settings, clicking the _Export_ button will cause a progress bar to appear as APLS processes your export request.
 Once the export is finished, you will be prompted to save a `.zip` file containing all of the exported transcripts in your selected file format.
@@ -144,11 +142,11 @@ After selecting your `.csv` with the _Choose File_ button, the button's text wil
 This allows you to verify that the correct file has been selected.
 If the file is not the one you wanted to select, you can click the button again to select a different file.
 
-After you have selected your desired file, clicking the _Upload_ button will bring you to the settings page for _Extract annotations for search matches_.
+After you have selected your desired file, clicking the _Upload_ button will bring you to the settings for _Extract annotations for search matches_.
 
 ![]({{ '/assets/screengrab/extract-with-csv/extract-annotations-for-search-matches-2.png' | relative_url }})
 
-On this page, the setting for the "Target" should be set to the column in your `.csv` containing either the MatchIDs or URLs of your search results.
+The setting for the "Target" should be set to the column in your `.csv` containing either the MatchIDs or URLs of your search results.
 If your `.csv` has a column named _MatchID_, APLS will automatically select that column for this setting.
 
 The drop-down menu after "Extract data for the" allows to select if you want annotations about the matches in your search results (_given token_), the tokens directly before your matches (_previous token_), or the tokens directly after your matches (_next token_).
@@ -178,7 +176,7 @@ The "CSV field delimiter" setting allows to select if exported `.csv` file shoul
 This setting will automatically set itself to the same delimiter used in your uploaded file.
 
 After specifying your desired settings, clicking the _Insert Data_ button will prompt you to download the exported `.csv` file.
-This `.csv` will contain all the columns of your original uploaded `.csv`, with additional columns added containing annotations from your selected layers.
+This `.csv` will contain all the columns of your original uploaded `.csv`, with additional columns that contain annotations from your selected layers.
 
 ## Extract annotations for time intervals
 
@@ -193,8 +191,36 @@ After selecting your `.csv` with the _Choose File_ button, the button's text wil
 This allows you to verify that the correct file has been selected.
 If the file is not the one you wanted to select, you can click the button again to select a different file.
 
-<!-- I'm taking a break here, but I noticed that the layer picker on this page has the same weird issues as "Extract transcripts for time intervals" -->
+After you have selected your desired file, clicking the _Upload_ button will bring you to the settings for _Extract annotations for time intervals_.
 
+![]({{ '/assets/screengrab/extract-with-csv/extract-annotations-for-time-intervals-2.png' | relative_url }})
 
+The setting for the "Transcript Name column" should be set to the column in your `.csv` containing the file names of transcripts.
+If your `.csv` has a column named _Transcript_, APLS will automatically select that column for this setting.
 
+The setting for the "Participant column" is optional.
+If you set this to a column containing participant codes, then only annotations for those participants will be extracted.
+If you select no column for this setting, then annotations for all speakers in your time intervals will be extracted.
+If your `.csv` has a column named _Speaker_, APLS will automatically select that column for this setting.
+
+The "Annotations" setting lets you select whether the annotations must be completely within your time intervals or if the annotations can extend beyond your time intervals.
+The _entirely between_ option makes it so that the start time and end time of the extracted annotations must be within your time intervals.
+The _at least partially between_ option makes it so that the start time or end time of the extracted annotations can be outside your time intervals, as long as the annotation is at least partially within your time intervals.
+
+The settings for the "Start Time column" and "End Time column" should be set to the columns in your `.csv` that specify the time intervals of the audio you'd like to extract.
+If your `.csv` has columns named _Target word start_ and _Target word end_, APLS will automatically select those column for these settings.
+
+The "Layer(s)" section allows you to select the [layers]({{ '/doc/layer-field-guide' | relative_url }}) you would like to include in the exported `.csv` file.
+You can hover over each [layer]({{ '/doc/layer-field-guide' | relative_url }}) to view a tooltip briefly describing that layer.
+At least one layer must be selected to be included in the exported `.csv`.
+
+The "Label delimiter" setting lets you specify a delimiter to be used when there are multiple annotations that occur in the same layer during your time intervals.
+_Extract annotations for time intervals_ concatenates multiple annotations in a layer into a single layer column in the resulting `.csv`.
+By default, this is set to be a single space.
+
+The "CSV field delimiter" setting allows to select if exported `.csv` file should be comma-separated, semicolon-separated, or tab-separated.
+This setting will automatically set itself to the same delimiter used in your uploaded file.
+
+After specifying your desired settings, clicking the _Extract Annotations_ button will prompt you to download the exported `.csv` file.
+This `.csv` will contain all the columns of your original uploaded `.csv`, with additional columns added that contain annotations from your selected layers.
 
