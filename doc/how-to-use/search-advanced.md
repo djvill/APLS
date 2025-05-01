@@ -1,16 +1,16 @@
 ---
-title: Searching with complex patterns
-permalink: /doc/searching-with-complex-patterns
+title: Searching complex patterns
+permalink: /doc/searching-complex-patterns
 parent: Searching the corpus
 grand_parent: How to use APLS
 nav_order: 80
-last_modified_date: 2025-04-12T15:53:35:z
+last_modified_date: 2025-05-01T16:35:08-04:00
 ---
 
 # {{ page.title }}
 {:.no_toc}
 
-This page provides details on some of the more complex searches you can do in APLS: namely [multi-word searches](#searching-multiple-words), [multi-layer searches](#searching-multiple-words), and [multi-word multi-layer searches](#searching-multiple-words-and-multiple-layers).
+This page provides details on some of the more complex searches you can do in APLS: [multi-word searches](#searching-multiple-words), [multi-layer searches](#searching-multiple-words), and [multi-word multi-layer searches](#searching-multiple-words-and-multiple-layers).
 These advanced searches rely on features described on other [search documentation pages]({{ '/doc/search' | relative_url }}), so it is recommended that you review those first if you are new to using APLS.
 
 {% include page_toc.html collapsible=true %}
@@ -20,19 +20,19 @@ These advanced searches rely on features described on other [search documentatio
 In an [earlier documentation page]({{ '/doc/your-first-search' | relative_url }}), we said that searching `not even` in the <span class="layer">orthography</span> layer would not return any matches because there are no single words that match "not even".
 The way to search for multiple words is to make the search "wider".
 
-Clicking the `+` button on the right side of the input fields makes the search wider by adding another word to your search pattern.
+Clicking ![]({{ '/assets/img/add.svg' | relative_url }}){: style="height:1rem;"} on the right side of the input fields makes the search wider by adding another word to your search pattern.
 
 ![]({{ '/assets/screengrab/search/search-input-field-orthography2.png' | relative_url }})
 
 The *followed immediately by* drop-down menu lets you choose whether the search should be the immediate next word, 1 word after the immediate next word, or 2 words after the immediate next word.
 
 You can make your pattern as wide as you need to conduct your search, and every additional input field works exactly like the initial input field for that layer.
-Clicking the `-` button makes your search narrower by removing a word from your search pattern.
+Clicking ![]({{ '/assets/img/remove.svg' | relative_url }}){: style="height:1rem;"} makes your search narrower by removing a word from your search pattern.
 
 {: .try-it }
 > To search for every instance of the word "not" immediately followed by the word "even":
 > 1. Go to the [_search_ page](https://apls.pitt.edu/labbcat/search).
-> 1. Click the `+` button to make your search pattern one word wider.
+> 1. Click ![]({{ '/assets/img/add.svg' | relative_url }}){: style="height:1rem;"} to make your search pattern one word wider.
 > 1. Enter `not` in the first orthography layer text field and enter `even` in the second orthography layer text field.
 > 1. Click the _Search_ button.
 
@@ -94,7 +94,7 @@ This allows the search function to find very specific matches based on multiple 
 > 1. Select the `syntax` project in the layer picker to make the <span class="layer">part_of_speech</span> layer appear in the selection menu.
 > 1. Select the <span class="layer">part_of_speech</span> layer in the selection menu to make the part_of_speech pattern input field appear.
 > 1. Enter `the` in the orthography layer text field.
-> 1. Click the `+` button to make the search pattern one word wider.
+> 1. Click ![]({{ '/assets/img/add.svg' | relative_url }}){: style="height:1rem;"} to make the search pattern one word wider.
 > 1. Open the drop-down menu for the second part_of_speech input field and click _VERB:_ to add a regex pattern that will match all adjectival POS tags.
 > 1. Open the drop-down menu for the second segment input field and click _CONSONANT_ to add a regex pattern that will match all consonant segments.
 > 1. Click the lock ![]({{ '/assets/img/lock-unlocked.svg' | relative_url }}){: style="height:1rem;"} on the left side of the second segment input field to specify that you only want to match words that begin with a consonant segment.

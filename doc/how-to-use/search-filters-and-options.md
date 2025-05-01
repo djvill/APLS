@@ -4,7 +4,7 @@ permalink: /doc/search-filters-and-options
 parent: Searching the corpus
 grand_parent: How to use APLS
 nav_order: 20
-last_modified_date: 2025-04-12T15:53:35:z
+last_modified_date: 2025-05-01T16:35:09-04:00
 ---
 
 # {{ page.title }}
@@ -13,7 +13,7 @@ last_modified_date: 2025-04-12T15:53:35:z
 The _search_ page by default will conduct searches on all data in APLS.
 You can limit your search to a selection of [participants]({{ '/doc/data-organization#participants' | relative_url }}) and/or [transcripts]({{ '/doc/data-organization#transcripts' | relative_url }}) using the participants and transcripts filters.
 
-You can also specify certain non-layer criteria for your search using the [search options](#search-options).
+You can also specify additional match and display options for your search using the [search options](#search-options).
 
 {% include page_toc.html collapsible=true %}
 

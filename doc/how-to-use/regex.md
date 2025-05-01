@@ -4,7 +4,7 @@ permalink: /doc/regex
 parent: Searching the corpus
 grand_parent: How to use APLS
 nav_order: 30
-last_modified_date: 2025-04-22T12:49:18:z
+last_modified_date: 2025-05-01T16:35:08-04:00
 ---
 
 # {{ page.title }}
@@ -58,9 +58,12 @@ Because of the [notation systems used by certain layers]({{ '/doc/layer-typology
 | <span class="layer">segment</span>, <span class="layer">foll_segment</span>, <span class="layer">syllables</span>, <span class="layer">phonemes</span>, <span class="layer">dictionary_phonemes</span>, <span class="layer">pronounce</span> | `$` | DISC symbol for the IPA /ɔ/ vowel |
 | <span class="layer">part_of_speech</span> | `$` | Used in the part-of-speech tags `$` (currency symbols), `PRP$` (possessive pronoun), `WP$` (possessive wh- pronoun) |
 
+{% comment %}TODO build these dynamically from _layers{% endcomment %}
+
 {:.note .no-collapse}
-> If you enter an invalid regex pattern, the regex will be displayed with red text and you will get an error message if you click the _Search_ button.
-> Additionally, hovering over the red text will make a tooltip appear that gives a brief explanation of why the regex is invalid.
+> Entering an invalid regex will make the text turn red.
+> If you hover over the red text, a tooltip will pop up with a brief explanation of why the regex is invalid.
+> In addition, if you click the _Search_ button with an invalid regex, the search will return an error message.
 
 ## Common regex idioms
 
@@ -69,7 +72,7 @@ These are the patterns you're most likely to need when searching APLS:
 - Dot-asterisk (`.*`): Match anything or nothing
 - Dot-plus (`.+`): Match one or more of any character (doesn't have to be the same character)
 - Square brackets (`[]`): Match one of the characters in the brackets
-- Inverted square brackets (`[^]`): Match anything other than the characters in the brackets
+- Square brackets with a caret (`[^]`): Match anything _other than_ the characters in the brackets
 - Vertical pipe (`|`): Match one of the strings on either side of the pipe
 
 ### Dot-asterisk (`.*`)
@@ -104,18 +107,24 @@ The characters within the brackets are a <span class="keyterm">character set</sp
 | Pattern | Explanation | Examples |
 |---------|-------------|----------|
 | `do[tg]` | Any 3-letter word that starts with `do` and ends with `t` _or_ `g` | <span class="goodex">dot</span> <span class="goodex">dog</span><br> <span class="badex">do</span> <span class="badex">doe</span> <span class="badex">dotted</span>  |
-| `[dw]on't`  | Any 4-letter word that starts with `d` _or_ `w` and ends with `on't` | <span class="goodex">don't</span> <span class="goodex">won't</span><br><span class="badex">donut</span> <span class="badex">want</span> |
-| `.*[oa][td]`  | Any word that ends with `o` _or_ `a` followed by `t` _or_ `d` | <span class="goodex">cot</span> <span class="goodex">glad</span> <span class="goodex">float</span><br><span class="badex">cost</span> <span class="badex">cots</span> <span class="badex">cut</span> |
+| `[dw]on't`  | Any 5-character word that starts with `d` _or_ `w` and ends with `on't` | <span class="goodex">don't</span> <span class="goodex">won't</span><br><span class="badex">donut</span> <span class="badex">want</span> |
+| `.*[oau][td]`  | Any word whose last two characters are `o` _or_ `a` _or_ `u` followed by `t` _or_ `d` | <span class="goodex">cut</span> <span class="goodex">glad</span> <span class="goodex">float</span><br><span class="badex">cost</span> <span class="badex">cots</span> <span class="badex">cut</span> |
 
-### Inverted square brackets (`[^]`)
+Importantly, square brackets always match a _single_ character:
 
-Square brackets can be inverted with `^` to match anything _other_ than the characters in the brackets.
+| Pattern | Explanation | Examples |
+|---------|-------------|----------|
+| `r[oau]t` | Any 3-letter word that starts with `r`, then `o` _or_ `a` _or_ `u`, and ends with `t` | <span class="goodex">rot</span> <span class="goodex">rat</span><br> <span class="goodex">rut</span><br><span class="badex">rout</span> <span class="badex">root</span>  |
+
+### Square brackets with a caret (`[^]`)
+
+Square brackets can be inverted with `^` to match anything _other than_ the characters in the brackets.
 Inverted square brackets will still only match a single character, similar to normal square brackets.
 
 | Pattern | Explanation | Examples |
 |---------|-------------|----------|
-| `ca[^t]` | Any 3-letter word that starts with `ca` and does _not_ ends with `t` | <span class="goodex">can</span> <span class="goodex">cap</span><br> <span class="badex">cat</span> <span class="badex">cans</span> <span class="badex">cast</span>  |
-| `b[^eu]t`  | Any 3-letter word that starts with `b` and ends with `t` that does _not_ contain `e` _or_ `u` | <span class="goodex">bot</span> <span class="goodex">bat</span> <span class="goodex">bit</span><br><span class="badex">bet</span> <span class="badex">but</span> <span class="badex">boat</span> <span class="badex">bots</span> |
+| `do[^t]` | Any 3-letter word that starts with `do` and does _not_ end with `t` | <span class="goodex">doe</span> <span class="goodex">don</span><br> <span class="badex">do</span> <span class="badex">dot</span> <span class="badex">dotted</span>  |
+| `b[^eu]t`  | Any 3-letter word that starts with `b`, then any character _other than_ `e` or `u`, and ends with `t` | <span class="goodex">bot</span> <span class="goodex">bat</span> <span class="goodex">bit</span><br><span class="badex">bet</span> <span class="badex">but</span> <span class="badex">boat</span> <span class="badex">bots</span> |
 
 ### Vertical pipe (`|`)
 
@@ -126,11 +135,13 @@ These can be useful when you'd like to find multiple words with the same search.
 |---------|-------------|----------|
 | `steeler|penguin` | The word `steeler` _or_ the word `penguin` | <span class="goodex">steeler</span> <span class="goodex">penguin</span> <br><span class="badex">steel</span> <span class="badex">penguins</span> <span class="badex">pirate</span>  |
 | `steel.*|pen.*` | Any word that starts with `steel` _or_ `pen` | <span class="goodex">steelers</span> <span class="goodex">pencil</span> <br><span class="badex">steer</span> <span class="badex">bullpen</span> <span class="badex">pirate</span>  |
-| `b(oo|ea)t` | Any word that starts with `b`, followed by `oo` _or_ `ea` and ends with `t` | <span class="goodex">boot</span> <span class="goodex">beat</span> <br><span class="badex">boat</span> <span class="badex">bet</span> <span class="badex">bit</span>  |
+| `b(oo|ea|u)t` | Any word that starts with `b`, then `oo` _or_ `ea` _or_ `u`, and ends with `t` | <span class="goodex">boot</span> <span class="goodex">beat</span> <span class="goodex">but</span> <br><span class="badex">boat</span> <span class="badex">bet</span> <span class="badex">bit</span>  |
 | `(wh|th|sh).*` | Any word that starts with `wh` _or_ `th` _or_ `sh` | <span class="goodex">what</span> <span class="goodex">though</span> <span class="goodex">short</span> <br><span class="badex">other</span> <span class="badex">slush</span>  |
 
 
 ## Introduction to regex
+
+{% comment %}In the future, I might want to make this more scaffolded with more subsections and try-its.{% endcomment %}
 
 In regular expressions, letters and numbers are literal characters that match themselves -- the regex `apples` will match the literal text "apples".
 
@@ -207,27 +218,58 @@ You can find some practice search questions below, with solutions included as `T
 
 ## Regex in APLS vs. regex elsewhere
 
-The most important difference between regex in APLS and regex elsewhere, is that APLS matches patterns to **whole** [annotations]({{ '/layer-typology#scope' | relative_url }}).
-Most annotations you can search in APLS are one word in length, but some annotation layers can be larger than one word (such as <span class="layer">noise</span>) or smaller than one word (such as <span class="layer">segment</span>).
+APLS's search regex syntax is very similar to standard "flavors" of regex in high-level programming languages (e.g., Python, R, JavaScript), with some important differences.
 
-If you've used regex in other contexts, you are probably used to patterns matching with any part of a string.
-For instance, the regex `the` could find matches in the strings `the`, `these`, or `other`.
+
+### Search: Regex match whole annotations, not parts
+
+Unlike regex elsewhere, APLS's search matches patterns to **whole** annotations, whether those are words, part-of-speech tags, segments, etc.
+
+If you've used regex in other contexts, you are probably used to patterns matching any part of a string.
+For example, in Python, the regex `the` matches the strings `the`, `these`, and `other`.
 However, `the` will only ever match `the` in APLS.
-To search for patterns that occur within words, you have to denote the word context with wildcard metacharacters.
+To search for patterns that occur within annotations, use [`.*`](#dot-asterisk-) at the beginning and/or end of the regex.
 For example, searching APLS with `.*the.*` _will_ find matches for `the`, `these`, and `other`.
-
-By extension, this also means that the anchors `^` and `$` aren't necessary in APLS because patterns always match entire annotations. 
+(This also means that the anchors `^` and `$` aren't necessary because patterns always match entire annotations.)
 The table below shows the APLS equivalent of standard regex anchor expressions, along with example matches.
 
-| Standard regex | APLS equivalent | Examples |
+| Standard regex | How it matches in APLS | Translated for APLS | How it matches in APLS |
 |----------------|-----------------|----------|
-| `the` | `.*the.*` | <span class="goodex">the</span> <span class="goodex">these</span> <span class="goodex">other</span> |
-| `^the` | `the.*` | <span class="goodex">the</span> <span class="goodex">these</span> <span class="goodex">theater</span> |
-| `the$` | `.*the` | <span class="goodex">the</span> <span class="goodex">soothe</span> <span class="goodex">bathe</span> |
-| `^the$` | `the` | <span class="goodex">the</span> |
+| `the` | <span class="goodex">the</span> <span class="badex">these</span> <span class="badex">other</span> | `.*the.*` | <span class="goodex">the</span> <span class="goodex">these</span> <span class="goodex">other</span> |
+| `^the` | <span class="goodex">the</span> <span class="badex">these</span> <span class="badex">theater</span> | `the.*` | <span class="goodex">the</span> <span class="goodex">these</span> <span class="goodex">theater</span> |
+| `the$` | <span class="goodex">the</span> <span class="badex">soothe</span> <span class="badex">bathe</span> |  `.*the` | <span class="goodex">the</span> <span class="goodex">soothe</span> <span class="goodex">bathe</span> |
+| `^the$` | <span class="goodex">the</span> | `the` | <span class="goodex">the</span> |
 
-A separate but related topic is anchoring a search match to a larger annotation, such as finding words at the start of a turn. 
-This is covered on the [Anchoring searches]({{ '/doc/anchoring-searches' | relative_url }}) page.
+{: .note }
+> In the context of regular expressions beyond APLS, "anchors" are the metacharacters `^` and `$`.
+> In APLS searches, "anchoring" refers to anchoring a search match to a larger annotation, such as finding words at the start of a turn.
+> This is covered on the [Anchoring searches]({{ '/doc/anchoring-searches' | relative_url }}) page.
+
+
+### _participants_ and _transcripts_ pages: Regex match parts
+
+When [browsing participants]({{ '/doc/browsing-participants' | relative_url }}) or [transcripts]({{ '/doc/browsing-transcripts' | relative_url }}), you can specify filters to narrow down the list of matches.
+Some of these filters accept regex, like the <span class="layer">participant</span> or <span class="layer">transcript</span> name.
+Unlike search regex, these regex _do_ match parts of the label (no need for `.*` at the beginning and/or end of the regex).
+For example, on the _participants_ page, entering `1` in the _Participant_ box will match participants with `1` anywhere in their speaker code.
+This also means that `^` and `$`, which anchor patterns to the start and end (respectively) of the match, _do_ work in these filters
+For example, on the _participants_ page, entering `1$` in the _Participant_ box will match participants whose speaker codes _end with_ `1`.
+
+{% comment %}Regex are used in one other place in the corpus, the Process with Praat page, where they match participant attribute labels for overriding default settings (e.g., change the formant ceiling if participant_gender matches `M(ale)?`). That one is a whole-annotation match, like search, and uses java.util.regex.{% endcomment %}
+
+
+### Regex use POSIX Extended Regular Expressions
+
+APLS [implements regex](https://github.com/nzilbb/labbcat-server/blob/main/server/src/main/java/nzilbb/labbcat/server/db/OneQuerySearch.java) in MySQL (i.e., with the MySQL `REGEXP` operator), which uses [POSIX Extended Regular Expressions](https://www.regular-expressions.info/posix.html).
+This means that, compared to [PCRE](https://www.regular-expressions.info/pcre.html) regular expressions that are currently standard in high-level programming languages, features like [backreferences](https://www.regular-expressions.info/backref.html) and [lookarounds](https://www.regular-expressions.info/lookaround.html) are not supported.
+
+{% comment %}Technically, _participants_ and _transcripts_ use java.util.regex, so they do support backreferences (e.g., on _transcripts_, `CB(.).+\1` will match CB10interview1.eaf, CB10reading1.eaf, CB17interview1.eaf, and CB17reading1.eaf). But that's unlikely to matter for end-users.{% endcomment %}
+
+{: .under-the-hood }
+> On the _search_ page, entering an invalid regex pattern will make the text turn red.
+> Hovering over the red text will make a tooltip appear that gives a brief explanation of why the regex is invalid.
+> This error-checking is powered not by MySQL's regex engine but by JavaScript's `new Regexp()` with the `"u"` (Unicode) flag.
+> The error messages are mostly self-explanatory, but you can look them up [here](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Errors) if needed.
 
 
 ## Regex tips and tricks

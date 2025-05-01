@@ -4,7 +4,7 @@ permalink: /doc/searching-other-layers
 parent: Searching the corpus
 grand_parent: How to use APLS
 nav_order: 40
-last_modified_date: 2025-04-12T15:53:35:z
+last_modified_date: 2025-05-01T16:35:09-04:00
 ---
 
 # {{ page.title }}
@@ -47,7 +47,7 @@ In-depth descriptions of the different layers in APLS can be found in the [field
 
 <!-- the apls-dev search page now has more layer icons and the option to hide layer icons -->
 
-### Layer data types and notation systems
+## Layer data types and notation systems
 
 Different layers in APLS contain different kinds of annotations.
 These differences affect what and how you can search in each layer.
@@ -89,10 +89,11 @@ Similar to other parts of APLS, you can hover your mouse over the options in the
 {: .under-the-hood }
 > The drop-down menus are displayed as IPA symbols, but they are input into the text fields using the DISC alphabet.
 > Because the purpose of DISC is to make phonetic transcription more machine-readable, the only characters that are different from IPA are the ones that aren't found on QWERTY keyboards.
+> IPA characters found on QWERTY keyboards, like /p/ or /i/, are represented the same in DISC.
 
-#### Searching text layers...
+### Searching text layers...
 
-##### using English spelling
+#### using English spelling
 
 As discussed in [Your first search]({{ '/doc/your-first-search' | relative_url }}), you can search the <span class="layer">orthography</span> layer using English spelling.
 Other layers that can be searched using English spelling are:
@@ -121,12 +122,12 @@ The only syntax layer in APLS is the <span class="layer">part_of_speech</span> l
 > 1. Click the drop-down menu button (![]({{ '/assets/img/expand-down.svg' | relative_url }}){: style="height:1rem;"}) and select `JJS`.
 > 1. Click the _Search_ button.
 
-##### using boolean values (for overlap)
+#### using boolean values (for overlap)
 
 The <span class="layer">overlap</span> layer is part of the [timing project]({{ '/doc/layer-typology#project' | relative_url }}), but it contains text data in the form of Boolean values: `TRUE` for speech that is overlapping and `FALSE` for speech that isn't overlapping. 
 The <span class="layer">overlap</span> layer has a drop-down selection menu for these two `TRUE` and `FALSE` values.
 
-#### Searching phonological layers
+### Searching phonological layers
 
 The phonology layers (and what is included in their drop-down menus) in APLS are:
 - <span class="layer">phonemes</span> (IPA symbols that are not on QWERTY keyboards)
@@ -148,7 +149,7 @@ The phonology layers (and what is included in their drop-down menus) in APLS are
 > 1. Enter `.*` after `".*U` in the sylablles input field.
 > 1. Click the _Search_ button.
 
-#### Searching numerical layers
+### Searching numeric layers
 
 Some layers contain numeric data, instead of text data.
 As a result, the pattern input fields for these layers allow you to define a numerical range you would like to search for.

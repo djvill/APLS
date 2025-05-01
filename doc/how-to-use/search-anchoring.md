@@ -4,7 +4,7 @@ permalink: /doc/anchoring-searches
 parent: Searching the corpus
 grand_parent: How to use APLS
 nav_order: 70
-last_modified_date: 2025-04-12T15:53:35:z
+last_modified_date: 2025-05-01T16:35:09-04:00
 ---
 
 # {{ page.title }}
@@ -38,7 +38,7 @@ The following [segment layers]({{ '/doc/layer-typology#scope' | relative_url }})
 > To find matches for every instance of /s/ followed by /t/ that occurs at the end of words:
 > 1. Go to the [_search_ page](https://apls.pitt.edu/labbcat/search).
 > 1. Select the <span class="layer">segment</span> layer in the selection menu to make the segment pattern input field appear.
-> 1. Click the `+` button inside of the segment box to make another segment input field appear.
+> 1. Click ![]({{ '/assets/img/add.svg' | relative_url }}){: style="height:1rem;"} inside of the segment box to make another segment input field appear.
 > 1. Enter `s` in the first segment field and `t` in the second segment field.
 > 1. Click the lock ![]({{ '/assets/img/lock-unlocked.svg' | relative_url }}){: style="height:1rem;"} on the right side of the segment input field.
 > 1. Click the _Search_ button.

@@ -4,7 +4,7 @@ permalink: /doc/searching-for-inverted-matches
 parent: Searching the corpus
 grand_parent: How to use APLS
 nav_order: 50
-last_modified_date: 2025-04-12T15:53:35:z
+last_modified_date: 2025-05-01T16:35:09-04:00
 ---
 
 # {{ page.title }}
@@ -30,16 +30,44 @@ However, a simple search for non-matches could be to find all the words in APLS 
 > 1. Click the _Search_ button.
 
 Non-matching searches can also be combined with [regex patterns]({{ '/doc/regex' | relative_url }}) to specify a range of values to not match.
-For example, you could find all non-consonantal words in APLS by using a _doesn't match_ search on the <span class="layer">phonemes</span> layer:
+For example, you could find all words with _no_ consonants in APLS by using a _doesn't match_ search on the <span class="layer">phonemes</span> layer:
 
 {: .try-it }
-> To find all matches for non-consonantal words:
 > 1. Go to the [_search_ page](https://apls.pitt.edu/labbcat/search).
 > 1. Select the `phonology` project in the layer picker and click the checkbox for the <span class="layer">phonemes</span> layer to make the phonemes input field appear.
 > 1. Enter `.*` in the phonemes input field.
-> 1. Click the drop-down selection menu on the right side of the phonemes input field and select _CONSONANT:_.
+> 1. Click the drop-down menu button (![]({{ '/assets/img/expand-down.svg' | relative_url }}){: style="height:1rem;"}) and select _CONSONANT:_.
 > 1. Enter `.*` again at the end of the phonemes input field.
-> 1. Click the _matches_ drop-down menu for the stress input field and select _doesn't match_.
+> 1. Click the _matches_ drop-down menu for the phonemes input field and select _doesn't match_.
 > 1. Click the _Search_ button.
 
 The _doesn't match_ option is also useful when used with multiple layers, as described in the [Searching multiple layers]({{ '/doc/searching-complex-patterns#searching-multiple-layers' | relative_url }}) section of the [Searching with complex patterns]({{ '/doc/searching-complex-patterns' | relative_url }}) page.
+
+## Excluding stop-words
+
+One useful application of the _doesn't match_ option is removing stop-words: highly frequent lexical items that are often treated as outside the bounds of typical linguistic processes.
+For example, analyses of vowels' acoustic measurements [often exclude](https://doi.org/10.1515/lingvan-2022-0065) words that are likely to undergo vowel reduction.
+To exclude stop-words, set the <span class="layer">orthography</span> layer to _doesn't match_ the list of stop-words separated by [`|`]({{ '/doc/regex#vertical-pipe-' | relative_url }}).
+
+{: .try-it }
+> Let's find all words that contain /æ/, excluding _an_, _and_, _as_, _at_, or _that_.
+> 1. On the _search_ page, select the <span class="layer">phonemes</span> layer to make the phonemes field appear.
+> 1. Enter `.*` in the phonemes input field.
+> 1. Click the drop-down menu button (![]({{ '/assets/img/expand-down.svg' | relative_url }}){: style="height:1rem;"}) and select _æ_. <!-- Currently this incorrectly enters `{` -- will be fixed in APLS-Dev! -->
+> 1. Enter `.*` again at the end of the phonemes input field.
+> 1. Select _doesn't match_ for the orthography input field.
+> 1. Enter `an|and|as|at|that` in the orthography input field.
+> 1. Click the _Search_ button.
+
+There is no definitive list of stop-words---different analyses may require wider or narrower definitions of how to decide whether a word should be excluded.
+To guide your decisions, it can be useful to create a wider search initially, then use the ![]({{ '/assets/img/book.svg' | relative_url }}){: style="height:1rem;"} _Dictionary_ export option to [find the unique words]({{ '/doc/regex#checking-your-search-matches' | relative_url }}) that your search returns.
+
+{% comment %}
+TODO figure out how to deal w/ empty annotations.
+Two contexts: (1) _doesn't match_ REGEX looks for "annotations that aren't REGEX", so it doesn't include empty annotations, (2) to find empty annotations, use the special syntax _doesn't match_ `.+`.
+The former belongs on this page, the latter probably not (it's connected to _doesn't match_ by form but not by function).
+But the larger topic deserves its own page.
+
+Can frame in terms of (1) aligment dependency, (2) other structural empties (e.g., all words w/o an orthography annotation are redacted [minus some weird ones that are just . or - or ?]), (3) rando missings (eventually link to data coverage page)
+{% endcomment %}
+

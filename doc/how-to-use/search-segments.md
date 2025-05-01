@@ -4,7 +4,7 @@ permalink: /doc/searching-segments-within-words
 parent: Searching the corpus
 grand_parent: How to use APLS
 nav_order: 60
-last_modified_date: 2025-04-12T15:53:35:z
+last_modified_date: 2025-05-01T16:35:09-04:00
 ---
 
 # {{ page.title }}
@@ -46,7 +46,7 @@ With the <span class="layer">segment</span> layer, you would only to search `j` 
 ## Searching for multiple segments within a word
 
 Next to the the drop-down menu button (![]({{ '/assets/img/expand-down.svg' | relative_url }}){: style="height:1rem;"}) for the <span class="layer">segment</span> and <span class="layer">foll_segment</span> layers is a `+` button.
-Clicking the `+` button on the right side of the segment input field adds another input field for the segment that immediately follows the previous segment.
+Clicking ![]({{ '/assets/img/add.svg' | relative_url }}){: style="height:1rem;"} on the right side of the segment input field adds another input field for the segment that immediately follows the previous segment.
 This allows you to construct patterns that search for a sequence of segments within a word.
 
 {:.note}
@@ -57,7 +57,7 @@ This allows you to construct patterns that search for a sequence of segments wit
 > To find matches for every instance of /l/ followed by /t/:
 > 1. Go to the [_search_ page](https://apls.pitt.edu/labbcat/search).
 > 1. Select the <span class="layer">segment</span> layer in the selection menu to make the segment pattern input field appear.
-> 1. Click the `+` button inside of the segment box to make another segment input field appear.
+> 1. Click ![]({{ '/assets/img/add.svg' | relative_url }}){: style="height:1rem;"} inside of the segment box to make another segment input field appear.
 > 1. Enter `l` in the first segment field and `t` in the second segment field.
 > 1. Click the _Search_ button.
 
