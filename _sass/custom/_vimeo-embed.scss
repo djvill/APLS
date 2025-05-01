@@ -1,0 +1,23 @@
+.vimeo-embed {
+  padding-top: 52.5%;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  position: relative;
+  
+  > iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+// If in a list, make it
+li > .vimeo-embed {
+  margin-left: $list-indent;
+}
+ul, ol {
+  &:has(+ .vimeo-embed) > li:last-child {
+    margin-bottom: 0;
+  }
+}

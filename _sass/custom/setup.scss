@@ -44,6 +44,9 @@ $toggle-padding: 8px 10.5px;
 //Border around screenshots (only necessary in light mode)
 $screengrab-border: 0.2em solid black;
 
+//List indent (usually set by user agent, set here so it can be used in other contexts)
+$list-indent: 1.5em;
+
 /* Semantic variables */
 $grey-dk-150: mix($grey-dk-100, $grey-dk-200, 50%);
 $grey-dk-350: #1D1C21 !default;

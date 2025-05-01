@@ -2,8 +2,8 @@
 title: APLS Documentation
 nav_exclude: yes
 permalink: /
-num_aw_closed: 4543
-last_modified_date: 2025-03-11T15:08:23-04:00
+num_aw_closed: 4407
+last_modified_date: 2025-05-01T13:59:47-04:00
 ---
 
 # {{ page.title }}
@@ -24,14 +24,6 @@ APLS is currently under construction; when complete, it will contain 270 sound f
 ## Demo: Measuring F1 and F2 for /aw/ in closed syllables
 {: .no_toc }
 
-<!-- Each step is illustrated with a screen-cap GIF: back-to-back portions of a single continuous screen-cap. Login test-student, clear Downloads folder for screen-cap, regular-size screen.
-- GIF 1: search for orthography ``, segment `6` _from IPA picker_, syllables `.*6[pbtdkgfvTDszSZhJ_mnNlrwjFHP]`, and the results page that pops up
-  - As of version 0.2.1, this yields 4543 results
-- GIF 2: click CSV Export, open csv file in Excel, switch back to APLS
-- GIF 3: click upload > process with praat, upload file, specify sample points 0.2 0.5 0.8, process, open csv file in Excel
-  - Add a timer to the bottom-left, then speed up the video during processing "downtime"
--->
-
 Some speakers of Pittsburgh English pronounce the /aw/ vowel (the vowel sound in words like _out_ and _downtown_) more like "ah" (stereotyped as "_aht_" and "_dahntahn_").
 This pronunciation is noticeable to Pittsburghers as a marker of Pittsburgh identity and social meanings like working-class status (e.g., [Johnstone et al. 2006](https://doi.org/10.1177/0075424206290692)).
 
@@ -43,21 +35,21 @@ Normally, performing this sort of batch acoustic measurement on a dataset this b
 With APLS, it takes **_as little as 2 minutes_** to measure all **{{ page.num_aw_closed }}** tokens of /aw/ in closed syllables in the corpus.
 {: .fs-6 .fw-600 .mt-1 }
 
-
 {: .try-it-title }
 > Show me how!
 >
 > 1. [Search]({{ '/doc/search' | relative_url }}) for tokens
 >   - Using [regular expressions]({{ '/doc/regex' | relative_url }}) to search across multiple [annotation layers]({{ '/doc/layers-and-attributes' | relative_url }}), we find **{{ page.num_aw_closed }}** time-aligned /aw/ tokens
->     <!-- GIF 1 -->
+>     {% include vimeo-embed.html video_code="1080583360" privacy_code="ad1b027fba" %}
 >     
 > 1. [Export]({{ '/doc/export-data' | relative_url }}) search results to a CSV file
 >   - We get a search-results file with one token per row, and columns for different [annotation layers]({{ '/doc/layers-and-attributes' | relative_url }})
->     <!-- GIF 2 -->
+>     {% include vimeo-embed.html video_code="1080583387" privacy_code="501beb5ca0" %}
 >     
 > 1. [Extract]({{ '/doc/extract-acoustics' | relative_url }}) acoustic measurements for search results using APLS's built-in Praat module
 >   - Our search-results file gets updated with acoustic measurements that we specify (in this case, F1 and F2 at the vowel's 20%, 50%, and 80% timepoints)
->     <!-- GIF 3 -->
+>     {% include vimeo-embed.html video_code="1080583413" privacy_code="e859876ecf" %}
+
 
 ## Ready to get started with APLS? Click [here]({{ '/doc/apls-101-getting-started' | relative_url }})!
 {: .no_toc }
