@@ -3,7 +3,7 @@ title: APLS Documentation
 nav_exclude: yes
 permalink: /
 num_aw_closed: 4407
-last_modified_date: 2025-05-01T13:59:47-04:00
+last_modified_date: 2025-05-01T16:17:09-04:00
 ---
 
 # {{ page.title }}
@@ -16,9 +16,9 @@ APLS is a linguistic data resource, powered by the open-source linguistic corpus
 - **metadata** on interviewees and transcripts that facilitate large-scale (socio)linguistic analysis.
 
 APLS is (and will always be) **free to use**.
-APLS currently contains 218 sound files totaling 34 hours of audio from 34 interviewees.
+{% assign curr_version = site.versions.last.stats -%}
+APLS currently contains {{curr_version.transcripts}} sound files totaling over {{curr_version.duration | slice: 0, 2}} hours of audio from {{curr_version.transcript_series.size}} interviewees.
 APLS is currently under construction; when complete, it will contain 270 sound files totaling 45 hours of audio from 40 interviewees.
-<!-- In total, APLS contains 270 sound files totaling 45 hours of audio from 40 speakers. -->
 {: .mb-1 }
 
 ## Demo: Measuring F1 and F2 for /aw/ in closed syllables
@@ -32,14 +32,15 @@ A pretty typical data task would be to identify all tokens (individual instances
 Normally, performing this sort of batch acoustic measurement on a dataset this big would take hours of manual effort, even if you use state-of-the-art speech technologies for automatic speech recognition and segmental alignment.
 {: .mb-1 }
 
-With APLS, it takes **_as little as 2 minutes_** to measure all **{{ page.num_aw_closed }}** tokens of /aw/ in closed syllables in the corpus.
+{% assign num_aw_closed = page.num_aw_closed | default: curr_version.num_aw_closed %}
+With APLS, it takes **_as little as 2 minutes_** to measure all **{{ num_aw_closed }}** tokens of /aw/ in closed syllables in the corpus.
 {: .fs-6 .fw-600 .mt-1 }
 
 {: .try-it-title }
 > Show me how!
 >
 > 1. [Search]({{ '/doc/search' | relative_url }}) for tokens
->   - Using [regular expressions]({{ '/doc/regex' | relative_url }}) to search across multiple [annotation layers]({{ '/doc/layers-and-attributes' | relative_url }}), we find **{{ page.num_aw_closed }}** time-aligned /aw/ tokens
+>   - Using [regular expressions]({{ '/doc/regex' | relative_url }}) to search across multiple [annotation layers]({{ '/doc/layers-and-attributes' | relative_url }}), we find **{{ num_aw_closed }}** time-aligned /aw/ tokens
 >     {% include vimeo-embed.html video_code="1080583360" privacy_code="ad1b027fba" %}
 >     
 > 1. [Export]({{ '/doc/export-data' | relative_url }}) search results to a CSV file
