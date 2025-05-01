@@ -3,7 +3,7 @@ title: Version history
 permalink: /doc/version-history
 parent: About APLS
 nav_order: 30
-last_modified_date: 2025-02-05T16:54:19-05:00
+last_modified_date: 2025-05-01T16:06:21-04:00
 ---
 
 {% comment %}
@@ -49,4 +49,30 @@ This version of APLS uses LaBB-CAT version {{ curr_ver.labbcat_version }}.
 - **LaBB-CAT version:** {{ version.labbcat_version }}
 
 {{ version.content }}
+
+{% if version.stats %}
+#### Corpus status
+{:.no_toc}
+
+{%- if version.stats.transcript_series %}
+- **Transcript series** ({{version.stats.transcript_series.size}}, all in the `pgh0307` collection): {{ version.stats.transcript_series | join: ", "}}
+{%- endif %}
+{%- if version.stats.transcripts %}
+- **Transcripts**: {{version.stats.transcripts}}
+{%- endif %}
+{%- if version.stats.duration %}
+- **Transcript duration** (H:M:S): {{version.stats.duration}}
+{%- endif %}
+{%- if version.stats.word_tokens and version.stats.word_types %}
+- **Word tokens/types**: <span class="delimited">{{version.stats.word_tokens}}</span>/<span class="delimited">{{version.stats.word_types}}</span>
+{%- endif %}
+{%- if version.stats.segments %}
+- **Aligned segments**: <span class="delimited">{{version.stats.segments}}</span>
+{%- endif %}
+{%- if version.stats.segments %}
+- **Annotation layers** ({{version.stats.layers.size}}): {% for layer in version.stats.layers %}<span class="layer">{{layer}}</span>{% if forloop.index < forloop.length %}, {% endif %}{% endfor %}
+{%- endif %}
+
+
+{% endif %}
 {% endfor %}
