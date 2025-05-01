@@ -1,10 +1,10 @@
 ---
 title: Searching segments within words
-permalink: /doc/searching-segments-within-words
+permalink: /doc/search-segments
 parent: Searching the corpus
 grand_parent: How to use APLS
 nav_order: 60
-last_modified_date: 2025-05-01T16:35:09-04:00
+last_modified_date: 2025-05-01T16:45:45-04:00
 ---
 
 # {{ page.title }}

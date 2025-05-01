@@ -1,6 +1,6 @@
 ---
 title: Searching for inverted matches
-permalink: /doc/searching-for-inverted-matches
+permalink: /doc/inverted-matches
 parent: Searching the corpus
 grand_parent: How to use APLS
 nav_order: 50
@@ -41,7 +41,7 @@ For example, you could find all words with _no_ consonants in APLS by using a _d
 > 1. Click the _matches_ drop-down menu for the phonemes input field and select _doesn't match_.
 > 1. Click the _Search_ button.
 
-The _doesn't match_ option is also useful when used with multiple layers, as described in the [Searching multiple layers]({{ '/doc/searching-complex-patterns#searching-multiple-layers' | relative_url }}) section of the [Searching with complex patterns]({{ '/doc/searching-complex-patterns' | relative_url }}) page.
+The _doesn't match_ option is also useful when used with multiple layers, as described in the [Searching multiple layers]({{ '/doc/search-complex-patterns#searching-multiple-layers' | relative_url }}) section of the [Searching with complex patterns]({{ '/doc/search-complex-patterns' | relative_url }}) page.
 
 ## Excluding stop-words
 

@@ -1,6 +1,6 @@
 ---
 title: Search tips and tricks
-permalink: /doc/search-tips-and-tricks
+permalink: /doc/search-tips
 parent: Searching the corpus
 grand_parent: How to use APLS
 nav_order: 90

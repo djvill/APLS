@@ -1,10 +1,10 @@
 ---
 title: Searching other layers
-permalink: /doc/searching-other-layers
+permalink: /doc/search-other-layers
 parent: Searching the corpus
 grand_parent: How to use APLS
 nav_order: 40
-last_modified_date: 2025-05-01T16:35:09-04:00
+last_modified_date: 2025-05-01T16:45:45-04:00
 ---
 
 # {{ page.title }}
@@ -137,7 +137,7 @@ The phonology layers (and what is included in their drop-down menus) in APLS are
 - <span class="layer">syllables</span> (IPA symbols that are not on QWERTY keyboards and stress markers)
 
 {:.note .no-collapse}
-> <span class="layer">segment</span> and <span class="layer">foll_segment</span> layers are similar to the phonological layers in this section, but they have additional capabilities that are described in [Searching segments within words]({{ '/doc/searching-segments-within-words' | relative_url }}).
+> <span class="layer">segment</span> and <span class="layer">foll_segment</span> layers are similar to the phonological layers in this section, but they have additional capabilities that are described in [Searching segments within words]({{ '/doc/search-segments' | relative_url }}).
 
 {: .try-it }
 > To find all matches for syllables with /ʊ/ that have secondary stress:

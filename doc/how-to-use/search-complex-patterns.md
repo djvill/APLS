@@ -1,6 +1,6 @@
 ---
 title: Searching complex patterns
-permalink: /doc/searching-complex-patterns
+permalink: /doc/search-complex-patterns
 parent: Searching the corpus
 grand_parent: How to use APLS
 nav_order: 80
@@ -36,7 +36,7 @@ Clicking ![]({{ '/assets/img/remove.svg' | relative_url }}){: style="height:1rem
 > 1. Enter `not` in the first orthography layer text field and enter `even` in the second orthography layer text field.
 > 1. Click the _Search_ button.
 
-Similar to [multiple segment searches]({{ '/doc/searching-segments-within-words#searching-for-multiple-segments-within-a-word' | relative_url }}), you can designate one of the words in your multi-word search as your "token of interest" by clicking the target ![]({{ '/assets/img/target.svg' | relative_url }}){: style="height:1rem;"} for that word.
+Similar to [multiple segment searches]({{ '/doc/search-segments#searching-for-multiple-segments-within-a-word' | relative_url }}), you can designate one of the words in your multi-word search as your "token of interest" by clicking the target ![]({{ '/assets/img/target.svg' | relative_url }}){: style="height:1rem;"} for that word.
 This will not affect the number of matches that are found, but it will affect what information is included when [exporting data]({{ '/doc/export-data' | relative_url }}).
 
 ## Searching multiple layers
@@ -69,7 +69,7 @@ An example is given in the `TRY IT!` below using the <span class="layer">segment
 > 1. Click the _Search_ button.
 
 The target ![]({{ '/assets/img/target.svg' | relative_url }}){: style="height:1rem;"} option becomes particularly useful when doing multi-layer searches that include segment layers.
-As mentioned in [Searching segments within words]({{ '/doc/searching-segments-within-words' | relative_url }}), segment layers search for individual speech sound matches and all other layers search for word matches.
+As mentioned in [Searching segments within words]({{ '/doc/search-segments' | relative_url }}), segment layers search for individual speech sound matches and all other layers search for word matches.
 By default, multi-layer searches will look for one match per word.
 If you want the results to contain matches for every instance of a segment(s), you should click the target ![]({{ '/assets/img/target.svg' | relative_url }}){: style="height:1rem;"} for the segment input field.
 

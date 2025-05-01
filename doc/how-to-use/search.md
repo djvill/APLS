@@ -5,7 +5,7 @@ parent: How to use APLS
 has_children: yes
 has_toc: no
 nav_order: 50
-last_modified_date: 2025-04-15T13:11:29:z
+last_modified_date: 2025-05-01T16:45:46-04:00
 ---
 
 # {{ page.title }}
@@ -34,15 +34,15 @@ If you are looking for information on the search results page, go to the [Export
 The _search_ page allows you to...
 - [Search APLS data for specific patterns]({{ '/doc/your-first-search' | relative_url }}).
   - These patterns can target: 
-    - [single words]({{ '/doc/searching-other-layers#searching-text-layers' | relative_url }})
-    - [part-of-speech tags]({{ '/doc/searching-other-layers#using-part-of-speech-tags' | relative_url }})
-    - [phonological features]({{ '/doc/searching-other-layers#searching-phonological-layers' | relative_url }})
-    - [segments within words]({{ '/doc/searching-segments-within-words' | relative_url }})
-      - Such as finding [all instances of a specific vowel]({{ '/doc/searching-segments-within-words#searching-for-a-single-segment' | relative_url }}) or [all instances of a consonant cluster]({{ '/doc/searching-segments-within-words#searching-for-multiple-segments-within-a-word' | relative_url }}).
-    - [multiple words]({{ '/doc/searching-complex-patterns#searching-multiple-words' | relative_url }})
-    - [multiple layers]({{ '/doc/searching-complex-patterns#searching-multiple-layers' | relative_url }})
-      - Such as finding [a specific word tagged as a certain part-of-speech]({{ '/doc/searching-complex-patterns#searching-multiple-layers' | relative_url }}).
-    - [multiple words and layers]({{ '/doc/searching-complex-patterns#searching-multiple-words-and-layers' | relative_url }})
+    - [single words]({{ '/doc/search-other-layers#searching-text-layers' | relative_url }})
+    - [part-of-speech tags]({{ '/doc/search-other-layers#using-part-of-speech-tags' | relative_url }})
+    - [phonological features]({{ '/doc/search-other-layers#searching-phonological-layers' | relative_url }})
+    - [segments within words]({{ '/doc/search-segments' | relative_url }})
+      - Such as finding [all instances of a specific vowel]({{ '/doc/search-segments#searching-for-a-single-segment' | relative_url }}) or [all instances of a consonant cluster]({{ '/doc/search-segments#searching-for-multiple-segments-within-a-word' | relative_url }}).
+    - [multiple words]({{ '/doc/search-complex-patterns#searching-multiple-words' | relative_url }})
+    - [multiple layers]({{ '/doc/search-complex-patterns#searching-multiple-layers' | relative_url }})
+      - Such as finding [a specific word tagged as a certain part-of-speech]({{ '/doc/search-complex-patterns#searching-multiple-layers' | relative_url }}).
+    - [multiple words and layers]({{ '/doc/search-complex-patterns#searching-multiple-words-and-layers' | relative_url }})
 - [Filter searches by specific participants and transcripts]({{ '/doc/search-filters-and-options' | relative_url }})
 - Configure your search with different [search options]({{ '/doc/search-filters-and-options' | relative_url }})
 
@@ -62,7 +62,7 @@ this is one section in particular that will need to be updated with the new sear
 There are five main sections of the _search_ page:
 1. [Participants and transcripts filters]({{ '/doc/search-filters-and-options' | relative_url }})
 1. [Search options]({{ '/doc/search-filters-and-options#search-options' | relative_url }})
-1. [Layer picker]({{ '/doc/searching-other-layers' | relative_url }})
+1. [Layer picker]({{ '/doc/search-other-layers' | relative_url }})
 1. [Pattern input fields]({{ '/doc/your-first-search' | relative_url }})
 1. [Search progress bar]({{ '/doc/your-first-search#search-results' | relative_url }})
 
