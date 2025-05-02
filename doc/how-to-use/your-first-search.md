@@ -1,10 +1,11 @@
 ---
 title: Your first search - <span class="layer">orthography</span>
+contributors: [Dan Villarreal, Jack Rechsteiner]
 permalink: /doc/your-first-search
 parent: Searching the corpus
 grand_parent: How to use APLS
 nav_order: 10
-last_modified_date: 2025-05-01T16:45:46-04:00
+last_modified_date: 2025-05-01T22:48:21-04:00
 ---
 
 # {{ page.title }}

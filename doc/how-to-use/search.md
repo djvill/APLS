@@ -1,11 +1,12 @@
 ---
 title: Searching the corpus 
+contributors: [Dan Villarreal, Jack Rechsteiner]
 permalink: /doc/search
 parent: How to use APLS
 has_children: yes
 has_toc: no
 nav_order: 50
-last_modified_date: 2025-05-01T16:45:46-04:00
+last_modified_date: 2025-05-01T22:48:20-04:00
 ---
 
 # {{ page.title }}

@@ -1,9 +1,10 @@
 ---
 title: Exporting data
+contributors: [Dan Villarreal, Jack Rechsteiner]
 permalink: /doc/export-data
 parent: How to use APLS
 nav_order: 60
-last_modified_date: 2025-04-29T14:05:59:z
+last_modified_date: 2025-05-01T22:48:16-04:00
 ---
 
 # {{ page.title }}

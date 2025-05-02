@@ -1,9 +1,10 @@
 ---
 title: Extracting acoustic measurements
+contributors: [Dan Villarreal, Jack Rechsteiner]
 permalink: /doc/extract-acoustics
 parent: How to use APLS
 nav_order: 70
-last_modified_date: 2025-05-01T15:43:15:z
+last_modified_date: 2025-05-01T22:48:16-04:00
 ---
 
 # {{ page.title }}

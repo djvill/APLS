@@ -1,9 +1,10 @@
 ---
 title: Navigating APLS
+contributors: [Dan Villarreal, Jack Rechsteiner]
 permalink: /doc/navigation
 parent: APLS 101/Getting started
 nav_order: 50
-last_modified_date: 2025-03-11T16:02:27-04:00
+last_modified_date: 2025-05-01T22:48:15-04:00
 ---
 
 # {{ page.title }}

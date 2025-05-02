@@ -1,10 +1,11 @@
 ---
 title: Search tips and tricks
+contributors: [Dan Villarreal, Jack Rechsteiner]
 permalink: /doc/search-tips
 parent: Searching the corpus
 grand_parent: How to use APLS
 nav_order: 90
-last_modified_date: 2025-04-12T15:53:35:z
+last_modified_date: 2025-05-01T22:48:19-04:00
 ---
 
 # {{ page.title }}

@@ -1,10 +1,11 @@
 ---
 title: Setting up Praat integration
+contributors: [Dan Villarreal, Jack Rechsteiner]
 permalink: /doc/praat-integration
 parent: Viewing a transcript
 grand_parent: How to use APLS
 nav_order: 10
-last_modified_date: 2025-02-14T15:02:39-05:00
+last_modified_date: 2025-05-01T22:48:17-04:00
 ---
 
 # {{ page.title }}

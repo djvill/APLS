@@ -1,9 +1,10 @@
 ---
 title: Browsing participants
+contributors: [Dan Villarreal, Jack Rechsteiner]
 permalink: /doc/browse-participants
 parent: How to use APLS
 nav_order: 40
-last_modified_date: 2025-04-14T19:30:51:z
+last_modified_date: 2025-05-01T22:48:15-04:00
 ---
 
 # {{ page.title }}

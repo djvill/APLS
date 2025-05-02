@@ -1,10 +1,11 @@
 ---
 title: Searching other layers
+contributors: [Dan Villarreal, Jack Rechsteiner]
 permalink: /doc/search-other-layers
 parent: Searching the corpus
 grand_parent: How to use APLS
 nav_order: 40
-last_modified_date: 2025-05-01T16:45:45-04:00
+last_modified_date: 2025-05-01T22:48:19-04:00
 ---
 
 # {{ page.title }}

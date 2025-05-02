@@ -1,10 +1,11 @@
 ---
 title: Anchoring searches
+contributors: [Dan Villarreal, Jack Rechsteiner]
 permalink: /doc/anchoring-searches
 parent: Searching the corpus
 grand_parent: How to use APLS
 nav_order: 70
-last_modified_date: 2025-05-01T16:35:09-04:00
+last_modified_date: 2025-05-01T22:48:15-04:00
 ---
 
 # {{ page.title }}

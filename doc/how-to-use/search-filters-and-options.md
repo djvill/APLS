@@ -1,10 +1,11 @@
 ---
 title: Search filters and options
+contributors: [Dan Villarreal, Jack Rechsteiner]
 permalink: /doc/search-filters-and-options
 parent: Searching the corpus
 grand_parent: How to use APLS
 nav_order: 20
-last_modified_date: 2025-05-01T16:35:09-04:00
+last_modified_date: 2025-05-01T22:48:18-04:00
 ---
 
 # {{ page.title }}

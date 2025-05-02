@@ -1,10 +1,11 @@
 ---
 title: Searching for inverted matches
+contributors: [Dan Villarreal, Jack Rechsteiner]
 permalink: /doc/inverted-matches
 parent: Searching the corpus
 grand_parent: How to use APLS
 nav_order: 50
-last_modified_date: 2025-05-01T16:35:09-04:00
+last_modified_date: 2025-05-01T22:48:17-04:00
 ---
 
 # {{ page.title }}

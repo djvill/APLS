@@ -1,9 +1,10 @@
 ---
 title: Browsing transcripts
+contributors: [Dan Villarreal, Jack Rechsteiner]
 permalink: /doc/browse-transcripts
 parent: How to use APLS
 nav_order: 30
-last_modified_date: 2025-03-11T10:06:21-04:00
+last_modified_date: 2025-05-01T22:48:16-04:00
 ---
 
 # {{ page.title }}

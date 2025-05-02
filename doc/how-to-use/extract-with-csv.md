@@ -1,10 +1,11 @@
 ---
 title: Extracting additional data with a results .csv
+contributors: [Dan Villarreal, Jack Rechsteiner]
 permalink: /doc/extract-with-csv
 parent: Exporting data
 grand_parent: How to use APLS
 nav_order: 10
-last_modified_date: 2025-05-01T15:39:33:z
+last_modified_date: 2025-05-01T22:48:17-04:00
 ---
 
 # {{ page.title }}

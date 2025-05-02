@@ -1,10 +1,11 @@
 ---
 title: Searching with regular expressions
+contributors: [Dan Villarreal, Jack Rechsteiner]
 permalink: /doc/regex
 parent: Searching the corpus
 grand_parent: How to use APLS
 nav_order: 30
-last_modified_date: 2025-05-01T16:35:08-04:00
+last_modified_date: 2025-05-01T22:48:18-04:00
 ---
 
 # {{ page.title }}

@@ -1,9 +1,10 @@
 ---
 title: Data organization in LaBB-CAT
+contributors: [Dan Villarreal, Jack Rechsteiner]
 permalink: /doc/data-organization
 parent: APLS 101/Getting started
 nav_order: 30
-last_modified_date: 2025-03-11T12:55:44-04:00
+last_modified_date: 2025-05-01T22:48:15-04:00
 ---
 
 # {{ page.title }}

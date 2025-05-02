@@ -1,9 +1,10 @@
 ---
 title: Where APLS data comes from
+contributors: [Dan Villarreal, Jack Rechsteiner]
 permalink: /doc/data-sources
 parent: About APLS
 nav_order: 20
-last_modified_date: 2025-03-11T12:15:17-04:00
+last_modified_date: 2025-05-01T22:48:14-04:00
 ---
 
 # {{ page.title }}
