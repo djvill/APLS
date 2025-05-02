@@ -1,6 +1,12 @@
 <p class="text-small mb-0 mt-0">
-	<!-- Copyright &copy; 2021&ndash;2025 <a href="https://djvill.github.io" target="_blank">Dan Villarreal</a>. See citation information <a href="doc/citing-contributing">here</a>. -->
-	Copyright &copy; 2021&ndash;2025 Dan Villarreal. See citation information <a href="doc/citing-contributing#citing-documentation">here</a>.
+  {%- capture contribs -%}
+  {%- if page.contributors.size == 1 -%}{{page.contributors}}
+  {%- elsif page.contributors.size == 2 -%}{{page.contributors | join: " and "}}
+  {%- elsif page.contributors.size >= 3 -%}{%- for c in page.contributors -%}{{c}}{% if forloop.rindex > 2 %}, {% elsif forloop.rindex == 2 %}, and {% endif %}{%- endfor -%}
+  {%- else -%}Dan Villarreal
+  {%- endif -%}
+  {%- endcapture -%}
+	This page copyright &copy; 2021&ndash;2025 {{contribs}}. See citation information <a href="doc/citing-contributing#citing-documentation">here</a>.
 </p>
 <p class="text-small mb-0 mt-0">
 	Distributed under a <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">Creative Commons BY-NC-SA 4.0</a> license.
