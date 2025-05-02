@@ -2,8 +2,7 @@
 title: APLS Documentation
 nav_exclude: yes
 permalink: /
-num_aw_closed: 4407
-last_modified_date: 2025-05-01T16:17:09-04:00
+last_modified_date: 2025-05-02T15:42:30-04:00
 ---
 
 # {{ page.title }}
@@ -17,7 +16,11 @@ APLS is a linguistic data resource, powered by the open-source linguistic corpus
 
 APLS is (and will always be) **free to use**.
 {% assign curr_version = site.versions.last.stats -%}
-APLS currently contains {{curr_version.transcripts}} sound files totaling over {{curr_version.duration | slice: 0, 2}} hours of audio from {{curr_version.transcript_series.size}} interviewees.
+{%- assign hours = curr_version.duration | slice: 0, 2 | plus: 0 -%}
+{%- assign minutes = curr_version.duration | slice: 3, 5 | plus: 0 -%}
+{%- if minutes < 45 -%}{%- assign dur = hours | prepend: "over " -%}
+{%- else -%}{%- assign dur = hours | plus: 1 | prepend: "nearly " -%}{%- endif -%}
+APLS currently contains {{curr_version.transcripts}} sound files totaling {{dur}} hours of audio from {{curr_version.transcript_series.size}} interviewees.
 APLS is currently under construction; when complete, it will contain 270 sound files totaling 45 hours of audio from 40 interviewees.
 {: .mb-1 }
 
