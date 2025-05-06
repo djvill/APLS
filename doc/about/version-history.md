@@ -3,7 +3,7 @@ title: Version history
 permalink: /doc/version-history
 parent: About APLS
 nav_order: 30
-last_modified_date: 2025-05-06T14:03:58-04:00
+last_modified_date: 2025-05-06T16:01:10-04:00
 ---
 
 {% comment %}
@@ -54,11 +54,8 @@ This version of APLS uses LaBB-CAT version {{ curr_ver.labbcat_version }}.
 #### Corpus status {#status-{{version.version}}}
 {:.no_toc}
 
-{% unless forloop.last %}
-{% assign prev_vers_idx = forloop.rindex | minus: 2 %}
-{% assign prev_vers = site.versions[prev_vers_idx] %}
-{% if version.stats == prev_vers.stats %}
-Unchanged from version [{{prev_vers.version}}](#status-{{prev_vers.version}})
+{% if version.stats.same_as %}
+Unchanged from version [{{version.stats.same_as}}](#status-{{version.stats.same_as}})
 {% else %}
 {%- if version.stats.transcript_series %}
 - **Transcript series** ({{version.stats.transcript_series.size}}, all in the `pgh0307` collection): {{ version.stats.transcript_series | join: ", "}}
@@ -80,7 +77,5 @@ Unchanged from version [{{prev_vers.version}}](#status-{{prev_vers.version}})
 {%- endif %}
 
 {% endif %}
-{% endunless %}
-
 {% endif %}
 {% endfor %}

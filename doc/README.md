@@ -2,7 +2,7 @@
 title: APLS Documentation
 nav_exclude: yes
 permalink: /
-last_modified_date: 2025-05-02T15:42:30-04:00
+last_modified_date: 2025-05-06T16:01:10-04:00
 ---
 
 # {{ page.title }}
@@ -16,6 +16,11 @@ APLS is a linguistic data resource, powered by the open-source linguistic corpus
 
 APLS is (and will always be) **free to use**.
 {% assign curr_version = site.versions.last.stats -%}
+{%- if curr_version.same_as -%}
+  {%- assign where_str = "v.version == '" | append: curr_version.same_as | append: "'" -%}
+  {%- assign same_version = site.versions | where_exp: "v", where_str -%}
+  {%- assign curr_version = same_version.first.stats -%}
+{%- endif -%}
 {%- assign hours = curr_version.duration | slice: 0, 2 | plus: 0 -%}
 {%- assign minutes = curr_version.duration | slice: 3, 5 | plus: 0 -%}
 {%- if minutes < 45 -%}{%- assign dur = hours | prepend: "over " -%}
