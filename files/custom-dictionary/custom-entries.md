@@ -4,7 +4,7 @@ layout: default
 permalink: /files/custom-entries
 parent: Custom dictionary
 search_exclude: true
-last_modified_date: 2025-04-18T19:19:33:z
+last_modified_date: 2025-05-06T15:43:24-04:00
 ---
 
 # {{ page.title }}
@@ -223,6 +223,7 @@ These custom entries just fill in the gaps.
 - Pennysaver
 - Poli's
 - Primanti
+- Ritz-Carlton
 - Starbucks
 - Stroh's
 - Sunseri's
@@ -267,6 +268,7 @@ These custom entries just fill in the gaps.
 - DVD
 - DVDs
 - extracurricular
+- eye-opening
 - gelato
 - gelatos
 - great-grandparents
@@ -276,6 +278,7 @@ These custom entries just fill in the gaps.
 - howitzers
 - humongous
 - igniters
+- impactful
 - impatien
 - impatiens
 - jitney
@@ -297,6 +300,7 @@ These custom entries just fill in the gaps.
 - moonshot
 - moonshots
 - nonscientific
+- Ohioan
 - outdoorsman
 - partier
 - phys
@@ -336,6 +340,7 @@ These custom entries just fill in the gaps.
 - uppity
 - webcam
 - webcams
+- womanist
 - worldview
 - worldviews
 - y'all

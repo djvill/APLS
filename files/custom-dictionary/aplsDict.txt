@@ -205,6 +205,7 @@ Penn-Mac
 Pennysaver
 Poli's
 Primanti
+Ritz-Carlton
 Starbucks
 Stroh's
 Sunseri's
@@ -249,6 +250,7 @@ dodgeball
 DVD
 DVDs
 extracurricular
+eye-opening
 gelato
 gelatos
 great-grandparents
@@ -258,6 +260,7 @@ homeschool
 howitzers
 humongous
 igniters
+impactful
 impatien
 impatiens
 jitney
@@ -279,6 +282,7 @@ minoring
 moonshot
 moonshots
 nonscientific
+Ohioan
 outdoorsman
 partier
 phys
@@ -318,6 +322,7 @@ unironically
 uppity
 webcam
 webcams
+womanist
 worldview
 worldviews
 y'all
