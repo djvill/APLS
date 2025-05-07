@@ -1,7 +1,7 @@
 <blockquote class="try-it-title old-new" id="{{include.file | replace: '/', '-'}}">
   <p>Comparison{% if include.title_suffix %}: {{include.title_suffix}}{% endif %}</p>
   {% if include.caption %}
-    <span class="caption">{{include.caption}}</span>
+    <span class="caption">{{include.caption | markdownify}}</span>
   {% endif %}
   <div class="old">
     <img src="{{'/assets/screengrab/new-ui/' | append: include.file | append: '_old.png' | relative_url}}" />
