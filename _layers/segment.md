@@ -1,8 +1,8 @@
 ---
 synced:
-  short_description: Individual speech sound
   layer_id: 1
-  alignment: sub-interval
+  short_description: Individual speech sound
+  alignment: complete interval
   project: (none)
   parent: word
   peers: yes
@@ -18,7 +18,7 @@ synced:
   export_includeCounts: yes
   export_includeAnchorSharing: yes
   extra: (none)
-last_sync_modified_date: 2025-01-11T16:50:28-0500
+last_sync_modified_date: 2025-03-24T12:46:32-0400
 notation:
   primary: DISC
   missing: Force-alignment failed for this utterance (line)
@@ -33,7 +33,7 @@ alignment_dependent: yes
 versions:
   first_appeared: 0.1.0
   last_modified: 0.1.0
-last_modified_date: 2025-01-11T16:52:01-05:00
+last_modified_date: 2025-05-07T14:48:49-04:00
 ---
 
 **Fill longer description here**

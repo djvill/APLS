@@ -135,9 +135,6 @@ function addA(node, type) {
     case 'redaction':
       title = `Speech redacted from the transcript (e.g., personally identifying information)`;
       break;
-    case 'language':
-      title = `Language spoken (placeholder)`;
-      break;
     case 'htk':
       title = `HTK alignment time`;
       break;

@@ -27,6 +27,9 @@ update_existing_js_file <- TRUE
 ##Path to file for writing session info (NULL to skip)
 session_info <- "_session-info_sync-layers.txt"
 
+##Whether to show turn/word/segment as 'complete interval' alignment
+##  See https://github.com/djvill/labbcat-server/commit/2af6f41
+spoof_alignment <- TRUE
 
 # Preliminaries -----------------------------------------------------------
 
@@ -104,6 +107,12 @@ layers <-
 
 ## Wrangle layers ============================================================
 
+##Remove language layer
+##language has no annotations; it's only in the APLS schema because it's
+##  required by some layer managers; and it's hidden from all layer selectors
+layers <- layers |>
+  filter(id != "language")
+
 ##Columns and names
 layers <- layers |>
   ##Remove columns relevant only to participant/transcript attributes
@@ -132,13 +141,6 @@ layers <- layers |>
            data_type=="number" ~ "numeric",
            data_type=="string" ~ "text")),
          across(alignment, ~ case_when(
-           ##turn/word/segment *technically* have alignment=2 because that's
-           ##  relative to their parents (participant/turn/word), but
-           ##  *conceptually* they correspond to a "full" phrase/word/segment
-           ##However, LaBB-CAT uses the underlying alignment to style layer
-           ##  icons, so for now, keep this as-is.
-           # id %in% c("turn","word","segment") ~ "complete interval",
-           
            ##Same story for phrase layers---LaBB-CAT uses the sub-intervals
            ##  icon; for exporting matches to CSV, it treats phrase layers as
            ##  though they can't have horizontal peers (and actually, ditto for
@@ -208,6 +210,13 @@ layers <- layers |>
            .default=FALSE),
          .before=extra)
 
+##Optionally spoof alignments for turn/word/segment
+if (spoof_alignment) {
+  layers <- layers |>
+    mutate(across(alignment, ~ if_else(id %in% c("turn","word","segment"), 
+                                       "complete interval",
+                                       alignment)))
+}
 
 ## Wrangle attributes ======================================================
 
