@@ -3,7 +3,7 @@ title: User interface
 permalink: /doc/user-interface
 parent: About APLS
 nav_order: 35
-last_modified_date: 2025-05-07T13:55:55-04:00
+last_modified_date: 2025-05-07T14:11:39-04:00
 ---
 
 # {{ page.title }}
@@ -43,7 +43,7 @@ The layer picker appears in various forms on several pages.
 - [Search page]({{ '/doc/search' | relative_url }}): Selects layers to search
   - See comparison [below](#layer-picker-search)
 - [Transcripts]({{ '/doc/browse-transcripts' | relative_url }}) and [search results]({{ '/doc/export-data' | relative_url }}) pages: Selects attributes and layers to export
-  - See comparison [below](#layer-picker-t)
+  - See comparison [below](#layer-picker-transcripts)
 
 The layer picker has been updated on all these pages, with some page-specific changes.
 
@@ -63,7 +63,7 @@ These changes are exemplified by the layer picker on the search page.
 
 ### Individual transcript pages
 
-{% include compare-ui.html file="layer-picker/transcript" title_suffix="Transcript pages" caption="The layer picker when first loading a transcript page" %}
+{% include compare-ui.html file="layer-picker/transcript" title_suffix="Transcript pages" caption="The layer picker when first loading the [CB01interview.eaf](https://apls.pitt.edu/labbcat/transcript?transcript=CB01interview1.eaf) transcript page and selecting the _imported_ project" %}
 
 In addition to the [baseline changes](#layer-picker-search), the layer picker on the transcript page has:
 
@@ -76,7 +76,7 @@ In addition to the [baseline changes](#layer-picker-search), the layer picker on
 
 ### Transcripts and search results pages
 
-{% include compare-ui.html file="layer-picker/transcripts" title_suffix="Transcripts/search results pages" caption="The layer picker when selecting 'Export Formatted' on the transcripts page, or 'CSV Export' on the search results page" %}
+{% include compare-ui.html file="layer-picker/transcripts" title_suffix="Transcripts/search results pages" caption="The layer picker when selecting _Export Formatted_ on the transcripts page, or _CSV Export_ on the search results page" %}
 
 The layer picker appears on the transcripts page when selecting _Export Formatted_, and on the search results page when selecting _CSV Export_ or _Utterance Export_.
 In the first two cases, the layer picker allows the user to select participant and transcript [attributes]({{ '/doc/attribute-typology' | relative_url}}) in addition to layers.
