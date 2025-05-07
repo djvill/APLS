@@ -63,3 +63,13 @@ img.screengrab {
     right: 10px;
   }
 }
+
+//old/new comparisons
+.old-new {
+  .old::before {
+    content: 'Old'
+  }
+  .new::before {
+    content: 'New'
+  }
+}
