@@ -3,7 +3,7 @@ title: Transcription convention
 permalink: /doc/transcription-convention
 parent: Transcription
 nav_order: 10
-last_modified_date: 2025-02-28T10:45:19-05:00
+last_modified_date: 2025-05-07T16:28:59-04:00
 ---
 
 
@@ -161,7 +161,8 @@ When we mark a stretch of speech as redacted, LaBB-CAT deletes the audio and rem
 - You should redact any information that could uniquely identify the speaker, such as their name (first, last, or maiden name), family members' names (including distant relatives), their street address (current or childhood), etc.
 	- This information comes up quite rarely in sociolinguistic interviews. More likely is _non_-unique identifying information, which does not need to be redacted: the speaker's high school, the street they grew up on (but not the street _and_ number), etc.
 	- If you're unsure about whether something needs to be redacted, contact Dan
-
+- <a id="redaction-extra"/>In addition, redact any instances of the N-word.
+  - Enter `REDACT` on the speaker tier as usual, and `N-word` on the `Redaction` tier
 
 
 
@@ -188,6 +189,7 @@ Reminder: In this document, `fixed-width font` is used for things you actually t
 		- You _can_ use a [comment](#comments-and-noises) to mention speakers' performative use of "dialect pronunciations", but this is strictly optional.
 	- Using non-dictionary forms makes it harder to find words in search results and prevents the corpus software from using computational methods (e.g., part-of-speech lookup)
 - **Don't tidy up the speech**. Leave in the repetitions, fillers, speech errors, bad words, mean sentiments, etc.
+  - The exception is the N-word, which should always be redacted (see [above](#redaction-extra))
 - Don't use capital letters for the start of new sentences. Only use capital letters for proper nouns and the pronoun _I_
 - Write all numbers out in full, with spaces instead of hyphens (e.g., `one hundred and twenty three` not <code class="counterex">123</code> or <code class="counterex">one hundred and twenty-three</code>)
 - When abbreviations or acronyms are used:
@@ -239,7 +241,6 @@ Reminder: In this document, `fixed-width font` is used for things you actually t
 	- `blah`
 	- `woohoo`
 	{:.wrap .fb-10 .no-bg}
-
 
 ### Punctuation
 
