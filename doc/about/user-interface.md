@@ -3,7 +3,7 @@ title: User interface
 permalink: /doc/user-interface
 parent: About APLS
 nav_order: 35
-last_modified_date: 2025-05-08T13:22:51-04:00
+last_modified_date: 2025-05-08T13:46:05-04:00
 ---
 
 # {{ page.title }}
@@ -62,6 +62,7 @@ These changes are exemplified by the layer picker on the search page.
   - **More intuitive alignment**: For technical reasons relating to the [annotation graph][fromont-2017] data structure, <span class="layer-id">turn</span>, <span class="layer-id">word</span>, and <span class="layer-id">segment</span> have "Sub-interval" alignment even though intuitively they should have "Complete interval" alignment. The layer picker now shows them as having "Complete interval" alignment.
 - **Docpage links**: The new controls bar at the bottom of the layer picker not only contains controls for showing/hiding information like layer icons, it also links to relevant documentation pages.
 - **Cursor**: Previously, it wasn't obvious that you could hover over a layer/attribute name to bring up a longer description. Now, the mouse pointer changes to a ["help" cursor](https://developer.mozilla.org/en-US/docs/Web/CSS/cursor) to cue users to this fact.
+- **Bugfix**: On the search and transcript page, most layer checkboxes are hidden when the page loads, with batches of checkboxes made visible by selecting [projects]({{ '/doc/layer-typology#project' | relative_url }}). Previously, if you selected a project, selected a layer in the project, then deselected the project, that layer's checkbox would disappear. Now, checkboxes for selected layers don't disappear even if their project is deselected.
 
 
 ### Individual transcript pages
@@ -98,6 +99,8 @@ The comparison images in this section come from the [HD05interview2.eaf](https:/
 
 ### Header
 
+<!-- TODO consider making this a big bullet-list -->
+
 #### _Attributes_ tab
 
 {% include compare-ui.html file="transcript-header/attributes" caption="The transcript page _Attributes_ tab" %}
@@ -105,7 +108,7 @@ The comparison images in this section come from the [HD05interview2.eaf](https:/
 - **More attributes**: Previously, <span class="transcript-attr">corpus</span> and <span class="transcript-attr">episode</span> were visible on [transcript attributes pages]({{ '/doc/browse-transcripts#transcript-attributes-pages' | relative_url }}), but not on the transcript page itself. This page now displays these attributes.
 - **Real attribute names**: Previously, the _Attributes_ tab only displayed attributes' [display titles](https://djvill.github.io/APLS/doc/attribute-typology#display-title), with names in a tooltip. Now, this tab displays attribute names.
   - **Hideable**: These names can be toggled on and off by clicking _Hide attribute names_. This setting persists if you visit more pages in the same browser tab.
-  - **Attribute prefixes**: As in the [layer picker](#layer-picker-transcripts), the `transcript_` prefix is hidden by default but can be shown by unchecking _Hide attribute prefixes_. When attribute names are hidden, this checkbox is disabled. Like _Hide attribute names_, this setting persists within a browser tab.
+  - **Attribute prefixes**: As in the [layer picker](#layer-picker-transcripts), the `transcript_` prefix is hidden by default but can be shown by unchecking _Hide attribute prefixes_. When attribute names are hidden, this checkbox is grayed-out. Like _Hide attribute names_, this setting persists within a browser tab.
 
 #### _Participants_ tab
 
@@ -143,6 +146,42 @@ See [above](#layer-picker-2).
   - **Better permalinking**: The word menu allows users to create a permalink by selecting _Utterance_ or _Word_. Previously, this would remove any highlighting that would result from clicking on a [search result]({{ '/doc/export-data#search-results-page' | relative_url }}). Now, permalinking doesn't remove this highlighting.
 
 
+## Search page
+
+### Filters and options
+
+- [Search UX](https://github.com/nzilbb/labbcat-server/pull/53)
+- [Fix auto-open bug where only 1st search on a tab auto-opens](https://github.com/nzilbb/labbcat-server/pull/54)
+
+### Search matrix
+
+- [Layer picker](#layer-picker-1)
+- [search: Don't clobber search matrix when selecting a filter](https://github.com/nzilbb/labbcat-server/pull/51)
+- [lib-input-regexp: Stricter checking and helper tooltip](https://github.com/nzilbb/labbcat-server/pull/49)
+- [valid-label-helper: UX tweaks](https://github.com/nzilbb/labbcat-server/pull/66)
+  - Not regex stuff; that should go with the previous
+
+
+## Search results page
+
+- [Matches: UX tweaks](https://github.com/nzilbb/labbcat-server/pull/64)
+- [matches: Don't clobber checkbox selections when changing context](https://github.com/nzilbb/labbcat-server/pull/57)
+
+
+## Transcripts and participants pages
+
+- [UX improvements](https://github.com/nzilbb/labbcat-server/pull/69)
+- [On participants and transcripts, after filters are cleared, prevent range lower bound from being parsed as regex to match](https://github.com/nzilbb/labbcat-server/pull/50)
+
+
+## Attribute pages 
+
+- [UX tweaks](https://github.com/nzilbb/labbcat-server/pull/65)
+  - A lot can be referenced to the [_Attributes_ tab](#transcript-header-attributes)
+
+## Miscellaneous
+
+- [lib-messages: More modern-looking alert modals](https://github.com/nzilbb/labbcat-server/pull/48)
 
 
 
