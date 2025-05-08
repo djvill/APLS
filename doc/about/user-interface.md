@@ -3,7 +3,7 @@ title: User interface
 permalink: /doc/user-interface
 parent: About APLS
 nav_order: 35
-last_modified_date: 2025-05-08T10:03:28-04:00
+last_modified_date: 2025-05-08T13:22:51-04:00
 ---
 
 # {{ page.title }}
@@ -66,12 +66,12 @@ These changes are exemplified by the layer picker on the search page.
 
 ### Individual transcript pages
 
-{% include compare-ui.html file="layer-picker/transcript" title_suffix="Transcript pages" caption="The layer picker when first loading the [CB01interview.eaf](https://apls.pitt.edu/labbcat/transcript?transcript=CB01interview1.eaf) transcript page and selecting the _imported_ project" %}
+{% include compare-ui.html file="layer-picker/transcript" title_suffix="Transcript pages" caption="The layer picker when first loading the [CB01interview.eaf](https://apls.pitt.edu/labbcat/transcript?transcript=CB01interview1.eaf) transcript page, clicking the _Layers_ tab, and selecting the _imported_ project" %}
 
 In addition to the [baseline changes](#layer-picker-search), the layer picker on the transcript page has:
 
 - **Annotation counts**: The layer picker displays the number of annotations on that layer in that transcript.
-  - **Hideable**: Like the layer icons, annotation counts can be toggled on and off, and this setting persists across the browser tab.
+  - **Hideable**: Like the layer icons, annotation counts can be toggled on and off, and this setting persists within a browser tab.
 - **Empty layers**: The layer picker shows empty layers (those with 0 annotations in that transcript) in gray, with a checkbox that is grayed-out (cannot be selected) and icons that are grayed-out.
 - **Preselected layers**: The <span class="layer-id">word</span> layer is always shown by default and cannot be un-shown. Previously, the layer picker omitted <span class="layer-id">word</span> on the transcript page. Now, the layer picker makes it clearer which layer users are seeing by showing the <span class="layer-id">word</span> layer with a checkbox that is selected and grayed-out (cannot be deselected).
   - **More explicit if empty**: If a preselected layer is empty in that transcript, the layer picker now pops open a message to the user.
@@ -86,9 +86,64 @@ In the first two cases, the layer picker allows the user to select participant a
 (The third has the same changes as the [baseline](#layer-picker-search).)
 As a result, on top of the [baseline changes](#layer-picker-search), these layer pickers have additional changes to how attributes are displayed:
 
-- **Attribute prefixes**: In LaBB-CAT, most attribute names start with the prefix `participant_` or `transcript_`, which are visible when exporting these attributes to CSV. Previously, the layer picker hid these prefixes to avoid visual clutter, but this could be confusing when comparing to an exported CSV file. Now, the layer picker on these pages gives users the option to toggle attribute prefixes on and off by clicking _Hide attribute prefixes_ (hidden by default). As with layer icons and annotation counts, this setting persists across the browser tab.
+- **Attribute prefixes**: In LaBB-CAT, most attribute names start with the prefix `participant_` or `transcript_`, which are visible when exporting these attributes to CSV. Previously, the layer picker hid these prefixes to avoid visual clutter, but this could be confusing when comparing to an exported CSV file. Now, the layer picker on these pages gives users the option to toggle attribute prefixes on and off by clicking _Hide attribute prefixes_ (hidden by default). As with layer icons and annotation counts, this setting persists within a browser tab.
 - **Real attribute names**: Previously, the layer picker displayed "Name" for the <span class="participant-attr">participant</span> and <span class="transcript-attr">transcript</span> attributes, since these were under columns labeled "Participant" and "Transcript". In keeping with a move toward representing attribute and layer names consistently across contexts (UI and documentation), the layer picker now displays "participant" and "transcript".
 - **Attribute tooltips**: Hovering over layer/attribute names brings up a tooltip with information about the layer/attribute. Previously, layer tooltips had longer descriptions but attribute tooltips only had attributes' [display titles](https://djvill.github.io/APLS/doc/attribute-typology#display-title). Now, attribute tooltips have longer descriptions as well.
 - **Layer icons**: Previously, icons were only visible on the transcript and search pages, due to the wider layer picker on the transcripts and search results pages. Now, because icons can be hidden, they are visible (and hidden by default) on these pages as well.
+
+
+## Individual transcript pages
+
+The comparison images in this section come from the [HD05interview2.eaf](https://apls.pitt.edu/labbcat/transcript?transcript=HD05interview2.eaf) transcript page.
+
+### Header
+
+#### _Attributes_ tab
+
+{% include compare-ui.html file="transcript-header/attributes" caption="The transcript page _Attributes_ tab" %}
+
+- **More attributes**: Previously, <span class="transcript-attr">corpus</span> and <span class="transcript-attr">episode</span> were visible on [transcript attributes pages]({{ '/doc/browse-transcripts#transcript-attributes-pages' | relative_url }}), but not on the transcript page itself. This page now displays these attributes.
+- **Real attribute names**: Previously, the _Attributes_ tab only displayed attributes' [display titles](https://djvill.github.io/APLS/doc/attribute-typology#display-title), with names in a tooltip. Now, this tab displays attribute names.
+  - **Hideable**: These names can be toggled on and off by clicking _Hide attribute names_. This setting persists if you visit more pages in the same browser tab.
+  - **Attribute prefixes**: As in the [layer picker](#layer-picker-transcripts), the `transcript_` prefix is hidden by default but can be shown by unchecking _Hide attribute prefixes_. When attribute names are hidden, this checkbox is disabled. Like _Hide attribute names_, this setting persists within a browser tab.
+
+#### _Participants_ tab
+
+{% include compare-ui.html file="transcript-header/participants" caption="The transcript page _Participants_ tab" %}
+
+- **More explicit**: Previously, participant names were links to that participant's [attributes page]({{ '/doc/browse-participants#participant-attributes-pages' | relative_url }}). Now, the link is a more explicit button. In addition, the fact that bold styling indicates the transcript's main participant is now made explicit.
+- **New functionality**: The new _List Transcripts_ button is a shortcut to [_List Transcripts_]({{ '/doc/browse-participants#list-transcripts' | relative_url }}) on the participants page.
+
+#### _Layers_ tab
+
+See [above](#layer-picker-2).
+
+#### _Search_ tab
+
+{% include compare-ui.html file="transcript-header/search" caption="The transcript page _Search_ tab" new_only="true" %}
+
+- **New functionality**: The new _Search_ tab provides shortcuts to the search page with [transcript or participant filters]({{ '/doc/search-filters-and-options' | relative_url }}) applied.
+
+#### _Export_ tab
+
+{% include compare-ui.html file="transcript-header/participants" caption="The transcript page _Export_ tab" %}
+
+- **Renamed** from _Formats_ to mirror [_Export Formatted_]({{ '/doc/browse-transcripts#export-formatted' | relative_url }}) on the transcripts page.
+- **More explicit** about which layers will be exported (updated when the user selects different layers in the layer picker).
+
+
+### Transcript body
+
+- **More consistent turn alignment**, including overlap vs. non-overlap turns
+  {% include compare-ui.html file="transcript-body/turns" caption="Four turns in the transcript starting at around 16 seconds" %}
+- **Segment labels don't crowd together**
+  {% include compare-ui.html file="transcript-body/phono-labels" caption="The start of a turn around 31 seconds, with the segment layer switched on" %}
+- **Word menu**: Options relabeled to be more descriptive and rearranged to put commonly-used options higher. The clicked-on word is styled to make it more obvious which word has been selected.
+  {% include compare-ui.html file="transcript-body/word-menu" caption="The start of a turn around 31 seconds, with the segment layer switched on" %}
+  - **Better permalinking**: The word menu allows users to create a permalink by selecting _Utterance_ or _Word_. Previously, this would remove any highlighting that would result from clicking on a [search result]({{ '/doc/export-data#search-results-page' | relative_url }}). Now, permalinking doesn't remove this highlighting.
+
+
+
+
 
 {% include linklist.html %}
