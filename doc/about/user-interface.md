@@ -3,25 +3,28 @@ title: User interface
 permalink: /doc/user-interface
 parent: About APLS
 nav_order: 35
-last_modified_date: 2025-05-07T14:11:39-04:00
+last_modified_date: 2025-05-08T10:03:28-04:00
 ---
 
 # {{ page.title }}
 {:.no_toc}
 
 The browser-based user interface for APLS is based on [LaBB-CAT][] version {{site.versions.last.labbcat_version}}.[^r-python]
-However, starting with version [0.3.0]({{ '/doc/version-history#0.3.0' | relative_url }}), APLS's user interface has been modified to diverge from the main trunk of LaBB-CAT development.
-(Some of these features may make their way into the main trunk of LaBB-CAT development in the future.)
+However, starting with version [0.3.0]({{ '/doc/version-history#0.3.0' | relative_url }}), APLS's user interface has been modified to diverge from the main trunk of LaBB-CAT development.[^diverge]
 The modified UI provides a user experience that is more accessible, more consistent across pages, more streamlined, more tightly interwoven with the APLS documentation, and more customizable by the end-user.
-It is informed by Dan Villarreal's experience as both a user and maintainer of LaBB-CAT corpora for nearly 10 years, as well as Dan and Jack Rechsteiner's experience writing this documentation website.
+It is informed by Dan Villarreal's nearly 10 years of experience using and maintaining LaBB-CAT corpora, teaching students how to use LaBB-CAT, and writing this documentation website with Jack Rechsteiner.
 
 [^r-python]: Advanced users can also access APLS via the [`nzilbb.labbcat` package][labbcat-R] for R, or the [`nzilbb-labbcat` library][labbcat-py] for Python. These packages have most of the functionality of the browser-based graphical user interface (https://apls.pitt.edu/labbcat), with some added benefits such as reproducibility (e.g., a particular set of [search]({{ '/doc/search' | relative_url }}) criteria can be encoded in R/Python code rather than described for copy/paste).
 
+[^diverge]: Some of these features may make their way into the main trunk of LaBB-CAT development in the future.
+
+{% assign curr_version = site.versions.last %}
+
 {: .under-the-hood }
 > The source code for the APLS UI is available on GitHub [here](https://github.com/djvill/labbcat-server/).
-> This repository is a [fork](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/about-forks) of the [main trunk](https://github.com/nzilbb/labbcat-server) of LaBB-CAT UI development, maintained by Robert Fromont of [NZILBB].
-> As of APLS version 0.3.0, APLS's UI code is at commit [`de84e41`](https://github.com/nzilbb/labbcat-server/commit/de84e41), which is up-to-date with commit [`5da4b06`](https://github.com/nzilbb/labbcat-server/commit/5da4b06) of the LaBB-CAT UI repository.
-> You can view code differences [here](https://github.com/nzilbb/labbcat-server/compare/5da4b06...djvill:labbcat-server:de84e41).
+> This repository is a fork of the [main trunk](https://github.com/nzilbb/labbcat-server) of LaBB-CAT UI development, maintained by Robert Fromont of [NZILBB].
+> As of APLS version [{{curr_version.version}}]({{ '/doc/version-history#' | append: curr_version.version | relative_url }}), APLS's UI code is at commit [`{{curr_version.apls_ui_commit}}`](https://github.com/nzilbb/labbcat-server/commit/{{curr_version.apls_ui_commit}}), which is up-to-date with commit [`5da4b06`](https://github.com/nzilbb/labbcat-server/commit/{{curr_version.upstream_ui_commit}}) of the LaBB-CAT UI repository.
+> You can view code differences [here](https://github.com/nzilbb/labbcat-server/compare/{{curr_version.upstream_ui_commit}}...djvill:labbcat-server:{{curr_version.apls_ui_commit}}).
 >
 > LaBB-CAT's entire codebase is spread across multiple repositories:
 >
