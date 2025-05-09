@@ -3,7 +3,7 @@ title: User interface
 permalink: /doc/user-interface
 parent: About APLS
 nav_order: 35
-last_modified_date: 2025-05-08T13:46:05-04:00
+last_modified_date: 2025-05-09T12:54:59-04:00
 ---
 
 # {{ page.title }}
@@ -119,7 +119,7 @@ The comparison images in this section come from the [HD05interview2.eaf](https:/
 
 #### _Layers_ tab
 
-See [above](#layer-picker-2).
+See [above](#layer-picker-transcript).
 
 #### _Search_ tab
 
@@ -142,24 +142,37 @@ See [above](#layer-picker-2).
 - **Segment labels don't crowd together**
   {% include compare-ui.html file="transcript-body/phono-labels" caption="The start of a turn around 31 seconds, with the segment layer switched on" %}
 - **Word menu**: Options relabeled to be more descriptive and rearranged to put commonly-used options higher. The clicked-on word is styled to make it more obvious which word has been selected.
-  {% include compare-ui.html file="transcript-body/word-menu" caption="The start of a turn around 31 seconds, with the segment layer switched on" %}
-  - **Better permalinking**: The word menu allows users to create a permalink by selecting _Utterance_ or _Word_. Previously, this would remove any highlighting that would result from clicking on a [search result]({{ '/doc/export-data#search-results-page' | relative_url }}). Now, permalinking doesn't remove this highlighting.
+  {% include compare-ui.html file="transcript-body/word-menu" caption="The menu that appears when clicking on a word early in the transcript" %}
+  - **Don't clobber result highlights**: The word menu allows users to create a permalink by selecting _Utterance_ or _Word_. Previously, this would remove any highlighting of [search results]({{ '/doc/export-data#search-results-page' | relative_url }}). Now, permalinking doesn't remove this highlighting.
 
 
 ## Search page
+
+- **Reorganized layout**: By putting filters and options in tabs, the search page directs users toward its central functionality: specifying patterns to search the corpus for via the search matrix.
+  {% include compare-ui.html file="search/layout" caption="The search page when first loaded" %}
+
+
+### Search matrix
+
+- **Don't clobber matrix**: Previously, if you specified a search matrix (selected some layers, entered text in pattern input fields, etc.) then selected a participant or transcript filter, the search matrix would be reset when you returned to the search page. This could lead to frustration if the participant or transcript filter was an afterthought to the linguistic patterns themselves. Now, the search matrix persists after selecting filters.
+- **Improved layer picker**: See [above](#layer-picker-search).
+- Regular expressions: One of the things that makes LaBB-CAT search so powerful is its use of [regular expressions]({{ '/doc/regex' | relative_url }}) (aka _regex_), a very concise language for specifying complex text patterns. Regex have a steep learning curve for newcomers and are easy to mis-type. 
+  - **More informative errors**: While LaBB-CAT provides live-checking for invalid regex (changing to red text), simply _knowing_ that a regex is invalid may not be enough to help a newcomer troubleshoot it. The search matrix now creates a popup "speech bubble" explaining the error (which waits 2 seconds to appear in case the user is simply in the middle of typing).
+    {% include compare-ui.html file="search/invalid-regex" caption="A pattern input field after typing an invalid regular expression" %}
+  - **Stricter checking**: Previously, some patterns that could cause search errors were not flagged by live-checking. Live-checking now flags these patterns.
+    {% include compare-ui.html file="search/lax-regex" caption="The result of typing the invalid regular expression `{` and pressing _Search_" %}
+- Label picker: LaBB-CAT provides a [drop-down menu]({{ '/doc/search-other-layers#layer-data-types-and-notation-systems' | relative_url }}) for layers whose [notation system]({{ '/doc/layer-typology#notation-system' | relative_url }}) might be unfamiliar to users. For example, when searching the <span class="layer-id">segment</span> layer, a user can click on _aʊ_ to insert `6` (the [DISC code]({{ '/doc/layer-notation-systems#disc-alphabet' | relative_url }}) for /aʊ/) into the pattern input field. The label picker can also insert patterns that match any member of a category. For example, clicking _Diphthongs_ insert `[12645]` (the DISC codes for /eɪ aɪ aʊ ɔɪ oʊ/), using the regex syntax for matching any one of the characters within [square brackets]({{ '/doc/regex#square-brackets-' }}).
+  - **Inserted at cursor**: Previously, the label picker always inserted labels at the end of the pattern, which could necessitate some cutting and pasting. Now, labels are inserted wherever the cursor is (and briefly highlighted to draw the user's attention).
+  - **More informative**: Corpus admins can configure the label picker to omit labels that should be obvious to the user for simplicity's sake; for example, the [DISC code]({{ '/doc/layer-notation-systems#disc-alphabet' | relative_url }}) for /p/ is `p`. Previously, these labels were simply absent, which could be confusing if (for example) a user was looking for the label for /p/. Now, the label picker includes a note and tooltip listing these labels.
+    {% include compare-ui.html file="search/other-cons" caption="The label picker for the segment layer" %}
+  - **More consistent regex**: In regex, some characters have special functions <!-- consider intro-ing _metacharacters_ -->; for these characters to be interpreted literally (rather than for their special regex function), they need to be "escaped" (prefixed with `\`). For example, the symbol `.` on the <span class="layer-id">foll_segment</span> layer means a [following pause]({{ '/doc/layer-notation-systems#disc-extensions' | relative_url }}), but in regex `.` means "any single character"; so to search for a following pause, you need to enter `\.` in the <span class="layer-id">foll_segment</span> input field. Complicating matters is that many characters lose their special regex functions inside [square brackets]({{ '/doc/regex#square-brackets-' }}), so escaping them is optional there. The label picker escapes characters that have a special regex function, but previously it would only do so outside of square brackets (i.e., only where strictly necessary). Regex newcomers often find escapes and exceptions to syntax rules bewildering, so it could create confusion to see `\` in some contexts but not others. Now, the label picker escapes special regex characters in all contexts (even when they're not strictly necessary), for a gentler regex learning curve.
+    {% include compare-ui.html file="search/bracket-escapes" caption="The pattern input field for the phonemes layer after selecting _æ_, then _ɔ_, then _Monophthongs not before /ɹ/_" %}
+
 
 ### Filters and options
 
 - [Search UX](https://github.com/nzilbb/labbcat-server/pull/53)
 - [Fix auto-open bug where only 1st search on a tab auto-opens](https://github.com/nzilbb/labbcat-server/pull/54)
-
-### Search matrix
-
-- [Layer picker](#layer-picker-1)
-- [search: Don't clobber search matrix when selecting a filter](https://github.com/nzilbb/labbcat-server/pull/51)
-- [lib-input-regexp: Stricter checking and helper tooltip](https://github.com/nzilbb/labbcat-server/pull/49)
-- [valid-label-helper: UX tweaks](https://github.com/nzilbb/labbcat-server/pull/66)
-  - Not regex stuff; that should go with the previous
 
 
 ## Search results page
