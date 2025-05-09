@@ -1,13 +1,1 @@
-<blockquote class="try-it-title old-new" id="{{include.file | replace: '/', '-'}}">
-  <p>Comparison{% if include.title_suffix %}: {{include.title_suffix}}{% endif %}</p>
-  {% if include.caption %}
-    <span class="caption">{{include.caption | markdownify}}</span>
-  {% endif %}
-  {% unless include.new_only %}
-  <div class="old">
-    <img src="{{'/assets/screengrab/new-ui/' | append: include.file | append: '_old.png' | relative_url}}" />
-  </div>
-  {% endunless %}
-  <div class="new">
-    <img src="{{'/assets/screengrab/new-ui/' | append: include.file | append: '_new.png' | relative_url}}" />
-  </div></blockquote>
+<blockquote class="try-it-title old-new" id="{{include.file | replace: '/', '-'}}"><p>Comparison{% if include.title_suffix %}: {{include.title_suffix}}{% endif %}</p>{% if include.caption %}<span class="caption">{{include.caption | markdownify}}</span>{% endif %}{% unless include.new_only %}<div class="old"><img src="{{'/assets/screengrab/new-ui/' | append: include.file | append: '_old.png' | relative_url}}" /></div>{% endunless %}<div class="new">  <img src="{{'/assets/screengrab/new-ui/' | append: include.file | append: '_new.png' | relative_url}}" /></div></blockquote>
