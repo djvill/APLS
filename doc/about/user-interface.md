@@ -3,7 +3,7 @@ title: User interface
 permalink: /doc/user-interface
 parent: About APLS
 nav_order: 35
-last_modified_date: 2025-05-09T12:54:59-04:00
+last_modified_date: 2025-05-20T14:07:54-04:00
 ---
 
 # {{ page.title }}
@@ -169,10 +169,31 @@ See [above](#layer-picker-transcript).
     {% include compare-ui.html file="search/bracket-escapes" caption="The pattern input field for the phonemes layer after selecting _æ_, then _ɔ_, then _Monophthongs not before /ɹ/_" %}
 
 
-### Filters and options
+### Participant and transcript filter
 
-- [Search UX](https://github.com/nzilbb/labbcat-server/pull/53)
-- [Fix auto-open bug where only 1st search on a tab auto-opens](https://github.com/nzilbb/labbcat-server/pull/54)
+- **More intuitive interface**
+  - Previously, the participant and transcript filters were activated by links that looked like (non-clickable) headings. Now, filters are buttons within collapsible tabs.
+    {% include compare-ui.html file="search/filter" caption="The transcript filter panel/tab when first loading the search page" %}
+  - Previously, clicking the filter link would modify the filter, but there was no obvious way to clear the filter. Now, new buttons more clearly delineate these actions.
+    {% include compare-ui.html file="search/p-filter" caption="The participant filter panel/tab after selecting the filter 'Neighborhood in (CB,FH), Speaker type = Main speaker'" %}
+- **More information**: Labels for the filter tabs display the number of participants/transcripts that will be included in the search. If only one filter has been selected, the other filter tab label shows "(\*)" to indicate that it is implicitly filtered (i.e., not all participants appear in all transcripts), and the text "Selected {participants/transcripts}: all {participants/transcripts}" changes to "Selected {participants/transcripts}: all {participants in selected transcripts/transcripts with selected participants}".
+  {% include compare-ui.html file="search/p-filter-t" caption="The transcript filter panel/tab after selecting the participant filter 'Neighborhood in (CB,FH), Speaker type = Main speaker'" %}
+- **Better guidance**: Instead of selecting a filter manually when performing a search, users can upload a file with participants to search. Previously, there was no guidance on file formatting. Now, this information is in a collapsible.
+  {% include compare-ui.html file="search/load-from-file" caption="The participant filter panel/tab when first loading the search page, with the 'What should the file look like?' collapsible opened" %}
+- **More consistent**: Previously, only participants could be loaded from file. Now, transcripts can be too.
+- **Warning before clobbering**: It's possible to filter transcripts after filtering participants, but not vice versa. Previously, clicking the participant filter link would simply clear the transcript filter. Now, the user is provided a warning in case this is not what they intended.
+  {% include compare-ui.html file="search/clobber-warning" caption="The warning that appears on the search page when selecting a transcript filter then clicking _Filter Participants_" %}
+
+
+### Search options
+
+{% include compare-ui.html file="search/options" caption="The options panel/tab on the search page" %}
+
+- **More informative**
+  - The _Exclude utterances with more than 5% overlap_ option doesn't appear to be working as of LaBB-CAT version 20250430.1502, so it has been removed
+  - New sub-headings make it more obvious which options actually affect how search matches are identified vs. simply how they're displayed
+  - Clearer wording
+- **Bugfix**: Previously, if _No matches, only a summary of results_ was deselected (the default), a new results tab would auto-open for the first search in a session, but subsequent searches would not auto-open a tab despite the wording of this option. Now, this option works as intended, always auto-opening a results tab if deselected.
 
 
 ## Search results page
