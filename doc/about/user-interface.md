@@ -16,7 +16,7 @@ It is informed by Dan Villarreal's nearly 10 years of experience using and maint
 
 [^r-python]: Advanced users can also access APLS via the [`nzilbb.labbcat` package][labbcat-R] for R, or the [`nzilbb-labbcat` library][labbcat-py] for Python. These packages have most of the functionality of the browser-based graphical user interface (https://apls.pitt.edu/labbcat), with some added benefits such as reproducibility (e.g., a particular set of [search]({{ '/doc/search' | relative_url }}) criteria can be encoded in R/Python code rather than described for copy/paste).
 
-[^diverge]: Some of these features may make their way into the main trunk of LaBB-CAT development in the future.
+[^diverge]: Some of these features have already been [accepted](https://github.com/nzilbb/labbcat-server/issues?q=is%3Aclosed%20is%3Apr%20author%3Adjvill%20is%3Amerged) for the main trunk of LaBB-CAT development and will appear in a future LaBB-CAT release.
 
 {% assign curr_version = site.versions.last %}
 
@@ -191,6 +191,10 @@ See [above](#layer-picker-transcript).
 
 - [UX tweaks](https://github.com/nzilbb/labbcat-server/pull/65)
   - A lot can be referenced to the [_Attributes_ tab](#transcript-header-attributes)
+
+## Process with Praat page
+
+- [UX improvements](https://github.com/nzilbb/labbcat-server/pull/59)
 
 ## Miscellaneous
 
