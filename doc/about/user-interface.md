@@ -3,7 +3,7 @@ title: User interface
 permalink: /doc/user-interface
 parent: About APLS
 nav_order: 35
-last_modified_date: 2025-05-20T14:07:54-04:00
+last_modified_date: 2025-05-21T12:56:25-04:00
 ---
 
 # {{ page.title }}
@@ -198,8 +198,17 @@ See [above](#layer-picker-transcript).
 
 ## Search results page
 
-- [Matches: UX tweaks](https://github.com/nzilbb/labbcat-server/pull/64)
-- [matches: Don't clobber checkbox selections when changing context](https://github.com/nzilbb/labbcat-server/pull/57)
+- Context selector: The search results page displays each match on its own line, highlighted in yellow, with surrounding context. The amount of surrounding context can be controlled by the user.
+  {% include compare-ui.html file="matches/context" caption="The first few matches on the search results page (showing a search for `pitt` on the orthography layer), after clicking on the context selector" %}
+  - **Don't clobber selected matches**: The results page includes a checkbox next to each match (all selected by default), allowing the user to export data for just a selection of matches. Previously, if you selected some checkboxes then changed the context, the checkboxes would revert to the default of selecting all. Now, the selection of specific checkboxes persists after changing context.
+  - **More explicit**: The context can sometimes be shorter than expected depending on the match's position in the <span class="layer-id">utterance</span> (e.g., the 5th match [here](#matches-context) is at the end of the utterance, so there's no following context). The labels now more clearly indicate that the context is "up to" a certain number of words.
+- **Improved layout**: All four export options now have collapsible menus for configuring the export. The _Prefix Names_ option applies to both _Utterance Export_ and _Audio Export_ since if users are exporting both, they likely want filenames to match. Now, the _Prefix names_ checkbox appears in both collapsible menus, and if you select it in one menu, it automatically gets selected in the other menu too.
+  {% include compare-ui.html file="matches/exports" caption="The export options on the search results page (showing a search for `pitt` on the orthography layer)" %}
+- CSV export:
+  {% include compare-ui.html file="matches/csv-export" caption="The _CSV Export_ menu on the search results page (showing a search for `pitt` on the orthography layer)" %}
+  - **Enforcing data best practices**: There are a handful of columns that should always be included in an exported CSV because they provide a "paper trail" that can help contextualize the exported data well into the future. But new users who don't know what (e.g.) _Match ID_ is for might think it's optional and regret losing the "paper trail" later. (This comes directly from Dan's experience!) Now, these columns are required (selected by default and can't be deselected).
+  - **More consistent**: Where possible, checkboxes have been relabeled to match column names in the exported CSV.
+  - **Improved layer picker**: See [above](#layer-picker-transcripts).
 
 
 ## Transcripts and participants pages
