@@ -2,7 +2,7 @@
 title: APLS Documentation
 nav_exclude: yes
 permalink: /
-last_modified_date: 2025-05-06T16:01:10-04:00
+last_modified_date: 2025-05-21T14:24:24-04:00
 ---
 
 # {{ page.title }}
@@ -29,7 +29,7 @@ APLS currently contains {{curr_version.transcripts}} sound files totaling {{dur}
 APLS is currently under construction; when complete, it will contain 270 sound files totaling 45 hours of audio from 40 interviewees.
 {: .mb-1 }
 
-## Demo: Measuring F1 and F2 for /aw/ in closed syllables
+## Demo: Measuring F1 and F2 for /aw/ in closed syllables {#demo}
 {: .no_toc }
 
 Some speakers of Pittsburgh English pronounce the /aw/ vowel (the vowel sound in words like _out_ and _downtown_) more like "ah" (stereotyped as "_aht_" and "_dahntahn_").
