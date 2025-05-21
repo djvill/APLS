@@ -97,42 +97,29 @@ As a result, on top of the [baseline changes](#layer-picker-search), these layer
 
 The comparison images in this section come from the [HD05interview2.eaf](https://apls.pitt.edu/labbcat/transcript?transcript=HD05interview2.eaf) transcript page.
 
-### Header
+### Header tabs
 
-<!-- TODO consider making this a big bullet-list -->
+{% include compare-ui.html file="transcript-header/tabs" caption="Header tabs on the transcript page. _Attributes_ is the rightmost tab in the old image (the media player is hidden in subsequent comparisons)" %}
 
-#### _Attributes_ tab
-
-{% include compare-ui.html file="transcript-header/attributes" caption="The transcript page _Attributes_ tab" %}
-
-- **More attributes**: Previously, <span class="transcript-attr">corpus</span> and <span class="transcript-attr">episode</span> were visible on [transcript attributes pages]({{ '/doc/browse-transcripts#transcript-attributes-pages' | relative_url }}), but not on the transcript page itself. This page now displays these attributes.
-- **Real attribute names**: Previously, the _Attributes_ tab only displayed attributes' [display titles](https://djvill.github.io/APLS/doc/attribute-typology#display-title), with names in a tooltip. Now, this tab displays attribute names.
-  - **Hideable**: These names can be toggled on and off by clicking _Hide attribute names_. This setting persists if you visit more pages in the same browser tab.
-  - **Attribute prefixes**: As in the [layer picker](#layer-picker-transcripts), the `transcript_` prefix is hidden by default but can be shown by unchecking _Hide attribute prefixes_. When attribute names are hidden, this checkbox is grayed-out. Like _Hide attribute names_, this setting persists within a browser tab.
-
-#### _Participants_ tab
-
-{% include compare-ui.html file="transcript-header/participants" caption="The transcript page _Participants_ tab" %}
-
-- **More explicit**: Previously, participant names were links to that participant's [attributes page]({{ '/doc/browse-participants#participant-attributes-pages' | relative_url }}). Now, the link is a more explicit button. In addition, the fact that bold styling indicates the transcript's main participant is now made explicit.
-- **New functionality**: The new _List Transcripts_ button is a shortcut to [_List Transcripts_]({{ '/doc/browse-participants#list-transcripts' | relative_url }}) on the participants page.
-
-#### _Layers_ tab
-
-See [above](#layer-picker-transcript).
-
-#### _Search_ tab
-
-{% include compare-ui.html file="transcript-header/search" caption="The transcript page _Search_ tab" new_only="true" %}
-
-- **New functionality**: The new _Search_ tab provides shortcuts to the search page with [transcript or participant filters]({{ '/doc/search-filters-and-options' | relative_url }}) applied.
-
-#### _Export_ tab
-
-{% include compare-ui.html file="transcript-header/participants" caption="The transcript page _Export_ tab" %}
-
-- **Renamed** from _Formats_ to mirror [_Export Formatted_]({{ '/doc/browse-transcripts#export-formatted' | relative_url }}) on the transcripts page.
-- **More explicit** about which layers will be exported (updated when the user selects different layers in the layer picker).
+- _Attributes_ tab
+  {% include compare-ui.html file="transcript-header/attributes" caption="The transcript page _Attributes_ tab" %}
+  - **More attributes**: Previously, <span class="transcript-attr">corpus</span> and <span class="transcript-attr">episode</span> were visible on [transcript attributes pages]({{ '/doc/browse-transcripts#transcript-attributes-pages' | relative_url }}), but not on the transcript page itself. This page now displays these attributes.
+  - **Real attribute names**: Previously, the _Attributes_ tab only displayed attributes' [display titles](https://djvill.github.io/APLS/doc/attribute-typology#display-title), with names in a tooltip. Now, this tab displays attribute names.
+    - **Hideable**: These names can be toggled on and off by clicking _Hide attribute names_. This setting persists if you visit more pages in the same browser tab.
+    - **Attribute prefixes**: As in the [layer picker](#layer-picker-transcripts), the `transcript_` prefix is hidden by default but can be shown by unchecking _Hide attribute prefixes_. When attribute names are hidden, this checkbox is grayed-out. Like _Hide attribute names_, this setting persists within a browser tab.
+- _Participants_ tab
+  {% include compare-ui.html file="transcript-header/participants" caption="The transcript page _Participants_ tab" %}
+  - **More explicit**: Previously, participant names were links to that participant's [attributes page]({{ '/doc/browse-participants#participant-attributes-pages' | relative_url }}). Now, the link is a more explicit button. In addition, the fact that bold styling indicates the transcript's main participant is now made explicit.
+  - **New functionality**: The new _List Transcripts_ button is a shortcut to [_List Transcripts_]({{ '/doc/browse-participants#list-transcripts' | relative_url }}) on the participants page.
+- _Layers_ tab
+  - **Improved layer picker**: See [above](#layer-picker-transcript).
+- _Search_ tab
+  {% include compare-ui.html file="transcript-header/search" caption="The transcript page _Search_ tab" new_only="true" %}
+  - **New functionality**: The new _Search_ tab provides shortcuts to the search page with [transcript or participant filters]({{ '/doc/search-filters-and-options' | relative_url }}) applied.
+- _Export_ tab
+  {% include compare-ui.html file="transcript-header/participants" caption="The transcript page _Export_ tab" %}
+  - **More consistent**: Label and icon now mirror [_Export Formatted_]({{ '/doc/browse-transcripts#export-formatted' | relative_url }}) on the transcripts page.
+  - **More explicit** about which layers will be exported (updated when the user selects different layers in the layer picker).
 
 
 ### Transcript body
