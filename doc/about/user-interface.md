@@ -3,7 +3,7 @@ title: User interface
 permalink: /doc/user-interface
 parent: About APLS
 nav_order: 35
-last_modified_date: 2025-05-21T12:56:25-04:00
+last_modified_date: 2025-05-21T13:01:01-04:00
 ---
 
 # {{ page.title }}
@@ -182,7 +182,7 @@ See [above](#layer-picker-transcript).
   {% include compare-ui.html file="search/load-from-file" caption="The participant filter panel/tab when first loading the search page, with the 'What should the file look like?' collapsible opened" %}
 - **More consistent**: Previously, only participants could be loaded from file. Now, transcripts can be too.
 - **Warning before clobbering**: It's possible to filter transcripts after filtering participants, but not vice versa. Previously, clicking the participant filter link would simply clear the transcript filter. Now, the user is provided a warning in case this is not what they intended.
-  {% include compare-ui.html file="search/clobber-warning" caption="The warning that appears on the search page when selecting a transcript filter then clicking _Filter Participants_" %}
+  {% include compare-ui.html file="search/clobber-warning" caption="The warning that appears on the search page when selecting a transcript filter then clicking _Filter Participants_" new_only="true" %}
 
 
 ### Search options
