@@ -4,7 +4,7 @@ layout: default
 permalink: /files/custom-entries
 parent: Custom dictionary
 search_exclude: true
-last_modified_date: 2025-05-06T15:43:24-04:00
+last_modified_date:
 ---
 
 # {{ page.title }}
@@ -393,6 +393,8 @@ These custom entries just fill in the gaps.
 - Shaka
 - Shawntae
 - sociolinguists
+- stepmom
+- stepmoms
 - sucky
 - there're
 - treaters
