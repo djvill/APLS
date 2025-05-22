@@ -180,7 +180,7 @@ The comparison images in this section come from the [HD05interview2.eaf](https:/
   - The _Exclude utterances with more than 5% overlap_ option doesn't appear to be working as of LaBB-CAT version 20250430.1502, so it has been removed
   - New sub-headings make it more obvious which options actually affect how search matches are identified vs. simply how they're displayed
   - Clearer wording
-- **Bugfix**: Previously, if _No matches, only a summary of results_ was deselected (the default), a new results tab would auto-open for the first search in a session, but subsequent searches would not auto-open a tab despite the wording of this option. Now, this option works as intended, always auto-opening a results tab if deselected.
+- **Bugfix**: Previously, if _No matches, only a summary of results_ was unchecked (the default), a new results tab would auto-open only for the first search you performed, but not subsequent searches. Now, this option works as intended, always auto-opening a results tab if unchecked (and never doing so if checked).
 
 
 ## Search results page
