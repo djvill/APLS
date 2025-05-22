@@ -200,8 +200,26 @@ The comparison images in this section come from the [HD05interview2.eaf](https:/
 
 ## Transcripts and participants pages
 
-- [UX improvements](https://github.com/nzilbb/labbcat-server/pull/69)
-- [On participants and transcripts, after filters are cleared, prevent range lower bound from being parsed as regex to match](https://github.com/nzilbb/labbcat-server/pull/50)
+The [transcripts]({{ '/doc/browse-transcripts' | relative_url}}) and [participants]({{ '/doc/browse-participants' | relative_url }}) pages not only display and filter [attributes]({{ '/doc/attribute-typology' | relative_url }}), they also act as jumping-off points to individual transcript pages, the search page, and one another (e.g., listing all of the transcripts for a selection of participants).
+
+{% include compare-ui.html file="ps-and-ts/ps" title_suffix="Participants page" caption="The participants page (first few entries) when first loaded, including the default participant filter" %}
+
+{% include compare-ui.html file="ps-and-ts/ts" title_suffix="Transcripts page" caption="The transcripts page (first few entries) when first loaded" %}
+
+- **Reorganized/renamed action buttons** more clearly convey functionality. For example, both _Export Transcripts_ and _Export Format_ download transcripts, so _Export Transcripts_ becomes _Export Original_ and _Export Format_ becomes _Export Formatted_, and the buttons get moved next to each other.
+- **Less confusing**: The ![]({{ '/assets/img/delete.svg' | relative_url }}){: style="height:1rem;"} button for clearing filters doesn't appear when there's no filter to clear (like on the transcripts page when first loaded)
+- _List Transcripts_ and _List Participants_ buttons: These buttons show how participants and transcripts fit together by loading the other page. For example, on the participants page, selecting a filter then clicking _List Transcripts_ loads the transcript page, with _transcript_ filters preset to include only the transcripts that contain at least one of the participants matched by the _participant_ filter. (In the old UI, this button was called just _Transcripts_.)
+  {% include compare-ui.html file="ps-and-ts/list-ts" caption="The transcripts page (first few entries) that loads after selecting the filters 'Neighborhood = CB, Gender = Male, Speaker type = Main speaker' on the participants page then clicking _Transcripts_ (old UI) or _List Transcripts_ (new UI)" %}
+  - **New functionality**: Previously, there was no way to do the opposite of _List Transcripts_: find all of the participants in a selection of transcripts. Now, the transcripts page has a _List Participants_ button too.
+  - **New functionality**: Previously, if you were on the transcripts page and wanted to stop filtering by participant, you'd have to click _transcripts_ in the top menu; reloading the page would just reload the participant filter, which could be frustrating. Now, the _Clear Participant Filter_ button removes the participant filter, leaving any transcript filters intact. (Ditto for _Clear Transcript Filter_ on the participants page.)
+  - **More informative**: Previously, the description of the source-page filter was hidden in a tooltip on the destination page. Now, this description is displayed alongside the number of matching participants/transcripts and (if any) destination-page filter(s).
+  - **More helpful**: LaBB-CAT allows corpus maintainers to specify default participant/transcript filters, which are applied automatically when the participants/transcripts page is loaded (which the user can then manually clear). In APLS, the default participant filter is '<span class="participant-attr">type</span> = Main speaker' so that the default participants page view only includes interviewees. However, if you want to list participants for a given transcript, you probably want _all_ participants, so these buttons override any default filters on the destination page.
+- **Cleaner UX for export configuration**: On the transcripts page, the configuration panels for _Export Attributes_ and _Export Format(ted)_ now appear to the right of or below those buttons, followed by a button to close the panel
+- **More consistent**: Previously, clicking on a transcript name would load its individual transcript page, but participant names loaded their participant _attribute_ pages. Now, the participants page matches the transcripts page by putting the link to attribute pages in a button at the end of the row (with ![]({{ '/assets/img/wrench.svg' | relative_url }}){: style="height:1rem;"} for users who have permissions to edit attributes, ![]({{ '/assets/img/csv.svg' | relative_url }}){: style="height:1rem;"} otherwise).
+  {% include compare-ui.html file="ps-and-ts/export-panel" caption="The transcripts page after clicking _Export Format_ (old UI) or _Export Formatted_ (new UI)" %}
+- **Improved layer picker**: See [above](#layer-picker-transcripts).
+- **Bugfix**: Previously, if you created a filter, then cleared the filter, then filled in the _From_ box for a numeric range (e.g., entering `5` for _Birth year_ _From_), LaBB-CAT would interpret the value as a regex to match (e.g., only returning participants whose birth year _contains_ the character `5`). Now, the _From_ box behaves correctly.
+  {% include compare-ui.html file="ps-and-ts/range-bug" caption="The participants page after clearing a filter then entering `5` into the _Birth year_ _From_ box" %}
 
 
 ## Attribute pages 
