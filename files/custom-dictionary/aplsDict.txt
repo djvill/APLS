@@ -23,6 +23,7 @@ Chalfant
 Crafton
 Crider's
 Cuyahoga
+De
 Deener
 Devilliers
 Dinwiddie
@@ -90,6 +91,7 @@ Renfrew
 Richland
 Ringgold
 Rockville
+Ruad
 S'Liberty
 Sandcastle
 Schenley

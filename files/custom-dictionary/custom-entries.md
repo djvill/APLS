@@ -41,6 +41,7 @@ These custom entries just fill in the gaps.
 - Crafton
 - Crider's
 - Cuyahoga
+- De
 - Deener
 - Devilliers
 - Dinwiddie
@@ -108,6 +109,7 @@ These custom entries just fill in the gaps.
 - Richland
 - Ringgold
 - Rockville
+- Ruad
 - S'Liberty
 - Sandcastle
 - Schenley
