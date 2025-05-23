@@ -246,6 +246,7 @@ These custom entries just fill in the gaps.
 - balling
 - Black-owned
 - bling
+- bougie
 - busing
 - capris
 - CD
