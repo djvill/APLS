@@ -35,6 +35,8 @@ It is informed by Dan Villarreal's nearly 10 years of experience using and maint
 > - <https://sourceforge.net/p/labbcat/code>: Packaging of the previous, plus user interface for a few remaining pages that haven't been migrated to the new Angular-based UI
 >   - Once migration is complete, this repository will be deprecated, with build tools moved to `labbcat-server`
 
+This page is a non-exhaustive list of these user interface modifications.
+
 {% include page_toc.html collapsible=true %}
 
 ## Layer picker
@@ -59,7 +61,7 @@ These changes are exemplified by the layer picker on the search page.
 
 - **More icons**: Previously, the layer picker only displayed icons for layers' [alignment]({{ '/doc/layer-typology#alignment-and-horizontal-peers' | relative_url }}). Now, icons correspond to [data type]({{ '/doc/layer-typology#data-type' | relative_url }}) and [vertical peers]({{ '/doc/layer-typology#vertical-peers' | relative_url }}) as well.
   - **Hideable**: Because this means more visual clutter, these icons can be toggled on and off by clicking _Hide layer icons_. This setting persists if you visit more pages in the same browser tab.
-  - **More intuitive alignment**: For technical reasons relating to the [annotation graph][fromont-2017] data structure, <span class="layer">turn</span>, <span class="layer">word</span>, and <span class="layer">segment</span> have "Sub-interval" alignment even though intuitively they should have "Complete interval" alignment. The layer picker now shows them as having "Complete interval" alignment.
+  - **More intuitive alignment**: For technical reasons relating to the [annotation graph][fromont 2017] data structure, <span class="layer">turn</span>, <span class="layer">word</span>, and <span class="layer">segment</span> have "Sub-interval" alignment even though intuitively they should have "Complete interval" alignment. The layer picker now shows them as having "Complete interval" alignment.
 - **Docpage links**: The new controls bar at the bottom of the layer picker not only contains controls for showing/hiding information like layer icons, it also links to relevant documentation pages.
 - **Cursor**: Previously, it wasn't obvious that you could hover over a layer/attribute name to bring up a longer description. Now, the mouse pointer changes to a ["help" cursor](https://developer.mozilla.org/en-US/docs/Web/CSS/cursor) to cue users to this fact.
 - **Bugfix**: On the search and transcript page, most layer checkboxes are hidden when the page loads, with batches of checkboxes made visible by selecting [projects]({{ '/doc/layer-typology#project' | relative_url }}). Previously, if you selected a project, selected a layer in the project, then deselected the project, that layer's checkbox would disappear. Now, checkboxes for selected layers don't disappear even if their project is deselected.
@@ -222,19 +224,19 @@ The [transcripts]({{ '/doc/browse-transcripts' | relative_url}}) and [participan
   {% include compare-ui.html file="ps-and-ts/range-bug" caption="The participants page after clearing a filter then entering `5` into the _Birth year_ _From_ box" %}
 
 
-## Attribute pages 
-
-- [UX tweaks](https://github.com/nzilbb/labbcat-server/pull/65)
-  - A lot can be referenced to the [_Attributes_ tab](#transcript-header-attributes)
-
 ## Process with Praat page
 
-- [UX improvements](https://github.com/nzilbb/labbcat-server/pull/59)
+- **Better guidance on file uploads**: Like [above](#search-load-from-file).
+  {% include compare-ui.html file="praat/upload" caption="The Process with Praat page when first loaded" %}
+- **Modern Praat script syntax**: The syntax for Praat's scripting language changed [way back in 2014](https://github.com/praat/praat/releases/tag/v5.4). While the old syntax is still supported, newcomers to Praat scripting are better served learning the modern syntax. As a result, the customizable Praat commands in LaBB-CAT now default to the modern syntax.
+  {% include compare-ui.html file="praat/formants" caption="The _Formants_ menu on the Process with Praat page after uploading a file" %}
+- **Better guidance on custom Praat scripts**: LaBB-CAT uses a somewhat estoric syntax for custom Praat scripts that can be run to generate measurements from tokens. The _Custom Praat script_ menu now better describes this syntax. This includes clarifying how the variables available to custom scripts relate to the parameters set at the top of the page.
+  {% include compare-ui.html file="praat/script" caption="The top of the _Custom Praat script_ menu on the Process with Praat page after uploading a file" %}
 
 ## Miscellaneous
 
-- [lib-messages: More modern-looking alert modals](https://github.com/nzilbb/labbcat-server/pull/48)
-
-
+- **Message and error pop-ups**: LaBB-CAT occasionally sends alerts to the user, either because something has gone wrong or just as a "heads-up". Previously, these alerts would always appear above the page title, so you wouldn't see them if you'd scrolled further down the page. Now, these alerts always appear at the top of the window regardless of scroll, and they can be cleared early.
+  {% include compare-ui.html file="message" title_suffix="heads-up messages" caption="The heads-up message that results when specifying the filter `xxx` on the transcripts page" %}
+  {% include compare-ui.html file="error" title_suffix="errors" caption="The error alert that results when uploading an invalid file to the participant filter on the search page. In the old UI, the user has scrolled too far down the page to see the alert." %}
 
 {% include linklist.html %}
