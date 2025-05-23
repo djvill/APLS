@@ -43,6 +43,11 @@ function collapsible(node) {
     }
     newCallout.classList = nodeCopy.classList;
     
+    //If original node has an ID, move it to new blockquote
+    if (node.id) {
+      newCallout.id = node.id;
+    }
+    
     //Add title
     s.textContent = title;
     
