@@ -3,7 +3,7 @@ title: Troubleshooting
 permalink: /doc/troubleshooting
 parent: How to use APLS
 nav_order: 90
-last_modified_date: 2025-02-18T10:53:32-05:00
+last_modified_date: 2025-05-27T11:50:52-04:00
 ---
 
 # {{ page.title }}
@@ -15,19 +15,47 @@ If you don't see your issue here, please [contact us](mailto:apls@pitt.edu?subje
 
 ## You can't log onto APLS
 
+### "HTTP Status 404"
+
+| Symptoms | Explanation | Solution |
+| -------- | ----------- | -------- |
+| You get the error message "HTTP Status 404". | This indicates that you've misspelled `labbcat` in the URL (which is case-sensitive). | Navigate to <https://apls.pitt.edu/labbcat> |
+
+![A Google Chrome browser window that shows https://apls.pitt.edu/Labbcat in the URL bar, with the page showing the text "HTTP Status 404 – Not Found. Type: Status Report. Message: The requested resource [/Labbcat] is not available. Description: The origin server did not find a current representation for the target resource or is not willing to disclose that one exists.
+Apache Tomcat/9.0.68"]({{ '/assets/screengrab/troubleshooting/tomcat-404.png' | relative_url }})
+
+
+### "Server IP address could not be found"
+
+| Symptoms | Explanation | Solution |
+| -------- | ----------- | -------- |
+| You get an error message like "This site can't be reached. apl.pitt.edu’s server IP address could not be found." | This indicates that you've misspelled `apls.pitt.edu` in the URL. | Navigate to <https://apls.pitt.edu/labbcat> |
+
+![A Google Chrome browser window that shows https://apl.pitt.edu/labbcat in the URL bar, with the page showing the text "This site can't be reached. apl.pitt.edu’s server IP address could not be found. Try checking the connection, checking the proxy and the firewall, running Windows Network Diagnostics. ERR_CONNECTION_RESET"]({{ '/assets/screengrab/troubleshooting/name-not-resolved.png' | relative_url }})
+
+
 ### "Too many redirects"
 
 | Symptoms | Explanation | Solution |
 | -------- | ----------- | -------- |
-| You get an error message like "apls.pitt.edu redirected you too many times" or "Could not open the page, too many redirects" | This indicates an issue with the server that APLS runs on.<br>(Contrary to the error message, clearing your cookies will generally _not_ fix the issue.) | [Email us](mailto:apls@pitt.edu?subject=Error: Too many redirects&body=Please fix this error. Thanks!) |
+| You get an error message like "This page isn't working. apls.pitt.edu redirected you too many times" or "Could not open the page, too many redirects". The URL bar might also change to `https://apls.pitt.edu/labbcat/www.pitt.edu`, which is not a valid URL. | This indicates that APLS has temporarily been taken offline for maintenance. This is rare and usually lasts less than 5 minutes.<br>(Contrary to the error message, clearing your cookies will generally _not_ fix the issue.) | [Email us](mailto:apls@pitt.edu?subject=Error: Too many redirects&body=Please fix this error. Thanks!) |
 
-![A Google Chrome browser window that shows https://apls.pitt.edu/labbcat/www.pitt.edu in the URL bar, with the page showing the text "This page isn’t working. apls.pitt.edu redirected you too many times. Try clearing your cookies. ERR_TOO_MANY_REDIRECTS"]({{ '/assets/screengrab/noload-redirect.png' | relative_url }})
+![A Google Chrome browser window that shows https://apls.pitt.edu/labbcat/ in the URL bar, with the page showing the text "This page isn’t working. apls.pitt.edu redirected you too many times. Try clearing your cookies. ERR_TOO_MANY_REDIRECTS"]({{ '/assets/screengrab/troubleshooting/noload-redirect.png' | relative_url }})
+
+
+### "The connection was reset"
+
+| Symptoms | Explanation | Solution |
+| -------- | ----------- | -------- |
+| You get an error message like "This site can't be reached. The connection was reset." | This indicates a larger issue with IT systems at Pitt, affecting the server that APLS runs on. These are very rare but can last for unknown amounts of time.<br>(Contrary to the error message, checking the proxy/firewall or running network diagnostics will generally _not_ fix this issue.) | [Email us](mailto:apls@pitt.edu?subject=Error: The connection was reset&body=Please fix this error. Thanks!) |
+
+![A Google Chrome browser window that shows https://apls.pitt.edu/labbcat/www.pitt.edu in the URL bar, with the page showing the text "This page isn’t working. The connection was reset. Try checking the connection, checking the proxy and the firewall, running Windows Network Diagnostics. ERR_CONNECTION_RESET"]({{ '/assets/screengrab/troubleshooting/noload.png' | relative_url }})
 
 
 ### Username/password incorrect
 
 APLS passwords are case-sensitive (usernames are not), so double-check capitalization.
-If that doesn't work, fill out this [password reset form](https://forms.gle/AcE1pC4QVj7eL8RS9), and we'll get back to you as soon as possible.
+If that doesn't work, fill out this [password reset][] form, and we'll get back to you as soon as possible.
 
 
 ## You get unexpected search results
@@ -55,3 +83,5 @@ APLS might be running slowly for you if:
 You can always run the benchmark search mentioned above to see if APLS is running slower than usual (cases #2--4).
 If so, we'd recommend waiting a little bit and trying again.
 If APLS is _still_ slower than expected for even the benchmark search, please [email us](mailto:apls@pitt.edu?subject=APLS is slow&body=APLS is running slowly right now. I ran the benchmark search mentioned at https://djvill.github.io/APLS/doc/troubleshooting#apls-is-slow and it took about SECONDS seconds to run. Thanks!).
+
+{% include linklist.html %}
