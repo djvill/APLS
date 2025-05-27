@@ -6,7 +6,7 @@ parent: How to use APLS
 has_children: yes
 has_toc: no
 nav_order: 50
-last_modified_date: 2025-05-01T22:48:20-04:00
+last_modified_date: 2025-05-27T12:32:02-04:00
 ---
 
 # {{ page.title }}
@@ -69,8 +69,8 @@ There are five main sections of the _search_ page:
 
 Only the first four sections are displayed when you first load the _search_ page, as shown in the screengrab below.
 
-![]({{ '/assets/screengrab/search/search-page-layout1.png' | relative_url }})
+{% include screengrab.html src="search/search-page-layout1.png" %}
 
 The progress bar only pops up once you actually click _Search_, like in the screengrab below.
 
-![]({{ '/assets/screengrab/search/search-page-layout2.png' | relative_url }})
+{% include screengrab.html src="search/search-page-layout2.png" %}

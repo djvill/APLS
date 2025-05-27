@@ -5,7 +5,7 @@ permalink: /doc/search-complex-patterns
 parent: Searching the corpus
 grand_parent: How to use APLS
 nav_order: 80
-last_modified_date: 2025-05-01T22:48:18-04:00
+last_modified_date: 2025-05-27T12:32:01-04:00
 ---
 
 # {{ page.title }}
@@ -23,7 +23,7 @@ The way to search for multiple words is to make the search "wider".
 
 Clicking ![]({{ '/assets/img/add.svg' | relative_url }}){: style="height:1rem;"} on the right side of the input fields makes the search wider by adding another word to your search pattern.
 
-![]({{ '/assets/screengrab/search/search-input-field-orthography2.png' | relative_url }})
+{% include screengrab.html src="search/search-input-field-orthography2.png" %}
 
 The *followed immediately by* drop-down menu lets you choose whether the search should be the immediate next word, 1 word after the immediate next word, or 2 words after the immediate next word.
 

@@ -5,7 +5,7 @@ permalink: /doc/your-first-search
 parent: Searching the corpus
 grand_parent: How to use APLS
 nav_order: 10
-last_modified_date: 2025-05-01T22:48:21-04:00
+last_modified_date: 2025-05-27T12:32:04-04:00
 ---
 
 # {{ page.title }}
@@ -27,7 +27,7 @@ We'll begin with the input field for the <span class="layer">orthography</span> 
 > However, the <span class="layer">word</span> layer contains words exactly as they were typed in the transcript, including capitalization and all punctuation. 
 > If you are conducting searches on the basis of word spelling, it is recommended to use the <span class="layer">orthography</span> layer instead of the <span class="layer">word</span> layer.
 
-![]({{ '/assets/screengrab/search/search-input-field-orthography.png' | relative_url }})
+{% include screengrab.html src="search/search-input-field-orthography.png" %}
 
 At the top-left of the input field section, you will see the name of the layer that input field will apply to.
 
@@ -56,7 +56,7 @@ This drop-down menu lets you select whether the search will identify annotations
 
 The search progress bar appears at the bottom of the page only after you've specified your search and clicked the _Search_ button.
 
-![]({{ '/assets/screengrab/search/search-progress-bar.png' | relative_url }})
+{% include screengrab.html src="search/search-progress-bar.png" %}
 
 Above the progress bar itself is text displaying the patterns of your search.
 

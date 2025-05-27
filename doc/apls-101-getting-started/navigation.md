@@ -4,7 +4,7 @@ contributors: [Dan Villarreal, Jack Rechsteiner]
 permalink: /doc/navigation
 parent: APLS 101/Getting started
 nav_order: 50
-last_modified_date: 2025-05-01T22:48:15-04:00
+last_modified_date: 2025-05-27T12:31:58-04:00
 ---
 
 # {{ page.title }}
@@ -35,7 +35,7 @@ The [footer menu](#footer-menu) provides links to documentation for citing APLS,
 
 The <span class="keyterm">header menu</span> is displayed at the top of every APLS webpage.
 
-![]({{ '/assets/screengrab/navigation/navigation-header-menu.png' | relative_url }})
+{% include screengrab.html src="navigation/navigation-header-menu.png" %}
 
 From left to right, the links in the <span class="keyterm">header menu</span> allow you to navigate to:
 
@@ -56,7 +56,7 @@ From left to right, the links in the <span class="keyterm">header menu</span> al
 
 The <span class="keyterm">footer menu</span> is displayed at the bottom of every APLS webpage.
 
-![]({{ '/assets/screengrab/navigation/navigation-footer-menu.png' | relative_url }})
+{% include screengrab.html src="navigation/navigation-footer-menu.png" %}
 
 The <span class="keyterm">footer menu</span> provides links with information about:
 
@@ -69,7 +69,7 @@ The <span class="keyterm">footer menu</span> provides links with information abo
 
 The _home_ page has direct links to some useful APLS pages and an overview of the data in APLS.
 
-![]({{ '/assets/screengrab/navigation/navigation-home-page.png' | relative_url }})
+{% include screengrab.html src="navigation/navigation-home-page.png" %}
 
 From left to right, the available links are:
 

@@ -4,7 +4,7 @@ contributors: [Dan Villarreal, Jack Rechsteiner]
 permalink: /doc/browse-transcripts
 parent: How to use APLS
 nav_order: 30
-last_modified_date: 2025-05-01T22:48:16-04:00
+last_modified_date: 2025-05-27T12:31:59-04:00
 ---
 
 # {{ page.title }}
@@ -33,7 +33,7 @@ The _transcripts_ page allows you to...
 
 The <span class="keyterm">transcript list</span> displays all transcripts in APLS that match your filter criteria.
 
-![]({{ '/assets/screengrab/browse-transcripts/browse-transcripts-transcript-list.png' | relative_url }})
+{% include screengrab.html src="browse-transcripts/browse-transcripts-transcript-list.png" %}
 
 The transcript list in the screengrab above shows all transcripts in APLS that are of the `interview` <span class="transcript-attr">type</span>, tagged as `Cranberry Township` <span class="transcript-attr">neighborhood</span>, and have a <span class="transcript-attr">duration</span> between 300 and 500 seconds.
 
@@ -55,7 +55,7 @@ You can read more about transcript attributes in the [field guide]({{ '/doc/tran
 
 The <span class="keyterm">filter menu</span> at the top of the _transcripts_ page lets you find transcripts that match certain criteria.
 
-![]({{ '/assets/screengrab/browse-transcripts/browse-transcripts-filter-menu.png' | relative_url }})
+{% include screengrab.html src="browse-transcripts/browse-transcripts-filter-menu.png" %}
 
 Underneath the **Transcripts** heading is the match count, which shows the number of transcripts that currently fit the criteria of your filters.
 In the screengrab above, no filters have been applied so the match count displays `218`,[^filter] which is the total number of transcripts in APLS.
@@ -91,7 +91,7 @@ The "delete" button (![]({{ '/assets/img/delete.svg' | relative_url }}){: style=
 The <span class="keyterm">export menu</span> allows you to download transcripts in a variety of formats and perform [searches]({{ '/doc/search' | relative_url }}) on transcripts.
 The export menu is located below the [filter menu](#filtering-transcripts).
 
-![]({{ '/assets/screengrab/browse-transcripts/browse-transcripts-export-menu.png' | relative_url }})
+{% include screengrab.html src="browse-transcripts/browse-transcripts-export-menu.png" %}
 
 {: .note .no-collapse}
 > If no transcripts are selected, then these options will export all transcripts that match your current filter criteria.
@@ -108,7 +108,7 @@ The most straightforward export options are *Export Media* and *Export Original*
 The *Export Attributes* option allows you to download the metadata attributes for the selected transcripts.
 Clicking the *Export Attributes* button will bring up a multi-select menu that expands when you hover it, as seen below.
 
-![]({{ '/assets/screengrab/browse-transcripts/browse-transcripts-export-attributes.png' | relative_url }})
+{% include screengrab.html src="browse-transcripts/browse-transcripts-export-attributes.png" %}
 
 Descriptions of the different transcript attributes can be found in the [field guide]({{ '/doc/transcript-attributes' | relative_url }}).
 
@@ -118,7 +118,7 @@ After selecting the attribute data you would like to export, click the *Export A
 
 The *Export Formatted* option allows you to download <span class="keyterm">layers</span> from transcripts in a variety of file types.
 
-![]({{ '/assets/screengrab/browse-transcripts/browse-transcripts-export-formatted.png' | relative_url }})
+{% include screengrab.html src="browse-transcripts/browse-transcripts-export-formatted.png" %}
 
 Clicking the checkbox next to a <span class="keyterm">layer</span> in this menu will select that <span class="keyterm">layer</span> to be included in the downloaded files. 
 You can use `Shift`+`Click` to select multiple checkboxes at once in this menu.
@@ -163,7 +163,7 @@ This allows you to use any of the search capabilities described on the [Searchin
 Clicking the *attributes icon* for a transcript will open that transcript's attributes page.
 This page includes more information about the transcript than what is displayed on the main _transcripts_ page, as well as a link to display information about the participants in the transcript.
 
-![]({{ '/assets/screengrab/browse-transcripts/browse-transcripts-transcript-attributes-page.png' | relative_url }})
+{% include screengrab.html src="browse-transcripts/browse-transcripts-transcript-attributes-page.png" %}
 
 The *Participants* hyperlink will open the [Participants page]({{ '/doc/browse-participants' | relative_url }}) for the "Main speaker" participants present in the transcript.
 

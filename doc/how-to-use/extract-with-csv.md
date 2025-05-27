@@ -5,7 +5,7 @@ permalink: /doc/extract-with-csv
 parent: Exporting data
 grand_parent: How to use APLS
 nav_order: 10
-last_modified_date: 2025-05-01T22:48:17-04:00
+last_modified_date: 2025-05-27T12:32:00-04:00
 ---
 
 # {{ page.title }}
@@ -34,7 +34,7 @@ The _extract_ page also allows you to extract transcript attributes, participant
 
 The initial _extract_ page is one of the more straightforward pages in ALPS.
 
-![]({{ '/assets/screengrab/extract-with-csv/extract-layout.png' | relative_url }})
+{% include screengrab.html src="extract-with-csv/extract-layout.png" %}
 
 From the initial _extract_ page, you can selected if you would like to:
 - [Extract audio for time intervals](#extract-audio-for-time-intervals)
@@ -48,7 +48,7 @@ From the initial _extract_ page, you can selected if you would like to:
 
 Clicking the link to _Extract audio for time intervals_ will bring you to a page where you can upload the search results `.csv` you would like to use for extracting data.
 
-![]({{ '/assets/screengrab/extract-with-csv/extract-audio-for-time-intervals-1.png' | relative_url }})
+{% include screengrab.html src="extract-with-csv/extract-audio-for-time-intervals-1.png" %}
 
 After selecting your `.csv` with the _Choose File_ button, the button's text will change to the name of the file you selected.
 This allows you to verify that the correct file has been selected.
@@ -56,7 +56,7 @@ If the file is not the one you wanted to select, you can click the button again 
 
 After you have selected your desired file, clicking the _Upload_ button will bring you to the settings for _Extract audio for time intervals_.
 
-![]({{ '/assets/screengrab/extract-with-csv/extract-audio-for-time-intervals-2.png' | relative_url }})
+{% include screengrab.html src="extract-with-csv/extract-audio-for-time-intervals-2.png" %}
 
 The setting for the "Transcript Name column" should be set to the column in your `.csv` containing the file names of transcripts.
 If your `.csv` has a column named _Transcript_, APLS will automatically select that column for this setting.
@@ -79,7 +79,7 @@ After specifying your desired settings, clicking the _Export_ button will downlo
 
 Clicking the link to _Extract transcripts for time intervals_ will bring you to a page where you can upload the search results `.csv` you would like to use for extracting data.
 
-![]({{ '/assets/screengrab/extract-with-csv/extract-transcripts-for-time-intervals-1.png' | relative_url }})
+{% include screengrab.html src="extract-with-csv/extract-transcripts-for-time-intervals-1.png" %}
 
 After selecting your `.csv` with the _Choose File_ button, the button's text will change to the name of the file you selected.
 This allows you to verify that the correct file has been selected.
@@ -87,7 +87,7 @@ If the file is not the one you wanted to select, you can click the button again 
 
 After you have selected your desired file, clicking the _Upload_ button will bring you to the settings for _Extract transcripts for time intervals_.
 
-![]({{ '/assets/screengrab/extract-with-csv/extract-transcripts-for-time-intervals-2.png' | relative_url }})
+{% include screengrab.html src="extract-with-csv/extract-transcripts-for-time-intervals-2.png" %}
 
 The setting for the "Transcript Name column" should be set to the column in your `.csv` containing the file names of transcripts.
 If your `.csv` has a column named _Transcript_, APLS will automatically select that column for this setting.
@@ -118,7 +118,7 @@ Once the export is finished, you will be prompted to save a `.zip` file containi
 
 Clicking the link to _Extract annotations for search matches_ will bring you to a page where you can upload the search results `.csv` you would like to use for extracting data.
 
-![]({{ '/assets/screengrab/extract-with-csv/extract-annotations-for-search-matches-1.png' | relative_url }})
+{% include screengrab.html src="extract-with-csv/extract-annotations-for-search-matches-1.png" %}
 
 After selecting your `.csv` with the _Choose File_ button, the button's text will change to the name of the file you selected.
 This allows you to verify that the correct file has been selected.
@@ -126,7 +126,7 @@ If the file is not the one you wanted to select, you can click the button again 
 
 After you have selected your desired file, clicking the _Upload_ button will bring you to the settings for _Extract annotations for search matches_.
 
-![]({{ '/assets/screengrab/extract-with-csv/extract-annotations-for-search-matches-2.png' | relative_url }})
+{% include screengrab.html src="extract-with-csv/extract-annotations-for-search-matches-2.png" %}
 
 The setting for the "Target" should be set to the column in your `.csv` containing either the MatchIDs or URLs of your search results.
 If your `.csv` has a column named _MatchID_, APLS will automatically select that column for this setting.
@@ -161,7 +161,7 @@ This `.csv` will contain all the columns of your original uploaded `.csv`, with 
 
 Clicking the link to _Extract annotations for time intervals_ will bring you to a page where you can upload the search results `.csv` you would like to use for extracting data.
 
-![]({{ '/assets/screengrab/extract-with-csv/extract-annotations-for-time-intervals-1.png' | relative_url }})
+{% include screengrab.html src="extract-with-csv/extract-annotations-for-time-intervals-1.png" %}
 
 After selecting your `.csv` with the _Choose File_ button, the button's text will change to the name of the file you selected.
 This allows you to verify that the correct file has been selected.
@@ -169,7 +169,7 @@ If the file is not the one you wanted to select, you can click the button again 
 
 After you have selected your desired file, clicking the _Upload_ button will bring you to the settings for _Extract annotations for time intervals_.
 
-![]({{ '/assets/screengrab/extract-with-csv/extract-annotations-for-time-intervals-2.png' | relative_url }})
+{% include screengrab.html src="extract-with-csv/extract-annotations-for-time-intervals-2.png" %}
 
 The setting for the "Transcript Name column" should be set to the column in your `.csv` containing the file names of transcripts.
 If your `.csv` has a column named _Transcript_, APLS will automatically select that column for this setting.

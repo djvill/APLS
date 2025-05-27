@@ -9,10 +9,6 @@ window.addEventListener('DOMContentLoaded', () => {
   var m = document.querySelectorAll("#main-content p, #main-content li");
   m.forEach(a => a.innerHTML = a.innerHTML.replace("e.g., ", "e.g.,&nbsp;"));
   
-  /* Add screengrab class to images in assets/screengrab */
-  var s = document.querySelectorAll("img[src*='assets/screengrab']");
-  s.forEach(a => a.classList += ' screengrab');
-  
   /* Add commas to .delimited numbers */
   var d = document.querySelectorAll(".delimited");
   d.forEach(a => a.innerText = a.innerText.replace(/\B(?=(\d{3})+(?!\d))/g, ','));

@@ -5,7 +5,7 @@ permalink: /doc/search-filters-and-options
 parent: Searching the corpus
 grand_parent: How to use APLS
 nav_order: 20
-last_modified_date: 2025-05-01T22:48:18-04:00
+last_modified_date: 2025-05-27T12:32:02-04:00
 ---
 
 # {{ page.title }}
@@ -22,7 +22,7 @@ You can also specify additional match and display options for your search using 
 
 The participants filter is the first option displayed on the _search_ page.
 
-![]({{ '/assets/screengrab/search/search-participants-filter.png' | relative_url }})
+{% include screengrab.html src="search/search-participants-filter.png" %}
 
 There are two ways to select participants for this filter on the _search_ page:
 
@@ -49,7 +49,7 @@ There are two ways to select participants for this filter on the _search_ page:
 
 The transcripts filter is located beneath the participants filter.
 
-![]({{ '/assets/screengrab/search/search-transcripts-filter.png' | relative_url }})
+{% include screengrab.html src="search/search-transcripts-filter.png" %}
 
 Clicking _Transcripts_ will take you to the [_transcripts_ page]({{ '/doc/browse-transcripts' | relative_url }}).
 From this page, click the checkboxes for all transcripts you would like to include in your search and then click the _Layered Search_ button to return to the _search_ page.

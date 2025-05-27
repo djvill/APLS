@@ -4,7 +4,7 @@ contributors: [Dan Villarreal, Jack Rechsteiner]
 permalink: /doc/export-data
 parent: How to use APLS
 nav_order: 60
-last_modified_date: 2025-05-01T22:48:16-04:00
+last_modified_date: 2025-05-27T12:32:00-04:00
 ---
 
 # {{ page.title }}
@@ -35,7 +35,7 @@ These pages and the data that they export are:
 After conducting a search using the [_search_ page]({{ '/doc/search' | relative_url }}), you will be presented with a page of results for every match in APLS.
 Before diving into the export options of the search results page, we will cover the layout of the results page.
 
-![]({{ '/assets/screengrab/export-data/export-data-search-results-layout.png' | relative_url }})
+{% include screengrab.html src="export-data/export-data-search-results-layout.png" %}
 
 The header at the top of the screen displays the search that was conducted.
 The syntax for these searches is the layer that was searched followed by the pattern that the layer was searched for.
@@ -53,7 +53,7 @@ Below the total results information are two options:
   
 Below these options are rows for each match, which contain a few different pieces of information.
 
-![]({{ '/assets/screengrab/export-data/export-data-search-results-rows1.png' | relative_url }})
+{% include screengrab.html src="export-data/export-data-search-results-rows1.png" %}
 
 Each match is given a row number to identify that match.
 Individual matches can be selected using the checkbox next to the match if you de-select the _Select all results_ checkbox.

@@ -5,7 +5,7 @@ permalink: /doc/search-other-layers
 parent: Searching the corpus
 grand_parent: How to use APLS
 nav_order: 40
-last_modified_date: 2025-05-01T22:48:19-04:00
+last_modified_date: 2025-05-27T12:32:02-04:00
 ---
 
 # {{ page.title }}
@@ -22,7 +22,7 @@ The <span class="keyterm">layer picker</span> on the _search_ page is similar to
 
 [^differences]: The main difference is that transcript pages always have the <span class="layer">word</span>, <span class="layer">turn</span>, and <span class="layer">utterance</span> layers selected and they cannot be de-selected. The _search_ page allows these layers to be toggled on and off.
 
-![]({{ '/assets/screengrab/search/search-layer-selector.png' | relative_url }})
+{% include screengrab.html src="search/search-layer-selector.png" %}
 
 By default, the layer picker has the <span class="layer">orthography</span> layer already selected.
 To make more [layers]({{ '/doc/layer-typology' | relative_url }}) appear, you have to select the [project]({{ '/doc/layer-typology#project' | relative_url }}) corresponding with that layer in the `Projects` column.
@@ -37,7 +37,7 @@ Selecting a layer in the layer picker will make a [pattern input field]({{ '/doc
 
 The screengrab below has the projects that are most useful to users toggled on to show all the layers that are useful for searching APLS.
 
-![]({{ '/assets/screengrab/search/search-all-layers.png' | relative_url }})
+{% include screengrab.html src="search/search-all-layers.png" %}
 
 {:.note .no-collapse}
 > Layers in the `temp` project aren’t meaningful for end-users, so these layers are not discussed on this page.
@@ -80,9 +80,9 @@ You can read more about notation systems on the [Layer typology]({{ '/doc/layer-
 
 Pattern input fields for layers that don't use English spelling or numbers include drop-down selection menus (shown with a ![]({{ '/assets/img/expand-down.svg' | relative_url }}){: style="height:1rem;"} icon) that contain valid input for that layer. 
 
-![]({{ '/assets/screengrab/search/search-dropdown-menu.png' | relative_url }})
+{% include screengrab.html src="search/search-dropdown-menu.png" %}
 
-![]({{ '/assets/screengrab/search/search-dropdown-menu-expanded.png' | relative_url }})
+{% include screengrab.html src="search/search-dropdown-menu-expanded.png" %}
 
 This saves you the trouble of needing to memorize things like the DISC alphabet or part-of-speech tags to use all of the _search_ page's functionalities!
 Similar to other parts of APLS, you can hover your mouse over the options in these drop-down menus to get a short tooltip description for each symbol.

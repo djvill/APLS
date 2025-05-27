@@ -4,7 +4,7 @@ contributors: [Dan Villarreal, Jack Rechsteiner]
 permalink: /doc/browse-participants
 parent: How to use APLS
 nav_order: 40
-last_modified_date: 2025-05-01T22:48:15-04:00
+last_modified_date: 2025-05-27T12:31:59-04:00
 ---
 
 # {{ page.title }}
@@ -33,7 +33,7 @@ The _participants_ page allows you to...
 
 The <span class="keyterm">participant list</span> displays all participants in APLS that match your filter criteria.
 
-![]({{ '/assets/screengrab/browse-participants/browse-participants-participant-list.png' | relative_url }})
+{% include screengrab.html src="browse-participants/browse-participants-participant-list.png" %}
 
 The columns in the participant list, from left to right, are:
 - A checkbox that can be toggled on to have the participant included in [Export menu](#exporting-and-searching-participant-data) options.
@@ -54,7 +54,7 @@ You can read more about participant attribute data in the [field guide]({{ '/doc
 
 The <span class="keyterm">filter menu</span> at the top of the _participants_ page lets you find participants that match certain criteria.
 
-![]({{ '/assets/screengrab/browse-participants/browse-participants-filter-menu.png' | relative_url }})
+{% include screengrab.html src="browse-participants/browse-participants-filter-menu.png" %}
 
 Underneath the **Participants** heading is the match count, which shows the number of participants that currently fit the criteria of your filters.
 
@@ -117,7 +117,7 @@ This button will also clear the default transcript count and speaker type filter
 The <span class="keyterm">export menu</span> allows you to download and search data associated with participants via different pages.
 The export menu is located below the [filter menu](#filtering-participants).
 
-![]({{ '/assets/screengrab/browse-participants/browse-participants-export-menu.png' | relative_url }})
+{% include screengrab.html src="browse-participants/browse-participants-export-menu.png" %}
 
 ### *All Utterances*
 
@@ -132,7 +132,7 @@ The *All Utterances* option allows you to view and download all utterances produ
 
 Clicking *All Utterances* after selecting participants will bring up the "All Utterances" page.
 
-![]({{ '/assets/screengrab/browse-participants/browse-participants-all-utterances.png' | relative_url }})
+{% include screengrab.html src="browse-participants/browse-participants-all-utterances.png" %}
 
 The search filter options on this page allow you to choose which transcripts to include and exclude.
 
@@ -143,7 +143,7 @@ The search filter options on this page allow you to choose which transcripts to 
 
 Clicking the *List* button will search APLS for all utterances from the selected participants that meet your search criteria.
 
-![]({{ '/assets/screengrab/browse-participants/browse-participants-all-utterances-results.png' | relative_url }})
+{% include screengrab.html src="browse-participants/browse-participants-all-utterances-results.png" %}
 
 Clicking on *Display results* will open a new tab that displays the search results.
 More information about <span class="keyterm">search results</span> can be found on the [Searching the corpus]({{ '/doc/search' | relative_url }}) documentation page.
@@ -161,7 +161,7 @@ Clicking *Export Attributes* will bring up the **export participant data** page,
 
 *participant attributes* is the first tab on the **export participant data** page.
 
-![]({{ '/assets/screengrab/browse-participants/browse-participants-export-participant-data.png' | relative_url }})
+{% include screengrab.html src="browse-participants/browse-participants-export-participant-data.png" %}
 
 This tab allows you to export [participant attribute data]({{ '/doc/attribute-typology' | relative_url }}) according to the attribute fields you select. 
 
@@ -176,7 +176,7 @@ Participant attribute data is explained in more detail in the [field guide]({{ '
 
 *transcript attributes* is the second tab on the **export participant data** page.
 
-![]({{ '/assets/screengrab/browse-participants/browse-participants-export-transcript-data.png' | relative_url }})
+{% include screengrab.html src="browse-participants/browse-participants-export-transcript-data.png" %}
 
 This tab allows you to export participants' [transcript attribute data]({{ '/doc/attribute-typology' | relative_url }}) according to the attribute fields you select.
 
@@ -192,7 +192,7 @@ A detailed description of the different transcript attributes can be found in th
 
 *transcript media* is the third tab on the **export participant data** page.
 
-![]({{ '/assets/screengrab/browse-participants/browse-participants-export-media.png' | relative_url }})
+{% include screengrab.html src="browse-participants/browse-participants-export-media.png" %}
 
 This tab allows you to export all recordings for the selected participants as a `.zip` file by clicking the *Export Media* button.
 
@@ -222,7 +222,7 @@ This allows you to use any of the search capabilities described on the [Searchin
 Clicking a participant code will open that participant's attributes page.
 This page includes more information about the participant than what is displayed on the main _participants_ page, as well as links to data associated with the participant.
 
-![]({{ '/assets/screengrab/browse-participants/browse-participants-participant-attributes-page.png' | relative_url }})
+{% include screengrab.html src="browse-participants/browse-participants-participant-attributes-page.png" %}
 
 The *Transcripts* hyperlink will open the [_transcripts_ page]({{ '/doc/browse-transcripts' | relative_url }}) for that participant's transcripts.
 
