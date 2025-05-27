@@ -4,7 +4,7 @@ contributors: [Dan Villarreal, Jack Rechsteiner]
 permalink: /doc/export-data
 parent: How to use APLS
 nav_order: 60
-last_modified_date: 2025-05-27T13:05:21-04:00
+last_modified_date: 2025-05-27T16:16:14-04:00
 ---
 
 # {{ page.title }}
@@ -19,21 +19,21 @@ If you're unfamiliar with searching APLS, you should start with the [Searching t
 
 ## Pages that can export data
 
-This documentation page focuses on the [search results page](#search-results-page), but there are other pages in APLS that let you export data as well.
+This documentation page focuses on the [<span class="apls-page">Search results</span> page](#search-results-page), but there are other pages in APLS that let you export data as well.
 These pages and the data that they export are:
-- [_participants_ page]({{ '/doc/browse-participants#export-attributes' | relative_url }})
+- [<span class="apls-page">Participants</span> page]({{ '/doc/browse-participants#export-attributes' | relative_url }})
   - Lets you export [participant attribute data]({{ '/doc/attribute-typology' | relative_url }})
-- [_transcripts_ page]({{ '/doc/browse-transcripts#exporting-and-searching-transcripts' | relative_url }})
+- [<span class="apls-page">Transcripts</span> page]({{ '/doc/browse-transcripts#exporting-and-searching-transcripts' | relative_url }})
   - Lets you export entire transcripts and [transcript attribute data]({{ '/doc/transcript-attributes' | relative_url }}).
-- Individual [transcript]({{ '/doc/view-transcript#export-formatted-' | relative_url }}) pages
+- Individual [<span class="apls-page">Transcript</span> pages]({{ '/doc/view-transcript#export-formatted-' | relative_url }})
   - Lets you export [selected layers]({{ '/doc/view-transcript#layer-selector' | relative_url }}) from individual transcripts 
-- [_extract_ page]({{ '/doc/extract-acoustics' | relative_url }})
+- [<span class="apls-page">Extract</span> page]({{ '/doc/extract-acoustics' | relative_url }})
   - Lets you upload a [search results `.csv` file](#csv-export) to extract additional information about your search result matches
 
-## Search results page
+## <span class="apls-page">Search results</span> page
 
-After conducting a search using the [_search_ page]({{ '/doc/search' | relative_url }}), you will be presented with a page of results for every match in APLS.
-Before diving into the export options of the search results page, we will cover the layout of the results page.
+After conducting a search using the [<span class="apls-page">Search</span> page]({{ '/doc/search' | relative_url }}), you will be presented with a page of results for every match in APLS.
+Before diving into the export options of the <span class="apls-page">Search results</span> page, we will cover the layout of the results page.
 
 {% include screengrab.html src="export-data/export-data-search-results-layout.png" %}
 
@@ -49,7 +49,7 @@ Below the total results information are two options:
     For example, if a match occurs at the end of an utterance, then the context options will never show words that come after the match (even if there is an utterance after the utterance containing the match).
 
 {:.note .no-collapse}
-> These options affect what is included in your data export, in addition to affecting what is displayed on the search results page.
+> These options affect what is included in your data export, in addition to affecting what is displayed on the <span class="apls-page">Search results</span> page.
   
 Below these options are rows for each match, which contain a few different pieces of information.
 
@@ -64,10 +64,10 @@ Search results are grouped by transcript first and speaker second.
 Below the row heading is the match for the search highlighted in yellow, with the surrounding words displayed on both sides of the match (if there are surrounding words to display).
 Clicking the text of the match will take you directly to the location for that match in the transcript that contains it.
 
-If you search has more than 20 matches, the search results page will initially only display the first 20 matches.
+If you search has more than 20 matches, the <span class="apls-page">Search results</span> page will initially only display the first 20 matches.
 You can display more results by clicking the `n More Matches` or `n Remaining Matches` buttons at the bottom of the results list.
 
-### Exporting data from the search results page
+### Exporting data from the <span class="apls-page">Search results</span> page
 
 Once you have selected the match results and amount of context you're interested in, you can export your results as 4 different types of data:
 - [`.csv`](#csv-export) 
@@ -87,7 +87,7 @@ Certain information about the results will be included in the `.csv` by default.
 Clicking the ▼ button next to _CSV Export_ allows you to select what data you would like included in the exported `.csv` file.
 You can add metadata information, participant and transcript attributes, and layer annotations by clicking the checkbox for the data you would like to include.
 
-The _Fields:_ column is unique to the _search_ page _CSV Export_, and it allows you to include information about your search and the relative location for where your search matches were found.
+The _Fields:_ column is unique to the <span class="apls-page">Search</span> page _CSV Export_, and it allows you to include information about your search and the relative location for where your search matches were found.
 `Database title`, `Search name`, `Match ID`, and `URL` are always included in the exported `.csv` file and cannot be toggled off.
 
 The [participant attributes]({{ '/doc/attribute-typology' | relative_url }}), [transcript attributes]({{ '/doc/transcript-attributes' | relative_url }}), and [layers]({{ '/doc/layer-field-guide' | relative_url }}) are described on their respective field guide pages.
@@ -100,7 +100,7 @@ For layers with [vertical peers]({{ '/doc/layer-typology#vertical-peers' | relat
 If there are less vertical peers in the layer for the match than the number specified in the numeric box, then the `.csv` will still contain the number of columns you specified but the columns will be empty.
 
 {: .try-it }
-> 1. Go to the [_search_ page](https://apls.pitt.edu/labbcat/search).
+> 1. Go to the [<span class="apls-page">Search</span> page](https://apls.pitt.edu/labbcat/search).
 > 1. Enter `polish` into the orthography input field.
 > 1. Click the _Search_ button.
 > 1. Click the ▼ button next to _CSV Export_ and select <span class="layer">dictionary_phonemes</span>.
@@ -114,7 +114,7 @@ For layers with [sub-interval alignment]({{ '/doc/layer-typology#alignment-and-h
 If there are less sub-interval annotations in the layer for the match than the number specified in the numeric box, then the `.csv` will still contain the number of columns you specified but the columns will be empty.
 
 {: .try-it }
-> 1. Go to the [_search_ page](https://apls.pitt.edu/labbcat/search).
+> 1. Go to the [<span class="apls-page">Search</span> page](https://apls.pitt.edu/labbcat/search).
 > 1. Enter `wouldn't` into the orthography input field.
 > 1. Click the _Search_ button.
 > 1. Click the ▼ button next to _CSV Export_ and select <span class="layer">part_of_speech</span>.
@@ -142,7 +142,7 @@ The default option for _Dictionary Export_ is _[just orthography, no entries]_, 
 
 {: .try-it }
 > To find all unique words that follow the word "not" in APLS:
-> 1. Go to the [_search_ page](https://apls.pitt.edu/labbcat/search).
+> 1. Go to the [<span class="apls-page">Search</span> page](https://apls.pitt.edu/labbcat/search).
 > 1. Enter `not` into the orthography input field.
 > 1. Click the `+` button on the right side of the input field to make the search one word wider.
 > 1. Enter `.*` into the second orthography input field.
@@ -156,7 +156,7 @@ This means that if there is not any information in the selected layer for your s
 
 {: .try-it }
 > To find words that start with "cranberry" and have a custom DISC pronounciation on the <span class="layer">pronounce</span> layer:
-> 1. Go to the [_search_ page](https://apls.pitt.edu/labbcat/search).
+> 1. Go to the [<span class="apls-page">Search</span> page](https://apls.pitt.edu/labbcat/search).
 > 1. Enter `cranberry.*` into the orthography input field.
 > 1. Click the _Search_ button.
 > 1. Click the ▼ button next to _Dictionary Export_ and select <span class="layer">pronounce</span>.

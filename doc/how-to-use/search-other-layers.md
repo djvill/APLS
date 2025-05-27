@@ -5,22 +5,22 @@ permalink: /doc/search-other-layers
 parent: Searching the corpus
 grand_parent: How to use APLS
 nav_order: 40
-last_modified_date: 2025-05-27T13:05:22-04:00
+last_modified_date: 2025-05-27T16:16:16-04:00
 ---
 
 # {{ page.title }}
 {:.no_toc}
 
-You can search more than just the <span class="layer">orthography</span> layer on the _search_ page.
+You can search more than just the <span class="layer">orthography</span> layer on the <span class="apls-page">Search</span> page.
 The first step in doing so is to use the <span class="keyterm">layer picker</span> menu.
 
 {% include page_toc.html collapsible=true %}
 
 ## Selecting other layers to search
 
-The <span class="keyterm">layer picker</span> on the _search_ page is similar to the [layer picker on transcript pages]({{ '/doc/view-transcript#layer-selector' | relative_url }}), with some minor differences.[^differences]
+The <span class="keyterm">layer picker</span> on the <span class="apls-page">Search</span> page is similar to the [layer picker on <span class="apls-page">Transcript</span> pages]({{ '/doc/view-transcript#layer-selector' | relative_url }}), with some minor differences.[^differences]
 
-[^differences]: The main difference is that transcript pages always have the <span class="layer">word</span>, <span class="layer">turn</span>, and <span class="layer">utterance</span> layers selected and they cannot be de-selected. The _search_ page allows these layers to be toggled on and off.
+[^differences]: The main difference is that <span class="apls-page">Transcript</span> pages always have the <span class="layer">word</span>, <span class="layer">turn</span>, and <span class="layer">utterance</span> layers selected and they cannot be de-selected. The <span class="apls-page">Search</span> page allows these layers to be toggled on and off.
 
 {% include screengrab.html src="search/search-layer-selector.png" %}
 
@@ -59,7 +59,7 @@ The four data types are:
 - Numeric
 - Timing-only
 
-More information about these data types is provided on the [Layer typology]({{ '/doc/layer-typology#data-type' | relative_url }}) documentation page, but for learning how to use the _search_ page it is most useful to simply know that these distinctions exist.
+More information about these data types is provided on the [Layer typology]({{ '/doc/layer-typology#data-type' | relative_url }}) documentation page, but for learning how to use the <span class="apls-page">Search</span> page it is most useful to simply know that these distinctions exist.
 
 While data type describes the *kinds* of annotation that different layers contain, notation systems are what those annotations actually *look like*.
 All layers have a <span class="keyterm">primary notation system</span> (with the exception of timing-only layers because their annotations don't have labels).
@@ -84,7 +84,7 @@ Pattern input fields for layers that don't use English spelling or numbers inclu
 
 {% include screengrab.html src="search/search-dropdown-menu-expanded.png" %}
 
-This saves you the trouble of needing to memorize things like the DISC alphabet or part-of-speech tags to use all of the _search_ page's functionalities!
+This saves you the trouble of needing to memorize things like the DISC alphabet or part-of-speech tags to use all of the <span class="apls-page">Search</span> page's functionalities!
 Similar to other parts of APLS, you can hover your mouse over the options in these drop-down menus to get a short tooltip description for each symbol.
 
 {: .under-the-hood }
@@ -108,7 +108,7 @@ Other layers that can be searched using English spelling are:
 
 {:.note}
 > The <span class="layer">redaction</span> search targets the comments that are made for redactions on the word layer.
-> All redactions are annotated as `___` on the word layer, which is what appears on the search results page for redactions.
+> All redactions are annotated as `___` on the word layer, which is what appears on the <span class="apls-page">Search results</span> page for redactions.
 > However, the pattern for <span class="layer">redaction</span> must match the comments in the <span class="layer">redaction</span> layer.
 > Therefore, searching for `___` on the <span class="layer">redaction</span> layer won't display any results but searching `.*name.*` will show all redactions that contain "name" in the comment.
   
@@ -118,7 +118,7 @@ The only syntax layer in APLS is the <span class="layer">part_of_speech</span> l
 
 {: .try-it }
 > To find matches for every superlative adjective in APLS:
-> 1. Go to the [_search_ page](https://apls.pitt.edu/labbcat/search).
+> 1. Go to the [<span class="apls-page">Search</span> page](https://apls.pitt.edu/labbcat/search).
 > 1. Select the `syntax` project in the layer picker and click the checkbox for the <span class="layer">part_of_speech</span> layer to make the part_of_speech input field appear.
 > 1. Click the drop-down menu button ({% include labbcat-icon.html src="expand-down.svg" %}) and select `JJS`.
 > 1. Click the _Search_ button.
@@ -142,7 +142,7 @@ The phonology layers (and what is included in their drop-down menus) in APLS are
 
 {: .try-it }
 > To find all matches for syllables with /ʊ/ that have secondary stress:
-> 1. Go to the [_search_ page](https://apls.pitt.edu/labbcat/search).
+> 1. Go to the [<span class="apls-page">Search</span> page](https://apls.pitt.edu/labbcat/search).
 > 1. Select the `phonology` layer in the layer picker and click the checkbox for the <span class="layer">syllables</span> layer to make the syllables input field appear.
 > 1. Click the drop-down menu button ({% include labbcat-icon.html src="expand-down.svg" %}) and select `secondary` under the `STRESS` heading.
 > 1. Enter `.*` after `"` in the syllables input field.
@@ -163,7 +163,7 @@ The following layers use numeric range input fields:
 
 {: .try-it }
 > To find every word that only appears in the corpus one to two times:
-> 1. Go to the [_search_ page](https://apls.pitt.edu/labbcat/search).
+> 1. Go to the [<span class="apls-page">Search</span> page](https://apls.pitt.edu/labbcat/search).
 > 1. Select the `lexicon` project in the layer picker and click the checkbox for the <span class="layer">frequency_in_corpus</span> layer to make the frequency_in_corpus input field appear.
 > 1. Enter `1` in the frequency_in_corpus _Minimum_ input field and enter `2` in the frequency_in_corpus _Maximum_ input field.
 > 1. Click the _Search_ button.

@@ -5,7 +5,7 @@ permalink: /doc/regex
 parent: Searching the corpus
 grand_parent: How to use APLS
 nav_order: 30
-last_modified_date: 2025-05-27T13:05:22-04:00
+last_modified_date: 2025-05-27T16:16:15-04:00
 ---
 
 # {{ page.title }}
@@ -177,7 +177,7 @@ The table below gives some examples of how characters and metacharacters can be 
 
 {: .try-it }
 > To search for every instance of "town", "downtown", and "hometown" in APLS:
-> 1. Go to the [_search_ page](https://apls.pitt.edu/labbcat/search).
+> 1. Go to the [<span class="apls-page">Search</span> page](https://apls.pitt.edu/labbcat/search).
 > 1. Enter `(down|home)?town` into the orthography input field.
 > 1. Click the _Search_ button.
 
@@ -192,28 +192,28 @@ You can find some practice search questions below, with solutions included as `T
 - How would you find all words that (1) start with vowels _and_ (2) are at least 2 letters long?
 
 {: .try-it }
-> 1. Go to the [_search_ page](https://apls.pitt.edu/labbcat/search).
+> 1. Go to the [<span class="apls-page">Search</span> page](https://apls.pitt.edu/labbcat/search).
 > 1. Enter `[aeiou].+` into the orthography input field.
 > 1. Click the _Search_ button.
 
 - How would you find all words that end with either _-ing_ or _-ize_?
 
 {: .try-it }
-> 1. Go to the [_search_ page](https://apls.pitt.edu/labbcat/search).
+> 1. Go to the [<span class="apls-page">Search</span> page](https://apls.pitt.edu/labbcat/search).
 > 1. Enter `.+i(ng|ze)` into the orthography input field.
 > 1. Click the _Search_ button.
 
 - How would you find all words that have three consecutive orthographic vowels?
 
 {: .try-it }
-> 1. Go to the [_search_ page](https://apls.pitt.edu/labbcat/search).
+> 1. Go to the [<span class="apls-page">Search</span> page](https://apls.pitt.edu/labbcat/search).
 > 1. Enter `.*[aeiou][aeiou][aeiou].*` into the orthography input field.
 > 1. Click the _Search_ button.
 
 - How would you find all words that either start with _q_ or end with _x_, excluding instances of _q_ and _x_ on their own?
 
 {: .try-it }
-> 1. Go to the [_search_ page](https://apls.pitt.edu/labbcat/search).
+> 1. Go to the [<span class="apls-page">Search</span> page](https://apls.pitt.edu/labbcat/search).
 > 1. Enter `q.+|.+x` into the orthography input field.
 > 1. Click the _Search_ button.
 
@@ -247,14 +247,14 @@ The table below shows the APLS equivalent of standard regex anchor expressions, 
 > This is covered on the [Anchoring searches]({{ '/doc/anchoring-searches' | relative_url }}) page.
 
 
-### _participants_ and _transcripts_ pages: Regex match parts
+### <span class="apls-page">Participants</span> and <span class="apls-page">Transcripts</span> pages: Regex match parts
 
 When [browsing participants]({{ '/doc/browsing-participants' | relative_url }}) or [transcripts]({{ '/doc/browsing-transcripts' | relative_url }}), you can specify filters to narrow down the list of matches.
 Some of these filters accept regex, like the <span class="layer">participant</span> or <span class="layer">transcript</span> name.
 Unlike search regex, these regex _do_ match parts of the label (no need for `.*` at the beginning and/or end of the regex).
-For example, on the _participants_ page, entering `1` in the _Participant_ box will match participants with `1` anywhere in their speaker code.
+For example, on the <span class="apls-page">Participants</span> page, entering `1` in the _Participant_ box will match participants with `1` anywhere in their speaker code.
 This also means that `^` and `$`, which anchor patterns to the start and end (respectively) of the match, _do_ work in these filters
-For example, on the _participants_ page, entering `1$` in the _Participant_ box will match participants whose speaker codes _end with_ `1`.
+For example, on the <span class="apls-page">Participants</span> page, entering `1$` in the _Participant_ box will match participants whose speaker codes _end with_ `1`.
 
 {% comment %}Regex are used in one other place in the corpus, the Process with Praat page, where they match participant attribute labels for overriding default settings (e.g., change the formant ceiling if participant_gender matches `M(ale)?`). That one is a whole-annotation match, like search, and uses java.util.regex.{% endcomment %}
 
@@ -267,7 +267,7 @@ This means that, compared to [PCRE](https://www.regular-expressions.info/pcre.ht
 {% comment %}Technically, _participants_ and _transcripts_ use java.util.regex, so they do support backreferences (e.g., on _transcripts_, `CB(.).+\1` will match CB10interview1.eaf, CB10reading1.eaf, CB17interview1.eaf, and CB17reading1.eaf). But that's unlikely to matter for end-users.{% endcomment %}
 
 {: .under-the-hood }
-> On the _search_ page, entering an invalid regex pattern will make the text turn red.
+> On the <span class="apls-page">Search</span> page, entering an invalid regex pattern will make the text turn red.
 > Hovering over the red text will make a tooltip appear that gives a brief explanation of why the regex is invalid.
 > This error-checking is powered not by MySQL's regex engine but by JavaScript's `new Regexp()` with the `"u"` (Unicode) flag.
 > The error messages are mostly self-explanatory, but you can look them up [here](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Errors) if needed.
@@ -279,18 +279,18 @@ Here we've collected some tips and tricks for using regex with APLS that are bro
 
 ### Checking your search matches
 
-When you perform a search and the [search results page]({{ '/doc/export-data#search-results-page' | relative_url }}) contains a handful of matches, it can be easy to manually check how many unique items your search matched.
+When you perform a search and the [<span class="apls-page">Search results</span> page]({{ '/doc/export-data#search-results-page' | relative_url }}) contains a handful of matches, it can be easy to manually check how many unique items your search matched.
 APLS contains over 400,000 word tokens, so often a search will result in a lot more than a handful of matches!
 Even if you export your search results as a `.csv`, it can be difficult to identify all the unique item matches if one or two items are much more frequent than the rest.
 
-The {% include labbcat-icon.html src="book.svg" %} _Dictionary_ export option on the [search results page]({{ '/doc/export-data#search-results-page' | relative_url }}) lets you download a `.txt` file of every unique individual item that your search matched.
+The {% include labbcat-icon.html src="book.svg" %} _Dictionary_ export option on the [<span class="apls-page">Search results</span> page]({{ '/doc/export-data#search-results-page' | relative_url }}) lets you download a `.txt` file of every unique individual item that your search matched.
 This can be helpful for quickly checking that the matches you got line up with what you were expecting!
 
 {: .try-it }
-> 1. Go to the [_search_ page](https://apls.pitt.edu/labbcat/search).
+> 1. Go to the [<span class="apls-page">Search</span> page](https://apls.pitt.edu/labbcat/search).
 > 1. Enter `don.*` into the orthography input field.
 > 1. Click the _Search_ button.
-> 1. On the search results page generated by your search, click the {% include labbcat-icon.html src="book.svg" %} _Dictionary_ button.
+> 1. On the <span class="apls-page">Search results</span> page generated by your search, click the {% include labbcat-icon.html src="book.svg" %} _Dictionary_ button.
 > 1. Save and view the file to see what words in APLS match the `don.*` orthography search pattern.
 
 ### Other resources for learning about regex

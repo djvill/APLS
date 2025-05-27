@@ -4,22 +4,22 @@ contributors: [Dan Villarreal, Jack Rechsteiner]
 permalink: /doc/browse-participants
 parent: How to use APLS
 nav_order: 40
-last_modified_date: 2025-05-27T13:05:21-04:00
+last_modified_date: 2025-05-27T16:16:14-04:00
 ---
 
 # {{ page.title }}
 {:.no_toc}
 
-The primary way to browse participants in APLS is via the _participants_ page: <https://apls.pitt.edu/labbcat/participants>. 
+The primary way to browse participants in APLS is via the <span class="apls-page">Participants</span> page: <https://apls.pitt.edu/labbcat/participants>. 
 
-The _participants_ page lets you view, filter, and export information about the participants in APLS.
-On this documentation page, we cover the functionality and layout of the _participants_ page.
+The <span class="apls-page">Participants</span> page lets you view, filter, and export information about the participants in APLS.
+On this documentation page, we cover the functionality and layout of the <span class="apls-page">Participants</span> page.
 
 {% include page_toc.html collapsible=true %}
 
-## What you can do on the _participants_ page
+## What you can do on the <span class="apls-page">Participants</span> page
 
-The _participants_ page allows you to...
+The <span class="apls-page">Participants</span> page allows you to...
 - [View demographic information](#participant-list) for participants.
 - [Filter participants](#filtering-participants) according to certain criteria.
 - [Export participant data](#exporting-and-searching-participant-data) in a variety of formats.
@@ -38,7 +38,7 @@ The <span class="keyterm">participant list</span> displays all participants in A
 The columns in the participant list, from left to right, are:
 - A checkbox that can be toggled on to have the participant included in [Export menu](#exporting-and-searching-participant-data) options.
 - The code or name of the participant.
-  - Clicking the participant code will open that participant's [attributes page](#participant-attributes-pages).
+  - Clicking the participant code will open the corresponding [<span class="apls-page">Participant attributes</span> page](#participant-attributes-pages).
 - The <span class="transcript-attr">episode</span> code associated with the participant.
 - The number of transcripts for that participant.
 - The <span class="participant-attr">neighborhood</span> where the participant was recruited from.
@@ -52,14 +52,14 @@ You can read more about participant attribute data in the [field guide]({{ '/doc
 
 ## Filtering participants
 
-The <span class="keyterm">filter menu</span> at the top of the _participants_ page lets you find participants that match certain criteria.
+The <span class="keyterm">filter menu</span> at the top of the <span class="apls-page">Participants</span> page lets you find participants that match certain criteria.
 
 {% include screengrab.html src="browse-participants/browse-participants-filter-menu.png" %}
 
 Underneath the **Participants** heading is the match count, which shows the number of participants that currently fit the criteria of your filters.
 
 {:.note}
-> The default filter for the _participants_ page is to show all participants categorized as a "Main speaker" who have at least 1 transcript in APLS. 
+> The default filter for the <span class="apls-page">Participants</span> page is to show all participants categorized as a "Main speaker" who have at least 1 transcript in APLS. 
 > As shown above, there are 34 participants in APLS who meet this criteria.
 
 The nine filter fields correspond to the columns in the participant list directly below the filter fields:
@@ -69,7 +69,7 @@ The nine filter fields correspond to the columns in the participant list directl
 - The "Participant" and "Episode" text fields filter participants by <span class="participant-attr">participant</span> code or <span class="transcript-attr">episode</span> code[^episodes] using [regular expressions]({{ '/doc/regex' | relative_url }}).
 
   {: .try-it }
-  > Go to the [_participants_ page](https://apls.pitt.edu/labbcat/participants) and enter `.+and.+` into the "Episode" text field.
+  > Go to the [<span class="apls-page">Participants</span> page](https://apls.pitt.edu/labbcat/participants) and enter `.+and.+` into the "Episode" text field.
   > This will display all participants with an episode code that is a combination of multiple participant codes.
 - The "Transcript count" text fields filter participants by their total number of transcripts in APLS.
   - To view participants with...
@@ -79,7 +79,7 @@ The nine filter fields correspond to the columns in the participant list directl
   - The default for this filter is set to show all participants with at least 1 transcript in APLS.
 
   {: .try-it }
-  > Go to the [_participants_ page](https://apls.pitt.edu/labbcat/participants) and enter `10` into the *From* text field and leave the *To* text field blank.
+  > Go to the [<span class="apls-page">Participants</span> page](https://apls.pitt.edu/labbcat/participants) and enter `10` into the *From* text field and leave the *To* text field blank.
   > This will show all participants with at least 10 transcripts in APLS.
   >
   > In the same way, you can leave the *From* text field blank and enter `3` in the *To* text field to show all participants that have 3 transcripts or less in APLS.
@@ -155,11 +155,11 @@ The *Export Attributes* option allows you to download participant data, transcri
 {: .note .no-collapse}
 > If no participants are selected, the *Export Attributes* option will include all participants that match your current filter criteria.
 
-Clicking *Export Attributes* will bring up the **export participant data** page, which has three different tabs.
+Clicking *Export Attributes* will bring up the <span class="apls-page">Export participant data</span> page, which has three different tabs.
 
 #### *participant attributes*
 
-*participant attributes* is the first tab on the **export participant data** page.
+*participant attributes* is the first tab on the <span class="apls-page">Export participant data</span> page.
 
 {% include screengrab.html src="browse-participants/browse-participants-export-participant-data.png" %}
 
@@ -174,7 +174,7 @@ Participant attribute data is explained in more detail in the [field guide]({{ '
 
 #### *transcript attributes*
 
-*transcript attributes* is the second tab on the **export participant data** page.
+*transcript attributes* is the second tab on the <span class="apls-page">Export participant data</span> page.
 
 {% include screengrab.html src="browse-participants/browse-participants-export-transcript-data.png" %}
 
@@ -190,7 +190,7 @@ A detailed description of the different transcript attributes can be found in th
 
 #### *transcript media*
 
-*transcript media* is the third tab on the **export participant data** page.
+*transcript media* is the third tab on the <span class="apls-page">Export participant data</span> page.
 
 {% include screengrab.html src="browse-participants/browse-participants-export-media.png" %}
 
@@ -198,39 +198,39 @@ This tab allows you to export all recordings for the selected participants as a 
 
 ### *List Transcripts*
 
-The *List Transcripts* option allows you to view all transcripts for the selected participants on the [_transcripts_ page]({{ '/doc/browse-transcripts' | relative_url }}).
+The *List Transcripts* option allows you to view all transcripts for the selected participants on the [<span class="apls-page">Transcripts</span> page]({{ '/doc/browse-transcripts' | relative_url }}).
 
-The features of the _transcripts_ page are explained in more detail on the [Browsing transcripts]({{ '/doc/browse-transcripts' | relative_url }}) documentation page.
+The features of the <span class="apls-page">Transcripts</span> page are explained in more detail on the [Browsing transcripts]({{ '/doc/browse-transcripts' | relative_url }}) documentation page.
 
 ### *Layered Search*
 
-The *Layered Search* option will open the [_search_ page]({{ '/doc/search' | relative_url }}) with the selected participants in the *Participants* search filter field.
+The *Layered Search* option will open the [<span class="apls-page">Search</span> page]({{ '/doc/search' | relative_url }}) with the selected participants in the *Participants* search filter field.
 This allows you to use any of the search capabilities described on the [Searching the corpus]({{ '/doc/search' | relative_url }}) documentation page with the selected participants.
 
 {: .note .no-collapse}
 > If no participants are selected, the *Layered Search* option will include all participants that match your current filter criteria.
 
 {: .try-it }
-> 1. Go to the [_participants_ page](https://apls.pitt.edu/labbcat/participants).
+> 1. Go to the [<span class="apls-page">Participants</span> page](https://apls.pitt.edu/labbcat/participants).
 > 1. Click the checkbox next to *CB01* and `Shift`+`Click` the checkbox next to *FH05* to select the first five participants.
-> 1. Click *Layered Search* to open the [_search_ page]({{ '/doc/search' | relative_url }}).
+> 1. Click *Layered Search* to open the [<span class="apls-page">Search</span> page]({{ '/doc/search' | relative_url }}).
 > 1. Enter `yinz` into the [Regular expression]({{ '/doc/regex' | relative_url }}) text field in the orthography section and click *Search*.
 > 1. Click *Display results* to view all utterances of the word `yinz` in the transcripts for the five selected participants.
 
-## Participant attributes pages
+## <span class="apls-page">Participant attributes</span> pages
 
-Clicking a participant code will open that participant's attributes page.
-This page includes more information about the participant than what is displayed on the main _participants_ page, as well as links to data associated with the participant.
+Clicking a participant code will open the corresponding <span class="apls-page">Participant attributes</span> page.
+This page includes more information about the participant than what is displayed on the main <span class="apls-page">Participants</span> page, as well as links to data associated with the participant.
 
 {% include screengrab.html src="browse-participants/browse-participants-participant-attributes-page.png" %}
 
-The *Transcripts* hyperlink will open the [_transcripts_ page]({{ '/doc/browse-transcripts' | relative_url }}) for that participant's transcripts.
+The *Transcripts* hyperlink will open the [<span class="apls-page">Transcripts</span> page]({{ '/doc/browse-transcripts' | relative_url }}) for that participant's transcripts.
 
 The *All Utterances* hyperlink will open the ["All Utterances" page](#all-utterances) for that participant.
 
 {: .try-it }
-> 1. Go to the [_participants_ page](https://apls.pitt.edu/labbcat/participants) 
-> 1. Click *CB10* to view CB10's attributes page.
+> 1. Go to the [<span class="apls-page">Participants</span> page](https://apls.pitt.edu/labbcat/participants) 
+> 1. Click *CB10* to view CB10's <span class="apls-page">Participant attributes</span> page.
 > 1. Click *All Utterances* to open the ["All Utterances" page](#all-utterances) for CB10.
 > 1. Click the checkboxes next to "interview", "reading", and "metalinguistic" to deselect them.
 > 1. Click *List* and wait for the search to be completed.

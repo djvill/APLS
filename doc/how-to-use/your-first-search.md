@@ -5,14 +5,14 @@ permalink: /doc/your-first-search
 parent: Searching the corpus
 grand_parent: How to use APLS
 nav_order: 10
-last_modified_date: 2025-05-27T13:05:23-04:00
+last_modified_date: 2025-05-27T16:16:17-04:00
 ---
 
 # {{ page.title }}
 {:.no_toc}
 
-If you are a newcomer to APLS, this page will help you get acquainted with the [_search_](https://apls.pitt.edu/labbcat/search) page by walking you through a simple corpus search.
-After following along with the example search on this page, you can visit the other pages in the [_search_ page documentation]({{ '/doc/search' | relative_url }}) to learn about the more advanced _search_ page features.
+If you are a newcomer to APLS, this page will help you get acquainted with the [<span class="apls-page">Search</span>](https://apls.pitt.edu/labbcat/search) page by walking you through a simple corpus search.
+After following along with the example search on this page, you can visit the other pages in the [<span class="apls-page">Search</span> page documentation]({{ '/doc/search' | relative_url }}) to learn about the more advanced <span class="apls-page">Search</span> page features.
 
 {% include page_toc.html collapsible=true %}
 
@@ -35,7 +35,7 @@ The text box for entering the pattern you'd like to search for is on the right-s
 
 {: .try-it }
 > To see how many times "steelers" appears in APLS:
-> 1. Go to the [_search_ page](https://apls.pitt.edu/labbcat/search).
+> 1. Go to the [<span class="apls-page">Search</span> page](https://apls.pitt.edu/labbcat/search).
 > 1. Enter `steelers` into the orthography input field.
 > 1. Click the _Search_ button.
 
@@ -50,7 +50,7 @@ This drop-down menu lets you select whether the search will identify annotations
 {:.note .no-collapse}
 > Pattern input fields look for matches in the corpus by individual word, rather than entire utterances. 
 > For example, if you entered `not even` into the orthography input field, you would not get any results because "not even" will never match a single word in any transcript.
-> However, you can expand the size of your search to include multiple words, as explained in the [Searching multiple words]({{ '/doc/search-complex-patterns#searching-multiple-words' | relative_url }}) section of the [Searching complex patterns]({{ '/doc/search-complex-patterns' | relative_url }}) page.
+> However, you can expand the size of your search to include multiple words, as explained in the [Searching multiple words]({{ '/doc/search-complex-patterns#searching-multiple-words' | relative_url }}) section of the [Searching complex patterns]({{ '/doc/search-complex-patterns' | relative_url }}) documentation page.
 
 ## Search results
 
@@ -66,5 +66,5 @@ The progress bar fills itself in to reflect the current state of your search, su
 > Some searches will return results quickly, but more complex searches or searches involving a lot of transcripts may take a longer time to complete.
 > As long as the search progress bar is being displayed, it means that APLS is working on doing your search!
 
-After the search is complete, the number of results found is displayed beneath the progress bar and a link to _Display results_ is shown that will take you to the search results page.
-For information on using the search results page, go to the [Exporting data]({{ '/doc/export-data' | relative_url }}) documentation.
+After the search is complete, the number of results found is displayed beneath the progress bar and a link to _Display results_ is shown that will take you to the <span class="apls-page">Search results</span> page.
+For information on using the <span class="apls-page">Search results</span> page, go to the [Exporting data]({{ '/doc/export-data' | relative_url }}) documentation.

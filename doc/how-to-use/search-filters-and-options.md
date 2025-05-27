@@ -5,13 +5,13 @@ permalink: /doc/search-filters-and-options
 parent: Searching the corpus
 grand_parent: How to use APLS
 nav_order: 20
-last_modified_date: 2025-05-27T12:32:02-04:00
+last_modified_date: 2025-05-27T16:16:15-04:00
 ---
 
 # {{ page.title }}
 {:.no_toc}
 
-The _search_ page by default will conduct searches on all data in APLS.
+The <span class="apls-page">Search</span> page by default will conduct searches on all data in APLS.
 You can limit your search to a selection of [participants]({{ '/doc/data-organization#participants' | relative_url }}) and/or [transcripts]({{ '/doc/data-organization#transcripts' | relative_url }}) using the participants and transcripts filters.
 
 You can also specify additional match and display options for your search using the [search options](#search-options).
@@ -20,16 +20,16 @@ You can also specify additional match and display options for your search using 
 
 ## Participants filter
 
-The participants filter is the first option displayed on the _search_ page.
+The participants filter is the first option displayed on the <span class="apls-page">Search</span> page.
 
 {% include screengrab.html src="search/search-participants-filter.png" %}
 
-There are two ways to select participants for this filter on the _search_ page:
+There are two ways to select participants for this filter on the <span class="apls-page">Search</span> page:
 
-- Clicking _Participants_ will take you to the [_participants_ page]({{ '/doc/browse-participants' | relative_url }}).
-  From this page, click the checkboxes for all participants you would like to include in your search and then click the _Layered Search_ button to return to the _search_ page.
-  If you specify a filter for the _participants_ page and don't click any checkboxes, then it will select all participants in the filter.
-  More information about the _participants_ page can be found on the [Browsing participants]({{ '/doc/browse-participants' | relative_url }}) documentation page.
+- Clicking _Participants_ will take you to the [<span class="apls-page">Participants</span> page]({{ '/doc/browse-participants' | relative_url }}).
+  From this page, click the checkboxes for all participants you would like to include in your search and then click the _Layered Search_ button to return to the <span class="apls-page">Search</span> page.
+  If you specify a filter for the <span class="apls-page">Participants</span> page and don't click any checkboxes, then it will select all participants in the filter.
+  More information about the <span class="apls-page">Participants</span> page can be found on the [Browsing participants]({{ '/doc/browse-participants' | relative_url }}) documentation page.
 - You can also upload a `.csv` file containing participant codes to the participants filter by clicking the _Choose File_ button.
   - For the `.csv` upload filter to work, participant codes must be in the first column of the `.csv`. 
     The filter will select all __valid__ participant codes in the first column.
@@ -38,11 +38,11 @@ There are two ways to select participants for this filter on the _search_ page:
     If there is an error in the column, it will be ignored (e.g., if the column contains `CB96` instead of `CB06`, the filter will simply ignore `CB96` because it is not a valid participant code).
 
 {: .try-it }
-> 1. Go to the [_participants_ page](https://apls.pitt.edu/labbcat/participants).
+> 1. Go to the [<span class="apls-page">Participants</span> page](https://apls.pitt.edu/labbcat/participants).
 > 1. Click the checkboxes for CB01, CB05, and CB06.
-> 1. Click the _Export Attributes_ button at the top of the page and then click _Export Attributes_ on the __Export participant data__ page to download the `participants.csv` file.
->    1. You can learn more about the options of the __Export participant data__ page on the [Browsing participants]({{ '/doc/browse-participants#exporting-and-searching-participants' | relative_url }}) documentation page.
-> 1. Go to the [_search_ page](https://apls.pitt.edu/labbcat/search).
+> 1. Click the _Export Attributes_ button at the top of the page and then click _Export Attributes_ on the <span class="apls-page">Export participant data</span> page to download the `participants.csv` file.
+>    1. You can learn more about the options of the <span class="apls-page">Export participant data</span> page on the [Browsing participants]({{ '/doc/browse-participants#exporting-and-searching-participants' | relative_url }}) documentation page.
+> 1. Go to the [<span class="apls-page">Search</span> page](https://apls.pitt.edu/labbcat/search).
 > 1. Click `Choose File` in the Participants filter tab and select the `participants.csv` file.
 
 ## Transcripts filter
@@ -51,9 +51,9 @@ The transcripts filter is located beneath the participants filter.
 
 {% include screengrab.html src="search/search-transcripts-filter.png" %}
 
-Clicking _Transcripts_ will take you to the [_transcripts_ page]({{ '/doc/browse-transcripts' | relative_url }}).
-From this page, click the checkboxes for all transcripts you would like to include in your search and then click the _Layered Search_ button to return to the _search_ page.
-More information about the _transcripts_ page can be found on the [Browsing transcripts]({{ '/doc/browse-transcripts' | relative_url }}) documentation page.
+Clicking _Transcripts_ will take you to the [<span class="apls-page">Transcripts</span> page]({{ '/doc/browse-transcripts' | relative_url }}).
+From this page, click the checkboxes for all transcripts you would like to include in your search and then click the _Layered Search_ button to return to the <span class="apls-page">Search</span> page.
+More information about the <span class="apls-page">Transcripts</span> page can be found on the [Browsing transcripts]({{ '/doc/browse-transcripts' | relative_url }}) documentation page.
 
 <!-- you can now upload transcript files for the filter as well -->
 

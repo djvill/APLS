@@ -5,7 +5,7 @@ permalink: /doc/anchoring-searches
 parent: Searching the corpus
 grand_parent: How to use APLS
 nav_order: 70
-last_modified_date: 2025-05-27T13:05:21-04:00
+last_modified_date: 2025-05-27T16:16:14-04:00
 ---
 
 # {{ page.title }}
@@ -20,7 +20,7 @@ The following [phrase layers]({{ '/doc/layer-typology#scope' | relative_url }}) 
 
 {: .try-it }
 > To search for the word "yes" occurring at the beginning of speaker turns:
-> 1. Go to the [_search_ page](https://apls.pitt.edu/labbcat/search).
+> 1. Go to the [<span class="apls-page">Search</span> page](https://apls.pitt.edu/labbcat/search).
 > 1. Select the `timing` project in the layer picker and click the checkbox for the <span class="layer">turn</span> layer to make the turn input field appear.
 > 1. Click the lock {% include labbcat-icon.html src="lock-unlocked.svg" %} on the left side of the turn input field.
 > 1. Enter `yes` into the orthography input field.
@@ -37,7 +37,7 @@ The following [segment layers]({{ '/doc/layer-typology#scope' | relative_url }})
 
 {: .try-it }
 > To find matches for every instance of /s/ followed by /t/ that occurs at the end of words:
-> 1. Go to the [_search_ page](https://apls.pitt.edu/labbcat/search).
+> 1. Go to the [<span class="apls-page">Search</span> page](https://apls.pitt.edu/labbcat/search).
 > 1. Select the <span class="layer">segment</span> layer in the selection menu to make the segment pattern input field appear.
 > 1. Click {% include labbcat-icon.html src="add.svg" %} inside of the segment box to make another segment input field appear.
 > 1. Enter `s` in the first segment field and `t` in the second segment field.

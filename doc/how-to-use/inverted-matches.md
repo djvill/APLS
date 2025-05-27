@@ -5,7 +5,7 @@ permalink: /doc/inverted-matches
 parent: Searching the corpus
 grand_parent: How to use APLS
 nav_order: 50
-last_modified_date: 2025-05-27T13:05:21-04:00
+last_modified_date: 2025-05-27T16:16:15-04:00
 ---
 
 # {{ page.title }}
@@ -25,7 +25,7 @@ However, a simple search for non-matches could be to find all the words in APLS 
 
 {: .try-it }
 > To find all instances of words that are not the word "penguins":
-> 1. Go to the [_search_ page](https://apls.pitt.edu/labbcat/search).
+> 1. Go to the [<span class="apls-page">Search</span> page](https://apls.pitt.edu/labbcat/search).
 > 1. Enter `penguins` into the orthography input field.
 > 1. Click the _matches_ drop-down menu for the orthography input field and select _doesn't match_.
 > 1. Click the _Search_ button.
@@ -34,7 +34,7 @@ Non-matching searches can also be combined with [regex patterns]({{ '/doc/regex'
 For example, you could find all words with _no_ consonants in APLS by using a _doesn't match_ search on the <span class="layer">phonemes</span> layer:
 
 {: .try-it }
-> 1. Go to the [_search_ page](https://apls.pitt.edu/labbcat/search).
+> 1. Go to the [<span class="apls-page">Search</span> page](https://apls.pitt.edu/labbcat/search).
 > 1. Select the `phonology` project in the layer picker and click the checkbox for the <span class="layer">phonemes</span> layer to make the phonemes input field appear.
 > 1. Enter `.*` in the phonemes input field.
 > 1. Click the drop-down menu button ({% include labbcat-icon.html src="expand-down.svg" %}) and select _CONSONANT:_.
@@ -42,7 +42,7 @@ For example, you could find all words with _no_ consonants in APLS by using a _d
 > 1. Click the _matches_ drop-down menu for the phonemes input field and select _doesn't match_.
 > 1. Click the _Search_ button.
 
-The _doesn't match_ option is also useful when used with multiple layers, as described in the [Searching multiple layers]({{ '/doc/search-complex-patterns#searching-multiple-layers' | relative_url }}) section of the [Searching with complex patterns]({{ '/doc/search-complex-patterns' | relative_url }}) page.
+The _doesn't match_ option is also useful when used with multiple layers, as described in the [Searching multiple layers]({{ '/doc/search-complex-patterns#searching-multiple-layers' | relative_url }}) section of the [Searching with complex patterns]({{ '/doc/search-complex-patterns' | relative_url }}) documentation page.
 
 ## Excluding stop-words
 
@@ -52,7 +52,7 @@ To exclude stop-words, set the <span class="layer">orthography</span> layer to _
 
 {: .try-it }
 > Let's find all words that contain /æ/, excluding _an_, _and_, _as_, _at_, or _that_.
-> 1. On the _search_ page, select the <span class="layer">phonemes</span> layer to make the phonemes field appear.
+> 1. On the <span class="apls-page">Search</span> page, select the <span class="layer">phonemes</span> layer to make the phonemes field appear.
 > 1. Enter `.*` in the phonemes input field.
 > 1. Click the drop-down menu button ({% include labbcat-icon.html src="expand-down.svg" %}) and select _æ_. <!-- Currently this incorrectly enters `{` -- will be fixed in APLS-Dev! -->
 > 1. Enter `.*` again at the end of the phonemes input field.

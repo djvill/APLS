@@ -3,7 +3,7 @@ title: Layer typology
 permalink: /doc/layer-typology
 parent: Layers and attributes
 nav_order: 10
-last_modified_date: 2025-05-27T13:12:41-04:00
+last_modified_date: 2025-05-27T16:16:18-04:00
 ---
 
 # Layers: {{ page.title }}
@@ -34,7 +34,7 @@ From longest to shortest, these are:
 
 ### What you'll see in APLS
 
-- [Individual transcript pages]({{ '/doc/view-transcript' | relative_url }})
+- [Individual <span class="apls-page">Transcript</span> pages]({{ '/doc/view-transcript' | relative_url }})
   - In the layer selector, layers are organized into columns by scope:
   [IMAGE]
   - You can usually tell what each layer's scope is by just glancing at the transcript. For example: 
@@ -71,26 +71,24 @@ This distinction is captured by layer <span class="keyterm">alignment</span>.
 
 Layers can have one of three possible alignments:
 
-| Alignment | Icon[*](#fn:align){: .footnote } | Meaning | Notes |
+| Alignment | Icon | Meaning | Notes |
 |-----------|--------|---------|-------|
 | Complete interval | {% include labbcat-icon.html src="alignment-0.svg" %} | Annotations always span their entire scope | |
 | Sub-interval | {% include labbcat-icon.html src="alignment-2.svg" %} | Annotations can span part of their scope, or their entire scope<br>Annotations that share their scope with other annotations are called <span class="keyterm">horizontal peers</span> | There may or may not be gaps between annotations within a scope. For example, there are usually long gaps between <span class="layer">comment</span> annotations within a transcript |
 | Timepoint | {% include labbcat-icon.html src="alignment-1.svg" %} | Annotations don't have a start and end time, just a time | There aren't currently any timepoint layers in APLS. If we wanted to store vowel measurements in a layer, then we might do so in a timepoint layer (i.e., at the vowel's midpoint) |
 {: .layer-props }
 
-<a id="fn:align"/>\* Used on [individual transcript pages]({{ '/doc/view-transcript' | relative_url }}) and the [search]({{ '/doc/search' | relative_url }}) page.
-
 
 ### What you'll see in APLS
 
-- [Individual transcript pages]({{ '/doc/view-transcript' | relative_url }})
+- [Individual <span class="apls-page">Transcript</span> pages]({{ '/doc/view-transcript' | relative_url }})
   - In the layer selector, the icons ![]({{ '/assets/img/alignment-0.svg' | relative_url }}){: .labbcat-icon } ![]({{ '/assets/img/alignment-2.svg' | relative_url }}){: .labbcat-icon } ![]({{ '/assets/img/alignment-1.svg' | relative_url }}){: .labbcat-icon } denote alignments
   - When multiple annotations share a word, they crowd into the space above the word (with spaces separating labels). For example:
     {% include screengrab.html src="transcript-layer-alignment.png" %}
     - Most words in this line have one <span class="layer">part_of_speech</span> annotation, but _don't_ and _it's_ each have two (_n't_ is an adverb, and _'s_ is a present-tense 3rd-person-singular verb)
     - Most words in this line are monosyllabic and just have one <span class="layer">syllables</span> annotation, but _Family_ has three <span class="layer">syllables</span> annotations and _Dollar_ has two.
 
-- [Search]({{ '/doc/search' | relative_url }})
+- [<span class="apls-page">Search</span> page]({{ '/doc/search' | relative_url }})
   - In the layer selector, the icons ![]({{ '/assets/img/alignment-0.svg' | relative_url }}){: .labbcat-icon } ![]({{ '/assets/img/alignment-2.svg' | relative_url }}){: .labbcat-icon } ![]({{ '/assets/img/alignment-1.svg' | relative_url }}){: .labbcat-icon } denote alignments
   - [Like with cross-scope search, you can do anchoring] [But you can't do e.g. multiple syllables within a word]
 
@@ -115,20 +113,18 @@ Since the word _the_ can be pronounced /ði/ or /ðə/, _the_ has two annotation
 
 Unlike <span class="keyterm">horizontal peers</span>, which divide the timespan of their scope, we can think of vertical peers as being "stacked" on top of one another within the same timespan.
 
-| Allow vertical peers? | Icon[*](#fn:peers){: .footnote } | Meaning |
+| Allow vertical peers? | Icon | Meaning |
 |-----------------------|--------|---------|
 | True                  | {% include labbcat-icon.html src="vertical-peers.svg" %} | A single timespan _may_ contain multiple annotations |
 | False                 | (none) | A single timespan can contain at most one annotation |
 {: .layer-props .no-keyterm }
 
-<a id="fn:peers"/>\* Used on [individual transcript pages]({{ '/doc/view-transcript' | relative_url }}) and the [search]({{ '/doc/search' | relative_url }}) page.
-
 
 ### What you'll see in APLS
 
-- [Individual transcript pages]({{ '/doc/view-transcript' | relative_url }})
+- [Individual <span class="apls-page">Transcript</span> pages]({{ '/doc/view-transcript' | relative_url }})
   - In the layer selector, the icon {% include labbcat-icon.html src="vertical-peers.svg" %} denotes layers that allow vertical peers
-  - **Only one vertical peer is visible on the transcript page**, whichever is first in alphabetical order
+  - **Only one vertical peer is visible on the <span class="apls-page">Transcript</span> page**, whichever is first in alphabetical order
     - _Example_: The <span class="layer">dictionary_phonemes</span> layer only shows `ðə` for the word _the_, even though _the_ has two <span class="layer">dictionary_phonemes</span> annotations:
       {% include screengrab.html src="vertical-peers-transcript.png" %}
     - To check whether an annotation has vertical peers, [export the line to TextGrid]({{ '/doc/transcript-praat' | relative_url }}) instead
@@ -146,7 +142,7 @@ Unlike <span class="keyterm">horizontal peers</span>, which divide the timespan 
 
 [^why-times]: The <span class="layer">lemma</span> layer represents all possible base forms of the word. Depending on context, the word _times_ could be the plural of the base form _time_, or _times_ could be the base form itself (as in "two times four"), hence the multiple annotations.
 
-- [Search]({{ '/doc/search' | relative_url }}) <a id="vertical-peers-search" />
+- [<span class="apls-page">Search</span> page]({{ '/doc/search' | relative_url }}) <a id="vertical-peers-search" />
   - In the layer selector, the icon {% include labbcat-icon.html src="vertical-peers.svg" %} denotes layers that allow vertical peers
   - Searching a layer that allows vertical peers will **match _any_ of the vertical peers** for a given word
     - _Example_: All tokens of _the_ have two <span class="layer">dictionary_phonemes</span> annotations: `D@` and `Di`. Thus, a search for `the` on <span class="layer">orthography</span> and `D@` on <span class="layer">dictionary_phonemes</span> returns the same set of matches as `the` on <span class="layer">orthography</span> and `Di` on <span class="layer">dictionary_phonemes</span>
@@ -170,7 +166,7 @@ Different layers contain different kinds of annotations.
 For example, <span class="layer">foll_segment</span> annotations are speech sounds, while <span class="layer">foll_pause</span> annotations are numbers.
 This distinction is captured by a layer's <span class="keyterm">data type</span>:
 
-| Data type | Icon[*](#fn:data-type){: .footnote } | Meaning | Notes |
+| Data type | Icon | Meaning | Notes |
 |-----------|--------|---------|-------|
 | Phonological layers | {% include labbcat-icon.html src="data-type-phonological.svg" %} | Annotations are labeled with speech sounds | Some phonological layers' annotations are _individual_ sounds (like <span class="layer">segment</span>); others' are _sequences_ of sounds (like <span class="layer">syllables</span>). |
 | Numeric layers | {% include labbcat-icon.html src="data-type-numeric.svg" %} | Annotations are labeled with a measurement | Some numeric layers' annotations are counts (like <span class="layer">frequency_in_corpus</span>); others' are decimal numbers (like <span class="layer">foll_pause</span>). |
@@ -178,17 +174,15 @@ This distinction is captured by a layer's <span class="keyterm">data type</span>
 | Timing-only layers | {% include labbcat-icon.html src="data-type-timing-only.svg" %} | Annotations don't have a label, only a start/end time | The two timing-only layers represent temporal subdivisions of a transcript: <span class="layer">turn</span> and <span class="layer">utterance</span> |
 {: .layer-props }
 
-<a id="fn:data-type"/>\* Used on [individual transcript pages]({{ '/doc/view-transcript' | relative_url }}) and the [search]({{ '/doc/search' | relative_url }}) page.
-
 
 ### What you'll see in APLS
 
 This distinction is mostly important for [search]({{ '/doc/search' | relative_url }}).
 
-- [Individual transcript pages]({{ '/doc/view-transcript' | relative_url }})
+- [Individual <span class="apls-page">Transcript</span> pages]({{ '/doc/view-transcript' | relative_url }})
   - In the layer selector, alignment is denoted by the icons in the previous table
 
-- [Search]({{ '/doc/search' | relative_url }})
+- [<span class="apls-page">Search</span> page]({{ '/doc/search' | relative_url }})
   - In the layer selector, alignment is denoted by the icons in the previous table
 
 
@@ -280,7 +274,7 @@ if <span class="layer">segment</span> has no annotations in a turn, then <span c
 
 ### What you'll see in APLS
 
-- [Individual transcript pages]({{ '/doc/view-transcript' | relative_url }})
+- [Individual <span class="apls-page">Transcript</span> pages]({{ '/doc/view-transcript' | relative_url }})
   - [Whole turns w/ big chunks of no annotations]
 
 - [Search]({{ '/doc/search' | relative_url }})

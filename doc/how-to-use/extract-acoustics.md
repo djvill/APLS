@@ -4,21 +4,21 @@ contributors: [Dan Villarreal, Jack Rechsteiner]
 permalink: /doc/extract-acoustics
 parent: How to use APLS
 nav_order: 70
-last_modified_date: 2025-05-01T22:48:16-04:00
+last_modified_date: 2025-05-27T16:16:14-04:00
 ---
 
 # {{ page.title }}
 {:.no_toc}
 
 
-The _Process with Praat_ page lets you process audio with Praat directly in your browser using a [`.csv` file of results]({{ '/doc/export-data' | relative_url }}) from a [search]({{ '/doc/search' | relative_url }}).
-The [_Process with Praat_](https://apls.pitt.edu/labbcat/praat) page is accessible from the [_extract_ page]({{ '/doc/extract-with-csv' | relative_url }}).
+The <span class="apls-page">Process with Praat</span> page lets you process audio with Praat directly in your browser using a [`.csv` file of results]({{ '/doc/export-data' | relative_url }}) from a [search]({{ '/doc/search' | relative_url }}).
+The [_Process with Praat_](https://apls.pitt.edu/labbcat/praat) page is accessible from the [<span class="apls-page">Extract</span> page]({{ '/doc/extract-with-csv' | relative_url }}).
 
 {% include page_toc.html collapsible=true %}
 
-## What you can do on the _Process with Praat_ page
+## What you can do on the <span class="apls-page">Process with Praat</span> page
 
-The _Process with Praat_ page has the capability to...
+The <span class="apls-page">Process with Praat</span> page has the capability to...
 - [extract formant measurements](#extracting-formant-measurements)
 - [extract pitch measurements](#extracting-pitch-measurements)
 - [extract intensity measurements](#extracting-intensity-measurements)
@@ -31,7 +31,7 @@ The _Process with Praat_ page has the capability to...
 
 ## Process with Praat
 
-The first step in using the _Process with Praat_ page is to upload a search results `.csv` with the transcript names, participant codes, and start and end times of the audio segments you'd like to analyze.
+The first step in using the <span class="apls-page">Process with Praat</span> page is to upload a search results `.csv` with the transcript names, participant codes, and start and end times of the audio segments you'd like to analyze.
 
 <!--- APLS is currently down so I couldn't get a screengrab --->
 
@@ -77,7 +77,7 @@ You can specify multiple sample points by including a single space between each 
 
 {: .try-it }
 > To extract eleven formant measurements evenly spaced throughout your target time intervals:
-> - This `TRY IT!` assumes that you already have a search results `.csv` with the necessary columns for using the _Process with Praat_ page.
+> - This `TRY IT!` assumes that you already have a search results `.csv` with the necessary columns for using the <span class="apls-page">Process with Praat</span> page.
 > 1. Go to the [_Process with Praat_](https://apls.pitt.edu/labbcat/praat) page.
 > 1. Click _Choose File_ and select your search results `.csv`.
 > 1. Click the ▼ button next to "Formants".
@@ -181,7 +181,7 @@ This analysis is performed using the Praat command `Spectrum: Get centre of grav
 
 ### Running custom Praat scripts
 
-The final setting of the _Process with Praat_ page is "Custom Praat Script".
+The final setting of the <span class="apls-page">Process with Praat</span> page is "Custom Praat Script".
 This setting allows you to write your own Praat script to be performed on each of your target time intervals.
 You can expand this section by clicking the ▼ button next to "Custom Praat Script".
 
@@ -193,7 +193,7 @@ You can expand this section by clicking the ▼ button next to "Custom Praat Scr
 > APLS names the results columns in the `.csv` after the variables you use.
 
 The displayed text information in the "Custom Praat Script" explains that: 
-- APLS will automatically configure your script to open audio files and extract samples according to the settings you've selecting on the _Process with Praat_ page.
+- APLS will automatically configure your script to open audio files and extract samples according to the settings you've selecting on the <span class="apls-page">Process with Praat</span> page.
 - Objects created by your script must be `Remove`d before the end of your script so that Praat doesn't run out of memory.
 - All calls to the function `print` are assumed to correspond to fields for export and each field must be printed on its own line.
 

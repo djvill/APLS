@@ -5,38 +5,38 @@ permalink: /doc/extract-with-csv
 parent: Exporting data
 grand_parent: How to use APLS
 nav_order: 10
-last_modified_date: 2025-05-27T12:32:00-04:00
+last_modified_date: 2025-05-27T16:16:14-04:00
 ---
 
 # {{ page.title }}
 {:.no_toc}
 
-The [_extract_ page](https://apls.pitt.edu/labbcat/extract) lets you download a variety of data from APLS by uploading a [`.csv` file of results]({{ '/doc/export-data' | relative_url }}) from a [search]({{ '/doc/search' | relative_url }}).
+The [<span class="apls-page">Extract</span> page](https://apls.pitt.edu/labbcat/extract) lets you download a variety of data from APLS by uploading a [`.csv` file of results]({{ '/doc/export-data' | relative_url }}) from a [search]({{ '/doc/search' | relative_url }}).
 
 {:.under-the-hood}
-> You can technically use the _extract_ page with any `.csv` file containing either transcript file names and time intervals or MatchIDs/URLs.
+> You can technically use the <span class="apls-page">Extract</span> page with any `.csv` file containing either transcript file names and time intervals or MatchIDs/URLs.
 > However, the easiest way to get this data for tokens of interest is to [export a `.csv`]({{ '/doc/export-data' | relative_url }}) after [conducting a search]({{ '/doc/search' | relative_url }}).
 
 {% include page_toc.html collapsible=true %}
 
-## What you can do on the _extract_ page
+## What you can do on the <span class="apls-page">Extract</span> page
 
-The _extract_ page allows you to use the time intervals of your search results to...
+The <span class="apls-page">Extract</span> page allows you to use the time intervals of your search results to...
 - Extract [audio files](#extract-audio-for-time-intervals)
 - Extract [Praat TextGrids (or other transcript formats)](#extract-transcripts-for-time-intervals)
 - Extract [transcript attributes, participant attributes, and layer annotations](#extract-annotations-for-time-intervals)
 - Use a browser-based [Praat interface to conduct acoustic analyses]({{ '/doc/extract-acoustics' | relative_url }})
 
-The _extract_ page also allows you to extract transcript attributes, participant attributes, and layer annotations [using the MatchIDs or URLs](#extract-annotations-for-search-matches) of your search results.
+The <span class="apls-page">Extract</span> page also allows you to extract transcript attributes, participant attributes, and layer annotations [using the MatchIDs or URLs](#extract-annotations-for-search-matches) of your search results.
 
 
 ### Layout
 
-The initial _extract_ page is one of the more straightforward pages in ALPS.
+The initial <span class="apls-page">Extract</span> page is one of the more straightforward pages in ALPS.
 
 {% include screengrab.html src="extract-with-csv/extract-layout.png" %}
 
-From the initial _extract_ page, you can selected if you would like to:
+From the initial <span class="apls-page">Extract</span> page, you can selected if you would like to:
 - [Extract audio for time intervals](#extract-audio-for-time-intervals)
 - [Extract transcripts for time intervals](#extract-transcripts-for-time-intervals)
 - [Extract annotations for search matches](#extract-annotations-for-search-matches)
@@ -143,7 +143,7 @@ For example, setting this to 1 will cause the `.csv` to add one column containin
 If there are empty columns in the `.csv`, that means that the selected layer did not contain enough annotations to fill all the columns.
 
 {:.note}
-> The "Annotations per layer" setting is similar to selecting the number of annotations to include in the [_CSV Export_ on the Search Results page]({{ '/doc/export-data#csv-export' | relative_url }}).
+> The "Annotations per layer" setting is similar to selecting the number of annotations to include in the [_CSV Export_ on the <span class="apls-page">Search results</span> page]({{ '/doc/export-data#csv-export' | relative_url }}).
 > However, the "Annotations per layer" setting will apply to **all** of the layers you have selected.
 
 The "Offsets" setting lets you select whether or not the exported `.csv` will contain start and end times for the annotation labels.

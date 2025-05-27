@@ -5,7 +5,7 @@ permalink: /doc/praat-integration
 parent: Viewing a transcript
 grand_parent: How to use APLS
 nav_order: 10
-last_modified_date: 2025-05-27T12:32:01-04:00
+last_modified_date: 2025-05-27T16:16:15-04:00
 ---
 
 # {{ page.title }}
@@ -13,7 +13,7 @@ last_modified_date: 2025-05-27T12:32:01-04:00
 
 A useful feature of APLS is its in-browser integration with the speech analysis software [Praat]. 
 By setting up Praat integration for APLS, you can open audio clips and their accompanying TextGrids in Praat directly from APLS webpages.
-Praat integration is supported when viewing [transcript pages]({{ '/doc/view-transcript' | relative_url }}).
+Praat integration is supported when viewing [<span class="apls-page">Transcript</span> pages]({{ '/doc/view-transcript' | relative_url }}).
 
 {: .note .no-collapse}
 > Praat Integration is supported for Google Chrome, Mozilla Firefox, & [Chromium-based browsers](https://en.wikipedia.org/wiki/Chromium_(web_browser)#Browsers_based_on_Chromium). Praat Integration **does not work with Safari**, due to Safari no longer supporting Java. 
@@ -39,7 +39,7 @@ Praat integration for Google Chrome and Chromium-based browsers requires two com
 
 The steps to install these are:
 
-1. Navigate to the Praat Integration extension page on the [Chrome Web Store directly](https://chromewebstore.google.com/detail/Praat%20Integration/hmmnebkieionilgpepijmfabdickmnig) or by clicking the Praat icon in the upper-right corner of the APLS media player.
+1. Navigate to the Praat Integration extension page on the Chrome Web Store, either through [this link]](https://chromewebstore.google.com/detail/Praat%20Integration/hmmnebkieionilgpepijmfabdickmnig) or by clicking the Praat icon in the upper-right corner of the APLS media player.
 1. On the Praat Integration extension page, click the button that says "Add to Chrome" (or "Add to [BROWSER NAME]").
    {% include screengrab.html src="praat-integration/praat-integration-add-to-chrome.png" %}
 1. A message will appear asking if you want to add the Praat Integration extension. Click the "Add extension" button.
@@ -48,7 +48,7 @@ The steps to install these are:
 1. Click on the `install-jsendpraat.jar` file to open it. (macOS users may receive a message saying the file can't be opened. Steps for resolving this are included in the [Note for macOS users](#note-for-macos-users) section.)
 1. Click the "Install" button that appears in the application window.
 1. Once `jsendpraat` is successfully installed, you can delete the `install-jsendpraat.jar` file.
-1. Refresh your APLS webpage and enjoy the Praat Integration functionality on [transcript pages]({{ '/doc/view-transcript' | relative_url }})!
+1. Refresh your APLS webpage and enjoy the Praat Integration functionality on [<span class="apls-page">Transcript</span> pages]({{ '/doc/view-transcript' | relative_url }})!
 
 ### Configuration steps for Mozilla Firefox
 
@@ -69,7 +69,7 @@ The steps to install these are:
 1. Click on the `install-jsendpraat.jar` file to open it. (macOS users may receive a message saying the file can't be opened. Steps for resolving this are included in the [Note for macOS users](#note-for-macos-users) section.)
 1. Click the "Install" button that appears in the application window.
 1. Once `jsendpraat` is successfully installed, you can delete the `install-jsendpraat.jar` file.
-1. Refresh your APLS webpage and enjoy the Praat Integration functionality on [transcript pages]({{ '/doc/view-transcript' | relative_url }})!
+1. Refresh your APLS webpage and enjoy the Praat Integration functionality on [<span class="apls-page">Transcript</span> pages]({{ '/doc/view-transcript' | relative_url }})!
 
 ### Note for macOS users 
 
@@ -86,7 +86,7 @@ If this occurs, follow these steps:
 
 To verify that the Praat Integration functionality is correctly installed: 
 
-1. Open the [transcript page for `CB01interview1.eaf`](https://apls.pitt.edu/labbcat/transcript?transcript=CB01interview1.eaf) 
+1. Open the [<span class="apls-page">Transcript</span> page for `CB01interview1.eaf`](https://apls.pitt.edu/labbcat/transcript?transcript=CB01interview1.eaf) 
 1. Click on the first word in the transcript body (*manipulate*). 
 1. The [Word Menu]({{ '/doc/view-transcript#turns-utterances-noises-and-overlaps' | relative_url }}) should display options to open files in Praat. 
    {% include screengrab.html src="transcript-word-menu.png" %}

@@ -5,7 +5,7 @@ permalink: /doc/search-complex-patterns
 parent: Searching the corpus
 grand_parent: How to use APLS
 nav_order: 80
-last_modified_date: 2025-05-27T13:05:22-04:00
+last_modified_date: 2025-05-27T16:16:15-04:00
 ---
 
 # {{ page.title }}
@@ -32,7 +32,7 @@ Clicking {% include labbcat-icon.html src="remove.svg" %} makes your search narr
 
 {: .try-it }
 > To search for every instance of the word "not" immediately followed by the word "even":
-> 1. Go to the [_search_ page](https://apls.pitt.edu/labbcat/search).
+> 1. Go to the [<span class="apls-page">Search</span> page](https://apls.pitt.edu/labbcat/search).
 > 1. Click {% include labbcat-icon.html src="add.svg" %} to make your search pattern one word wider.
 > 1. Enter `not` in the first orthography layer text field and enter `even` in the second orthography layer text field.
 > 1. Click the _Search_ button.
@@ -42,7 +42,7 @@ This will not affect the number of matches that are found, but it will affect wh
 
 ## Searching multiple layers
 
-Up to this point in the documentation, most of the _search_ page capabilities have been demonstrated with single layer searches.
+Up to this point in the documentation, most of the <span class="apls-page">Search</span> page capabilities have been demonstrated with single layer searches.
 Many researchers, however, will be interested in finding patterns that match multiple types of criteria.
 Constructing a search using multiple layers makes this possible.
 
@@ -50,7 +50,7 @@ For example, the `TRY IT!` below uses the <span class="layer">orthography</span>
 
 {: .try-it }
 > To find matches for all instances of "run" used as a noun:
-> 1. Go to the [_search_ page](https://apls.pitt.edu/labbcat/search).
+> 1. Go to the [<span class="apls-page">Search</span> page](https://apls.pitt.edu/labbcat/search).
 > 1. Select the `syntax` project in the layer picker and click the checkbox for the <span class="layer">part_of_speech</span> layer to make the part_of_speech input field appear.
 > 1. Enter `can` into the orthography input field. 
 > 1. Click the part_of_speech drop-down menu button ({% include labbcat-icon.html src="expand-down.svg" %}) and select _NN_ from the _NOUN:_ section.
@@ -61,7 +61,7 @@ An example is given in the `TRY IT!` below using the <span class="layer">segment
 
 {: .try-it }
 > To find all matches for the segment /u/ that don't have primary stress:
-> 1. Go to the [_search_ page](https://apls.pitt.edu/labbcat/search).
+> 1. Go to the [<span class="apls-page">Search</span> page](https://apls.pitt.edu/labbcat/search).
 > 1. Click the checkbox for the <span class="layer">segment</span> layer to make the segment input field appear.
 > 1. Enter `u` into the segment input field.
 > 1. Select the `phonology` project in the layer picker and click the checkbox for the <span class="layer">stress</span> layer to make the stress input field appear.
@@ -76,7 +76,7 @@ If you want the results to contain matches for every instance of a segment(s), y
 
 {: .try-it }
 > To generate search results with matches for both /i/ vowels in the word "really", so that every instance of "really" appears twice:
-> 1. Go to the [_search_ page](https://apls.pitt.edu/labbcat/search).
+> 1. Go to the [<span class="apls-page">Search</span> page](https://apls.pitt.edu/labbcat/search).
 > 1. Click the checkbox for the <span class="layer">segment</span> layer to make the segment input field appear.
 > 1. Enter `really` into the orthography input field and `i` into the segment input field.
 > 1. Click the target {% include labbcat-icon.html src="target.svg" %} for the segment input field.
@@ -86,12 +86,12 @@ If you want the results to contain matches for every instance of a segment(s), y
 
 ## Searching multiple words and multiple layers
 
-Because the _search_ page uses a matrix of expressions to find search results, searches can be simple (one word wide and one layer deep) or complex (multiple words wide and multiple layers deep).
+Because the <span class="apls-page">Search</span> page uses a matrix of expressions to find search results, searches can be simple (one word wide and one layer deep) or complex (multiple words wide and multiple layers deep).
 This allows the search function to find very specific matches based on multiple different criteria.
 
 {: .try-it }
 > To find matches for every consonant-initial verb that is preceded by the word "the":
-> 1. Go to the [_search_ page](https://apls.pitt.edu/labbcat/search).
+> 1. Go to the [<span class="apls-page">Search</span> page](https://apls.pitt.edu/labbcat/search).
 > 1. Select the `syntax` project in the layer picker to make the <span class="layer">part_of_speech</span> layer appear in the selection menu.
 > 1. Select the <span class="layer">part_of_speech</span> layer in the selection menu to make the part_of_speech pattern input field appear.
 > 1. Enter `the` in the orthography layer text field.

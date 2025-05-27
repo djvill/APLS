@@ -5,7 +5,7 @@ permalink: /doc/search-segments
 parent: Searching the corpus
 grand_parent: How to use APLS
 nav_order: 60
-last_modified_date: 2025-05-27T13:05:22-04:00
+last_modified_date: 2025-05-27T16:16:16-04:00
 ---
 
 # {{ page.title }}
@@ -15,7 +15,7 @@ Layers in APLS have different [scopes]({{ '/doc/layer-typology#scope' | relative
 You may notice that these are the column names at the top of the layer picker!
 
 The searches discussed on previous documentation pages have been in the first three scopes (<span class="keyterm">span</span>, <span class="keyterm">phrase</span>, and <span class="keyterm">word</span>).
-This is because the _search_ page looks for matches word-by-word, 
+This is because the <span class="apls-page">Search</span> page looks for matches word-by-word, 
 so <span class="keyterm">span</span> and <span class="keyterm">phrase</span> layer searches give results at the <span class="keyterm">word</span> level even though <span class="keyterm">span</span> and <span class="keyterm">phrase</span> scopes are larger than <span class="keyterm">word</span> scope.
 
 {: .note}
@@ -39,7 +39,7 @@ With the <span class="layer">segment</span> layer, you would only to search `j` 
 
 {: .try-it }
 > To find matches for every instance of /ɔɪ/:
-> 1. Go to the [_search_ page](https://apls.pitt.edu/labbcat/search).
+> 1. Go to the [<span class="apls-page">Search</span> page](https://apls.pitt.edu/labbcat/search).
 > 1. Select the <span class="layer">segment</span> layer in the selection menu to make the segment pattern input field appear.
 > 1. Click the drop-down menu button ({% include labbcat-icon.html src="expand-down.svg" %}) and select `ɔɪ` from the `DIPHTHONGS` section.
 > 1. Click the _Search_ button.
@@ -56,7 +56,7 @@ This allows you to construct patterns that search for a sequence of segments wit
 
 {: .try-it }
 > To find matches for every instance of /l/ followed by /t/:
-> 1. Go to the [_search_ page](https://apls.pitt.edu/labbcat/search).
+> 1. Go to the [<span class="apls-page">Search</span> page](https://apls.pitt.edu/labbcat/search).
 > 1. Select the <span class="layer">segment</span> layer in the selection menu to make the segment pattern input field appear.
 > 1. Click {% include labbcat-icon.html src="add.svg" %} inside of the segment box to make another segment input field appear.
 > 1. Enter `l` in the first segment field and `t` in the second segment field.

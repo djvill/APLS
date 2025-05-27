@@ -3,7 +3,7 @@ title: Navigating documentation
 permalink: /doc/doc-navigation
 parent: APLS 101/Getting started
 nav_order: 40
-last_modified_date: 2025-05-27T12:31:57-04:00
+last_modified_date: 2025-05-27T16:16:13-04:00
 ---
 
 # {{ page.title }}
@@ -18,21 +18,16 @@ Here are some tips for navigating this documentation site.
 
 This site uses special formatting to denote specific types of information:
 
-- **Key terms**
-  - Example: <span class="keyterm">annotation</span>
-  <!-- - Linked to corresponding entries in the [glossary]({{ '/doc/glossary' | relative_url }}) -->
-- **Layers** and **attributes**
-  - Example: <span class="layer">orthography</span>
-  - If you hover over a layer/attribute name, a tooltip will pop up with a short description of the layer/attribute
-  - Clicking on the name will load its entry in the [layer/attribute field guides]({{ '/doc/detailed-field-guides' | relative_url }})
-- **Internal links** (i.e., a link to a documentation page or APLS page)
-  - Example: [How to use APLS]({{ '/doc/how-to-use' | relative_url }})
-- **External links** (i.e., a link that's not to a documentation page or an APLS page)
-  - Example: [LaBB-CAT]
-- **Input/output text** (i.e., something you actually type into APLS or information that APLS displays)
-  - Example: `CB01`
-- **Things you click on in APLS** (e.g., a menu option or a link)
-  - Example: The _transcripts_ page
+| Information | Example | Notes |
+|-------------|---------|-------|
+| Key terms   | <span class="keyterm">annotation</span> | <!-- Linked to corresponding entries in the [glossary]({{ '/doc/glossary' | relative_url }}) --> |
+| Layers and attributes | <span class="layer">orthography</span> | If you hover over a layer/attribute name, a tooltip will pop up with a short description of the layer/attribute.<br>Clicking on the name will load its entry in the [layer/attribute field guides]({{ '/doc/detailed-field-guides' | relative_url }}) |
+| Links to this site or APLS | [How to use APLS]({{ '/doc/how-to-use' | relative_url }}) | |
+| Other links | [LaBB-CAT] | |
+| APLS page names | The <span class="apls-page">Search</span> page | |
+| Text that APLS displays | `Match count: 50` | |
+| Text you type into APLS | `CB01` | |
+| Things you click on in APLS | Click on _Browse transcripts_ | Includes menu options, buttons/links, and checkboxes |
   
 
 ## Navigation across and within pages

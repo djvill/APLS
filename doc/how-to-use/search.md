@@ -6,7 +6,7 @@ parent: How to use APLS
 has_children: yes
 has_toc: no
 nav_order: 50
-last_modified_date: 2025-05-27T12:32:02-04:00
+last_modified_date: 2025-05-27T16:16:16-04:00
 ---
 
 # {{ page.title }}
@@ -18,21 +18,21 @@ also the deictic descriptions of certain features will have to be updated once t
 -->
 
 APLS provides powerful search capabilities for finding linguistic patterns[^patterns] in the interview data.
-It all starts from the _search_ page: <https://apls.pitt.edu/labbcat/search>.
+It all starts from the <span class="apls-page">Search</span> page: <https://apls.pitt.edu/labbcat/search>.
 Once you create a search, you can [export the results]({{ '/doc/export-data' | relative_url }}) in a variety of formats.
 
 [^patterns]: The term _patterns_ is used throughout this page because the search function is capable of matching exact words, affixes, individual sound segments, stress, part of speech, and much more!
 
-Because the _search_ page has many options that will be of interest to a variety of different researchers, this documentation page is more focused on giving users an understanding of the _search_ page capabilities through `TRY IT!` tutorials.
-If you would like to understand the data structure that the _search_ page relies on, read the [Layers and attributes]({{ '/doc/layers-and-attributes' | relative_url }}) and [Layer typology]({{ '/doc/layer-typology' | relative_url }}) documentation pages.
+Because the <span class="apls-page">Search</span> page has many options that will be of interest to a variety of different researchers, this documentation page is more focused on giving users an understanding of the <span class="apls-page">Search</span> page capabilities through `TRY IT!` tutorials.
+If you would like to understand the data structure that the <span class="apls-page">Search</span> page relies on, read the [Layers and attributes]({{ '/doc/layers-and-attributes' | relative_url }}) and [Layer typology]({{ '/doc/layer-typology' | relative_url }}) documentation pages.
 
-If you are looking for information on the search results page, go to the [Exporting data]({{ '/doc/export-data' | relative_url }}) documentation.
+If you are looking for information on the <span class="apls-page">Search results</span> page, go to the [Exporting data]({{ '/doc/export-data' | relative_url }}) documentation page.
 
 {% include page_toc.html collapsible=true %}
 
-## What you can do on the _search_ page
+## What you can do on the <span class="apls-page">Search</span> page
 
-The _search_ page allows you to...
+The <span class="apls-page">Search</span> page allows you to...
 - [Search APLS data for specific patterns]({{ '/doc/your-first-search' | relative_url }}).
   - These patterns can target: 
     - [single words]({{ '/doc/search-other-layers#searching-text-layers' | relative_url }})
@@ -60,14 +60,14 @@ these could also go on the "Searching complex patterns" page but that already ha
 this is one section in particular that will need to be updated with the new search page UI
 -->
 
-There are five main sections of the _search_ page:
+There are five main sections of the <span class="apls-page">Search</span> page:
 1. [Participants and transcripts filters]({{ '/doc/search-filters-and-options' | relative_url }})
 1. [Search options]({{ '/doc/search-filters-and-options#search-options' | relative_url }})
 1. [Layer picker]({{ '/doc/search-other-layers' | relative_url }})
 1. [Pattern input fields]({{ '/doc/your-first-search' | relative_url }})
 1. [Search progress bar]({{ '/doc/your-first-search#search-results' | relative_url }})
 
-Only the first four sections are displayed when you first load the _search_ page, as shown in the screengrab below.
+Only the first four sections are displayed when you first load the <span class="apls-page">Search</span> page, as shown in the screengrab below.
 
 {% include screengrab.html src="search/search-page-layout1.png" %}
 
