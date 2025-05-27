@@ -4,7 +4,7 @@ contributors: [Dan Villarreal, Jack Rechsteiner]
 permalink: /doc/export-data
 parent: How to use APLS
 nav_order: 60
-last_modified_date: 2025-05-27T12:32:00-04:00
+last_modified_date: 2025-05-27T13:05:21-04:00
 ---
 
 # {{ page.title }}
@@ -93,10 +93,10 @@ The _Fields:_ column is unique to the _search_ page _CSV Export_, and it allows 
 The [participant attributes]({{ '/doc/attribute-typology' | relative_url }}), [transcript attributes]({{ '/doc/transcript-attributes' | relative_url }}), and [layers]({{ '/doc/layer-field-guide' | relative_url }}) are described on their respective field guide pages.
 You can also hover over the names of each checkbox to make a brief tooltip description appear.
 
-Layers that have [sub-interval alignments]({{ '/doc/layer-typology#alignment-and-horizontal-peers' | relative_url }}) (shown with the ![]({{ '/assets/img/alignment-2.svg' | relative_url }}){: style="height:1rem;"} icon) or [vertical peers]({{ '/doc/layer-typology#vertical-peers' | relative_url }}) (shown with the ![]({{ '/assets/img/vertical-peers.svg' | relative_url }}){: style="height:1rem;"} icon) will also display numeric boxes when you select them.
+Layers that have [sub-interval alignments]({{ '/doc/layer-typology#alignment-and-horizontal-peers' | relative_url }}) (shown with the {% include labbcat-icon.html src="alignment-2.svg" %} icon) or [vertical peers]({{ '/doc/layer-typology#vertical-peers' | relative_url }}) (shown with the {% include labbcat-icon.html src="vertical-peers.svg" %} icon) will also display numeric boxes when you select them.
 This box allows you to choose the number of related annotations to include.
 
-For layers with [vertical peers]({{ '/doc/layer-typology#vertical-peers' | relative_url }}) ![]({{ '/assets/img/vertical-peers.svg' | relative_url }}){: style="height:1rem;"}, the additional annotations will be annotations that occupy an identical timespan *if there are any*.
+For layers with [vertical peers]({{ '/doc/layer-typology#vertical-peers' | relative_url }}) {% include labbcat-icon.html src="vertical-peers.svg" %}, the additional annotations will be annotations that occupy an identical timespan *if there are any*.
 If there are less vertical peers in the layer for the match than the number specified in the numeric box, then the `.csv` will still contain the number of columns you specified but the columns will be empty.
 
 {: .try-it }
@@ -110,7 +110,7 @@ If there are less vertical peers in the layer for the match than the number spec
 >   This is because the <span class="layer">dictionary_phonemes</span> layer only has two vertical peer annotations for the word "polish".
 
 
-For layers with [sub-interval alignment]({{ '/doc/layer-typology#alignment-and-horizontal-peers' | relative_url }}) ![]({{ '/assets/img/alignment-2.svg' | relative_url }}){: style="height:1rem;"}, the additional annotations will be the other sub-interval annotations for that word *if there are any*.
+For layers with [sub-interval alignment]({{ '/doc/layer-typology#alignment-and-horizontal-peers' | relative_url }}) {% include labbcat-icon.html src="alignment-2.svg" %}, the additional annotations will be the other sub-interval annotations for that word *if there are any*.
 If there are less sub-interval annotations in the layer for the match than the number specified in the numeric box, then the `.csv` will still contain the number of columns you specified but the columns will be empty.
 
 {: .try-it }
@@ -124,7 +124,7 @@ If there are less sub-interval annotations in the layer for the match than the n
 >   This is because the <span class="layer">part_of_speech</span> layer only has two sub-interval annotations for the word "wouldn't".
 
 
-Sub-interval alignment ![]({{ '/assets/img/alignment-2.svg' | relative_url }}){: style="height:1rem;"} layers will also display lock ![]({{ '/assets/img/lock-unlocked.svg' | relative_url }}){: style="height:1rem;"} icons on the sides of the annotation count selector.
+Sub-interval alignment {% include labbcat-icon.html src="alignment-2.svg" %} layers will also display lock {% include labbcat-icon.html src="lock-unlocked.svg" %} icons on the sides of the annotation count selector.
 These lock icons let you anchor the data exported for that layer to the start or end of the match target.
 
 {:.note .no-collapse}

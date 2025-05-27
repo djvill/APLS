@@ -4,7 +4,7 @@ contributors: [Dan Villarreal, Jack Rechsteiner]
 permalink: /doc/browse-transcripts
 parent: How to use APLS
 nav_order: 30
-last_modified_date: 2025-05-27T12:31:59-04:00
+last_modified_date: 2025-05-27T13:05:21-04:00
 ---
 
 # {{ page.title }}
@@ -84,7 +84,7 @@ The four filter fields correspond to the columns in the transcript list directly
 
 ### Clearing filters
 
-The "delete" button (![]({{ '/assets/img/delete.svg' | relative_url }}){: style="height:1rem;"}) allows you to clear all currently specified filters.
+The "delete" button ({% include labbcat-icon.html src="delete.svg" %}) allows you to clear all currently specified filters.
 
 ## Exporting and searching transcripts
 

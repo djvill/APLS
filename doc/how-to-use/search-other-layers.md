@@ -5,7 +5,7 @@ permalink: /doc/search-other-layers
 parent: Searching the corpus
 grand_parent: How to use APLS
 nav_order: 40
-last_modified_date: 2025-05-27T12:32:02-04:00
+last_modified_date: 2025-05-27T13:05:22-04:00
 ---
 
 # {{ page.title }}
@@ -78,7 +78,7 @@ The primary notation systems by data type are:
   
 You can read more about notation systems on the [Layer typology]({{ '/doc/layer-typology#notation-system' | relative_url }}) and [Layer notation systems]({{ '/doc/layer-notation-systems' | relative_url }}) documentation pages.
 
-Pattern input fields for layers that don't use English spelling or numbers include drop-down selection menus (shown with a ![]({{ '/assets/img/expand-down.svg' | relative_url }}){: style="height:1rem;"} icon) that contain valid input for that layer. 
+Pattern input fields for layers that don't use English spelling or numbers include drop-down selection menus (shown with a {% include labbcat-icon.html src="expand-down.svg" %} icon) that contain valid input for that layer. 
 
 {% include screengrab.html src="search/search-dropdown-menu.png" %}
 
@@ -120,7 +120,7 @@ The only syntax layer in APLS is the <span class="layer">part_of_speech</span> l
 > To find matches for every superlative adjective in APLS:
 > 1. Go to the [_search_ page](https://apls.pitt.edu/labbcat/search).
 > 1. Select the `syntax` project in the layer picker and click the checkbox for the <span class="layer">part_of_speech</span> layer to make the part_of_speech input field appear.
-> 1. Click the drop-down menu button (![]({{ '/assets/img/expand-down.svg' | relative_url }}){: style="height:1rem;"}) and select `JJS`.
+> 1. Click the drop-down menu button ({% include labbcat-icon.html src="expand-down.svg" %}) and select `JJS`.
 > 1. Click the _Search_ button.
 
 #### using boolean values (for overlap)
@@ -144,9 +144,9 @@ The phonology layers (and what is included in their drop-down menus) in APLS are
 > To find all matches for syllables with /ʊ/ that have secondary stress:
 > 1. Go to the [_search_ page](https://apls.pitt.edu/labbcat/search).
 > 1. Select the `phonology` layer in the layer picker and click the checkbox for the <span class="layer">syllables</span> layer to make the syllables input field appear.
-> 1. Click the drop-down menu button (![]({{ '/assets/img/expand-down.svg' | relative_url }}){: style="height:1rem;"}) and select `secondary` under the `STRESS` heading.
+> 1. Click the drop-down menu button ({% include labbcat-icon.html src="expand-down.svg" %}) and select `secondary` under the `STRESS` heading.
 > 1. Enter `.*` after `"` in the syllables input field.
-> 1. Click the drop-down menu button (![]({{ '/assets/img/expand-down.svg' | relative_url }}){: style="height:1rem;"}) and select `ʊ` under the `VOWEL` heading.
+> 1. Click the drop-down menu button ({% include labbcat-icon.html src="expand-down.svg" %}) and select `ʊ` under the `VOWEL` heading.
 > 1. Enter `.*` after `".*U` in the sylablles input field.
 > 1. Click the _Search_ button.
 

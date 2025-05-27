@@ -5,7 +5,7 @@ permalink: /doc/inverted-matches
 parent: Searching the corpus
 grand_parent: How to use APLS
 nav_order: 50
-last_modified_date: 2025-05-01T22:48:17-04:00
+last_modified_date: 2025-05-27T13:05:21-04:00
 ---
 
 # {{ page.title }}
@@ -37,7 +37,7 @@ For example, you could find all words with _no_ consonants in APLS by using a _d
 > 1. Go to the [_search_ page](https://apls.pitt.edu/labbcat/search).
 > 1. Select the `phonology` project in the layer picker and click the checkbox for the <span class="layer">phonemes</span> layer to make the phonemes input field appear.
 > 1. Enter `.*` in the phonemes input field.
-> 1. Click the drop-down menu button (![]({{ '/assets/img/expand-down.svg' | relative_url }}){: style="height:1rem;"}) and select _CONSONANT:_.
+> 1. Click the drop-down menu button ({% include labbcat-icon.html src="expand-down.svg" %}) and select _CONSONANT:_.
 > 1. Enter `.*` again at the end of the phonemes input field.
 > 1. Click the _matches_ drop-down menu for the phonemes input field and select _doesn't match_.
 > 1. Click the _Search_ button.
@@ -54,14 +54,14 @@ To exclude stop-words, set the <span class="layer">orthography</span> layer to _
 > Let's find all words that contain /æ/, excluding _an_, _and_, _as_, _at_, or _that_.
 > 1. On the _search_ page, select the <span class="layer">phonemes</span> layer to make the phonemes field appear.
 > 1. Enter `.*` in the phonemes input field.
-> 1. Click the drop-down menu button (![]({{ '/assets/img/expand-down.svg' | relative_url }}){: style="height:1rem;"}) and select _æ_. <!-- Currently this incorrectly enters `{` -- will be fixed in APLS-Dev! -->
+> 1. Click the drop-down menu button ({% include labbcat-icon.html src="expand-down.svg" %}) and select _æ_. <!-- Currently this incorrectly enters `{` -- will be fixed in APLS-Dev! -->
 > 1. Enter `.*` again at the end of the phonemes input field.
 > 1. Select _doesn't match_ for the orthography input field.
 > 1. Enter `an|and|as|at|that` in the orthography input field.
 > 1. Click the _Search_ button.
 
 There is no definitive list of stop-words---different analyses may require wider or narrower definitions of how to decide whether a word should be excluded.
-To guide your decisions, it can be useful to create a wider search initially, then use the ![]({{ '/assets/img/book.svg' | relative_url }}){: style="height:1rem;"} _Dictionary_ export option to [find the unique words]({{ '/doc/regex#checking-your-search-matches' | relative_url }}) that your search returns.
+To guide your decisions, it can be useful to create a wider search initially, then use the {% include labbcat-icon.html src="book.svg" %} _Dictionary_ export option to [find the unique words]({{ '/doc/regex#checking-your-search-matches' | relative_url }}) that your search returns.
 
 {% comment %}
 TODO figure out how to deal w/ empty annotations.

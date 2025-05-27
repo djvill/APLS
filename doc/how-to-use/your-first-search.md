@@ -5,7 +5,7 @@ permalink: /doc/your-first-search
 parent: Searching the corpus
 grand_parent: How to use APLS
 nav_order: 10
-last_modified_date: 2025-05-27T12:32:04-04:00
+last_modified_date: 2025-05-27T13:05:23-04:00
 ---
 
 # {{ page.title }}
@@ -39,8 +39,8 @@ The text box for entering the pattern you'd like to search for is on the right-s
 > 1. Enter `steelers` into the orthography input field.
 > 1. Click the _Search_ button.
 
-Certain layers have a target icon (![]({{ '/assets/img/target.svg' | relative_url }}){: style="height:1rem;"}) that determines what the "token of interest" is for your search.
-The target (![]({{ '/assets/img/target.svg' | relative_url }}){: style="height:1rem;"}) option is mostly useful for [searching multiple words]({{ '/doc/search-complex-patterns#searching-multiple-words' | relative_url }}), [searching within words]({{ '/doc/search-segments' | relative_url }}), [searching multiple layers]({{ '/doc/search-complex-patterns#searching-multiple-layers' | relative_url }}), and [searching multiple words and multiple layers]({{ '/doc/search-complex-patterns#searching-multiple-words-and-multiple-layers' | relative_url }}).
+Certain layers have a target icon ({% include labbcat-icon.html src="target.svg" %}) that determines what the "token of interest" is for your search.
+The target ({% include labbcat-icon.html src="target.svg" %}) option is mostly useful for [searching multiple words]({{ '/doc/search-complex-patterns#searching-multiple-words' | relative_url }}), [searching within words]({{ '/doc/search-segments' | relative_url }}), [searching multiple layers]({{ '/doc/search-complex-patterns#searching-multiple-layers' | relative_url }}), and [searching multiple words and multiple layers]({{ '/doc/search-complex-patterns#searching-multiple-words-and-multiple-layers' | relative_url }}).
 
 The _matches_ drop-down menu is located below the layer name of the input field.
 The _matches_ and _doesn't match_ options are most powerful when used with more complex searches, as explained in [Searching for inverted matches]({{ '/doc/inverted-matches' | relative_url }}).

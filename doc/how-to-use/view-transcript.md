@@ -6,7 +6,7 @@ parent: How to use APLS
 has_children: yes
 has_toc: no
 nav_order: 20
-last_modified_date: 2025-05-27T12:32:03-04:00
+last_modified_date: 2025-05-27T13:05:22-04:00
 ---
 
 # {{ page.title }}
@@ -154,7 +154,7 @@ Unlike in the transcript body, phonological layers (like <span class="layer">seg
 >
 > {% include screengrab.html src="view-transcript/view-transcript-export-praat-3.png" %}
 
-Finally, if a layer allows [vertical peers]({{ '/doc/layer-typology#vertical-peers' | relative_url }}) (with a ![]({{ '/assets/img/vertical-peers.svg' | relative_url }}){: style="height:1rem;"} icon in the [layer selector](#layer-selector)), the exported file may show multiple tiers per speaker:
+Finally, if a layer allows [vertical peers]({{ '/doc/layer-typology#vertical-peers' | relative_url }}) (with a {% include labbcat-icon.html src="vertical-peers.svg" %} icon in the [layer selector](#layer-selector)), the exported file may show multiple tiers per speaker:
 
 {: .try-it }
 > On the `CB01interview3.eaf` transcript page:

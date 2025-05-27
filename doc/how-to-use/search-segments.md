@@ -5,7 +5,7 @@ permalink: /doc/search-segments
 parent: Searching the corpus
 grand_parent: How to use APLS
 nav_order: 60
-last_modified_date: 2025-05-01T22:48:19-04:00
+last_modified_date: 2025-05-27T13:05:22-04:00
 ---
 
 # {{ page.title }}
@@ -41,13 +41,13 @@ With the <span class="layer">segment</span> layer, you would only to search `j` 
 > To find matches for every instance of /ɔɪ/:
 > 1. Go to the [_search_ page](https://apls.pitt.edu/labbcat/search).
 > 1. Select the <span class="layer">segment</span> layer in the selection menu to make the segment pattern input field appear.
-> 1. Click the drop-down menu button (![]({{ '/assets/img/expand-down.svg' | relative_url }}){: style="height:1rem;"}) and select `ɔɪ` from the `DIPHTHONGS` section.
+> 1. Click the drop-down menu button ({% include labbcat-icon.html src="expand-down.svg" %}) and select `ɔɪ` from the `DIPHTHONGS` section.
 > 1. Click the _Search_ button.
 
 ## Searching for multiple segments within a word
 
-Next to the the drop-down menu button (![]({{ '/assets/img/expand-down.svg' | relative_url }}){: style="height:1rem;"}) for the <span class="layer">segment</span> and <span class="layer">foll_segment</span> layers is a `+` button.
-Clicking ![]({{ '/assets/img/add.svg' | relative_url }}){: style="height:1rem;"} on the right side of the segment input field adds another input field for the segment that immediately follows the previous segment.
+Next to the the drop-down menu button ({% include labbcat-icon.html src="expand-down.svg" %}) for the <span class="layer">segment</span> and <span class="layer">foll_segment</span> layers is a `+` button.
+Clicking {% include labbcat-icon.html src="add.svg" %} on the right side of the segment input field adds another input field for the segment that immediately follows the previous segment.
 This allows you to construct patterns that search for a sequence of segments within a word.
 
 {:.note}
@@ -58,9 +58,9 @@ This allows you to construct patterns that search for a sequence of segments wit
 > To find matches for every instance of /l/ followed by /t/:
 > 1. Go to the [_search_ page](https://apls.pitt.edu/labbcat/search).
 > 1. Select the <span class="layer">segment</span> layer in the selection menu to make the segment pattern input field appear.
-> 1. Click ![]({{ '/assets/img/add.svg' | relative_url }}){: style="height:1rem;"} inside of the segment box to make another segment input field appear.
+> 1. Click {% include labbcat-icon.html src="add.svg" %} inside of the segment box to make another segment input field appear.
 > 1. Enter `l` in the first segment field and `t` in the second segment field.
 > 1. Click the _Search_ button.
 
-You can designate one of the segments in your within-word search as your "token of interest" by clicking the target ![]({{ '/assets/img/target.svg' | relative_url }}){: style="height:1rem;"} for that segment.
+You can designate one of the segments in your within-word search as your "token of interest" by clicking the target {% include labbcat-icon.html src="target.svg" %} for that segment.
 This will not affect the number of matches that are found, but it will affect what information is included when [exporting data]({{ '/doc/export-data' | relative_url }}).
