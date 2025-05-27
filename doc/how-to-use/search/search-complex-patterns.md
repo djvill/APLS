@@ -5,7 +5,7 @@ permalink: /doc/search-complex-patterns
 parent: Searching the corpus
 grand_parent: How to use APLS
 nav_order: 80
-last_modified_date: 2025-05-27T16:16:15-04:00
+last_modified_date: 2025-05-27T16:46:13-04:00
 ---
 
 # {{ page.title }}
@@ -46,7 +46,7 @@ Up to this point in the documentation, most of the <span class="apls-page">Searc
 Many researchers, however, will be interested in finding patterns that match multiple types of criteria.
 Constructing a search using multiple layers makes this possible.
 
-For example, the `TRY IT!` below uses the <span class="layer">orthography</span> layer and the <span class="layer">part_of_speech</span> layer to find all instances of "run" as a noun.
+For example, the "Try it!" below uses the <span class="layer">orthography</span> layer and the <span class="layer">part_of_speech</span> layer to find all instances of "run" as a noun.
 
 {: .try-it }
 > To find matches for all instances of "run" used as a noun:
@@ -57,7 +57,7 @@ For example, the `TRY IT!` below uses the <span class="layer">orthography</span>
 > 1. Click the _Search_ button.
 
 You can also use the _matches_ drop-down menus to find results that match on some layers and don't match on other layers.
-An example is given in the `TRY IT!` below using the <span class="layer">segment</span> layer and the <span class="layer">stress</span> layer to find /u/ without primary stress.
+An example is given in the "Try it!" below using the <span class="layer">segment</span> layer and the <span class="layer">stress</span> layer to find /u/ without primary stress.
 
 {: .try-it }
 > To find all matches for the segment /u/ that don't have primary stress:

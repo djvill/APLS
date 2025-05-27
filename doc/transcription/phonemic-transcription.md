@@ -3,7 +3,7 @@ title: Phonemic transcription with the DISC alphabet
 permalink: /doc/phonemic-transcription
 parent: Transcription
 nav_order: 3
-last_modified_date: 2024-10-26T16:15:12-04:00
+last_modified_date: 2025-05-27T16:46:13-04:00
 ---
 
 
@@ -156,7 +156,7 @@ Here are some other things to note:
 
 ## Suggesting new dictionary entries
 
-APLS uses two sources to look up phonemic representations: (1) the Unisyn English dictionary (which is supposed to be a universal English dictionary), and (2) a [custom dictionary](/APLS/files/custom-entries).
+APLS uses two sources to look up phonemic representations: (1) the Unisyn English dictionary (which is supposed to be a universal English dictionary), and (2) a [custom dictionary]({{ '/doc/files/custom-entries' | relative_url}}).
 Occasionally you'll run across a word that needs to be added to APLS's custom dictionary.
 Most often this will be a Pittsburgh/western PA geographic name (e.g., neighborhoods like _Shadyside_, municipalities like _Sewickley_, streets like _Baum_, schools like _Milliones_), a brand name (e.g., _Highmark_, _Panera_), or a Pittsburgh lexical feature (e.g., _redd_, _gumband_).
 However, there are words that aren't Pittsburgh-specific that are absent from Unisyn, sometimes unexpectedly;
@@ -164,7 +164,7 @@ for example, we've had to manually add entries for _artsy_, _bachelorette_, _hom
 
 
 If a word falls into one of the preceding categories, it should be added to the APLS dictionary.
-On the other hand, if a word is unlikely to be used by more than one speaker, it's better to just use an [inline pronounce code](transcription-convention#pronounce-codes).
+On the other hand, if a word is unlikely to be used by more than one speaker, it's better to just use an [inline pronounce code]({{ '/doc/transcription-convention#pronounce-codes' | relative_url }}).
 
 
 Everything from the previous sections applies to new words that you suggest for the custom dictionary, plus the following:

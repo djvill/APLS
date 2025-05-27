@@ -5,7 +5,7 @@ permalink: /doc/regex
 parent: Searching the corpus
 grand_parent: How to use APLS
 nav_order: 30
-last_modified_date: 2025-05-27T16:16:15-04:00
+last_modified_date: 2025-05-27T16:46:13-04:00
 ---
 
 # {{ page.title }}
@@ -85,7 +85,7 @@ APLS searches look for [whole word matches](#regex-in-apls-vs-regex-elsewhere), 
 |---------|-------------|----------|
 | `do.*`  | Any word that starts with `do` | <span class="goodex">do</span> <span class="goodex">dot</span> <span class="goodex">dotted</span><br><span class="badex">dig</span> <span class="badex">ado</span> <span class="badex">boot</span>  |
 | `.*king` | Any word that ends with `king` | <span class="goodex">king</span> <span class="goodex">seeking</span> <span class="goodex">asking</span><br><span class="badex">kings</span> <span class="badex">kin</span> <span class="badex">doing</span>  |
-| `.*tion.*` | Any word that contains `tion` | <span class="goodex">action</span> <span class="goodex">questions</span> <span class="goodex">recreational</span><br><span class="badex">vision</span> <span class="badex">carton</span>  |
+| `.*tend.*` | Any word that contains `tend` | <span class="goodex">tend</span> <span class="goodex">tender</span> <span class="goodex">extend</span><span class="goodex">Nintendo</span><br><span class="badex">ten</span> <span class="badex">tinder</span>  |
 | `a.*n` | Any word that starts with `a` and ends with `n` | <span class="goodex">an</span> <span class="goodex">again</span> <span class="goodex">attention</span><br><span class="badex">in</span> <span class="badex">apple</span> <span class="badex">and</span>  |
 
 ### Dot-plus (`.+`)
@@ -102,7 +102,7 @@ The important distinction between `.+` and `.*` is that `.+` requires there to b
 
 ### Square brackets (`[]`)
 
-Square brackets `[]` can be used to match one of any of the characters within the brackets.
+Square brackets `[]` can be used to match any _one_ of the characters within the brackets.
 The characters within the brackets are a <span class="keyterm">character set</span>.
 
 | Pattern | Explanation | Examples |
@@ -187,7 +187,7 @@ For more examples of building regex search patterns, go to [Common regex idioms]
 ### Practicing regex in APLS
 
 Now that you're familiar with the basics of regex, it's time for you to try searching APLS with regex patterns on your own!
-You can find some practice search questions below, with solutions included as `TRY IT!`s.
+You can find some practice search questions below, with solutions included as "Try it!"s.
 
 - How would you find all words that (1) start with vowels _and_ (2) are at least 2 letters long?
 

@@ -4,7 +4,7 @@ contributors: [Dan Villarreal, Jack Rechsteiner]
 permalink: /doc/extract-acoustics
 parent: How to use APLS
 nav_order: 70
-last_modified_date: 2025-05-27T16:16:14-04:00
+last_modified_date: 2025-05-27T16:46:12-04:00
 ---
 
 # {{ page.title }}
@@ -77,7 +77,7 @@ You can specify multiple sample points by including a single space between each 
 
 {: .try-it }
 > To extract eleven formant measurements evenly spaced throughout your target time intervals:
-> - This `TRY IT!` assumes that you already have a search results `.csv` with the necessary columns for using the <span class="apls-page">Process with Praat</span> page.
+> - This "Try it!" assumes that you already have a search results `.csv` with the necessary columns for using the <span class="apls-page">Process with Praat</span> page.
 > 1. Go to the [_Process with Praat_](https://apls.pitt.edu/labbcat/praat) page.
 > 1. Click _Choose File_ and select your search results `.csv`.
 > 1. Click the ▼ button next to "Formants".

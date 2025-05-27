@@ -3,7 +3,7 @@ title: Citing and contributing back
 permalink: /doc/citing-contributing
 parent: How to use APLS
 nav_order: 80
-last_modified_date: 2025-02-20T13:46:50-05:00
+last_modified_date: 2025-05-27T16:46:12-04:00
 ---
 
 # {{ page.title }}
@@ -12,7 +12,7 @@ last_modified_date: 2025-02-20T13:46:50-05:00
 **If you use APLS, please [cite it](#citing-apls)!**
 Studies show that research software is under-cited. <!-- Add cites -->
 Not citing research software makes it hard for creators to gauge how often it's used, understand how to improve it, or get credit when others use it.
-(Citing APLS is also part of APLS's [terms of use](terms#citation).)
+(Citing APLS is also part of APLS's [terms of use]({{ '/doc/terms#citation' | relative_url }}).)
 
 In addition, if you use APLS in published research, you may be obligated <!-- wording --> to [contribute back](#contributing-back) to the corpus so future fellow users can benefit.
 Our goal is to make contributing back as seamless as possible.
@@ -65,7 +65,7 @@ This covers two main cases:
 		- Generating [gradient predictions](https://www.journal-labphon.org/article/id/6264/) of auto-coded variables
 		- Grouping participants into class categories based on education and occupation <!-- Link to participant attributes page/section -->
 - Correcting issues in current annotations
-	- This could cover either [human-generated or computer-generated](data-sources#humans-and-computers) <!-- check heading link later --> annotations
+	- This could cover either [human-generated or computer-generated]({{ '/doc/data-sources#humans-and-computers' | relative_url }}) <!-- check heading link later --> annotations
 	- Examples:
 		- Identifying transcription errors, or identifying correct transcriptions for passages marked `[unclear]`
 		- Correcting morphemic parses or segmental alignments
@@ -77,7 +77,7 @@ In addition, we welcome:
 
 - Any feedback on APLS's user interface (the corpus itself or this website)
 - Requests for particular features
-- Calling our attention to something that needs [troubleshooting](troubleshooting)
+- Calling our attention to something that needs [troubleshooting]({{ '/doc/troubleshooting' | relative_url }})
 
 
 However, you are _not_ obligated <!-- wording --> to contribute back to the corpus if you use APLS data:
@@ -91,11 +91,11 @@ However, you are _not_ obligated <!-- wording --> to contribute back to the corp
 
 ### Why contribute back to APLS?
 
-If you're in a position to contribute back to APLS, then please note that the [terms of use](terms) technically obligate <!-- wording --> you to do so.
+If you're in a position to contribute back to APLS, then please note that the [terms of use]({{ '/doc/terms' | relative_url }}) technically obligate <!-- wording --> you to do so.
 More importantly, we think it's the right thing to do, since you can save future researchers the time and effort of reinventing the wheel---it's why we try to make it as easy as possible for researchers to contribute back.
 <!-- Maybe mention some Open Methods-y stuff here -->
 As with other forms of Open Methods, contributing back helps to encourage contributors to adopt reproducible research practices.
-Finally, if your contribution gets accepted, your name gets added to APLS's [contributors page](contributors)---a feather in your cap!
+Finally, if your contribution gets accepted, your name gets added to APLS's [contributors page]({{ '/doc/contributors' | relative_url }})---a feather in your cap!
 
 
 ## Citing documentation
