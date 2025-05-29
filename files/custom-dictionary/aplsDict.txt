@@ -99,6 +99,7 @@ Sewickley
 Shadyside
 Shaler
 Sharpsburg
+Sherrod
 Skeetersville
 Spang's
 Steeler
@@ -356,6 +357,7 @@ in-migration
 Juneteenth
 Limbaugh
 locally-owned
+margherita
 Mawr
 McGruder
 meister
