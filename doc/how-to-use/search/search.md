@@ -69,8 +69,8 @@ There are five main sections of the <span class="apls-page">Search</span> page:
 
 Only the first four sections are displayed when you first load the <span class="apls-page">Search</span> page, as shown in the screengrab below.
 
-{% include screengrab.html src="search/search-page-layout1.png" %}
+{% include screengrab.html src="search/page-layout1.png" %}
 
 The progress bar only pops up once you actually click _Search_, like in the screengrab below.
 
-{% include screengrab.html src="search/search-page-layout2.png" %}
+{% include screengrab.html src="search/page-layout2.png" %}

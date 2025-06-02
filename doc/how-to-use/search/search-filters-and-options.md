@@ -22,7 +22,7 @@ You can also specify additional match and display options for your search using 
 
 The participants filter is the first option displayed on the <span class="apls-page">Search</span> page.
 
-{% include screengrab.html src="search/search-participants-filter.png" %}
+{% include screengrab.html src="search/participants-filter.png" %}
 
 There are two ways to select participants for this filter on the <span class="apls-page">Search</span> page:
 
@@ -49,7 +49,7 @@ There are two ways to select participants for this filter on the <span class="ap
 
 The transcripts filter is located beneath the participants filter.
 
-{% include screengrab.html src="search/search-transcripts-filter.png" %}
+{% include screengrab.html src="search/transcripts-filter.png" %}
 
 Clicking _Transcripts_ will take you to the [<span class="apls-page">Transcripts</span> page]({{ '/doc/browse-transcripts' | relative_url }}).
 From this page, click the checkboxes for all transcripts you would like to include in your search and then click the _Layered Search_ button to return to the <span class="apls-page">Search</span> page.

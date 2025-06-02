@@ -38,7 +38,7 @@ From longest to shortest, these are:
   - In the layer selector, layers are organized into columns by scope:
   [IMAGE]
   - You can usually tell what each layer's scope is by just glancing at the transcript. For example: 
-  {% include screengrab.html src="transcript-layer-scope.png" %}
+  {% include screengrab.html src="transcript/layer-scope.png" %}
     - The <span class="layer">noise</span> annotations aren't bounded by a single line, so <span class="layer">noise</span> is clearly a <span class="keyterm">span layer</span>. (Note that transcripts always display the <span class="layer">noise</span> and <span class="layer">comment</span> layers.)
     - Both <span class="layer">overlap</span> and <span class="layer">speech_rate</span> have annotations that span multiple words, so they are clearly <span class="keyterm">phrase layers</span>. You can tell where these annotations start and end because of the colored arcs above each line.
     - Each <span class="layer">foll_pause</span> annotation is lined up above each <span class="layer">word</span> annotation, so <span class="layer">foll_pause</span> is clearly a <span class="keyterm">word layer</span>
@@ -47,13 +47,13 @@ From longest to shortest, these are:
   
 - [Search]({{ '/doc/search' | relative_url }})
   - In the layered search matrix, layers are organized into columns by scope:
-  {% include screengrab.html src="search-matrix.png" %}
+  {% include screengrab.html src="search/matrix.png" %}
   Only a few layers appear when you first load the search page, but you can select <span class="keyterm">projects</span> to show more (see [below](#project)).
   
 - [Exporting data]({{ '/doc/export-data' | relative_url }})
   - Layers are organized into columns by scope
   - Depending on how you're exporting data, there might be additional columns. For example, when [exporting a formatted transcript]({{ '/doc/export-data#export-formatted-transcript' | relative_url }}), you can also export participant and transcript attributes:
-  {% include screengrab.html src="transcripts-export-format.png" %}
+  {% include screengrab.html src="transcripts/export-formatted.png" %}
 
 
 ### Layers by scope
@@ -84,7 +84,7 @@ Layers can have one of three possible alignments:
 - [Individual <span class="apls-page">Transcript</span> pages]({{ '/doc/view-transcript' | relative_url }})
   - In the layer selector, the icons ![]({{ '/assets/img/alignment-0.svg' | relative_url }}){: .labbcat-icon } ![]({{ '/assets/img/alignment-2.svg' | relative_url }}){: .labbcat-icon } ![]({{ '/assets/img/alignment-1.svg' | relative_url }}){: .labbcat-icon } denote alignments
   - When multiple annotations share a word, they crowd into the space above the word (with spaces separating labels). For example:
-    {% include screengrab.html src="transcript-layer-alignment.png" %}
+    {% include screengrab.html src="transcript/layer-alignment.png" %}
     - Most words in this line have one <span class="layer">part_of_speech</span> annotation, but _don't_ and _it's_ each have two (_n't_ is an adverb, and _'s_ is a present-tense 3rd-person-singular verb)
     - Most words in this line are monosyllabic and just have one <span class="layer">syllables</span> annotation, but _Family_ has three <span class="layer">syllables</span> annotations and _Dollar_ has two.
 
@@ -126,19 +126,19 @@ Unlike <span class="keyterm">horizontal peers</span>, which divide the timespan 
   - In the layer selector, the icon {% include labbcat-icon.html src="vertical-peers.svg" %} denotes layers that allow vertical peers
   - **Only one vertical peer is visible on the <span class="apls-page">Transcript</span> page**, whichever is first in alphabetical order
     - _Example_: The <span class="layer">dictionary_phonemes</span> layer only shows `ðə` for the word _the_, even though _the_ has two <span class="layer">dictionary_phonemes</span> annotations:
-      {% include screengrab.html src="vertical-peers-transcript.png" %}
+      {% include screengrab.html src="transcript/vertical-peers-transcript.png" %}
     - To check whether an annotation has vertical peers, [export the line to TextGrid]({{ '/doc/transcript-praat' | relative_url }}) instead
 
 - [Transcripts or fragments exported to Praat TextGrids]({{ '/doc/transcript-praat' | relative_url }})
   - Normally, TextGrid transcripts/fragments show one tier per layer per speaker. However, if a layer allows vertical peers, then that layer can **have _multiple_ tiers per speaker**.
     - _Example_: The word _times_ has two <span class="layer">lemma</span> annotations, _time_ and _times_,[^why-times] so this TextGrid shows two <span class="layer">lemma</span> tiers for CB17:
-      {% include screengrab.html src="vertical-peers-fragment-1.png" %}
+      {% include screengrab.html src="transcript/vertical-peers-fragment-1.png" %}
   - If a layer _allows_ multiple peers, but the exported transcript/fragment doesn't actually _have_ vertical peers on that layer, then that layer will only have one tier. 
     - _Example_: None of the words in this fragment have multiple <span class="layer">lemma</span> annotations, so this TextGrid shows just one <span class="layer">lemma</span> tier for CB17: 
-      {% include screengrab.html src="vertical-peers-fragment-2.png" %}
+      {% include screengrab.html src="transcript/vertical-peers-fragment-2.png" %}
   - An exported TextGrid will only show as many tiers per layer as there are vertical peers on that layer _in the exported transcript/fragment_. As a result, longer transcripts/fragments tend to have more tiers.
     - _Example_: When the entire transcript for CB17interview3.eaf is exported to TextGrid, there are three <span class="layer">lemma</span> tiers for CB17 for the whole TextGrid, even though there is only one word in the transcript with three <span class="layer">lemma</span> annotations
-      {% include screengrab.html src="vertical-peers-textgrid.png" %}
+      {% include screengrab.html src="transcript/vertical-peers-textgrid.png" %}
 
 [^why-times]: The <span class="layer">lemma</span> layer represents all possible base forms of the word. Depending on context, the word _times_ could be the plural of the base form _time_, or _times_ could be the base form itself (as in "two times four"), hence the multiple annotations.
 

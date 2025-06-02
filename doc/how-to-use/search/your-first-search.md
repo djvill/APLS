@@ -27,7 +27,7 @@ We'll begin with the input field for the <span class="layer">orthography</span> 
 > However, the <span class="layer">word</span> layer contains words exactly as they were typed in the transcript, including capitalization and all punctuation. 
 > If you are conducting searches on the basis of word spelling, it is recommended to use the <span class="layer">orthography</span> layer instead of the <span class="layer">word</span> layer.
 
-{% include screengrab.html src="search/search-input-field-orthography.png" %}
+{% include screengrab.html src="search/input-field-orthography.png" %}
 
 At the top-left of the input field section, you will see the name of the layer that input field will apply to.
 
@@ -56,7 +56,7 @@ This drop-down menu lets you select whether the search will identify annotations
 
 The search progress bar appears at the bottom of the page only after you've specified your search and clicked the _Search_ button.
 
-{% include screengrab.html src="search/search-progress-bar.png" %}
+{% include screengrab.html src="search/progress-bar.png" %}
 
 Above the progress bar itself is text displaying the patterns of your search.
 

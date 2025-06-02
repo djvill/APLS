@@ -58,7 +58,7 @@ Throughout these pages are "callout" boxes to help you understand how to use APL
   > 1. Go to <https://apls.pitt.edu/labbcat>.
   > 
   > You should see a login box pop up:
-  > {% include screengrab.html src="login.png" %}
+  > {% include screengrab.html src="no-page/login.png" %}
 
 - Blue "Under the hood" boxes give some details about technical details, design decisions, and/or the history of APLS's development. They're meant for especially curious readers, but they're not crucial to understanding how to use APLS or how it works.
   

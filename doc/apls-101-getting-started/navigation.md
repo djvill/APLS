@@ -34,7 +34,7 @@ The header and footer menus are on every APLS page, so we'll introduce them now.
 The <span class="keyterm">header menu</span> is the main navigation tool for accessing the main pages of APLS.
 It is displayed at the top of every APLS webpage.
 
-{% include screengrab.html src="navigation/navigation-header-menu.png" %}
+{% include screengrab.html src="home/header-menu.png" %}
 
 From left to right, the links in the <span class="keyterm">header menu</span> allow you to navigate to:
 
@@ -56,7 +56,7 @@ From left to right, the links in the <span class="keyterm">header menu</span> al
 The <span class="keyterm">footer menu</span> provides links to documentation for citing APLS, the licenses governing the use of APLS, and the versions of APLS and [LaBB-CAT] currently being used.
 It is displayed at the bottom of every APLS webpage.
 
-{% include screengrab.html src="navigation/navigation-footer-menu.png" %}
+{% include screengrab.html src="home/footer-menu.png" %}
 
 The <span class="keyterm">footer menu</span> provides links with information about:
 
@@ -70,7 +70,7 @@ The <span class="keyterm">footer menu</span> provides links with information abo
 
 Unique to <span class="apls-page">Home</span> page are links to some useful APLS pages and an overview of the data in APLS.
 
-{% include screengrab.html src="navigation/navigation-home-page.png" %}
+{% include screengrab.html src="home/home-page.png" %}
 
 From left to right, the available links are:
 

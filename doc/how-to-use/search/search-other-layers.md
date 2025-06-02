@@ -22,7 +22,7 @@ The <span class="keyterm">layer picker</span> on the <span class="apls-page">Sea
 
 [^differences]: The main difference is that <span class="apls-page">Transcript</span> pages always have the <span class="layer">word</span>, <span class="layer">turn</span>, and <span class="layer">utterance</span> layers selected and they cannot be de-selected. The <span class="apls-page">Search</span> page allows these layers to be toggled on and off.
 
-{% include screengrab.html src="search/search-layer-selector.png" %}
+{% include screengrab.html src="search/layer-selector.png" %}
 
 By default, the layer picker has the <span class="layer">orthography</span> layer already selected.
 To make more [layers]({{ '/doc/layer-typology' | relative_url }}) appear, you have to select the [project]({{ '/doc/layer-typology#project' | relative_url }}) corresponding with that layer in the `Projects` column.
@@ -37,7 +37,7 @@ Selecting a layer in the layer picker will make a [pattern input field]({{ '/doc
 
 The screengrab below has the projects that are most useful to users toggled on to show all the layers that are useful for searching APLS.
 
-{% include screengrab.html src="search/search-all-layers.png" %}
+{% include screengrab.html src="search/all-layers.png" %}
 
 {:.note .no-collapse}
 > Layers in the `temp` project aren’t meaningful for end-users, so these layers are not discussed on this page.
@@ -80,9 +80,9 @@ You can read more about notation systems on the [Layer typology]({{ '/doc/layer-
 
 Pattern input fields for layers that don't use English spelling or numbers include drop-down selection menus (shown with a {% include labbcat-icon.html src="expand-down.svg" %} icon) that contain valid input for that layer. 
 
-{% include screengrab.html src="search/search-dropdown-menu.png" %}
+{% include screengrab.html src="search/dropdown-menu.png" %}
 
-{% include screengrab.html src="search/search-dropdown-menu-expanded.png" %}
+{% include screengrab.html src="search/dropdown-menu-expanded.png" %}
 
 This saves you the trouble of needing to memorize things like the DISC alphabet or part-of-speech tags to use all of the <span class="apls-page">Search</span> page's functionalities!
 Similar to other parts of APLS, you can hover your mouse over the options in these drop-down menus to get a short tooltip description for each symbol.

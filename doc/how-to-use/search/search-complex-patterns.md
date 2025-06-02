@@ -23,7 +23,7 @@ The way to search for multiple words is to make the search "wider".
 
 Clicking {% include labbcat-icon.html src="add.svg" %} on the right side of the input fields makes the search wider by adding another word to your search pattern.
 
-{% include screengrab.html src="search/search-input-field-orthography2.png" %}
+{% include screengrab.html src="search/input-field-orthography2.png" %}
 
 The *followed immediately by* drop-down menu lets you choose whether the search should be the immediate next word, 1 word after the immediate next word, or 2 words after the immediate next word.
 

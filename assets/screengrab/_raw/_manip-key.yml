@@ -1,4 +1,4 @@
-- screengrab: attributes-multiselect-export.png
+- screengrab: participants/participantsExport/attributes-multiselect-export.png
   instructions:
     - Log in
     - Load https://apls.pitt.edu/labbcat/participantsExport?participant_expression=%5B%27CB01%27%2C%27CB17%27%2C%27CB06%27%2C%27CB08%27%2C%27CB10%27%2C%27CB05%27%5D.includes(id)&participants=6%20selected%20participants
@@ -12,7 +12,7 @@
   width: 655
   height: 690
 
-- screengrab: demo-page.png
+- screengrab: transcript/layers-annotations.png
   instructions:
     - Log in as test-student
     - Set browser zoom to 100%
@@ -35,7 +35,7 @@
       # offset_x: 985
       # offset_y: 200
 
-- screengrab: login.png
+- screengrab: no-page/login.png
   instructions:
     - Unpin browser extensions
     - Make browser take up half-screen
@@ -46,7 +46,7 @@
   width: 760
   height: 515
 
-- screengrab: noload-redirect.png
+- screengrab: no-page/noload-redirect.png
   instructions:
     - Unpin browser extensions
     - Set browser zoom to 100%
@@ -58,7 +58,7 @@
   width: 970
   height: 660
 
-- screengrab: password-reset.png
+- screengrab: security/password-reset.png
   instructions:
     - In an *incognito* window, log in as test-student
     - Load https://apls.pitt.edu/labbcat/security
@@ -68,7 +68,7 @@
   width: 760
   height: 275
 
-- screengrab: search-matrix.png
+- screengrab: search/matrix.png
   instructions:
     - Log in as test-student
     - Set browser zoom to 100%
@@ -80,7 +80,7 @@
   width: 800
   height: 425
 
-- screengrab: transcript-layer-alignment.png
+- screengrab: transcript/layer-alignment.png
   instructions:
     - Log in as test-student
     - Set browser zoom to 100%
@@ -93,7 +93,7 @@
   width: 770
   height: 110
 
-- screengrab: transcript-layer-scope.png
+- screengrab: transcript/layer-scope.png
   instructions:
     - Log in as test-student
     - Set browser zoom to 100%
@@ -107,7 +107,7 @@
   width: 1580
   height: 815
 
-- screengrab: transcript-word-menu.png
+- screengrab: transcript/word-menu.png
   instructions:
     - Log in as test-student
     - Set browser zoom to 100%
@@ -120,7 +120,7 @@
   width: 455
   height: 250
 
-- screengrab: transcripts-export-format.png
+- screengrab: transcripts/export-formatted.png
   instructions:
     - Log in as test-student
     - Set browser zoom to 100%
@@ -132,7 +132,7 @@
   width: 1520
   height: 455
 
-- screengrab: vertical-peers-fragment-1.png
+- screengrab: transcript/vertical-peers-fragment-1.png
   instructions:
     - Log in
     - Load https://apls.pitt.edu/labbcat/transcript?transcript=CB17interview3.eaf#ew_0_775495
@@ -140,7 +140,7 @@
     - Open TextGrid in Praat
     - "Save window **directly to folder**"
 
-- screengrab: vertical-peers-fragment-2.png
+- screengrab: transcript/vertical-peers-fragment-2.png
   instructions:
     - Log in
     - Load https://apls.pitt.edu/labbcat/transcript?transcript=CB17interview3.eaf#ew_0_775577
@@ -148,7 +148,7 @@
     - Open TextGrid in Praat
     - "Save window **directly to folder**"
     
-- screengrab: vertical-peers-textgrid.png
+- screengrab: transcript/vertical-peers-textgrid.png
   instructions:
     - Log in
     - On https://apls.pitt.edu/labbcat/transcripts, export CB17interview3.eaf to TextGrid with layers utterance, word, lemma
@@ -156,7 +156,7 @@
     - Zoom out to view the whole TextGrid
     - "Save window **directly to folder**"
 
-- screengrab: vertical-peers-transcript.png
+- screengrab: transcript/vertical-peers-transcript.png
   instructions:
     - Log in as test-student
     - Set browser zoom to 100%
@@ -169,20 +169,19 @@
   width: 305
   height: 70
 
-- screengrab: view-transcript-attributes.png
+- screengrab: transcript/attributes.png
   instructions:
     - Log in as test-student
     - Set browser zoom to 100%
     - Load https://apls.pitt.edu/labbcat/transcript?transcript=CB01interview3.eaf
     - Click transcript attributes
     - Save
-  dir: ../view-transcript
   offset_x: 110
   offset_y: 310
   width: 1050
   height: 375
 
-- screengrab: view-transcript-attribute-hover.png
+- screengrab: transcript/attribute-hover.png
   instructions:
     - Log in as test-student
     - Set browser zoom to 100%
@@ -191,7 +190,6 @@
     - Put cursor over the middle of N in Neighborhood
     - Wait for tooltip to load
     - Save
-  dir: ../view-transcript
   offset_x: 110
   offset_y: 310
   width: 1050
@@ -201,23 +199,21 @@
       offset_x: 163
       offset_y: 457
 
-- screengrab: view-transcript-export-formatted.png
+- screengrab: transcript/export-formatted.png
   instructions:
     - Log in as test-student
     - Set browser zoom to 100%
     - Load https://apls.pitt.edu/labbcat/transcript?transcript=CB01interview3.eaf
     - Click export formatted
     - Save
-  dir: ../view-transcript
   offset_x: 110
   offset_y: 270
   width: 315
   height: 410
 
-- screengrab: view-transcript-header.png
-  in_path: view-transcript-overview.png
-  instructions: See view-transcript-overview.png
-  dir: ../view-transcript
+- screengrab: transcript/header.png
+  in_path: transcript/overview.png
+  instructions: See transcript/overview.png
   offset_x: 110
   offset_y: 190
   width: 1200
@@ -260,36 +256,33 @@
       lty: dashed
       lwd: 5
 
-- screengrab: view-transcript-no-praat-player.png
-  in_path: view-transcript-no-praat.png
+- screengrab: transcript/no-praat-player.png
+  in_path: transcript/no-praat.png
   instructions:
     - In an *incognito* window, log in as test-student
     - Set browser zoom to 100%
     - Load https://apls.pitt.edu/labbcat/transcript?transcript=CB01interview3.eaf
     - Click the first word in the transcript (okay)
     - Save
-  dir: ../view-transcript
   offset_x: 1440
   offset_y: 215
   width: 455
   height: 150
 
-- screengrab: view-transcript-no-praat-word-menu.png
-  in_path: view-transcript-no-praat.png
-  instructions: See view-transcript-no-praat-player.png
-  dir: ../view-transcript
+- screengrab: transcript/no-praat-word-menu.png
+  in_path: transcript/no-praat.png
+  instructions: See transcript/no-praat-player.png
   offset_x: 319
   offset_y: 770
   width: 185
   height: 160
 
-- screengrab: view-transcript-overview.png
+- screengrab: transcript/overview.png
   instructions:
     - Log in as test-student
     - Set browser zoom to 100%
     - Load https://apls.pitt.edu/labbcat/transcript?transcript=CB01interview3.eaf
     - Save
-  dir: ../view-transcript
   offset_x: 0
   offset_y: 130
   width: 1920
@@ -340,10 +333,9 @@
       lty: dashed
       lwd: 5
 
-- screengrab: view-transcript-projects-layers.png
-  instructions: See view-transcript-overview.png
-  in_path: view-transcript-overview.png
-  dir: ../view-transcript
+- screengrab: transcript/projects-layers.png
+  instructions: See transcript/overview.png
+  in_path: transcript/overview.png
   offset_x: 110
   offset_y: 270
   width: 1200

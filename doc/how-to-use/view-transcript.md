@@ -34,7 +34,7 @@ Each transcript has its own page in APLS.
 
 Individual <span class="apls-page">Transcript</span> pages have two sections, plus some elements that remain in the same position on the page as you scroll. This is highlighted in the following screengrab:
 
-{% include screengrab.html src="view-transcript/view-transcript-overview.png" %}
+{% include screengrab.html src="transcript/overview.png" %}
 
 - Sections: 
   - The [transcript header](#transcript-header), highlighted in **red**{:.hl-1}. This includes information about the transcript, a menu for exporting the transcript in various formats, and settings for choosing which layers are displayed in the transcript body.
@@ -63,14 +63,14 @@ You can also listen to audio through the [word menu](#word-menu).
 If your media player is displaying a small Praat logo (as shown below), this indicates that you do not have the Praat integration set up.
 You can learn more about enabling the Praat integration [here]({{ '/doc/praat-integration' | relative_url }}).
 
-{% include screengrab.html src="view-transcript/view-transcript-no-praat-player.png" %}
+{% include screengrab.html src="transcript/no-praat-player.png" %}
 
 
 ## Transcript header
 
 The transcript header provides information about the transcript, options for exporting a formatted transcript, and check boxes that control what data is displayed in the transcript body.
 
-{% include screengrab.html src="view-transcript/view-transcript-header.png" %}
+{% include screengrab.html src="transcript/header.png" %}
 
 - At the top of the transcript header is the name of the transcript file (in this case, `CB01interview3.eaf`).
 - Most important is the [layer selector](#layer-selector), highlighted in **red**{:.hl-1}. This controls which layers are displayed in the transcript.
@@ -83,7 +83,7 @@ The transcript header provides information about the transcript, options for exp
 
 The _export formatted ▼_ drop-down menu allows you to download the current transcript in any of the listed file types:
 
-{% include screengrab.html src="view-transcript/view-transcript-export-formatted.png" %}
+{% include screengrab.html src="transcript/export-formatted.png" %}
 
 {: .try-it }
 > On the `CB01interview3.eaf` <span class="apls-page">Transcript</span> page (<https://apls.pitt.edu/labbcat/transcript?transcript=CB01interview3.eaf>):
@@ -120,7 +120,7 @@ As a result, the *Plain Text Document*s and *PDF Document* formats are better fo
 > 
 > You should see that each of the words in the utterance has its own interval in `word - Barbara Johnstone`:
 > 
-> {% include screengrab.html src="view-transcript/view-transcript-export-praat-1.png" %}
+> {% include screengrab.html src="transcript/export-praat-1.png" %}
 > * * *
 > Finally, let's see how overlaps look in an exported TextGrid.
 > According to the <span class="apls-page">Transcript</span> page, there's an overlap when Barbara Johnstone says `what you'd say you're` and CB01 says `okay`, right after Barbara's first utterance
@@ -128,7 +128,7 @@ As a result, the *Plain Text Document*s and *PDF Document* formats are better fo
 > 1. Zoom into the next `Barbara Johnstone` interval in the TextGrid.
 >
 > You should see a `CB01` interval that lines up with the `Barbara Johnstone` interval, plus words on _both_ speakers' `word - ` tiers.
-> {% include screengrab.html src="view-transcript/view-transcript-export-praat-2.png" %}
+> {% include screengrab.html src="transcript/export-praat-2.png" %}
 
 
 As previously mentioned, the exported file will include any layers you have [selected](#layer-selector) to show in the transcript body.
@@ -146,7 +146,7 @@ Unlike in the transcript body, phonological layers (like <span class="layer">seg
 > If you zoom in on an individual word, you should see that each of the segments has its own interval.
 > <!-- These segments are displayed in DISC, so `5k1` is /oUkeI/ -->
 >
-> {% include screengrab.html src="view-transcript/view-transcript-export-praat-3.png" %}
+> {% include screengrab.html src="transcript/export-praat-3.png" %}
 
 Finally, if a layer allows [vertical peers]({{ '/doc/layer-typology#vertical-peers' | relative_url }}) (with a {% include labbcat-icon.html src="vertical-peers.svg" %} icon in the [layer selector](#layer-selector)), the exported file may show multiple tiers per speaker:
 
@@ -158,7 +158,7 @@ Finally, if a layer allows [vertical peers]({{ '/doc/layer-typology#vertical-pee
 >
 > You should see **three** `dictionary_phonemes - ` tiers per speaker.
 > This is because some words have more than one possible phonemic representation, such as /æz/ or /əz/ for _as_.
-> {% include screengrab.html src="view-transcript/view-transcript-export-praat-4.png" %}
+> {% include screengrab.html src="transcript/export-praat-4.png" %}
 
 <!-- Mention how to get full tier names in TextGrid view -->
 
@@ -168,11 +168,11 @@ Finally, if a layer allows [vertical peers]({{ '/doc/layer-typology#vertical-pee
 Underneath the _export formatted_ menu is the collapsible _[transcript attributes]_ panel
 This panel shows' <span class="keyterm">transcript attributes</span> display titles in the left-hand column (e.g., `Neighborhood`) and values in the right-hand column (e.g., `Cranberry Township`).
 
-{% include screengrab.html src="view-transcript/view-transcript-attributes.png" %}
+{% include screengrab.html src="transcript/attributes.png" %}
 
 If you hover over a display title, a tooltip will pop up with the attribute's [export name]({{ '/doc/attribute-typology#export-name'}}) and short description.
 
-{% include screengrab.html src="view-transcript/view-transcript-attribute-hover.png" %}
+{% include screengrab.html src="transcript/attribute-hover.png" %}
 
 Blanks in the right-hand column mean that this transcript doesn't have any value for that attribute.
 For example, the previous screengrabs show a blank for `Transcription AI tool(s)` because the <span class="transcript-attr">transcription_ai_tools</span> attribute is empty for `CB01interview3.eaf`;
@@ -186,7 +186,7 @@ no AI tools were used to transcribe that interview.
 
 Below _attributes_ are the <span class="keyterm">participants</span> in the transcript. 
 
-{% include screengrab.html src="view-transcript/view-transcript-participants.png" %}
+{% include screengrab.html src="transcript/participants.png" %}
 
 Participant codes for main participants are displayed in **bold**. 
 Clicking a participant code will take you to that participant's [<span class="apls-page">Participant attributes</span> page]({{ '/doc/browse-participants#participant-attributes-pages' | relative_url }}).
@@ -196,7 +196,7 @@ Clicking a participant code will take you to that participant's [<span class="ap
 
 The **projects** and **layers** sections control what information is displayed in the transcript body.
 
-{% include screengrab.html src="view-transcript/view-transcript-projects-layers.png" %}
+{% include screengrab.html src="transcript/projects-layers.png" %}
 
 {% comment %}turning on/off layers and the page reload delay{% endcomment %}
 
@@ -210,7 +210,7 @@ To make more layer options appear in the **layers** section, the project that co
 You can hover over the names of the projects to view a brief description of the layers associated with that project.
 You can also read more about projects on the [Layer typology]({{ '/doc/layer-typology#project' | relative_url }}) documentation page.
 
-{% include screengrab.html src="view-transcript/view-transcript-project-timing.png" %}
+{% include screengrab.html src="transcript/project-timing.png" %}
 
 As shown in the screenshot above, toggling the _timing_ project causes the **layers** section to display layers that are included in the timing project category.
 You can learn more about layers in the [Layers and attributes]({{ '/doc/layers-and-attributes' | relative_url }}) documentation pages.
@@ -232,7 +232,7 @@ Selecting one or more of the options in **layers** section will cause that layer
 To become acquainted with the layout of the <span class="keyterm">transcript body</span>, we will start off with only the default <span class="layer">word</span> layer enabled, as shown in the screenshot below.
 Additionally, while the other layers affect the information that is displayed in the transcript, all the interactable layers in the transcript body operate in the same way as the <span class="layer">word</span> layer described in this section.
 
-{% include screengrab.html src="view-transcript/view-transcript-transcript-body1.png" %}
+{% include screengrab.html src="transcript/transcript-body1.png" %}
 
 ### Turns, utterances, noises, and overlaps
 
@@ -243,7 +243,7 @@ In the example screenshot above, the interviewer Barbara Johnstone is the only p
 To the right of the dotted lines is the transcribed speech for that speaker for that utterance.
 Clicking on any of the blue words in the transcript will bring up the word menu that allows you to open the utterance in Praat, extract and download the audio of the utterance, or play the audio of the utterance using the in-browser APLS media player.
 
-{% include screengrab.html src="view-transcript/view-transcript-transcript-body2.png" %}
+{% include screengrab.html src="transcript/transcript-body2.png" %}
 
 {: .note }
 > For instructions on setting up the Praat integration for your web browser, visit the [Viewing transcript segments in Praat]({{ '/doc/praat-integration' | relative_url }}) documentation page.
@@ -251,13 +251,13 @@ Clicking on any of the blue words in the transcript will bring up the word menu 
 When an utterance has overlapping speech from multiple speakers, the left-hand side of the transcript will show all the speakers who have transcribed speech for that portion of audio.
 Participant speech is **bolded** in APLS to make it easier to distinguish from the interviewer's speech.
 
-{% include screengrab.html src="view-transcript/view-transcript-transcript-body3.png" %}
+{% include screengrab.html src="transcript/transcript-body3.png" %}
 
 If non-speech sounds have been transcribed, those annotations will appear above the <span class="layer">word</span> layer. 
 All non-speech sounds from all speakers are combined in the top-most section of the <span class="layer">word</span> layer, so it is possible for a speaker to appear on the left-hand side of the transcript without having any words in the <span class="layer">word</span> layer.
 An example of this is shown below.
 
-{% include screengrab.html src="view-transcript/view-transcript-transcript-body4.png" %}
+{% include screengrab.html src="transcript/transcript-body4.png" %}
 
 {: .note }
 > It is possible to use CTRL+F to search a <span class="apls-page">Transcript</span> page for singular words but not for multi-word strings due to the underlying HTML of the <span class="apls-page">Transcript</span> pages (e.g., CTRL+F will work to find the word 'filing' but it won't find the phrase 'filing cabinet').

@@ -41,9 +41,9 @@ The steps to install these are:
 
 1. Navigate to the Praat Integration extension page on the Chrome Web Store, either through [this link]](https://chromewebstore.google.com/detail/Praat%20Integration/hmmnebkieionilgpepijmfabdickmnig) or by clicking the Praat icon in the upper-right corner of the APLS media player.
 1. On the Praat Integration extension page, click the button that says "Add to Chrome" (or "Add to [BROWSER NAME]").
-   {% include screengrab.html src="praat-integration/praat-integration-add-to-chrome.png" %}
+   {% include screengrab.html src="praat-integration/add-to-chrome.png" %}
 1. A message will appear asking if you want to add the Praat Integration extension. Click the "Add extension" button.
-   {% include screengrab.html src="praat-integration/praat-integration-add-extension-chrome.png" %}
+   {% include screengrab.html src="praat-integration/add-extension-chrome.png" %}
 1. Download and save the file [`install-jsendpraat.jar`](chrome-extension://hmmnebkieionilgpepijmfabdickmnig/install-jsendpraat.jar)
 1. Click on the `install-jsendpraat.jar` file to open it. (macOS users may receive a message saying the file can't be opened. Steps for resolving this are included in the [Note for macOS users](#note-for-macos-users) section.)
 1. Click the "Install" button that appears in the application window.
@@ -60,11 +60,11 @@ Praat integration for Firefox requires two components to be installed:
 The steps to install these are:
 
 1. Click the Praat icon in the upper-right corner of the APLS media player, which will open a pop-up prompt saying you need to install the 'Praat Integration' browser extension. Click "OK".
-   {% include screengrab.html src="praat-integration/praat-integration-popup-firefox.png" %}
+   {% include screengrab.html src="praat-integration/popup-firefox.png" %}
 1. Firefox will display a pop-up asking if you want to allow apls.pitt.edu to install an add-on. Click "Continue to installation".
-   {% include screengrab.html src="praat-integration/praat-integration-allow-install-firefox.png" %}
+   {% include screengrab.html src="praat-integration/allow-install-firefox.png" %}
 1. Another pop-up message will appear asking if you want to add the Praat Integration extension. Click the "Add" button.
-   {% include screengrab.html src="praat-integration/praat-integration-add-to-firefox.png" %}
+   {% include screengrab.html src="praat-integration/add-to-firefox.png" %}
 1. Download and save the file [`install-jsendpraat.jar`](moz-extension://4d74e341-1ea5-4f86-b7ac-7f6613e0ca43/install-jsendpraat.jar)
 1. Click on the `install-jsendpraat.jar` file to open it. (macOS users may receive a message saying the file can't be opened. Steps for resolving this are included in the [Note for macOS users](#note-for-macos-users) section.)
 1. Click the "Install" button that appears in the application window.
@@ -89,7 +89,7 @@ To verify that the Praat Integration functionality is correctly installed:
 1. Open the [<span class="apls-page">Transcript</span> page for `CB01interview1.eaf`](https://apls.pitt.edu/labbcat/transcript?transcript=CB01interview1.eaf) 
 1. Click on the first word in the transcript body (*manipulate*). 
 1. The [Word Menu]({{ '/doc/view-transcript#turns-utterances-noises-and-overlaps' | relative_url }}) should display options to open files in Praat. 
-   {% include screengrab.html src="transcript-word-menu.png" %}
+   {% include screengrab.html src="transcript/word-menu.png" %}
    1. If you do not see Praat options in the Word Menu, this most likely means there is an issue with the web browser extension installation.
 1. Clicking *Open in Praat* should open the utterance's audio file in your local version of Praat.
    1. If the Praat Integration options are available in the Word Menu but clicking them does not open the utterance in Praat, this most likely means there is an issue with the `jsendpraat.jar` installation.

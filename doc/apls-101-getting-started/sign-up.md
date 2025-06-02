@@ -33,15 +33,15 @@ When you first log in to APLS, you'll be asked to agree to these terms.
 
 Once you have a username and temporary password, you can log in to <https://apls.pitt.edu/labbcat>:
 
-{% include screengrab.html src="login.png" %}
+{% include screengrab.html src="no-page/login.png" %}
 
 There are two additional things you'll only need to do the **first** time you log in:
 
 1. You'll see a page with the terms of use (identical to the [terms of use page]({{ '/doc/terms' | relative_url }}) on this site). Scroll to the bottom and click _I Agree_.
-   {% include screengrab.html src="license.png" %}
+   {% include screengrab.html src="license/license.png" %}
    
 1. Then you'll see a prompt to reset your temporary password. Enter your new password and click _Change Pass Phrase_.
-    {% include screengrab.html src="password-reset.png" %}
+    {% include screengrab.html src="security/password-reset.png" %}
 
 
 ## Later logins

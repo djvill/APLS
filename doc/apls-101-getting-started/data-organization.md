@@ -34,7 +34,7 @@ Some sections are split into multiple transcripts (e.g., `interview1`, `reading2
 ## Layers and annotations
 
 To illustrate **layers** and **annotations** in APLS, let's look at a screen-grab of a single <span class="keyterm">line</span> of speech (aka an <span class="layer">utterance</span>) from the transcript `HD07interview3.eaf`:
-{% include screengrab.html src="demo-page.png" %}
+{% include screengrab.html src="transcript/layers-annotations.png" %}
 <!-- A better screen-grab would: (a) be narrower (not take up as much x-axis real estate), (b) be from a line that doesn't have an annoying duration -->
 
 On the left-hand side of the image is `HD07`, the speaker code for the participant who uttered this speech.
