@@ -82,14 +82,14 @@ Layers can have one of three possible alignments:
 ### What you'll see in APLS
 
 - [Individual <span class="apls-page">Transcript</span> pages]({{ '/doc/view-transcript' | relative_url }})
-  - In the layer selector, the icons ![]({{ '/assets/img/alignment-0.svg' | relative_url }}){: .labbcat-icon } ![]({{ '/assets/img/alignment-2.svg' | relative_url }}){: .labbcat-icon } ![]({{ '/assets/img/alignment-1.svg' | relative_url }}){: .labbcat-icon } denote alignments
+  - In the layer selector, the icons {% include labbcat-icon.html src="alignment-0.svg" %} {% include labbcat-icon.html src="alignment-2.svg" %} {% include labbcat-icon.html src="alignment-1.svg" %} denote alignments
   - When multiple annotations share a word, they crowd into the space above the word (with spaces separating labels). For example:
     {% include screengrab.html src="transcript/layer-alignment.png" %}
     - Most words in this line have one <span class="layer">part_of_speech</span> annotation, but _don't_ and _it's_ each have two (_n't_ is an adverb, and _'s_ is a present-tense 3rd-person-singular verb)
     - Most words in this line are monosyllabic and just have one <span class="layer">syllables</span> annotation, but _Family_ has three <span class="layer">syllables</span> annotations and _Dollar_ has two.
 
 - [<span class="apls-page">Search</span> page]({{ '/doc/search' | relative_url }})
-  - In the layer selector, the icons ![]({{ '/assets/img/alignment-0.svg' | relative_url }}){: .labbcat-icon } ![]({{ '/assets/img/alignment-2.svg' | relative_url }}){: .labbcat-icon } ![]({{ '/assets/img/alignment-1.svg' | relative_url }}){: .labbcat-icon } denote alignments
+  - In the layer selector, the icons {% include labbcat-icon.html src="alignment-0.svg" %} {% include labbcat-icon.html src="alignment-2.svg" %} {% include labbcat-icon.html src="alignment-1.svg" %} denote alignments
   - [Like with cross-scope search, you can do anchoring] [But you can't do e.g. multiple syllables within a word]
 
 - [Exporting data]({{ '/doc/export-data' | relative_url }})
