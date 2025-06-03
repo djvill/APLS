@@ -33,7 +33,7 @@ styles:
   - style: apa
     name: APA 7th edition
     url: https://owl.purdue.edu/owl/research_and_citation/apa_style/apa_style_introduction.html
-last_modified_date: 2025-06-03T16:55:12-04:00
+last_modified_date: 2025-06-03T16:55:59-04:00
 ---
 
 # {{ page.title }}
@@ -103,9 +103,9 @@ versSelect.addEventListener("change", e => {
 {% endfor %}
 {% endcomment %}
 
-### Formatted bibliographic entries
+### Formatted bibliography entries
 
-| Style | Bibliographic entry <!--(click to copy)--> |
+| Style | Bibliography entry <!--(click to copy)--> |
 |-------|--------------------------|
 {% for style in page.styles -%}
 | [{{style.name}}]({{style.url}}) | {% include cite.html style=style.style ref=apls %} |
@@ -175,7 +175,7 @@ Finally, if your contribution gets accepted, your name gets added to APLS's [con
 In most cases where you want to cite APLS, your citation will be to APLS itself (see [above](#citing-apls)).
 However, if you need to cite _this documentation website_, please use one of the following citations:
 
-| Style | Bibliographic entry <!--(click to copy)--> |
+| Style | Bibliography entry <!--(click to copy)--> |
 |-------|--------------------------|
 {% for style in page.styles -%}
 | [{{style.name}}]({{style.url}}) | {% include cite.html style=style.style ref=apls %} |
