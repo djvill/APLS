@@ -1,0 +1,48 @@
+{%- assign authors = include.ref.authors -%}
+{%- assign year = include.ref.year -%}
+{%- assign title = include.ref.title -%}
+{%- assign version = include.ref.version -%}
+{%- assign type = include.ref.type -%}
+{%- assign url = include.ref.url -%}
+
+{%- if include.file_format -%}
+  {%- if include.file_format == "bib" -%}
+  {%- elsif include.file_format == "ris" -%}
+  {%- endif -%}
+{%- elsif include.style -%}
+  {%- if include.style == "unified" -%}
+    {%- for author in authors -%}
+      {%- if forloop.first -%}
+        {%- assign author_last = author | split: " " | last -%}
+        {%- assign author_nonlast = author | split: " " | pop -%}
+        {%- assign author_nonlast = author_nonlast | join: " " -%}
+        {{ author_last | append: ", " | append: author_nonlast }}
+      {%- else -%}
+        {{ author }}
+      {%- endif -%}
+      {%- if forloop.rindex > 2 -%}, {% elsif forloop.rindex == 2 -%}, and {% endif -%}
+    {%- endfor -%}
+    . {{year}}. {{title}}
+    {%- if version %} (version {{version}}){%- endif -%}
+    {%- if type %} [{{type}}]{%- endif -%}
+    .
+    {%- if url %} <{{url}}> (accessed {{ "today" | date: "%B %e, %Y"}}){%- endif -%}
+  {%- elsif include.style == "apa" -%}
+    {%- for author in authors -%}
+      {%- assign author_last = author | split: " " | last -%}
+      {%- assign author_nonlast = author | split: " " | pop -%}
+      {{ author_last }},
+      {%- for init in author_nonlast -%}
+        {{ init | slice: 0 | append: "." | prepend: " " }}
+        {%- if forloop.rindex > 1 %} {% endif -%}
+      {%- endfor -%}
+      {%- if forloop.rindex > 2 -%}, {% elsif forloop.rindex == 2 -%}, & {% endif -%}
+    {%- endfor %} ({{year}}). _{{title}}_
+    {%- if version %} (version {{version}}){%- endif -%}
+    {%- if type %} [{{type | capitalize}}]{%- endif -%}
+    .
+    {%- if url %} Retrieved {{ "today" | date: "%B %e, %Y,"}} from <{{url}}>{%- endif -%}
+  {%- elsif include.style == "ieee" -%}
+  {%- elsif include.style == "lvc" -%}
+  {%- endif -%}
+{%- endif -%}

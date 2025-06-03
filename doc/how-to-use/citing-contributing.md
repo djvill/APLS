@@ -3,7 +3,37 @@ title: Citing and contributing back
 permalink: /doc/citing-contributing
 parent: How to use APLS
 nav_order: 80
-last_modified_date: 2025-05-27T16:46:12-04:00
+cites:
+  - cite: apls
+    year: 2025
+    version: 0.3.0
+    authors: [Dan Villarreal, Barbara Johnstone, Scott Kiesling]
+    title: Archive of Pittsburgh Language and Speech
+    url: https://apls.pitt.edu
+    type: open data resource
+  - cite: apls-doc
+    year: 2025
+    authors: [Dan Villarreal, Jack Rechsteiner]
+    title: Archive of Pittsburgh Language and Speech documentation
+    url: https://djvill.github.io/APLS
+file_formats:
+  - file_format: bib
+    name: BibTeX
+    url: https://www.economics.utoronto.ca/osborne/latex/BIBTEX.HTM
+  - file_format: bib
+    name: Zotero
+    url: https://www.zotero.org/
+  - file_format: ris
+    name: EndNote
+    url: https://endnote.com/
+styles:
+  - style: unified
+    name: Unified style sheet for linguistics
+    url: https://web.archive.org/web/20210719165314/https://www.linguisticsociety.org/sites/default/files/style-sheet_0.pdf
+  - style: apa
+    name: APA 7th edition
+    url: https://owl.purdue.edu/owl/research_and_citation/apa_style/apa_style_introduction.html
+last_modified_date: 2025-06-03T16:40:05-04:00
 ---
 
 # {{ page.title }}
@@ -21,25 +51,30 @@ Our goal is to make contributing back as seamless as possible.
 
 ## Citing APLS
 
+{% assign apls = page.cites | where: "cite", "apls" | first %}
+
 Please select the version of APLS you used.
 If you downloaded any CSV files, the first column should contain the APLS version.
 
 <!-- Version dropdown selector -->
 
+{% comment %}
 ### Citation manager files
 
 | Citation manager | File (click to download) |
 |------------------|--------------------------|
-| BibTeX           | Link                     |
-| Zotero           | BibTeX link              |
-| EndNote          | Link                     |
+{% for file_format in page.file_formats -%}
+| [{{file_format.name}}]({{file_format.url}}) | {% include cite.html file_format=file_format.file_format key="apls_0.3.0" authors=apls.authors ref=apls %} |
+{% endfor %}
+{% endcomment %}
 
 ### Formatted bibliographic entries
 
 | Style | Bibliographic entry (click to copy) |
 |-------|--------------------------|
-| [Unified stylesheet for linguistics](https://www.linguisticsociety.org/sites/default/files/style-sheet_0.pdf) | Formatted |
-| [APA 7th edition](https://owl.purdue.edu/owl/research_and_citation/apa_style/apa_style_introduction.html) | Formatted |
+{% for style in page.styles -%}
+| [{{style.name}}]({{style.url}}) | {% include cite.html style=style.style ref=apls %} |
+{% endfor %}
 
 
 ## Contributing back
@@ -100,7 +135,15 @@ Finally, if your contribution gets accepted, your name gets added to APLS's [con
 
 ## Citing documentation
 
+{% assign apls_doc = page.cites | where: "cite", "apls-doc" | first %}
+
 In most cases where you want to cite APLS, your citation will be to APLS itself (see [above](#citing-apls)).
-However, if you need to cite _this documentation website_, please use the following citation:
+However, if you need to cite _this documentation website_, please use one of the following citations:
+
+| Style | Bibliographic entry (click to copy) |
+|-------|--------------------------|
+{% for style in page.styles -%}
+| [{{style.name}}]({{style.url}}) | {% include cite.html style=style.style ref=apls %} |
+{% endfor %}
 
 <!-- CITE -->
