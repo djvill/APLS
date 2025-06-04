@@ -3,7 +3,8 @@ title: Glossary
 permalink: /doc/glossary
 parent: About APLS
 nav_order: 40
-last_modified_date: 2024-10-16T11:47:55-04:00
+published: no
+last_modified_date: 2025-06-04T17:46:15-04:00
 ---
 
 # {{ page.title }}
