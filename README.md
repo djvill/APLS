@@ -56,11 +56,15 @@ If you clone this repo, copy the following into `.git/hooks/pre-commit`:
 
 # Replace `last_modified_date` timestamp with current time
 # Credit: https://mademistakes.com/notes/adding-last-modified-timestamps-with-git/
-git diff --cached --name-status | egrep -i "^(A|M|R).*\.(md)$" | while read a b; do
+git diff --staged --name-status | egrep -i "^(A|M|R).*\.(md)$" | while read a b; do
 	if grep -q ^last_modified_date $b ; then
+    # If there are unstaged changes (i.e. from git add -p), stash them first, then unstash them after adding last_modified_date
+    patched=$(git diff --name-status | grep $b)
+    [ "$patched" ] && git stash push -kq -m "Pre-commit hook - $b" -- $b
 		cat $b | sed -b "/---.*/,/---.*/s/^last_modified_date:[0-9Tz: -]*\(\r\?\)$/last_modified_date: $(date "+%Y-%m-%dT%H:%M:%S%:z")\1/" > tmp
 		mv tmp $b
 		git add $b
+    [ "$patched" ] && git stash pop -q
 	fi
 done
 
