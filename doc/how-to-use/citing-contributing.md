@@ -52,9 +52,6 @@ Our goal is to make contributing back as seamless as possible.
 
 {% assign apls = page.cites | where: "cite", "apls" | first %}
 
-Please select the version of APLS you used.
-<!-- If you downloaded any CSV files, the first column should contain the APLS version. -->
-
 <label for="version-select">Select the version of APLS you would like to cite:</label>
 <select name="version" id="version-select">
   {% for version in site.versions reversed -%}
@@ -65,33 +62,32 @@ Please select the version of APLS you used.
 {% assign curr_ver = site.versions | last %}
 
 <script>
-const setVersionYear = (version, versionSpan, year, yearSpan) => {
-  versionSpan.forEach(a => a.innerText = version);
-  yearSpan.forEach(a => a.innerText = year);
-};
-const versionYear = (version, versionSpan, yearSpan) => {
+const setVersionYear = version => {
   let year;
   switch(version) {
+    /* BEGIN Injected by Liquid */
     {% for version in site.versions reversed -%}
     case "{{version.version}}":
       year = {{ version.date | date: "%Y" }};
       break;
     {% endfor %}
+    /* END Injected by Liquid */
   }
-  console.log(version, year);
-  setVersionYear(version, versionSpan, year, yearSpan);
-};
-
-window.addEventListener('DOMContentLoaded', () => {
-  const versSelect = document.querySelector("#version-select"),
-        versionSpan = document.querySelectorAll(".version"),
+  const versionSpan = document.querySelectorAll(".version"),
         yearSpan = document.querySelectorAll(".year");
-  let version = '{{ curr_ver.version }}';
-  let year = {{ curr_ver.date | date: "%Y" }};
-  setVersionYear(version, versionSpan, year, yearSpan);
-  versSelect.addEventListener("change", e => versionYear(e.target.value, versionSpan, yearSpan));
+  versionSpan.forEach(a => a.innerText = version);
+  yearSpan.forEach(a => a.innerText = year);
+};
+window.addEventListener('DOMContentLoaded', () => {
+  const versSelect = document.querySelector("#version-select");
+  /* Initial version */
+  setVersionYear(versSelect.value);
+  /* User-selected version */
+  versSelect.addEventListener("change", e => setVersionYear(e.target.value));
 });
 </script>
+
+<!-- If you downloaded any CSV files, the first column should contain the APLS version. -->
 
 {% comment %}
 ### Citation manager files
