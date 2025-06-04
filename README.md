@@ -40,11 +40,11 @@ I decided this limitation was worth not clogging up the repository with a ton of
 This repo works best with a [pre-commit hook](https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks#_committing_workflow_hooks) that does two things:
 
 - Populates/modifies the `last_modified_date` YAML parameter for Markdown files that have this parameter in their headers
-	- Rendered pages include this date [in their footer](https://github.com/just-the-docs/just-the-docs/blob/main/_includes/components/footer.html#L15-L19)
-	- To suppress this for a given page, just don't add `last_modified_date` to the header.
+  - Rendered pages include this date [in their footer](https://github.com/just-the-docs/just-the-docs/blob/main/_includes/components/footer.html#L15-L19)
+  - To suppress this for a given page, just don't add `last_modified_date` to the header.
 - Throws an error if the Jekyll theme is set incorrectly in `_config.yml`, to catch an [un-runnable](https://github.com/djvill/APLS/actions/runs/7646841999) [commit](https://github.com/djvill/APLS/commit/85682ae3a72f2b7727664d36e28366d3325eb1c5#diff-ecec67b0e1d7e17a83587c6d27b6baaaa133f42482b07bd3685c77f34b62d883L13-R14) before it gets pushed to GitHub
-	- If building locally, `theme` parameter needs to be set and `remote_theme` cannot be set
-	- If building on GitHub Pages, it's the opposite
+  - If building locally, `theme` parameter needs to be set and `remote_theme` cannot be set
+  - If building on GitHub Pages, it's the opposite
 
 
 _This hook [does not get cloned with the repo](https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks#_client_side_hooks)._
@@ -69,32 +69,32 @@ timestamp () {
 }
 # Added/modified files
 git diff --staged --name-status | egrep -i "^(A|M).*\.(md)$" | while read a b; do
-	if grep -q ^last_modified_date $b ; then
+  if grep -q ^last_modified_date $b ; then
     timestamp $b
-	fi
+  fi
 done
 # Renamed files
 git diff --staged --name-status | egrep -i "^R.*\.(md)$" | while read a b c; do
-	if grep -q ^last_modified_date $c ; then
+  if grep -q ^last_modified_date $c ; then
     timestamp $c
-	fi
+  fi
 done
 
 # Ensure *staged version* of _config.yml has Jekyll theme options set correctly
 theme=$(git show :_config.yml | grep ^theme)
 remotetheme=$(git show :_config.yml | grep ^remote_theme)
 if [ -n "$theme" ] || [ -z "$remotetheme" ] ; then
-	echo "ERROR: Commit not completed."
-	echo "  Ensure _config.yml has theme commented-out and remote_theme uncommented."
-	echo "  Then try committing again."
-	exit 1
+  echo "ERROR: Commit not completed."
+  echo "  Ensure _config.yml has theme commented-out and remote_theme uncommented."
+  echo "  Then try committing again."
+  exit 1
 fi
 
 # N.B. From https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks#_client_side_hooks:
-# 	It’s important to note that client-side hooks are not copied when you clone a 
-#		repository. If your intent with these scripts is to enforce a policy, you’ll 
-#		probably want to do that on the server side; see the example in An Example Git-
-#		Enforced Policy. (https://git-scm.com/book/en/v2/Customizing-Git-An-Example-Git-Enforced-Policy#_an_example_git_enforced_policy)
+#   It’s important to note that client-side hooks are not copied when you clone a 
+#   repository. If your intent with these scripts is to enforce a policy, you’ll 
+#   probably want to do that on the server side; see the example in An Example Git-
+#   Enforced Policy. (https://git-scm.com/book/en/v2/Customizing-Git-An-Example-Git-Enforced-Policy#_an_example_git_enforced_policy)
 ```
 
 Solution courtesy of https://mademistakes.com/notes/adding-last-modified-timestamps-with-git/.
@@ -114,13 +114,13 @@ As a patch for these deprecation warnings, modify `Gemfile.lock` so it pins the 
 - `assets/`: Site assets (CSS, JavaScript, image files)
 - `doc/`: Documentation---the meat of the public-facing website
 - `files/`: Files relevant to the corpus
-	- `custom-dictionary/`: Custom dictionary entries
-	- `layer-scripts/`: Script files for APLS layers annotated by Python layer manager
+  - `custom-dictionary/`: Custom dictionary entries
+  - `layer-scripts/`: Script files for APLS layers annotated by Python layer manager
 - `./` (this folder):
-	- `.gitignore`: For [Git version control](https://git-scm.com/docs/gitignore)
-	- `_config.yml`: Site configuration file (see [Jekyll doc](https://jekyllrb.com/docs/configuration/))
-	- `_todo.md`: Site maintenance to-do list
-	- `404.md`: Custom "Page not found" error page (see [Jekyll doc](https://jekyllrb.com/tutorials/custom-404-page/))
-	- `LICENSE.md`: Markdown conversion of [legal code for CC BY-NC-SA 4.0 license](https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode)
-	- `README.md`: What you're reading right now!
-	- `SPLASH.md`: APLS homepage (aka splash page), injected via `<iframe>` into [apls.pitt.edu](https://apls.pitt.edu)
+  - `.gitignore`: For [Git version control](https://git-scm.com/docs/gitignore)
+  - `_config.yml`: Site configuration file (see [Jekyll doc](https://jekyllrb.com/docs/configuration/))
+  - `_todo.md`: Site maintenance to-do list
+  - `404.md`: Custom "Page not found" error page (see [Jekyll doc](https://jekyllrb.com/tutorials/custom-404-page/))
+  - `LICENSE.md`: Markdown conversion of [legal code for CC BY-NC-SA 4.0 license](https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode)
+  - `README.md`: What you're reading right now!
+  - `SPLASH.md`: APLS homepage (aka splash page), injected via `<iframe>` into [apls.pitt.edu](https://apls.pitt.edu)
