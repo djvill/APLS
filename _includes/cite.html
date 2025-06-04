@@ -22,8 +22,13 @@
       {%- endif -%}
       {%- if forloop.rindex > 2 -%}, {% elsif forloop.rindex == 2 -%}, and {% endif -%}
     {%- endfor -%}
-    . {{year}}. {{title}}
-    {%- if version %} (version {{version}}){%- endif -%}
+    . {% if version and version == "selector" -%}
+        <span class="year">{{year}}</span>
+      {%- else -%}
+        {{year}}
+      {%- endif -%}
+    . {{title}}
+    {%- if version %} (version <span class="version">{{version}}</span>){%- endif -%}
     {%- if type %} [{{type}}]{%- endif -%}
     .
     {%- if url %} <{{url}}> (accessed {{ "today" | date: "%B %e, %Y"}}){%- endif -%}
@@ -37,8 +42,14 @@
         {%- if forloop.rindex > 1 %} {% endif -%}
       {%- endfor -%}
       {%- if forloop.rindex > 2 -%}, {% elsif forloop.rindex == 2 -%}, & {% endif -%}
-    {%- endfor %} ({{year}}). _{{title}}_
-    {%- if version %} (version {{version}}){%- endif -%}
+    {%- endfor %} (
+    {%- if version and version == "selector" -%}
+      <span class="year">{{year}}</span>
+    {%- else -%}
+      {{year}}
+    {%- endif -%}
+    ). _{{title}}_
+    {%- if version %} (version <span class="version">{{version}}</span>){%- endif -%}
     {%- if type %} [{{type | capitalize}}]{%- endif -%}
     .
     {%- if url %} Retrieved {{ "today" | date: "%B %e, %Y,"}} from <{{url}}>{%- endif -%}

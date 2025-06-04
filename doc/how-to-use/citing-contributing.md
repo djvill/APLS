@@ -5,8 +5,7 @@ parent: How to use APLS
 nav_order: 80
 cites:
   - cite: apls
-    year: 2025
-    version: 0.3.0
+    version: selector
     authors: [Dan Villarreal, Barbara Johnstone, Scott Kiesling]
     title: Archive of Pittsburgh Language and Speech
     url: https://apls.pitt.edu
@@ -33,7 +32,7 @@ styles:
   - style: apa
     name: APA 7th edition
     url: https://owl.purdue.edu/owl/research_and_citation/apa_style/apa_style_introduction.html
-last_modified_date: 2025-06-03T16:55:59-04:00
+last_modified_date: 2025-06-04T13:51:26-04:00
 ---
 
 # {{ page.title }}
@@ -53,14 +52,8 @@ Our goal is to make contributing back as seamless as possible.
 
 {% assign apls = page.cites | where: "cite", "apls" | first %}
 
-{% comment %}
-<!-- Not currently working
-For whatever reason, `const versSelect = document.querySelector("#version-select");` isn't selecting the live-in-the-DOM node. Maybe try putting that within a window.onload listener.
-Once it works, change _includes/cite.html to add classed spans for year & version, and fill them in via the JS
--->
-
 Please select the version of APLS you used.
-If you downloaded any CSV files, the first column should contain the APLS version.
+<!-- If you downloaded any CSV files, the first column should contain the APLS version. -->
 
 <label for="version-select">Select the version of APLS you would like to cite:</label>
 <select name="version" id="version-select">
@@ -72,16 +65,12 @@ If you downloaded any CSV files, the first column should contain the APLS versio
 {% assign curr_ver = site.versions | last %}
 
 <script>
-const versSelect = document.querySelector("#version-select");
-let version = '{{ curr_ver.version }}';
-let year = {{ curr_ver.date | date: "%Y" }};
-versSelect.addEventListener("change", e => {
-  console.log(e.target.value);
-});
-
-//
-versSelect.addEventListener("change", e => {
-  let version = e.target.value;
+const setVersionYear = (version, versionSpan, year, yearSpan) => {
+  versionSpan.forEach(a => a.innerText = version);
+  yearSpan.forEach(a => a.innerText = year);
+};
+const versionYear = (version, versionSpan, yearSpan) => {
+  let year;
   switch(version) {
     {% for version in site.versions reversed -%}
     case "{{version.version}}":
@@ -89,9 +78,20 @@ versSelect.addEventListener("change", e => {
       break;
     {% endfor %}
   }
+  console.log(version, year);
+  setVersionYear(version, versionSpan, year, yearSpan);
+};
+
+window.addEventListener('DOMContentLoaded', () => {
+  const versSelect = document.querySelector("#version-select"),
+        versionSpan = document.querySelectorAll(".version"),
+        yearSpan = document.querySelectorAll(".year");
+  let version = '{{ curr_ver.version }}';
+  let year = {{ curr_ver.date | date: "%Y" }};
+  setVersionYear(version, versionSpan, year, yearSpan);
+  versSelect.addEventListener("change", e => versionYear(e.target.value, versionSpan, yearSpan));
 });
 </script>
-{% endcomment %}
 
 {% comment %}
 ### Citation manager files
@@ -178,7 +178,7 @@ However, if you need to cite _this documentation website_, please use one of the
 | Style | Bibliography entry <!--(click to copy)--> |
 |-------|--------------------------|
 {% for style in page.styles -%}
-| [{{style.name}}]({{style.url}}) | {% include cite.html style=style.style ref=apls %} |
+| [{{style.name}}]({{style.url}}) | {% include cite.html style=style.style ref=apls_doc %} |
 {% endfor %}
 
 <!-- CITE -->
