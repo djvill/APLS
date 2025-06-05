@@ -31,3 +31,13 @@ ul.wrap {
 		}
 	}
 }
+
+/* Suppress margins list-internally, after paragraph */
+.main-content li {
+  > ul, > ol {
+    margin-top: 0;
+  }
+}
+p:has(+ ul, + ol) {
+  margin-bottom: 0.5em;
+}
