@@ -32,7 +32,7 @@ styles:
   - style: apa
     name: APA 7th edition
     url: https://owl.purdue.edu/owl/research_and_citation/apa_style/apa_style_introduction.html
-last_modified_date: 2025-06-04T13:51:26-04:00
+last_modified_date: 2025-06-05T15:01:09-04:00
 ---
 
 # {{ page.title }}
@@ -161,7 +161,7 @@ If you're in a position to contribute back to APLS, then please note that the [t
 More importantly, we think it's the right thing to do, since you can save future researchers the time and effort of reinventing the wheel---it's why we try to make it as easy as possible for researchers to contribute back.
 <!-- Maybe mention some Open Methods-y stuff here -->
 As with other forms of Open Methods, contributing back helps to encourage contributors to adopt reproducible research practices.
-Finally, if your contribution gets accepted, your name gets added to APLS's [contributors page]({{ '/doc/contributors' | relative_url }})---a feather in your cap!
+Finally, if your contribution gets accepted, your name gets added to APLS's [contributors list]({{ '/doc/credits#contributors' | relative_url }})---a feather in your cap!
 
 
 ## Citing documentation

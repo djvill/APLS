@@ -1,9 +1,9 @@
 ---
-title: Contributors
-permalink: /doc/contributors
+title: Credits
+permalink: /doc/credits
 parent: About APLS
 nav_order: 10
-last_modified_date: 2025-01-28T16:55:00-05:00
+last_modified_date: 2025-06-05T15:01:10-04:00
 ---
 
 # {{ page.title }}
