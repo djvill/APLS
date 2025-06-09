@@ -32,19 +32,19 @@ styles:
   - style: apa
     name: APA 7th edition
     url: https://owl.purdue.edu/owl/research_and_citation/apa_style/apa_style_introduction.html
-last_modified_date: 2025-06-05T15:01:09-04:00
+last_modified_date: 2025-06-09T14:21:12-04:00
 ---
 
 # {{ page.title }}
 {:.no_toc}
 
 **If you use APLS, please [cite it](#citing-apls)!**
-Studies show that research software is under-cited. <!-- Add cites -->
+Studies show that [research](https://doi.org/10.1002/asi.23538) [software](https://doi.org/10.1371/journal.pone.0136631) [is](https://doi.org/10.1002/asi.24049) [under-cited](https://doi.org/10.5334/dsj-2024-024). 
 Not citing research software makes it hard for creators to gauge how often it's used, understand how to improve it, or get credit when others use it.
 (Citing APLS is also part of APLS's [terms of use]({{ '/doc/terms#citation' | relative_url }}).)
 
-In addition, if you use APLS in published research, you may be obligated <!-- wording --> to [contribute back](#contributing-back) to the corpus so future fellow users can benefit.
-Our goal is to make contributing back as seamless as possible.
+In addition, if you present or publish research based on APLS, we may ask you to [contribute back](#contributing-back) to the corpus so future fellow users can benefit.
+Our goal is to make contributing back as seamless as possible---simply fill out the ["How did you use APLS?"] form.
 
 {% include page_toc.html collapsible=true %}
 
@@ -110,58 +110,46 @@ window.addEventListener('DOMContentLoaded', () => {
 
 ## Contributing back
 
-<!-- I should really have a "how did you use APLS?" form. A lot of the implementation details for contributing-back (e.g., coverage) can be relegated to that. And then I can make it "we'll reach out to you"-based rather than "you have to submit this whole big thing"-based -->
-
-APLS is a community effort.
-If you've used APLS in published or ongoing research, you may be obligated <!-- wording --> to contribute back to the corpus.
-We're here to help you contribute back to APLS! 
-Simply fill out the ["How did you use APLS?" form](LINK), and we'll contact you with more information about next steps.
+Let's say you've downloaded some APLS data and modified or added to it in some way---you've coded some sociolinguistic variable, tagged some stances, or corrected a transcription.
+This is valuable information that future users of APLS could benefit from!
+If you've used APLS in published or ongoing research, please fill out the ["How did you use APLS?"] form (even if you don't think you have anything to contribute back), and we'll contact you with more information about next steps.
+Finally, if your contribution gets accepted, your name gets added to APLS's [contributors list]({{ '/doc/credits#users-who-contributed-annotations' | relative_url }})---a feather in your cap!
 
 
 ### What we're looking for
 
 This covers two main cases:
 
-- Adding annotations to your own downloaded version of APLS data
+- **Adding annotations** to your own downloaded version of APLS data
 	- Note: This doesn't have to cover the whole corpus, a whole speaker, or even a whole transcript
 	- Examples:
 		- Coding tokens of a sociolinguistic variable
 		- Tagging stretches of interview speech for stances or topics
 		- Identifying ideal formant-measurement settings for particular tokens
 		- Generating [gradient predictions](https://www.journal-labphon.org/article/id/6264/) of auto-coded variables
-		- Grouping participants into class categories based on education and occupation <!-- Link to participant attributes page/section -->
-- Correcting issues in current annotations
-	- This could cover either [human-generated or computer-generated]({{ '/doc/data-sources#humans-and-computers' | relative_url }}) <!-- check heading link later --> annotations
+		- Grouping participants into class categories based on <span class="participant-attr">education</span> and <span class="participant-attr">occupation</span>
+- **Correcting issues** in current annotations
+	- This could cover either <!-- [human-generated or computer-generated]({{ '/doc/data-sources#humans-and-computers' | relative_url }}) -->human-generated or computer-generated annotations
 	- Examples:
 		- Identifying transcription errors, or identifying correct transcriptions for passages marked `[unclear]`
 		- Correcting morphemic parses or segmental alignments
 		- Running part-of-speech tagging through a different POS algorithm of your choice
 
-<!-- is this too many examples? -->
-
 In addition, we welcome:
 
-- Any feedback on APLS's user interface (the corpus itself or this website)
+- Any feedback on APLS's user interface or this documentation website
 - Requests for particular features
+- Requests for new layers
 - Calling our attention to something that needs [troubleshooting]({{ '/doc/troubleshooting' | relative_url }})
 
 
-However, you are _not_ obligated <!-- wording --> to contribute back to the corpus if you use APLS data:
+However, you are _not_ obligated to contribute back to the corpus if you use APLS data:
 
 - To create stimuli for perceptual/experimental research
 - To train some sort of language model
 	- Exception: The model results in some annotations of existing APLS data that you can contribute back
 - To inform fieldwork methods in Pittsburgh or other places
 - Completely 'as is' without any further annotations or corrections
-
-
-### Why contribute back to APLS?
-
-If you're in a position to contribute back to APLS, then please note that the [terms of use]({{ '/doc/terms' | relative_url }}) technically obligate <!-- wording --> you to do so.
-More importantly, we think it's the right thing to do, since you can save future researchers the time and effort of reinventing the wheel---it's why we try to make it as easy as possible for researchers to contribute back.
-<!-- Maybe mention some Open Methods-y stuff here -->
-As with other forms of Open Methods, contributing back helps to encourage contributors to adopt reproducible research practices.
-Finally, if your contribution gets accepted, your name gets added to APLS's [contributors list]({{ '/doc/credits#contributors' | relative_url }})---a feather in your cap!
 
 
 ## Citing documentation
@@ -177,4 +165,4 @@ However, if you need to cite _this documentation website_, please use one of the
 | [{{style.name}}]({{style.url}}) | {% include cite.html style=style.style ref=apls_doc %} |
 {% endfor %}
 
-<!-- CITE -->
+{% include linklist.html %}
