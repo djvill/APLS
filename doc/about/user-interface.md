@@ -3,7 +3,7 @@ title: User interface
 permalink: /doc/user-interface
 parent: About APLS
 nav_order: 35
-last_modified_date: 2025-05-27T16:16:13-04:00
+last_modified_date: 2025-06-09T13:11:31-04:00
 ---
 
 # {{ page.title }}
@@ -198,6 +198,8 @@ The comparison images in this section come from the [HD05interview2.eaf](https:/
   - **Enforcing data best practices**: There are a handful of columns that should always be included in an exported CSV because they provide a "paper trail" that can help contextualize the exported data well into the future. But new users who don't know what (e.g.) _Match ID_ is for might think it's optional and regret losing the "paper trail" later. (This comes directly from Dan's experience!) Now, these columns are required (selected by default and can't be deselected).
   - **More consistent**: Where possible, checkboxes have been relabeled to match column names in the exported CSV.
   - **Improved layer picker**: See [above](#layer-picker-transcripts).
+- **Performance information**: The page now includes information about how long it took APLS to retrieve the matches for that search. This is useful for benchmarking APLS's performance and determining [whether it's running slower than usual]({{ '/doc/troubleshooting#apls-is-slow' | relative_url }}).
+  {% include compare-ui.html file="matches/headline" caption='The top of the <span class="apls-page">Search results</span> page (showing a search for `pitt` on the orthography layer)' %}
 
 
 ## <span class="apls-page">Transcripts</span> and <span class="apls-page">Participants</span> pages
