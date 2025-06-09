@@ -4,7 +4,7 @@ layout: default
 permalink: /files/custom-entries
 parent: Custom dictionary
 search_exclude: true
-last_modified_date: 2025-05-29T14:10:13-04:00
+last_modified_date: 2025-06-09T14:22:51-04:00
 ---
 
 # {{ page.title }}
@@ -192,6 +192,7 @@ These custom entries just fill in the gaps.
 - Arby's
 - Baba's
 - Blaw-Knox
+- Buncher
 - C-SPAN
 - Chi-Chi
 - Cigna
