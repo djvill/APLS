@@ -1,6 +1,8 @@
 ## _screengrab-manip.R
 ##
 ## Usage: Rscript _screengrab-manip.R FILE1 FILE2 etc.
+## To loop over a directory:
+## find ../home/*.png -print0 | xargs -r0 Rscript _screengrab-manip.R
 
 ##Parameters
 ##YAML file where manipulation metadata is stored
@@ -15,7 +17,7 @@ suppressPackageStartupMessages(library(dplyr))
 suppressWarnings(suppressPackageStartupMessages(library(magick)))
 
 ##Check that all arguments are files defined in manip_key
-to_manip <- commandArgs(trailingOnly = TRUE)
+to_manip <- sub("^\\.\\./", "", commandArgs(trailingOnly = TRUE))
 yaml <- read_yaml(manip_key)
 manipable <- map_chr(yaml, "screengrab")
 unmanipable <- setdiff(to_manip, manipable)
@@ -88,12 +90,26 @@ if ("drawing" %in% colnames(manip)) {
     ))
 }
 
-##Crop
-manip <- manip |>
-  mutate(geometry = geometry_area(width, height, offset_x, offset_y), ##paste0(width, "x", height, "+", offset_x, "+", offset_y)
-         .by=screengrab) |>
-  mutate(out_image = map2(out_image, geometry, image_crop))
+##Crop and write
+if (any(c("width", "height", "offset_x", "offset_y") %in% colnames(manip))) {
+  ##Crop
+  cropped <- 
+    manip |>
+    filter(if_all(c(width, height, offset_x, offset_y), ~ !is.na(.x))) |>
+    mutate(geometry = geometry_area(width, height, offset_x, offset_y), ##paste0(width, "x", height, "+", offset_x, "+", offset_y)
+           .by=screengrab) |>
+    mutate(out_image = map2(out_image, geometry, image_crop))
+  uncropped <- manip |>
+    filter(if_all(c(width, height, offset_x, offset_y), is.na))
+  
+  ##Write
+  with(cropped, 
+       walk2(out_image, out_path, image_write))
+  with(uncropped, 
+       walk2(out_image, out_path, image_write))
+} else {
+  ##Nothing to crop
+  with(manip, 
+       walk2(out_image, out_path, image_write))
+}
 
-##Write
-with(manip, 
-     walk2(out_image, out_path, image_write))
