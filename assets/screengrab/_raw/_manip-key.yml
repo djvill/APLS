@@ -15,21 +15,20 @@
 - screengrab: transcript/layers-annotations.png
   instructions:
     - Log in as test-student
-    - Set browser zoom to 100%
-    - Load https://apls.pitt.edu/labbcat/transcript?transcript=CB01reading2.eaf
+    - "Set browser zoom to **150%**"
+    - Load https://apls.pitt.edu/labbcat/transcript?transcript=HD07interview3.eaf
     - Select speech_rate, part_of_speech, word
-    - "`window.scrollTo(0, 690); document.getElementById('players').remove();`"
-    - Put cursor over bottom-right corner of last NN
-    - Wait for tooltip to load
+    - "`window.scrollTo(0, 395); document.getElementById('media').remove();`"
+    - "Hide watermark: In Chrome console, select `html` element and deselect `background-image`"
     - Save
   offset_x: 0
   offset_y: 60  ##Top of address bar
-  width: 1540
-  height: 205
-  overlay: 
-    - image: _pointer.png
-      offset_x: 885
-      offset_y: 200
+  width: 1920
+  height: 250
+  # overlay: 
+    # - image: _pointer.png
+      # offset_x: 885
+      # offset_y: 200
     ##Multiple overlays are supported
     # - image: pointer.png
       # offset_x: 985
@@ -100,7 +99,7 @@
     - Load https://apls.pitt.edu/labbcat/transcript?transcript=CB01pairs.eaf
     - "Hide watermark: In Chrome console, select `html` element and deselect `background-image`"
     - Select overlap, speech_rate, foll_pause, word, segment
-    - "`window.scrollTo(0, 150); document.getElementById('players').remove()`"
+    - "`window.scrollTo(0, 150); document.getElementById('media').remove()`"
     - Save
   offset_x: 155
   offset_y: 210
@@ -340,3 +339,40 @@
   offset_y: 270
   width: 1200
   height: 405
+
+- screengrab: home/overview.png
+  instructions:
+    - Log in as test-student
+    - Set browser zoom to 100%
+    - Save
+
+- screengrab: home/header-menu.png
+  instructions: See home/overview.png
+  in_path: home/overview.png
+  offset_x: 560
+  offset_y: 130
+  width: 850
+  height: 30
+
+- screengrab: home/footer-menu.png
+  instructions: See home/overview.png
+  in_path: home/overview.png
+  offset_x: 320
+  offset_y: 805
+  width: 1265
+  height: 110
+
+- screengrab: home/links-stats.png
+  instructions: See home/overview.png
+  in_path: home/overview.png
+  offset_x: 235
+  offset_y: 300
+  width: 1440
+  height: 230
+
+- screengrab: license/license.png
+  instructions:
+    - In an *incognito* window, log in as test-student
+    - Using Chrome's DevTools, capture a full-size screenshot
+    - "Save as `license/full.png`"
+    - In Paint, manually crop and add ellipsis

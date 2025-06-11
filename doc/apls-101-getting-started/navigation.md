@@ -4,7 +4,7 @@ contributors: [Dan Villarreal, Jack Rechsteiner]
 permalink: /doc/navigation
 parent: APLS 101/Getting started
 nav_order: 50
-last_modified_date: 2025-05-27T16:16:13-04:00
+last_modified_date: 2025-06-11T13:21:52-04:00
 ---
 
 # {{ page.title }}
@@ -26,7 +26,7 @@ When you load the <span class="apls-page">Home</span> page, you'll see the follo
 
 The header and footer menus are on every APLS page, so we'll introduce them now.
 
-{% include screengrab.html src="home/home.png" %}
+{% include screengrab.html src="home/overview.png" %}
 
 
 ## Header menu
@@ -70,7 +70,7 @@ The <span class="keyterm">footer menu</span> provides links with information abo
 
 Unique to <span class="apls-page">Home</span> page are links to some useful APLS pages and an overview of the data in APLS.
 
-{% include screengrab.html src="home/home-page.png" %}
+{% include screengrab.html src="home/links-stats.png" %}
 
 From left to right, the available links are:
 

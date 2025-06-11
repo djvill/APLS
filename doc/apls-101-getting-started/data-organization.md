@@ -4,7 +4,7 @@ contributors: [Dan Villarreal, Jack Rechsteiner]
 permalink: /doc/data-organization
 parent: APLS 101/Getting started
 nav_order: 30
-last_modified_date: 2025-05-27T12:31:57-04:00
+last_modified_date: 2025-06-11T13:21:52-04:00
 ---
 
 # {{ page.title }}
@@ -21,11 +21,38 @@ The most important organizational units in LaBB-CAT corpora are <span class="key
 ## Participants
 
 The **participants** in APLS are the interviewees, the interviewers, and occasionally a bystander whose speech is captured in the recording.
-Interviewees in APLS are identified by an anonymized <span class="keyterm">speaker code</span> that includes their neighborhood abbrevation (e.g., `CB01`, `HD17`).
+Interviewees in APLS are identified by an anonymized <span class="keyterm">speaker code</span> that includes their neighborhood abbrevation (e.g., `CB01`, `HD17`).[^demographics]
+
+[^demographics]:
+    Here's the demographic breakdown of APLS interviewees:
+    
+    | Neighborhood | Count |
+    |--------------|-------|
+    | Cranberry Township | 6 |
+    | Forest Hills | 12 |
+    | Hill District | 10 |
+    | Lawrenceville | 12 |
+    
+    | Gender | Count |
+    |--------|-------|
+    | Female | 24    |
+    | Male   | 16    |
+    
+    | Education | Count |
+    |-----------|-------|
+    | High school | 16 |
+    | Undergraduate | 13 |
+    | Graduate | 11 |
+    
+    Year of birth:
+    
+    | Minimum | 1st quartile | Median | 3rd quartile | Maximum |
+    |---------|--------------|--------|--------------|---------|
+    | 1920    | 1941         | 1955   | 1967         | 1986    |
 
 ## Transcripts
 
-Interviews are divided into several **transcripts** (corresponding to the original recording files), named after the interviewee and interview section.
+Each interview is divided into multiple **transcripts** (corresponding to the original recording files), named after the interviewee and interview section.
 For example, the file `FH10pairs.eaf` contains the minimal pairs task from the interviewee FH10.[^eaf]
 Some sections are split into multiple transcripts (e.g., `interview1`, `reading2`).
 
