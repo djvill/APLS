@@ -3,7 +3,7 @@ title: Layer typology
 permalink: /doc/layer-typology
 parent: Layers and attributes
 nav_order: 10
-last_modified_date: 2025-05-27T16:16:18-04:00
+last_modified_date: 2025-06-16T14:12:33-04:00
 ---
 
 # Layers: {{ page.title }}
@@ -249,25 +249,25 @@ Here are additional notations:
 {% include layer-table.html property="notation.additional" categories="DISC pause,Stress markers,Syllable boundary,Hesitation marker,Transcription pause/question markers,Redaction marker,Morpheme boundary" not_synced=true no_caps=true %}
 
 
-## Alignment dependency
+## Segment dependency
 
 Some layers need information about individual speech sounds: which sounds are in a word, and where these sounds begin and end.
 For example, a word's <span class="layer">phonemes</span> annotation is only possible if the word has <span class="layer">segment</span> annotations.
 Other layers (like <span class="layer">part_of_speech</span>) don't depend on <span class="layer">segment</span> annotations.
-This distinction is captured by <span class="keyterm">alignment dependency</span>:
+This distinction is captured by <span class="keyterm">segment dependency</span>:
 
-| Alignment-dependent? | Meaning |
-|----------------------|---------|
-| True                 | Annotations are only present if the line contains <span class="layer">segment</span> annotations---in other words, if the line is <span class="keyterm">aligned</span> |
-| False                | Annotations can be present even if the line is not <span class="keyterm">aligned</span> |
+| Segment-dependent? | Meaning |
+|--------------------|---------|
+| True               | Annotations are only present if the line contains <span class="layer">segment</span> annotations |
+| False              | Annotations can be present even if the line is missing <span class="layer">segment</span> annotations |
 {: .layer-props .no-keyterm }
 
 <!--
 In APLS, <span class="keyterm">alignment</span> is generally on a line-by-line basis, meaning that most lines are either completely aligned or completely _not_ aligned.
-Lines that are completely _not_ aligned won't have _any_ annotations on alignment-dependent layers.
+Lines that are completely _not_ aligned won't have _any_ annotations on segment-dependent layers.
 -->
 
-A layer can be alignment-dependent even if the <span class="layer">segment</span> layer isn't an input to the layer.
+A layer can be segment-dependent even if the <span class="layer">segment</span> layer isn't an input to the layer.
 For example, <span class="layer">speech_rate</span> (a phrase layer) takes <span class="layer">syllables</span> as input, which takes <span class="layer">segment</span> as input;
 if <span class="layer">segment</span> has no annotations in a turn, then <span class="layer">syllables</span> won't have any annotations, which means <span class="layer">speech_rate</span> won't have any annotations.
 
@@ -281,9 +281,9 @@ if <span class="layer">segment</span> has no annotations in a turn, then <span c
   - [False negatives in search because turn isn't aligned]
 
 
-### Layers by alignment dependency
+### Layers by segment dependency
 
-{% include layer-table.html property="alignment_dependent" categories="true,false" exclude_proj="temp" not_synced=true %}
+{% include layer-table.html property="segment_dependent" categories="true,false" exclude_proj="temp" not_synced=true %}
 
 
 ## Project

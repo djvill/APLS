@@ -27,11 +27,11 @@ inputs:
     type: layer
   - input: phonemes.py
     type: script
-alignment_dependent: yes
+segment_dependent: yes
 versions:
   first_appeared: 0.1.0
   last_modified: 0.1.3
-last_modified_date: 2025-02-05T16:04:45-05:00
+last_modified_date: 2025-06-16T14:12:22-04:00
 ---
 
 **Fill longer description here**

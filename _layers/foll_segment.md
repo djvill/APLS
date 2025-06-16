@@ -31,11 +31,11 @@ inputs:
     type: layer
   - input: foll_segment.py
     type: script
-alignment_dependent: yes
+segment_dependent: yes
 versions:
   first_appeared: 0.1.0
   last_modified: 0.1.2
-last_modified_date: 2025-01-11T16:51:52-05:00
+last_modified_date: 2025-06-16T14:12:10-04:00
 ---
 
 **Fill longer description here**

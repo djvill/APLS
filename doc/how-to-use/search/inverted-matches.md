@@ -5,7 +5,7 @@ permalink: /doc/inverted-matches
 parent: Searching the corpus
 grand_parent: How to use APLS
 nav_order: 50
-last_modified_date: 2025-05-27T16:16:15-04:00
+last_modified_date: 2025-06-16T14:12:32-04:00
 ---
 
 # {{ page.title }}
@@ -69,6 +69,6 @@ Two contexts: (1) _doesn't match_ REGEX looks for "annotations that aren't REGEX
 The former belongs on this page, the latter probably not (it's connected to _doesn't match_ by form but not by function).
 But the larger topic deserves its own page.
 
-Can frame in terms of (1) aligment dependency, (2) other structural empties (e.g., all words w/o an orthography annotation are redacted [minus some weird ones that are just . or - or ?]), (3) rando missings (eventually link to data coverage page)
+Can frame in terms of (1) segment dependency, (2) other structural empties (e.g., all words w/o an orthography annotation are redacted [minus some weird ones that are just . or - or ?]), (3) rando missings (eventually link to data coverage page)
 {% endcomment %}
 

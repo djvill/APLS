@@ -30,11 +30,11 @@ inputs:
     type: dictionary
   - input: APLS custom dictionary
     type: dictionary
-alignment_dependent: no
+segment_dependent: no
 versions:
   first_appeared: 0.1.0
   last_modified: 0.1.0
-last_modified_date: 2025-03-24T11:44:57-04:00
+last_modified_date: 2025-06-16T14:12:24-04:00
 ---
 
 ### Notes

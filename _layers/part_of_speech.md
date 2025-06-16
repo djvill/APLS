@@ -27,11 +27,11 @@ inputs:
     type: layer
   - input: Stanford POS Tagger
     type: algorithm
-alignment_dependent: no
+segment_dependent: no
 versions:
   first_appeared: 0.1.1
   last_updated: 0.1.2
-last_modified_date: 2025-01-11T16:51:58-05:00
+last_modified_date: 2025-06-16T14:12:22-04:00
 ---
 
 

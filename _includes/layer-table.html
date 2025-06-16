@@ -5,7 +5,7 @@
   
     {% include layer-table.html property="scope" categories="span,phrase,word,segment" exclude_proj="temp,testing" %}
     
-    {% include layer-table.html property="alignment_dependent" categories="true,false" exclude_proj="temp,testing" not_synced=true %}
+    {% include layer-table.html property="segment_dependent" categories="true,false" exclude_proj="temp,testing" not_synced=true %}
     
     {% include layer-table.html property="alignment" categories="complete interval,sub-interval" row_property="scope" row_categories="span,phrase,word,segment" exclude_proj="temp,testing" %}
 {% endcomment %}

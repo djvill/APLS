@@ -31,11 +31,11 @@ inputs:
     type: layer
   - input: CELEX English
     type: dictionary
-alignment_dependent: no
+segment_dependent: no
 versions:
   first_appeared: 0.1.0
   last_modified: 0.1.0
-last_modified_date: 2025-01-11T16:51:54-05:00
+last_modified_date: 2025-06-16T14:12:14-04:00
 ---
 
 **Fill longer description here**

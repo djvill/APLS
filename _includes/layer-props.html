@@ -23,7 +23,7 @@
       <th>Vertical peers</th>
       <th>Data type</th>
       <th>Primary notation</th>
-      <th>Alignment-dependent</th>
+      <th>Segment-dependent</th>
       <th>Project</th>
     </tr>
   </thead>
@@ -37,7 +37,7 @@
         <td>{{ layer.synced.vertical_peers | capitalize }}</td>
         <td>{{ layer.synced.data_type | capitalize }}</td>
         <td>{{ layer.notation.primary }}</td>
-        <td>{{ layer.alignment_dependent | capitalize }}</td>
+        <td>{{ layer.segment_dependent | capitalize }}</td>
         <td>{{ layer.synced.project }}</td>
       </tr>
     {% else %}
@@ -49,7 +49,7 @@
           <td>{{ layer.synced.vertical_peers | capitalize }}</td>
           <td>{{ layer.synced.data_type | capitalize }}</td>
           <td>{{ layer.notation.primary }}</td>
-          <td>{{ layer.alignment_dependent | capitalize }}</td>
+          <td>{{ layer.segment_dependent | capitalize }}</td>
           <td>{{ layer.synced.project }}</td>
         </tr>
       {% endfor %}

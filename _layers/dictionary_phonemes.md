@@ -35,11 +35,11 @@ inputs:
     type: layer
   - input: pronounce
     type: layer
-alignment_dependent: no
+segment_dependent: no
 versions:
   first_appeared: 0.1.0
   last_updated: 0.1.2
-last_modified_date: 2025-01-11T16:51:51-05:00
+last_modified_date: 2025-06-16T14:12:08-04:00
 ---
 
 This layer contains all possible phonemic representations of the word.

@@ -26,11 +26,11 @@ notation:
 inputs:
   - input: orthography
     type: layer
-alignment_dependent: no
+segment_dependent: no
 versions:
   first_appeared: 0.1.0
   last_modified: 0.1.0
-last_modified_date: 2025-02-06T17:14:29-05:00
+last_modified_date: 2025-06-16T14:12:12-04:00
 ---
 
 Frequency counts do not include transcripts in the categories "reading" or "pairs", since these would inflate frequency counts for words in those tasks.

@@ -25,11 +25,11 @@ notation:
 inputs:
   - input: orthography
     type: layer
-alignment_dependent: no
+segment_dependent: no
 versions:
   first_appeared: 0.1.0
   last_modified: 0.1.0
-last_modified_date: 2025-03-24T11:44:57-04:00
+last_modified_date: 2025-06-16T14:12:19-04:00
 ---
 
 ### Notes

@@ -25,12 +25,12 @@ notation:
 inputs:
   - input: dictionary_phonemes
     type: layer
-alignment_dependent: no
+segment_dependent: no
 versions:
   first_appeared: 0.1.1
   last_modified: 0.1.2
   deleted: 0.2.1
-last_modified_date: 2025-03-24T12:07:52-04:00
+last_modified_date: 2025-06-16T14:12:06-04:00
 ---
 
 **Fill longer description here**

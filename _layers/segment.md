@@ -29,11 +29,11 @@ inputs:
     type: algorithm
   - input: htk
     type: layer
-alignment_dependent: yes
+segment_dependent: yes
 versions:
   first_appeared: 0.1.0
   last_modified: 0.1.0
-last_modified_date: 2025-05-07T14:48:49-04:00
+last_modified_date: 2025-06-16T14:12:27-04:00
 ---
 
 **Fill longer description here**
