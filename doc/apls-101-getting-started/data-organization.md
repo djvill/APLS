@@ -4,7 +4,7 @@ contributors: [Dan Villarreal, Jack Rechsteiner]
 permalink: /doc/data-organization
 parent: APLS 101/Getting started
 nav_order: 30
-last_modified_date: 2025-06-11T13:21:52-04:00
+last_modified_date: 2025-06-16T12:52:31-04:00
 ---
 
 # {{ page.title }}
@@ -44,11 +44,29 @@ Interviewees in APLS are identified by an anonymized <span class="keyterm">speak
     | Undergraduate | 13 |
     | Graduate | 11 |
     
-    Year of birth:
-    
-    | Minimum | 1st quartile | Median | 3rd quartile | Maximum |
-    |---------|--------------|--------|--------------|---------|
-    | 1920    | 1941         | 1955   | 1967         | 1986    |
+    <table>
+      <thead>
+        <tr>
+          <th colspan="5" style="text-align:center;">Year of birth</th>
+        </tr>
+        <tr>
+          <th>Minimum</th>
+          <th>1st quartile</th>
+          <th>Median</th>
+          <th>3rd quartile</th>
+          <th>Maximum</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1920</td>
+          <td>1941</td>
+          <td>1955</td>
+          <td>1967</td>
+          <td>1986</td>
+        </tr>
+      </tbody>
+    </table>
 
 ## Transcripts
 
