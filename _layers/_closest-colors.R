@@ -22,7 +22,10 @@ option_list=list(
               help="if x11, include SGI colors"),
   make_option(c("--num-colors", "-n"), type="integer", default=10, 
               metavar="Rows", 
-              help="number of matching colors to print")
+              help="number of matching colors to print"),
+  make_option(c("--ref-color", "-f"), type="character", default="NULL", 
+              metavar="color", 
+              help="color to include in the matching colors (e.g., #FFB81C, hot pink), even if it's not in the top n")
 )
 opt_parser <- OptionParser("usage: %prog [options] color", option_list,
                            description="  Find closest names for hex code or R,G,B triple")
@@ -30,12 +33,15 @@ opt <- parse_args(opt_parser, positional_arguments=1, convert_hyphens_to_undersc
 ##Color (positional argument)
 color <- opt$args
 ##Optional arguments
-##To replicate https://shallowsky.com/colormatch/index.php, set to (x11, TRUE, FALSE, 1)
+##To replicate https://shallowsky.com/colormatch/index.php, set to (x11, TRUE, FALSE, 1, NULL)
 color_set <- opt$options$color_set
 suffixed <- opt$options$suffixed
 sgi <- opt$options$sgi
 n <- opt$options$n
+indiv_ref <- opt$options$ref_color
+indiv_ref <- if (is.null(indiv_ref) || indiv_ref=="NULL") NULL else indiv_ref
 
+##Color parsing functions
 ##Parse color from hex code or RGB triple
 hex2rgb <- function(x) {
   x |>
@@ -43,23 +49,44 @@ hex2rgb <- function(x) {
     t() |>
     as.data.frame()
 }
-if (grepl("^#?[0-9A-Fa-f]{6}$", color)) {
-  if (nchar(color)==6) {
-    color <- paste0("#", color)
+##Check that string is a valid color and convert to dataframe
+color_to_dataframe <- function(x, ref_colors) {
+  ##Hex code (hashtag optional) or R,G,B triple
+  if (missing(ref_colors)) {
+    if (grepl("^#?[0-9A-Fa-f]{6}$", x)) {
+      if (nchar(x)==6) {
+        x <- paste0("#", x)
+      }
+      color <- hex2rgb(x)
+    } else if (grepl("^\\d{1,3},\\d{1,3},\\d{1,3}$", x)) {
+      color <-
+        tibble(rgb = x) |>
+        separate_wider_delim(rgb, ",", names=c("red","green","blue")) |>
+        mutate(across(everything(), as.integer)) |>
+        filter(if_all(everything(), \(x) between(x, 0, 255)))
+      if (nrow(color) == 0) {
+        stop("RGB colors must be between 0 and 255")
+      }
+    } else {
+      stop("Color must be a 6-digit hex code or a red,green,blue triple")
+    }
+  } else {
+    if (!"color" %in% colnames(ref_colors)) {
+      stop("ref_colors is missing a color column")
+    }
+    if (!x %in% ref_colors$color) {
+      stop("color is not in ref_colors")
+    }
+    color <-
+      ref_colors |>
+      filter(color==x) |>
+      select(red, green, blue)
   }
-  color <- hex2rgb(color)
-} else if (grepl("^\\d{1,3},\\d{1,3},\\d{1,3}$", color)) {
-  color <-
-    tibble(rgb = color) |>
-    separate_wider_delim(rgb, ",", names=c("red","green","blue")) |>
-    mutate(across(everything(), as.integer)) |>
-    filter(if_all(everything(), \(x) between(x, 0, 255)))
-  if (nrow(color) == 0) {
-    stop("RGB colors must be between 0 and 255")
-  }
-} else {
-  stop("Color must be a 6-digit hex code or a red,green,blue triple")
+  color
 }
+
+##Parse input color
+color <- color_to_dataframe(color)
 
 ##Get dataframe of reference colors
 if (color_set=="x11") {
@@ -111,7 +138,38 @@ compare_colors <- compare_colors |>
           color="(Input)",
           .before=1)
 
+##Get comparison subset
+compare_subset <-
+  compare_colors |>
+  slice(1:(n+1))
+
+##Change row names; optionally add specific reference color
+if (!is.null(indiv_ref)) {
+  ##Get full ref_colors row for indiv_ref
+  tryCatch(indiv_df <- color_to_dataframe(indiv_ref, ref_colors),
+           ##More informative user-facing error
+           error = function(e) {
+             if (e$message=="color is not in ref_colors") {
+               stop("ref-color '", indiv_ref, "' is not defined in the ", color_set, " color set")
+             } else {
+               stop(e)
+             }
+           })
+  indiv_df <- color_to_dataframe(indiv_ref, ref_colors) |>
+    semi_join(compare_colors, y=_, c("red","green","blue"))
+  compare_subset <- compare_subset |>
+    union(indiv_df) |>
+    as.data.frame()
+  if (nrow(compare_subset)==n+2) {
+    indiv_row <- which(compare_colors$color==indiv_ref)
+    rownames(compare_subset) <- c("", 1:n, indiv_row)
+  } else {
+    rownames(compare_subset) <- c("", 1:n)
+  }
+} else {
+  compare_subset <- as.data.frame(compare_subset)
+  rownames(compare_subset) <- c("", 1:n)
+}
+
 ##Output
-compare_colors |>
-  slice(1:(n+1)) |>
-  as.data.frame()
+compare_subset
