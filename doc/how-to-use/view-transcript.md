@@ -6,7 +6,7 @@ parent: How to use APLS
 has_children: yes
 has_toc: no
 nav_order: 20
-last_modified_date: 2025-05-27T16:16:17-04:00
+last_modified_date: 2025-06-20T11:13:20-04:00
 ---
 
 # {{ page.title }}
@@ -16,10 +16,13 @@ A <span class="keyterm">transcript</span> is a collection of <span class="keyter
 In APLS, each transcript has a single <span class="keyterm">main participant</span> and corresponds to a section of that participant's sociolinguistic interview.
 Each transcript has its own page in APLS.
 
+Because the <span class="apls-page">Transcript</span> page provides the most easily digestible view of how data is organized in APLS, we'll discuss a lot of data-organization concepts on this documentation page (especially in the section on [viewing layer data](#viewing-layer-data)).
+If you need a refresher on the basics, check out the [Data organization in LaBB-CAT]({{ '/doc/data-organization' | relative_url }}) page.
+
 {: .note .no-collapse }
 > On this page, we use the term _transcript_ for the underlying data in the APLS corpus, and _<span class="apls-page">Transcript</span> **page**_ for the webpage you can use to view transcript data.
 
-{: .try-it }
+{: .try-it .no-collapse }
 > As we'll cover [below](#accessing-transcript-pages), there are a few ways to access individual <span class="apls-page">Transcript</span> pages.
 > The easiest is the [<span class="apls-page">Transcripts</span> page]({{ '/doc/browse-transcripts' | relative_url }}) at <https://apls.pitt.edu/labbcat/transcripts>. 
 > Go to that page and select a transcript to view.
@@ -28,62 +31,480 @@ Each transcript has its own page in APLS.
 
 ## What you can do on the <span class="apls-page">Transcript</span> page
 
+- [Read](#reading-the-transcript) the transcript
+- Follow along with the transcript as you [listen](#listening-to-the-transcript)
+- [Navigate](#navigating-to-other-transcripts) to other transcripts in the same interview
+- View annotations on different [layers](#viewing-layer-data)
+- Create [permalinks](#creating-permalinks) for individual lines or words in the transcript
+- View the transcript's [attributes](#viewing-transcript-attributes)
+- Find more information on [participants](#viewing-participant-information) in the transcript
+- [Search](#searching-the-transcript-or-participants) the transcript or its participants for linguistic patterns
+- [Download](#downloading-audio) the transcript audio in wav or mp3 formats
+- [Export](#exporting-the-transcript) the entire transcript to various file formats
+- [Open](#opening-utterances-in-praat) individual lines of the transcript in [Praat]
+
+<!-- Maybe move "Accessing" here as "How to get there", though the section is kinda long -->
 
 
-## <span class="apls-page">Transcript</span> page layout
+### Page layout
 
-Individual <span class="apls-page">Transcript</span> pages have two sections, plus some elements that remain in the same position on the page as you scroll. This is highlighted in the following screengrab:
+Individual <span class="apls-page">Transcript</span> pages have two sections, plus some elements that stay in the same place as you scroll down the page.
+This is highlighted in the following image, which displays the top of the <span class="apls-page">Transcript</span> page for `CB01interview3.eaf`:
 
 {% include screengrab.html src="transcript/overview.png" %}
 
-- Sections: 
-  - The [transcript header](#transcript-header), highlighted in **red**{:.hl-1}. This includes information about the transcript, a menu for exporting the transcript in various formats, and settings for choosing which layers are displayed in the transcript body.
-  - The [transcript body](#transcript-body), highlighted in **blue**{:.hl-2}. This displays the actual content of the transcript. It continues all the way down the page.
-- Fixed elements:
-  - The [media player](#media-player-and-navigation-arrows), highlighted in **green**{:.hl-3}.
-  - The [navigation arrows](#media-player-and-navigation-arrows), highlighted in **purple**{:.hl-4}.
+- The <span class="keyterm">transcript body</span> (highlighted in **red**{:.hl-1} above), which continues all the way down the page. This is where you can...
+  - [Read](#reading-the-transcript) the transcript
+  - View annotations on different [layers](#viewing-layer-data)
+  - Follow along with the transcript as you [listen](#listening-to-the-transcript)
+- The <span class="keyterm">transcript header</span> (highlighted in **blue**{:.hl-2} above). The expandable tabs each have their own function:
+  - _Attributes_: View the transcript's [attributes](#viewing-transcript-attributes)
+  - _Participants_: Find more information on [participants](#viewing-participant-information) in the transcript
+  - _Layers_: Select which [layers](#selecting-layers-to-display) to display in the transcript body
+  - _Search_: [Search](#searching-the-transcript-or-participants) the transcript or its participants for linguistic patterns
+  - _Export_: [Export](#exporting-the-transcript) the entire transcript to various file formats
+- The <span class="keyterm">media player</span> (highlighted in **green**{:.hl-3} above), which stays in the same place as you scroll down the page. This is where you can:
+  - [Listen](#listening-to-the-transcript) to the transcript
+  - [Download](#downloading-audio) the transcript audio in wav or mp3 formats
+- The <span class="keyterm">navigation arrows</span> (highlighted in **purple**{:.hl-4} above). This is where you can:
+  - [Navigate](#navigating-to-other-transcripts) to other transcripts in the same interview
 
-## Media player and navigation arrows
 
-There are two features of the <span class="apls-page">Transcript</span> page that are fixed elements, meaning that they remain in the same place on the page regardless of where you scroll.
-These elements are the in-browser media player and the transcript navigation arrows (see previous screengrab).
+#### Word menu
+{: .no_toc}
 
-The transcript navigation arrows allow you to move from one transcript to the either the previous transcript or the next transcript in the interview.
+Not displayed in the image above is the <span class="keyterm">word menu</span>.
+This pops up when you click on a word in the transcript body.
+Some of the functions in the word menu require [installing the Praat integration]({{ '/doc/praat-integration' | relative_url }}).
+Here's what the word menu looks like without the Praat integration (left) or with it (right):
+
+{% include screengrab.html src="transcript/word-menu-comp.png" %}
+
+The word menu is where you can...
+
+- Create [permalinks](#creating-permalinks) for individual lines or words in the transcript
+- [Play](#listening-to-the-transcript) individual lines of the transcript
+- [Download](#downloading-audio) audio for individual lines
+- [Open](#opening-utterances-in-praat) individual lines in [Praat] (if you've install the Praat integration)
+
+<!-- Maybe also "what you can't do": view precise timings, view every single annotation (if vertical peers), search (no ctrl-f) -->
+
+
+## Reading the transcript
+
+The transcript body displays the content of the transcript over time.
+For example, here's the first few lines of `CB01interview3.eaf`:
+
+{% include screengrab.html src="transcript/body.png" %}
+
+Every line in the transcript corresponds to a conversational turn or continuous utterance in the audio recording. 
+The participant who is speaking in a particular turn is shown in italic gray text above the turn.
+In the example above, the interviewer Barbara Johnstone is speaking in the first turn.
+If there's overlapping speech, participants' turns are shown side-by-side;
+this is the case in the second line above, where Barbara Johnstone and CB01 overlap one another.
+Bold text is used for CB01's words and the `CB01` speaker code, since CB01 is the <span class="keyterm">main participant</span> in this transcript (that is, the interviewee).
+Finally, the text in magenta italics represents noises, whether produced by a participant (e.g., breathing, smacking lips) or not (e.g., banging, car horns). <!-- Mention `unclear` here? -->
+
+<!-- A few convention things: . - for pauses, ? for questions, ~ for hesitations, ___ for redactions -->
+
+As we'll discuss [below](#viewing-layer-data), this isn't a typical transcript like you might see in other contexts---it's <span class="keyterm">annotations</span> on <span class="keyterm">layers</span>.
+
+
+## Listening to the transcript
+
+You can listen to the transcript audio using the media player at the top right of the screen (highlighted in **green**{:.hl-3} below):
+
+{% include screengrab.html src="transcript/player-playing.png" %}
+
+The media player works just like you'd expect.
+You can play and pause, click on the progress bar to jump to a timestamp, adjust or mute the volume, and (depending on your browser) adjust the playback speed.
+Once you start playing audio, a {% include labbcat-icon.html src="media-skip-backward.svg" %} button will appear that rewinds the audio by 1 second per click.
+As the image shows, while the audio is playing, the transcript body will highlight the line that you're hearing.
+
+{: .note .no-collapse}
+> These screenshots were taken from Google Chrome.
+> Your media player may look a little different if you have a different browser.
+
+If you click on the progress bar, the transcript body will also scroll up or down to display the part of the transcript corresponding to that timestamp.
+
+You can also play an individual line of the transcript through the [word menu](#word-menu): click on any word in the line, then click _Play_.
+The audio will stop at the end of the line, but you can click the play button on the media player to continue.
+
+{% include screengrab.html src="transcript/no-praat-word-menu-context.png" %}
+
+
+There are two other parts of the media player that we cover below (since they're not related to listening to the transcript):
+
+- The _mp3_ and _wav_ links, which [download](#downloading-audio) the audio file in those file formats
+- The {% include labbcat-icon.html src="text-praat-textgrid.png" %} icon, which is related to the [Praat integration]({{ '/doc/praat-integration'}})
+
+
+## Navigating to other transcripts
+
+The navigation arrows (highlighted in **purple**{:.hl-4} below) allow you to move to the previous or next transcript in the interview.
 These arrows are hidden if you are looking at the first or last transcript in the interview.
+
+{% include screengrab.html src="transcript/nav-arrows.png" %}
 
 {: .try-it }
 > On the <span class="apls-page">Transcript</span> page for `CB01interview3.eaf`, click the "previous" button.
 > This will load the <span class="apls-page">Transcript</span> page for `CB01interview2.eaf`.
 > Then, click the "next" button to go back to `CB01interview3.eaf`.
 
-The in-browser media player allows you to listen to audio from the transcript, control the volume, and (via the &vellip; menu) control the playback speed.
-While the audio is playing, the transcript body will highlight the utterance (line) that is currently playing.
-You can also listen to audio through the [word menu](#word-menu).
-
-If your media player is displaying a small Praat logo (as shown below), this indicates that you do not have the Praat integration set up.
-You can learn more about enabling the Praat integration [here]({{ '/doc/praat-integration' | relative_url }}).
-
-{% include screengrab.html src="transcript/no-praat-player.png" %}
+To view transcripts _not_ in the same interview, visit the [<span class="apls-page">Transcripts</span> page]({{ '/doc/browse-transcripts' | relative_url }}).
 
 
-## Transcript header
+## Viewing layer data
 
-The transcript header provides information about the transcript, options for exporting a formatted transcript, and check boxes that control what data is displayed in the transcript body.
+### Everything you see is data
 
-{% include screengrab.html src="transcript/header.png" %}
+In APLS, everything you see in the transcript body is data: <span class="keyterm">annotations</span> on <span class="keyterm">layers</span>.
+(These [data structures]({{ '/doc/data-organization' | relative_url }}) are what make APLS so powerful---it turns audio recordings into structured linguistic data, allowing us to search, export, and measure the entire corpus in a fraction of the time.)
+Even when you think you're just [reading the transcript](#reading-the-transcript), you're actually viewing layer data!
 
-- At the top of the transcript header is the name of the transcript file (in this case, `CB01interview3.eaf`).
-- Most important is the [layer selector](#layer-selector), highlighted in **red**{:.hl-1}. This controls which layers are displayed in the transcript.
-- [_export formatted ▼_](#export-formatted-▼), highlighted in **blue**{:.hl-2}: a drop-down menu that allows you to download the current transcript in multiple formats.
-- [_[transcript attributes]_](#transcript-attributes-panel), highlighted in **green**{:.hl-3}: a collapsible panel that displays <span class="keyterm">transcript attributes</span>.
-- A list of [participants](#participants-list), highlighted in **purple**{:.hl-4}, with links to [attributes pages]({{ '/doc/browse-participants#participant-attributes-pages' | relative_url }}).
+When the <span class="apls-page">Transcript</span> page is first loaded, two layers are displayed in the transcript body: <span class="layer">word</span> (colored black) and <span class="layer">noise</span> (colored magenta).
+Each turn consists of at least one annotation on either of these layers.
+For example, some of the following turns consist of only <span class="layer">word</span> annotations, one consists of only a <span class="layer">noise</span> annotation, and some consist of both.
+
+{% include screengrab.html src="transcript/word-noise.png" %}
+
+You can customize which layers are displayed using the [layer picker](#selecting-layers-to-display), discussed below.
+For example, here are the first few lines of `CB01interview3.eaf` again, now with the following layers selected: <span class="layer">speech_rate</span> (teal), <span class="layer">frequency_from_celex</span> (chocolate), <span class="layer">word</span> (black), and <span class="layer">segment</span> (lavender).
+
+{% include screengrab.html src="transcript/multiple-layers.png" %}
 
 
-### _export formatted ▼_
+### <span class="layer">turn</span>s and <span class="layer">utterance</span>s
+<!-- TODO: the TOC just shows "s and s", deleting the span.layer elements. Also need to style underline for a > span.layer (and &:hover). -->
+<!-- N.B. When I disable addA and run it manually on those nodes, there's no issue. Maybe this is only on localhost? -->
 
-The _export formatted ▼_ drop-down menu allows you to download the current transcript in any of the listed file types:
+There are actually two more layers that the transcript body displays implicitly: <span class="layer">turn</span> and <span class="layer">utterance</span>.
+These layers divide up the timing of a transcript based on when participants are speaking.
+A <span class="layer">turn</span> is the timespan that contains everything within a single ![]({{ '/assets/screengrab/transcript/turn-swoosh.png' | relative_url }}){:style="height:2em;"} shape.
+Each <span class="layer">turn</span> contains one or more <span class="layer">utterance</span>s, which are displayed as individual lines in the transcript.
+Let's look at `CB01reading1.eaf` as an example:
 
-{% include screengrab.html src="transcript/export-formatted.png" %}
+{% include screengrab.html src="transcript/turns-utterances.png" %}
+
+The first two <span class="layer">turn</span>s each contain one <span class="layer">utterance</span>.
+The next two <span class="layer">turn</span>s each contain two <span class="layer">utterance</span>s.
+The first <span class="layer">utterance</span> (_that's my ... Penn Mac_) in the third <span class="layer">turn</span> is long enough that the text wraps, but you can see that _that's_ is closer in height to _Mac_ than _Mac_ is to _it's_ (the first word of the next <span class="layer">utterance</span>).
+If you ever need to figure out where an utterance begins or ends, you can use the word menu's [utterance permalink](#creating-permalinks) function to highlight the entire utterance, described below.
+
+{: .under-the-hood}
+> These layers are based on how transcribers chose to divide the original transcription files into lines.
+> While this is subject to guidelines from the [APLS transcription convention]({{ '/doc/transcription-convention#segmentation' | relative_url }}), in practice there's room for variation between transcribers.
+> When the transcription file is uploaded to APLS, the lines from the original transcript form the <span class="layer">utterance</span> layer.
+> Then, <span class="layer">turn</span>s combine adjacent <span class="layer">utterance</span>s from the same participant.
+
+<!-- Beyond breaking up the transcript into lines, utterances show up in the [word menu](#word-menu). -->
+Elsewhere in APLS, turns and utterances show up in [anchoring searches]({{ '/doc/anchoring-searches#scope' | relative_url }}), [exporting search results]({{ '/doc/exporting-data#exporting-data-from-the-search-results-page' | relative_url }}), and [phrase layers]({{ '/doc/layer-typology#scope' | relative_url }}).
+
+
+### Annotation tooltips
+
+More information about layers and annotations is available in tooltips, which pop up when you hover over different parts of the transcript body.
+Here's what that looks like for the first line of `CB01interview3.eaf`, with the following layers selected: <span class="layer">speech_rate</span>, <span class="layer">frequency_from_celex</span>, <span class="layer">word</span>, and <span class="layer">segment</span>.
+
+{% include screengrab.html src="transcript/tooltips.png" %}
+
+Let's break down what we're seeing in these tooltips:
+
+- <span class="layer">word</span> layer (3rd image from the top): information about the line (<span class="layer">utterance</span>). Specifically, the participant (here, `Barbara Johnstone`), the start/end times (`0.339-2.514`), and the duration (`(2.185s)`)
+- All other layers: the layer name (`speech_rate`, `frequency_from_celex`, `segment`) and information about the annotation(s)
+  - For example, the <span class="layer">speech_rate</span> for this line is 7.5117 syllables per second. This matches the `7.5117` annotation showing in the transcript body.
+
+Those are the most important things you can see in the tooltip.
+These tooltips also touch on some concepts that are covered later on this documentation page:
+
+- <span class="layer">frequency_from_celex</span> shows `[2]`, followed by two different counts, `1775 836`
+  - This means the word _individual_ has two <span class="keyterm">peer</span> annotations on the <span class="keyterm">frequency_from_celex</span> layer. <!-- Or just make the section about alignment + vertical peers. Then I can move the following to that section --> In this case, we can only see one of the two annotations in the transcript body (`1775`). This tells us these are [<span class="keyterm">vertical peers</span>](#vertical-peers).
+- <span class="layer">segment</span> shows `I n d @ v I _ u @ l`
+  - The spaces in between these symbols are a hint that there are actually 10 individual annotations on this layer. That's because <span class="layer">segment</span> has a smaller [<span class="keyterm">scope</span>](#layer-scope).
+  - Compared to the annotation in the transcript body (`ɪndəvɪdʒuəl`), some of the symbols match (e.g., `n`, `v`, `u`) but others don't (e.g., `I` vs. `ɪ`, `_` vs. `dʒ`). This is because <span class="layer">segment</span> uses the DISC phonemic alphabet as its [<span class="keyterm">notation system</span>](#layer-notation-system).
+
+The next line in `CB01interview3.eaf` demonstrates one more type of information we can get from tooltips:
+
+{% include screengrab.html src="transcript/tooltip-missing.png" %}
+
+There's nothing in the space where we would expect a <span class="layer">segment</span> annotation, but we can still hover over this empty space.
+Sure enough, the tooltip shows `segment: (no annotation)`.
+We'll get into missing annotations [below](#missing-annotations).
+
+Finally, tooltips show up elsewhere on the <span class="apls-page">Transcript</span> page: the [layer picker](#selecting-layers-to-display) and the [_Attributes_ tab](#viewing-transcript-attributes).
+
+### Layer scope
+
+Let's return to the first few lines of `CB01interview3.eaf` with the <span class="layer">speech_rate</span>, <span class="layer">frequency_from_celex</span>, <span class="layer">word</span>, and <span class="layer">segment</span> layers enabled:
+
+{% include screengrab.html src="transcript/multiple-layers.png" %}
+
+As you can see from the previous image, some annotations are "wider" than others:
+<span class="layer">speech_rate</span> annotations take up an entire line and <span class="layer">frequency_from_celex</span> annotations take up an entire word.
+While there are usually multiple <span class="layer">segment</span> annotations per word, the <span class="apls-page">Transcript</span> page shows them as a single string to save space (though they're separated by spaces in the [tooltip](#annotation-tooltips) that appears when you hover over the annotation).
+Differences between layers in how "wide" an annotation can be is captured by layers' <span class="keyterm">scope</span>.
+For more information about layer scope, see the [layer typology]({{ '/doc/layer-typology#scope' | relative_url }}) documentation page.
+
+
+### Missing annotations
+
+Also apparent from the previous image: not all words (and lines) have annotations on all layers.
+The words _um_ and _uh_ (in the last line) don't have <span class="layer">frequency_from_celex</span> annotations, because the [CELEX] corpus is text-based (and _um_ & _uh_ generally don't appear in text).
+The middle line doesn't have any <span class="layer">segment</span> annotations, because the [HTK] algorithm, which APLS uses to find the timing of speech sounds, can't handle overlapping speech.
+And because the timing of <span class="layer">segment</span> annotations is used to calculate speech rate, the middle line also doesn't have any <span class="layer">speech_rate</span> annotations.
+
+In these particular examples of missing annotations, we can come up with good reasons for _why_ they're missing.
+Much more rarely, you might find missing annotations where the fact that they're missing seems random.
+If you want to understand why an annotation is missing, consult the [layer field guide]({{ '/doc/layer-field-guide' | relative_url }}), which---among other things---describes situations where you can expect missing data in a layer.
+<!-- Data coverage page -->
+
+
+#### Segment-dependent layers
+{: .no_toc}
+
+There's a whole category of layers like <span class="layer">speech_rate</span> where you can expect missing annotations if the <span class="layer">segment</span> layer is missing: [segment-dependent]({{ '/doc/layer-typology#segment-dependency' | relative_url }}){:.keyterm} layers.
+For example, here's the first 3 lines of `CB01interview3.eaf` again, this time with <span class="layer">phonemes</span> (colored tan), <span class="layer">stress</span> (salmon), <span class="layer">foll_pause</span> (slate gray), <span class="layer">segment</span> (black), and <span class="layer">segment</span> (lavender):
+
+{% include screengrab.html src="transcript/segment-dependency.png" %}
+<!-- N.B. Update this screengrab once I merge commit ead12ef into apls branch -->
+
+Again, the middle line doesn't have <span class="layer">segment</span> annotations because of the overlapping speech.
+As a result, the remaining layers---all of which (except <span class="layer">word</span>) are segment-dependent---don't have annotations on this line either.
+
+### Alignment and vertical peers
+
+<!-- Both horizontal and vertical peers mean there can be more than one annotation per the layer's scope. The difference is that horizontal peers are visible in the transcript body, vertical peers aren't. -->
+
+### Phonological layers
+
+<!-- Intro DISC here -->
+<!-- Then refer to the typology for a full description of data type -->
+
+## Selecting layers to display
+
+Clicking on the _Layers_ tab in the transcript header brings up the <span class="keyterm">layer picker</span>.
+(There are also layer pickers on the <span class="apls-page">Transcripts</span>, <span class="apls-page">Search</span>, and <span class="apls-page">Search results</span> pages, all slightly different in appearance.)
+The layer picker controls which layers are displayed in the transcript body and displays information about layers and annotations.
+Here's what the layer picker looks like when you load the <span class="apls-page">Transcript</span> page for `CB01interview3.eaf`, plus the first line of the transcript:
+
+{% include screengrab.html src="transcript/layer-picker.png" %}
+
+Let's break down what we're looking at:
+
+{% include screengrab.html src="transcript/layer-picker-layout.png" %}
+
+- <span class="keyterm">Layer checkboxes</span> (one highlighted in **red**{:.hl-1}) toggle layers [on and off](#toggling-layers-on-and-off).
+- <span class="keyterm">Projects</span> (highlighted in **blue**{:.hl-2}) make more layer checkboxes [appear](#projects).
+- Layer <span class="keyterm">icons</span> (one highlighted in **green**{:.hl-3}) indicate [layer properties](#icons).
+- <span class="keyterm">Annotation counts</span> (one highlighted in **purple**{:.hl-4}) indicate the [number of annotations](#annotation-counts) on that layer in that transcript.
+- The <span class="keyterm">IPA/DISC toggle</span> (highlighted in **orange**{:.hl-5}) affects how annotations are [displayed](#displaying-phonological-layers-in-disc) on phonological layers.
+
+
+### Toggling layers on and off
+
+When you select a layer checkbox in the layer picker, the transcript body gets updated to fill in annotations from that layer.
+Here's that same view of `CB01interview3.eaf` after clicking _segment_ in the layer picker:
+
+{% include screengrab.html src="transcript/layer-picker-segment.png" %}
+
+As you can see, not only did <span class="layer">segment</span> annotations get filled into the transcript body, but the label `segment (4143)` also changed color from black to lavender in the layer picker, matching the annotation color.
+In addition, the order of the layers in the transcript body matches the order in the layer picker.
+If you click _segment_ again to deselect it, the <span class="layer">segment</span> annotations disappear but `segment (4143)` remains colored lavender:
+
+{% include screengrab.html src="transcript/layer-picker-no-segment.png" %}
+
+The <span class="layer">word</span> layer cannot be deselected, which is why its checkbox and icons are grayed-out.
+We'll see something similar below when we discuss [empty layers](#empty-layers).
+
+{: .note }
+> Although the <span class="layer">noise</span> layer is also pre-selected when you load the <span class="apls-page">Transcript</span> page, it can be turned off.
+> Since some utterances consist of [just <span class="layer">noise</span> annotations](##everything-you-see-is-data), <span class="layer">noise</span> is pre-selected so those utterances don't look empty.
+
+
+### Projects
+
+When you first load the <span class="apls-page">Transcript</span> page, only a few layers are visible in the layer picker.
+To reduce visual clutter, most layers are organized into <span class="keyterm">projects</span>.
+For example, clicking the _timing_ project makes three more layer checkboxes appear: <span class="layer">overlap</span>, <span class="layer">speech_rate</span>, and <span class="layer">foll_pause</span>:
+
+{% include screengrab.html src="transcript/layer-picker-projects.png" %}
+
+If you deselect a project, its unselected layers disappear from the layer picker.
+But any selected layers will remain in both the layer picker and the transcript.
+For example, here's what it looks like when you select _timing_, then select _speech_rate_, then deselect _timing_:
+
+{% include screengrab.html src="transcript/layer-picker-no-projects.png" %}
+
+For more information about projects, see the [layer typology]({{ '/doc/layer-typology#project' }}) documentation page.
+
+### Information about layers
+
+The layer picker contains several useful pieces of information about layers.
+
+
+#### Layer description
+{: .no_toc }
+
+Hovering over the layer name brings up a tooltip with the layer's description.
+These descriptions often contain information that's helpful to interpret annotations and/or understand how they were generated.
+
+{% include screengrab.html src="transcript/layer-picker-tooltip.png" %}
+
+
+#### Scope
+{: .no_toc }
+  
+Layer [scope](#layer-scope) is indicated by which column a layer is in.
+For more information on layer scope (including the difference between span and phrase layers), see the [layer typology]({{ '/doc/layer-typology#scope' | relative_url }}) documentation page.
+
+
+#### Icons
+{: .no_toc }
+
+Each layer has either two or three icons to the right of its checkbox in the layer picker.
+These icons indicate some of the layer's important properties.
+Here's a quick key;
+see the [layer typology]({{ '/doc/layer-typology' | relative_url }}) documentation page for more information:
+
+<!-- TODO turn this into an includes so it can be reused on other pages -->
+<table class="icon-table">
+  <thead>
+    <tr>
+      <th colspan="2"><a href="{{ '/doc/layer-typology#data-type' | relative_url }}">Data type</a></th>
+      <th colspan="2"><a href="{{ '/doc/layer-typology#alignment-and-horizontal-peers' | relative_url }}">Alignment</a></th>
+      <th colspan="2"><a href="{{ '/doc/layer-typology#vertical-peers' | relative_url }}">Vertical peers</a></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{% include labbcat-icon.html src="data-type-phonological.svg" %}</td>
+      <td>Phonological</td>
+      <td>{% include labbcat-icon.html src="alignment-0.svg" %}</td>
+      <td>Complete interval</td>
+      <td>{% include labbcat-icon.html src="vertical-peers.svg" %}</td>
+      <td>Allows vertical peers</td>
+    </tr>
+    <tr>
+      <td>{% include labbcat-icon.html src="data-type-numeric.svg" %}</td>
+      <td>Numeric</td>
+      <td>{% include labbcat-icon.html src="alignment-2.svg" %}</td>
+      <td>Sub-interval</td>
+      <td>(none)</td>
+      <td>Doesn't allow vertical peers</td>
+    </tr>
+    <tr>
+      <td>{% include labbcat-icon.html src="data-type-text.svg" %}</td>
+      <td>Text</td>
+      <td colspan="4"></td>
+    </tr>
+  </tbody>
+</table>
+
+This means that, for example, the <span class="layer">segment</span> layer has phonological data type, complete-interval alignment, and no vertical peers: ![]({{ '/assets/screengrab/transcript/layer-picker-segment-icons.png' | relative_url }}){:style="height:1.25em; border:.1em solid black;"}.
+
+If you forget what the icons mean, you can hover over them for a tooltip:
+
+{% include screengrab.html src="transcript/layer-picker-icon-tooltip.png" %}
+
+Finally, if you find the layer icons visually distracting, you can click _Hide layer icons_ to make them disappear.
+APLS will remember this setting if you navigate to other pages with layer pickers within the same browser tab.
+
+{% include screengrab.html src="transcript/layer-picker-hide-icons.png" %}
+
+{: .under-the-hood}
+> The _about_ link points to the page section you're reading right now!
+
+
+#### Annotation counts
+{: .no_toc }
+
+The layer picker displays the total number of annotations for each layer in that transcript.
+For example, `CB01interview3.eaf` has 62 <span class="layer">noise</span> annotations, 1664 <span class="layer">orthography</span> & <span class="layer">word</span> annotations, and 4143 <span class="layer">segment</span> annotations:
+
+{% include screengrab.html src="transcript/layer-picker.png" %}
+
+Longer transcripts will generally have more annotations.
+`CB01interview3.eaf` is 8 and a half minutes long.
+By comparison, `HD06interview1.eaf`, one of the longest transcripts in APLS (over 37 minutes), has 390 <span class="layer">noise</span> annotations, 6793 <span class="layer">orthography</span> annotations, 6794 <span class="layer">word</span> annotations, and 20,269 <span class="layer">segment</span> annotations:
+
+{% include screengrab.html src="transcript/layer-picker-many-annotations.png" %}
+
+Beyond simply being impressive, annotation counts can give us clues about the structure of the data and how layers relate to one another.
+For example, `HD06interview1.eaf` has one fewer <span class="layer">orthography</span> annotation than <span class="layer">word</span> annotations, unlike `CB01interview3.eaf`.
+That's because the second word of the interview is redacted---Interviewer HD says the speaker's name (as the cornflower-blue <span class="layer">redaction</span> annotation shows).
+Otherwise, every <span class="layer">word</span> annotation has a corresponding <span class="layer">orthography</span> annotation.
+
+Like the layer picker's [icons](#icons), there's a _Hide annotation counts_ setting, which APLS remembers if you navigate to other <span class="apls-page">Transcript</span> pages within the same browser tab:
+
+{% include screengrab.html src="transcript/layer-picker-hide-annotation-counts.png" %}
+
+{: .note}
+> While other pages have layer pickers (<span class="apls-page">Transcripts</span>, <span class="apls-page">Search</span>, <span class="apls-page">Search results</span>), only the <span class="apls-page">Transcript</span> page's layer picker has annotation counts.
+
+
+### Empty layers
+
+Some layers in some transcripts have annotation counts of 0.
+That is, they're <span class="keyterm">empty layers</span> in that transcript.
+You'll most often see empty layers in the _imported_ [project](#projects), as the original transcriber(s) might not have had anything to redact from the transcript (<span class="layer">redaction</span>), any comments to make (<span class="layer">comment</span>), etc.
+This is the case with `CB01interview3.eaf`, where the <span class="layer">redaction</span> and <span class="layer">lexical</span> layers are empty:
+
+{% include screengrab.html src="transcript/layer-picker-empty-layers.png" %}
+
+There are a few visual clues that these layers are empty:
+
+- Their checkboxes are grayed-out and cannot be selected
+- Their names and icons are grayed-out
+- Their annotation counts are 0
+
+By contrast, the <span class="layer">word</span> layer has a grayed-out checkbox that can't be **de**selected and grayed-out icons, but `word` itself is in black and its annotation count isn't 0.
+
+
+### Displaying phonological layers in DISC
+
+Phonological layers like <span class="layer">segment</span> are displayed with IPA symbols:
+
+{% include screengrab.html src="transcript/layer-picker-segment.png" %}
+
+However, as mentioned [above](#phonological-layers), APLS stores these annotations internally in the DISC phonemic alphabet.
+You can choose to display these annotations in DISC instead by clicking {% include labbcat-icon.html src="interpreted.svg" %} (the IPA/DISC toggle) to the right of the layer name:
+
+{% include screengrab.html src="transcript/layer-picker-segment-disc.png" %}
+
+As you can see, the IPA/DISC toggle also changes appearance to {% include labbcat-icon.html src="interpreted.svg" %}{:style="opacity:33;"}.
+To change back to IPA, simply click the IPA/DISC toggle again.
+
+You can choose different settings for different phonological layers:
+
+{% include screengrab.html src="transcript/layer-picker-segment-disc-phonemes.png" %}
+<!-- N.B. Update this screengrab once I merge commit ead12ef into apls branch -->
+
+{: .note}
+> Don't forget: You can also view an annotation's DISC representation in its [tooltip](#annotation-tooltips):
+> {% include screengrab.html src="transcript/segment-tooltip.png" %}
+
+
+## Creating permalinks
+
+
+
+## Viewing transcript attributes
+
+
+## Viewing participant information
+
+
+## Searching the transcript/participants
+
+
+## Downloading audio
+
+
+## Exporting the transcript
+
+The _Export_ tab in the transcript header allows you to download the current transcript in any of the listed file types:
+
+{% include screengrab.html src="transcript/export.png" %}
 
 {: .try-it }
 > On the `CB01interview3.eaf` <span class="apls-page">Transcript</span> page (<https://apls.pitt.edu/labbcat/transcript?transcript=CB01interview3.eaf>):
@@ -95,18 +516,12 @@ The _export formatted ▼_ drop-down menu allows you to download the current tra
 
 At a minimum, the exported file will include the <span class="layer">utterance</span> and <span class="layer">word</span> layers.
 It will also include any layers you have [selected](#layer-selector) to show in the transcript body.
-Some transcript formats also show additional layers from the [original uploaded transcription]({{ '/doc/transcription' | relative_url }}): <span class="layer">noise</span>, <span class="layer">comment</span>, and <span class="layer">pronounce</span>.
-<!-- Show what this looks like, just in text -->
+Here's what the exported TextGrid looks like when only the <span class="layer">word</span> layer is selected
+(<span class="layer">noise</span> is deselected):
 
-{: .note }
-> If you need greater control over which layers to export, use the [_Export Formatted_ menu on the <span class="apls-page">Transcripts</span> page]({{ '/doc/browse-transcripts#export-formatted' | relative_url }}).
+{% include screengrab.html src="transcript/export-praat-0.png" %}
 
-The file format affects not only _which_ layers are included, but _how_ they are displayed.
-For example, in *Praat TextGrid*s and *Elan EAF Transcript*s, there is one tier for each speaker's <span class="layer">utterance</span> annotations (labeled, for example, `Barbara Johnstone` tier and one `CB01` tier) and one tier for each speaker's <span class="layer">word</span> annotations (e.g., `word - Barbara Johnstone` and `word - CB01`);
-these annotations are all time-aligned.
-In *Plain Text Document*s and *PDF Document*s, <span class="layer">utterance</span>s are separated by line breaks and <span class="layer">word</span>s are simply listed within each utterance;
-these annotations are _not_ time-aligned and there's no way to tell whether speech is overlapping.
-As a result, the *Plain Text Document*s and *PDF Document* formats are better for a readable or skimmable overview of who said what, and not very useful as structured linguistic data.
+As you can see, the exported TextGrid has one tier for each speaker's <span class="layer">utterance</span> annotations (`Barbara Johnstone` and `CB01` above) and one tier for each speaker's <span class="layer">word</span> annotations (`word - Barbara Johnstone` and `word - CB01`).
 
 {: .try-it }
 > 1. Open the TextGrid from the previous try-it.
@@ -121,7 +536,7 @@ As a result, the *Plain Text Document*s and *PDF Document* formats are better fo
 > You should see that each of the words in the utterance has its own interval in `word - Barbara Johnstone`:
 > 
 > {% include screengrab.html src="transcript/export-praat-1.png" %}
-> * * *
+> * * * <!-- Get this to show up correctly -->
 > Finally, let's see how overlaps look in an exported TextGrid.
 > According to the <span class="apls-page">Transcript</span> page, there's an overlap when Barbara Johnstone says `what you'd say you're` and CB01 says `okay`, right after Barbara's first utterance
 > 
@@ -130,9 +545,47 @@ As a result, the *Plain Text Document*s and *PDF Document* formats are better fo
 > You should see a `CB01` interval that lines up with the `Barbara Johnstone` interval, plus words on _both_ speakers' `word - ` tiers.
 > {% include screengrab.html src="transcript/export-praat-2.png" %}
 
+Exporting transcripts to TextGrid is a good way to understand some of the details of annotations (and their timing) that are hard to glean from the Transcript page.
+(This is true for Elan EAF transcripts, too.)
+In particular, if a layer allows [vertical peers](#alignment-and-vertical-peers) ({% include labbcat-icon.html src="vertical-peers.svg" %} [icon](#icons) in the layer picker), the exported TextGrid may show multiple tiers per speaker.
 
-As previously mentioned, the exported file will include any layers you have [selected](#layer-selector) to show in the transcript body.
-Unlike in the transcript body, phonological layers (like <span class="layer">segment</span>) are always displayed in the [DISC phonemic alphabet]({{ '/doc/phonemic-transcription' | relative_url }}).
+{: .try-it }
+> On the `CB01interview3.eaf` <span class="apls-page">Transcript</span> page:
+> 
+> 1. Select <span class="layer">dictionary_phonemes</span>.
+> 1. Export to _Praat TextGrid_ and open in [Praat].
+>
+> You should see **three** `dictionary_phonemes - ` tiers per speaker.
+> This is because some words have more than one possible phonemic representation, such as /æz/ or /əz/ for _as_.
+> {% include screengrab.html src="transcript/export-praat-4.png" %}
+
+{: .note }
+> Some tier names in the exported TextGrid are long enough that they get cut off in the Praat TextGrid window.
+> In the previous try-it, you can't tell which tiers are `dictionary_phonemes - Barbara Johnstone` and which are `dictionary_phonemes - CB01`.
+> To see the full name of a TextGrid tier:
+>
+> 1. Select the tier.
+> 1. Go to the _Tier_ menu and click _Rename tier..._.
+>
+> Then you can see the tier's full name (even if you don't rename it).
+
+So far, we've only been looking at Praat TextGrids.
+Other file formats affect not only which layers are exported, but how they are displayed.
+Some transcript formats also show additional layers from the [original uploaded transcription]({{ '/doc/transcription' | relative_url }}): <span class="layer">noise</span>, <span class="layer">comment</span>, and <span class="layer">pronounce</span>.
+<!-- Show what this looks like, just in text -->
+Unlike in Praat TextGrids and Elan EAF transcripts, where all annotations have time alignments, in *Plain Text Document*s and *PDF Document*s, <span class="layer">utterance</span>s are separated by line breaks and <span class="layer">word</span>s are simply listed within each utterance.
+That is, these annotations are _not_ time-aligned and there's no way to tell whether speech is overlapping.
+As a result, the *Plain Text Document*s and *PDF Document* formats are better for a readable or skimmable overview of who said what, and not very useful as structured linguistic data.
+
+{: .note }
+> If you need greater control over which layers to export, use the [_Export Formatted_ menu on the <span class="apls-page">Transcripts</span> page]({{ '/doc/browse-transcripts#export-formatted' | relative_url }}).
+
+As previously mentioned, the exported file will include any layers you have selected in the [layer picker](#toggling-layers-on-and-off).
+The Export tab displays these layers on the top line:
+
+{% include screengrab.html src="transcript/export-layers.png" %}
+
+Phonological layers (like <span class="layer">segment</span>) are always displayed in the [DISC phonemic alphabet]({{ '/doc/phonemic-transcription' | relative_url }}).
 
 {: .try-it }
 > On the `CB01interview3.eaf` <span class="apls-page">Transcript</span> page:
@@ -148,19 +601,12 @@ Unlike in the transcript body, phonological layers (like <span class="layer">seg
 >
 > {% include screengrab.html src="transcript/export-praat-3.png" %}
 
-Finally, if a layer allows [vertical peers]({{ '/doc/layer-typology#vertical-peers' | relative_url }}) (with a {% include labbcat-icon.html src="vertical-peers.svg" %} icon in the [layer selector](#layer-selector)), the exported file may show multiple tiers per speaker:
 
-{: .try-it }
-> On the `CB01interview3.eaf` <span class="apls-page">Transcript</span> page:
-> 
-> 1. Unselect <span class="layer">segment</span> and select <span class="layer">dictionary_phonemes</span>.
-> 1. Export to _Praat TextGrid_ and open in [Praat].
->
-> You should see **three** `dictionary_phonemes - ` tiers per speaker.
-> This is because some words have more than one possible phonemic representation, such as /æz/ or /əz/ for _as_.
-> {% include screengrab.html src="transcript/export-praat-4.png" %}
 
-<!-- Mention how to get full tier names in TextGrid view -->
+## Opening utterances in Praat
+
+
+# Old stuff
 
 
 ### [transcript attributes] panel
@@ -182,86 +628,6 @@ no AI tools were used to transcribe that interview.
 > To export transcript attributes to a CSV file, use the [_Export Attributes_ menu on the <span class="apls-page">Transcripts</span> page]({{ '/doc/browse-transcripts#export-attributes' | relative_url }}).
 
 
-### Participants list
-
-Below _attributes_ are the <span class="keyterm">participants</span> in the transcript. 
-
-{% include screengrab.html src="transcript/participants.png" %}
-
-Participant codes for main participants are displayed in **bold**. 
-Clicking a participant code will take you to that participant's [<span class="apls-page">Participant attributes</span> page]({{ '/doc/browse-participants#participant-attributes-pages' | relative_url }}).
-
-
-### Layer selector
-
-The **projects** and **layers** sections control what information is displayed in the transcript body.
-
-{% include screengrab.html src="transcript/projects-layers.png" %}
-
-{% comment %}turning on/off layers and the page reload delay{% endcomment %}
-
-{% comment %}layer icons (tho maybe wait on this because vertical peers is in a project){% endcomment %}
-
-{: .note }
-> The <span class="layer">word</span> layer cannot be turned off (which is why its checkbox is grayed-out).
-
-To make more layer options appear in the **layers** section, the project that corresponds to that layer must be turned on in the **projects** section.
-
-You can hover over the names of the projects to view a brief description of the layers associated with that project.
-You can also read more about projects on the [Layer typology]({{ '/doc/layer-typology#project' | relative_url }}) documentation page.
-
-{% include screengrab.html src="transcript/project-timing.png" %}
-
-As shown in the screenshot above, toggling the _timing_ project causes the **layers** section to display layers that are included in the timing project category.
-You can learn more about layers in the [Layers and attributes]({{ '/doc/layers-and-attributes' | relative_url }}) documentation pages.
-
-{% comment %}"include empty layers"{% endcomment %}
-
-{: .under-the-hood }
-> The layer options are ordered by scope from largest to smallest, then by project in the order shown in the projects column, and then by alphabetic order.
-
-Layers with phonological information have an additional toggle to switch between IPA transcriptions and Raw (DISC) transcriptions.
-You can read more about DISC and why APLS uses it on the [Phonemic transcription]({{ '/doc/phonemic-transcription' | relative_url }}) documentation page.
-
-Selecting one or more of the options in **layers** section will cause that layer to be displayed in the transcript body.
-
-
-
-## Transcript body
-
-To become acquainted with the layout of the <span class="keyterm">transcript body</span>, we will start off with only the default <span class="layer">word</span> layer enabled, as shown in the screenshot below.
-Additionally, while the other layers affect the information that is displayed in the transcript, all the interactable layers in the transcript body operate in the same way as the <span class="layer">word</span> layer described in this section.
-
-{% include screengrab.html src="transcript/transcript-body1.png" %}
-
-### Turns, utterances, noises, and overlaps
-
-Every line in the transcript corresponds to a conversational turn or continuous utterance in the audio recording. 
-The speakers who have transcribed audio for a particular turn are shown on the left-hand side within the dotted lines.
-In the example screenshot above, the interviewer Barbara Johnstone is the only person speaking in these lines, so only the name `Barbara Johnstone` is displayed.
-
-To the right of the dotted lines is the transcribed speech for that speaker for that utterance.
-Clicking on any of the blue words in the transcript will bring up the word menu that allows you to open the utterance in Praat, extract and download the audio of the utterance, or play the audio of the utterance using the in-browser APLS media player.
-
-{% include screengrab.html src="transcript/transcript-body2.png" %}
-
-{: .note }
-> For instructions on setting up the Praat integration for your web browser, visit the [Viewing transcript segments in Praat]({{ '/doc/praat-integration' | relative_url }}) documentation page.
-
-When an utterance has overlapping speech from multiple speakers, the left-hand side of the transcript will show all the speakers who have transcribed speech for that portion of audio.
-Participant speech is **bolded** in APLS to make it easier to distinguish from the interviewer's speech.
-
-{% include screengrab.html src="transcript/transcript-body3.png" %}
-
-If non-speech sounds have been transcribed, those annotations will appear above the <span class="layer">word</span> layer. 
-All non-speech sounds from all speakers are combined in the top-most section of the <span class="layer">word</span> layer, so it is possible for a speaker to appear on the left-hand side of the transcript without having any words in the <span class="layer">word</span> layer.
-An example of this is shown below.
-
-{% include screengrab.html src="transcript/transcript-body4.png" %}
-
-{: .note }
-> It is possible to use CTRL+F to search a <span class="apls-page">Transcript</span> page for singular words but not for multi-word strings due to the underlying HTML of the <span class="apls-page">Transcript</span> pages (e.g., CTRL+F will work to find the word 'filing' but it won't find the phrase 'filing cabinet').
-
 ## Accessing <span class="apls-page">Transcript</span> pages 
 
 There are multiple ways to reach a <span class="apls-page">Transcript</span> page in APLS:
@@ -273,7 +639,7 @@ There are multiple ways to reach a <span class="apls-page">Transcript</span> pag
   > Click the URL <https://apls.pitt.edu/labbcat/transcript?transcript=CB01interview3.eaf>.
   > This will take you directly to the <span class="apls-page">Transcript</span> page for `CB01interview3.eaf`.
   {: .try-it }
-- Once you have a <span class="apls-page">Transcript</span> page open, you can use navigation arrows to move to a different transcript, as described [above](#media-player-and-navigation-arrows).
+- Once you have a <span class="apls-page">Transcript</span> page open, you can use navigation arrows to move to a different transcript, as described [above](#media-player-and-navigating-to-other-transcripts).
 
 In addition, there are two ways to access transcripts from the results of a search (see [Searching the corpus]({{ '/doc/search' | relative_url }})):
 

@@ -3,7 +3,7 @@ title: User interface
 permalink: /doc/user-interface
 parent: About APLS
 nav_order: 35
-last_modified_date: 2025-06-09T13:11:31-04:00
+last_modified_date: 2025-06-20T11:13:19-04:00
 ---
 
 # {{ page.title }}
@@ -101,7 +101,8 @@ The comparison images in this section come from the [HD05interview2.eaf](https:/
 
 ### Header tabs
 
-{% include compare-ui.html file="transcript-header/tabs" caption='Header tabs on the <span class="apls-page">Transcript</span> page. _Attributes_ is the rightmost tab in the old UI (the media player is hidden in subsequent comparisons)' %}
+- Naming/ordering
+  {% include compare-ui.html file="transcript-header/tabs" caption='Header tabs on the <span class="apls-page">Transcript</span> page. _Attributes_ is the rightmost tab in the old UI (the media player is hidden in subsequent comparisons)' %}
 
 - _Attributes_ tab
   {% include compare-ui.html file="transcript-header/attributes" caption='The <span class="apls-page">Transcript</span> page _Attributes_ tab' %}

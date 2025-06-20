@@ -111,13 +111,20 @@
     - Log in as test-student
     - Set browser zoom to 100%
     - Load https://apls.pitt.edu/labbcat/transcript?transcript=CB01interview3.eaf
-    - "`window.scrollTo(0, 40);`"
-    - "Click _individual_"
+    - Click the first word in the transcript (okay)
     - Save
-  offset_x: 690
-  offset_y: 710
-  width: 455
-  height: 250
+  offset_x: 260
+  offset_y: 435
+  width: 445
+  height: 280
+
+- screengrab: transcript/word-menu-context.png
+  instructions: See transcript/word-menu.png
+  in_path: transcript/word-menu.png
+  offset_x: 190
+  offset_y: 380
+  width: 580
+  height: 335
 
 - screengrab: transcripts/export-formatted.png
   instructions:
@@ -213,47 +220,18 @@
 - screengrab: transcript/header.png
   in_path: transcript/overview.png
   instructions: See transcript/overview.png
-  offset_x: 110
-  offset_y: 190
-  width: 1200
-  height: 450
-  drawing:
-      # projects and layers
-    - func: rect
-      xleft: 500
-      ytop: 385
-      xright: 1305
-      ybottom: 635
-      border: '#e41a1c'
-      lty: dashed
-      lwd: 5
-      # export formatted
-    - func: rect
-      xleft: 110
-      ytop: 270
-      xright: 335
-      ybottom: 300
-      border: '#377eb8'
-      lty: dashed
-      lwd: 5
-      # transcript attributes
-    - func: rect
-      xleft: 110
-      ytop: 310
-      xright: 335
-      ybottom: 340
-      border: '#4daf4a'
-      lty: dashed
-      lwd: 5
-      # participants
-    - func: rect
-      xleft: 110
-      ytop: 385
-      xright: 335
-      ybottom: 560
-      border: '#984ea3'
-      lty: dashed
-      lwd: 5
+  offset_x: 190
+  offset_y: 315
+  width: 1510
+  height: 65
+
+- screengrab: transcript/player.png
+  in_path: transcript/overview.png
+  instructions: See transcript/overview.png
+  offset_x: 1430
+  offset_y: 155
+  width: 450
+  height: 155
 
 - screengrab: transcript/no-praat-player.png
   in_path: transcript/no-praat.png
@@ -263,18 +241,39 @@
     - Load https://apls.pitt.edu/labbcat/transcript?transcript=CB01interview3.eaf
     - Click the first word in the transcript (okay)
     - Save
-  offset_x: 1440
-  offset_y: 215
-  width: 455
-  height: 150
+  offset_x: 1430
+  offset_y: 155
+  width: 450
+  height: 170
 
 - screengrab: transcript/no-praat-word-menu.png
   in_path: transcript/no-praat.png
   instructions: See transcript/no-praat-player.png
-  offset_x: 319
-  offset_y: 770
-  width: 185
-  height: 160
+  offset_x: 260
+  offset_y: 435
+  width: 173
+  height: 148
+
+- screengrab: transcript/no-praat-word-menu-context.png
+  in_path: transcript/no-praat.png
+  instructions: See transcript/no-praat-player.png
+  offset_x: 190
+  offset_y: 380
+  width: 580
+  height: 205
+
+## For side-by-side comparison to transcript/word-menu-context.png
+- screengrab: transcript/no-praat-word-menu-context-comp.png
+  instructions: See transcript/no-praat.png
+  in_path: transcript/no-praat.png
+  offset_x: 190
+  offset_y: 380
+  width: 580
+  height: 335
+
+- screengrab: !transcript/word-menu-comp.png
+  instructions:
+    - In PowerPoint, stitch together transcript/no-praat-word-menu-context-comp.png and transcript/word-menu-context.png. I promise it'll be okay
 
 - screengrab: transcript/overview.png
   instructions:
@@ -287,58 +286,498 @@
   width: 1920
   height: 890
   drawing:
-      # header
-    - func: rect
-      xleft: 110
-      ytop: 190
-      xright: 1310
-      ybottom: 640
-      border: '#e41a1c'
-      lty: dashed
-      lwd: 5
       # body
     - func: rect
-      xleft: 110
-      ytop: 660
-      xright: 1380
+      xleft: 190
+      ytop: 382
+      xright: 1700
       ybottom: 1025 # off the page
-      border: '#377eb8'
+      border: '#e41a1c' #.hl-1 (red)
+      lty: dashed
+      lwd: 5
+      # header
+    - func: rect
+      xleft: 190
+      ytop: 315
+      xright: 1700
+      ybottom: 377
+      border: '#377eb8' #.hl-2 (blue)
       lty: dashed
       lwd: 5
       # media player
     - func: rect
-      xleft: 1440
-      ytop: 215
-      xright: 1895
-      ybottom: 395
-      border: '#4daf4a'
+      xleft: 1430
+      ytop: 155
+      xright: 1880
+      ybottom: 310
+      border: '#4daf4a' #.hl-3 (green)
       lty: dashed
       lwd: 5
       # arrows
     - func: rect
-      xleft: 0
-      ytop: 575
-      xright: 35
-      ybottom: 610
+      xleft: 15
+      ytop: 565
+      xright: 40
+      ybottom: 600
+      border: '#984ea3' #.hl-4 (purple)
+      lty: dashed
+      lwd: 5
+    - func: rect
+      xleft: 1855
+      ytop: 565
+      xright: 1880
+      ybottom: 600
+      border: '#984ea3'  #.hl-4 (purple)
+      lty: dashed
+      lwd: 5
+
+- screengrab: transcript/nav-arrows.png
+  instructions: See transcript/overview.png
+  in_path: transcript/overview.png
+  offset_x: 0
+  offset_y: 130
+  width: 1920
+  height: 520
+  drawing:
+      # arrows
+    - func: rect
+      xleft: 15
+      ytop: 565
+      xright: 40
+      ybottom: 600
       border: '#984ea3'
       lty: dashed
       lwd: 5
     - func: rect
-      xleft: 1860
-      ytop: 575
-      xright: 1895
-      ybottom: 610
+      xleft: 1855
+      ytop: 565
+      xright: 1880
+      ybottom: 600
       border: '#984ea3'
       lty: dashed
       lwd: 5
 
-- screengrab: transcript/projects-layers.png
+- screengrab: transcript/body.png
   instructions: See transcript/overview.png
   in_path: transcript/overview.png
-  offset_x: 110
-  offset_y: 270
-  width: 1200
-  height: 405
+  offset_x: 190
+  offset_y: 380
+  width: 1500
+  height: 615
+
+- screengrab: transcript/word-noise.png
+  instructions:
+    - Log in as test-student
+    - Set browser zoom to 100%
+    - Load https://apls.pitt.edu/labbcat/transcript?transcript=CB01interview3.eaf
+    - "`window.scrollTo(0, 1150); document.getElementById('media').remove();`"
+    - Save
+  offset_x: 190
+  offset_y: 130
+  width: 1500
+  height: 360
+
+- screengrab: transcript/multiple-layers.png
+  instructions:
+    - Log in as test-student
+    - Set browser zoom to 100%
+    - Load https://apls.pitt.edu/labbcat/transcript?transcript=CB01interview3.eaf
+    - Select layers speech_rate, frequency_from_celex, segment
+    - Deselect layer noise
+  offset_x: 190
+  offset_y: 380
+  width: 1510
+  height: 520
+
+- screengrab: transcript/turn-swoosh.png
+  instructions:
+    - Log in as test-student
+    - Set browser zoom to 100%
+    - Load https://apls.pitt.edu/labbcat/transcript?transcript=CB01interview3.eaf
+    - "`t = document.querySelector('.block'); t.querySelector('legend').style.color = 'white'; t.querySelector('.words').style.color = 'white';`"
+    - Save
+  offset_x: 198
+  offset_y: 392
+  width: 350
+  height: 55
+
+- screengrab: transcript/turns-utterances.png
+  instructions:
+    - Log in as test-student
+    - Set browser zoom to 100%
+    - Load https://apls.pitt.edu/labbcat/transcript?transcript=CB01reading1.eaf
+    - Save
+  offset_x: 190
+  offset_y: 380
+  width: 1510
+  height: 620
+
+- screengrab: transcript/player-playing.png
+  instructions:
+    - In an *incognito* window, log in as test-student
+    - Set browser zoom to 100%
+    - Load https://apls.pitt.edu/labbcat/transcript?transcript=CB01interview3.eaf
+    - Click play, then quickly click away from the player
+    - Save
+  offset_x: 190
+  offset_y: 157
+  width: 1700
+  height: 473
+  drawing:
+      # media player
+    - func: rect
+      xleft: 1430
+      ytop: 158
+      xright: 1885
+      ybottom: 330
+      border: '#4daf4a'
+      lty: dashed
+      lwd: 5
+
+- screengrab: !transcript/tooltips.png
+  instructions:
+    - Log in as test-student
+    - Set browser zoom to 100%
+    - Load https://apls.pitt.edu/labbcat/transcript?transcript=CB01interview3.eaf
+    - Select layers speech_rate, frequency_from_celex, segment
+    - Hover over the right edge of the last annotation in each layer and wait for the tooltip to load
+    - "Save each as `transcript/layer-hover-N.png` (use the Snipping Tool's delay option)"
+    - Stitch it together in PowerPoint (I promise it's not as bad as it sounds)
+
+- screengrab: transcript/tooltip-missing.png
+  instructions:
+    - Log in as test-student
+    - Set browser zoom to 100%
+    - Load https://apls.pitt.edu/labbcat/transcript?transcript=CB01interview3.eaf
+    - Select layers speech_rate, frequency_from_celex, segment
+    - Hover over the middle of the empty segment annotation underneath 'what' in the second line
+    - Save (use the Snipping Tool's delay option)
+  offset_x: 190
+  offset_y: 535
+  width: 740
+  height: 160
+  overlay:
+    - image: _arrow.png
+      offset_x: 280
+      offset_y: 635
+
+- screengrab: transcript/segment-dependency.png
+  instructions:
+    - Log in as test-student
+    - Set browser zoom to 100%
+    - Load https://apls.pitt.edu/labbcat/transcript?transcript=CB01interview3.eaf
+    - Select layers phonemes, stress, foll_pause, segment
+    - Save
+  offset_x: 190
+  offset_y: 380
+  width: 1510
+  height: 545
+
+- screengrab: transcript/layer-picker.png
+  instructions:
+    - Log in as test-student
+    - Set browser zoom to 100%
+    - Load https://apls.pitt.edu/labbcat/transcript?transcript=CB01interview3.eaf
+    - "Hide watermark: In Chrome console, select `html` element and deselect `background-image`"
+    - Click the Layers tab
+    - Save
+  offset_x: 190
+  offset_y: 315
+  width: 1510
+  height: 470 # plus first utterance (1 layer)
+
+- screengrab: transcript/layer-picker-layout.png
+  instructions: See transcript/layer-picker.png
+  in_path: transcript/layer-picker.png
+  offset_x: 190
+  offset_y: 315
+  width: 1510
+  height: 470 # plus first utterance (1 layer)
+  drawing:
+    # checkbox (noise)
+    - func: rect
+      xleft: 556
+      ytop: 423
+      xright: 583
+      ybottom: 449
+      border: '#e41a1c' #.hl-1 (red)
+      lty: dashed
+      lwd: 3
+    # projects column
+    - func: rect
+      xleft: 350
+      ytop: 387
+      xright: 532
+      ybottom: 633
+      border: '#377eb8' #.hl-2 (blue)
+      lty: dashed
+      lwd: 3
+    # layer icons (orthography)
+    - func: rect
+      xleft: 948
+      ytop: 426
+      xright: 1006
+      ybottom: 457
+      border: '#4daf4a' #.hl-3 (green)
+      lty: dashed
+      lwd: 3
+    # annotation count (word)
+    - func: rect
+      xleft: 1059
+      ytop: 459
+      xright: 1127
+      ybottom: 487
+      border: '#984ea3' #.hl-4 (purple)
+      lty: dashed
+      lwd: 3
+    # IPA/DISC toggle (segment)
+    - func: rect
+      xleft: 1485
+      ytop: 426
+      xright: 1519
+      ybottom: 453
+      border: '#ff7f00' #.hl-5 (orange)
+      lty: dashed
+      lwd: 3
+
+- screengrab: transcript/layer-picker-segment.png
+  instructions:
+    - Log in as test-student
+    - Set browser zoom to 100%
+    - Load https://apls.pitt.edu/labbcat/transcript?transcript=CB01interview3.eaf
+    - "Hide watermark: In Chrome console, select `html` element and deselect `background-image`"
+    - Click the Layers tab
+    - Select segment
+    - Save
+  offset_x: 190
+  offset_y: 315
+  width: 1510
+  height: 500 # plus first utterance (2 layers)
+
+- screengrab: transcript/layer-picker-segment-disc.png
+  instructions:
+    - Log in as test-student
+    - Set browser zoom to 100%
+    - Load https://apls.pitt.edu/labbcat/transcript?transcript=CB01interview3.eaf
+    - "Hide watermark: In Chrome console, select `html` element and deselect `background-image`"
+    - Click the Layers tab
+    - Select segment
+    - Display segment in DISC
+    - Save
+  offset_x: 190
+  offset_y: 315
+  width: 1510
+  height: 500 # plus first utterance (2 layers)
+
+- screengrab: transcript/layer-picker-segment-disc-phonemes.png
+  instructions:
+    - Log in as test-student
+    - Set browser zoom to 100%
+    - Load https://apls.pitt.edu/labbcat/transcript?transcript=CB01interview3.eaf
+    - "Hide watermark: In Chrome console, select `html` element and deselect `background-image`"
+    - Click the Layers tab
+    - Select segment
+    - Display segment in DISC
+    - Select phonology
+    - Select phonemes
+    - Save
+  offset_x: 190
+  offset_y: 315
+  width: 1510
+  height: 530 # plus first utterance (3 layers)
+
+- screengrab: transcript/segment-tooltip.png
+  instructions: See transcript/tooltips.png
+  in_path: transcript/layer-hover-4.png
+  offset_x: 945
+  offset_y: 305
+  width: 255
+  height: 70
+  overlay:
+    - image: _arrow.png # for some reason this is showing up weirdly big
+      offset_x: 1029
+      offset_y: 336
+
+- screengrab: transcript/layer-picker-no-segment.png
+  instructions:
+    - Log in as test-student
+    - Set browser zoom to 100%
+    - Load https://apls.pitt.edu/labbcat/transcript?transcript=CB01interview3.eaf
+    - "Hide watermark: In Chrome console, select `html` element and deselect `background-image`"
+    - Click the Layers tab
+    - Select segment
+    - Deselect segment
+    - Save
+  offset_x: 190
+  offset_y: 315
+  width: 1510
+  height: 470 # plus first utterance (1 layer)
+
+- screengrab: transcript/layer-picker-projects.png
+  instructions:
+    - Log in as test-student
+    - Set browser zoom to 100%
+    - Load https://apls.pitt.edu/labbcat/transcript?transcript=CB01interview3.eaf
+    - Click the Layers tab
+    - Select the timing project
+    - Save
+  offset_x: 190
+  offset_y: 315
+  width: 1510
+  height: 470 # plus first utterance (1 layer)
+
+- screengrab: transcript/layer-picker-no-projects.png
+  instructions:
+    - Log in as test-student
+    - Set browser zoom to 100%
+    - Load https://apls.pitt.edu/labbcat/transcript?transcript=CB01interview3.eaf
+    - Click the Layers tab
+    - Select the timing project
+    - Select speech_rate
+    - Deselect timing
+    - Save
+  offset_x: 190
+  offset_y: 315
+  width: 1510
+  height: 500 # plus first utterance (2 layers)
+
+- screengrab: transcript/layer-picker-tooltip.png
+  instructions:
+    - Log in as test-student
+    - Set browser zoom to 100%
+    - Load https://apls.pitt.edu/labbcat/transcript?transcript=CB01interview3.eaf
+    - Click the Layers tab
+    - Select the timing project
+    - Select speech_rate
+    - Hover just under the s in speech_rate
+    - Save (use the Snipping Tool's delay option)
+  offset_x: 190
+  offset_y: 315
+  width: 1510
+  height: 470 # plus first utterance (1 layer)
+  overlay:
+    - image: _help.png
+      offset_x: 805
+      offset_y: 481
+
+- screengrab: transcript/layer-picker-segment-icons.png
+  instructions: See transcript/layer-picker.png
+  in_path: transcript/layer-picker.png
+  offset_x: 1240
+  offset_y: 425
+  width: 280
+  height: 30
+
+- screengrab: transcript/layer-picker-icon-tooltip.png
+  instructions:
+    - Log in as test-student
+    - Set browser zoom to 100%
+    - Load https://apls.pitt.edu/labbcat/transcript?transcript=CB01interview3.eaf
+    - Click the Layers tab
+    - Hover just under the ʒ next to segment
+    - Save (use the Snipping Tool's delay option)
+  offset_x: 1240
+  offset_y: 425
+  width: 280
+  height: 80 # plus first utterance (1 layer)
+  overlay:
+    - image: _help.png
+      offset_x: 1279
+      offset_y: 452
+
+- screengrab: transcript/layer-picker-hide-icons.png
+  instructions:
+    - Log in as test-student
+    - Set browser zoom to 100%
+    - Load https://apls.pitt.edu/labbcat/transcript?transcript=CB01interview3.eaf
+    - Click the Layers tab
+    - Click Hide layer icons
+    - Save
+  offset_x: 190
+  offset_y: 315
+  width: 1510
+  height: 470 # plus first utterance (1 layer)
+
+- screengrab: transcript/layer-picker-many-annotations.png
+  instructions:
+    - Log in as test-student
+    - Set browser zoom to 100%
+    - Load https://apls.pitt.edu/labbcat/transcript?transcript=HD06interview1.eaf
+    - "Hide watermark: In Chrome console, select `html` element and deselect `background-image`"
+    - Click the Layers tab
+    - Select imported
+    - Select redaction
+    - Deselect imported
+    - Save
+  offset_x: 190
+  offset_y: 160 # bottom of menu, to show title and duration
+  width: 1510
+  height: 825
+
+- screengrab: transcript/layer-picker-hide-annotation-counts.png
+  instructions:
+    - Log in as test-student
+    - Set browser zoom to 100%
+    - Load https://apls.pitt.edu/labbcat/transcript?transcript=CB01interview3.eaf
+    - "Hide watermark: In Chrome console, select `html` element and deselect `background-image`"
+    - Click the Layers tab
+    - Select Hide annotation counts
+    - Save
+  offset_x: 190
+  offset_y: 315
+  width: 1510
+  height: 470 # plus first utterance (1 layer)
+
+- screengrab: transcript/export.png
+  instructions:
+    - Log in as test-student
+    - Set browser zoom to 100%
+    - Load https://apls.pitt.edu/labbcat/transcript?transcript=CB01interview3.eaf
+    - "Hide watermark: In Chrome console, select `html` element and deselect `background-image`"
+    - Click the Export tab
+    - Save
+  offset_x: 190
+  offset_y: 315
+  width: 1510
+  height: 580 # plus first utterance (1 layer)
+
+- screengrab: transcript/export-layers.png
+  instructions:
+    - Log in as test-student
+    - Set browser zoom to 100%
+    - Load https://apls.pitt.edu/labbcat/transcript?transcript=CB01interview3.eaf
+    - "Hide watermark: In Chrome console, select `html` element and deselect `background-image`"
+    - Select dictionary_phonemes
+    - Click the Export tab
+    - Save
+  offset_x: 190
+  offset_y: 315
+  width: 1510
+  height: 610 # plus first utterance (2 layers)
+
+- screengrab: transcript/export-praat-0.png
+  instructions:
+    - Log in as test-student
+    - Set browser zoom to 100%
+    - Load https://apls.pitt.edu/labbcat/transcript?transcript=CB01interview3.eaf
+    - Deselect noise
+    - Export to TextGrid
+    - Open in Praat, maximize window
+    - Save
+
+- screengrab: transcript/layer-picker-empty-layers.png
+  instructions:
+    - Log in as test-student
+    - Set browser zoom to 100%
+    - Load https://apls.pitt.edu/labbcat/transcript?transcript=CB01interview3.eaf
+    - "Hide watermark: In Chrome console, select `html` element and deselect `background-image`"
+    - Click the Layers tab
+    - Select imported
+    - Save
+  offset_x: 190
+  offset_y: 315
+  width: 1510
+  height: 470 # plus first utterance (1 layer)
 
 - screengrab: home/overview.png
   instructions:
