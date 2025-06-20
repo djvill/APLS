@@ -6,7 +6,7 @@ parent: How to use APLS
 has_children: yes
 has_toc: no
 nav_order: 20
-last_modified_date: 2025-06-20T11:13:20-04:00
+last_modified_date: 2025-06-20T13:40:11-04:00
 ---
 
 # {{ page.title }}
@@ -490,6 +490,40 @@ You can choose different settings for different phonological layers:
 
 ## Viewing transcript attributes
 
+In [LaBB-CAT] corpora like APLS, <span class="keyterm">attributes</span> are [metadata about individual transcripts or participants]({{ '/doc/attribute-typology' | relative_url }}).
+You can view a transcript's attributes by opening the _Attributes_ tab in the transcript header.
+This tab looks exactly like the transcript's [<span class="apls-page">Transcript attributes</span>]({{ '/doc/browse-transcripts#transcript-attributes-pages' | relative_url }}) page: <!-- Move this to that docpage instead? -->
+
+{% include screengrab.html src="transcript/attributes.png" %}
+
+The left-hand column shows attributes' display titles (like `Duration (sec)`) and names (like `duration`).
+The right-hand column shows attributes' values (e.g., `521.073`).
+
+Most of the attributes are self-explanatory.
+But just like layer names in the [layer picker](#layer-description), hovering over an attribute name will bring up a tooltip with its description:
+
+{% include screengrab.html src="transcript/attributes-tooltip.png" %}
+
+Blanks in the right-hand column mean that this transcript doesn't have any value for that attribute.
+As you can see, for example, `Transcription AI tool(s)` has a blank for `CB01interview3.eaf` (meaning its <span class="transcript-attr">transcription_ai_tools</span> attribute is empty).
+This is because no AI tools were used to transcribe `CB01interview3.eaf`.
+
+{: .note }
+> To export transcript attributes to a CSV file, use the [_Export Attributes_ menu on the <span class="apls-page">Transcripts</span> page]({{ '/doc/browse-transcripts#export-attributes' | relative_url }}).
+
+The two checkboxes at the bottom of this tab control how the left-hand column is displayed.
+If you want to see attributes' full [export names]({{ '/doc/attribute-typology#export-name' | relative_url }}), deselect _Hide attribute prefixes_:
+
+{% include screengrab.html src="transcript/attributes-prefixes.png" %}
+
+If you're finding the attribute names visually distracting, select _Hide attribute names_:
+
+{% include screengrab.html src="transcript/attributes-hide-names.png" %}
+
+Like in the [layer picker](#selecting-layers-to-display), APLS remembers these settings if you navigate to other <span class="apls-page">Transcript</span> or <span class="apls-page">Transcript attributes</span> pages in the same browser tab.
+
+A detailed description of the different transcript attributes can be found in the [field guide]({{ '/doc/transcript-attributes' | relative_url }}).
+
 
 ## Viewing participant information
 
@@ -602,30 +636,7 @@ Phonological layers (like <span class="layer">segment</span>) are always display
 > {% include screengrab.html src="transcript/export-praat-3.png" %}
 
 
-
 ## Opening utterances in Praat
-
-
-# Old stuff
-
-
-### [transcript attributes] panel
-
-Underneath the _export formatted_ menu is the collapsible _[transcript attributes]_ panel
-This panel shows' <span class="keyterm">transcript attributes</span> display titles in the left-hand column (e.g., `Neighborhood`) and values in the right-hand column (e.g., `Cranberry Township`).
-
-{% include screengrab.html src="transcript/attributes.png" %}
-
-If you hover over a display title, a tooltip will pop up with the attribute's [export name]({{ '/doc/attribute-typology#export-name'}}) and short description.
-
-{% include screengrab.html src="transcript/attribute-hover.png" %}
-
-Blanks in the right-hand column mean that this transcript doesn't have any value for that attribute.
-For example, the previous screengrabs show a blank for `Transcription AI tool(s)` because the <span class="transcript-attr">transcription_ai_tools</span> attribute is empty for `CB01interview3.eaf`;
-no AI tools were used to transcribe that interview.
-
-{: .note }
-> To export transcript attributes to a CSV file, use the [_Export Attributes_ menu on the <span class="apls-page">Transcripts</span> page]({{ '/doc/browse-transcripts#export-attributes' | relative_url }}).
 
 
 ## Accessing <span class="apls-page">Transcript</span> pages 

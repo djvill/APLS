@@ -180,30 +180,58 @@
     - Log in as test-student
     - Set browser zoom to 100%
     - Load https://apls.pitt.edu/labbcat/transcript?transcript=CB01interview3.eaf
-    - Click transcript attributes
+    - "Hide watermark: In Chrome console, select `html` element and deselect `background-image`"
+    - Click Attributes tab
     - Save
-  offset_x: 110
+  offset_x: 190
   offset_y: 310
-  width: 1050
-  height: 375
-
-- screengrab: transcript/attribute-hover.png
+  width: 1510
+  height: 560
+- screengrab: transcript/attributes-tooltip.png
   instructions:
     - Log in as test-student
     - Set browser zoom to 100%
     - Load https://apls.pitt.edu/labbcat/transcript?transcript=CB01interview3.eaf
-    - Click transcript attributes
-    - Put cursor over the middle of N in Neighborhood
-    - Wait for tooltip to load
-    - Save
-  offset_x: 110
+    - "Hide watermark: In Chrome console, select `html` element and deselect `background-image`"
+    - Click Attributes tab
+    - Put cursor over the corner of d in Neighborhood
+    - Save (use the Snipping Tool's delay option)
+  offset_x: 190
   offset_y: 310
-  width: 1050
-  height: 375
+  width: 1510
+  height: 560
   overlay: 
-    - image: _arrow.png
-      offset_x: 163
-      offset_y: 457
+    - image: _help.png
+      offset_x: 491
+      offset_y: 517
+
+- screengrab: transcript/attributes-prefixes.png
+  instructions:
+    - Log in as test-student
+    - Set browser zoom to 100%
+    - Load https://apls.pitt.edu/labbcat/transcript?transcript=CB01interview3.eaf
+    - "Hide watermark: In Chrome console, select `html` element and deselect `background-image`"
+    - Click Attributes tab
+    - Deselect Hide attribute prefixes
+    - Save
+  offset_x: 190
+  offset_y: 310
+  width: 1510
+  height: 560
+
+- screengrab: transcript/attributes-hide-names.png
+  instructions:
+    - Log in as test-student
+    - Set browser zoom to 100%
+    - Load https://apls.pitt.edu/labbcat/transcript?transcript=CB01interview3.eaf
+    - "Hide watermark: In Chrome console, select `html` element and deselect `background-image`"
+    - Click Attributes tab
+    - Select Hide attribute names
+    - Save
+  offset_x: 190
+  offset_y: 310
+  width: 1510
+  height: 560
 
 - screengrab: transcript/export-formatted.png
   instructions:
