@@ -6,7 +6,7 @@ parent: How to use APLS
 has_children: yes
 has_toc: no
 nav_order: 20
-last_modified_date: 2025-06-20T13:40:11-04:00
+last_modified_date: 2025-06-20T16:25:18-04:00
 ---
 
 # {{ page.title }}
@@ -175,8 +175,6 @@ For example, here are the first few lines of `CB01interview3.eaf` again, now wit
 
 
 ### <span class="layer">turn</span>s and <span class="layer">utterance</span>s
-<!-- TODO: the TOC just shows "s and s", deleting the span.layer elements. Also need to style underline for a > span.layer (and &:hover). -->
-<!-- N.B. When I disable addA and run it manually on those nodes, there's no issue. Maybe this is only on localhost? -->
 
 There are actually two more layers that the transcript body displays implicitly: <span class="layer">turn</span> and <span class="layer">utterance</span>.
 These layers divide up the timing of a transcript based on when participants are speaking.

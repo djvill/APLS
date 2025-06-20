@@ -231,12 +231,19 @@ function addA(node, type) {
 
 
 //Add anchors once page loads
+//Exclude spans in TOC because these just get deleted
 window.addEventListener('DOMContentLoaded', () => {
   var keyterms = document.querySelectorAll("span.keyterm"),
       layers = document.querySelectorAll("span.layer"),
       attributes = document.querySelectorAll("span.transcript-attr, span.participant-attr, span.main_participant-attr");
-  keyterms.forEach(a => addA(a, "keyterm"));
-  layers.forEach(a => addA(a, "layer"));
-  attributes.forEach(a => addA(a, "attribute"));
+  Array.from(keyterms)
+       .filter(a => !a.closest("#markdown-toc"))
+       .forEach(a => addA(a, "keyterm"));
+  Array.from(layers)
+       .filter(a => !a.closest("#markdown-toc"))
+       .forEach(a => addA(a, "layer"));
+  Array.from(attributes)
+       .filter(a => !a.closest("#markdown-toc"))
+       .forEach(a => addA(a, "attribute"));
 });
 
