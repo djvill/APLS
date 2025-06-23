@@ -501,6 +501,117 @@
   width: 1510
   height: 545
 
+- screengrab: transcript/peers.png
+  instructions:
+    - Log in as test-student
+    - Set browser zoom to 100%
+    - Load https://apls.pitt.edu/labbcat/transcript?transcript=CB01interview3.eaf
+    - "Hide watermark: In Chrome console, select `html` element and deselect `background-image`"
+    - Select dictionary_phonemes, phonemes, syllables
+    - Save
+  offset_x: 190
+  offset_y: 380
+  width: 905
+  height: 150
+
+- screengrab: transcript/peers-tooltip-vert-1.png
+  instructions:
+    - Log in as test-student
+    - Set browser zoom to 100%
+    - Load https://apls.pitt.edu/labbcat/transcript?transcript=CB01interview3.eaf
+    - Select dictionary_phonemes, phonemes, syllables
+    - Hover just right of n in dictionary_phonemes an
+    - Save (use the Snipping Tool's delay option)
+  offset_x: 190
+  offset_y: 380
+  width: 905
+  height: 150
+  overlay:
+    - image: _arrow.png
+      offset_x: 799
+      offset_y: 418
+
+- screengrab: transcript/peers-tooltip-vert-2.png
+  instructions:
+    - Log in as test-student
+    - Set browser zoom to 100%
+    - Load https://apls.pitt.edu/labbcat/transcript?transcript=CB01interview3.eaf
+    - Select dictionary_phonemes, phonemes, syllables
+    - Hover just right of u in dictionary_phonemes you
+    - Save (use the Snipping Tool's delay option)
+  offset_x: 190
+  offset_y: 380
+  width: 905
+  height: 150
+  overlay:
+    - image: _arrow.png
+      offset_x: 705
+      offset_y: 418
+
+- screengrab: !transcript/peers-tooltip-vert.png
+  instructions:
+    - In PowerPoint, stitch together transcript/peers-tooltip-vert-1.png and transcript/peers-tooltip-vert-2.png (with 0.2 inches of vertical space). I promise it'll be okay
+
+- screengrab: transcript/peers-tooltip-horiz-1.png
+  instructions:
+    - Log in as test-student
+    - Set browser zoom to 100%
+    - Load https://apls.pitt.edu/labbcat/transcript?transcript=CB01interview3.eaf
+    - Select dictionary_phonemes, phonemes, syllables
+    - Hover just right of n in dictionary_phonemes an
+    - Save (use the Snipping Tool's delay option)
+  offset_x: 190
+  offset_y: 380
+  width: 905
+  height: 150
+  overlay:
+    - image: _arrow.png
+      offset_x: 340
+      offset_y: 448
+
+- screengrab: transcript/peers-tooltip-horiz-2.png
+  instructions:
+    - Log in as test-student
+    - Set browser zoom to 100%
+    - Load https://apls.pitt.edu/labbcat/transcript?transcript=CB01interview3.eaf
+    - Select dictionary_phonemes, phonemes, syllables
+    - Hover just right of u in dictionary_phonemes you
+    - Save (use the Snipping Tool's delay option)
+  offset_x: 190
+  offset_y: 380
+  width: 905
+  height: 150
+  overlay:
+    - image: _arrow.png
+      offset_x: 401
+      offset_y: 448
+
+- screengrab: !transcript/peers-tooltip-horiz.png
+  instructions:
+    - In PowerPoint, stitch together transcript/peers-tooltip-horiz-1.png and transcript/peers-tooltip-horiz-2.png (with 0.2 inches of vertical space). I promise it'll be okay
+
+- screengrab: transcript/peers-textgrid.png
+  instructions:
+    - Log in as test-student
+    - Set browser zoom to 100%
+    - Load https://apls.pitt.edu/labbcat/transcript?transcript=CB01interview3.eaf
+    - Select dictionary_phonemes, phonemes, syllables
+    - Click Open TextGrid in Praat
+    - In Praat, open just the TextGrid, not the Sound
+    - Save
+
+- screengrab: transcript/phonemes.png
+  instructions:
+    - Log in as test-student
+    - Set browser zoom to 100%
+    - Load https://apls.pitt.edu/labbcat/transcript?transcript=CB01interview3.eaf
+    - Select phonemes
+    - Save
+  offset_x: 190
+  offset_y: 380
+  width: 700
+  height: 95
+
 - screengrab: transcript/layer-picker.png
   instructions:
     - Log in as test-student

@@ -3,7 +3,7 @@ title: Phonemic transcription with the DISC alphabet
 permalink: /doc/phonemic-transcription
 parent: Transcription
 nav_order: 3
-last_modified_date: 2025-05-27T16:46:13-04:00
+last_modified_date: 2025-06-23T16:18:05-04:00
 ---
 
 
@@ -11,13 +11,13 @@ last_modified_date: 2025-05-27T16:46:13-04:00
 {:.no_toc}
 
 <!-- At some point, split this out into its own page for end-users rather than transcribers -->
-APLS primarily uses the **DISC phonemic alphabet**[^celex] for representing speech sounds (specifically, phonemes), rather than the [International Phonetic Alphabet](https://en.wikipedia.org/wiki/International_Phonetic_Alphabet) (IPA).
+APLS primarily uses the **DISC phonemic alphabet**[^celex] for representing speech sounds (specifically, phonemes), rather than the [International Phonetic Alphabet (IPA)][ipa].
 DISC creates a one-to-one mapping between sounds and symbols like the IPA, but _unlike_ the IPA, DISC only uses symbols that appear on a standard [QWERTY keyboard](https://en.wikipedia.org/wiki/QWERTY).
-While the IPA is well-recognized among linguists, many IPA characters are hard for end-users to input and difficult for computers to store.[^why-not-ipa]
-As a result, APLS uses DISC internally for _storing_ and _searching_ phonological data, it _exports_ phonological data in DISC, and APLS _transcribers_ use DISC for ["pronounce codes"](https://djvill.github.io/APLS/doc/transcription-convention#pronounce-codes) when a word's pronunciation needs to be specified (e.g., an incomplete word).
+While the IPA is widely-recognized among linguists, many IPA characters are hard for end-users to input and difficult for computers to store.[^why-not-ipa]
+As a result, APLS uses DISC internally for _storing_ and _searching_ phonological data, it _exports_ phonological data in DISC, and APLS _transcribers_ use DISC for ["pronounce codes"]({{ '/doc/transcription-convention#pronounce-codes' | relative_url }}) when a word's pronunciation needs to be specified (e.g., an incomplete word).
 In APLS, IPA is used only for _displaying_ phonological data to end-users.
 
-[^celex]: DISC, developed for the [CELEX](https://catalog.ldc.upenn.edu/LDC96L14) project, stands for **di**stinct **s**ingle **c**haracters. For more details, see CELEX [English documentation](https://catalog.ldc.upenn.edu/docs/LDC96L14/eug_let.pdf), section 2.4.1 (starting on p. 30 of the PDF).
+[^celex]: DISC, developed for the [CELEX] project, stands for **di**stinct **s**ingle **c**haracters. For more details, see CELEX [English documentation](https://catalog.ldc.upenn.edu/docs/LDC96L14/eug_let.pdf), section 2.4.1 (starting on p. 30 of the PDF).
 
 [^why-not-ipa]: 
     For the purpose of representing speech sounds in a database like APLS, IPA has several substantial drawbacks:

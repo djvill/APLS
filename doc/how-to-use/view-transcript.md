@@ -6,7 +6,7 @@ parent: How to use APLS
 has_children: yes
 has_toc: no
 nav_order: 20
-last_modified_date: 2025-06-20T16:25:18-04:00
+last_modified_date: 2025-06-23T16:18:05-04:00
 ---
 
 # {{ page.title }}
@@ -105,7 +105,18 @@ this is the case in the second line above, where Barbara Johnstone and CB01 over
 Bold text is used for CB01's words and the `CB01` speaker code, since CB01 is the <span class="keyterm">main participant</span> in this transcript (that is, the interviewee).
 Finally, the text in magenta italics represents noises, whether produced by a participant (e.g., breathing, smacking lips) or not (e.g., banging, car horns). <!-- Mention `unclear` here? -->
 
-<!-- A few convention things: . - for pauses, ? for questions, ~ for hesitations, ___ for redactions -->
+When you're reading the transcript, you'll also notice some bits of punctuation in participants' turns:
+
+- `.` for short pauses, `-` for long pauses
+- `?` for questions or question intonation
+- `~` for an incomplete or hesitated word
+- `___` for redactions
+
+{: .note}
+> Decisions about what counts as a pause, what is an incomplete word, and what should be redacted are made by trained transcribers in accordance with the [APLS transcription convention]({{ '/doc/transcription-convention' }}).
+
+One thing you **won't** notice are periods for the end of sentences.
+Although we're used to breaking up written language into sentences, this is actually not that common in normal spontaneous speech.
 
 As we'll discuss [below](#viewing-layer-data), this isn't a typical transcript like you might see in other contexts---it's <span class="keyterm">annotations</span> on <span class="keyterm">layers</span>.
 
@@ -196,7 +207,7 @@ If you ever need to figure out where an utterance begins or ends, you can use th
 > Then, <span class="layer">turn</span>s combine adjacent <span class="layer">utterance</span>s from the same participant.
 
 <!-- Beyond breaking up the transcript into lines, utterances show up in the [word menu](#word-menu). -->
-Elsewhere in APLS, turns and utterances show up in [anchoring searches]({{ '/doc/anchoring-searches#scope' | relative_url }}), [exporting search results]({{ '/doc/exporting-data#exporting-data-from-the-search-results-page' | relative_url }}), and [phrase layers]({{ '/doc/layer-typology#scope' | relative_url }}).
+Elsewhere in APLS, turns and utterances show up in [anchoring searches]({{ '/doc/anchoring-searches#scope' | relative_url }}), [exporting search results]({{ '/doc/export-data#exporting-data-from-the-search-results-page' | relative_url }}), and [phrase layers]({{ '/doc/layer-typology#scope' | relative_url }}).
 
 
 ### Annotation tooltips
@@ -216,10 +227,10 @@ Those are the most important things you can see in the tooltip.
 These tooltips also touch on some concepts that are covered later on this documentation page:
 
 - <span class="layer">frequency_from_celex</span> shows `[2]`, followed by two different counts, `1775 836`
-  - This means the word _individual_ has two <span class="keyterm">peer</span> annotations on the <span class="keyterm">frequency_from_celex</span> layer. <!-- Or just make the section about alignment + vertical peers. Then I can move the following to that section --> In this case, we can only see one of the two annotations in the transcript body (`1775`). This tells us these are [<span class="keyterm">vertical peers</span>](#vertical-peers).
+  - This means the word _individual_ has two [<span class="keyterm">peer</span>](#horizontal-and-vertical-peers) annotations on the <span class="keyterm">frequency_from_celex</span> layer. In this case, we can only see one of the two annotations in the transcript body (`1775`). This tells us these are [<span class="keyterm">vertical peers</span>](#horizontal-and-vertical-peers).
 - <span class="layer">segment</span> shows `I n d @ v I _ u @ l`
   - The spaces in between these symbols are a hint that there are actually 10 individual annotations on this layer. That's because <span class="layer">segment</span> has a smaller [<span class="keyterm">scope</span>](#layer-scope).
-  - Compared to the annotation in the transcript body (`ɪndəvɪdʒuəl`), some of the symbols match (e.g., `n`, `v`, `u`) but others don't (e.g., `I` vs. `ɪ`, `_` vs. `dʒ`). This is because <span class="layer">segment</span> uses the DISC phonemic alphabet as its [<span class="keyterm">notation system</span>](#layer-notation-system).
+  - Compared to the annotation in the transcript body (`ɪndəvɪdʒuəl`), some of the symbols match (e.g., `n`, `v`, `u`) but others don't (e.g., `I` vs. `ɪ`, `_` vs. `dʒ`). This is because <span class="layer">segment</span>, as a <span class="keyterm">phonological layer</span>, uses the [DISC phonemic alphabet](#phonological-layers-and-disc).
 
 The next line in `CB01interview3.eaf` demonstrates one more type of information we can get from tooltips:
 
@@ -269,14 +280,100 @@ For example, here's the first 3 lines of `CB01interview3.eaf` again, this time w
 Again, the middle line doesn't have <span class="layer">segment</span> annotations because of the overlapping speech.
 As a result, the remaining layers---all of which (except <span class="layer">word</span>) are segment-dependent---don't have annotations on this line either.
 
-### Alignment and vertical peers
+### Horizontal and vertical peers
 
-<!-- Both horizontal and vertical peers mean there can be more than one annotation per the layer's scope. The difference is that horizontal peers are visible in the transcript body, vertical peers aren't. -->
+The <span class="layer">phonemes</span> layer has a one-to-one relationship with its scope (word).
+That is, for each <span class="layer">word</span> in the corpus, there can be only one <span class="layer">phonemes</span> annotation (or none, if it's [missing](#missing-annotations)).
+On the other hand, some layers allow for <span class="keyterm">peers</span>, where there's a several-to-one relationship with the scope.
+There are two types of peers:
 
-### Phonological layers
+- <span class="keyterm">Horizontal peers</span>: Multiple annotations **divide the timespan** of their scope.
+- <span class="keyterm">Vertical peers</span>: Multiple annotations occupy an **identical timespan**.
 
-<!-- Intro DISC here -->
-<!-- Then refer to the typology for a full description of data type -->
+While **horizontal peers can be seen in the transcript body, vertical peers cannot**. 
+Both are visible in a [tooltip](#annotation-tooltips), an [exported transcript](#exporting-the-transcript) (in file types like [Praat] TextGrids), or [search results]({{ '/doc/export-data' | relative_url }}).
+For example, here's the first line of `CB01interview3.eaf`, this time with the following layers:
+
+- <span class="layer">dictionary_phonemes</span> (colored yellow green): allows vertical peers
+- <span class="layer">syllables</span> (kelly green): allows horizontal peers
+- <span class="layer">phonemes</span> (tan): allows neither
+- <span class="layer">word</span> (black): allows neither
+
+{: .under-the-hood}
+> These layers are all part of the process that APLS uses to find <span class="layer">segment</span> annotations, using only the original transcription and the audio file as inputs:
+>
+> 1. APLS takes the word as originally transcribed (<span class="layer">word</span>), strips out pause/question markers, and makes it lowercase. This normalized form makes it easier to look words up in dictionaries like [CELEX] and [Unisyn] for the purpose of finding phonemic representations, word frequencies, etc.
+>    - This is the word's <span class="layer">orthography</span> annotation.
+> 1. APLS uses the word's <span class="layer">orthography</span> annotation to look up phonemic representation(s) in the [CELEX] dictionary (for example, _okay_ as /oʊkeɪ/). Some words have more than one phonemic representation (for example, _an_ can be /æn/ with a full vowel or /ən/ with a reduced vowel).
+>    - <span class="layer">dictionary_phonemes</span> annotation(s).
+> 1. APLS uses [HTK] to estimate where each segment begins and ends in the word based on the audio file. If there are multiple phonemic representations, HTK picks the one that better matches the audio file.
+>    - <span class="layer">segment</span> annotation(s)
+> 1. APLS combines the word's <span class="layer">segment</span> annotations into a single string of characters. Unlike <span class="layer">dictionary_phonemes</span>, there's only one 
+>    - <span class="layer">phonemes</span> annotation
+> 1. APLS uses <span class="layer">orthography</span> to look up the word's syllables (including stress) in the [CELEX] dictionary (for example, _okay_ as /oʊ-ˈkeɪ/). Then, APLS combines groups of <span class="layer">segment</span> annotations into one string of characters per syllable (for example, _okay_ as /oʊ/ and /ˈkeɪ/).
+>    - <span class="layer">syllables</span> annotation(s)
+> 1. (Other [segment-dependent layers](#segment-dependent-layers))
+
+{% include screengrab.html src="transcript/peers.png" %}
+<!-- N.B. Update this screengrab once I merge commit ead12ef into apls branch -->
+
+As you can see, some words' <span class="layer">syllables</span> labels have spaces in them (for example, `0oʊ ˈkeɪ` for the word _okay_).
+This indicates horizontal peers dividing the <span class="layer">word</span>'s timespan.
+By contrast, there are no spaces on the <span class="layer">dictionary_phonemes</span> or <span class="layer">phonemes</span> layer, since these layers don't allow horizontal peers.
+
+It's not obvious from a glance that <span class="layer">dictionary_phonemes</span> allows vertical peers.
+It's also not obvious that _a_, _as_, and _an_ have vertical peers for <span class="layer">dictionary_phonemes</span>, but none of the other words.
+To find this out, you can hover over the word's <span class="layer">dictionary_phonemes</span> label for a [tooltip](#annotation-tooltips).
+The tooltip for _an_ includes `[2]` followed by two separate labels (`{z` and `@n`), while the tooltip for _you_ includes only one label (`ju`):
+
+{% include screengrab.html src="transcript/peers-tooltip-vert.png" %}
+
+The tooltip looks similar for horizontal peers.
+For example, _okay_ has two <span class="layer">syllables</span> annotations, and _just_ has one:
+
+{% include screengrab.html src="transcript/peers-tooltip-horiz.png" %}
+
+<!-- Subsection here? Or move below? -->
+
+All of this is easier to visualize if you export the [transcript](#exporting-the-transcript) or the [utterance](#opening-utterances-in-praat) to a [Praat] TextGrid.
+Here's what that first line looks like with those layers:
+
+{% include screengrab.html src="transcript/peers-textgrid.png" %}
+
+In this image:
+
+- There is just one tier apiece for <span class="layer">word</span>, <span class="layer">phonemes</span>, and <span class="layer">syllables</span>. This means none of these layers have vertical peers in the utterance.
+- There are 3 tiers for <span class="layer">dictionary_phonemes</span>. This means at least one word in this utterance has 3 vertical peers.
+  - The words with multiple <span class="layer">dictionary_phonemes</span> intervals are _a_ (with 3 annotations), _as_ (2), and _an_ (2). All the other words have just one <span class="layer">dictionary_phonemes</span> interval.
+- All the intervals for <span class="layer">phonemes</span> and <span class="layer">dictionary_phonemes</span> are exactly as wide as the corresponding <span class="layer">word</span>. This means neither of these layers have horizontal peers in the utterance.
+- Some intervals for <span class="layer">syllables</span> are narrower than the corresponding <span class="layer">word</span>. These are horizontal peers.
+
+You can read the layer typology documentation page for more information about [horizontal]({{ '/doc/layer-typology#alignment-and-horizontal-peers' | relative_url }}) and [vertical]({{ '/doc/layer-typology#vertical-peers' | relative_url }}).
+
+
+### Phonological layers and DISC
+
+<span class="keyterm">Phonological layers</span> like <span class="layer">phonemes</span> describe speech sounds.
+The transcript body displays phonological annotations using the [International Phonetic Alphabet (IPA)][ipa].
+For example, the first word of `CB01interview3.eaf` (_okay_) has a <span class="layer">phonemes</span> annotation that is displayed as `oʊkeɪ`:
+
+{% include screengrab.html src="transcript/phonemes" %}
+<!-- N.B. Update this screengrab once I merge commit ead12ef into apls branch -->
+
+However, APLS stores these annotations internally in the <span class="keyterm">DISC phonemic alphabet</span>, not in IPA.
+DISC creates a one-to-one mapping between sounds and symbols like the IPA, but _unlike_ the IPA, DISC only uses symbols that appear on a standard [QWERTY keyboard](https://en.wikipedia.org/wiki/QWERTY).
+While the IPA is widely-recognized among linguists, many IPA characters are [hard for end-users to input and difficult for computers to store]({{ '/doc/phonemic-transcription#why-not-ipa' | relative_url }}).
+For a full list of IPA-to-DISC mappings, see the [phonemic transcription]({{ '/doc/phonemic-transcription' | relative_url }}) documentation page.
+
+As a result, IPA is used by APLS only for displaying phonological layers in the transcript body.
+If you'd prefer DISC in the transcript body, you can change that using the [layer picker](#displaying-phonological-layers-in-disc).
+As mentioned [above](#annotation-tooltips), when you hover over a phonological annotation in the transcript body, you'll see a tooltip with its DISC representation.
+In addition, [exported transcripts](#exporting-the-transcript) and [utterances](#opening-utterances-in-praat) represent phonological layers in DISC.
+
+Elsewhere in APLS, DISC is used for [searching phonological layers]({{ '/doc/search-other-layers#searching-phonological-layers' | relative_url }}) and [exporting]({{ '/doc/export-data' }}) search results.
+In fact, phonological layers are just one <span class="keyterm">data type</span>, and DISC is just one <span class="keyterm">notation system</span>.
+For more information, see the [layer typology]({{ '/doc/layer-typology' | relative_url }}) documentation page.
+
 
 ## Selecting layers to display
 
@@ -464,7 +561,7 @@ Phonological layers like <span class="layer">segment</span> are displayed with I
 
 {% include screengrab.html src="transcript/layer-picker-segment.png" %}
 
-However, as mentioned [above](#phonological-layers), APLS stores these annotations internally in the DISC phonemic alphabet.
+However, as mentioned [above](#phonological-layers-and-disc), APLS stores these annotations internally in the DISC phonemic alphabet.
 You can choose to display these annotations in DISC instead by clicking {% include labbcat-icon.html src="interpreted.svg" %} (the IPA/DISC toggle) to the right of the layer name:
 
 {% include screengrab.html src="transcript/layer-picker-segment-disc.png" %}
@@ -568,7 +665,7 @@ As you can see, the exported TextGrid has one tier for each speaker's <span clas
 > You should see that each of the words in the utterance has its own interval in `word - Barbara Johnstone`:
 > 
 > {% include screengrab.html src="transcript/export-praat-1.png" %}
-> * * * <!-- Get this to show up correctly -->
+> * * *
 > Finally, let's see how overlaps look in an exported TextGrid.
 > According to the <span class="apls-page">Transcript</span> page, there's an overlap when Barbara Johnstone says `what you'd say you're` and CB01 says `okay`, right after Barbara's first utterance
 > 
@@ -629,7 +726,6 @@ Phonological layers (like <span class="layer">segment</span>) are always display
 >
 > Compared to the previous try-it, you should see two new tiers: a `segment - ` tier for each speaker.
 > If you zoom in on an individual word, you should see that each of the segments has its own interval.
-> <!-- These segments are displayed in DISC, so `5k1` is /oUkeI/ -->
 >
 > {% include screengrab.html src="transcript/export-praat-3.png" %}
 
