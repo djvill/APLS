@@ -4,17 +4,18 @@ contributors: [Dan Villarreal, Jack Rechsteiner]
 permalink: /doc/data-organization
 parent: APLS 101/Getting started
 nav_order: 30
-last_modified_date: 2025-06-16T12:52:31-04:00
+last_modified_date: 2025-06-24T10:38:13-04:00
 ---
 
 # {{ page.title }}
 {:.no_toc}
 
 APLS data is organized using the data structures provided by the open-source linguistic corpus software [LaBB-CAT].
-The most important organizational units in LaBB-CAT corpora are <span class="keyterm">participants</span>, <span class="keyterm">transcripts</span>, <span class="keyterm">layers</span>, and <span class="keyterm">annotations</span>.
+The most important organizational units in LaBB-CAT corpora are <span class="keyterm">participants</span>, <span class="keyterm">transcripts</span>, <span class="keyterm">attributes</span>, <span class="keyterm">layers</span>, and <span class="keyterm">annotations</span>.
 
 - [**Participants**](#participants) are speakers in the audio files (both interviewers and interviewees), along with metadata like demographic info.
 - [**Transcripts**](#transcripts) are data objects for individual audio files and all of their annotations, plus metadata like when the audio file was recorded.
+- [**Attributes**](#attributes) are metadata about participants and transcripts.
 - [**Layers**](#layers) are series of time-aligned annotations in transcripts corresponding to a single type of linguistic data (e.g., pronunciations, part-of-speech tags).
 - [**Annotations**](#annotations) are individual bits of data aligned to specific timestamps in audio files.
 
@@ -76,11 +77,16 @@ Some sections are split into multiple transcripts (e.g., `interview1`, `reading2
 
 [^eaf]: The `.eaf` part of the transcript name reflects the original transcript file, which was created in the transcription program [Elan].
 
+## Attributes
+
+Each participant and transcript has a set of **attributes** that describe metadata about the participant or transcript.
+For example, the participant `HD17` has <span class="participant-attr">gender</span> `Female` and <span class="participant-attr">year_of_birth</span> `1964`.
+The transcript `FH10pairs.eaf` has <span class="transcript-attr">duration</span> `188.61` and <span class="transcript-attr">recording_date</span> September 26, 2023.
+
 ## Layers and annotations
 
 To illustrate **layers** and **annotations** in APLS, let's look at a screen-grab of a single <span class="keyterm">line</span> of speech (aka an <span class="layer">utterance</span>) from the transcript `HD07interview3.eaf`:
 {% include screengrab.html src="transcript/layers-annotations.png" %}
-<!-- A better screen-grab would: (a) be narrower (not take up as much x-axis real estate), (b) be from a line that doesn't have an annoying duration -->
 
 On the left-hand side of the image is `HD07`, the speaker code for the participant who uttered this speech.
 
@@ -88,7 +94,7 @@ On the left-hand side of the image is `HD07`, the speaker code for the participa
 
 To the right of the speaker code are three layers. From top to bottom, these are <span class="layer">speech_rate</span>, <span class="layer">part_of_speech</span>, and <span class="layer">word</span>.
 - <span class="layer">speech_rate</span> (top)
-  - This layer contains a measurement (in syllables per second) of how quickly HD07 uttered this line.
+  - This layer contains a measurement of how quickly HD07 uttered this line: `6.5068` syllables per second.
   - APLS measures speech rate by lines in the transcript, so there is just one <span class="layer">speech_rate</span> annotation for this line (as indicated by the curved bracket).
 - <span class="layer">part_of_speech</span> (middle)
   - This layer encodes each word's part of speech using [Penn Treebank part-of-speech tags]({{ '/doc/notation-systems#penn-treebank-pos-tags' | relative_url }}) (e.g., `UH` for interjections, `CC` for coordinating conjunctions).
