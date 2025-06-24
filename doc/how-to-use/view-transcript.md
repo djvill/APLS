@@ -6,7 +6,7 @@ parent: How to use APLS
 has_children: yes
 has_toc: no
 nav_order: 20
-last_modified_date: 2025-06-23T16:18:05-04:00
+last_modified_date: 2025-06-24T17:16:38-04:00
 ---
 
 # {{ page.title }}
@@ -14,13 +14,13 @@ last_modified_date: 2025-06-23T16:18:05-04:00
 
 A <span class="keyterm">transcript</span> is a collection of <span class="keyterm">annotations</span> on numerous <span class="keyterm">layers</span> corresponding to a single audio file, plus <span class="keyterm">transcript attributes</span> like when the audio file was originally recorded.
 In APLS, each transcript has a single <span class="keyterm">main participant</span> and corresponds to a section of that participant's sociolinguistic interview.
-Each transcript has its own page in APLS.
-
-Because the <span class="apls-page">Transcript</span> page provides the most easily digestible view of how data is organized in APLS, we'll discuss a lot of data-organization concepts on this documentation page (especially in the section on [viewing layer data](#viewing-layer-data)).
-If you need a refresher on the basics, check out the [Data organization in LaBB-CAT]({{ '/doc/data-organization' | relative_url }}) page.
+Each transcript has its own <span class="apls-page">Transcript</span> page in APLS.
 
 {: .note .no-collapse }
 > On this page, we use the term _transcript_ for the underlying data in the APLS corpus, and _<span class="apls-page">Transcript</span> **page**_ for the webpage you can use to view transcript data.
+
+Because the <span class="apls-page">Transcript</span> page provides the most easily digestible view of how data is organized in APLS, we'll discuss a lot of data-organization concepts on this documentation page (especially in the section on [viewing layer data](#viewing-layer-data)).
+If you need a refresher on the basics, check out the [Data organization in LaBB-CAT]({{ '/doc/data-organization' | relative_url }}) page.
 
 {: .try-it .no-collapse }
 > As we'll cover [below](#accessing-transcript-pages), there are a few ways to access individual <span class="apls-page">Transcript</span> pages.
@@ -38,7 +38,7 @@ If you need a refresher on the basics, check out the [Data organization in LaBB-
 - Create [permalinks](#creating-permalinks) for individual lines or words in the transcript
 - View the transcript's [attributes](#viewing-transcript-attributes)
 - Find more information on [participants](#viewing-participant-information) in the transcript
-- [Search](#searching-the-transcript-or-participants) the transcript or its participants for linguistic patterns
+- [Search](#searching-the-transcriptparticipants) the transcript or its participants for linguistic patterns
 - [Download](#downloading-audio) the transcript audio in wav or mp3 formats
 - [Export](#exporting-the-transcript) the entire transcript to various file formats
 - [Open](#opening-utterances-in-praat) individual lines of the transcript in [Praat]
@@ -61,7 +61,7 @@ This is highlighted in the following image, which displays the top of the <span 
   - _Attributes_: View the transcript's [attributes](#viewing-transcript-attributes)
   - _Participants_: Find more information on [participants](#viewing-participant-information) in the transcript
   - _Layers_: Select which [layers](#selecting-layers-to-display) to display in the transcript body
-  - _Search_: [Search](#searching-the-transcript-or-participants) the transcript or its participants for linguistic patterns
+  - _Search_: [Search](#searching-the-transcriptparticipants) the transcript or its participants for linguistic patterns
   - _Export_: [Export](#exporting-the-transcript) the entire transcript to various file formats
 - The <span class="keyterm">media player</span> (highlighted in **green**{:.hl-3} above), which stays in the same place as you scroll down the page. This is where you can:
   - [Listen](#listening-to-the-transcript) to the transcript
@@ -190,6 +190,7 @@ For example, here are the first few lines of `CB01interview3.eaf` again, now wit
 There are actually two more layers that the transcript body displays implicitly: <span class="layer">turn</span> and <span class="layer">utterance</span>.
 These layers divide up the timing of a transcript based on when participants are speaking.
 A <span class="layer">turn</span> is the timespan that contains everything within a single ![]({{ '/assets/screengrab/transcript/turn-swoosh.png' | relative_url }}){:style="height:2em;"} shape.
+<!-- Not quite -- an adjacent overlap can be part of the same turn -->
 Each <span class="layer">turn</span> contains one or more <span class="layer">utterance</span>s, which are displayed as individual lines in the transcript.
 Let's look at `CB01reading1.eaf` as an example:
 
@@ -204,9 +205,8 @@ If you ever need to figure out where an utterance begins or ends, you can use th
 > These layers are based on how transcribers chose to divide the original transcription files into lines.
 > While this is subject to guidelines from the [APLS transcription convention]({{ '/doc/transcription-convention#segmentation' | relative_url }}), in practice there's room for variation between transcribers.
 > When the transcription file is uploaded to APLS, the lines from the original transcript form the <span class="layer">utterance</span> layer.
-> Then, <span class="layer">turn</span>s combine adjacent <span class="layer">utterance</span>s from the same participant.
+> Then, <span class="layer">turn</span>s are formed by combining adjacent <span class="layer">utterance</span>s from the same participant.
 
-<!-- Beyond breaking up the transcript into lines, utterances show up in the [word menu](#word-menu). -->
 Elsewhere in APLS, turns and utterances show up in [anchoring searches]({{ '/doc/anchoring-searches#scope' | relative_url }}), [exporting search results]({{ '/doc/export-data#exporting-data-from-the-search-results-page' | relative_url }}), and [phrase layers]({{ '/doc/layer-typology#scope' | relative_url }}).
 
 
@@ -344,7 +344,7 @@ In this image:
 
 - There is just one tier apiece for <span class="layer">word</span>, <span class="layer">phonemes</span>, and <span class="layer">syllables</span>. This means none of these layers have vertical peers in the utterance.
 - There are 3 tiers for <span class="layer">dictionary_phonemes</span>. This means at least one word in this utterance has 3 vertical peers.
-  - The words with multiple <span class="layer">dictionary_phonemes</span> intervals are _a_ (with 3 annotations), _as_ (2), and _an_ (2). All the other words have just one <span class="layer">dictionary_phonemes</span> interval.
+  - The words with multiple <span class="layer">dictionary_phonemes</span> intervals are _a_ (with 3 annotations), _as_ (2 annotations), and _an_ (2 annotations). All the other words have just one <span class="layer">dictionary_phonemes</span> interval.
 - All the intervals for <span class="layer">phonemes</span> and <span class="layer">dictionary_phonemes</span> are exactly as wide as the corresponding <span class="layer">word</span>. This means neither of these layers have horizontal peers in the utterance.
 - Some intervals for <span class="layer">syllables</span> are narrower than the corresponding <span class="layer">word</span>. These are horizontal peers.
 
@@ -357,11 +357,11 @@ You can read the layer typology documentation page for more information about [h
 The transcript body displays phonological annotations using the [International Phonetic Alphabet (IPA)][ipa].
 For example, the first word of `CB01interview3.eaf` (_okay_) has a <span class="layer">phonemes</span> annotation that is displayed as `oʊkeɪ`:
 
-{% include screengrab.html src="transcript/phonemes" %}
+{% include screengrab.html src="transcript/phonemes.png" %}
 <!-- N.B. Update this screengrab once I merge commit ead12ef into apls branch -->
 
 However, APLS stores these annotations internally in the <span class="keyterm">DISC phonemic alphabet</span>, not in IPA.
-DISC creates a one-to-one mapping between sounds and symbols like the IPA, but _unlike_ the IPA, DISC only uses symbols that appear on a standard [QWERTY keyboard](https://en.wikipedia.org/wiki/QWERTY).
+DISC creates a one-to-one mapping between sounds and symbols like the IPA, but **unlike** the IPA, DISC only uses symbols that appear on a standard [QWERTY keyboard](https://en.wikipedia.org/wiki/QWERTY).
 While the IPA is widely-recognized among linguists, many IPA characters are [hard for end-users to input and difficult for computers to store]({{ '/doc/phonemic-transcription#why-not-ipa' | relative_url }}).
 For a full list of IPA-to-DISC mappings, see the [phonemic transcription]({{ '/doc/phonemic-transcription' | relative_url }}) documentation page.
 
@@ -413,7 +413,7 @@ We'll see something similar below when we discuss [empty layers](#empty-layers).
 
 {: .note }
 > Although the <span class="layer">noise</span> layer is also pre-selected when you load the <span class="apls-page">Transcript</span> page, it can be turned off.
-> Since some utterances consist of [just <span class="layer">noise</span> annotations](##everything-you-see-is-data), <span class="layer">noise</span> is pre-selected so those utterances don't look empty.
+> Since some utterances consist of [just <span class="layer">noise</span> annotations](#everything-you-see-is-data), <span class="layer">noise</span> is pre-selected so those utterances don't look empty.
 
 
 ### Projects
@@ -581,16 +581,33 @@ You can choose different settings for different phonological layers:
 
 ## Creating permalinks
 
+You can create permalinks for individual lines (<span class="layer">utterance</span>s) or words in the transcript in the [word menu](#word-menu) by clicking on _Utterance_ or _Word_:
 
+{% include screengrab.html src="transcript/permalink-hover.png" %}
+
+This will update the URL in the address bar and highlight the line/word in the transcript body:
+
+{% include screengrab.html src="transcript/permalink-utterance.png" %}
+
+{: .under-the-hood}
+> A permalink ID is not a random string of characters!
+> Here's how to decode an ID like `em_12_109241`:
+>
+> - `e` stands for **edge**, as in [graph theory](https://en.wikipedia.org/wiki/Graph_theory). [LaBB-CAT] corpora like APLS are based on the annotation graph data model ([Bird and Liberman 1999]; [Fromont 2017]), which defines annotations as graph-theoretic edges.
+> - `m` stands for **meta layer**, the original term in LaBB-CAT for [phrase layers]({{ '/doc/layer-typology#scope' |relative_url }}), since <span class="layer">utterance</span> is a phrase layer. LaBB-CAT underwent some naming changes in [version 20210208](https://sourceforge.net/p/labbcat/code/HEAD/tree/CHANGELOG.txt#l407), but there are still vestiges of the old conventions (including for backward compatibility).
+> - `12` is the <span class="layer">utterance</span> layer **layer ID**. This is [pre-defined in new installations of LaBB-CAT](https://github.com/nzilbb/labbcat-server/blob/main/server/src/main/java/nzilbb/labbcat/server/db/SqlConstants.java).
+> - `109241` is this <span class="layer">utterance</span>'s **annotation ID** in the MySQL table that stores <span class="layer">utterance</span> annotations.
 
 ## Viewing transcript attributes
 
 In [LaBB-CAT] corpora like APLS, <span class="keyterm">attributes</span> are [metadata about individual transcripts or participants]({{ '/doc/attribute-typology' | relative_url }}).
 You can view a transcript's attributes by opening the _Attributes_ tab in the transcript header.
-This tab looks exactly like the transcript's [<span class="apls-page">Transcript attributes</span>]({{ '/doc/browse-transcripts#transcript-attributes-pages' | relative_url }}) page: <!-- Move this to that docpage instead? -->
+Here's what that looks like for `CB01interview3.eaf`:
 
 {% include screengrab.html src="transcript/attributes.png" %}
 
+<!-- Move this to Transcript attributes docpage instead? -->
+This tab looks exactly like the transcript's [<span class="apls-page">Transcript attributes</span>]({{ '/doc/browse-transcripts#transcript-attributes-pages' | relative_url }}) page.
 The left-hand column shows attributes' display titles (like `Duration (sec)`) and names (like `duration`).
 The right-hand column shows attributes' values (e.g., `521.073`).
 
@@ -622,12 +639,71 @@ A detailed description of the different transcript attributes can be found in th
 
 ## Viewing participant information
 
+You can access information about participants by clicking the _Participants_ tab in the transcript header.
+Here's what that looks like for `CB01interview3.eaf`:
+
+{% include screengrab.html src="transcript/participants.png" %}
+
+Just like in the transcript body, the _Participants_ tab uses bold to mark the transcript's <span class="keyterm">main participant</span>.
+The buttons link to other APLS pages:
+
+- _Attributes_ links to that participant's [<span class="apls-page">Participant attributes</span> page]({{ '/doc/browse-participants#participant-attributes-pages' | relative_url }}).
+- _List Transcripts_ displays all the transcripts for that participant on the [<span class="apls-page">Transcripts</span> page]({{ '/doc/browse-transcripts' | relative_url }}). This is the equivalent of the [_List Transcripts_]({{ '/doc/browse-participants#list-transcripts' | relative_url }}) button on the <span class="apls-page">Participants</span> page.
+
+For example, here's what it looks like if you click _List Transcripts_ for `CB01`:
+
+{% include screengrab.html src="transcripts/participant-filter.png" %}
+
 
 ## Searching the transcript/participants
+
+Like the _Participants_ tab, the _Search_ tab provides shortcuts to a different APLS page: the [<span class="apls-page">Search</span> page]({{ '/doc/search' | relative_url }}).
+The buttons pre-fill transcript or participant [search filters]({{ '/doc/search-filters-and-options' | relative_url }}) so you can quickly search for linguistic patterns in an individual transcript, the sociolinguistic interview (that is, the transcript's <span class="transcript-attr">episode</span>).
+
+{% include screengrab.html src="transcript/search.png" %}
+
+For example, here's what it looks like if you click _CB01_ next to `Search transcript series`:
+
+{% include screengrab.html src="search/episode-filter.png" %}
+
+One thing that does **not** work for searching the transcript is `<ctrl>/<cmd>+F`.
+Because of the way the <span class="apls-page">Transcript</span> page's HTML is structured, multi-word phrases will never match.
+For example, even though the first two words of `CB01interview3.eaf` are `okay just`, searching the <span class="apls-page">Transcript</span> page for `okay just` yields zero hits:
+
+{% include screengrab.html src="transcript/ctrl-f.png" %}
+
+If you want to [search for multi-word phrases]({{ '/doc/search-complex-patterns#searching-multiple-words' | relative_url }}), use APLS's <span class="apls-page">Search</span> page instead.
 
 
 ## Downloading audio
 
+To download the audio file for the entire transcript, click _mp3_ or _wav_ in the media player:
+
+{% include screengrab.html src="transcript/player-playing.png" %}
+
+{: .note}
+> If you want to [extract acoustic measurements]({{ '/doc/extract-acoustics' | relative_url }}) from the audio file, an easier option is to use the <span class="apls-page">Process with Praat</span> page.
+
+To download audio for a single line (<span class="layer">utterance</span>) of the transcript, use the [word menu](#word-menu).
+Click on a <span class="layer">word</span> in the line you want to download, then click _Extract audio_:
+
+{% include screengrab.html src="transcript/no-praat-word-menu-context.png" %}
+
+{: .note .no-collapse}
+> As a reminder, APLS's [terms of use]({{ '/doc/terms' | relative_url }}) prohibit users from sharing audio files publicly.
+
+
+### Audio channels
+
+Almost all audio files are in stereo, with the interviewer appearing on the left channel and the interviewee (main participant) on the right channel.
+Unfortunately, most files feature "bleed" between channels.
+That is, the interviewer can usually be heard in the background of the right channel, and the interviewee can usually be heard in the background of the left channel.
+
+{: .note}
+> Some audio files don't follow this pattern:
+>
+> - `LV10` interviews are in mono, with both speakers appearing on both channels.
+> - `LV08and09` interviews include the interviewer (`Barbara Johnstone`) and `LV09` sharing the left channel, and `LV08` alone on the right channel.
 
 ## Exporting the transcript
 
@@ -639,23 +715,29 @@ The _Export_ tab in the transcript header allows you to download the current tra
 > On the `CB01interview3.eaf` <span class="apls-page">Transcript</span> page (<https://apls.pitt.edu/labbcat/transcript?transcript=CB01interview3.eaf>):
 > 
 > 1. Make sure only the <span class="layer">word</span> layer is selected.
-> 1. Click _export formatted ▼_.
+> 1. Click the _Export_ tab.
 > 1. Click _Praat TextGrid_.
 > 1. Open the TextGrid in [Praat].
 
 At a minimum, the exported file will include the <span class="layer">utterance</span> and <span class="layer">word</span> layers.
-It will also include any layers you have [selected](#layer-selector) to show in the transcript body.
-Here's what the exported TextGrid looks like when only the <span class="layer">word</span> layer is selected
-(<span class="layer">noise</span> is deselected):
+It will also include any layers you have [selected](#toggling-layers-on-and-off) to show in the transcript body.
+Here's what the exported TextGrid looks like when only the <span class="layer">word</span> layer is selected (<span class="layer">noise</span> is deselected):
 
 {% include screengrab.html src="transcript/export-praat-0.png" %}
 
-As you can see, the exported TextGrid has one tier for each speaker's <span class="layer">utterance</span> annotations (`Barbara Johnstone` and `CB01` above) and one tier for each speaker's <span class="layer">word</span> annotations (`word - Barbara Johnstone` and `word - CB01`).
+As you can see, the exported TextGrid has four tiers: `Barbara Johnstone`, `CB01`, `word - Barbara Johnstone`, and `word - CB01`.
+The tiers named after the participants (`Barbara Johnstone` and `CB01`) represent their <span class="layer">utterance</span> annotations.
+The tiers that start with `word - ` represent each participant's <span class="layer">word</span> annotations.
+
+{: .under-the-hood }
+> Technically speaking, the tiers named after the participants (`Barbara Johnstone` and `CB01`) only get their **timings** from the <span class="layer">utterance</span> layer.
+> Both <span class="layer">utterance</span> and <span class="layer">turn</span> are [timing-only layers]({{ '/doc/layer-typology#data-type' | relative_url }}), which means their annotations don't have a label, only a start and end time.
+> When APLS exports a transcript to TextGrid, it takes the timings from <span class="layer">utterance</span> annotations and fills them in with that participant's <span class="layer">word</span> annotations within that <span class="layer">utterance</span>.
 
 {: .try-it }
 > 1. Open the TextGrid from the previous try-it.
 >
-> You should see four tiers, two per speaker: one for each speaker's <span class="layer">utterance</span> annotations (labeled `Barbara Johnstone` and `CB01`) and one for each speaker's <span class="layer">word</span> annotations (labeled `word - Barbara Johnstone` and `word - CB01`).
+> You should see four tiers, two per participant: one for each participant's <span class="layer">utterance</span> annotations (labeled `Barbara Johnstone` and `CB01`) and one for each participant's <span class="layer">word</span> annotations (labeled `word - Barbara Johnstone` and `word - CB01`).
 > * * *
 > Now let's zoom into the first Barbara Johnstone utterance (`okay just a few questions about you as an individual`):
 >
@@ -671,20 +753,22 @@ As you can see, the exported TextGrid has one tier for each speaker's <span clas
 > 
 > 1. Zoom into the next `Barbara Johnstone` interval in the TextGrid.
 >
-> You should see a `CB01` interval that lines up with the `Barbara Johnstone` interval, plus words on _both_ speakers' `word - ` tiers.
+> You should see a `CB01` interval that lines up with the `Barbara Johnstone` interval, plus words on _both_ participants' `word - ` tiers.
 > {% include screengrab.html src="transcript/export-praat-2.png" %}
 
 Exporting transcripts to TextGrid is a good way to understand some of the details of annotations (and their timing) that are hard to glean from the Transcript page.
 (This is true for Elan EAF transcripts, too.)
-In particular, if a layer allows [vertical peers](#alignment-and-vertical-peers) ({% include labbcat-icon.html src="vertical-peers.svg" %} [icon](#icons) in the layer picker), the exported TextGrid may show multiple tiers per speaker.
+In particular, if a layer allows [vertical peers](#horizontal-and-vertical-peers) ({% include labbcat-icon.html src="vertical-peers.svg" %} [icon](#icons) in the layer picker), the exported TextGrid may show multiple tiers per participant.
 
 {: .try-it }
 > On the `CB01interview3.eaf` <span class="apls-page">Transcript</span> page:
 > 
+> 1. Click the _Layers_ tab.
 > 1. Select <span class="layer">dictionary_phonemes</span>.
+> 1. Click the _Export_ tab.
 > 1. Export to _Praat TextGrid_ and open in [Praat].
 >
-> You should see **three** `dictionary_phonemes - ` tiers per speaker.
+> You should see **three** `dictionary_phonemes - ` tiers per participant.
 > This is because some words have more than one possible phonemic representation, such as /æz/ or /əz/ for _as_.
 > {% include screengrab.html src="transcript/export-praat-4.png" %}
 
@@ -701,7 +785,16 @@ In particular, if a layer allows [vertical peers](#alignment-and-vertical-peers)
 So far, we've only been looking at Praat TextGrids.
 Other file formats affect not only which layers are exported, but how they are displayed.
 Some transcript formats also show additional layers from the [original uploaded transcription]({{ '/doc/transcription' | relative_url }}): <span class="layer">noise</span>, <span class="layer">comment</span>, and <span class="layer">pronounce</span>.
-<!-- Show what this looks like, just in text -->
+For example, here's an <span class="layer">utterance</span> from `CB01interview3.eaf` that includes all three of those layers, with <span class="layer">comment</span> in purple, <span class="layer">noise</span> in magenta, and <span class="layer">pronounce</span> in periwinkle:
+
+{% include screengrab.html src="transcript/imported-layers.png" %}
+
+Here's what the same <span class="layer">utterance</span> looks like in an exported *Plain Text Document*:
+
+```
+CB01:  but even though th~[D] the reality is . [tap] I don't even know what they would call [tap] themselves {mid-word laugh} but [laughs]
+```
+
 Unlike in Praat TextGrids and Elan EAF transcripts, where all annotations have time alignments, in *Plain Text Document*s and *PDF Document*s, <span class="layer">utterance</span>s are separated by line breaks and <span class="layer">word</span>s are simply listed within each utterance.
 That is, these annotations are _not_ time-aligned and there's no way to tell whether speech is overlapping.
 As a result, the *Plain Text Document*s and *PDF Document* formats are better for a readable or skimmable overview of who said what, and not very useful as structured linguistic data.
@@ -719,12 +812,13 @@ Phonological layers (like <span class="layer">segment</span>) are always display
 {: .try-it }
 > On the `CB01interview3.eaf` <span class="apls-page">Transcript</span> page:
 > 
+> 1. Click the _Layers_ tab.
 > 1. Select the <span class="layer">segment</span> layer.
-> 1. Click _export formatted ▼_.
+> 1. Click the _Export_ tab.
 > 1. Click _Praat TextGrid_.
 > 1. Open the TextGrid in Praat.
 >
-> Compared to the previous try-it, you should see two new tiers: a `segment - ` tier for each speaker.
+> Compared to the previous try-it, you should see two new tiers: a `segment - ` tier for each participant.
 > If you zoom in on an individual word, you should see that each of the segments has its own interval.
 >
 > {% include screengrab.html src="transcript/export-praat-3.png" %}
@@ -732,6 +826,54 @@ Phonological layers (like <span class="layer">segment</span>) are always display
 
 ## Opening utterances in Praat
 
+Similar to [downloading audio](#downloading-audio) and [exporting an entire transcript](#exporting-the-transcript), you can open an individual <span class="layer">utterance</span> in [Praat].
+This requires installing the Praat integration (see [this page]({{ '/doc/praat-integration' | relative_url }})).
+If you've installed the Praat integration, you'll see three Praat commands in the [word menu](#word-menu) that appears when you click on a <span class="layer">word</span>:
+
+{% include screengrab.html src="transcript/word-menu-context.png" %}
+
+These commands are:
+
+- _Open audio in Praat_: Open just the <span class="layer">utterance</span> audio in Praat (in a Sound editor window).
+- _Open TextGrid in Praat_: Open the <span class="layer">utterance</span> audio and TextGrid in Praat (in a TextGrid editor window).
+- _Open TextGrid incl. ± 1 utterance in Praat_: Same as the previous, potentially including the previous and/or next <span class="layer">utterance</span>.
+
+{: .note}
+> If Praat isn't already open on your computer, these commands will also open Praat.
+
+Here's what it looks like when you select _Open TextGrid in Praat_ for the first <span class="layer">utterance</span> of `CB01interview3.eaf` when only <span class="layer">word</span> is selected in the [layer picker](#selecting-layers-to-display) (<span class="layer">noise</span> is deselected):
+
+{% include screengrab.html src="transcript/textgrid.png" %}
+
+As you can see, there are just two tiers: `Barbara Johnstone` and `word - Barbara Johnstone`.
+Like when you [export an entire transcript](#exporting-the-transcript) on the _Export_ tab, these tiers correspond to the <span class="layer">utterance</span> and <span class="layer">word</span> layers.
+
+**Unlike** with an entire transcript, there are no tiers for `CB01`.
+That is, _Open TextGrid in Praat_ will only include participant(s) who are speaking in that line.
+If you select the second line of `CB01interview3.eaf` instead, the exported TextGrid does include tiers for both participants due to the overlapping speech:
+
+{% include screengrab.html src="transcript/textgrid-overlap.png" %}
+
+Like when you [export an entire transcript](#exporting-the-transcript) on the _Export_ tab, the TextGrid will include any layers that you have selected in the [layer picker](#selecting-layers-to-display).
+Here's the result of _Open TextGrid in Praat_ for the first <span class="layer">utterance</span> of `CB01interview3.eaf` with <span class="layer">segment</span> selected in the [layer picker](#selecting-layers-to-display):
+
+{% include screengrab.html src="transcript/textgrid-segment.png" %}
+
+If you're exporting a layer that allows [vertical peers](#horizontal-and-vertical-peers), the exported TextGrid will include additional tiers to accommodate vertical peers (again, like with an entire transcript):
+
+{% include screengrab.html src="transcript/textgrid-vertical-peers.png" %}
+
+However, it will only include as many tiers as needed within that <span class="layer">utterance</span>:
+
+{% include screengrab.html src="transcript/textgrid-no-vertical-peers.png" %}
+
+As mentioned above, the _Open TextGrid incl. ± 1 utterance in Praat_ command may include the previous and/or next <span class="layer">utterance</span>.
+However, the adjacent <span class="layer">utterance</span>(s) will only be included if they're [within the same <span class="layer">turn</span>](#turns-and-utterances).
+This means that if there's a time gap between the <span class="layer">utterance</span> you selected and its adjacent <span class="layer">utterance</span>, the adjacent <span class="layer">utterance</span> won't be included.
+If you need adjacent <span class="layer">utterance</span>s, [export the entire transcript](#exporting-the-transcript) to TextGrid and manipulate the TextGrid as needed.
+
+Finally, the Praat integration downloads these files to a temporary folder.
+If you want to save them to your computer, use the _Save_ menu on the Praat Objects window.
 
 ## Accessing <span class="apls-page">Transcript</span> pages 
 
@@ -744,7 +886,8 @@ There are multiple ways to reach a <span class="apls-page">Transcript</span> pag
   > Click the URL <https://apls.pitt.edu/labbcat/transcript?transcript=CB01interview3.eaf>.
   > This will take you directly to the <span class="apls-page">Transcript</span> page for `CB01interview3.eaf`.
   {: .try-it }
-- Once you have a <span class="apls-page">Transcript</span> page open, you can use navigation arrows to move to a different transcript, as described [above](#media-player-and-navigating-to-other-transcripts).
+- Via a [permalink](#creating-permalinks) to a line or word in the transcript.
+- Once you have a <span class="apls-page">Transcript</span> page open, you can use navigation arrows to move to a different transcript, as described [above](#navigating-to-other-transcripts).
 
 In addition, there are two ways to access transcripts from the results of a search (see [Searching the corpus]({{ '/doc/search' | relative_url }})):
 

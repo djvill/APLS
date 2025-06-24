@@ -79,6 +79,18 @@
   width: 800
   height: 425
 
+- screengrab: search/episode-filter.png
+  instructions:
+    - Log in as test-student
+    - Set browser zoom to 100%
+    - Load https://apls.pitt.edu/labbcat/transcript?transcript=CB01interview3.eaf
+    - Click Search transcript series CB01
+    - Save
+  offset_x: 185 # edge of tabs
+  offset_y: 195 # top of title
+  width: 1520
+  height: 535
+
 - screengrab: transcript/layer-alignment.png
   instructions:
     - Log in as test-student
@@ -124,7 +136,37 @@
   offset_x: 190
   offset_y: 380
   width: 580
-  height: 335
+  height: 340
+
+- screengrab: transcript/permalink-hover.png
+  instructions:
+    - Log in as test-student
+    - Set browser zoom to 100%
+    - Load https://apls.pitt.edu/labbcat/transcript?transcript=CB01interview3.eaf
+    - Click the first word in the transcript (okay)
+    - Put cursor under the middle of U in Utterance
+    - Save (use the Snipping Tool's delay option)
+  offset_x: 190
+  offset_y: 380
+  width: 580
+  height: 340
+  overlay:
+    - image: _pointer.png
+      offset_x: 263
+      offset_y: 461
+
+- screengrab: transcript/permalink-utterance.png
+  instructions:
+    - Log in as test-student
+    - Set browser zoom to 100%
+    - Load https://apls.pitt.edu/labbcat/transcript?transcript=CB01interview3.eaf
+    - Click the first word in the transcript (okay)
+    - Put cursor under the middle of U in Utterance
+    - Save (use the Snipping Tool's delay option)
+  offset_x: 190
+  offset_y: 60 # top of address bar
+  width: 985
+  height: 390
 
 - screengrab: transcripts/export-formatted.png
   instructions:
@@ -137,6 +179,18 @@
   offset_y: 200
   width: 1520
   height: 455
+
+- screengrab: transcripts/participant-filter.png
+  instructions:
+    - Log in as test-student
+    - Set browser zoom to 100%
+    - Load https://apls.pitt.edu/labbcat/transcript?transcript=CB01interview3.eaf
+    - Click List Transcripts for CB01
+    - Save
+  offset_x: 195
+  offset_y: 195 # top of title
+  width: 1520
+  height: 575 # title, header, controls, & 7 matches
 
 - screengrab: transcript/vertical-peers-fragment-1.png
   instructions:
@@ -904,6 +958,19 @@
     - Open in Praat, maximize window
     - Save
 
+- screengrab: transcript/imported-layers.png
+  instructions:
+    - Log in as test-student
+    - Set browser zoom to 100%
+    - Load https://apls.pitt.edu/labbcat/transcript?transcript=CB01interview3.eaf
+    - Select noise, comment, pronounce
+    - "`window.scrollTo(0, 11315);"
+    - Save
+  offset_x: 195
+  offset_y: 130
+  width: 1065
+  height: 155
+
 - screengrab: transcript/layer-picker-empty-layers.png
   instructions:
     - Log in as test-student
@@ -917,6 +984,90 @@
   offset_y: 315
   width: 1510
   height: 470 # plus first utterance (1 layer)
+
+- screengrab: transcript/participants.png
+  instructions:
+    - Log in as test-student
+    - Set browser zoom to 100%
+    - Load https://apls.pitt.edu/labbcat/transcript?transcript=CB01interview3.eaf
+    - Click the Participants tab
+    - Save
+  offset_x: 190
+  offset_y: 315
+  width: 1510
+  height: 185
+
+- screengrab: transcript/search.png
+  instructions:
+    - Log in as test-student
+    - Set browser zoom to 100%
+    - Load https://apls.pitt.edu/labbcat/transcript?transcript=CB01interview3.eaf
+    - Click the Search tab
+    - Save
+  offset_x: 190
+  offset_y: 315
+  width: 1510
+  height: 245
+
+- screengrab: transcript/ctrl-f.png
+  instructions:
+    - Log in as test-student
+    - Set browser zoom to 100%
+    - Load https://apls.pitt.edu/labbcat/transcript?transcript=CB01interview3.eaf
+    - Click the Search tab
+    - Save
+  offset_x: 190
+  offset_y: 60 # top of address bar
+  width: 1390
+  height: 390
+
+- screengrab: transcript/textgrid.png
+  instructions:
+    - Log in as test-student
+    - Set browser zoom to 100%
+    - Load https://apls.pitt.edu/labbcat/transcript?transcript=CB01interview3.eaf
+    - Click the first utterance, Open TextGrid in Praat
+    - Maximize window
+    - Save
+
+- screengrab: transcript/textgrid-overlap.png
+  instructions:
+    - Log in as test-student
+    - Set browser zoom to 100%
+    - Load https://apls.pitt.edu/labbcat/transcript?transcript=CB01interview3.eaf
+    - Click the second utterance, Open TextGrid in Praat
+    - Maximize window
+    - Save
+
+- screengrab: transcript/textgrid-segment.png
+  instructions:
+    - Log in as test-student
+    - Set browser zoom to 100%
+    - Load https://apls.pitt.edu/labbcat/transcript?transcript=CB01interview3.eaf
+    - Select segment
+    - Click the second utterance, Open TextGrid in Praat
+    - Maximize window
+    - Save
+
+- screengrab: transcript/textgrid-vertical-peers.png
+  instructions:
+    - Log in as test-student
+    - Set browser zoom to 100%
+    - Load https://apls.pitt.edu/labbcat/transcript?transcript=CB01interview3.eaf
+    - Select dictionary_phonemes
+    - Click the first utterance, Open TextGrid in Praat
+    - Maximize window
+    - Save
+
+- screengrab: transcript/textgrid-no-vertical-peers.png
+  instructions:
+    - Log in as test-student
+    - Set browser zoom to 100%
+    - Load https://apls.pitt.edu/labbcat/transcript?transcript=CB01interview3.eaf
+    - Select dictionary_phonemes
+    - Click the fourth utterance, Open TextGrid in Praat
+    - Maximize window
+    - Save
 
 - screengrab: home/overview.png
   instructions:

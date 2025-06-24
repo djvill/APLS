@@ -88,3 +88,8 @@ callouts:
 ##Google Analytics
 ga_tracking: G-TT6NWBCLVW 
 ga_tracking_anonymize_ip: true  # Use GDPR compliant Google Analytics settings
+
+# mermaid:
+  # version: "11.4.1"
+
+enable_copy_code_button: false
