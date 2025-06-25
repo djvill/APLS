@@ -1,8 +1,10 @@
 ## _screengrab-manip.R
 ##
 ## Usage: Rscript _screengrab-manip.R FILE1 FILE2 etc.
-## To loop over a directory:
-## find ../home/*.png -print0 | xargs -r0 Rscript _screengrab-manip.R
+## To regenerate all screengrabs (ignoring directly-saved ones):
+## grep -oP '(?<=screengrab: )[^!]+' _manip-key.yml | xargs Rscript _screengrab-manip.R
+## To regenerate screengrabs in a directory:
+## grep -oP '(?<=screengrab: )search/.+' _manip-key.yml | xargs Rscript _screengrab-manip.R
 
 ##Parameters
 ##YAML file where manipulation metadata is stored
@@ -19,20 +21,75 @@ suppressWarnings(suppressPackageStartupMessages(library(magick)))
 ##Check that all arguments are files defined in manip_key
 to_manip <- sub("^\\.\\./", "", commandArgs(trailingOnly = TRUE))
 yaml <- read_yaml(manip_key)
-manipable <- map_chr(yaml, "screengrab")
+screengrabs <- yaml$screengrabs
+manipable <- map_chr(screengrabs, "screengrab")
 unmanipable <- setdiff(to_manip, manipable)
 if (length(unmanipable) > 0) {
   stop("The following file(s) are not defined in ", manip_key, ": ", paste(unmanipable, collapse=" "))
 }
 
+##Function for interpreting constant expressions in vectors
+interp_const <- function(x, expect_num=TRUE, envir=yaml$constants) {
+  ##Bypass interpretation if numeric is expected and already found
+  if (expect_num) {
+    ##Continue if as.numeric(x) throws "Warning: NAs introduced by coercion"
+    tryCatch(warning = \(e) e, return(as.numeric(x)))
+  }
+  
+  ##Attempt to evaluate expressions
+  evald <-
+    x |>
+    map(safely(\(x) eval(str2expression(x), envir=envir))) |>
+    map("result")
+  
+  ##Handle expressions that didn't evaluate
+  if (expect_num) {
+    ##Expect numeric: throw error
+    errs <- 
+      evald |> 
+      set_names(x) |>
+      keep(is.null)
+    if (length(errs) > 0) {
+      stop("Constants not found in envir: ",
+           paste(names(errs), collapse=" "))
+    }
+  } else {
+    ##Don't expect numeric: use original value instead
+    evald <- evald |>
+      map2(x, \(x, y) ifelse(is.null(x), y, x))
+  }
+  
+  ##If applicable, check if coercible to numeric
+  if (expect_num) {
+    evald <- tryCatch(error = \(e) stop("At least one constant is non-numeric"),
+                      list_simplify(evald, ptype=numeric()))
+  } else {
+    evald <- list_simplify(evald, ptype=character())
+  }
+  
+  evald
+}
+
+##Function for converting YAML (with interpretable constants) to tibble row
+yaml_to_tibble <- function(x, envir=yaml$constants) {
+  if (is.null(x)) return(x)
+  x |>
+    ##Interpret constants in numeric fields
+    map_at(c("offset_x", "offset_y", "width", "height",
+             "xleft", "ytop", "xright", "ybottom", "lwd"), interp_const) |>
+    ##Interpret constants in character fields
+    map_at("border", \(x) interp_const(x, expect_num=FALSE)) |>
+    as_tibble()
+}
+
 ##Wrangle YAML to tibble (with list-columns for overlay & drawing, if applicable)
 manip <-
-  yaml |>
+  screengrabs |>
   keep(~ .x$screengrab %in% to_manip) |>
   map_dfr(~ .x |>
             discard_at("instructions") |>
-            modify_at(c("overlay", "drawing"), ~ list(map_dfr(.x, as_tibble))) |>
-            as_tibble())
+            modify_at(c("overlay", "drawing"), \(x) list(map_dfr(x, yaml_to_tibble))) |>
+            yaml_to_tibble())
 
 ##Set up I/O paths
 if ("in_path" %in% colnames(manip)) {
