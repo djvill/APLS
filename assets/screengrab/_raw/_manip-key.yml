@@ -20,8 +20,13 @@ constants:
   width:
     window: 1920
     transcript_content: 1510
+    transcript_cb013_first_utterance: 580
+    transcript_cb013_first_utterance_tooltip: 905
+    transcripts_content: 1510
   height:
     transcript_body_layer: 30
+    transcript_body_turn_container: 30
+    transcript_attributes: 560
     transcript_layer_picker_plus_1: 470
     transcript_export_plus_1: 580
 
@@ -163,7 +168,7 @@ screengrabs:
   in_path: transcript/word-menu.png
   offset_x: offset_x$transcript_content_left
   offset_y: offset_y$transcript_body_top
-  width: 580
+  width: width$transcript_cb013_first_utterance
   height: 340
 
 - screengrab: transcript/permalink-hover.png
@@ -176,7 +181,7 @@ screengrabs:
     - Save (use the Snipping Tool's delay option)
   offset_x: offset_x$transcript_content_left
   offset_y: offset_y$transcript_body_top
-  width: 580
+  width: width$transcript_cb013_first_utterance
   height: 340
   overlay:
     - image: _pointer.png
@@ -201,12 +206,14 @@ screengrabs:
     - Log in as test-student
     - Set browser zoom to 100%
     - Load https://apls.pitt.edu/labbcat/transcripts
+    - "Hide watermark: In Chrome console, select `html` element and deselect `background-image`"
+    - "`window.scrollTo(0,100);`"
     - Click "Export Formatted"
     - Save
-  offset_x: 185
-  offset_y: 200
-  width: 1520
-  height: 455
+  offset_x: offset_x$transcripts_content_left
+  offset_y: 260
+  width: width$transcripts_content
+  height: 725
 
 - screengrab: transcripts/participant-filter.png
   instructions:
@@ -215,9 +222,9 @@ screengrabs:
     - Load https://apls.pitt.edu/labbcat/transcript?transcript=CB01interview3.eaf
     - Click List Transcripts for CB01
     - Save
-  offset_x: 195
+  offset_x: offset_x$transcripts_content_left
   offset_y: offset_y$page_title_top
-  width: 1520
+  width: width$transcripts_content
   height: 575 # title, header, controls, & 7 matches
 
 - screengrab: !transcript/vertical-peers-fragment-1.png
@@ -268,7 +275,7 @@ screengrabs:
   offset_x: offset_x$transcript_content_left
   offset_y: 310
   width: width$transcript_content
-  height: 560
+  height: height$transcript_attributes
 - screengrab: transcript/attributes-tooltip.png
   instructions:
     - Log in as test-student
@@ -281,7 +288,7 @@ screengrabs:
   offset_x: offset_x$transcript_content_left
   offset_y: 310
   width: width$transcript_content
-  height: 560
+  height: height$transcript_attributes
   overlay: 
     - image: _help.png
       offset_x: 491
@@ -299,7 +306,7 @@ screengrabs:
   offset_x: offset_x$transcript_content_left
   offset_y: 310
   width: width$transcript_content
-  height: 560
+  height: height$transcript_attributes
 
 - screengrab: transcript/attributes-hide-names.png
   instructions:
@@ -313,7 +320,7 @@ screengrabs:
   offset_x: offset_x$transcript_content_left
   offset_y: 310
   width: width$transcript_content
-  height: 560
+  height: height$transcript_attributes
 
 - screengrab: transcript/header.png
   in_path: transcript/overview.png
@@ -357,7 +364,7 @@ screengrabs:
   instructions: See transcript/no-praat-player.png
   offset_x: offset_x$transcript_content_left
   offset_y: offset_y$transcript_body_top
-  width: 580
+  width: width$transcript_cb013_first_utterance
   height: 205
 
 ## For side-by-side comparison to transcript/word-menu-context.png
@@ -366,7 +373,7 @@ screengrabs:
   in_path: transcript/no-praat.png
   offset_x: offset_x$transcript_content_left
   offset_y: offset_y$transcript_body_top
-  width: 580
+  width: width$transcript_cb013_first_utterance
   height: 335
 
 - screengrab: !transcript/word-menu-comp.png
@@ -460,7 +467,7 @@ screengrabs:
   in_path: transcript/overview.png
   offset_x: offset_x$transcript_content_left
   offset_y: offset_y$transcript_body_top
-  width: 1500
+  width: width$transcript_content
   height: 615
 
 - screengrab: transcript/word-noise.png
@@ -472,7 +479,7 @@ screengrabs:
     - Save
   offset_x: offset_x$transcript_content_left
   offset_y: offset_y$page_top
-  width: 1500
+  width: width$transcript_content
   height: 360
 
 - screengrab: transcript/multiple-layers.png
@@ -581,8 +588,8 @@ screengrabs:
     - Save
   offset_x: offset_x$transcript_content_left
   offset_y: offset_y$transcript_body_top
-  width: 905
-  height: 150
+  width: width$transcript_cb013_first_utterance_tooltip
+  height: height$transcript_body_turn_container + 4*height$transcript_body_layer
 
 - screengrab: transcript/peers-tooltip-vert-1.png
   instructions:
@@ -594,8 +601,8 @@ screengrabs:
     - Save (use the Snipping Tool's delay option)
   offset_x: offset_x$transcript_content_left
   offset_y: offset_y$transcript_body_top
-  width: 905
-  height: 150
+  width: width$transcript_cb013_first_utterance_tooltip
+  height: height$transcript_body_turn_container + 4*height$transcript_body_layer
   overlay:
     - image: _arrow.png
       offset_x: 799
@@ -611,8 +618,8 @@ screengrabs:
     - Save (use the Snipping Tool's delay option)
   offset_x: offset_x$transcript_content_left
   offset_y: offset_y$transcript_body_top
-  width: 905
-  height: 150
+  width: width$transcript_cb013_first_utterance_tooltip
+  height: height$transcript_body_turn_container + 4*height$transcript_body_layer
   overlay:
     - image: _arrow.png
       offset_x: 705
@@ -632,8 +639,8 @@ screengrabs:
     - Save (use the Snipping Tool's delay option)
   offset_x: offset_x$transcript_content_left
   offset_y: offset_y$transcript_body_top
-  width: 905
-  height: 150
+  width: width$transcript_cb013_first_utterance_tooltip
+  height: height$transcript_body_turn_container + 4*height$transcript_body_layer
   overlay:
     - image: _arrow.png
       offset_x: 340
@@ -649,8 +656,8 @@ screengrabs:
     - Save (use the Snipping Tool's delay option)
   offset_x: offset_x$transcript_content_left
   offset_y: offset_y$transcript_body_top
-  width: 905
-  height: 150
+  width: width$transcript_cb013_first_utterance_tooltip
+  height: height$transcript_body_turn_container + 4*height$transcript_body_layer
   overlay:
     - image: _arrow.png
       offset_x: 401
@@ -982,7 +989,7 @@ screengrabs:
     - Select noise, comment, pronounce
     - "`window.scrollTo(0, 11315);"
     - Save
-  offset_x: 195
+  offset_x: offset_x$transcript_content_left
   offset_y: offset_y$page_top
   width: 1065
   height: 155
