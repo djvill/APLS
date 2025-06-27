@@ -6,7 +6,7 @@ parent: How to use APLS
 has_children: yes
 has_toc: no
 nav_order: 20
-last_modified_date: 2025-06-24T17:16:38-04:00
+last_modified_date: 2025-06-27T16:08:11-04:00
 ---
 
 # {{ page.title }}
@@ -348,7 +348,7 @@ In this image:
 - All the intervals for <span class="layer">phonemes</span> and <span class="layer">dictionary_phonemes</span> are exactly as wide as the corresponding <span class="layer">word</span>. This means neither of these layers have horizontal peers in the utterance.
 - Some intervals for <span class="layer">syllables</span> are narrower than the corresponding <span class="layer">word</span>. These are horizontal peers.
 
-You can read the layer typology documentation page for more information about [horizontal]({{ '/doc/layer-typology#alignment-and-horizontal-peers' | relative_url }}) and [vertical]({{ '/doc/layer-typology#vertical-peers' | relative_url }}).
+You can read the layer typology documentation page for more information about [horizontal]({{ '/doc/layer-typology#alignment-and-horizontal-peers' | relative_url }}) and [vertical]({{ '/doc/layer-typology#vertical-peers' | relative_url }}) peers.
 
 
 ### Phonological layers and DISC
