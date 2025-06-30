@@ -108,8 +108,19 @@ if ("dir" %in% colnames(manip)) {
 }
 ##Set up images
 manip <- manip |>
-  mutate(in_image = map(in_path, image_read),
+  mutate(safe_image = map(in_path, safely(image_read)),
+         path_err = map(safe_image, "error"),
+         in_image = map(safe_image, "result"),
          out_image = in_image)
+##Throw errors if needed
+path_err <-
+  manip |>
+  pull(path_err, in_path) |>
+  compact()
+if (length(path_err) > 0) {
+  stop("Input image(s) not found: ",
+       paste(names(path_err), collapse=" "))
+}
 
 ##Optionally overlay additional images
 if ("overlay" %in% colnames(manip)) {
