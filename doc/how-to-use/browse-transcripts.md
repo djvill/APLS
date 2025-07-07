@@ -4,10 +4,10 @@ contributors: [Dan Villarreal, Jack Rechsteiner]
 permalink: /doc/browse-transcripts
 parent: How to use APLS
 nav_order: 30
-last_modified_date: 2025-07-07T13:23:26-04:00
+last_modified_date: 2025-07-07T13:41:37-04:00
 ---
 
-# {{ page.title }}
+# {{ page.title }} {#page-title}
 {:.no_toc}
 
 The primary way to browse transcripts in APLS is via the <span class="apls-page">Transcripts</span> page: <https://apls.pitt.edu/labbcat/transcripts>. 
