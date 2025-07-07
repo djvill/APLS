@@ -23,7 +23,8 @@ For example, `transcript/export-praat-1.png`, a Praat screengrab, is the result 
 Some exceptions to keep things less annoying:
 
 - <https://apls.pitt.edu/extract> pages get sub-subfolders within the `extract/` subfolder (e.g., `extract/exportFragments/post-upload.png`).
-- <https://apls.pitt.edu/participantsExport> is a sub-subfolder within the `participants` subfolder.
+- <https://apls.pitt.edu/labbcat/transcript/attributes> is a sub-subfolder within the `transcript` subfolder.
+- <https://apls.pitt.edu/labbcat/participant> and <https://apls.pitt.edu/participantsExport> get sub-subfolders within the `participants` subfolder.
 - <https://apls.pitt.edu/> goes in `home/`.
 - Anything having to do with setting up the Praat integration goes in `praat-integration/`.
 - Anything that doesn't relate to a specific page **within** APLS goes in `no-page/`. This includes troubleshooting things where no valid page loads, the login box, etc.
