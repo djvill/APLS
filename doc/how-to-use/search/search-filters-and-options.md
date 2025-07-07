@@ -5,7 +5,7 @@ permalink: /doc/search-filters-and-options
 parent: Searching the corpus
 grand_parent: How to use APLS
 nav_order: 20
-last_modified_date: 2025-05-27T16:16:15-04:00
+last_modified_date: 2025-07-07T13:23:26-04:00
 ---
 
 # {{ page.title }}
@@ -17,6 +17,8 @@ You can limit your search to a selection of [participants]({{ '/doc/data-organiz
 You can also specify additional match and display options for your search using the [search options](#search-options).
 
 {% include page_toc.html collapsible=true %}
+
+<!-- TODO mention that if you want to filter by attributes not on the participants/transcripts pages, you should download the attributes csv, manually filter, and upload -->
 
 ## Participants filter
 

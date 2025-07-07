@@ -8,7 +8,8 @@ constants:
   offset_x:
     window_left: 0
     transcript_content_left: 190
-    transcripts_content_left: 190
+    transcripts_content_left: 189
+    search_tabs_left: 185
   offset_y:
     window_top: 0
     address_bar_top: 60
@@ -17,18 +18,25 @@ constants:
     page_title_top: 195
     transcript_header_top: 315
     transcript_body_top: 380
+    transcripts_list_top: 460
+    transcripts_filters_top: 275
+    transcripts_filters_bottom: 410
+    excel_formula_bar_top: 120
   width:
     window: 1920
     transcript_content: 1510
     transcript_cb013_first_utterance: 580
     transcript_cb013_first_utterance_tooltip: 905
     transcripts_content: 1510
+    search_tabs: 1520
   height:
+    window: 1008
     transcript_body_layer: 30
     transcript_body_turn_container: 30
     transcript_attributes: 560
     transcript_layer_picker_plus_1: 470
     transcript_export_plus_1: 580
+    search_filter_tabs: 515
 
 screengrabs:
 - screengrab: participants/participantsExport/attributes-multiselect-export.png
@@ -41,7 +49,7 @@ screengrabs:
     - Make columns fit width, cell height 43.5, formula bar height 3, select C4
     - Save
   offset_x: offset_x$window_left
-  offset_y: 120
+  offset_y: offset_y$excel_formula_bar_top
   width: 655
   height: 690
 
@@ -119,10 +127,23 @@ screengrabs:
     - Load https://apls.pitt.edu/labbcat/transcript?transcript=CB01interview3.eaf
     - Click Search transcript series CB01
     - Save
-  offset_x: 185 # edge of tabs
+  offset_x: offset_x$search_tabs_left
   offset_y: offset_y$page_title_top
-  width: 1520
+  width: width$search_tabs
   height: 535
+
+- screengrab: search/transcript-filter.png
+  instructions:
+    - Log in as test-student
+    - Set browser zoom to 100%
+    - Load https://apls.pitt.edu/labbcat/transcripts
+    - Select reading, Cranberry Township
+    - Click Layered Search
+    - Save
+  offset_x: offset_x$search_tabs_left
+  offset_y: offset_y$page_title_top
+  width: width$search_tabs
+  height: height$search_filter_tabs + 80
 
 - screengrab: transcript/layer-alignment.png
   instructions:
@@ -201,6 +222,285 @@ screengrabs:
   width: 985
   height: 390
 
+- screengrab: transcripts/overview.png
+  instructions:
+    - Log in as test-student
+    - Set browser zoom to 100%
+    - Load https://apls.pitt.edu/labbcat/transcripts
+    - Save
+  offset_x: offset_x$window_left
+  offset_y: offset_y$address_bar_top
+  width: width$window
+  height: 890
+  drawing:
+      # transcript list
+    - func: rect
+      xleft: offset_x$transcripts_content_left
+      ytop: offset_y$transcripts_list_top
+      xright: offset_x$transcripts_content_left + width$transcripts_content
+      ybottom: 1025 # off the page
+      border: highlight_colors$hl_1
+      lty: dashed
+      lwd: 5
+      # filters
+    - func: rect
+      xleft: offset_x$transcripts_content_left
+      ytop: offset_y$transcripts_filters_top
+      xright: offset_x$transcripts_content_left + width$transcripts_content
+      ybottom: offset_y$transcripts_filters_bottom - 5
+      border: highlight_colors$hl_2
+      lty: dashed
+      lwd: 5
+      # export menu
+    - func: rect
+      xleft: offset_x$transcripts_content_left
+      ytop: offset_y$transcripts_filters_bottom
+      xright: 1212
+      ybottom: offset_y$transcripts_list_top - 5
+      border: highlight_colors$hl_3
+      lty: dashed
+      lwd: 5
+
+- screengrab: transcripts/list.png
+  instructions: See transcripts/overview.png
+  in_path: transcripts/overview.png
+  offset_x: offset_x$transcripts_content_left
+  offset_y: offset_y$transcripts_list_top
+  width: width$transcripts_content
+  height: 527
+
+- screengrab: transcripts/attributes.png
+  instructions: See transcripts/overview.png
+  in_path: transcripts/overview.png
+  offset_x: offset_x$transcripts_content_left
+  offset_y: offset_y$transcripts_filters_top + 25
+  width: width$transcripts_content
+  height: 466
+
+- screengrab: transcript/attributes/overview.png
+  instructions:
+    - Log in as test-student
+    - Set browser zoom to 100%
+    - Load https://apls.pitt.edu/labbcat/transcript/attributes?id=CB01reading1.eaf
+    - "Hide watermark: In Chrome console, select `html` element and deselect `background-image`"
+    - Save
+  offset_x: offset_x$window_left
+  offset_y: offset_y$page_title_top
+  width: width$window
+  height: height$transcript_attributes
+
+- screengrab: transcript/attributes/tooltip.png
+  instructions:
+    - Log in as test-student
+    - Set browser zoom to 100%
+    - Load https://apls.pitt.edu/labbcat/transcript/attributes?id=CB01reading1.eaf
+    - "Hide watermark: In Chrome console, select `html` element and deselect `background-image`"
+    - Put cursor over the corner of d in neighborhood
+    - Save (use the Snipping Tool's delay option)
+  offset_x: offset_x$window_left
+  offset_y: offset_y$page_title_top
+  width: width$window
+  height: height$transcript_attributes
+  overlay:
+    - image: _help.png
+      offset_x: 664
+      offset_y: 425
+
+- screengrab: transcript/attributes/prefixes.png
+  instructions:
+    - Log in as test-student
+    - Set browser zoom to 100%
+    - Load https://apls.pitt.edu/labbcat/transcript/attributes?id=CB01reading1.eaf
+    - "Hide watermark: In Chrome console, select `html` element and deselect `background-image`"
+    - Click Attributes tab
+    - Deselect Hide attribute prefixes
+    - Save
+  offset_x: offset_x$window_left
+  offset_y: offset_y$page_title_top
+  width: width$window
+  height: height$transcript_attributes
+
+- screengrab: transcript/attributes/hide-names.png
+  instructions:
+    - Log in as test-student
+    - Set browser zoom to 100%
+    - Load https://apls.pitt.edu/labbcat/transcript/attributes?id=CB01reading1.eaf
+    - "Hide watermark: In Chrome console, select `html` element and deselect `background-image`"
+    - Click Attributes tab
+    - Select Hide attribute names
+    - Save
+  offset_x: offset_x$window_left
+  offset_y: offset_y$page_title_top
+  width: width$window
+  height: height$transcript_attributes
+
+- screengrab: transcripts/export-attributes.png
+  instructions:
+    - Log in as test-student
+    - Set browser zoom to 100%
+    - Load https://apls.pitt.edu/labbcat/transcripts
+    - Click Export Attributes
+    - Save
+  offset_x: offset_x$transcripts_content_left
+  offset_y: offset_y$transcripts_filters_bottom
+  width: width$transcripts_content
+  height: 225 # export menu, 4 results
+
+- screengrab: transcripts/export-attributes-expanded.png
+  instructions:
+    - Log in as test-student
+    - Set browser zoom to 100%
+    - Load https://apls.pitt.edu/labbcat/transcripts
+    - Click Export Attributes, hover over expandable
+    - Save
+  offset_x: offset_x$transcripts_content_left
+  offset_y: offset_y$transcripts_filters_bottom
+  width: width$transcripts_content
+  height: 225 # export menu, 4 results
+  overlay:
+    - image: _arrow.png
+      offset_x: 1097
+      offset_y: 430
+
+- screengrab: transcripts/export-attributes-csv.png
+  instructions:
+    - Log in as test-student
+    - Set browser zoom to 100%
+    - Load https://apls.pitt.edu/labbcat/transcripts
+    - Click Export Attributes
+    - Select transcript, episode, recording_date
+    - Click Export Attributes again
+    - Open CSV in Excel
+    - Make columns fit width, formula bar height 1, select A1
+    - Save
+  offset_x: 0
+  offset_y: offset_y$excel_formula_bar_top
+  width: 704
+  height: 518
+
+- screengrab: transcripts/export-attributes-csv-raw.png
+
+- screengrab: transcripts/filters-none.png
+  instructions: See transcripts/overview.png
+  in_path: transcripts/overview.png
+  offset_x: offset_x$transcripts_content_left
+  offset_y: offset_y$transcripts_filters_top
+  width: width$transcripts_content
+  height: 712 # filters, export menu, 12 results
+
+- screengrab: transcripts/filters-tooltip.png
+  instructions:
+    - Log in as test-student
+    - Set browser zoom to 100%
+    - Load https://apls.pitt.edu/labbcat/transcripts
+    - Put cursor at the top left of Duration sec
+    - Save (use the Snipping Tool's delay option)
+  offset_x: offset_x$transcripts_content_left
+  offset_y: offset_y$transcripts_filters_top
+  width: width$transcripts_content
+  height: 712 # filters, export menu, 12 results
+  overlay:
+    - image: _arrow.png
+      offset_x: 1128
+      offset_y: 329
+
+- screengrab: transcripts/filters-interview.png
+  instructions:
+    - Log in as test-student
+    - Set browser zoom to 100%
+    - Load https://apls.pitt.edu/labbcat/transcripts
+    - Click interview
+    - Save
+  offset_x: offset_x$transcripts_content_left
+  offset_y: offset_y$transcripts_filters_top
+  width: width$transcripts_content
+  height: 712 # filters, export menu, 12 results
+
+- screengrab: transcripts/filters-expand.png
+  instructions:
+    - Log in as test-student
+    - Set browser zoom to 100%
+    - Load https://apls.pitt.edu/labbcat/transcripts
+    - Click interview
+    - Hover over Transcript type
+    - Save
+  offset_x: offset_x$transcripts_content_left
+  offset_y: offset_y$transcripts_filters_top
+  width: width$transcripts_content
+  height: 712 # filters, export menu, 12 results
+  overlay:
+    - image: _arrow.png
+      offset_x: 710
+      offset_y: 360
+
+- screengrab: transcripts/filters-interview-small.png
+  instructions: See transcripts/filters-interview.png
+  in_path: transcripts/filters-interview.png
+  offset_x: 525
+  offset_y: offset_y$transcripts_filters_top + 25
+  width: 255
+  height: 170
+
+- screengrab: transcripts/filters-expand-small.png
+  instructions: See transcripts/filters-interview.png
+  in_path: transcripts/filters-expand.png
+  offset_x: 525
+  offset_y: offset_y$transcripts_filters_top + 25
+  width: 255
+  height: 170
+  overlay:
+    - image: _arrow.png
+      offset_x: 710
+      offset_y: 360
+
+- screengrab: !transcripts/expandable.png
+  instructions: In PowerPoint, stitch together transcripts/filters-interview-small.png and transcripts/filters-expand-small.png (with 0.2 inches of horizontal space). I promise it'll be okay.
+
+- screengrab: transcripts/filters-multi-select.png
+  instructions:
+    - Log in as test-student
+    - Set browser zoom to 100%
+    - Load https://apls.pitt.edu/labbcat/transcripts
+    - Click interview, reading
+    - Save
+  offset_x: offset_x$transcripts_content_left
+  offset_y: offset_y$transcripts_filters_top
+  width: width$transcripts_content
+  height: 712 # filters, export menu, 12 results
+
+- screengrab: transcripts/filters-multiple.png
+  instructions:
+    - Log in as test-student
+    - Set browser zoom to 100%
+    - Load https://apls.pitt.edu/labbcat/transcripts
+    - Click interview, reading
+    - Set Duration To to 900
+    - Save
+  offset_x: offset_x$transcripts_content_left
+  offset_y: offset_y$transcripts_filters_top
+  width: width$transcripts_content
+  height: 712 # filters, export menu, 12 results
+
+- screengrab: transcripts/filters-url.png
+  instructions: See transcripts/filters-multiple.png
+  in_path: transcripts/filters-multiple.png
+  offset_x: offset_x$transcripts_content_left
+  offset_y: offset_y$address_bar_top
+  width: width$transcripts_content
+  height: offset_y$transcripts_filters_bottom - offset_y$address_bar_top
+
+- screengrab: transcripts/filters-no-matching.png
+  instructions:
+    - Log in as test-student
+    - Set browser zoom to 100%
+    - Load https://apls.pitt.edu/labbcat/transcripts
+    - Set Duration From to 7200
+    - Save
+  offset_x: offset_x$transcripts_content_left
+  offset_y: offset_y$page_top
+  width: width$transcripts_content
+  height: 390
+
 - screengrab: transcripts/export-formatted.png
   instructions:
     - Log in as test-student
@@ -214,18 +514,67 @@ screengrabs:
   offset_y: 260
   width: width$transcripts_content
   height: 725
+  drawing:
+      # layer picker
+    - func: rect
+      xleft: offset_x$transcripts_content_left
+      ytop: 308
+      xright: offset_x$transcripts_content_left + width$transcripts_content - 3
+      ybottom: 725 + 260 - 3
+      border: highlight_colors$hl_1
+      lty: dashed
+      lwd: 5
+      # format picker
+    - func: rect
+      xleft: 685
+      ytop: 267
+      xright: 968
+      ybottom: 297
+      border: highlight_colors$hl_2
+      lty: dashed
+      lwd: 5
+
+- screengrab: transcripts/layer-picker-segment-icons.png
+  instructions:
+    - Log in as test-student
+    - Set browser zoom to 100%
+    - Load https://apls.pitt.edu/labbcat/transcripts
+    - "Hide watermark: In Chrome console, select `html` element and deselect `background-image`"
+    - "`window.scrollTo(0,100);`"
+    - Click "Export Formatted"
+    - Deselect Hide layer icons
+    - Save
+  offset_x: 1565
+  offset_y: 558
+  width: 173
+  height: 32
 
 - screengrab: transcripts/participant-filter.png
   instructions:
     - Log in as test-student
     - Set browser zoom to 100%
-    - Load https://apls.pitt.edu/labbcat/transcript?transcript=CB01interview3.eaf
-    - Click List Transcripts for CB01
+    - Load https://apls.pitt.edu/labbcat/participants
+    - Select Female, Main speaker
+    - Click List Transcripts
     - Save
   offset_x: offset_x$transcripts_content_left
   offset_y: offset_y$page_title_top
   width: width$transcripts_content
-  height: 575 # title, header, controls, & 7 matches
+  height: 572 # title, header, controls, & 7 matches
+
+- screengrab: transcripts/participant-filter-interview.png
+  instructions:
+    - Log in as test-student
+    - Set browser zoom to 100%
+    - Load https://apls.pitt.edu/labbcat/participants
+    - Select Female, Main speaker
+    - Click List Transcripts
+    - Select interview
+    - Save
+  offset_x: offset_x$transcripts_content_left
+  offset_y: offset_y$page_title_top
+  width: width$transcripts_content
+  height: 572 # title, header, controls, & 7 matches
 
 - screengrab: !transcript/vertical-peers-fragment-1.png
   instructions:
@@ -283,7 +632,7 @@ screengrabs:
     - Load https://apls.pitt.edu/labbcat/transcript?transcript=CB01interview3.eaf
     - "Hide watermark: In Chrome console, select `html` element and deselect `background-image`"
     - Click Attributes tab
-    - Put cursor over the corner of d in Neighborhood
+    - Put cursor over the corner of d in neighborhood
     - Save (use the Snipping Tool's delay option)
   offset_x: offset_x$transcript_content_left
   offset_y: 310
@@ -1091,6 +1440,57 @@ screengrabs:
     - Click the fourth utterance, Open TextGrid in Praat
     - Maximize window
     - Save
+
+- screengrab: participants/female.png
+  instructions:
+    - Log in as test-student
+    - Set browser zoom to 100%
+    - Load https://apls.pitt.edu/labbcat/participants
+    - Select Female, Main speaker
+    - Save
+  offset_x: 25
+  offset_y: offset_y$page_title_top
+  width: 1860
+  height: height$window - offset_y$page_title_top
+
+- screengrab: participants/cb08-2.png
+  instructions:
+    - Log in as test-student
+    - Set browser zoom to 100%
+    - Load https://apls.pitt.edu/labbcat/transcripts
+    - Select CB08interview2.eaf, click List Participants
+    - Save
+  offset_x: 25
+  offset_y: offset_y$page_title_top
+  width: 1860
+  height: 430
+
+- screengrab: participants/1800sec.png
+  instructions:
+    - Log in as test-student
+    - Set browser zoom to 100%
+    - Load https://apls.pitt.edu/labbcat/transcripts
+    - Type 1800 into the duration From box
+    - Click List Participants
+    - Save
+  offset_x: 25
+  offset_y: offset_y$page_title_top
+  width: 1860
+  height: 685
+
+- screengrab: participants/1800sec-filtered.png
+  instructions:
+    - Log in as test-student
+    - Set browser zoom to 100%
+    - Load https://apls.pitt.edu/labbcat/transcripts
+    - Type 1800 into the duration From box
+    - Click List Participants
+    - Select Female, Main speaker
+    - Save
+  offset_x: 25
+  offset_y: offset_y$page_title_top
+  width: 1860
+  height: 440
 
 - screengrab: home/overview.png
   instructions:
