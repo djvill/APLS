@@ -6,7 +6,7 @@ parent: How to use APLS
 has_children: yes
 has_toc: no
 nav_order: 20
-last_modified_date: 2025-06-27T16:08:11-04:00
+last_modified_date: 2025-07-08T15:45:25-04:00
 ---
 
 # {{ page.title }}
@@ -152,7 +152,7 @@ There are two other parts of the media player that we cover below (since they're
 
 ## Navigating to other transcripts
 
-The navigation arrows (highlighted in **purple**{:.hl-4} below) allow you to move to the previous or next transcript in the interview.
+The <span class="keyterm">navigation arrows</span> (highlighted in **purple**{:.hl-4} below) allow you to move to the previous or next transcript in the interview.
 These arrows are hidden if you are looking at the first or last transcript in the interview.
 
 {% include screengrab.html src="transcript/nav-arrows.png" %}
@@ -502,7 +502,7 @@ If you forget what the icons mean, you can hover over them for a tooltip:
 {% include screengrab.html src="transcript/layer-picker-icon-tooltip.png" %}
 
 Finally, if you find the layer icons visually distracting, you can click _Hide layer icons_ to make them disappear.
-APLS will remember this setting if you navigate to other pages with layer pickers within the same browser tab.
+APLS will remember this setting if you navigate to other pages with layer pickers in the same browser tab.
 
 {% include screengrab.html src="transcript/layer-picker-hide-icons.png" %}
 
@@ -524,12 +524,12 @@ By comparison, `HD06interview1.eaf`, one of the longest transcripts in APLS (ove
 
 {% include screengrab.html src="transcript/layer-picker-many-annotations.png" %}
 
-Beyond simply being impressive, annotation counts can give us clues about the structure of the data and how layers relate to one another.
+Annotation counts can give us clues about the structure of the data and how layers relate to one another.
 For example, `HD06interview1.eaf` has one fewer <span class="layer">orthography</span> annotation than <span class="layer">word</span> annotations, unlike `CB01interview3.eaf`.
 That's because the second word of the interview is redacted---Interviewer HD says the speaker's name (as the cornflower-blue <span class="layer">redaction</span> annotation shows).
 Otherwise, every <span class="layer">word</span> annotation has a corresponding <span class="layer">orthography</span> annotation.
 
-Like the layer picker's [icons](#icons), there's a _Hide annotation counts_ setting, which APLS remembers if you navigate to other <span class="apls-page">Transcript</span> pages within the same browser tab:
+Like the layer picker's [icons](#icons), there's a _Hide annotation counts_ setting, which APLS remembers if you navigate to other <span class="apls-page">Transcript</span> pages in the same browser tab:
 
 {% include screengrab.html src="transcript/layer-picker-hide-annotation-counts.png" %}
 
@@ -658,7 +658,7 @@ For example, here's what it looks like if you click _List Transcripts_ for `CB01
 ## Searching the transcript/participants
 
 Like the _Participants_ tab, the _Search_ tab provides shortcuts to a different APLS page: the [<span class="apls-page">Search</span> page]({{ '/doc/search' | relative_url }}).
-The buttons pre-fill transcript or participant [search filters]({{ '/doc/search-filters-and-options' | relative_url }}) so you can quickly search for linguistic patterns in an individual transcript, the sociolinguistic interview (that is, the transcript's <span class="transcript-attr">episode</span>).
+The buttons pre-fill transcript or participant [search filters]({{ '/doc/search-filters-and-options' | relative_url }}) so you can quickly search for linguistic patterns in an individual transcript, the sociolinguistic interview (that is, the transcript's <span class="transcript-attr">episode</span>), or all utterances from the transcript's participants (in all transcripts where they appear).
 
 {% include screengrab.html src="transcript/search.png" %}
 
@@ -887,7 +887,7 @@ There are multiple ways to reach a <span class="apls-page">Transcript</span> pag
   > This will take you directly to the <span class="apls-page">Transcript</span> page for `CB01interview3.eaf`.
   {: .try-it }
 - Via a [permalink](#creating-permalinks) to a line or word in the transcript.
-- Once you have a <span class="apls-page">Transcript</span> page open, you can use navigation arrows to move to a different transcript, as described [above](#navigating-to-other-transcripts).
+- Once you have a <span class="apls-page">Transcript</span> page open, you can use <span class="keyterm">navigation arrows</span> to move to a different transcript, as described [above](#navigating-to-other-transcripts).
 
 In addition, there are two ways to access transcripts from the results of a search (see [Searching the corpus]({{ '/doc/search' | relative_url }})):
 
