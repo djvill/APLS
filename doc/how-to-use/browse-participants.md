@@ -4,7 +4,7 @@ contributors: [Dan Villarreal, Jack Rechsteiner]
 permalink: /doc/browse-participants
 parent: How to use APLS
 nav_order: 40
-last_modified_date: 2025-05-27T16:16:14-04:00
+last_modified_date: 2025-07-08T15:46:13-04:00
 ---
 
 # {{ page.title }}
@@ -119,34 +119,6 @@ The export menu is located below the [filter menu](#filtering-participants).
 
 {% include screengrab.html src="participants/export-menu.png" %}
 
-### *All Utterances*
-
-{: .under-the-hood }
-> The *All Utterances* function is primarily used by maintainers of the corpus to manage the alignment of utterances.
-> This function may be removed in future versions of APLS.
-
-The *All Utterances* option allows you to view and download all utterances produced by selected participants in APLS.
-
-{: .note .no-collapse}
-> The "All Utterances" option will appear grayed out until one or more participants are selected.
-
-Clicking *All Utterances* after selecting participants will bring up the "All Utterances" page.
-
-{% include screengrab.html src="participants/all-utterances.png" %}
-
-The search filter options on this page allow you to choose which transcripts to include and exclude.
-
-- The option *Only include transcripts for which these are the main participants* limits the search to transcripts where the selected participants are designated as the "Main speaker".
-  Turning this option off will search all transcripts for any utterances from the selected participants.
-- The other four options allow to select the transcript <span class="transcript-attr">type</span> you would like to include in the search.
-  More information about transcript <span class="transcript-attr">type</span> can be found in the [attribute field guide]({{ '/doc/transcript-attributes#type' | relative_url }}).
-
-Clicking the *List* button will search APLS for all utterances from the selected participants that meet your search criteria.
-
-{% include screengrab.html src="participants/all-utterances-results.png" %}
-
-Clicking on *Display results* will open a new tab that displays the search results.
-More information about <span class="keyterm">search results</span> can be found on the [Searching the corpus]({{ '/doc/search' | relative_url }}) documentation page.
 
 ### *Export Attributes*
 

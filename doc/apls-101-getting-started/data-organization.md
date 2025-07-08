@@ -4,7 +4,7 @@ contributors: [Dan Villarreal, Jack Rechsteiner]
 permalink: /doc/data-organization
 parent: APLS 101/Getting started
 nav_order: 30
-last_modified_date: 2025-06-24T10:38:13-04:00
+last_modified_date: 2025-07-08T15:46:13-04:00
 ---
 
 # {{ page.title }}
@@ -81,36 +81,32 @@ Some sections are split into multiple transcripts (e.g., `interview1`, `reading2
 
 Each participant and transcript has a set of **attributes** that describe metadata about the participant or transcript.
 For example, the participant `HD17` has <span class="participant-attr">gender</span> `Female` and <span class="participant-attr">year_of_birth</span> `1964`.
-The transcript `FH10pairs.eaf` has <span class="transcript-attr">duration</span> `188.61` and <span class="transcript-attr">recording_date</span> September 26, 2023.
+The transcript `FH10pairs.eaf` has <span class="transcript-attr">duration</span> `188.61` and <span class="transcript-attr">recording_date</span> `September 26, 2023`.
 
 ## Layers and annotations
 
-To illustrate **layers** and **annotations** in APLS, let's look at a screen-grab of a single <span class="keyterm">line</span> of speech (aka an <span class="layer">utterance</span>) from the transcript `HD07interview3.eaf`:
+To illustrate **layers** and **annotations** in APLS, let's look at a single <span class="keyterm">line</span> of speech (aka an <span class="layer">utterance</span>) from the transcript `HD07interview3.eaf`:
 {% include screengrab.html src="transcript/layers-annotations.png" %}
 
-On the left-hand side of the image is `HD07`, the speaker code for the participant who uttered this speech.
+At the top of the image is `HD07`, the speaker code for the participant who uttered this speech.
 
 ### Layers
 
 To the right of the speaker code are three layers. From top to bottom, these are <span class="layer">speech_rate</span>, <span class="layer">part_of_speech</span>, and <span class="layer">word</span>.
-- <span class="layer">speech_rate</span> (top)
-  - This layer contains a measurement of how quickly HD07 uttered this line: `6.5068` syllables per second.
-  - APLS measures speech rate by lines in the transcript, so there is just one <span class="layer">speech_rate</span> annotation for this line (as indicated by the curved bracket).
-- <span class="layer">part_of_speech</span> (middle)
-  - This layer encodes each word's part of speech using [Penn Treebank part-of-speech tags]({{ '/doc/notation-systems#penn-treebank-pos-tags' | relative_url }}) (e.g., `UH` for interjections, `CC` for coordinating conjunctions).
-  - Most words have a single <span class="layer">part_of_speech</span> annotation. The word _don't_ has two annotations (`VBP RB`), since it consists of both a present-tense verb (_do_) and an adverb (_not_).
-- <span class="layer">word</span> (bottom)
-  - This layer contains the words that HD07 spoke, spelled in normal English.
-  - Each word has a single annotation on the <span class="layer">word</span> layer.
+- <span class="layer">speech_rate</span> layer (top, colored teal): Measures how quickly HD07 uttered this line of speech (`6.5068` syllables per second).
+- <span class="layer">part_of_speech</span> layer (middle, colored lime green): Encodes each word's part of speech using [Penn Treebank part-of-speech tags]({{ '/doc/notation-systems#treebank-pos' | relative_url }}) (e.g., `UH` for interjections, `CC` for coordinating conjunctions).
+- <span class="layer">word</span> layer (bottom, colored black): Contains the words that HD07 spoke, written in conventional English spelling.
 
 Layers are covered in more detail in the [Layers and attributes section]({{ '/doc/layers-and-attributes' | relative_url }}) of the APLS documentation.
 
 ### Annotations
 
-The cursor in the screen-grab is hovering over the `NN` annotation, which brings up a tooltip with several pieces of information:
-  - The selected annotation is on the <span class="layer">part_of_speech</span> layer.
-  - This annotation is part of an utterance that begins at 7.92 seconds into the transcript and lasts around 3.29 seconds.
-  - Clicking on the annotation will bring up a [menu]({{ '/doc/view-transcript#word-menu' | relative_url }}) with additional options.
+In the previous image, each layer contains one or more annotations:
+
+- <span class="layer">word</span> layer (bottom, colored black): Each word has a single annotation.
+- <span class="layer">part_of_speech</span> layer (middle, colored lime green): Most words have a single <span class="layer">part_of_speech</span> annotation. The word _don't_ has two annotations (`VBP RB`), since it consists of both a present-tense verb (_do_) and an adverb (_not_).
+- <span class="layer">speech_rate</span> layer (top, colored teal): APLS measures speech rate by lines in the transcript, so there is just one <span class="layer">speech_rate</span> annotation for this line (as indicated by the curved bracket).
+
 
 [Next page: **Navigating documentation**]({{ '/doc/doc-navigation' | relative_url }}){: .btn .next-page }
 

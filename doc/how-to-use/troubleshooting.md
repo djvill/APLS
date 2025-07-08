@@ -3,7 +3,7 @@ title: Troubleshooting
 permalink: /doc/troubleshooting
 parent: How to use APLS
 nav_order: 90
-last_modified_date: 2025-05-27T12:32:03-04:00
+last_modified_date: 2025-07-08T15:46:15-04:00
 ---
 
 # {{ page.title }}
@@ -59,7 +59,8 @@ If that doesn't work, fill out this [password reset][] form, and we'll get back 
 
 ## You get unexpected search results
 
-<!-- Add search-tips page under how to use -->
+Coming soon!
+<!-- TODO Add search-tips page under how to use -->
 
 
 ## APLS is slow

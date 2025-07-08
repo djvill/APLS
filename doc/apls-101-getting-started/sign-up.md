@@ -3,7 +3,7 @@ title: Signing up for APLS
 permalink: /doc/sign-up
 parent: APLS 101/Getting started
 nav_order: 10
-last_modified_date: 2025-05-27T12:31:58-04:00
+last_modified_date: 2025-07-08T15:46:13-04:00
 ---
 
 # {{ page.title }}
@@ -40,7 +40,7 @@ There are two additional things you'll only need to do the **first** time you lo
 1. You'll see a page with the terms of use (identical to the [terms of use page]({{ '/doc/terms' | relative_url }}) on this site). Scroll to the bottom and click _I Agree_.
    {% include screengrab.html src="license/license.png" %}
    
-1. Then you'll see a prompt to reset your temporary password. Enter your new password and click _Change Pass Phrase_.
+1. Then you'll see a prompt to reset your temporary password. Enter your new password and click _Change password_.
     {% include screengrab.html src="security/password-reset.png" %}
 
 

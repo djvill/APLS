@@ -4,7 +4,7 @@ contributors: [Dan Villarreal, Jack Rechsteiner]
 permalink: /doc/data-sources
 parent: About APLS
 nav_order: 20
-last_modified_date: 2025-05-01T22:48:14-04:00
+last_modified_date: 2025-07-08T15:46:12-04:00
 ---
 
 # {{ page.title }}
@@ -27,4 +27,4 @@ The audio files in APLS have been [transcribed]({{ '/doc/transcription' | relati
 After a transcription file is uploaded with an audio file to APLS, APLS generates numerous layers for the transcript, using dictionaries with compositional representations of words (e.g., morphological parsing), machine learning models (e.g., the [Hidden Markov Toolkit][htk] for determining time-alignments of individual speech sounds), and other techniques.
 Additionally, metadata about the participant and the transcript are uploaded to APLS.
 
-{% include page_toc.html collapsible=true %}
+{% include linklist.html %}

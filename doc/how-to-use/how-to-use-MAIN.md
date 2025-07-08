@@ -4,7 +4,7 @@ permalink: /doc/how-to-use
 has_children: yes
 has_toc: no
 nav_order: 20
-last_modified_date: 2025-03-11T15:08:24-04:00
+last_modified_date: 2025-07-08T15:46:14-04:00
 ---
 
 # {{ page.title }}
@@ -26,12 +26,14 @@ Here's a quick reference to the pages in this section:
 
 <!-- Map the pages in how-to to the menu items on the navbar -->
 
-- home: The homepage
-- search: Search for annotations (e.g., individual words, phonemes)
-- extract: Extract audio, transcript, annotation, or acoustic data
-- participants: View information on participants
-- transcripts: Browse transcripts
-- documentation: Links to the [documentation homepage]({{ '/' | relative_url }})
+- [**Viewing a transcript**]({{ '/doc/view-transcript' | relative_url }}): Individual <span class="apls-page">Transcript</span> pages (like <https://apls.pitt.edu/labbcat/transcript?transcript=CB01interview3.eaf>).
+- [**Browsing transcripts**]({{ '/doc/browse-transcripts' | relative_url }}): The <span class="apls-page">Transcripts</span> page (<https://apls.pitt.edu/labbcat/transcripts>) and individual <span class="apls-page">Transcript attributes</span> pages (like <https://apls.pitt.edu/labbcat/transcript/attributes?id=CB01interview3.eaf>).
+- [**Browsing participants**]({{ '/doc/browse-participants' | relative_url }}): The <span class="apls-page">Participants</span> page (<https://apls.pitt.edu/labbcat/participants>) and individual <span class="apls-page">Transcript attributes</span> pages (like <https://apls.pitt.edu/labbcat/participant?id=CB01>).
+- [**Searching the corpus**]({{ '/doc/search' | relative_url }}): The <span class="apls-page">Search</span> page (<https://apls.pitt.edu/labbcat/search>).
+- [**Exporting data**]({{ '/doc/export-data' | relative_url }}): The <span class="apls-page">Search results</span> page and <span class="apls-page">Extract</span> pages (<https://apls.pitt.edu/labbcat/extract>).
+- [**Extracting acoustic measurements**]({{ '/doc/extract-acoustics' | relative_url }}): The <span class="apls-page">Process with Praat</span> page (<https://apls.pitt.edu/labbcat/praat>).
+- [**Citing and contributing back**]({{ '/doc/citing-contributing' | relative_url }}): How to cite APLS and what to do if you're publishing based on APLS.
+- [**Troubleshooting**]({{ '/doc/troubleshooting' | relative_url }}): Common issues and how to solve them.
 
 
 ## If you're **publishing based on APLS**

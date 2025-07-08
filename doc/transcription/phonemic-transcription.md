@@ -3,7 +3,7 @@ title: Phonemic transcription with the DISC alphabet
 permalink: /doc/phonemic-transcription
 parent: Transcription
 nav_order: 3
-last_modified_date: 2025-06-23T16:18:05-04:00
+last_modified_date: 2025-07-08T15:46:16-04:00
 ---
 
 
@@ -251,3 +251,5 @@ A few finer points:
 The **foll_segment** layer uses all the usual DISC characters with one addition: `.` as a pause marker. 
 Knowing that a segment is followed by a phone can be useful for categorizing certain phonological effects, and an explicit symbol signals to end-users that this is not missing data.
 `.` was chosen because it is a keyboard (ASCII) character, and it already denotes pauses in similar notation systems: [Extensions to the IPA](https://en.wikipedia.org/wiki/Extensions_to_the_International_Phonetic_Alphabet#Prosodic_notation_and_indeterminate_sounds), [Jeffersonian (conversation analysis) transcription](https://en.wikipedia.org/wiki/Conversation_analysis#Jeffersonian_transcription), etc.
+
+{% include linklist.html %}

@@ -4,7 +4,8 @@ contributors: [Dan Villarreal, Jack Rechsteiner]
 permalink: /doc/export-data
 parent: How to use APLS
 nav_order: 60
-last_modified_date: 2025-05-27T16:16:14-04:00
+has_toc: no
+last_modified_date: 2025-07-08T15:46:14-04:00
 ---
 
 # {{ page.title }}

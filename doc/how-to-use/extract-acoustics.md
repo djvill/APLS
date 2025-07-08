@@ -4,7 +4,7 @@ contributors: [Dan Villarreal, Jack Rechsteiner]
 permalink: /doc/extract-acoustics
 parent: How to use APLS
 nav_order: 70
-last_modified_date: 2025-05-27T16:46:12-04:00
+last_modified_date: 2025-07-08T15:46:14-04:00
 ---
 
 # {{ page.title }}
@@ -59,7 +59,7 @@ The amount of context that will be added to your targeted times is also displaye
 
 After specifying your analysis parameters, clicking the _Process_ button will generate a copy of your uploaded `.csv` with Praat measurement values appended as new columns in your `.csv`.
 
-### Extracting formants measurements
+### Extracting formant measurements
 
 The "Formants" section lets you select if you want to extract the first formant (F1), second formant (F2), and/or third formant (F3) of your audio targets.
 These selections can be made by toggling the checkboxes on or off.

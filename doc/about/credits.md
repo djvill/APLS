@@ -3,7 +3,7 @@ title: Credits
 permalink: /doc/credits
 parent: About APLS
 nav_order: 10
-last_modified_date: 2025-06-05T17:38:12-04:00
+last_modified_date: 2025-07-08T15:46:12-04:00
 ---
 
 # {{ page.title }}
@@ -64,9 +64,11 @@ Further credits for LaBB-CAT can be found on APLS's [Credits page](https://apls.
 - Ian Thompson
 - Dan Villarreal
 
-### Transcribers[^transcribers]
+### Transcribers
 
-[^transcribers]: Includes everyone who _completed_ at least one transcription on their own. This is a subset of transcribers who _contributed_ to a transcription (i.e., the <span class="transcript-attr">transcribers</span> transcript attribute).
+{: .note}
+> This includes everyone who _completed_ at least one transcription on their own.
+> It is a subset of transcribers who _contributed_ to a transcription (i.e., the <span class="transcript-attr">transcribers</span> transcript attribute).
 
 - Maya Asher
 - DeLaina Billingsley

@@ -6,7 +6,7 @@ parent: How to use APLS
 has_children: yes
 has_toc: no
 nav_order: 20
-last_modified_date: 2025-07-08T15:45:25-04:00
+last_modified_date: 2025-07-08T15:46:15-04:00
 ---
 
 # {{ page.title }}
@@ -97,7 +97,7 @@ For example, here's the first few lines of `CB01interview3.eaf`:
 
 {% include screengrab.html src="transcript/body.png" %}
 
-Every line in the transcript corresponds to a conversational turn or continuous utterance in the audio recording. 
+Every line in the transcript corresponds to a conversational turn or continuous utterance in the audio recording (see [below](#turns-and-utterances))
 The participant who is speaking in a particular turn is shown in italic gray text above the turn.
 In the example above, the interviewer Barbara Johnstone is speaking in the first turn.
 If there's overlapping speech, participants' turns are shown side-by-side;
@@ -113,7 +113,7 @@ When you're reading the transcript, you'll also notice some bits of punctuation 
 - `___` for redactions
 
 {: .note}
-> Decisions about what counts as a pause, what is an incomplete word, and what should be redacted are made by trained transcribers in accordance with the [APLS transcription convention]({{ '/doc/transcription-convention' }}).
+> Decisions about where to place turn boundaries, what counts as a pause, what is an incomplete word, and what should be redacted are made by trained transcribers in accordance with the [APLS transcription convention]({{ '/doc/transcription-convention' }}).
 
 One thing you **won't** notice are periods for the end of sentences.
 Although we're used to breaking up written language into sentences, this is actually not that common in normal spontaneous speech.
@@ -205,7 +205,7 @@ If you ever need to figure out where an utterance begins or ends, you can use th
 > These layers are based on how transcribers chose to divide the original transcription files into lines.
 > While this is subject to guidelines from the [APLS transcription convention]({{ '/doc/transcription-convention#segmentation' | relative_url }}), in practice there's room for variation between transcribers.
 > When the transcription file is uploaded to APLS, the lines from the original transcript form the <span class="layer">utterance</span> layer.
-> Then, <span class="layer">turn</span>s are formed by combining adjacent <span class="layer">utterance</span>s from the same participant.
+> Then, <span class="layer">turn</span>s are formed by combining <span class="layer">utterance</span>s from the same participant that are adjacent (i.e., don't have a pause between them).
 
 Elsewhere in APLS, turns and utterances show up in [anchoring searches]({{ '/doc/anchoring-searches#scope' | relative_url }}), [exporting search results]({{ '/doc/export-data#exporting-data-from-the-search-results-page' | relative_url }}), and [phrase layers]({{ '/doc/layer-typology#scope' | relative_url }}).
 
@@ -227,9 +227,9 @@ Those are the most important things you can see in the tooltip.
 These tooltips also touch on some concepts that are covered later on this documentation page:
 
 - <span class="layer">frequency_from_celex</span> shows `[2]`, followed by two different counts, `1775 836`
-  - This means the word _individual_ has two [<span class="keyterm">peer</span>](#horizontal-and-vertical-peers) annotations on the <span class="keyterm">frequency_from_celex</span> layer. In this case, we can only see one of the two annotations in the transcript body (`1775`). This tells us these are [<span class="keyterm">vertical peers</span>](#horizontal-and-vertical-peers).
+  - This means the word _individual_ has two <span class="keyterm">peer</span> annotations on the <span class="keyterm">frequency_from_celex</span> layer. In this case, we can only see one of the two annotations in the transcript body (`1775`). This tells us these are <span class="keyterm">vertical peers</span> (see [below](#horizontal-and-vertical-peers)).
 - <span class="layer">segment</span> shows `I n d @ v I _ u @ l`
-  - The spaces in between these symbols are a hint that there are actually 10 individual annotations on this layer. That's because <span class="layer">segment</span> has a smaller [<span class="keyterm">scope</span>](#layer-scope).
+  - The spaces in between these symbols are a hint that there are actually 10 individual annotations on this layer. That's because <span class="layer">segment</span> has a smaller <span class="keyterm">scope</span> (see [below](#layer-scope)).
   - Compared to the annotation in the transcript body (`ɪndəvɪdʒuəl`), some of the symbols match (e.g., `n`, `v`, `u`) but others don't (e.g., `I` vs. `ɪ`, `_` vs. `dʒ`). This is because <span class="layer">segment</span>, as a <span class="keyterm">phonological layer</span>, uses the [DISC phonemic alphabet](#phonological-layers-and-disc).
 
 The next line in `CB01interview3.eaf` demonstrates one more type of information we can get from tooltips:
