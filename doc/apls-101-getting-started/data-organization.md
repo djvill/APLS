@@ -81,7 +81,7 @@ Some sections are split into multiple transcripts (e.g., `interview1`, `reading2
 
 Each participant and transcript has a set of **attributes** that describe metadata about the participant or transcript.
 For example, the participant `HD17` has <span class="participant-attr">gender</span> `Female` and <span class="participant-attr">year_of_birth</span> `1964`.
-The transcript `FH10pairs.eaf` has <span class="transcript-attr">duration</span> `188.61` and <span class="transcript-attr">recording_date</span> `September 26, 2023`.
+The transcript `FH10pairs.eaf` has <span class="transcript-attr">duration</span> `188.61` and <span class="transcript-attr">recording_date</span> `September 26, 2003`.
 
 ## Layers and annotations
 
