@@ -4,7 +4,7 @@ layout: default
 permalink: /files/custom-entries
 parent: Custom dictionary
 search_exclude: true
-last_modified_date: 2025-06-26T21:17:04-04:00
+last_modified_date: 2025-07-11T10:52:08-04:00
 ---
 
 # {{ page.title }}
@@ -343,6 +343,7 @@ These custom entries just fill in the gaps.
 - transitioned
 - transracial
 - unironically
+- untangling
 - uppity
 - webcam
 - webcams
