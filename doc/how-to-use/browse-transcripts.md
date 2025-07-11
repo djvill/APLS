@@ -4,7 +4,7 @@ contributors: [Dan Villarreal, Jack Rechsteiner]
 permalink: /doc/browse-transcripts
 parent: How to use APLS
 nav_order: 30
-last_modified_date: 2025-07-07T13:41:37-04:00
+last_modified_date: 2025-07-11T12:51:06-04:00
 ---
 
 # {{ page.title }} {#page-title}
@@ -35,14 +35,14 @@ The following image shows the top of the <span class="apls-page">Transcripts</sp
 
 {% include screengrab.html src="transcripts/overview.png" %}
 
-- The <span class="keyterm">transcript list</span> (highlighted in **red**{:.hl-1} above), which continues all the way down the page. This is where you can...
+- The <span class="keyterm">transcript list</span> (highlighted in **red**{:.hl-1} above) continues all the way down the page. This is where you can...
   - [Browse transcripts](#browsing-transcripts) available in APLS
   - [View transcript attributes](#viewing-transcript-attributes)
 - The <span class="keyterm">filters</span> (highlighted in **blue**{:.hl-2} above). This is where you can...
   - [Filter transcripts](#filtering-transcripts) according to their attributes
 - The <span class="keyterm">export menu</span> (highlighted in **green**{:.hl-3} above). The buttons each have their own function:
   - _Export Media_: [Export transcript audio files](#exporting-transcripts-and-audio-files)
-  - _Export Original_, _Export Formatted_: [Export transcripts](#exporting-transcripts-and-audio-files) in a variety of formats
+  - _Export Original_ and _Export Formatted_: [Export transcripts](#exporting-transcripts-and-audio-files) in a variety of formats
   - _Export Attributes_: [Export transcript attributes](#exporting-transcript-attributes) to CSV files
   - _List Participants_: [View participants](#viewing-participants-in-a-transcript) for selected transcripts
   - _Layered Search_: [Search transcripts](#searching-transcripts) with the [<span class="apls-page">Search</span> page]({{ '/doc/search' | relative_url }})
@@ -192,7 +192,7 @@ When you first load the <span class="apls-page">Transcripts</span> page, no filt
 As you can see, the page displays `Match count: {{ num_transcripts }}` above the filters.
 This count will decrease as you specify more filters.
 
-{% assign dur = site.attributes | find_exp: "item", "item.synced.attribute == 'duration'" %}
+{% assign dur = site.attributes | where_exp: "item", "item.synced.attribute == 'duration'" | first %}
 
 Each filter corresponds to a transcript attribute, listed by its [display title]({{ '/doc/attribute-typology#display-title' }}) (such as `Duration (sec)`).
 You can hover over the filter to see the attribute's [export name]({{ '/doc/attribute-typology#export-name' }}) (`transcript_duration`) and description (`{{ dur.synced.short_description }}`):
@@ -200,7 +200,7 @@ You can hover over the filter to see the attribute's [export name]({{ '/doc/attr
 {% include screengrab.html src="transcripts/filters-tooltip.png" %}
 
 To filter by an attribute, select at least one checkbox (for `Transcript type` and `Neighborhood`) or enter text into a textbox (for `Transcript name` and `Duration (sec)`).
-For example, you want to see all transcripts with <span class="transcript-attr">type</span> "interview", you can select the _interview_ checkbox under `Transcript type`:
+For example, if you want to see all transcripts with <span class="transcript-attr">type</span> "interview", you can select the _interview_ checkbox under `Transcript type`:
 
 {% include screengrab.html src="transcripts/filters-interview.png" %}
 
@@ -288,12 +288,15 @@ To include these attributes in your filter, do the following:
 
 1. Export attributes for all transcripts to a `.csv` file using _Export Attributes_ (see [above](#exporting-transcript-attributes)).
 1. Filter the `.csv` file using your favorite tool for managing spreadsheets (e.g., Excel, R).
-1. Depending on what you want to do with the filtered transcripts:
-   - **View transcript attributes**: Browse the filtered spreadsheet.
-   - **Export transcripts or audio**, **view participants**: Generate a regular expression that describes all filtered transcripts and paste it into the _Regular Expression_ box under `Transcript name`. Then you can use _Export Media_, _Export Original_, _Export Formatted_, or _List Participants_ like you normally would.
-     - In Excel: Use the following formula in any cell **not** in column A: `=TEXTJOIN("|",TRUE,A:A)`.
-     - In R: If your data frame is named `df`, use the following: `paste(df$transcript, collapse="|")`.
-   - **Search transcripts**: Upload the filtered `.csv` to the [_Transcripts_ tab]({{ '/doc/search-filters-and-options' | relative_url }}) on the <span class="apls-page">Search</span> page.
+1. Then, if you want to...
+   - ... **view transcript attributes**: Browse the filtered spreadsheet.
+   - ... **export transcripts or audio** or **view participants**:
+     1. Generate a regular expression that describes all filtered transcripts:
+        - In Excel: Use the following formula in any cell **not** in column A: `=TEXTJOIN("|",TRUE,A:A)`.
+        - In R: If your data frame is named `df`, use the following: `paste(df$transcript, collapse="|")`.
+     1. Paste it into the _Regular Expression_ box under `Transcript name`.
+     1. Then you can use _Export Media_, _Export Original_, _Export Formatted_, or _List Participants_ like you normally would.
+   - ... **search transcripts**: Upload the filtered `.csv` to the [_Transcripts_ tab]({{ '/doc/search-filters-and-options' | relative_url }}) on the <span class="apls-page">Search</span> page.
 
 {% comment %}
 <!-- This doesn't currently work in APLS (as of 0.3.1) because the logic for List Transcripts works differently from the Participants page (e.g., female-participants includes CB08, who's male). I'm commenting this section out till I can get it working. -->
@@ -364,7 +367,7 @@ Let's break down what we're looking at:
 > The attribute [typology]({{ '/doc/attribute-typology' | relative_url }}) and field guides provide descriptions of [transcript attributes]({{ '/doc/transcript-attributes' | relative_url }}) and [participant attributes]({{ '/doc/participant-attributes' | relative_url }}).
 > The [layer field guide]({{ '/doc/layer-field-guide' | relative_url }}) documentation page provides descriptions of all <span class="keyterm">layers</span> in APLS.
 
-This layer picker works similarly to the [one on the <span class="apls-page">Transcript</span> page]({{ '/doc/view-transcript#selecting-layers-to-display' }}), with a few differences:
+This layer picker works similarly to the [one on the <span class="apls-page">Transcript</span> page]({{ '/doc/view-transcript#selecting-layers-to-display' | relative_url }}), with a few differences:
 
 - Attributes can be selected in addition to layers
 - Unlike the <span class="apls-page">Transcript</span> page, <span class="layer">turn</span> and <span class="layer">utterance</span> can be selected, and <span class="layer">word</span> can be **de**selected
