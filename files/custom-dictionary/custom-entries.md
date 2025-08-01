@@ -4,7 +4,7 @@ layout: default
 permalink: /files/custom-entries
 parent: Custom dictionary
 search_exclude: true
-last_modified_date: 2025-07-18T11:13:50-04:00
+last_modified_date: 2025-08-01T10:43:56-04:00
 ---
 
 # {{ page.title }}
@@ -82,6 +82,7 @@ These custom entries just fill in the gaps.
 - Milliones
 - Millvale
 - Mon
+- Monaca
 - Monessen
 - Monongahela
 - Monroeville
@@ -164,6 +165,7 @@ These custom entries just fill in the gaps.
 - grinny
 - gumband
 - gumbands
+- Lavelle
 - N'
 - n'at
 - nebby
@@ -199,9 +201,11 @@ These custom entries just fill in the gaps.
 - C-SPAN
 - Chi-Chi
 - Cigna
+- Climo's
 - Cutler-Hammer
 - Damico's
 - Deroy
+- Dingbats
 - Donatelli's
 - Dowe's
 - Dunkin
@@ -209,6 +213,7 @@ These custom entries just fill in the gaps.
 - Foodland
 - Groceria
 - Gullifty's
+- Hartner's
 - Heppenstall
 - Hermanowski's
 - Highmark

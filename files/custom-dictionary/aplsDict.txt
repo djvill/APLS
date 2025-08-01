@@ -64,6 +64,7 @@ McNaugher
 Milliones
 Millvale
 Mon
+Monaca
 Monessen
 Monongahela
 Monroeville
@@ -146,6 +147,7 @@ grinnies
 grinny
 gumband
 gumbands
+Lavelle
 N'
 n'at
 nebby
@@ -181,9 +183,11 @@ Buncher
 C-SPAN
 Chi-Chi
 Cigna
+Climo's
 Cutler-Hammer
 Damico's
 Deroy
+Dingbats
 Donatelli's
 Dowe's
 Dunkin
@@ -191,6 +195,7 @@ Dunkin'
 Foodland
 Groceria
 Gullifty's
+Hartner's
 Heppenstall
 Hermanowski's
 Highmark
