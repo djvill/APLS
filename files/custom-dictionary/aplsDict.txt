@@ -23,7 +23,6 @@ Chalfant
 Crafton
 Crider's
 Cuyahoga
-De
 Deener
 Devilliers
 Dinwiddie
@@ -173,7 +172,6 @@ yinzers
 ## Company/brand names (local or otherwise)
 Allis-Chalmers
 Amiesite
-Ammon
 Applebee
 Applebee's
 Arby's

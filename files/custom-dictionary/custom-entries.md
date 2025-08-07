@@ -4,7 +4,7 @@ layout: default
 permalink: /files/custom-entries
 parent: Custom dictionary
 search_exclude: true
-last_modified_date: 2025-08-01T10:43:56-04:00
+last_modified_date:
 ---
 
 # {{ page.title }}
@@ -41,7 +41,6 @@ These custom entries just fill in the gaps.
 - Crafton
 - Crider's
 - Cuyahoga
-- De
 - Deener
 - Devilliers
 - Dinwiddie
@@ -191,7 +190,6 @@ These custom entries just fill in the gaps.
 ## Company/brand names (local or otherwise)
 - Allis-Chalmers
 - Amiesite
-- Ammon
 - Applebee
 - Applebee's
 - Arby's
