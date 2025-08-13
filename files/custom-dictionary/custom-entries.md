@@ -185,6 +185,7 @@ These custom entries just fill in the gaps.
 - yinz
 - yinzer
 - yinzers
+- youins
 {:.wrap .fb-10}
 
 ## Company/brand names (local or otherwise)
