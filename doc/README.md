@@ -25,8 +25,7 @@ APLS is (and will always be) **free to use**.
 {%- assign minutes = curr_version.duration | slice: 3, 5 | plus: 0 -%}
 {%- if minutes < 45 -%}{%- assign dur = hours | prepend: "over " -%}
 {%- else -%}{%- assign dur = hours | plus: 1 | prepend: "nearly " -%}{%- endif -%}
-APLS currently contains {{curr_version.transcripts}} sound files totaling {{dur}} hours of audio from {{curr_version.transcript_series.size}} interviewees.
-APLS is currently under construction; when complete, it will contain 270 sound files totaling 45 hours of audio from 40 interviewees.
+APLS contains {{curr_version.transcripts}} sound files totaling {{dur}} hours of audio from {{curr_version.transcript_series.size}} interviewees.
 {: .mb-1 }
 
 ## Demo: Measuring F1 and F2 for /aw/ in closed syllables {#demo}
