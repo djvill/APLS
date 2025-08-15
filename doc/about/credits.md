@@ -56,6 +56,10 @@ Further credits for LaBB-CAT can be found on APLS's [Credits page](https://apls.
 - Alejandro Ciuba
 - Dan Villarreal
 
+### Transcription quality control
+
+- Maya Asher
+
 ### New-transcriber trainers
 
 - Maya Asher
@@ -89,14 +93,20 @@ Further credits for LaBB-CAT can be found on APLS's [Credits page](https://apls.
 
 - Dan Villarreal
 
-### Documentation
+### Documentation writing
 
 - Dan Villarreal
 - Jack Rechsteiner
 
+### Documentation testing
+
+- Maya Asher
+- Jess Strauss
+
 ### Beta testing
 
 - Jack Rechsteiner
+- Joey Stanley
 
 ### Users who contributed annotations
 
