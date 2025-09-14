@@ -1,15 +1,15 @@
 ---
 synced:
-  short_description: Comments about speech created by original transcribers
   layer_id: 31
+  short_description: Comments about speech created by original transcribers
   alignment: sub-interval
   project: imported
   parent: transcript
   peers: yes
   vertical_peers: yes
   data_type: text
-  scope: span
   layer_manager: (none)
+  scope: span
   transcripts_exportable: yes
   matches_exportable: yes
   searchable: regex
@@ -17,8 +17,9 @@ synced:
   transcript_selectable: no
   export_includeCounts: yes
   export_includeAnchorSharing: no
+  color_hex: '#5f4497'
   extra: (none)
-last_sync_modified_date: 2025-01-11T16:50:28-0500
+last_sync_modified_date: 2025-09-13T22:23:08-0400
 notation:
   primary: English spelling
 inputs:
@@ -28,7 +29,7 @@ segment_dependent: no
 versions:
   first_appeared: 0.1.0
   last_modified: 0.1.0
-last_modified_date: 2025-06-16T14:12:07-04:00
+last_modified_date: 2025-09-13T22:24:45-04:00
 ---
 
 **Fill longer description here**

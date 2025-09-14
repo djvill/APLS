@@ -42,6 +42,7 @@ if (basename(getwd()) != "_layers") {
 suppressPackageStartupMessages(library(tidyverse))
 library(nzilbb.labbcat)
 library(yaml)
+library(V8)
 
 ##Authenticate
 lc <- "https://apls.pitt.edu/labbcat"
@@ -208,6 +209,32 @@ layers <- layers |>
            alignment != "sub-interval" ~ FALSE,
            peers ~ TRUE,
            .default=FALSE),
+         .before=extra)
+
+##Add layer color ()
+string_to_color <- function(x) {
+  library(V8)
+  ct <- v8()
+  ct$assign("x", x)
+  ct$eval("
+  // https://stackoverflow.com/a/16348977
+  stringToColour = (str) => {
+      var hash = 0;
+      for (var i = 0; i < str.length; i++) {
+          hash = str.charCodeAt(i) + ((hash << 4) - hash);
+      }
+      var colour = '#';
+      for (var i = 0; i < 3; i++) {
+          var value = (hash >> (i * 8)) & 0xFF;
+          colour += ('00' + value.toString(16)).substr(-2);
+      }
+      return colour;
+  }
+  colors = x.map(stringToColour);")
+  ct$get("colors")
+}
+layers <- layers |>
+  mutate(color_hex = if_else(id == "word", "#000000", string_to_color(id)),
          .before=extra)
 
 ##Optionally spoof alignments for turn/word/segment
@@ -435,6 +462,7 @@ blank_props_layers <- list(last_sync_modified_date = last_sync_modified_date,
                                               type = "layer, dictionary, algorithm, script, transcription, or other")),
                            versions = list(first_appeared = "Where layer first appeared",
                                            last_modified = "Where layer was last modified"),
+                           color = "Use _closest-colors.R with color_hex",
                            last_modified_date = "Handled by Git pre-commit hook")
 
 ##List of to-be-created YAML headers

@@ -1,16 +1,16 @@
 ---
 synced:
+  layer_id: 66
   short_description: Syllables in the word, including stress, derived from aligned
     segments
-  layer_id: 66
   alignment: sub-interval
   project: phonology
   parent: word
   peers: yes
   vertical_peers: no
   data_type: phonological
-  scope: word
   layer_manager: Unisyn
+  scope: word
   transcripts_exportable: yes
   matches_exportable: yes
   searchable: regex
@@ -18,8 +18,9 @@ synced:
   transcript_selectable: yes
   export_includeCounts: yes
   export_includeAnchorSharing: yes
+  color_hex: '#13c736'
   extra: (none)
-last_sync_modified_date: 2025-01-11T16:50:28-0500
+last_sync_modified_date: 2025-09-13T22:23:08-0400
 notation:
   primary: DISC
   additional: Stress markers
@@ -41,7 +42,7 @@ segment_dependent: yes
 versions:
   first_appeared: 0.1.0
   last_modified: 0.1.2
-last_modified_date: 2025-06-16T14:12:29-04:00
+last_modified_date: 2025-09-13T22:24:52-04:00
 ---
 
 **Fill longer description here**

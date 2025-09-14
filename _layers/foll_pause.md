@@ -1,15 +1,15 @@
 ---
 synced:
-  short_description: Duration of pause (in seconds) following the current word
   layer_id: 93
+  short_description: Duration of pause (in seconds) following the current word
   alignment: complete interval
   project: timing
   parent: word
   peers: no
   vertical_peers: no
   data_type: numeric
-  scope: word
   layer_manager: Python
+  scope: word
   transcripts_exportable: yes
   matches_exportable: yes
   searchable: min_max
@@ -17,8 +17,9 @@ synced:
   transcript_selectable: yes
   export_includeCounts: no
   export_includeAnchorSharing: no
+  color_hex: '#304552'
   extra: (none)
-last_sync_modified_date: 2025-01-11T16:50:28-0500
+last_sync_modified_date: 2025-09-13T22:23:08-0400
 notation:
   primary: Decimal
   missing: |
@@ -36,7 +37,7 @@ segment_dependent: yes
 versions:
   first_appeared: 0.1.2
   last_modified: 0.1.2
-last_modified_date: 2025-06-16T14:12:09-04:00
+last_modified_date: 2025-09-13T22:24:46-04:00
 ---
 
 **within-participant**

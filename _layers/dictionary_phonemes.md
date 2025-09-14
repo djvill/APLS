@@ -1,15 +1,15 @@
 ---
 synced:
-  short_description: All possible phonemic representations of the word
   layer_id: 65
+  short_description: All possible phonemic representations of the word
   alignment: complete interval
   project: phonology
   parent: word
   peers: yes
   vertical_peers: yes
   data_type: phonological
-  scope: word
   layer_manager: Unisyn
+  scope: word
   transcripts_exportable: yes
   matches_exportable: yes
   searchable: regex
@@ -17,8 +17,9 @@ synced:
   transcript_selectable: yes
   export_includeCounts: yes
   export_includeAnchorSharing: no
+  color_hex: '#c6e51a'
   extra: (none)
-last_sync_modified_date: 2025-01-11T16:50:28-0500
+last_sync_modified_date: 2025-09-13T22:23:08-0400
 notation:
   primary: DISC
   missing: No dictionary entry found
@@ -39,7 +40,7 @@ segment_dependent: no
 versions:
   first_appeared: 0.1.0
   last_updated: 0.1.2
-last_modified_date: 2025-06-16T14:12:08-04:00
+last_modified_date: 2025-09-13T22:24:46-04:00
 ---
 
 This layer contains all possible phonemic representations of the word.

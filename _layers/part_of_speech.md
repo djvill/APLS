@@ -1,15 +1,15 @@
 ---
 synced:
-  short_description: The word's part(s) of speech
   layer_id: 89
+  short_description: The word's part(s) of speech
   alignment: sub-interval
   project: syntax
   parent: word
   peers: yes
   vertical_peers: no
   data_type: text
-  scope: word
   layer_manager: StanfordPosTagger
+  scope: word
   transcripts_exportable: yes
   matches_exportable: yes
   searchable: regex
@@ -17,8 +17,9 @@ synced:
   transcript_selectable: yes
   export_includeCounts: yes
   export_includeAnchorSharing: yes
+  color_hex: '#7efe6d'
   extra: (none)
-last_sync_modified_date: 2025-01-11T16:50:28-0500
+last_sync_modified_date: 2025-09-13T22:23:08-0400
 notation:
   primary: Treebank part-of-speech tags
   missing: Word is redacted or an incomplete word
@@ -31,7 +32,7 @@ segment_dependent: no
 versions:
   first_appeared: 0.1.1
   last_updated: 0.1.2
-last_modified_date: 2025-06-16T14:12:22-04:00
+last_modified_date: 2025-09-13T22:24:50-04:00
 ---
 
 

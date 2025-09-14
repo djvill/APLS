@@ -9,8 +9,8 @@ synced:
   peers: yes
   vertical_peers: no
   data_type: text
-  scope: word
   layer_manager: TranscriberManager
+  scope: word
   transcripts_exportable: yes
   matches_exportable: yes
   searchable: regex
@@ -18,8 +18,9 @@ synced:
   transcript_selectable: yes
   export_includeCounts: no
   export_includeAnchorSharing: no
+  color_hex: '#000000'
   extra: (none)
-last_sync_modified_date: 2025-03-24T12:46:32-0400
+last_sync_modified_date: 2025-09-13T22:23:08-0400
 notation:
   primary: English spelling
   additional:
@@ -33,7 +34,7 @@ segment_dependent: no
 versions:
   first_appeared: 0.1.0
   last_modified: 0.1.0
-last_modified_date: 2025-06-16T14:12:32-04:00
+last_modified_date: 2025-09-13T22:24:53-04:00
 ---
 
 **Fill longer description here**

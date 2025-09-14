@@ -18,8 +18,9 @@ synced:
   transcript_selectable: yes
   export_includeCounts: yes
   export_includeAnchorSharing: yes
+  color_hex: '#3793da'
   extra: (none)
-last_sync_modified_date: 2025-09-13T21:37:06-0400
+last_sync_modified_date: 2025-09-13T22:23:08-0400
 notation:
   primary: English spelling
   missing: Speech does not contain personally identifying information
@@ -30,7 +31,7 @@ segment_dependent: no
 versions:
   first_appeared: 0.1.0
   last_modified: 0.1.0
-last_modified_date: 2025-09-13T22:01:34-04:00
+last_modified_date: 2025-09-13T22:24:51-04:00
 ---
 
 https://djvill.github.io/APLS/doc/transcription-convention#redaction

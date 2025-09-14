@@ -8,8 +8,8 @@ synced:
   peers: yes
   vertical_peers: no
   data_type: phonological
-  scope: segment
   layer_manager: (none)
+  scope: segment
   transcripts_exportable: yes
   matches_exportable: yes
   searchable: regex
@@ -17,8 +17,9 @@ synced:
   transcript_selectable: yes
   export_includeCounts: yes
   export_includeAnchorSharing: yes
+  color_hex: '#d3acfb'
   extra: (none)
-last_sync_modified_date: 2025-03-24T12:46:32-0400
+last_sync_modified_date: 2025-09-13T22:23:08-0400
 notation:
   primary: DISC
   missing: Force-alignment failed for this utterance (line)
@@ -33,7 +34,7 @@ segment_dependent: yes
 versions:
   first_appeared: 0.1.0
   last_modified: 0.1.0
-last_modified_date: 2025-06-16T14:12:27-04:00
+last_modified_date: 2025-09-13T22:24:51-04:00
 ---
 
 **Fill longer description here**

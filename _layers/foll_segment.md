@@ -1,15 +1,15 @@
 ---
 synced:
-  short_description: Segment or pause following the current segment
   layer_id: 67
+  short_description: Segment or pause following the current segment
   alignment: complete interval
   project: phonology
   parent: segment
   peers: no
   vertical_peers: no
   data_type: phonological
-  scope: segment
   layer_manager: Python
+  scope: segment
   transcripts_exportable: yes
   matches_exportable: yes
   searchable: regex
@@ -17,8 +17,9 @@ synced:
   transcript_selectable: yes
   export_includeCounts: no
   export_includeAnchorSharing: no
+  color_hex: '#8d7b7b'
   extra: (none)
-last_sync_modified_date: 2025-01-11T16:50:28-0500
+last_sync_modified_date: 2025-09-13T22:23:08-0400
 notation:
   primary: DISC
   additional: DISC pause
@@ -35,7 +36,7 @@ segment_dependent: yes
 versions:
   first_appeared: 0.1.0
   last_modified: 0.1.2
-last_modified_date: 2025-06-16T14:12:10-04:00
+last_modified_date: 2025-09-13T22:24:46-04:00
 ---
 
 **Fill longer description here**

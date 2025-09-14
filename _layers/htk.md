@@ -1,15 +1,15 @@
 ---
 synced:
-  short_description: HTK alignment time
   layer_id: 38
+  short_description: HTK alignment time
   alignment: sub-interval
   project: temp
   parent: turn
   peers: yes
   vertical_peers: no
   data_type: text
-  scope: phrase
   layer_manager: HTK
+  scope: phrase
   transcripts_exportable: yes
   matches_exportable: yes
   searchable: regex
@@ -17,6 +17,7 @@ synced:
   transcript_selectable: yes
   export_includeCounts: yes
   export_includeAnchorSharing: yes
+  color_hex: '#9f6200'
   extra: |
     #Wed Dec 01 16:47:47 EST 2021
     PronunciationLayerId=40
@@ -35,7 +36,7 @@ synced:
     HVitePruningThreshold=250
     RightPattern=Barbara Johnstone|Trista Pennington|.*
     OtherGroupBy=Not Aligned
-last_sync_modified_date: 2025-01-11T16:50:28-0500
+last_sync_modified_date: 2025-09-13T22:23:08-0400
 notation:
   primary: Time/date
   missing: Force-alignment failed for this utterance (line)
@@ -48,7 +49,7 @@ segment_dependent: yes
 versions:
   first_appeared: 0.1.0
   last_modified: 0.1.0
-last_modified_date: 2025-06-16T14:12:13-04:00
+last_modified_date: 2025-09-13T22:24:47-04:00
 ---
 
 **Fill longer description here**
