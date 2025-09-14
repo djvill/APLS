@@ -1,25 +1,25 @@
 ---
 synced:
+  layer_id: 78
   short_description: Whether or not there is more than one speaker speaking in this
     turn
-  layer_id: 78
-  alignment: complete interval
+  alignment: sub-interval
   project: timing
   parent: turn
-  peers: no
+  peers: yes
   vertical_peers: no
   data_type: text
-  scope: phrase
   layer_manager: Python
+  scope: phrase
   transcripts_exportable: yes
   matches_exportable: yes
   searchable: regex
-  search_targetable: 'no'
+  search_targetable: phrase
   transcript_selectable: yes
-  export_includeCounts: no
-  export_includeAnchorSharing: no
+  export_includeCounts: yes
+  export_includeAnchorSharing: yes
   extra: (none)
-last_sync_modified_date: 2025-02-05T16:03:26-0500
+last_sync_modified_date: 2025-09-13T21:37:06-0400
 notation:
   primary: Boolean
 inputs:
@@ -29,7 +29,7 @@ segment_dependent: no
 versions:
   first_appeared: 0.1.2
   last_modified: 0.1.2
-last_modified_date: 2025-06-16T14:12:20-04:00
+last_modified_date: 2025-09-13T22:01:33-04:00
 ---
 
 **Fill longer description here**
