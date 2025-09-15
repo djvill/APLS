@@ -14,12 +14,12 @@ synced:
   matches_exportable: yes
   searchable: regex
   search_targetable: span
-  transcript_selectable: no
+  transcript_selectable: yes
   export_includeCounts: yes
   export_includeAnchorSharing: no
   color_hex: '#ba135b'
   extra: (none)
-last_sync_modified_date: 2025-09-13T22:23:08-0400
+last_sync_modified_date: 2025-09-15T09:03:43-0400
 notation:
   primary: English spelling
 inputs:
@@ -29,7 +29,7 @@ segment_dependent: no
 versions:
   first_appeared: 0.1.0
   last_modified: 0.1.0
-last_modified_date: 2025-09-13T22:24:48-04:00
+last_modified_date: 2025-09-15T09:09:42-04:00
 ---
 
 **Fill longer description here**

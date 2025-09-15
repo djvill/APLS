@@ -188,9 +188,8 @@ layers <- layers |>
            .default="no"),
          
          ##Whether layer can be selected/deselected in 
-         ##  https://apls.pitt.edu/labbcat/transcript (FALSE means that it's
-         ##  displayed through other means)
-         transcript_selectable = !(id %in% c("comment", "noise")),
+         ##  https://apls.pitt.edu/labbcat/transcript
+         transcript_selectable = !(id %in% c("turn", "utterance", "word")),
          
          ##Do count boxes show up in matches > CSV Export?
          ##  https://github.com/nzilbb/labbcat-server/blob/9ee4cb3/user-interface/src/main/angular/projects/labbcat-common/src/lib/layer-checkboxes/layer-checkboxes.component.html#L187-L190
@@ -234,8 +233,11 @@ string_to_color <- function(x) {
   ct$get("colors")
 }
 layers <- layers |>
-  mutate(color_hex = if_else(id == "word", "#000000", string_to_color(id)),
-         .before=extra)
+  mutate(color_hex = case_when(
+    id == "word" ~ "#000000",
+    !transcript_selectable ~ "(none)",
+    TRUE ~ string_to_color(id)),
+    .before=extra)
 
 ##Optionally spoof alignments for turn/word/segment
 if (spoof_alignment) {
