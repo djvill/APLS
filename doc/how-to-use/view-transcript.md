@@ -6,7 +6,7 @@ parent: How to use APLS
 has_children: yes
 has_toc: no
 nav_order: 20
-last_modified_date: 2025-07-08T15:46:15-04:00
+last_modified_date: 2025-09-15T10:23:48-04:00
 ---
 
 # {{ page.title }}
@@ -173,14 +173,14 @@ In APLS, everything you see in the transcript body is data: <span class="keyterm
 (These [data structures]({{ '/doc/data-organization' | relative_url }}) are what make APLS so powerful---it turns audio recordings into structured linguistic data, allowing us to search, export, and measure the entire corpus in a fraction of the time.)
 Even when you think you're just [reading the transcript](#reading-the-transcript), you're actually viewing layer data!
 
-When the <span class="apls-page">Transcript</span> page is first loaded, two layers are displayed in the transcript body: <span class="layer">word</span> (colored black) and <span class="layer">noise</span> (colored magenta).
+When the <span class="apls-page">Transcript</span> page is first loaded, two layers are displayed in the transcript body: <span class="layer">word</span> (colored {% include layer-color.html layer="word" %}) and <span class="layer">noise</span> (colored {% include layer-color.html layer="noise" %}).
 Each turn consists of at least one annotation on either of these layers.
 For example, some of the following turns consist of only <span class="layer">word</span> annotations, one consists of only a <span class="layer">noise</span> annotation, and some consist of both.
 
 {% include screengrab.html src="transcript/word-noise.png" %}
 
 You can customize which layers are displayed using the [layer picker](#selecting-layers-to-display), discussed below.
-For example, here are the first few lines of `CB01interview3.eaf` again, now with the following layers selected: <span class="layer">speech_rate</span> (teal), <span class="layer">frequency_from_celex</span> (chocolate), <span class="layer">word</span> (black), and <span class="layer">segment</span> (lavender).
+For example, here are the first few lines of `CB01interview3.eaf` again, now with the following layers selected: <span class="layer">speech_rate</span> ({% include layer-color.html layer="speech_rate" %}), <span class="layer">frequency_from_celex</span> ({% include layer-color.html layer="frequency_from_celex" %}), <span class="layer">word</span> ({% include layer-color.html layer="word" %}), and <span class="layer">segment</span> ({% include layer-color.html layer="segment" %}).
 
 {% include screengrab.html src="transcript/multiple-layers.png" %}
 
@@ -272,7 +272,7 @@ If you want to understand why an annotation is missing, consult the [layer field
 {: .no_toc}
 
 There's a whole category of layers like <span class="layer">speech_rate</span> where you can expect missing annotations if the <span class="layer">segment</span> layer is missing: [segment-dependent]({{ '/doc/layer-typology#segment-dependency' | relative_url }}){:.keyterm} layers.
-For example, here's the first 3 lines of `CB01interview3.eaf` again, this time with <span class="layer">phonemes</span> (colored tan), <span class="layer">stress</span> (salmon), <span class="layer">foll_pause</span> (slate gray), <span class="layer">segment</span> (black), and <span class="layer">segment</span> (lavender):
+For example, here's the first 3 lines of `CB01interview3.eaf` again, this time with <span class="layer">phonemes</span> (colored {% include layer-color.html layer="phonemes" %}), <span class="layer">stress</span> ({% include layer-color.html layer="stress" %}), <span class="layer">foll_pause</span> ({% include layer-color.html layer="foll_pause" %}), <span class="layer">word</span> ({% include layer-color.html layer="word" %}), and <span class="layer">segment</span> ({% include layer-color.html layer="segment" %}):
 
 {% include screengrab.html src="transcript/segment-dependency.png" %}
 <!-- N.B. Update this screengrab once I merge commit ead12ef into apls branch -->
@@ -294,10 +294,10 @@ While **horizontal peers can be seen in the transcript body, vertical peers cann
 Both are visible in a [tooltip](#annotation-tooltips), an [exported transcript](#exporting-the-transcript) (in file types like [Praat] TextGrids), or [search results]({{ '/doc/export-data' | relative_url }}).
 For example, here's the first line of `CB01interview3.eaf`, this time with the following layers:
 
-- <span class="layer">dictionary_phonemes</span> (colored yellow green): allows vertical peers
-- <span class="layer">syllables</span> (kelly green): allows horizontal peers
-- <span class="layer">phonemes</span> (tan): allows neither
-- <span class="layer">word</span> (black): allows neither
+- <span class="layer">dictionary_phonemes</span> (colored {% include layer-color.html layer="dictionary_phonemes" %}): allows vertical peers
+- <span class="layer">syllables</span> ({% include layer-color.html layer="syllables" %}): allows horizontal peers
+- <span class="layer">phonemes</span> ({% include layer-color.html layer="phonemes" %}): allows neither
+- <span class="layer">word</span> ({% include layer-color.html layer="word" %}): allows neither
 
 {: .under-the-hood}
 > These layers are all part of the process that APLS uses to find <span class="layer">segment</span> annotations, using only the original transcription and the audio file as inputs:
@@ -402,9 +402,9 @@ Here's that same view of `CB01interview3.eaf` after clicking _segment_ in the la
 
 {% include screengrab.html src="transcript/layer-picker-segment.png" %}
 
-As you can see, not only did <span class="layer">segment</span> annotations get filled into the transcript body, but the label `segment (4143)` also changed color from black to lavender in the layer picker, matching the annotation color.
+As you can see, not only did <span class="layer">segment</span> annotations get filled into the transcript body, but the label `segment (4143)` also changed color from black to {% include layer-color.html layer="segment" %} in the layer picker, matching the annotation color.
 In addition, the order of the layers in the transcript body matches the order in the layer picker.
-If you click _segment_ again to deselect it, the <span class="layer">segment</span> annotations disappear but `segment (4143)` remains colored lavender:
+If you click _segment_ again to deselect it, the <span class="layer">segment</span> annotations disappear but `segment (4143)` remains colored {% include layer-color.html layer="segment" %}:
 
 {% include screengrab.html src="transcript/layer-picker-no-segment.png" %}
 
@@ -526,7 +526,7 @@ By comparison, `HD06interview1.eaf`, one of the longest transcripts in APLS (ove
 
 Annotation counts can give us clues about the structure of the data and how layers relate to one another.
 For example, `HD06interview1.eaf` has one fewer <span class="layer">orthography</span> annotation than <span class="layer">word</span> annotations, unlike `CB01interview3.eaf`.
-That's because the second word of the interview is redacted---Interviewer HD says the speaker's name (as the cornflower-blue <span class="layer">redaction</span> annotation shows).
+That's because the second word of the interview is redacted---Interviewer HD says the speaker's name (as the {% include layer-color.html layer="redaction" %} <span class="layer">redaction</span> annotation shows).
 Otherwise, every <span class="layer">word</span> annotation has a corresponding <span class="layer">orthography</span> annotation.
 
 Like the layer picker's [icons](#icons), there's a _Hide annotation counts_ setting, which APLS remembers if you navigate to other <span class="apls-page">Transcript</span> pages in the same browser tab:
@@ -785,7 +785,7 @@ In particular, if a layer allows [vertical peers](#horizontal-and-vertical-peers
 So far, we've only been looking at Praat TextGrids.
 Other file formats affect not only which layers are exported, but how they are displayed.
 Some transcript formats also show additional layers from the [original uploaded transcription]({{ '/doc/transcription' | relative_url }}): <span class="layer">noise</span>, <span class="layer">comment</span>, and <span class="layer">pronounce</span>.
-For example, here's an <span class="layer">utterance</span> from `CB01interview3.eaf` that includes all three of those layers, with <span class="layer">comment</span> in purple, <span class="layer">noise</span> in magenta, and <span class="layer">pronounce</span> in periwinkle:
+For example, here's an <span class="layer">utterance</span> from `CB01interview3.eaf` that includes all three of those layers, with <span class="layer">comment</span> in {% include layer-color.html layer="comment" %}, <span class="layer">noise</span> in {% include layer-color.html layer="noise" %}, and <span class="layer">pronounce</span> in {% include layer-color.html layer="pronounce" %}:
 
 {% include screengrab.html src="transcript/imported-layers.png" %}
 
