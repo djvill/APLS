@@ -31,7 +31,8 @@ segment_dependent: no
 versions:
   first_appeared: 0.1.0
   last_modified: 0.1.0
-last_modified_date: 2025-09-13T22:24:51-04:00
+color: cornflower blue
+last_modified_date: 2025-09-15T10:23:19-04:00
 ---
 
 https://djvill.github.io/APLS/doc/transcription-convention#redaction

@@ -31,7 +31,8 @@ segment_dependent: no
 versions:
   first_appeared: 0.1.0
   last_modified: 0.1.0
-last_modified_date: 2025-09-13T22:24:47-04:00
+color: dark orchid
+last_modified_date: 2025-09-15T09:59:46-04:00
 ---
 
 Frequency counts do not include transcripts in the categories "reading" or "pairs", since these would inflate frequency counts for words in those tasks.

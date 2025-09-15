@@ -40,7 +40,8 @@ segment_dependent: no
 versions:
   first_appeared: 0.1.0
   last_updated: 0.1.2
-last_modified_date: 2025-09-13T22:24:46-04:00
+color: yellow green
+last_modified_date: 2025-09-15T09:59:45-04:00
 ---
 
 This layer contains all possible phonemic representations of the word.
