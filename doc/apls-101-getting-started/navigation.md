@@ -4,7 +4,7 @@ contributors: [Dan Villarreal, Jack Rechsteiner]
 permalink: /doc/navigation
 parent: APLS 101/Getting started
 nav_order: 50
-last_modified_date: 2025-10-15T01:44:06-04:00
+last_modified_date: 2025-10-15T17:48:41-04:00
 ---
 
 # {{ page.title }}
@@ -75,10 +75,8 @@ Unique to <span class="apls-page">Home</span> page are links to some useful APLS
 
 From left to right, the available links are:
 
-{% comment %}
 - *APLS 101*
-  - This takes you to the [APLS 101/Getting started]({{ '/doc/apls-101-getting-started' | relative_url }}) section of the documentation pages.
-{% endcomment %}
+  - This takes you to the [APLS 101/Getting started]({{ '/doc/apls-101-getting-started' | relative_url }}) section of the documentation site.
 - *Browse transcripts*
   - This loads the <span class="apls-page">Transcripts</span> page, which is explained on the [Browsing transcripts]({{ '/doc/browse-transcripts' | relative_url }}) documentation page.
 - *Browse participants*
