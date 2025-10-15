@@ -3,7 +3,7 @@ title: Credits
 permalink: /doc/credits
 parent: About APLS
 nav_order: 10
-last_modified_date: 2025-07-08T15:46:12-04:00
+last_modified_date: 2025-10-15T01:45:57-04:00
 ---
 
 # {{ page.title }}
@@ -92,6 +92,10 @@ Further credits for LaBB-CAT can be found on APLS's [Credits page](https://apls.
 ### User interface customization
 
 - Dan Villarreal
+
+### Logo design
+
+- Alexus Brown
 
 ### Documentation writing
 
