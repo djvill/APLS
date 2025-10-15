@@ -7,6 +7,8 @@ constants:
     hl_5: '#ff7f00' #.hl-5 (orange)
   offset_x:
     window_left: 0
+    top_menu_left: 550
+    top_menu_nohelp_left: 565
     transcript_content_left: 190
     transcripts_content_left: 189
     search_tabs_left: 185
@@ -24,6 +26,8 @@ constants:
     excel_formula_bar_top: 120
   width:
     window: 1920
+    top_menu: 875
+    top_menu_nohelp: 840
     transcript_content: 1510
     transcript_cb013_first_utterance: 580
     transcript_cb013_first_utterance_tooltip: 905
@@ -31,6 +35,7 @@ constants:
     search_tabs: 1520
   height:
     window: 1008
+    top_menu: 30
     transcript_body_layer: 30
     transcript_body_turn_container: 30
     transcript_attributes: 560
@@ -75,16 +80,15 @@ screengrabs:
       # offset_x: 985
       # offset_y: 200
 
-- screengrab: no-page/login.png
+- screengrab: login/login.png
   instructions:
     - Unpin browser extensions
-    - Make browser take up half-screen
-    - Load https://apls.pitt.edu/labbcat (don't log in)
+    - Load https://apls.pitt.edu/labbcat/login
     - Save
-  offset_x: offset_x$window_left
-  offset_y: offset_y$window_top
-  width: 760
-  height: 515
+  offset_x: 515
+  offset_y: offset_y$page_top
+  width: 900
+  height: 410
 
 - screengrab: no-page/noload-redirect.png
   instructions:
@@ -98,15 +102,17 @@ screengrabs:
   width: 970
   height: 660
 
-- screengrab: security/password-reset.png
+- screengrab: password/password.png
   instructions:
-    - In an *incognito* window, log in as test-student
-    - Load https://apls.pitt.edu/labbcat/security
+    - Log in as test-student
+    - Set browser zoom to 100%
+    - Load https://apls.pitt.edu/labbcat/password
+    - Enter fake passwords into boxes such that the Save button shows up
     - Save
-  offset_x: 605
+  offset_x: offset_x$top_menu_nohelp_left
   offset_y: offset_y$page_top
-  width: 760
-  height: 275
+  width: width$top_menu_nohelp
+  height: 295
 
 - screengrab: search/matrix.png
   instructions:
@@ -1501,30 +1507,31 @@ screengrabs:
 - screengrab: home/header-menu.png
   instructions: See home/overview.png
   in_path: home/overview.png
-  offset_x: 560
+  offset_x: offset_x$top_menu_left
   offset_y: offset_y$page_top
-  width: 850
-  height: 30
+  width: width$top_menu
+  height: height$top_menu
 
 - screengrab: home/footer-menu.png
   instructions: See home/overview.png
   in_path: home/overview.png
   offset_x: 320
-  offset_y: 805
+  offset_y: 895
   width: 1265
   height: 110
 
 - screengrab: home/links-stats.png
   instructions: See home/overview.png
   in_path: home/overview.png
-  offset_x: 235
-  offset_y: 300
-  width: 1440
-  height: 230
+  offset_x: 210
+  offset_y: 310
+  width: 1490
+  height: 220
 
 - screengrab: license/license.png
   instructions:
     - In an *incognito* window, log in as test-student
-    - Using Chrome's DevTools, capture a full-size screenshot
+    - Scroll to bottom of license page
+    - Using Chrome's DevTools (popped out to new window), capture a full-size screenshot
     - "Save as `license/full.png`"
     - In Paint, manually crop and add ellipsis

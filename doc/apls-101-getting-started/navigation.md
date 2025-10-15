@@ -4,7 +4,7 @@ contributors: [Dan Villarreal, Jack Rechsteiner]
 permalink: /doc/navigation
 parent: APLS 101/Getting started
 nav_order: 50
-last_modified_date: 2025-06-11T13:21:52-04:00
+last_modified_date: 2025-10-15T01:44:06-04:00
 ---
 
 # {{ page.title }}
@@ -38,7 +38,8 @@ It is displayed at the top of every APLS webpage.
 
 From left to right, the links in the <span class="keyterm">header menu</span> allow you to navigate to:
 
-- The user security page to change your password, like you did during your [initial login]({{ '/doc/sign-up#initial-login' | relative_url }}).
+- Sign out, using the {% include labbcat-icon.html src="account-logout.svg" %} icon.
+- The [<span class="apls-page">Change password</span> page]({{ '/doc/sign-up#changing-your-password' | relative_url }}).
   - This link will display the username you are currently logged in with.
 - The Home page
 - The [<span class="apls-page">Search</span> page]({{ '/doc/search' | relative_url }})
@@ -74,8 +75,10 @@ Unique to <span class="apls-page">Home</span> page are links to some useful APLS
 
 From left to right, the available links are:
 
+{% comment %}
 - *APLS 101*
   - This takes you to the [APLS 101/Getting started]({{ '/doc/apls-101-getting-started' | relative_url }}) section of the documentation pages.
+{% endcomment %}
 - *Browse transcripts*
   - This loads the <span class="apls-page">Transcripts</span> page, which is explained on the [Browsing transcripts]({{ '/doc/browse-transcripts' | relative_url }}) documentation page.
 - *Browse participants*
