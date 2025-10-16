@@ -11,7 +11,7 @@ constants:
     top_menu_nohelp_left: 565
     transcript_content_left: 190
     transcripts_content_left: 189
-    search_tabs_left: 185
+    search_tabs_left: 360
   offset_y:
     window_top: 0
     address_bar_top: 60
@@ -19,7 +19,7 @@ constants:
     top_menu_bottom: 160
     page_title_top: 195
     transcript_header_top: 315
-    transcript_body_top: 380
+    transcript_body_top: 385
     transcripts_list_top: 460
     transcripts_filters_top: 275
     transcripts_filters_bottom: 410
@@ -31,13 +31,13 @@ constants:
     transcript_content: 1510
     transcript_cb013_first_utterance: 580
     transcript_cb013_first_utterance_tooltip: 905
-    transcripts_content: 1510
-    search_tabs: 1520
+    transcripts_content: 1515
+    search_tabs: 1170
   height:
     window: 1008
     top_menu: 30
     transcript_body_layer: 30
-    transcript_body_turn_container: 30
+    transcript_body_turn_container: 40
     transcript_attributes: 560
     transcript_layer_picker_plus_1: 470
     transcript_export_plus_1: 580
@@ -568,6 +568,19 @@ screengrabs:
   width: width$transcripts_content
   height: 572 # title, header, controls, & 7 matches
 
+- screengrab: transcripts/participant-filter-cb01.png
+  instructions:
+    - Log in as test-student
+    - Set browser zoom to 100%
+    - Load https://apls.pitt.edu/labbcat/transcript?transcript=CB01interview3.eaf
+    - Select Participants
+    - Click List Transcripts next to CB01
+    - Save
+  offset_x: offset_x$transcripts_content_left
+  offset_y: offset_y$page_title_top
+  width: width$transcripts_content
+  height: 630 # title, header, controls, all 7 matches, pagination
+
 - screengrab: transcripts/participant-filter-interview.png
   instructions:
     - Log in as test-student
@@ -624,11 +637,10 @@ screengrabs:
     - Log in as test-student
     - Set browser zoom to 100%
     - Load https://apls.pitt.edu/labbcat/transcript?transcript=CB01interview3.eaf
-    - "Hide watermark: In Chrome console, select `html` element and deselect `background-image`"
     - Click Attributes tab
     - Save
   offset_x: offset_x$transcript_content_left
-  offset_y: 310
+  offset_y: offset_y$transcript_header_top
   width: width$transcript_content
   height: height$transcript_attributes
 - screengrab: transcript/attributes-tooltip.png
@@ -636,12 +648,11 @@ screengrabs:
     - Log in as test-student
     - Set browser zoom to 100%
     - Load https://apls.pitt.edu/labbcat/transcript?transcript=CB01interview3.eaf
-    - "Hide watermark: In Chrome console, select `html` element and deselect `background-image`"
     - Click Attributes tab
     - Put cursor over the corner of d in neighborhood
     - Save (use the Snipping Tool's delay option)
   offset_x: offset_x$transcript_content_left
-  offset_y: 310
+  offset_y: offset_y$transcript_header_top
   width: width$transcript_content
   height: height$transcript_attributes
   overlay: 
@@ -654,12 +665,11 @@ screengrabs:
     - Log in as test-student
     - Set browser zoom to 100%
     - Load https://apls.pitt.edu/labbcat/transcript?transcript=CB01interview3.eaf
-    - "Hide watermark: In Chrome console, select `html` element and deselect `background-image`"
     - Click Attributes tab
-    - Deselect Hide attribute prefixes
+    - Select Show attribute prefixes
     - Save
   offset_x: offset_x$transcript_content_left
-  offset_y: 310
+  offset_y: offset_y$transcript_header_top
   width: width$transcript_content
   height: height$transcript_attributes
 
@@ -668,12 +678,11 @@ screengrabs:
     - Log in as test-student
     - Set browser zoom to 100%
     - Load https://apls.pitt.edu/labbcat/transcript?transcript=CB01interview3.eaf
-    - "Hide watermark: In Chrome console, select `html` element and deselect `background-image`"
     - Click Attributes tab
-    - Select Hide attribute names
+    - Deselect Show attribute names
     - Save
   offset_x: offset_x$transcript_content_left
-  offset_y: 310
+  offset_y: offset_y$transcript_header_top
   width: width$transcript_content
   height: height$transcript_attributes
 
@@ -938,7 +947,6 @@ screengrabs:
     - Log in as test-student
     - Set browser zoom to 100%
     - Load https://apls.pitt.edu/labbcat/transcript?transcript=CB01interview3.eaf
-    - "Hide watermark: In Chrome console, select `html` element and deselect `background-image`"
     - Select dictionary_phonemes, phonemes, syllables
     - Save
   offset_x: offset_x$transcript_content_left
@@ -960,8 +968,8 @@ screengrabs:
   height: height$transcript_body_turn_container + 4*height$transcript_body_layer
   overlay:
     - image: _arrow.png
-      offset_x: 799
-      offset_y: 418
+      offset_x: 800
+      offset_y: 430
 
 - screengrab: transcript/peers-tooltip-vert-2.png
   instructions:
@@ -977,8 +985,8 @@ screengrabs:
   height: height$transcript_body_turn_container + 4*height$transcript_body_layer
   overlay:
     - image: _arrow.png
-      offset_x: 705
-      offset_y: 418
+      offset_x: 708
+      offset_y: 430
 
 - screengrab: !transcript/peers-tooltip-vert.png
   instructions:
@@ -990,7 +998,7 @@ screengrabs:
     - Set browser zoom to 100%
     - Load https://apls.pitt.edu/labbcat/transcript?transcript=CB01interview3.eaf
     - Select dictionary_phonemes, phonemes, syllables
-    - Hover just right of n in dictionary_phonemes an
+    - Hover just right of syllables 0oʊ 'keɪ
     - Save (use the Snipping Tool's delay option)
   offset_x: offset_x$transcript_content_left
   offset_y: offset_y$transcript_body_top
@@ -998,8 +1006,8 @@ screengrabs:
   height: height$transcript_body_turn_container + 4*height$transcript_body_layer
   overlay:
     - image: _arrow.png
-      offset_x: 340
-      offset_y: 448
+      offset_x: 337
+      offset_y: 490
 
 - screengrab: transcript/peers-tooltip-horiz-2.png
   instructions:
@@ -1007,7 +1015,7 @@ screengrabs:
     - Set browser zoom to 100%
     - Load https://apls.pitt.edu/labbcat/transcript?transcript=CB01interview3.eaf
     - Select dictionary_phonemes, phonemes, syllables
-    - Hover just right of u in dictionary_phonemes you
+    - Hover just right of syllables 'dʒʌst
     - Save (use the Snipping Tool's delay option)
   offset_x: offset_x$transcript_content_left
   offset_y: offset_y$transcript_body_top
@@ -1015,8 +1023,8 @@ screengrabs:
   height: height$transcript_body_turn_container + 4*height$transcript_body_layer
   overlay:
     - image: _arrow.png
-      offset_x: 401
-      offset_y: 448
+      offset_x: 400
+      offset_y: 485
 
 - screengrab: !transcript/peers-tooltip-horiz.png
   instructions:
@@ -1049,7 +1057,6 @@ screengrabs:
     - Log in as test-student
     - Set browser zoom to 100%
     - Load https://apls.pitt.edu/labbcat/transcript?transcript=CB01interview3.eaf
-    - "Hide watermark: In Chrome console, select `html` element and deselect `background-image`"
     - Click the Layers tab
     - Save
   offset_x: offset_x$transcript_content_left
@@ -1065,49 +1072,40 @@ screengrabs:
   width: width$transcript_content
   height: height$transcript_layer_picker_plus_1
   drawing:
-    # checkbox (noise)
+    # checkbox (comment)
     - func: rect
-      xleft: 556
-      ytop: 423
-      xright: 583
-      ybottom: 449
+      xleft: 540
+      ytop: 432
+      xright: 568
+      ybottom: 460
       border: highlight_colors$hl_1
       lty: dashed
       lwd: 3
     # projects column
     - func: rect
       xleft: 350
-      ytop: 387
-      xright: 532
+      ytop: 395
+      xright: 520
       ybottom: 633
       border: highlight_colors$hl_2
       lty: dashed
       lwd: 3
     # layer icons (orthography)
     - func: rect
-      xleft: 948
-      ytop: 426
-      xright: 1006
-      ybottom: 457
+      xleft: 975
+      ytop: 432
+      xright: 1034
+      ybottom: 463
       border: highlight_colors$hl_3
       lty: dashed
       lwd: 3
     # annotation count (word)
     - func: rect
-      xleft: 1059
-      ytop: 459
-      xright: 1127
-      ybottom: 487
+      xleft: 1160
+      ytop: 469
+      xright: 1229
+      ybottom: 497
       border: highlight_colors$hl_4
-      lty: dashed
-      lwd: 3
-    # IPA/DISC toggle (segment)
-    - func: rect
-      xleft: 1485
-      ytop: 426
-      xright: 1519
-      ybottom: 453
-      border: highlight_colors$hl_5
       lty: dashed
       lwd: 3
 
@@ -1116,7 +1114,6 @@ screengrabs:
     - Log in as test-student
     - Set browser zoom to 100%
     - Load https://apls.pitt.edu/labbcat/transcript?transcript=CB01interview3.eaf
-    - "Hide watermark: In Chrome console, select `html` element and deselect `background-image`"
     - Click the Layers tab
     - Select segment
     - Save
@@ -1125,12 +1122,29 @@ screengrabs:
   width: width$transcript_content
   height: height$transcript_layer_picker_plus_1 + 1*height$transcript_body_layer
 
+- screengrab: transcript/layer-picker-segment-layout.png
+  instructions: See transcript/layer-picker-segment.png
+  in_path: transcript/layer-picker-segment.png
+  offset_x: offset_x$transcript_content_left
+  offset_y: offset_y$transcript_header_top
+  width: width$transcript_content
+  height: height$transcript_layer_picker_plus_1 + 1*height$transcript_body_layer
+  drawing:
+    # IPA/DISC toggle (segment)
+    - func: rect
+      xleft: 1499
+      ytop: 425
+      xright: 1545
+      ybottom: 472
+      border: highlight_colors$hl_5
+      lty: dashed
+      lwd: 3
+
 - screengrab: transcript/layer-picker-segment-disc.png
   instructions:
     - Log in as test-student
     - Set browser zoom to 100%
     - Load https://apls.pitt.edu/labbcat/transcript?transcript=CB01interview3.eaf
-    - "Hide watermark: In Chrome console, select `html` element and deselect `background-image`"
     - Click the Layers tab
     - Select segment
     - Display segment in DISC
@@ -1145,7 +1159,6 @@ screengrabs:
     - Log in as test-student
     - Set browser zoom to 100%
     - Load https://apls.pitt.edu/labbcat/transcript?transcript=CB01interview3.eaf
-    - "Hide watermark: In Chrome console, select `html` element and deselect `background-image`"
     - Click the Layers tab
     - Select segment
     - Display segment in DISC
@@ -1155,7 +1168,7 @@ screengrabs:
   offset_x: offset_x$transcript_content_left
   offset_y: offset_y$transcript_header_top
   width: width$transcript_content
-  height: height$transcript_layer_picker_plus_1 + 2*height$transcript_body_layer
+  height: height$transcript_layer_picker_plus_1 + 2*height$transcript_body_layer + 10
 
 - screengrab: transcript/segment-tooltip.png
   instructions: See transcript/tooltips.png
@@ -1228,16 +1241,16 @@ screengrabs:
   height: height$transcript_layer_picker_plus_1
   overlay:
     - image: _help.png
-      offset_x: 805
-      offset_y: 481
+      offset_x: 836
+      offset_y: 455
 
 - screengrab: transcript/layer-picker-segment-icons.png
   instructions: See transcript/layer-picker.png
   in_path: transcript/layer-picker.png
-  offset_x: 1240
-  offset_y: 425
-  width: 280
-  height: 30
+  offset_x: 1265
+  offset_y: 430
+  width: 255
+  height: 35
 
 - screengrab: transcript/layer-picker-icon-tooltip.png
   instructions:
@@ -1247,14 +1260,14 @@ screengrabs:
     - Click the Layers tab
     - Hover just under the ʒ next to segment
     - Save (use the Snipping Tool's delay option)
-  offset_x: 1240
+  offset_x: 1265
   offset_y: 425
-  width: 280
-  height: 80
+  width: 285
+  height: 95
   overlay:
     - image: _help.png
-      offset_x: 1279
-      offset_y: 452
+      offset_x: 1315
+      offset_y: 460
 
 - screengrab: transcript/layer-picker-hide-icons.png
   instructions:
@@ -1262,7 +1275,7 @@ screengrabs:
     - Set browser zoom to 100%
     - Load https://apls.pitt.edu/labbcat/transcript?transcript=CB01interview3.eaf
     - Click the Layers tab
-    - Click Hide layer icons
+    - Unclick Show layer icons
     - Save
   offset_x: offset_x$transcript_content_left
   offset_y: offset_y$transcript_header_top
@@ -1274,25 +1287,22 @@ screengrabs:
     - Log in as test-student
     - Set browser zoom to 100%
     - Load https://apls.pitt.edu/labbcat/transcript?transcript=HD06interview1.eaf
-    - "Hide watermark: In Chrome console, select `html` element and deselect `background-image`"
     - Click the Layers tab
     - Select imported
     - Select redaction
-    - Deselect imported
     - Save
   offset_x: offset_x$transcript_content_left
   offset_y: offset_y$top_menu_bottom
   width: width$transcript_content
-  height: 825
+  height: 820
 
 - screengrab: transcript/layer-picker-hide-annotation-counts.png
   instructions:
     - Log in as test-student
     - Set browser zoom to 100%
     - Load https://apls.pitt.edu/labbcat/transcript?transcript=CB01interview3.eaf
-    - "Hide watermark: In Chrome console, select `html` element and deselect `background-image`"
     - Click the Layers tab
-    - Select Hide annotation counts
+    - Deselect Show annotation counts
     - Save
   offset_x: offset_x$transcript_content_left
   offset_y: offset_y$transcript_header_top
@@ -1385,7 +1395,7 @@ screengrabs:
   offset_x: offset_x$transcript_content_left
   offset_y: offset_y$transcript_header_top
   width: width$transcript_content
-  height: 245
+  height: 250
 
 - screengrab: transcript/ctrl-f.png
   instructions:

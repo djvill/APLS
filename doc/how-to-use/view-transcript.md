@@ -6,7 +6,7 @@ parent: How to use APLS
 has_children: yes
 has_toc: no
 nav_order: 20
-last_modified_date: 2025-09-15T10:23:48-04:00
+last_modified_date: 2025-10-16T14:22:25-04:00
 ---
 
 # {{ page.title }}
@@ -85,7 +85,7 @@ The word menu is where you can...
 - Create [permalinks](#creating-permalinks) for individual lines or words in the transcript
 - [Play](#listening-to-the-transcript) individual lines of the transcript
 - [Download](#downloading-audio) audio for individual lines
-- [Open](#opening-utterances-in-praat) individual lines in [Praat] (if you've install the Praat integration)
+- [Open](#opening-utterances-in-praat) individual lines in [Praat] (if you've installed the Praat integration)
 
 <!-- Maybe also "what you can't do": view precise timings, view every single annotation (if vertical peers), search (no ctrl-f) -->
 
@@ -275,7 +275,6 @@ There's a whole category of layers like <span class="layer">speech_rate</span> w
 For example, here's the first 3 lines of `CB01interview3.eaf` again, this time with <span class="layer">phonemes</span> (colored {% include layer-color.html layer="phonemes" %}), <span class="layer">stress</span> ({% include layer-color.html layer="stress" %}), <span class="layer">foll_pause</span> ({% include layer-color.html layer="foll_pause" %}), <span class="layer">word</span> ({% include layer-color.html layer="word" %}), and <span class="layer">segment</span> ({% include layer-color.html layer="segment" %}):
 
 {% include screengrab.html src="transcript/segment-dependency.png" %}
-<!-- N.B. Update this screengrab once I merge commit ead12ef into apls branch -->
 
 Again, the middle line doesn't have <span class="layer">segment</span> annotations because of the overlapping speech.
 As a result, the remaining layers---all of which (except <span class="layer">word</span>) are segment-dependent---don't have annotations on this line either.
@@ -288,15 +287,15 @@ On the other hand, some layers allow for <span class="keyterm">peers</span>, whe
 There are two types of peers:
 
 - <span class="keyterm">Horizontal peers</span>: Multiple annotations **divide the timespan** of their scope.
+  - Denoted by {% include labbcat-icon.html src="alignment-2.svg" %} in the [layer picker](#selecting-layers-to-display)
 - <span class="keyterm">Vertical peers</span>: Multiple annotations occupy an **identical timespan**.
+  - Denoted by {% include labbcat-icon.html src="vertical-peers.svg" %} in the [layer picker](#selecting-layers-to-display)
 
-While **horizontal peers can be seen in the transcript body, vertical peers cannot**. 
-Both are visible in a [tooltip](#annotation-tooltips), an [exported transcript](#exporting-the-transcript) (in file types like [Praat] TextGrids), or [search results]({{ '/doc/export-data' | relative_url }}).
 For example, here's the first line of `CB01interview3.eaf`, this time with the following layers:
 
 - <span class="layer">dictionary_phonemes</span> (colored {% include layer-color.html layer="dictionary_phonemes" %}): allows vertical peers
-- <span class="layer">syllables</span> ({% include layer-color.html layer="syllables" %}): allows horizontal peers
 - <span class="layer">phonemes</span> ({% include layer-color.html layer="phonemes" %}): allows neither
+- <span class="layer">syllables</span> ({% include layer-color.html layer="syllables" %}): allows horizontal peers
 - <span class="layer">word</span> ({% include layer-color.html layer="word" %}): allows neither
 
 {: .under-the-hood}
@@ -315,23 +314,24 @@ For example, here's the first line of `CB01interview3.eaf`, this time with the f
 > 1. (Other [segment-dependent layers](#segment-dependent-layers))
 
 {% include screengrab.html src="transcript/peers.png" %}
-<!-- N.B. Update this screengrab once I merge commit ead12ef into apls branch -->
 
 As you can see, some words' <span class="layer">syllables</span> labels have spaces in them (for example, `0oʊ ˈkeɪ` for the word _okay_).
 This indicates horizontal peers dividing the <span class="layer">word</span>'s timespan.
 By contrast, there are no spaces on the <span class="layer">dictionary_phonemes</span> or <span class="layer">phonemes</span> layer, since these layers don't allow horizontal peers.
+You can also hover over a word to bring up a [tooltip](#annotation-tooltips):
 
-It's not obvious from a glance that <span class="layer">dictionary_phonemes</span> allows vertical peers.
-It's also not obvious that _a_, _as_, and _an_ have vertical peers for <span class="layer">dictionary_phonemes</span>, but none of the other words.
-To find this out, you can hover over the word's <span class="layer">dictionary_phonemes</span> label for a [tooltip](#annotation-tooltips).
-The tooltip for _an_ includes `[2]` followed by two separate labels (`{z` and `@n`), while the tooltip for _you_ includes only one label (`ju`):
+{% include screengrab.html src="transcript/peers-tooltip-horiz.png" %}
+
+As you can see, the tooltip for _okay_ includes `[2]` followed by two separate annotations (`05 'k1`), while the tooltip for _just_ includes only one label (`'_Vst`).
+
+Vertical peers are harder to see at a glance than horizontal peers.
+There aren't visual cues that <span class="layer">dictionary_phonemes</span> allows vertical peers, or that _a_, _as_, and _an_ have vertical peers for <span class="layer">dictionary_phonemes</span>, but none of the other words.
+To find this out, you can hover over the word's <span class="layer">dictionary_phonemes</span> annotation, which makes vertical peers pop up above the annotation (if any for that word) and also shows a [tooltip](#annotation-tooltips):
 
 {% include screengrab.html src="transcript/peers-tooltip-vert.png" %}
 
-The tooltip looks similar for horizontal peers.
-For example, _okay_ has two <span class="layer">syllables</span> annotations, and _just_ has one:
-
-{% include screengrab.html src="transcript/peers-tooltip-horiz.png" %}
+As you can see, hovering over `æn` causes `ən` to pop up, but hovering over `ju` doesn't pop anything up.
+This indicates that _an_ has two <span class="layer">dictionary_phonemes</span> annotations (`æn` and `ən`), but _you_ has just one (`ju`).
 
 <!-- Subsection here? Or move below? -->
 
@@ -358,7 +358,6 @@ The transcript body displays phonological annotations using the [International P
 For example, the first word of `CB01interview3.eaf` (_okay_) has a <span class="layer">phonemes</span> annotation that is displayed as `oʊkeɪ`:
 
 {% include screengrab.html src="transcript/phonemes.png" %}
-<!-- N.B. Update this screengrab once I merge commit ead12ef into apls branch -->
 
 However, APLS stores these annotations internally in the <span class="keyterm">DISC phonemic alphabet</span>, not in IPA.
 DISC creates a one-to-one mapping between sounds and symbols like the IPA, but **unlike** the IPA, DISC only uses symbols that appear on a standard [QWERTY keyboard](https://en.wikipedia.org/wiki/QWERTY).
@@ -392,6 +391,11 @@ Let's break down what we're looking at:
 - <span class="keyterm">Projects</span> (highlighted in **blue**{:.hl-2}) make more layer checkboxes [appear](#projects).
 - Layer <span class="keyterm">icons</span> (one highlighted in **green**{:.hl-3}) indicate [layer properties](#icons).
 - <span class="keyterm">Annotation counts</span> (one highlighted in **purple**{:.hl-4}) indicate the [number of annotations](#annotation-counts) on that layer in that transcript.
+
+If you select a phonological layer like <span class="layer">segment</span>, the icon {% include labbcat-icon.html src="interpreted.svg" %}{:.bordered-icon} pops up to the right of its checkbox:
+
+{% include screengrab.html src="transcript/layer-picker-segment-layout.png" %}
+
 - The <span class="keyterm">IPA/DISC toggle</span> (highlighted in **orange**{:.hl-5}) affects how annotations are [displayed](#displaying-phonological-layers-in-disc) on phonological layers.
 
 
@@ -402,9 +406,14 @@ Here's that same view of `CB01interview3.eaf` after clicking _segment_ in the la
 
 {% include screengrab.html src="transcript/layer-picker-segment.png" %}
 
-As you can see, not only did <span class="layer">segment</span> annotations get filled into the transcript body, but the label `segment (4143)` also changed color from black to {% include layer-color.html layer="segment" %} in the layer picker, matching the annotation color.
-In addition, the order of the layers in the transcript body matches the order in the layer picker.
-If you click _segment_ again to deselect it, the <span class="layer">segment</span> annotations disappear but `segment (4143)` remains colored {% include layer-color.html layer="segment" %}:
+A few things have happened here:
+
+- The transcript body now includes <span class="layer">segment</span> annotations, colored {% include layer-color.html layer="segment" %}
+- In the layer picker, `segment (4143)` is now colored {% include layer-color.html layer="segment" %}, matching the annotations in the transcript body
+- The [IPA/DISC toggle](#displaying-phonological-layers-in-disc) now appears to the right of `segment (4143)`
+  - This only appears for phonological layers like <span class="layer">segment</span>
+
+If you click _segment_ again to deselect it, the <span class="layer">segment</span> annotations and the IPA/DISC toggle disappear but `segment (4143)` remains colored {% include layer-color.html layer="segment" %}:
 
 {% include screengrab.html src="transcript/layer-picker-no-segment.png" %}
 
@@ -414,6 +423,11 @@ We'll see something similar below when we discuss [empty layers](#empty-layers).
 {: .note }
 > Although the <span class="layer">noise</span> layer is also pre-selected when you load the <span class="apls-page">Transcript</span> page, it can be turned off.
 > Since some utterances consist of [just <span class="layer">noise</span> annotations](#everything-you-see-is-data), <span class="layer">noise</span> is pre-selected so those utterances don't look empty.
+
+{% comment %}
+<!-- Demo this with multiple layers -->
+In addition, the order of the layers in the transcript body matches the order in the layer picker.
+{% endcomment %}
 
 
 ### Projects
@@ -501,7 +515,7 @@ If you forget what the icons mean, you can hover over them for a tooltip:
 
 {% include screengrab.html src="transcript/layer-picker-icon-tooltip.png" %}
 
-Finally, if you find the layer icons visually distracting, you can click _Hide layer icons_ to make them disappear.
+Finally, if you find the layer icons visually distracting, you can deselect _Show layer icons_ to make them disappear.
 APLS will remember this setting if you navigate to other pages with layer pickers in the same browser tab.
 
 {% include screengrab.html src="transcript/layer-picker-hide-icons.png" %}
@@ -529,7 +543,8 @@ For example, `HD06interview1.eaf` has one fewer <span class="layer">orthography<
 That's because the second word of the interview is redacted---Interviewer HD says the speaker's name (as the {% include layer-color.html layer="redaction" %} <span class="layer">redaction</span> annotation shows).
 Otherwise, every <span class="layer">word</span> annotation has a corresponding <span class="layer">orthography</span> annotation.
 
-Like the layer picker's [icons](#icons), there's a _Hide annotation counts_ setting, which APLS remembers if you navigate to other <span class="apls-page">Transcript</span> pages in the same browser tab:
+Like the layer picker's [icons](#icons), there's a _Show annotation counts_ setting, which APLS remembers if you navigate to other <span class="apls-page">Transcript</span> pages in the same browser tab.
+You can deselect _Show annotation counts_ if you find them visually distracting:
 
 {% include screengrab.html src="transcript/layer-picker-hide-annotation-counts.png" %}
 
@@ -562,17 +577,18 @@ Phonological layers like <span class="layer">segment</span> are displayed with I
 {% include screengrab.html src="transcript/layer-picker-segment.png" %}
 
 However, as mentioned [above](#phonological-layers-and-disc), APLS stores these annotations internally in the DISC phonemic alphabet.
-You can choose to display these annotations in DISC instead by clicking {% include labbcat-icon.html src="interpreted.svg" %} (the IPA/DISC toggle) to the right of the layer name:
+You can choose to display these annotations in DISC instead by clicking {% include labbcat-icon.html src="interpreted.svg" %}{:.bordered-icon} (the IPA/DISC toggle):
 
 {% include screengrab.html src="transcript/layer-picker-segment-disc.png" %}
 
-As you can see, the IPA/DISC toggle also changes appearance to {% include labbcat-icon.html src="interpreted.svg" %}{:style="opacity:33;"}.
 To change back to IPA, simply click the IPA/DISC toggle again.
+
+{: .note}
+> The IPA/DISC toggle only appears when the layer is selected, and only for phonological layers.
 
 You can choose different settings for different phonological layers:
 
 {% include screengrab.html src="transcript/layer-picker-segment-disc-phonemes.png" %}
-<!-- N.B. Update this screengrab once I merge commit ead12ef into apls branch -->
 
 {: .note}
 > Don't forget: You can also view an annotation's DISC representation in its [tooltip](#annotation-tooltips):
@@ -624,11 +640,11 @@ This is because no AI tools were used to transcribe `CB01interview3.eaf`.
 > To export transcript attributes to a CSV file, use the [_Export Attributes_ menu on the <span class="apls-page">Transcripts</span> page]({{ '/doc/browse-transcripts#export-attributes' | relative_url }}).
 
 The two checkboxes at the bottom of this tab control how the left-hand column is displayed.
-If you want to see attributes' full [export names]({{ '/doc/attribute-typology#export-name' | relative_url }}), deselect _Hide attribute prefixes_:
+If you want to see attributes' full [export names]({{ '/doc/attribute-typology#export-name' | relative_url }}), select _Show attribute prefixes_:
 
 {% include screengrab.html src="transcript/attributes-prefixes.png" %}
 
-If you're finding the attribute names visually distracting, select _Hide attribute names_:
+If you're finding the attribute names visually distracting, deselect _Show attribute names_:
 
 {% include screengrab.html src="transcript/attributes-hide-names.png" %}
 
@@ -652,17 +668,17 @@ The buttons link to other APLS pages:
 
 For example, here's what it looks like if you click _List Transcripts_ for `CB01`:
 
-{% include screengrab.html src="transcripts/participant-filter.png" %}
+{% include screengrab.html src="transcripts/participant-filter-cb01.png" %}
 
 
 ## Searching the transcript/participants
 
 Like the _Participants_ tab, the _Search_ tab provides shortcuts to a different APLS page: the [<span class="apls-page">Search</span> page]({{ '/doc/search' | relative_url }}).
-The buttons pre-fill transcript or participant [search filters]({{ '/doc/search-filters-and-options' | relative_url }}) so you can quickly search for linguistic patterns in an individual transcript, the sociolinguistic interview (that is, the transcript's <span class="transcript-attr">episode</span>), or all utterances from the transcript's participants (in all transcripts where they appear).
+The buttons pre-fill transcript or participant [search filters]({{ '/doc/search-filters-and-options' | relative_url }}) so you can quickly search for linguistic patterns in an individual transcript, the transcript's <span class="transcript-attr">episode</span> (sociolinguistic interview), or all utterances from a participant (in all transcripts where they appear).
 
 {% include screengrab.html src="transcript/search.png" %}
 
-For example, here's what it looks like if you click _CB01_ next to `Search transcript series`:
+For example, here's what it looks like if you click _CB01_ next to `Search episode`:
 
 {% include screengrab.html src="search/episode-filter.png" %}
 

@@ -78,3 +78,10 @@ img.screengrab {
 .labbcat-icon {
   height: 1rem;
 }
+//Transcript interpreted/raw selector
+.bordered-icon {
+  background: #CCCCCC;
+  padding: 3px;
+  height: 23px;
+  border: 2px solid $pitt-gold;
+}
