@@ -22,12 +22,15 @@
 		padding-bottom: .125rem;
   }
 }
-.try-it, .try-it-title {
+p, blockquote {
+&.try-it, &.try-it-title {
+  background: rgba($try-it-bg-color, 0.2);
+  border-left-color: $try-it-title-color;
 	summary {
-		color: $green-300;
+		color: $try-it-title-color;
 	}
   &.no-collapse > p:first-child {
-		color: $green-300;
+		color: $try-it-title-color;
   }
   
   //https://www.siegemedia.com/contrast-ratio#%23bbbebd-on-rgba%2865%2C214%2C147%29
@@ -35,21 +38,30 @@
     background-color: #bbbebd;
   }
 }
-.under-the-hood {
+}
+p, blockquote {
+&.under-the-hood {
+  background: rgba($under-the-hood-bg-color, 0.2);
+  border-left-color: $under-the-hood-title-color;
 	summary {
-		color: $blue-300;
+		color: $under-the-hood-title-color;
 	}
   
   &.no-collapse > p:first-child {
-		color: $blue-300;
+		color: $under-the-hood-title-color;
   }
 }
-.note {
+}
+p, blockquote {
+&.note {
+  background: rgba($note-bg-color, 0.2);
+  border-left-color: $note-title-color;
 	summary {
-		color: $yellow-300;
+		color: $note-title-color;
 	}
   
   &.no-collapse > p:first-child {
-		color: $yellow-300;
+		color: $note-title-color;
   }
+}
 }

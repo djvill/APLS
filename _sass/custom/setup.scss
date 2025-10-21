@@ -31,6 +31,14 @@ $code-link-underline-color: $pitt-blue;
 $code-link-hover-color: $pitt-gold;
 $external-link-svg: url('/APLS/assets/img/ext-link-pittblue.svg');
 
+//Callout colors
+$try-it-bg-color: $green-000;
+$try-it-title-color: $green-300;
+$under-the-hood-bg-color: $blue-000;
+$under-the-hood-title-color: $blue-300;
+$note-bg-color: $yellow-000;
+$note-title-color: $yellow-300;
+
 //Other colors
 $list-marker-color: $pitt-gray;
 $example-bg-color: null; //To help red/green example text better stand out in dark mode
