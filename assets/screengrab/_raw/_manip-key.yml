@@ -529,26 +529,26 @@ screengrabs:
     - "`window.scrollTo(0,100);`"
     - Click "Export Formatted"
     - Save
-  offset_x: offset_x$transcripts_content_left
+  offset_x: 165
   offset_y: 260
   width: width$transcripts_content
-  height: 725
+  height: 760
   drawing:
       # layer picker
     - func: rect
-      xleft: offset_x$transcripts_content_left
-      ytop: 308
-      xright: offset_x$transcripts_content_left + width$transcripts_content - 3
-      ybottom: 725 + 260 - 3
+      xleft: 170
+      ytop: 310
+      xright: 1660
+      ybottom: 1018
       border: highlight_colors$hl_1
       lty: dashed
       lwd: 5
       # format picker
     - func: rect
-      xleft: 685
-      ytop: 267
-      xright: 968
-      ybottom: 297
+      xleft: 663
+      ytop: 251
+      xright: 930
+      ybottom: 285
       border: highlight_colors$hl_2
       lty: dashed
       lwd: 5

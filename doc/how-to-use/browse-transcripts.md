@@ -4,7 +4,7 @@ contributors: [Dan Villarreal, Jack Rechsteiner]
 permalink: /doc/browse-transcripts
 parent: How to use APLS
 nav_order: 30
-last_modified_date: 2025-10-22T14:59:22-04:00
+last_modified_date: 2025-10-22T17:06:56-04:00
 ---
 
 # {{ page.title }} {#page-title}
@@ -350,7 +350,7 @@ The most straightforward export options are *Export Media* and *Export Original*
 
 ### *Export Formatted*
 
-The *Export Formatted* option allows you to download <span class="keyterm">attribute</span> <span class="keyterm">layer</span> data from transcripts in a variety of file types.
+The *Export Formatted* option allows you to download <span class="keyterm">attribute</span> and <span class="keyterm">layer</span> data from transcripts in a variety of file types.
 Clicking on _Export Formatted_ once brings up options;
 clicking on _Export Formatted_ again exports the file.
 Here's what the options look like:
@@ -374,7 +374,7 @@ This layer picker works similarly to the [one on the <span class="apls-page">Tra
 - There are no projects, so all attributes and layers are displayed
 - The attributes and layers don't change color when selected
 - There are no annotation counts or IPA/DISC toggles
-- There's a _Show attribute prefixes_ checkbox (similar to [<span class="apls-page">Transcript attributes</span> pages](#transcript-attributes-pages)), deselected by default to save space
+- There's a _Show attribute prefixes_ checkbox (similar to [<span class="apls-page">Transcript attributes</span> pages](#transcript-attributes-pages))
 - The _Show layer icons_ checkbox is deselected by default to save space
 
 
