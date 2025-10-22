@@ -5,7 +5,7 @@ permalink: /doc/praat-integration
 parent: Viewing a transcript
 grand_parent: How to use APLS
 nav_order: 10
-last_modified_date: 2025-06-20T11:13:19-04:00
+last_modified_date: 2025-10-21T23:26:22-04:00
 ---
 
 # {{ page.title }}
@@ -29,7 +29,7 @@ If your media player is displaying a small Praat logo (as shown below), this ind
 
 {% include screengrab.html src="transcript/no-praat-player.png" %}
 
-Once the Praat integration is set up, the media player will read `Praat integration 3.0`:
+Once the Praat integration is set up, the media player will read `Praat integration 3.3`:
 
 {% include screengrab.html src="transcript/player.png" %}
 

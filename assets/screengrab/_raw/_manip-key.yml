@@ -807,7 +807,7 @@ screengrabs:
   offset_x: offset_x$window_left
   offset_y: offset_y$page_top
   width: width$window
-  height: 520
+  height: 550
   drawing:
       # arrows
     - func: rect
@@ -1438,8 +1438,6 @@ screengrabs:
     - Log in as test-student
     - Set browser zoom to 100%
     - Load https://apls.pitt.edu/labbcat/transcript?transcript=CB01interview3.eaf
-    - "Hide watermark: In Chrome console, select `html` element and deselect `background-image`"
-    - Click the Layers tab
     - Select imported
     - Save
   offset_x: offset_x$transcript_content_left
