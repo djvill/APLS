@@ -6,7 +6,7 @@ parent: How to use APLS
 has_children: yes
 has_toc: no
 nav_order: 50
-last_modified_date: 2025-05-27T16:46:13-04:00
+last_modified_date: 2025-10-22T16:37:02-04:00
 ---
 
 # {{ page.title }}
@@ -54,23 +54,33 @@ I have two notes that I *think* are possible ideas for the search gallery that w
 these could also go on the "Searching complex patterns" page but that already has a lot of try-its
 -->
 
-### Layout
+### Page layout
 
-<!-- 
-this is one section in particular that will need to be updated with the new search page UI
--->
+The following image shows the <span class="apls-page">Search</span> page when you first load it:
 
-There are five main sections of the <span class="apls-page">Search</span> page:
-1. [Participants and transcripts filters]({{ '/doc/search-filters-and-options' | relative_url }})
-1. [Search options]({{ '/doc/search-filters-and-options#search-options' | relative_url }})
-1. [Layer picker]({{ '/doc/search-other-layers' | relative_url }})
-1. [Pattern input fields]({{ '/doc/your-first-search' | relative_url }})
-1. [Search progress bar]({{ '/doc/your-first-search#search-results' | relative_url }})
+{% include screengrab.html src="search/overview.png" %}
 
-Only the first four sections are displayed when you first load the <span class="apls-page">Search</span> page, as shown in the screengrab below.
+- The <span class="keyterm">search matrix</span> (highlighted in **red**{:.hl-1} above). This is where you can search for...
+  - single-word patterns, either by [orthography]({{ '/doc/your-first-search' | relative_url }}) or [other linguistic features]({{ '/doc/search-other-layers' | relative_url }})
+  - [individual speech sounds]({{ '/doc/search-segments' | relative_url }})
+  - patterns across [multiple words and/or linguistic features]({{ '/doc/search-complex-patterns' | relative_url }})
+- The <span class="keyterm">tabs</span> (highlighted in **blue**{:.hl-2} above). This is where you can...
+  - [Filter searches by specific participants and transcripts]({{ '/doc/search-filters-and-options' | relative_url }})
+  - Configure your search with different [search options]({{ '/doc/search-filters-and-options' | relative_url }})
 
-{% include screengrab.html src="search/page-layout1.png" %}
+Once you enter a pattern into the search matrix and click _Search_, a <span class="keyterm">progress bar</span> pops up (highlighted in **green**{:.hl-3} below):
 
-The progress bar only pops up once you actually click _Search_, like in the screengrab below.
+{% include screengrab.html src="search/overview-progress.png" %}
 
-{% include screengrab.html src="search/page-layout2.png" %}
+
+The search matrix itself has two parts:
+
+{% include screengrab.html src="search/matrix-layout.png" %}
+
+- The <span class="keyterm">layer picker</span> (highlighted in **purple**{:.hl-4} above).
+  - This is where you choose layers to search.
+- The <span class="keyterm">pattern input field(s)</span> (highlighted in **orange**{:.hl-5} above).
+  - This is where you specify patterns to search.
+  - More fields appear when you...
+    - [select multiple layers]({{ '/doc/search-complex-patterns#searching-multiple-layers' | relative_url }}) in the layer picker, and/or
+    - widen the search to [multiple words]({{ '/doc/search-complex-patterns#searching-multiple-words' | relative_url }}).
