@@ -11,6 +11,7 @@ constants:
     top_menu_nohelp_left: 565
     transcript_content_left: 190
     transcripts_content_left: 189
+    participants_content_left: 25
     search_tabs_left: 360
   offset_y:
     window_top: 0
@@ -32,7 +33,8 @@ constants:
     transcript_cb013_first_utterance: 580
     transcript_cb013_first_utterance_tooltip: 905
     transcript_bj_first_utterance_tooltip: 1220
-    transcripts_content: 1515
+    transcripts_content: 1510
+    participants_content: 1860
     search_tabs: 1170
   height:
     window: 1008
@@ -289,7 +291,6 @@ screengrabs:
     - Log in as test-student
     - Set browser zoom to 100%
     - Load https://apls.pitt.edu/labbcat/transcript/attributes?id=CB01reading1.eaf
-    - "Hide watermark: In Chrome console, select `html` element and deselect `background-image`"
     - Save
   offset_x: offset_x$window_left
   offset_y: offset_y$page_title_top
@@ -301,7 +302,6 @@ screengrabs:
     - Log in as test-student
     - Set browser zoom to 100%
     - Load https://apls.pitt.edu/labbcat/transcript/attributes?id=CB01reading1.eaf
-    - "Hide watermark: In Chrome console, select `html` element and deselect `background-image`"
     - Put cursor over the corner of d in neighborhood
     - Save (use the Snipping Tool's delay option)
   offset_x: offset_x$window_left
@@ -318,9 +318,7 @@ screengrabs:
     - Log in as test-student
     - Set browser zoom to 100%
     - Load https://apls.pitt.edu/labbcat/transcript/attributes?id=CB01reading1.eaf
-    - "Hide watermark: In Chrome console, select `html` element and deselect `background-image`"
-    - Click Attributes tab
-    - Deselect Hide attribute prefixes
+    - Select Show attribute prefixes
     - Save
   offset_x: offset_x$window_left
   offset_y: offset_y$page_title_top
@@ -332,9 +330,7 @@ screengrabs:
     - Log in as test-student
     - Set browser zoom to 100%
     - Load https://apls.pitt.edu/labbcat/transcript/attributes?id=CB01reading1.eaf
-    - "Hide watermark: In Chrome console, select `html` element and deselect `background-image`"
-    - Click Attributes tab
-    - Select Hide attribute names
+    - Deselect Show attribute names
     - Save
   offset_x: offset_x$window_left
   offset_y: offset_y$page_title_top
@@ -386,6 +382,15 @@ screengrabs:
   height: 518
 
 - screengrab: transcripts/export-attributes-csv-raw.png
+    - Log in as test-student
+    - Set browser zoom to 100%
+    - Load https://apls.pitt.edu/labbcat/transcripts
+    - Click Export Attributes
+    - Select transcript, episode, recording_date
+    - Click Export Attributes again
+    - Open CSV in Notepad
+    - Make Notepad half-width and half-height
+    - Save
 
 - screengrab: transcripts/filters-none.png
   instructions: See transcripts/overview.png
@@ -430,7 +435,7 @@ screengrabs:
     - Load https://apls.pitt.edu/labbcat/transcripts
     - Click interview
     - Hover over Transcript type
-    - Save
+    - Save (use the Snipping Tool's delay option)
   offset_x: offset_x$transcripts_content_left
   offset_y: offset_y$transcripts_filters_top
   width: width$transcripts_content
@@ -549,12 +554,12 @@ screengrabs:
     - "Hide watermark: In Chrome console, select `html` element and deselect `background-image`"
     - "`window.scrollTo(0,100);`"
     - Click "Export Formatted"
-    - Deselect Hide layer icons
+    - Select Show layer icons
     - Save
-  offset_x: 1565
-  offset_y: 558
-  width: 173
-  height: 32
+  offset_x: 1557
+  offset_y: 408
+  width: 189
+  height: 35
 
 - screengrab: transcripts/participant-filter.png
   instructions:
@@ -1536,9 +1541,9 @@ screengrabs:
     - Load https://apls.pitt.edu/labbcat/participants
     - Select Female, Main speaker
     - Save
-  offset_x: 25
+  offset_x: offset_x$participants_content_left
   offset_y: offset_y$page_title_top
-  width: 1860
+  width: width$participants_content
   height: height$window - offset_y$page_title_top
 
 - screengrab: participants/cb08-2.png
@@ -1548,9 +1553,9 @@ screengrabs:
     - Load https://apls.pitt.edu/labbcat/transcripts
     - Select CB08interview2.eaf, click List Participants
     - Save
-  offset_x: 25
+  offset_x: offset_x$participants_content_left
   offset_y: offset_y$page_title_top
-  width: 1860
+  width: width$participants_content
   height: 430
 
 - screengrab: participants/1800sec.png
@@ -1561,10 +1566,10 @@ screengrabs:
     - Type 1800 into the duration From box
     - Click List Participants
     - Save
-  offset_x: 25
+  offset_x: offset_x$participants_content_left
   offset_y: offset_y$page_title_top
-  width: 1860
-  height: 685
+  width: width$participants_content
+  height: 728
 
 - screengrab: participants/1800sec-filtered.png
   instructions:
@@ -1575,10 +1580,10 @@ screengrabs:
     - Click List Participants
     - Select Female, Main speaker
     - Save
-  offset_x: 25
+  offset_x: offset_x$participants_content_left
   offset_y: offset_y$page_title_top
-  width: 1860
-  height: 440
+  width: width$participants_content
+  height: 485
 
 - screengrab: home/overview.png
   instructions:

@@ -4,7 +4,7 @@ contributors: [Dan Villarreal, Jack Rechsteiner]
 permalink: /doc/browse-transcripts
 parent: How to use APLS
 nav_order: 30
-last_modified_date: 2025-07-11T12:51:06-04:00
+last_modified_date: 2025-10-22T14:59:22-04:00
 ---
 
 # {{ page.title }} {#page-title}
@@ -126,11 +126,11 @@ As you can see, for example, `Transcription AI tool(s)` has a blank for `CB01rea
 This is because no AI tools were used to transcribe `CB01reading1.eaf`.
 
 The two checkboxes at the bottom of this tab control how the left-hand column is displayed.
-If you want to see attributes' full [export names]({{ '/doc/attribute-typology#export-name' | relative_url }}), deselect _Hide attribute prefixes_:
+If you want to see attributes' full [export names]({{ '/doc/attribute-typology#export-name' | relative_url }}), select _Show attribute prefixes_:
 
 {% include screengrab.html src="transcript/attributes/prefixes.png" %}
 
-If you're finding the attribute names visually distracting, select _Hide attribute names_:
+If you're finding the attribute names visually distracting, deselect _Show attribute names_:
 
 {% include screengrab.html src="transcript/attributes/hide-names.png" %}
 
@@ -204,7 +204,7 @@ For example, if you want to see all transcripts with <span class="transcript-att
 
 {% include screengrab.html src="transcripts/filters-interview.png" %}
 
-As you can see, the top line shows that `Match count` is down to 147 transcripts and describes the filter: `Transcript type = interview`.
+As you can see, the top line shows that `Match count` is down to 178 transcripts and describes the filter: `Transcript type = interview`.
 The transcript list no longer displays transcripts like `CB01pairs.eaf` that have a <span class="transcript-attr">type</span> other than "interview".
 In addition, the {% include labbcat-icon.html src="delete.svg" %} button appears to the right of the filters;
 this button [clears filters](#clearing-filters) from all attributes.
@@ -219,10 +219,10 @@ For example, you can select _interview_ and _reading_ to include these two <span
 
 {% include screengrab.html src="transcripts/filters-multi-select.png" %}
 
-As you can see, the `Match count` has now increased to 192, the filter is now described as `Transcript type in (interview,reading)`, and the transcript list displays "reading" interviews again.
+As you can see, the `Match count` has now increased to 228, the filter is now described as `Transcript type in (interview,reading)`, and the transcript list displays "reading" interviews again.
 
 You can also filter by multiple attributes at the same time.
-For example, to narrow down the list of "interview" and "reading" transcripts to only include those that are at most 15 minutes long, you can type `900` (that is, 15\*60) into the _To_ box under `Duration (sec)`:
+For example, to narrow down the list of "interview" and "reading" transcripts to only include those that are at most 15 minutes long, you can type `900` (that is, 15&times;60) into the _To_ box under `Duration (sec)`:
 
 {% include screengrab.html src="transcripts/filters-multiple.png" %}
 
@@ -374,8 +374,8 @@ This layer picker works similarly to the [one on the <span class="apls-page">Tra
 - There are no projects, so all attributes and layers are displayed
 - The attributes and layers don't change color when selected
 - There are no annotation counts or IPA/DISC toggles
-- There's a _Hide attribute prefixes_ checkbox (similar to [<span class="apls-page">Transcript attributes</span> pages](#transcript-attributes-pages))
-- The _Hide layer icons_ checkbox is selected by default to save space
+- There's a _Show attribute prefixes_ checkbox (similar to [<span class="apls-page">Transcript attributes</span> pages](#transcript-attributes-pages)), deselected by default to save space
+- The _Show layer icons_ checkbox is deselected by default to save space
 
 
 The following formatted file types are available with *Export Formatted*:
@@ -400,7 +400,7 @@ If more than one transcript is selected, the exported files will be packaged in 
 #### Layer picker icons
 {: .no_toc }
 
-If _Hide layer icons_ is deselected, each layer will have either two or three icons to the right of its checkbox in the layer picker.
+If _Show layer icons_ is selected, each layer will have either two or three icons to the right of its checkbox in the layer picker.
 These icons indicate some of the layer's important properties.
 Here's a quick key;
 see the [layer typology]({{ '/doc/layer-typology' | relative_url }}) documentation page for more information:
