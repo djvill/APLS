@@ -4,7 +4,7 @@ contributors: [Dan Villarreal, Jack Rechsteiner]
 permalink: /doc/navigation
 parent: APLS 101/Getting started
 nav_order: 50
-last_modified_date: 2025-10-15T17:48:41-04:00
+last_modified_date: 2025-10-21T22:09:45-04:00
 ---
 
 # {{ page.title }}
@@ -62,7 +62,7 @@ It is displayed at the bottom of every APLS webpage.
 The <span class="keyterm">footer menu</span> provides links with information about:
 
 - Licenses for [APLS]({{ '/doc/terms' | relative_url }}), and for the [LaBB-CAT software](https://apls.pitt.edu/labbcat/agpl.txt) and [JavaScript](https://apls.pitt.edu/labbcat/credits#jslicense-labels1) that APLS is built on.
-- Version history for [APLS]({{ '/doc/version-history' | relative_url }}), the [version of LaBB-CAT](https://apls.pitt.edu/labbcat/version) currently used by APLS, and APLS's [custom user interface]({{ '/doc/user-interface' | relative_url }})
+- Version history for [APLS]({{ '/doc/version-history' | relative_url }}) and the [version of LaBB-CAT](https://apls.pitt.edu/labbcat/version) currently used by APLS.
 - Citation information for [APLS]({{ '/doc/citing-contributing' | relative_url }}) and [LaBB-CAT](https://labbcat.canterbury.ac.nz/howto/cite).
 - Attribution information for the [LaBB-CAT] software.
 

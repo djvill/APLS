@@ -3,7 +3,7 @@ title: Navigating documentation
 permalink: /doc/doc-navigation
 parent: APLS 101/Getting started
 nav_order: 40
-last_modified_date: 2025-05-27T16:16:13-04:00
+last_modified_date: 2025-10-21T22:09:45-04:00
 ---
 
 # {{ page.title }}
@@ -36,7 +36,7 @@ You can browse through pages in the left-hand navigation pane.
 <!-- If you're viewing this site on a mobile device, you can click = to bring up the navigation -->
 Most pages have a collapsible table of contents toward the top of the page.
 All headings in the text of a page have a unique permalink; 
-you can copy this permalink by hovering over the heading and clicking the link icon (<svg viewBox="0 0 16 16" aria-hidden="true" style="height: 1em;"><use xlink:href="#svg-link"></use></svg>)
+you can copy this permalink by hovering over the heading and clicking the link icon (<svg viewBox="0 0 16 16" aria-hidden="true" style="height: 1em;"><use xlink:href="#svg-link"></use></svg>).
 In the top bar, you can search the documentation (you can type the `/` key to move your cursor to the search bar without clicking), suggest edits to pages on GitHub, and toggle between light mode and dark mode.
 
 
@@ -57,8 +57,8 @@ Throughout these pages are "callout" boxes to help you understand how to use APL
   >
   > 1. Go to <https://apls.pitt.edu/labbcat>.
   > 
-  > You should see a login box pop up:
-  > {% include screengrab.html src="no-page/login.png" %}
+  > You should see the login page appear:
+  > {% include screengrab.html src="login/login.png" %}
 
 - Blue "Under the hood" boxes give some details about technical details, design decisions, and/or the history of APLS's development. They're meant for especially curious readers, but they're not crucial to understanding how to use APLS or how it works.
   
