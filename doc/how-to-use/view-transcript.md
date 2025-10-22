@@ -6,7 +6,7 @@ parent: How to use APLS
 has_children: yes
 has_toc: no
 nav_order: 20
-last_modified_date: 2025-10-22T17:11:27-04:00
+last_modified_date: 2025-10-22T17:17:36-04:00
 ---
 
 # {{ page.title }}
@@ -336,11 +336,16 @@ To find this out, you can hover over the word's <span class="layer">dictionary_p
 As you can see, hovering over `æn` causes `ən` to pop up, but hovering over `ju` doesn't pop anything up.
 This indicates that _an_ has two <span class="layer">dictionary_phonemes</span> annotations (`æn` and `ən`), but _you_ has just one (`ju`).
 
+{% comment %}
 {% assign sp_vertical_peers = site.layers | where_exp: "item", "item.synced.scope == 'span' or item.synced.scope == 'phrase'" | where_exp: "item", "item.synced.vertical_peers == true" %}
+{% endcomment %}
 
 {: .note}
 > The vertical peers popup is only for layers with word [scope](#layer-scope).
+> For span/phrase layers that allow vertical peers (<span class="layer">comment</span>, <span class="layer">noise</span>), all vertical peers are displayed.
+{%- comment -%}
 > For span/phrase layers that allow vertical peers ({% for layer in sp_vertical_peers %}<span class="layer">{{ layer.path | remove: "_layers/" | remove: ".md" }}</span>{% unless forloop.last %}, {% endunless %}{% endfor %}), all vertical peers are displayed.
+{%- endcomment %}
 > There are currently no segment layers that allow vertical peers.
 
 <!-- Subsection here? Or move below? -->
