@@ -31,13 +31,14 @@ constants:
     transcript_content: 1510
     transcript_cb013_first_utterance: 580
     transcript_cb013_first_utterance_tooltip: 905
+    transcript_bj_first_utterance_tooltip: 1220
     transcripts_content: 1515
     search_tabs: 1170
   height:
     window: 1008
     top_menu: 30
     transcript_body_layer: 30
-    transcript_body_turn_container: 40
+    transcript_body_turn_container: 45
     transcript_attributes: 560
     transcript_layer_picker_plus_1: 470
     transcript_export_plus_1: 580
@@ -185,10 +186,10 @@ screengrabs:
     - Load https://apls.pitt.edu/labbcat/transcript?transcript=CB01interview3.eaf
     - Click the first word in the transcript (okay)
     - Save
-  offset_x: 260
-  offset_y: 435
-  width: 445
-  height: 280
+  offset_x: 250
+  offset_y: 410
+  width: 460
+  height: 320
 
 - screengrab: transcript/word-menu-context.png
   instructions: See transcript/word-menu.png
@@ -212,8 +213,8 @@ screengrabs:
   height: 340
   overlay:
     - image: _pointer.png
-      offset_x: 263
-      offset_y: 461
+      offset_x: 260
+      offset_y: 465
 
 - screengrab: transcript/permalink-utterance.png
   instructions:
@@ -221,12 +222,12 @@ screengrabs:
     - Set browser zoom to 100%
     - Load https://apls.pitt.edu/labbcat/transcript?transcript=CB01interview3.eaf
     - Click the first word in the transcript (okay)
-    - Put cursor under the middle of U in Utterance
+    - Select Utterance
     - Save (use the Snipping Tool's delay option)
   offset_x: offset_x$transcript_content_left
   offset_y: offset_y$address_bar_top
   width: 985
-  height: 390
+  height: 395
 
 - screengrab: transcripts/overview.png
   instructions:
@@ -712,16 +713,16 @@ screengrabs:
     - Save
   offset_x: 1430
   offset_y: 155
-  width: 450
-  height: 170
+  width: 452
+  height: 172
 
 - screengrab: transcript/no-praat-word-menu.png
   in_path: transcript/no-praat.png
   instructions: See transcript/no-praat-player.png
-  offset_x: 260
-  offset_y: 435
-  width: 173
-  height: 148
+  offset_x: 250
+  offset_y: 410
+  width: 190
+  height: 190
 
 - screengrab: transcript/no-praat-word-menu-context.png
   in_path: transcript/no-praat.png
@@ -738,11 +739,11 @@ screengrabs:
   offset_x: offset_x$transcript_content_left
   offset_y: offset_y$transcript_body_top
   width: width$transcript_cb013_first_utterance
-  height: 335
+  height: 340
 
 - screengrab: !transcript/word-menu-comp.png
   instructions:
-    - In PowerPoint, stitch together transcript/no-praat-word-menu-context-comp.png and transcript/word-menu-context.png. I promise it'll be okay
+    - In PowerPoint, stitch together transcript/no-praat-word-menu-context-comp.png and transcript/word-menu-context.png (with a 0.25in spacer). I promise it'll be okay
 
 - screengrab: transcript/overview.png
   instructions:
@@ -758,7 +759,7 @@ screengrabs:
       # body
     - func: rect
       xleft: 190
-      ytop: 382
+      ytop: 387
       xright: 1700
       ybottom: 1025 # off the page
       border: highlight_colors$hl_1
@@ -767,9 +768,9 @@ screengrabs:
       # header
     - func: rect
       xleft: 190
-      ytop: 315
+      ytop: 322
       xright: 1700
-      ybottom: 377
+      ybottom: 382
       border: highlight_colors$hl_2
       lty: dashed
       lwd: 5
@@ -785,18 +786,18 @@ screengrabs:
       # arrows
     - func: rect
       xleft: 15
-      ytop: 565
+      ytop: 625
       xright: 40
-      ybottom: 600
+      ybottom: 660
       border: highlight_colors$hl_4
       lty: dashed
       lwd: 5
     - func: rect
       xleft: 1855
-      ytop: 565
+      ytop: 625
       xright: 1880
-      ybottom: 600
-      border: '#984ea3'  #.hl-4 (purple)
+      ybottom: 660
+      border: highlight_colors$hl_4
       lty: dashed
       lwd: 5
 
@@ -811,18 +812,18 @@ screengrabs:
       # arrows
     - func: rect
       xleft: 15
-      ytop: 565
+      ytop: 625
       xright: 40
-      ybottom: 600
-      border: '#984ea3'
+      ybottom: 660
+      border: highlight_colors$hl_4
       lty: dashed
       lwd: 5
     - func: rect
       xleft: 1855
-      ytop: 565
+      ytop: 625
       xright: 1880
-      ybottom: 600
-      border: '#984ea3'
+      ybottom: 660
+      border: highlight_colors$hl_4
       lty: dashed
       lwd: 5
 
@@ -839,7 +840,7 @@ screengrabs:
     - Log in as test-student
     - Set browser zoom to 100%
     - Load https://apls.pitt.edu/labbcat/transcript?transcript=CB01interview3.eaf
-    - "`window.scrollTo(0, 1150); document.getElementById('media').remove();`"
+    - "`window.scrollTo(0, 1160); document.getElementById('media').remove();`"
     - Save
   offset_x: offset_x$transcript_content_left
   offset_y: offset_y$page_top
@@ -899,19 +900,81 @@ screengrabs:
       ytop: 158
       xright: 1885
       ybottom: 330
-      border: '#4daf4a'
+      border: highlight_colors$hl_3
       lty: dashed
       lwd: 5
 
-- screengrab: !transcript/tooltips.png
+- screengrab: transcript/layer-hover-1.png
   instructions:
     - Log in as test-student
     - Set browser zoom to 100%
     - Load https://apls.pitt.edu/labbcat/transcript?transcript=CB01interview3.eaf
     - Select layers speech_rate, frequency_from_celex, segment
-    - Hover over the right edge of the last annotation in each layer and wait for the tooltip to load
-    - "Save each as `transcript/layer-hover-N.png` (use the Snipping Tool's delay option)"
-    - Stitch it together in PowerPoint (I promise it's not as bad as it sounds)
+    - Hover over speech_rate just to the right of where segment ɪndəvɪdʒuəl ends
+    - Save (use the Snipping Tool's delay option)
+  offset_x: offset_x$transcript_content_left
+  offset_y: offset_y$transcript_body_top
+  width: width$transcript_bj_first_utterance_tooltip
+  height: height$transcript_body_turn_container + 4*height$transcript_body_layer
+  overlay:
+    - image: _arrow.png
+      offset_x: 1049
+      offset_y: 428
+
+- screengrab: transcript/layer-hover-2.png
+  instructions:
+    - Log in as test-student
+    - Set browser zoom to 100%
+    - Load https://apls.pitt.edu/labbcat/transcript?transcript=CB01interview3.eaf
+    - Select layers speech_rate, frequency_from_celex, segment
+    - Hover over frequency_from_celex just to the right of where segment ɪndəvɪdʒuəl ends
+    - Save (use the Snipping Tool's delay option)
+  offset_x: offset_x$transcript_content_left
+  offset_y: offset_y$transcript_body_top
+  width: width$transcript_bj_first_utterance_tooltip
+  height: height$transcript_body_turn_container + 4*height$transcript_body_layer
+  overlay:
+    - image: _arrow.png
+      offset_x: 1049
+      offset_y: 456
+
+- screengrab: transcript/layer-hover-3.png
+  instructions:
+    - Log in as test-student
+    - Set browser zoom to 100%
+    - Load https://apls.pitt.edu/labbcat/transcript?transcript=CB01interview3.eaf
+    - Select layers speech_rate, frequency_from_celex, segment
+    - Hover over word just to the right of where segment ɪndəvɪdʒuəl ends
+    - Save (use the Snipping Tool's delay option)
+  offset_x: offset_x$transcript_content_left
+  offset_y: offset_y$transcript_body_top
+  width: width$transcript_bj_first_utterance_tooltip
+  height: height$transcript_body_turn_container + 4*height$transcript_body_layer
+  overlay:
+    - image: _arrow.png
+      offset_x: 1051
+      offset_y: 485
+
+- screengrab: transcript/layer-hover-4.png
+  instructions:
+    - Log in as test-student
+    - Set browser zoom to 100%
+    - Load https://apls.pitt.edu/labbcat/transcript?transcript=CB01interview3.eaf
+    - Select layers speech_rate, frequency_from_celex, segment
+    - Hover over word just to the right of segment ɪndəvɪdʒuəl
+    - Save (use the Snipping Tool's delay option)
+  offset_x: offset_x$transcript_content_left
+  offset_y: offset_y$transcript_body_top
+  width: width$transcript_bj_first_utterance_tooltip
+  height: 190
+  overlay:
+    - image: _beam.png
+      offset_x: 1050
+      offset_y: 503
+
+- screengrab: !transcript/tooltips.png
+  instructions:
+    - Stitch together transcript/layer-hover-N.png in PowerPoint with no buffer (I promise it's not as bad as it sounds)
 
 - screengrab: transcript/tooltip-missing.png
   instructions:
@@ -940,7 +1003,7 @@ screengrabs:
   offset_x: offset_x$transcript_content_left
   offset_y: offset_y$transcript_body_top
   width: width$transcript_content
-  height: 545
+  height: 580
 
 - screengrab: transcript/peers.png
   instructions:
@@ -1050,7 +1113,7 @@ screengrabs:
   offset_x: offset_x$transcript_content_left
   offset_y: offset_y$transcript_body_top
   width: 700
-  height: 95
+  height: 105
 
 - screengrab: transcript/layer-picker.png
   instructions:
@@ -1327,14 +1390,13 @@ screengrabs:
     - Log in as test-student
     - Set browser zoom to 100%
     - Load https://apls.pitt.edu/labbcat/transcript?transcript=CB01interview3.eaf
-    - "Hide watermark: In Chrome console, select `html` element and deselect `background-image`"
     - Select dictionary_phonemes
     - Click the Export tab
     - Save
   offset_x: offset_x$transcript_content_left
   offset_y: offset_y$transcript_header_top
   width: width$transcript_content
-  height: height$transcript_export_plus_1 + 1*height$transcript_body_layer
+  height: height$transcript_export_plus_1 + 1*height$transcript_body_layer + 5
 
 - screengrab: transcript/export-praat-0.png
   instructions:
@@ -1402,12 +1464,12 @@ screengrabs:
     - Log in as test-student
     - Set browser zoom to 100%
     - Load https://apls.pitt.edu/labbcat/transcript?transcript=CB01interview3.eaf
-    - Click the Search tab
+    - Page-search for "okay just"
     - Save
   offset_x: offset_x$transcript_content_left
   offset_y: offset_y$address_bar_top
   width: 1390
-  height: 390
+  height: 395
 
 - screengrab: transcript/textgrid.png
   instructions:

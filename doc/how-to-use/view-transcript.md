@@ -6,7 +6,7 @@ parent: How to use APLS
 has_children: yes
 has_toc: no
 nav_order: 20
-last_modified_date: 2025-10-16T14:22:25-04:00
+last_modified_date: 2025-10-21T21:58:27-04:00
 ---
 
 # {{ page.title }}
@@ -226,8 +226,9 @@ Let's break down what we're seeing in these tooltips:
 Those are the most important things you can see in the tooltip.
 These tooltips also touch on some concepts that are covered later on this documentation page:
 
-- <span class="layer">frequency_from_celex</span> shows `[2]`, followed by two different counts, `1775 836`
-  - This means the word _individual_ has two <span class="keyterm">peer</span> annotations on the <span class="keyterm">frequency_from_celex</span> layer. In this case, we can only see one of the two annotations in the transcript body (`1775`). This tells us these are <span class="keyterm">vertical peers</span> (see [below](#horizontal-and-vertical-peers)).
+- <span class="layer">frequency_from_celex</span> shows `[2]`, followed by two different counts, `836 1775`
+  - This means the word _individual_ has two <span class="keyterm">peer</span> annotations on the <span class="keyterm">frequency_from_celex</span> layer.
+  - Normally, we could only see one of the two annotations in the transcript body (`1775`). However, when we hover over this annotation, its peer pops up above it (`836`).  This tells us these are <span class="keyterm">vertical peers</span> (see [below](#horizontal-and-vertical-peers)).
 - <span class="layer">segment</span> shows `I n d @ v I _ u @ l`
   - The spaces in between these symbols are a hint that there are actually 10 individual annotations on this layer. That's because <span class="layer">segment</span> has a smaller <span class="keyterm">scope</span> (see [below](#layer-scope)).
   - Compared to the annotation in the transcript body (`ɪndəvɪdʒuəl`), some of the symbols match (e.g., `n`, `v`, `u`) but others don't (e.g., `I` vs. `ɪ`, `_` vs. `dʒ`). This is because <span class="layer">segment</span>, as a <span class="keyterm">phonological layer</span>, uses the [DISC phonemic alphabet](#phonological-layers-and-disc).
@@ -332,6 +333,13 @@ To find this out, you can hover over the word's <span class="layer">dictionary_p
 
 As you can see, hovering over `æn` causes `ən` to pop up, but hovering over `ju` doesn't pop anything up.
 This indicates that _an_ has two <span class="layer">dictionary_phonemes</span> annotations (`æn` and `ən`), but _you_ has just one (`ju`).
+
+{% assign sp_vertical_peers = site.layers | where_exp: "item", "item.synced.scope == 'span' or item.synced.scope == 'phrase'" | where_exp: "item", "item.synced.vertical_peers" %}
+
+{: .note}
+> The vertical peers popup is only for layers with word [scope](#layer-scope).
+> For span/phrase layers that allow vertical peers ({% for layer in sp_vertical_peers %}<span class="layer">{{ layer.path | remove: "_layers/" | remove: ".md" }}</span>{% unless forloop.last %}, {% endunless %}{% endfor %}), all vertical peers are displayed.
+> There are currently no segment layers that allow vertical peers.
 
 <!-- Subsection here? Or move below? -->
 
