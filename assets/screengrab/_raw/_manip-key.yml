@@ -882,6 +882,18 @@ screengrabs:
   width: width$transcript_content
   height: 620
 
+- screengrab: transcript/permalink-utterance-long.png
+  instructions:
+    - Log in as test-student
+    - Set browser zoom to 100%
+    - Load https://apls.pitt.edu/labbcat/transcript?transcript=CB01reading1.eaf
+    - Create a permalink to the first utterance
+    - Save
+  offset_x: offset_x$transcript_content_left
+  offset_y: offset_y$transcript_body_top
+  width: width$transcript_content
+  height: 620
+
 - screengrab: transcript/player-playing.png
   instructions:
     - In an *incognito* window, log in as test-student

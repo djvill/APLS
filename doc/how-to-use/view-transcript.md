@@ -6,7 +6,7 @@ parent: How to use APLS
 has_children: yes
 has_toc: no
 nav_order: 20
-last_modified_date: 2025-10-21T21:58:27-04:00
+last_modified_date: 2025-10-21T21:58:58-04:00
 ---
 
 # {{ page.title }}
@@ -199,7 +199,9 @@ Let's look at `CB01reading1.eaf` as an example:
 The first two <span class="layer">turn</span>s each contain one <span class="layer">utterance</span>.
 The next two <span class="layer">turn</span>s each contain two <span class="layer">utterance</span>s.
 The first <span class="layer">utterance</span> (_that's my ... Penn Mac_) in the third <span class="layer">turn</span> is long enough that the text wraps, but you can see that _that's_ is closer in height to _Mac_ than _Mac_ is to _it's_ (the first word of the next <span class="layer">utterance</span>).
-If you ever need to figure out where an utterance begins or ends, you can use the word menu's [utterance permalink](#creating-permalinks) function to highlight the entire utterance, described below.
+If you ever need to figure out where an utterance begins or ends, you can use the word menu's [utterance permalink](#creating-permalinks) function to highlight the entire utterance:
+
+{% include screengrab.html src="transcript/permalink-utterance-long.png" %}
 
 {: .under-the-hood}
 > These layers are based on how transcribers chose to divide the original transcription files into lines.
@@ -272,7 +274,7 @@ If you want to understand why an annotation is missing, consult the [layer field
 #### Segment-dependent layers
 {: .no_toc}
 
-There's a whole category of layers like <span class="layer">speech_rate</span> where you can expect missing annotations if the <span class="layer">segment</span> layer is missing: [segment-dependent]({{ '/doc/layer-typology#segment-dependency' | relative_url }}){:.keyterm} layers.
+There's a whole category of layers like <span class="layer">speech_rate</span> where you can expect missing annotations in an <span class="layer">utterance</span> if there aren't any <span class="layer">segment</span> annotations: [segment-dependent]({{ '/doc/layer-typology#segment-dependency' | relative_url }}){:.keyterm} layers.
 For example, here's the first 3 lines of `CB01interview3.eaf` again, this time with <span class="layer">phonemes</span> (colored {% include layer-color.html layer="phonemes" %}), <span class="layer">stress</span> ({% include layer-color.html layer="stress" %}), <span class="layer">foll_pause</span> ({% include layer-color.html layer="foll_pause" %}), <span class="layer">word</span> ({% include layer-color.html layer="word" %}), and <span class="layer">segment</span> ({% include layer-color.html layer="segment" %}):
 
 {% include screengrab.html src="transcript/segment-dependency.png" %}
@@ -609,9 +611,14 @@ You can create permalinks for individual lines (<span class="layer">utterance</s
 
 {% include screengrab.html src="transcript/permalink-hover.png" %}
 
-This will update the URL in the address bar and highlight the line/word in the transcript body:
+This will update the URL in the address bar and highlight the <span class="layer">utterance</span>/<span class="layer">word</span> in the transcript body:
 
 {% include screengrab.html src="transcript/permalink-utterance.png" %}
+
+Permalinks can be useful for sharing with collaborators, bookmarking noteworthy moments in an interview, or [sending corrections to corpus maintainers]({{ '/doc/citing-contributing#contributing-back' | relative_url }}).
+You can also figure out [where an <span class="layer">utterance</span> begins and ends](#turns-and-utterances) by creating an utterance permalink, since this highlights the entire <span class="layer">utterance</span>:
+
+{% include screengrab.html src="transcript/permalink-utterance-long.png" %}
 
 {: .under-the-hood}
 > A permalink ID is not a random string of characters!
@@ -726,8 +733,9 @@ That is, the interviewer can usually be heard in the background of the right cha
 {: .note}
 > Some audio files don't follow this pattern:
 >
-> - `LV10` interviews are in mono, with both speakers appearing on both channels.
-> - `LV08and09` interviews include the interviewer (`Barbara Johnstone`) and `LV09` sharing the left channel, and `LV08` alone on the right channel.
+> - Transcripts in the `CB05and06` <span class="transcript-attr">episode</span> include `CB05` on the left channel, `CB06` on the right channel, and the interviewer (`Barbara Johnstone`) on both channels.
+> - Transcripts in the `LV08and09` <span class="transcript-attr">episode</span> include the interviewer (`Barbara Johnstone`) and `LV09` sharing the left channel, and `LV08` alone on the right channel.
+> - `LV10` transcripts are in mono, with both speakers appearing on both channels.
 
 ## Exporting the transcript
 
