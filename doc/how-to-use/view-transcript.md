@@ -6,7 +6,7 @@ parent: How to use APLS
 has_children: yes
 has_toc: no
 nav_order: 20
-last_modified_date: 2025-10-21T21:58:58-04:00
+last_modified_date: 2025-10-22T17:11:27-04:00
 ---
 
 # {{ page.title }}
@@ -336,7 +336,7 @@ To find this out, you can hover over the word's <span class="layer">dictionary_p
 As you can see, hovering over `æn` causes `ən` to pop up, but hovering over `ju` doesn't pop anything up.
 This indicates that _an_ has two <span class="layer">dictionary_phonemes</span> annotations (`æn` and `ən`), but _you_ has just one (`ju`).
 
-{% assign sp_vertical_peers = site.layers | where_exp: "item", "item.synced.scope == 'span' or item.synced.scope == 'phrase'" | where_exp: "item", "item.synced.vertical_peers" %}
+{% assign sp_vertical_peers = site.layers | where_exp: "item", "item.synced.scope == 'span' or item.synced.scope == 'phrase'" | where_exp: "item", "item.synced.vertical_peers == true" %}
 
 {: .note}
 > The vertical peers popup is only for layers with word [scope](#layer-scope).
