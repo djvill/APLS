@@ -15,6 +15,8 @@ constants:
     search_tabs_filtered_left: 360
     search_tabs_left: 370
     search_matrix_left: 515
+    search_input_left: 580
+    search_progress_left: 570
   offset_y:
     window_top: 0
     address_bar_top: 60
@@ -29,6 +31,9 @@ constants:
     excel_formula_bar_top: 120
     search_tabs_top: 270
     search_matrix_top: 355
+    search_input_top: 650
+    search_input_syllables_top: 670
+    search_progress_top: 795
   width:
     window: 1920
     top_menu: 875
@@ -41,6 +46,9 @@ constants:
     participants_content: 1860
     search_tabs: 1170
     search_matrix: 870
+    search_input: 752
+    search_input_picker: 1131
+    search_progress: 765
   height:
     window: 1128
     top_menu: 30
@@ -52,6 +60,10 @@ constants:
     search_tabs: 70
     search_filter_tabs: 515
     search_matrix: 385
+    search_input: 84
+    search_input_syllables: 89
+    search_input_picker: 352
+    search_progress: 155
 
 screengrabs:
 - screengrab: participants/participantsExport/attributes-multiselect-export.png
@@ -1692,13 +1704,26 @@ screengrabs:
       lwd: 5
       # progress bar
     - func: rect
-      xleft: 570
-      ytop: 795
-      xright: 1335
-      ybottom: 950
+      xleft: offset_x$search_progress_left
+      ytop: offset_y$search_progress_top
+      xright: offset_x$search_progress_left + width$search_progress
+      ybottom: offset_y$search_progress_top + height$search_progress
       border: highlight_colors$hl_3
       lty: dashed
       lwd: 5
+
+- screengrab: search/progress-bar.png
+  instructions:
+    - Log in as test-student
+    - Set browser zoom to 100%
+    - Load https://apls.pitt.edu/labbcat/search
+    - Search for orthography test
+    - Wait for the search to complete
+    - Save
+  offset_x: offset_x$search_progress_left - 25
+  offset_y: offset_y$search_progress_top
+  width: width$search_progress
+  height: height$search_progress + 20
 
 - screengrab: search/matrix-layout.png
   instructions: See search/overview.png
@@ -1730,7 +1755,115 @@ screengrabs:
 - screengrab: search/input.png
   instructions: See search/overview.png
   in_path: search/overview.png
-  offset_x: 580
-  offset_y: 650
-  width: 752
-  height: 84
+  offset_x: offset_x$search_input_top
+  offset_y: offset_y$search_input_left
+  width: width$search_input
+  height: height$search_input
+
+- screengrab: search/matrix-orthography-segment.png
+  instructions:
+    - Log in as test-student
+    - Set browser zoom to 100%
+    - Load https://apls.pitt.edu/labbcat/search
+    - Select segment
+    - Save
+  offset_x: offset_x$search_matrix_left
+  offset_y: offset_y$search_matrix_top
+  width: width$search_matrix
+  height: 475
+
+- screengrab: search/matrix-segment.png
+  instructions:
+    - Log in as test-student
+    - Set browser zoom to 100%
+    - Load https://apls.pitt.edu/labbcat/search
+    - Select segment, deselect orthography
+    - Save
+  offset_x: offset_x$search_matrix_left
+  offset_y: offset_y$search_matrix_top
+  width: width$search_matrix
+  height: height$search_matrix
+
+- screengrab: search/all-layers.png
+  instructions:
+    - Log in as test-student
+    - Set browser zoom to 100%
+    - Load https://apls.pitt.edu/labbcat/search
+    - Select all projects except temp
+    - Save
+  offset_x: 280
+  offset_y: offset_y$search_matrix_top
+  width: 1325
+  height: 600
+
+- screengrab: search/syllables.png
+  instructions:
+    - Log in as test-student
+    - Set browser zoom to 100%
+    - Load https://apls.pitt.edu/labbcat/search
+    - Select syllables, deselect orthography
+    - Save
+  offset_x: offset_x$search_input_left
+  offset_y: offset_y$search_input_syllables_top
+  width: width$search_input
+  height: height$search_input_syllables
+
+- screengrab: search/symbol-picker.png
+  instructions:
+    - Log in as test-student
+    - Set browser zoom to 100%
+    - Load https://apls.pitt.edu/labbcat/search
+    - "In Chrome console, run `document.getElementById('page_footer').remove();`"
+    - Select syllables, deselect orthography
+    - Open symbol picker
+    - Save
+  offset_x: offset_x$search_input_left
+  offset_y: offset_y$search_input_syllables_top
+  width: width$search_input_picker
+  height: height$search_input_picker
+
+- screengrab: search/symbol-picker-single.png
+  instructions:
+    - Log in as test-student
+    - Set browser zoom to 100%
+    - Load https://apls.pitt.edu/labbcat/search
+    - "In Chrome console, run `document.getElementById('page_footer').remove();`"
+    - Select syllables, deselect orthography
+    - Open symbol picker
+    - Click θ
+    - Save while still highlighted
+  offset_x: offset_x$search_input_left
+  offset_y: offset_y$search_input_syllables_top
+  width: width$search_input_picker
+  height: height$search_input_picker
+
+- screengrab: search/symbol-picker-multiple.png
+  instructions:
+    - Log in as test-student
+    - Set browser zoom to 100%
+    - Load https://apls.pitt.edu/labbcat/search
+    - "In Chrome console, run `document.getElementById('page_footer').remove();`"
+    - Select syllables, deselect orthography
+    - Open symbol picker
+    - Click θ, r, ou
+    - Save while still highlighted
+  offset_x: offset_x$search_input_left
+  offset_y: offset_y$search_input_syllables_top
+  width: width$search_input_picker
+  height: height$search_input_picker
+
+- screengrab: search/symbol-picker-category.png
+  instructions:
+    - Log in as test-student
+    - Set browser zoom to 100%
+    - Load https://apls.pitt.edu/labbcat/search
+    - "In Chrome console, run `document.getElementById('page_footer').remove();`"
+    - Select syllables, deselect orthography
+    - Open symbol picker
+    - Click θ, r, ou
+    - Move cursor to front and click STRESS
+    - Save while still highlighted
+  offset_x: offset_x$search_input_left
+  offset_y: offset_y$search_input_syllables_top
+  width: width$search_input_picker
+  height: height$search_input_picker

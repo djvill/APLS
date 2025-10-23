@@ -5,14 +5,14 @@ permalink: /doc/your-first-search
 parent: Searching the corpus
 grand_parent: How to use APLS
 nav_order: 10
-last_modified_date: 2025-05-27T16:16:17-04:00
+last_modified_date: 2025-10-23T13:33:12-04:00
 ---
 
 # {{ page.title }}
 {:.no_toc}
 
 If you are a newcomer to APLS, this page will help you get acquainted with the [<span class="apls-page">Search</span>](https://apls.pitt.edu/labbcat/search) page by walking you through a simple corpus search.
-After following along with the example search on this page, you can visit the other pages in the [<span class="apls-page">Search</span> page documentation]({{ '/doc/search' | relative_url }}) to learn about the more advanced <span class="apls-page">Search</span> page features.
+After following along with the example search on this page, you can visit [the other pages in this section]({{ '/doc/search' | relative_url }}) to learn about the more advanced <span class="apls-page">Search</span> page features.
 
 {% include page_toc.html collapsible=true %}
 
