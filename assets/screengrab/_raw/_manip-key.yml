@@ -136,18 +136,6 @@ screengrabs:
   width: width$top_menu_nohelp
   height: 295
 
-- screengrab: search/matrix.png
-  instructions:
-    - Log in as test-student
-    - Set browser zoom to 100%
-    - Load https://apls.pitt.edu/labbcat/search
-    - "`window.scrollTo(0, 100);`"
-    - Save
-  offset_x: 545
-  offset_y: 475
-  width: 800
-  height: 425
-
 - screengrab: search/episode-filter.png
   instructions:
     - Log in as test-student
@@ -1655,11 +1643,29 @@ screengrabs:
   drawing:
       # search matrix
     - func: rect
-      xleft: offset_x$search_matrix_left
-      ytop: offset_y$search_matrix_top
-      xright: offset_x$search_matrix_left + width$search_matrix
-      ybottom: offset_y$search_matrix_top + height$search_matrix
+      xleft: 580
+      ytop: 650
+      xright: 1332
+      ybottom: 740
       border: highlight_colors$hl_1
+      lty: dashed
+      lwd: 5
+      # layer picker
+    - func: rect
+      xleft: offset_x$search_matrix_left + 5
+      ytop: offset_y$search_matrix_top
+      xright: offset_x$search_matrix_left + width$search_matrix - 5
+      ybottom: 650
+      border: highlight_colors$hl_2
+      lty: dashed
+      lwd: 5
+      # search button
+    - func: rect
+      xleft: 1427
+      ytop: 745
+      xright: 1535
+      ybottom: 800
+      border: highlight_colors$hl_3
       lty: dashed
       lwd: 5
       # tabs
@@ -1668,7 +1674,7 @@ screengrabs:
       ytop: offset_y$search_tabs_top
       xright: offset_x$search_tabs_left + width$search_tabs
       ybottom: offset_y$search_tabs_top + height$search_tabs
-      border: highlight_colors$hl_2
+      border: highlight_colors$hl_4
       lty: dashed
       lwd: 5
 
@@ -1686,11 +1692,29 @@ screengrabs:
   drawing:
       # search matrix
     - func: rect
-      xleft: offset_x$search_matrix_left
-      ytop: offset_y$search_matrix_top
-      xright: offset_x$search_matrix_left + width$search_matrix
-      ybottom: offset_y$search_matrix_top + height$search_matrix
+      xleft: 580
+      ytop: 650
+      xright: 1332
+      ybottom: 740
       border: highlight_colors$hl_1
+      lty: dashed
+      lwd: 5
+      # layer picker
+    - func: rect
+      xleft: offset_x$search_matrix_left + 5
+      ytop: offset_y$search_matrix_top
+      xright: offset_x$search_matrix_left + width$search_matrix - 5
+      ybottom: 650
+      border: highlight_colors$hl_2
+      lty: dashed
+      lwd: 5
+      # search button
+    - func: rect
+      xleft: 1427
+      ytop: 745
+      xright: 1535
+      ybottom: 800
+      border: highlight_colors$hl_3
       lty: dashed
       lwd: 5
       # tabs
@@ -1699,7 +1723,7 @@ screengrabs:
       ytop: offset_y$search_tabs_top
       xright: offset_x$search_tabs_left + width$search_tabs
       ybottom: offset_y$search_tabs_top + height$search_tabs
-      border: highlight_colors$hl_2
+      border: highlight_colors$hl_4
       lty: dashed
       lwd: 5
       # progress bar
@@ -1708,9 +1732,22 @@ screengrabs:
       ytop: offset_y$search_progress_top
       xright: offset_x$search_progress_left + width$search_progress
       ybottom: offset_y$search_progress_top + height$search_progress
-      border: highlight_colors$hl_3
+      border: highlight_colors$hl_5
       lty: dashed
       lwd: 5
+
+- screengrab: search/matrix.png
+  instructions:
+    - Log in as test-student
+    - Set browser zoom to 100%
+    - Load https://apls.pitt.edu/labbcat/search
+    - Select overlap, turn, syllables, foll_pause, orthography, segment
+    - - "`window.scrollTo(0, 100);`"
+    - Save
+  offset_x: 560
+  offset_y: 553
+  width: 765
+  height: 487
 
 - screengrab: search/progress-bar.png
   instructions:
@@ -1724,33 +1761,6 @@ screengrabs:
   offset_y: offset_y$search_progress_top
   width: width$search_progress
   height: height$search_progress + 20
-
-- screengrab: search/matrix-layout.png
-  instructions: See search/overview.png
-  in_path: search/overview.png
-  offset_x: offset_x$search_matrix_left
-  offset_y: offset_y$search_matrix_top - 5
-  width: width$search_matrix
-  height: height$search_matrix + 10
-  drawing:
-      # layer picker
-    - func: rect
-      xleft: offset_x$search_matrix_left + 5
-      ytop: offset_y$search_matrix_top
-      xright: offset_x$search_matrix_left + width$search_matrix - 5
-      ybottom: 650
-      border: highlight_colors$hl_4
-      lty: dashed
-      lwd: 5
-      # pattern input field
-    - func: rect
-      xleft: 580
-      ytop: 650
-      xright: 1332
-      ybottom: 740
-      border: highlight_colors$hl_5
-      lty: dashed
-      lwd: 5
 
 - screengrab: search/input.png
   instructions: See search/overview.png

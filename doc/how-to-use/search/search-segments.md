@@ -5,7 +5,7 @@ permalink: /doc/search-segments
 parent: Searching the corpus
 grand_parent: How to use APLS
 nav_order: 60
-last_modified_date: 2025-05-27T16:16:16-04:00
+last_modified_date: 2025-10-24T13:31:17-04:00
 ---
 
 # {{ page.title }}
@@ -40,14 +40,14 @@ With the <span class="layer">segment</span> layer, you would only to search `j` 
 {: .try-it }
 > To find matches for every instance of /ɔɪ/:
 > 1. Go to the [<span class="apls-page">Search</span> page](https://apls.pitt.edu/labbcat/search).
-> 1. Select the <span class="layer">segment</span> layer in the selection menu to make the segment pattern input field appear.
-> 1. Click the drop-down menu button ({% include labbcat-icon.html src="expand-down.svg" %}) and select `ɔɪ` from the `DIPHTHONGS` section.
+> 1. Select the <span class="layer">segment</span> layer in the layer picker to make the segment pattern input appear.
+> 1. Open the symbol picker (click {% include labbcat-icon.html src="expand-down.svg" %}) and select `ɔɪ` from the `DIPHTHONGS` section.
 > 1. Click the _Search_ button.
 
 ## Searching for multiple segments within a word
 
-Next to the the drop-down menu button ({% include labbcat-icon.html src="expand-down.svg" %}) for the <span class="layer">segment</span> and <span class="layer">foll_segment</span> layers is a `+` button.
-Clicking {% include labbcat-icon.html src="add.svg" %} on the right side of the segment input field adds another input field for the segment that immediately follows the previous segment.
+Next to the the drop-down menu button ({% include labbcat-icon.html src="expand-down.svg" %}) for the <span class="layer">segment</span> and <span class="layer">foll_segment</span> layers is a small {% include labbcat-icon.html src="add.svg" %} button.
+Clicking the small {% include labbcat-icon.html src="add.svg" %} button on the right side of the segment pattern input adds another pattern input for the segment that immediately follows the previous segment.
 This allows you to construct patterns that search for a sequence of segments within a word.
 
 {:.note}
@@ -57,9 +57,9 @@ This allows you to construct patterns that search for a sequence of segments wit
 {: .try-it }
 > To find matches for every instance of /l/ followed by /t/:
 > 1. Go to the [<span class="apls-page">Search</span> page](https://apls.pitt.edu/labbcat/search).
-> 1. Select the <span class="layer">segment</span> layer in the selection menu to make the segment pattern input field appear.
-> 1. Click {% include labbcat-icon.html src="add.svg" %} inside of the segment box to make another segment input field appear.
-> 1. Enter `l` in the first segment field and `t` in the second segment field.
+> 1. Select the <span class="layer">segment</span> layer in the selection menu to make the segment pattern input appear.
+> 1. Click {% include labbcat-icon.html src="add.svg" %} inside of the segment box to make another segment pattern input appear.
+> 1. Enter `l` in the first input box and `t` in the second input box.
 > 1. Click the _Search_ button.
 
 You can designate one of the segments in your within-word search as your "token of interest" by clicking the target {% include labbcat-icon.html src="target.svg" %} for that segment.

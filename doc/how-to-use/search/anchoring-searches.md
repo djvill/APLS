@@ -5,7 +5,7 @@ permalink: /doc/anchoring-searches
 parent: Searching the corpus
 grand_parent: How to use APLS
 nav_order: 70
-last_modified_date: 2025-05-27T16:16:14-04:00
+last_modified_date: 2025-10-24T13:31:15-04:00
 ---
 
 # {{ page.title }}
@@ -21,13 +21,13 @@ The following [phrase layers]({{ '/doc/layer-typology#scope' | relative_url }}) 
 {: .try-it }
 > To search for the word "yes" occurring at the beginning of speaker turns:
 > 1. Go to the [<span class="apls-page">Search</span> page](https://apls.pitt.edu/labbcat/search).
-> 1. Select the `timing` project in the layer picker and click the checkbox for the <span class="layer">turn</span> layer to make the turn input field appear.
-> 1. Click the lock {% include labbcat-icon.html src="lock-unlocked.svg" %} on the left side of the turn input field.
-> 1. Enter `yes` into the orthography input field.
+> 1. Select the `timing` project in the layer picker and click the checkbox for the <span class="layer">turn</span> layer to make the turn pattern input appear.
+> 1. Click the lock {% include labbcat-icon.html src="lock-unlocked.svg" %} on the left side of the turn pattern input.
+> 1. Enter `yes` into the orthography input box.
 > 1. Click the _Search_ button.
 > - To compare this with the number of results for "yes" without <span class="layer">turn</span> layer anchoring, click the lock {% include labbcat-icon.html src="lock-locked.svg" %} again to turn off anchoring and click the _Search_ button.
 
-The following [span layers]({{ '/doc/layer-typology#scope' | relative_url }}) have pattern input fields that are like the <span class="layer">orthography</span> layer, with the addition of anchoring options:
+The following [span layers]({{ '/doc/layer-typology#scope' | relative_url }}) have pattern inputs that are like the <span class="layer">orthography</span> layer, with the addition of anchoring options:
 - <span class="layer">comment</span>
 - <span class="layer">noise</span>
 
@@ -38,8 +38,8 @@ The following [segment layers]({{ '/doc/layer-typology#scope' | relative_url }})
 {: .try-it }
 > To find matches for every instance of /s/ followed by /t/ that occurs at the end of words:
 > 1. Go to the [<span class="apls-page">Search</span> page](https://apls.pitt.edu/labbcat/search).
-> 1. Select the <span class="layer">segment</span> layer in the selection menu to make the segment pattern input field appear.
-> 1. Click {% include labbcat-icon.html src="add.svg" %} inside of the segment box to make another segment input field appear.
-> 1. Enter `s` in the first segment field and `t` in the second segment field.
-> 1. Click the lock {% include labbcat-icon.html src="lock-unlocked.svg" %} on the right side of the segment input field.
+> 1. Select the <span class="layer">segment</span> layer in the selection menu to make the <span class="layer">segment</span> pattern input appear.
+> 1. Click {% include labbcat-icon.html src="add.svg" %} inside of the segment box to make another segment pattern input appear.
+> 1. Enter `s` in the first segment input box and `t` in the second segment input box.
+> 1. Click the lock {% include labbcat-icon.html src="lock-unlocked.svg" %} on the right side of the segment pattern input.
 > 1. Click the _Search_ button.

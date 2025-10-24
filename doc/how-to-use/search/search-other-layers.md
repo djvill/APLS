@@ -5,7 +5,7 @@ permalink: /doc/search-other-layers
 parent: Searching the corpus
 grand_parent: How to use APLS
 nav_order: 40
-last_modified_date: 2025-10-24T10:32:35-04:00
+last_modified_date: 2025-10-24T13:31:16-04:00
 ---
 
 # {{ page.title }}
@@ -22,14 +22,14 @@ On this page, we'll discuss the <span class="apls-page">Search</span> page's [la
 
 ## Selecting layers to search
 
-You can select and deselect layers in the layer picker to control which <span class="keyterm">pattern input fields</span> appear in the search matrix.
+You can select and deselect layers in the layer picker to control which <span class="keyterm">pattern inputs</span> appear in the search matrix.
 (By default, the layer picker has the <span class="layer">orthography</span> layer already selected.)
 For example, here's what the search matrix looks like when <span class="layer">orthography</span> is deselected and <span class="layer">segment</span> is selected:
 
 {% include screengrab.html src="search/matrix-segment.png" %}
 
 {: .note .no-collapse}
-> If you select a layer but don't enter anything into its pattern input field, it doesn't get applied to the search.
+> If you select a layer but don't enter anything into its input box, it doesn't get applied to the search.
 
 The layer picker on the <span class="apls-page">Search</span> page works similarly to the [layer picker on the <span class="apls-page">Transcript</span> page]({{ '/doc/view-transcript#selecting-layers-to-display' | relative_url }}), with a few differences:
 
@@ -125,7 +125,7 @@ You can read more about notation systems on the [Layer typology]({{ '/doc/layer-
 
 ### Symbol picker
 
-To make these layers easier to search, layers that don't use English spelling or numbers have an additional part in their pattern input fields: a <span class="keyterm">symbol picker</span>, shown with a {% include labbcat-icon.html src="expand-down.svg" %} icon.
+To make these layers easier to search, layers that don't use English spelling or numbers have an additional part in their pattern inputs: a <span class="keyterm">symbol picker</span>, shown with a {% include labbcat-icon.html src="expand-down.svg" %} icon.
 For example, we can see the {% include labbcat-icon.html src="expand-down.svg" %} icon for the <span class="layer">syllables</span> layer, which uses stress markers and the DISC phonemic alphabet:
 
 {% include screengrab.html src="search/syllables.png" %}
@@ -137,12 +137,12 @@ To bring up the symbol picker, click the {% include labbcat-icon.html src="expan
 This saves you the trouble of needing to memorize things like the DISC alphabet or part-of-speech tags to use all of the <span class="apls-page">Search</span> page's functionalities!
 
 The <span class="layer">syllables</span> symbol picker includes individual IPA symbols (like _θ_), subcategories (like _Diphthongs_), and categories (like _CONSONANT_).
-If you click an **IPA** symbol, it will fill (and briefly highlight) the corresponding **DISC** symbol into the pattern input field.
+If you click an **IPA** symbol, it will fill (and briefly highlight) the corresponding **DISC** symbol into the input box.
 For example, when you click _θ_ for <span class="layer">syllables</span>, APLS fills in this phoneme's DISC symbol, `T`:
 
 {% include screengrab.html src="search/symbol-picker-single.png" %}
 
-You can click multiple symbols/(sub)categories in the label picker to add multiple symbols to the pattern input field.
+You can click multiple symbols/(sub)categories in the label picker to add multiple symbols to the input box.
 For example, here's what it looks like when you take the previous image, then click _ɹ_, then _oʊ_:
 
 {% include screengrab.html src="search/symbol-picker-multiple.png" %}
@@ -178,11 +178,11 @@ The phonological layers (and what is included in their symbol pickers) in APLS a
 {: .try-it }
 > To find all matches for syllables with /ʊ/ that have secondary stress:
 > 1. Go to the [<span class="apls-page">Search</span> page](https://apls.pitt.edu/labbcat/search).
-> 1. Select the `phonology` project in the layer picker and click the checkbox for the <span class="layer">syllables</span> layer to make the syllables input field appear.
+> 1. Select the `phonology` project in the layer picker and click the checkbox for the <span class="layer">syllables</span> layer to make the syllables pattern input appear.
 > 1. Open the symbol picker (click {% include labbcat-icon.html src="expand-down.svg" %}) and select `secondary` under the `STRESS` heading.
-> 1. Enter `.*` after `"` in the syllables input field.
+> 1. Enter `.*` after `"` in the syllables input box.
 > 1. Open the symbol picker again ({% include labbcat-icon.html src="expand-down.svg" %}) and select `ʊ` under the `VOWEL` heading.
-> 1. Enter `.*` after `".*U` in the syllables input field.
+> 1. Enter `.*` after `".*U` in the syllables input box.
 > 1. Click _Search_.
 
 
@@ -212,7 +212,7 @@ Like phonological layers, <span class="layer">part_of_speech</span> includes a [
 {: .try-it }
 > To find matches for every superlative adjective in APLS:
 > 1. Go to the [<span class="apls-page">Search</span> page](https://apls.pitt.edu/labbcat/search).
-> 1. Select the `syntax` project in the layer picker and click the checkbox for the <span class="layer">part_of_speech</span> layer to make the part_of_speech input field appear.
+> 1. Select the `syntax` project in the layer picker and click the checkbox for the <span class="layer">part_of_speech</span> layer to make the part_of_speech pattern input appear.
 > 1. Open the symbol picker (click {% include labbcat-icon.html src="expand-down.svg" %}) and select `JJS`.
 > 1. Click _Search_.
 
@@ -223,9 +223,9 @@ Like phonological layers, <span class="layer">part_of_speech</span> includes a [
 
 ### Searching numeric layers
 
-The pattern input fields for numeric layers allow you to define a numerical range you would like to search for.
+The pattern inputs for numeric layers allow you to define a numerical range you would like to search for.
 
-The following layers use numeric range input fields:
+The following layers use numeric range pattern inputs:
 - <span class="layer">frequency_from_celex</span> 
 - <span class="layer">frequency_in_corpus</span> 
 - <span class="layer">speech_rate</span> 
@@ -234,8 +234,8 @@ The following layers use numeric range input fields:
 {: .try-it }
 > To find every word that only appears in the corpus once or twice:
 > 1. Go to the [<span class="apls-page">Search</span> page](https://apls.pitt.edu/labbcat/search).
-> 1. Select the `lexicon` project in the layer picker and click the checkbox for the <span class="layer">frequency_in_corpus</span> layer to make the frequency_in_corpus input field appear.
-> 1. Enter `1` in the frequency_in_corpus _Minimum_ input field and enter `3` in the frequency_in_corpus _Maximum_ input field.
+> 1. Select the `lexicon` project in the layer picker and click the checkbox for the <span class="layer">frequency_in_corpus</span> layer to make the frequency_in_corpus pattern input appear.
+> 1. Enter `1` in the frequency_in_corpus _Minimum_ input box and enter `3` in the frequency_in_corpus _Maximum_ input box.
 > 1. Click the _Search_ button.
 > - This search will include incomplete words as well.
->   To exclude incomplete words, select _doesn't match_ from the _matches_ drop-down menu and enter `.+~` into the orthography input field.
+>   To exclude incomplete words, select _doesn't match_ from the _matches_ drop-down menu and enter `.+~` into the orthography input box.

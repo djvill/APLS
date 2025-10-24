@@ -5,7 +5,7 @@ permalink: /doc/search-filters-and-options
 parent: Searching the corpus
 grand_parent: How to use APLS
 nav_order: 20
-last_modified_date: 2025-07-07T13:23:26-04:00
+last_modified_date: 2025-10-24T13:31:16-04:00
 ---
 
 # {{ page.title }}
@@ -69,7 +69,7 @@ More information about the <span class="apls-page">Transcripts</span> page can b
 
 <!--  apls-dev has been changed so that the "Exclude utterances with more than n% overlap" option has been removed -->
 
-Below the pattern input fields are checkboxes that let you set certain match parameters for your search.
+Below the pattern inputs are checkboxes that let you set certain match parameters for your search.
 In order, these options are:
 - Only include 'Main speaker' participants.
     - This restricts the search to only include matches from 'Main speaker' participants, excluding matches from interviewers and bystanders.
