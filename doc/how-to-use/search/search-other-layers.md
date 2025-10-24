@@ -5,7 +5,7 @@ permalink: /doc/search-other-layers
 parent: Searching the corpus
 grand_parent: How to use APLS
 nav_order: 40
-last_modified_date: 2025-10-23T13:33:12-04:00
+last_modified_date: 2025-10-24T10:32:35-04:00
 ---
 
 # {{ page.title }}
@@ -50,7 +50,6 @@ Hovering over the names of the layers will display a tooltip giving a brief desc
 
 
 ### Layer picker icons
-{: .no_toc }
 
 If _Show layer icons_ is selected, each layer will have either two or three icons to the right of its checkbox in the layer picker.
 These icons indicate some of the layer's important properties.

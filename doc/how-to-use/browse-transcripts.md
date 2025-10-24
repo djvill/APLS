@@ -4,7 +4,7 @@ contributors: [Dan Villarreal, Jack Rechsteiner]
 permalink: /doc/browse-transcripts
 parent: How to use APLS
 nav_order: 30
-last_modified_date: 2025-10-22T17:06:56-04:00
+last_modified_date: 2025-10-24T10:32:35-04:00
 ---
 
 # {{ page.title }} {#page-title}
@@ -100,7 +100,7 @@ You can read more about how attributes work on the [attribute typology]({{ '/doc
 
 {% assign not_on_page = site.attributes | where_exp: "item", "item.synced.attrib_type == 'transcript'" | where_exp: "item", "item.synced.filterable == false" %}
 
-To save space, the <span class="apls-page">Transcripts</span> page omits several attributes: {% for attr in not_on_page %}<span class="transcript-attr">{{attr.synced.attribute}}</span>{% if forloop.rindex > 2 %}, {% elsif forloop.rindex == 2 %}, and {% endif %}{% endfor %}.
+To save space, the <span class="apls-page">Transcripts</span> page omits several attributes: <span class="transcript-attr">episode</span>, {% for attr in not_on_page %}<span class="transcript-attr">{{attr.synced.attribute}}</span>{% if forloop.rindex > 2 %}, {% elsif forloop.rindex == 2 %}, and {% endif %}{% endfor %}.
 To view all attributes for a transcript, click {% include labbcat-icon.html src="csv.svg" %} on the right-hand side to open its <span class="apls-page">Transcript attributes</span> page.
 For example, here's the <span class="apls-page">Transcript attributes</span> page for `CB01reading1.eaf`:
 
