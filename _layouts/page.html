@@ -34,4 +34,13 @@ window.addEventListener('DOMContentLoaded', () => {
     });
   });
 });
+/* Close modal if escape is pressed */
+/* https://justincypret.com/blog/adding-a-keyboard-shortcut-for-global-search */
+document.addEventListener("keyup", e => {
+  if (e.key !== "Escape" || e.ctrlKey || e.metaKey) return;
+  if (/^(?:input|textarea|select|button)$/i.test(e.target.tagName)) return;
+
+  e.preventDefault();
+  modal.style.display = "none";
+});
 </script>
