@@ -161,6 +161,16 @@ screengrabs:
   width: width$search_tabs
   height: height$search_filter_tabs + 80
 
+- screengrab: search/overwrite-filter.png
+  instructions:
+    - Log in as test-student
+    - Set browser zoom to 100%
+    - Load https://apls.pitt.edu/labbcat/transcripts
+    - Select reading, Cranberry Township
+    - Click Layered Search
+    - Click Filter Participants
+    - Save
+
 - screengrab: transcript/layer-alignment.png
   instructions:
     - Log in as test-student
@@ -1877,3 +1887,78 @@ screengrabs:
   offset_y: offset_y$search_input_syllables_top
   width: width$search_input_picker
   height: height$search_input_picker
+
+- screengrab: search/participants.png
+  instructions:
+    - Log in as test-student
+    - Set browser zoom to 100%
+    - Load https://apls.pitt.edu/labbcat/search
+    - Open Participants tab
+    - Save
+
+- screengrab: participants/from-search.png
+  instructions:
+    - Log in as test-student
+    - Set browser zoom to 100%
+    - Load https://apls.pitt.edu/labbcat/search
+    - Click Filter Participants
+    - Save
+
+- screengrab: search/participant-filter.png
+  instructions:
+    - Log in as test-student
+    - Set browser zoom to 100%
+    - Load https://apls.pitt.edu/labbcat/participants
+    - Click Male
+    - Click Layered Search
+    - Save
+
+- screengrab: search/participants-selected.png
+  instructions:
+    - Log in as test-student
+    - Set browser zoom to 100%
+    - Load https://apls.pitt.edu/labbcat/participants
+    - Select CB01 and FH05
+    - Click Layered Search
+    - Save    
+
+- screengrab: transcripts/participant-filter-from-search.png
+  instructions:
+    - Log in as test-student
+    - Set browser zoom to 100%
+    - Load https://apls.pitt.edu/labbcat/participants
+    - Click Male
+    - Click Layered Search
+    - Click Filter Transcripts
+    - Save
+
+- screengrab: search/both-filters.png
+  instructions:
+    - Log in as test-student
+    - Set browser zoom to 100%
+    - Load https://apls.pitt.edu/labbcat/participants
+    - Click Male
+    - Click Layered Search
+    - Click Filter Transcripts
+    - Click reading
+    - Click Layered Search
+    - Save
+
+- screengrab: search/participants-uploaded.png
+  instructions:
+    - Log in as test-student
+    - Set browser zoom to 100%
+    - Load https://apls.pitt.edu/labbcat/participants
+    - Select CB01, CB05, CB06
+    - Export Attributes
+    - Load https://apls.pitt.edu/labbcat/search
+    - In the Participants tab, upload participants.csv
+    - Save
+    
+- screengrab: search/transcripts.png
+  instructions:
+    - Log in as test-student
+    - Set browser zoom to 100%
+    - Load https://apls.pitt.edu/labbcat/search
+    - Open Transcripts tab
+    - Save
