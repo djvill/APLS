@@ -5,7 +5,7 @@ permalink: /doc/regex
 parent: Searching the corpus
 grand_parent: How to use APLS
 nav_order: 30
-last_modified_date: 2025-10-24T13:31:16-04:00
+last_modified_date: 2025-10-28T16:54:33-04:00
 ---
 
 # {{ page.title }}
@@ -283,7 +283,7 @@ When you perform a search and the [<span class="apls-page">Search results</span>
 APLS contains over 400,000 word tokens, so often a search will result in a lot more than a handful of matches!
 Even if you export your search results as a `.csv`, it can be difficult to identify all the unique item matches if one or two items are much more frequent than the rest.
 
-The {% include labbcat-icon.html src="book.svg" %} _Dictionary_ export option on the [<span class="apls-page">Search results</span> page]({{ '/doc/export-data#search-results-page' | relative_url }}) lets you download a `.txt` file of every unique individual item that your search matched.
+The _Export Dictionary_ export option on the [<span class="apls-page">Search results</span> page]({{ '/doc/export-data#search-results-page' | relative_url }}) lets you download a `.txt` file of every unique individual item that your search matched.
 This can be helpful for quickly checking that the matches you got line up with what you were expecting!
 
 {: .try-it }

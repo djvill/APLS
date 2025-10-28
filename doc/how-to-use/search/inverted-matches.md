@@ -5,7 +5,7 @@ permalink: /doc/inverted-matches
 parent: Searching the corpus
 grand_parent: How to use APLS
 nav_order: 50
-last_modified_date: 2025-10-24T13:31:15-04:00
+last_modified_date: 2025-10-28T16:54:33-04:00
 ---
 
 # {{ page.title }}
@@ -61,7 +61,7 @@ To exclude stop-words, set the <span class="layer">orthography</span> layer to _
 > 1. Click the _Search_ button.
 
 There is no definitive list of stop-words---different analyses may require wider or narrower definitions of how to decide whether a word should be excluded.
-To guide your decisions, it can be useful to create a wider search initially, then use the {% include labbcat-icon.html src="book.svg" %} _Dictionary_ export option to [find the unique words]({{ '/doc/regex#checking-your-search-matches' | relative_url }}) that your search returns.
+To guide your decisions, it can be useful to create a wider search initially, then use the _Export Dictionary_ export option to [find the unique words]({{ '/doc/regex#checking-your-search-matches' | relative_url }}) that your search returns.
 
 {% comment %}
 TODO figure out how to deal w/ empty annotations.
