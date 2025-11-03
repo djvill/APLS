@@ -1962,3 +1962,225 @@ screengrabs:
     - Load https://apls.pitt.edu/labbcat/search
     - Open Transcripts tab
     - Save
+
+- screengrab: matches/context-utterance.png
+  instructions:
+    - Log in as test-student
+    - Set browser zoom to 100%
+    - Load https://apls.pitt.edu/labbcat/search
+    - Select Only include matches from the main participant in a transcript
+    - Search for orthography=like
+    - On matches page, set Context to the entire utterance
+    - Save
+
+- screengrab: transcript/matches.png
+  instructions:
+    - Log in as test-student
+    - Set browser zoom to 100%
+    - Load https://apls.pitt.edu/labbcat/search
+    - Select Only include matches from the main participant in a transcript
+    - Search for orthography=like
+    - On matches page, click the third result
+    - Save
+
+- screengrab: matches/coding-side-by-side.png
+  instructions:
+    - Log in as test-student
+    - Set browser zoom to 100%
+    - Load https://apls.pitt.edu/labbcat/search
+    - Select Only include matches from the main participant in a transcript
+    - Search for orthography=like
+    - On matches page, set Context to the entire utterance
+    - Export CSV
+    - Open CSV in Excel, side-by-side with Chrome (move the divider to about 2/3)
+    - In Chrome, scroll the center of the matches into view
+    - In Excel, enter some data in the last column of the CSV
+    - Save (use the Snipping Tool's rectangle selector)
+
+- screengrab: matches/coding-side-by-side-hide.png
+  instructions:
+    - Log in as test-student
+    - Set browser zoom to 100%
+    - Load https://apls.pitt.edu/labbcat/search
+    - Select Only include matches from the main participant in a transcript
+    - Search for orthography=like
+    - On matches page, set Context to the entire utterance
+    - Export CSV
+    - Open CSV in Excel, side-by-side with Chrome (move the divider to about 2/3)
+    - In Chrome, scroll the center of the matches into view
+    - In Excel, enter some data in the last column of the CSV
+    - Hide columns between After Match and Function of like
+    - Save (use the Snipping Tool's rectangle selector)
+
+- screengrab: matches/coding-just-in-csv.png
+  instructions:
+    - Log in as test-student
+    - Set browser zoom to 100%
+    - Load https://apls.pitt.edu/labbcat/search
+    - Select Only include matches from the main participant in a transcript
+    - Search for orthography=like
+    - On matches page, set Context to the entire utterance
+    - Export CSV
+    - Open CSV in Excel
+    - Enter some data in the last column of the CSV
+    - Hide all columns before Before Match and between After Match and Function of like
+    - Save
+
+- screengrab: matches/orthography-the.png
+  instructions:
+    - Log in as test-student
+    - Set browser zoom to 100%
+    - Load https://apls.pitt.edu/labbcat/search
+    - Filter for CB01pairs.eaf
+    - Search for orthography=the
+    - Save matches page
+  offset_x: 40
+  offset_y: offset_y$page_top
+  width: 1370
+  height: 395
+
+- screengrab: matches/coding-csv-export.png
+  instructions:
+    - Log in as test-student
+    - Set browser zoom to 100%
+    - Load https://apls.pitt.edu/labbcat/search
+    - Filter for CB01pairs.eaf
+    - Search for orthography=the
+    - "On matches page, `window.scrollTo(0, 500);`"
+    - Open CSV Export panel
+    - Select (always) if manually, automatically, or default aligned
+    - Save
+  offset_x: 45
+  offset_y: 402
+  width: 875
+  height: 80
+
+- screengrab: matches/csv-pre-coding.png
+  instructions:
+    - Log in as test-student
+    - Set browser zoom to 100%
+    - Load https://apls.pitt.edu/labbcat/search
+    - Filter for CB01pairs.eaf
+    - Search for orthography=the
+    - "On matches page, `window.scrollTo(0, 500);`"
+    - Open CSV Export panel
+    - Select (always) if manually, automatically, or default aligned
+    - CSV Export
+    - Open in Excel
+    - Save
+
+- screengrab: matches/exported-textgrids.png
+  instructions:
+    - Log in as test-student
+    - Set browser zoom to 100%
+    - Load https://apls.pitt.edu/labbcat/search
+    - Filter for CB01pairs.eaf
+    - Search for orthography=the
+    - On matches page, Utterance Export
+    - Unzip fragments_orthography_the
+    - Open in File Explorer, with Navigation Pane hidden
+    - Save
+
+- screengrab: code-tokens/run.png
+  instructions:
+    - Download CodeTokens.praat from https://raw.githubusercontent.com/djvill/APLS/main/files/praat-coding-helper/codeTokens.praat
+    - Open in Praat
+    - Hover over Run > Run...
+    - Save
+  overlay:
+    - image: _arrow.png
+      offset_x: 495
+      offset_y: 95
+
+- screengrab: code-tokens/basic-settings.png
+  instructions:
+    - Log in as test-student
+    - Set browser zoom to 100%
+    - Load https://apls.pitt.edu/labbcat/search
+    - Filter for CB01pairs.eaf
+    - Search for orthography=the
+    - On matches page, open CSV Export panel
+    - Select (always) if manually, automatically, or default aligned
+    - CSV Export
+    - Utterance Export
+    - Audio Export
+    - Unzip folders
+    - In Praat, run CodeTokens.praat
+    - Enter orthography=the under Search name
+    - Save
+
+- screengrab: code-tokens/advanced-settings.png
+  instructions:
+    - Log in as test-student
+    - Set browser zoom to 100%
+    - Load https://apls.pitt.edu/labbcat/search
+    - Filter for CB01pairs.eaf
+    - Search for orthography=the
+    - On matches page, open CSV Export panel
+    - Select (always) if manually, automatically, or default aligned
+    - CSV Export
+    - Utterance Export
+    - Audio Export
+    - Unzip folders
+    - In Praat, run CodeTokens.praat
+    - Enter orthography=the under Search name
+    - Set autoplays to 2
+    - Click Advanced settings
+    - Save (you might need to move window to a bigger screen)
+
+- screengrab: code-tokens/coding-screen.png
+  instructions:
+    - Log in as test-student
+    - Set browser zoom to 100%
+    - Load https://apls.pitt.edu/labbcat/search
+    - Filter for CB01pairs.eaf
+    - Search for orthography=the
+    - On matches page, open CSV Export panel
+    - Select (always) if manually, automatically, or default aligned
+    - CSV Export
+    - Utterance Export
+    - Audio Export
+    - Unzip folders
+    - In Praat, run CodeTokens.praat
+    - Enter orthography=the under Search name
+    - Click Continue
+    - Save
+
+- screengrab: code-tokens/praat-all-done.png
+  instructions:
+    - Log in as test-student
+    - Set browser zoom to 100%
+    - Load https://apls.pitt.edu/labbcat/search
+    - Filter for CB01pairs.eaf
+    - Search for orthography=the
+    - On matches page, open CSV Export panel
+    - Select (always) if manually, automatically, or default aligned
+    - CSV Export
+    - Utterance Export
+    - Audio Export
+    - Unzip folders
+    - In Praat, run CodeTokens.praat
+    - Enter orthography=the under Search name
+    - Click Continue
+    - Code tokens
+    - Save 'All done!' pause window
+
+- screengrab: code-tokens/csv-post-coding.png
+  instructions:
+    - Log in as test-student
+    - Set browser zoom to 100%
+    - Load https://apls.pitt.edu/labbcat/search
+    - Filter for CB01pairs.eaf
+    - Search for orthography=the
+    - On matches page, open CSV Export panel
+    - Select (always) if manually, automatically, or default aligned
+    - CSV Export
+    - Utterance Export
+    - Audio Export
+    - Unzip folders
+    - In Praat, run CodeTokens.praat
+    - Enter orthography=the under Search name
+    - Click Continue
+    - Code tokens
+    - Open exported csv in Excel
+    - Save
