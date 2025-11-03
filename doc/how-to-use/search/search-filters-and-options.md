@@ -5,7 +5,7 @@ permalink: /doc/search-filters-and-options
 parent: Searching the corpus
 grand_parent: How to use APLS
 nav_order: 20
-last_modified_date: 2025-10-28T16:51:11-04:00
+last_modified_date: 2025-11-03T15:38:43-05:00
 ---
 
 # {{ page.title }}
@@ -25,6 +25,7 @@ You can also specify additional match and display options for your search using 
 The participants filter is located in the _Participants_ tab.
 Here's what the _Participants_ tab looks like when you first load the <span class="apls-page">Search</span> page:
 
+{% comment %}TODO crop screengrabs on this page{% endcomment %}
 {% include screengrab.html src="search/participants.png" %}
 
 There are two ways to filter participants: click the _Filter Participants_ button or upload a file with a list of participants.
