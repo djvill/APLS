@@ -4,7 +4,7 @@ permalink: /doc/codetokens-praat-script
 parent: Coding tokens
 grand_parent: How to use APLS
 nav_order: 10
-last_modified_date: 2025-11-03T16:26:59-05:00
+last_modified_date: 2025-11-03T16:42:43-05:00
 ---
 
 # {{ page.title }}
@@ -27,7 +27,7 @@ You only need to complete these steps once per computer.
 1. Download Praat from <https://praat.org/> and install it on your computer.
    - If you already have Praat, make sure it's at least version 6.4.32. You can check your Praat version in the Praat Objects window by selecting _Help_ > _About Praat_.
 1. Download `CodeTokens.praat`
-   - Go to <https://raw.githubusercontent.com/djvill/APLS/main/files/praat-coding-helper/codeTokens.praat>, right-click, select _Save as..._, and save somewhere on your computer.
+   - Go to <https://raw.githubusercontent.com/djvill/APLS/refs/heads/main/files/praat-coding-helper/CodeTokens.praat>, right-click, select _Save as..._, and save somewhere on your computer.
    - When you open `CodeTokens.praat`, your computer will probably open it in Praat automatically. If not, open Praat and select _Praat_ > _Open Praat script..._
 
 
