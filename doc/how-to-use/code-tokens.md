@@ -3,7 +3,8 @@ title: Coding tokens
 permalink: /doc/code-tokens
 parent: How to use APLS
 nav_order: 65
-last_modified_date: 2025-11-03T16:26:58-05:00
+has_toc: false
+last_modified_date: 2025-11-11T14:26:20-05:00
 ---
 
 # {{ page.title }}
@@ -71,8 +72,8 @@ This scenario generally **doesn't** apply to phonological variables (like [ɪŋ]
 Instead, these variables need to be coded by [listening to audio](#coding-tokens-by-listening-to-audio).
 
 This is because annotations on [phonological layers]({{ '/doc/layer-typology#data-type' | relative_url }}) like <span class="layer">segment</span> are **phonemic, not phonetic**.
-To generate the <span class="layer">segment</span> layer, APLS first uses [<span class="keyterm">pronouncing dictionaries</span>]({{ '/doc/custom-dictionary' | relative_url }}) to match each word's <span class="layer">orthography</span> annotation to a phonemic representation (like /'wɝɹkɪŋ/ for _working_, /'sʌmθɪŋ/ for _something_), then uses the [HTK] algorithm to find the start and end time of each of these sounds.
-While some <span class="layer">orthography</span> annotations have multiple phonemic representations in the dictionary, this is restricted to homophones (like _desert_ as /də'zɝt/ vs. /'dɛzɚt/) or reduced vs. unreduced pronounciations of highly common words (like _to_ as /tə/ vs. /'tu/).
+To generate the <span class="layer">segment</span> layer, APLS first uses [<span class="keyterm">pronouncing dictionaries</span>]({{ '/doc/custom-dictionary' | relative_url }}) to match each word's <span class="layer">orthography</span> annotation to a phonemic representation (like /ˈwɝɹkɪŋ/ for _working_, /ˈsʌmθɪŋ/ for _something_), then uses the [HTK] algorithm to find the start and end time of each of these sounds.
+While some <span class="layer">orthography</span> annotations have multiple phonemic representations in the dictionary, this is restricted to homophones (like _desert_ as /dəˈzɝt/ vs. /ˈdɛzɚt/) or reduced vs. unreduced pronounciations of highly common words (like _to_ as /tə/ vs. /ˈtu/).
 As a result, _working_ and _something_ are always represented in APLS as ending with /ɪŋ/, regardless of whether the speaker said [wɝɹkɪ**ŋ**] or [wɝɹkɪ**n**].
 
 {% comment %}

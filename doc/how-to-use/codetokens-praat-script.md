@@ -4,13 +4,13 @@ permalink: /doc/codetokens-praat-script
 parent: Coding tokens
 grand_parent: How to use APLS
 nav_order: 10
-last_modified_date: 2025-11-03T16:42:43-05:00
+last_modified_date: 2025-11-11T14:26:20-05:00
 ---
 
 # {{ page.title }}
 {:.no_toc}
 
-Many <span class="keyterm">linguistic variables</span> that are important to language variation and change research in Pittsburgh English (or Englishes more generally) require a tedious and time-consuming step in the data preparation workflow: <span class="keyterm">auditory coding</span>, listening to individual tokens of a variable and determining which <span class="keyterm">variant</span> each token represents.
+Many <span class="keyterm">linguistic variables</span> that are important to language variation and change research require a tedious and time-consuming step in the data preparation workflow: <span class="keyterm">auditory coding</span>, listening to individual tokens of a variable and determining which <span class="keyterm">variant</span> each token represents.
 One way to do auditory coding in APLS would be to [open each search result on the <span class="apls-page">Transcript</span> page](#viewing-tokens-on-the-transcript-page) and use the [word menu]({{ '/doc/view-transcript#listening-to-the-transcript' | relative_url }}) to play just the utterance that contains the token.
 But we've created a better way: `CodeTokens.praat`.
 
@@ -26,8 +26,7 @@ You only need to complete these steps once per computer.
 
 1. Download Praat from <https://praat.org/> and install it on your computer.
    - If you already have Praat, make sure it's at least version 6.4.32. You can check your Praat version in the Praat Objects window by selecting _Help_ > _About Praat_.
-1. Download `CodeTokens.praat`
-   - Go to <https://raw.githubusercontent.com/djvill/APLS/refs/heads/main/files/praat-coding-helper/CodeTokens.praat>, right-click, select _Save as..._, and save somewhere on your computer.
+1. Download `CodeTokens.praat` by clicking this link: <https://github.com/djvill/code-tokens-dot-praat/releases/download/v1.0.0/CodeTokens.praat>
    - When you open `CodeTokens.praat`, your computer will probably open it in Praat automatically. If not, open Praat and select _Praat_ > _Open Praat script..._
 
 

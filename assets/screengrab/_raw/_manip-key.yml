@@ -2083,7 +2083,7 @@ screengrabs:
 
 - screengrab: code-tokens/run.png
   instructions:
-    - Download CodeTokens.praat from https://raw.githubusercontent.com/djvill/APLS/main/files/praat-coding-helper/codeTokens.praat
+    - Download CodeTokens.praat from https://github.com/djvill/code-tokens-dot-praat/releases/download/v1.0.0/CodeTokens.praat
     - Open in Praat
     - Hover over Run > Run...
     - Save
