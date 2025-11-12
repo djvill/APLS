@@ -6,7 +6,7 @@ parent: How to use APLS
 has_children: yes
 has_toc: no
 nav_order: 50
-last_modified_date: 2025-10-24T13:31:17-04:00
+last_modified_date: 2025-11-12T12:17:34-05:00
 ---
 
 # {{ page.title }}
@@ -29,6 +29,34 @@ If you would like to understand the data structure that the <span class="apls-pa
 If you are looking for information on the <span class="apls-page">Search results</span> page, go to the [Exporting data]({{ '/doc/export-data' | relative_url }}) documentation page.
 
 {% include page_toc.html collapsible=true %}
+
+{% comment %}
+<!-- To replace the following section -->
+## Search gallery
+
+Here's a selection of searches to give you a flavor of what's possible with APLS's search capabilities:
+
+<span
+  id="expand-ex"
+  class="btn"
+  style="display: inline-block;"
+  onclick="document.querySelectorAll('blockquote > details').forEach(a => a.setAttribute('open', '')); document.getElementById('expand-ex').style.display = 'none'; document.getElementById('collapse-ex').style.display = 'inline-block';"
+  >Expand all examples</span>
+<span
+  id="collapse-ex"
+  class="btn"
+  style="display: none;"
+  onclick="document.querySelectorAll('blockquote > details').forEach(a => a.removeAttribute('open')); document.getElementById('collapse-ex').style.display = 'none'; document.getElementById('expand-ex').style.display = 'inline-block';"
+  >Collapse all examples</span>
+
+<!-- Then a bunch of -->
+- [Search for a single word]({{ '/doc/your-first-search' | relative_url }})
+  
+  <!-- Something similar to _includes/compare-ui.html -->
+  <!-- {% include compare-ui.html file="layer-picker/search" title_suffix="Search page" caption='The layer picker when first loading the <span class="apls-page">Search</span> page' %} -->
+
+
+{% endcomment %}
 
 ## What you can do on the <span class="apls-page">Search</span> page
 
