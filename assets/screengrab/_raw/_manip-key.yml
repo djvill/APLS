@@ -871,17 +871,17 @@ screengrabs:
   width: width$transcript_content
   height: 615
 
-- screengrab: transcript/word-noise.png
+- screengrab: transcript/word-noise-comment.png
   instructions:
     - Log in as test-student
     - Set browser zoom to 100%
     - Load https://apls.pitt.edu/labbcat/transcript?transcript=CB01interview3.eaf
-    - "`window.scrollTo(0, 1160); document.getElementById('media').remove();`"
+    - "`window.scrollTo(0, 8220); document.getElementById('media').remove();`"
     - Save
   offset_x: offset_x$transcript_content_left
   offset_y: offset_y$page_top
   width: width$transcript_content
-  height: 360
+  height: 380
 
 - screengrab: transcript/multiple-layers.png
   instructions:

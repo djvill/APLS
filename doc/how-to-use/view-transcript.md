@@ -6,7 +6,7 @@ parent: How to use APLS
 has_children: yes
 has_toc: no
 nav_order: 20
-last_modified_date: 2025-11-12T09:39:31-05:00
+last_modified_date: 2025-11-12T11:04:45-05:00
 ---
 
 # {{ page.title }}
@@ -173,11 +173,13 @@ In APLS, everything you see in the transcript body is data: <span class="keyterm
 (These [data structures]({{ '/doc/data-organization' | relative_url }}) are what make APLS so powerful---it turns audio recordings into structured linguistic data, allowing us to search, export, and measure the entire corpus in a fraction of the time.)
 Even when you think you're just [reading the transcript](#reading-the-transcript), you're actually viewing layer data!
 
-When the <span class="apls-page">Transcript</span> page is first loaded, two layers are displayed in the transcript body: <span class="layer">word</span> (colored {% include layer-color.html layer="word" %}) and <span class="layer">noise</span> (colored {% include layer-color.html layer="noise" %}).
-Each turn consists of at least one annotation on either of these layers.
-For example, some of the following turns consist of only <span class="layer">word</span> annotations, one consists of only a <span class="layer">noise</span> annotation, and some consist of both.
+When the <span class="apls-page">Transcript</span> page is first loaded, three layers are displayed in the transcript body: <span class="layer">word</span> (colored {% include layer-color.html layer="word" %}), <span class="layer">noise</span> (colored {% include layer-color.html layer="noise" %}), and <span class="layer">comment</span> (colored {% include layer-color.html layer="comment" %}).
+Each line consists of at least one <span class="layer">word</span> or <span class="layer">noise</span> annotation.
+For example, let's look at the following lines from `CB01interview3.eaf`:
 
-{% include screengrab.html src="transcript/word-noise.png" %}
+{% include screengrab.html src="transcript/word-noise-comment.png" %}
+
+As you can see, the first line includes several <span class="layer">word</span> annotations and one <span class="layer">noise</span> annotation, the last `Barbara Johnstone` line includes only <span class="layer">word</span> annotations, and the last `CB01` line includes only a <span class="layer">noise</span> annotation.
 
 You can customize which layers are displayed using the [layer picker](#selecting-layers-to-display), discussed below.
 For example, here are the first few lines of `CB01interview3.eaf` again, now with the following layers selected: <span class="layer">speech_rate</span> ({% include layer-color.html layer="speech_rate" %}), <span class="layer">frequency_from_celex</span> ({% include layer-color.html layer="frequency_from_celex" %}), <span class="layer">word</span> ({% include layer-color.html layer="word" %}), and <span class="layer">segment</span> ({% include layer-color.html layer="segment" %}).
@@ -433,11 +435,12 @@ The <span class="layer">word</span> layer cannot be deselected, which is why its
 We'll see something similar below when we discuss [empty layers](#empty-layers).
 
 {: .note }
-> Although the <span class="layer">noise</span> layer is also pre-selected when you load the <span class="apls-page">Transcript</span> page, it can be turned off.
-> Since some utterances consist of [just <span class="layer">noise</span> annotations](#everything-you-see-is-data), <span class="layer">noise</span> is pre-selected so those utterances don't look empty.
+> The <span class="layer">noise</span> and <span class="layer">comment</span> layers are also pre-selected when you load the <span class="apls-page">Transcript</span> page, but they can be turned off (unlike <span class="layer">word</span>).
+> The <span class="layer">noise</span> is pre-selected so that [utterances consisting of just <span class="layer">noise</span> annotations](#everything-you-see-is-data) don't look empty.
+> The <span class="layer">comment</span> is pre-selected so you can read about any context the original transcribers thought was relevant.
 
 {% comment %}
-<!-- Demo this with multiple layers -->
+<!-- TODO Demo this with multiple layers -->
 In addition, the order of the layers in the transcript body matches the order in the layer picker.
 {% endcomment %}
 
@@ -759,7 +762,7 @@ The _Export_ tab in the transcript header allows you to download the current tra
 
 At a minimum, the exported file will include the <span class="layer">utterance</span> and <span class="layer">word</span> layers.
 It will also include any layers you have [selected](#toggling-layers-on-and-off) to show in the transcript body.
-Here's what the exported TextGrid looks like when only the <span class="layer">word</span> layer is selected (<span class="layer">noise</span> is deselected):
+Here's what the exported TextGrid looks like when only the <span class="layer">word</span> layer is selected (<span class="layer">noise</span> and <span class="layer">comment</span> are deselected):
 
 {% include screengrab.html src="transcript/export-praat-0.png" %}
 
@@ -879,7 +882,7 @@ These commands are:
 {: .note}
 > If Praat isn't already open on your computer, these commands will also open Praat.
 
-Here's what it looks like when you select _Open TextGrid in Praat_ for the first <span class="layer">utterance</span> of `CB01interview3.eaf` when only <span class="layer">word</span> is selected in the [layer picker](#selecting-layers-to-display) (<span class="layer">noise</span> is deselected):
+Here's what it looks like when you select _Open TextGrid in Praat_ for the first <span class="layer">utterance</span> of `CB01interview3.eaf` when only <span class="layer">word</span> is selected in the [layer picker](#selecting-layers-to-display):
 
 {% include screengrab.html src="transcript/textgrid.png" %}
 
