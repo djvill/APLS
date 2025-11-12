@@ -118,6 +118,7 @@ screengrabs:
     - Set browser zoom to 100%
     - Log into server and stop Tomcat
     - Load https://apls.pitt.edu/labbcat
+    - Make window take up half-screen horizontally and just tall enough vertically that the error is left-aligned
     - Save
   offset_x: offset_x$window_left
   offset_y: offset_y$window_top
@@ -411,6 +412,7 @@ screengrabs:
   height: 518
 
 - screengrab: transcripts/export-attributes-csv-raw.png
+  instructions:
     - Log in as test-student
     - Set browser zoom to 100%
     - Load https://apls.pitt.edu/labbcat/transcripts
@@ -2196,3 +2198,14 @@ screengrabs:
     - Code tokens
     - Open exported csv in Excel
     - Save
+
+- screengrab: no-page/name-not-resolved.png
+  instructions:
+    - Set browser zoom to 100%
+    - Load https://apl.pitt.edu/labbcat/
+    - Make window take up half-screen horizontally and just tall enough vertically that the error is left-aligned
+    - Save
+
+- screengrab: no-page/noload.png
+  instructions:
+    - This is hard to replicate because it happened when there was a larger Pitt IT outage
