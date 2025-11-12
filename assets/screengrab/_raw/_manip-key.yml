@@ -248,6 +248,18 @@ screengrabs:
   width: 985
   height: 395
 
+- screengrab: transcript/permalink-dude.png
+  instructions:
+    - Log in as test-student
+    - Set browser zoom to 100%
+    - Load https://apls.pitt.edu/labbcat/transcript?transcript=HD23PittsburgheseAAVE.eaf#ew_0_1354213
+    - "`window.scrollTo(0, 1910); document.getElementById('media').remove();`"
+    - Save
+  offset_x: offset_x$window_left
+  offset_y: offset_y$window_top
+  width: offset_x$transcript_content_left + width$transcript_content
+  height: 230
+
 - screengrab: transcripts/overview.png
   instructions:
     - Log in as test-student

@@ -6,7 +6,7 @@ parent: How to use APLS
 has_children: yes
 has_toc: no
 nav_order: 20
-last_modified_date: 2025-10-24T10:28:43-04:00
+last_modified_date: 2025-11-12T09:39:31-05:00
 ---
 
 # {{ page.title }}
@@ -617,8 +617,12 @@ This will update the URL in the address bar and highlight the <span class="layer
 
 {% include screengrab.html src="transcript/permalink-utterance.png" %}
 
-Permalinks can be useful for sharing with collaborators, bookmarking noteworthy moments in an interview, or [sending corrections to corpus maintainers]({{ '/doc/citing-contributing#contributing-back' | relative_url }}).
-You can also figure out [where an <span class="layer">utterance</span> begins and ends](#turns-and-utterances) by creating an utterance permalink, since this highlights the entire <span class="layer">utterance</span>:
+Permalinks can be useful for sharing data with colleagues, bookmarking noteworthy moments in an interview, or [sending corrections to corpus maintainers]({{ '/doc/citing-contributing#contributing-back' | relative_url }}).
+For example, you can send someone the following permalink if you want to share an example of _dude_ being used as a pronoun: <https://apls.pitt.edu/labbcat/transcript?transcript=HD23PittsburgheseAAVE.eaf#ew_0_1354213>.
+
+{% include screengrab.html src="transcript/permalink-dude.png" %}
+
+You can also figure out [where an utterance begins and ends](#turns-and-utterances) by creating an utterance permalink, since this highlights the entire <span class="layer">utterance</span>:
 
 {% include screengrab.html src="transcript/permalink-utterance-long.png" %}
 
