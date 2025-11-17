@@ -13,13 +13,14 @@ synced:
   transcripts_exportable: yes
   matches_exportable: yes
   searchable: min_max
+  search_numValidLabels: 0
   search_targetable: 'no'
   transcript_selectable: yes
   export_includeCounts: no
   export_includeAnchorSharing: no
   color_hex: '#304552'
   extra: (none)
-last_sync_modified_date: 2025-09-13T22:23:08-0400
+last_sync_modified_date: 2025-11-17T11:32:47-0500
 notation:
   primary: Decimal
   missing: |
@@ -38,7 +39,7 @@ versions:
   first_appeared: 0.1.2
   last_modified: 0.1.2
 color: slate gray
-last_modified_date: 2025-09-15T09:59:45-04:00
+last_modified_date: 2025-11-17T11:34:49-05:00
 ---
 
 **within-participant**

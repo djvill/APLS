@@ -13,14 +13,15 @@ synced:
   scope: word
   transcripts_exportable: yes
   matches_exportable: yes
-  searchable: regex
+  searchable: regex_caseSensitive
+  search_numValidLabels: 50
   search_targetable: word
   transcript_selectable: yes
   export_includeCounts: yes
   export_includeAnchorSharing: yes
   color_hex: '#13c736'
   extra: (none)
-last_sync_modified_date: 2025-09-13T22:23:08-0400
+last_sync_modified_date: 2025-11-17T11:32:47-0500
 notation:
   primary: DISC
   additional: Stress markers
@@ -43,7 +44,7 @@ versions:
   first_appeared: 0.1.0
   last_modified: 0.1.2
 color: kelly green
-last_modified_date: 2025-09-15T09:59:49-04:00
+last_modified_date: 2025-11-17T11:34:54-05:00
 ---
 
 **Fill longer description here**

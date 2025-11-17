@@ -13,6 +13,7 @@ synced:
   transcripts_exportable: yes
   matches_exportable: yes
   searchable: regex
+  search_numValidLabels: 0
   search_targetable: 'no'
   transcript_selectable: yes
   export_includeCounts: yes
@@ -23,7 +24,7 @@ synced:
     ON cxen_wordform.IdNum \\= cxen_wordformortho.IdNum\\r\\n INNER JOIN cxen_lemma
     ON cxen_wordform.IdNumLemma \\= cxen_lemma.IdNumLemma\\r\\n WHERE cxen_wordformortho.WordDia
     \\= ?\\r\\n ORDER BY cxen_lemma.Cob DESC\r\nPronounceOverridesCelex=false\r\nLayerId=2\r\n"
-last_sync_modified_date: 2025-09-13T22:23:08-0400
+last_sync_modified_date: 2025-11-17T11:32:47-0500
 notation:
   primary: English spelling (lowercase)
   missing: Word is not in CELEX
@@ -37,7 +38,7 @@ versions:
   first_appeared: 0.1.0
   last_modified: 0.1.0
 color: maroon
-last_modified_date: 2025-09-15T09:59:46-04:00
+last_modified_date: 2025-11-17T11:34:50-05:00
 ---
 
 **Fill longer description here**

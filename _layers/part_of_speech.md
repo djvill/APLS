@@ -13,13 +13,14 @@ synced:
   transcripts_exportable: yes
   matches_exportable: yes
   searchable: regex
+  search_numValidLabels: 42
   search_targetable: word
   transcript_selectable: yes
   export_includeCounts: yes
   export_includeAnchorSharing: yes
   color_hex: '#7efe6d'
   extra: (none)
-last_sync_modified_date: 2025-09-13T22:23:08-0400
+last_sync_modified_date: 2025-11-17T11:32:47-0500
 notation:
   primary: Treebank part-of-speech tags
   missing: Word is redacted or an incomplete word
@@ -33,7 +34,7 @@ versions:
   first_appeared: 0.1.1
   last_updated: 0.1.2
 color: light green
-last_modified_date: 2025-09-15T09:59:48-04:00
+last_modified_date: 2025-11-17T11:34:52-05:00
 ---
 
 

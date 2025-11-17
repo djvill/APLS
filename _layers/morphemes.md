@@ -13,6 +13,7 @@ synced:
   transcripts_exportable: yes
   matches_exportable: yes
   searchable: regex
+  search_numValidLabels: 0
   search_targetable: 'no'
   transcript_selectable: yes
   export_includeCounts: yes
@@ -27,7 +28,7 @@ synced:
     \\= cxen_lemma.IdNumLemma\\r\\n INNER JOIN cxen_lemmamorphologyparse ON cxen_wordform.IdNumLemma
     \\= cxen_lemmamorphologyparse.IdNumLemma\\r\\n WHERE cxen_wordformortho.WordDia
     \\= ?\\r\\n ORDER BY cxen_lemma.Cob DESC\r\nPronounceOverridesCelex=false\r\nLayerId=2\r\n"
-last_sync_modified_date: 2025-09-13T22:23:08-0400
+last_sync_modified_date: 2025-11-17T11:32:47-0500
 notation:
   primary: English spelling (lowercase)
   additional: Morpheme boundary
@@ -42,7 +43,7 @@ versions:
   first_appeared: 0.1.0
   last_modified: 0.1.0
 color: apple green
-last_modified_date: 2025-09-15T09:59:46-04:00
+last_modified_date: 2025-11-17T11:34:51-05:00
 ---
 
 **Fill longer description here**

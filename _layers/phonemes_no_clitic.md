@@ -13,14 +13,15 @@ synced:
   scope: word
   transcripts_exportable: yes
   matches_exportable: yes
-  searchable: regex
+  searchable: regex_caseSensitive
+  search_numValidLabels: 47
   search_targetable: 'no'
   transcript_selectable: yes
   export_includeCounts: yes
   export_includeAnchorSharing: no
   color_hex: '#dadff4'
   extra: "#Mon Jul 31 14:26:51 EDT 2023\r\nLanguage=\r\nLexiconId=5\r\nFirstOnly=false\r\nField=pron_disc\r\nRecoverSyllables=false\r\nStripSyllStress=true\r\nLayerId=61\r\n"
-last_sync_modified_date: 2025-09-13T22:23:08-0400
+last_sync_modified_date: 2025-11-17T11:32:47-0500
 notation:
   primary: DISC
   missing: Word does not end in a clitic
@@ -36,7 +37,7 @@ versions:
   first_appeared: 0.1.0
   last_modified: 0.1.0
 color: pale gray
-last_modified_date: 2025-09-15T09:59:48-04:00
+last_modified_date: 2025-11-17T11:34:52-05:00
 ---
 
 ### Notes

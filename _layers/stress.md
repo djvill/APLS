@@ -12,14 +12,15 @@ synced:
   scope: word
   transcripts_exportable: yes
   matches_exportable: yes
-  searchable: regex
+  searchable: regex_caseSensitive
+  search_numValidLabels: 3
   search_targetable: word
   transcript_selectable: yes
   export_includeCounts: yes
   export_includeAnchorSharing: yes
   color_hex: '#d45f94'
   extra: (none)
-last_sync_modified_date: 2025-09-13T22:23:08-0400
+last_sync_modified_date: 2025-11-17T11:32:47-0500
 notation:
   primary: Stress markers
   missing: The current word doesn't have any <span class="layer">segment</span> annotations
@@ -31,7 +32,7 @@ versions:
   first_appeared: 0.1.0
   last_modified: 0.1.0
 color: salmon
-last_modified_date: 2025-09-15T09:59:49-04:00
+last_modified_date: 2025-11-17T11:34:53-05:00
 ---
 
 **Fill longer description here**

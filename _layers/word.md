@@ -13,14 +13,15 @@ synced:
   scope: word
   transcripts_exportable: yes
   matches_exportable: yes
-  searchable: regex
+  searchable: regex_caseSensitive
+  search_numValidLabels: 0
   search_targetable: word
   transcript_selectable: no
   export_includeCounts: no
   export_includeAnchorSharing: no
   color_hex: '#000000'
   extra: (none)
-last_sync_modified_date: 2025-09-15T09:03:43-0400
+last_sync_modified_date: 2025-11-17T11:32:47-0500
 notation:
   primary: English spelling
   additional:
@@ -35,7 +36,7 @@ versions:
   first_appeared: 0.1.0
   last_modified: 0.1.0
 color: black
-last_modified_date: 2025-09-15T09:59:50-04:00
+last_modified_date: 2025-11-17T11:34:54-05:00
 ---
 
 **Fill longer description here**

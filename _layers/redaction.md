@@ -14,13 +14,14 @@ synced:
   transcripts_exportable: yes
   matches_exportable: yes
   searchable: regex
+  search_numValidLabels: 0
   search_targetable: phrase
   transcript_selectable: yes
   export_includeCounts: yes
   export_includeAnchorSharing: yes
   color_hex: '#3793da'
   extra: (none)
-last_sync_modified_date: 2025-09-13T22:23:08-0400
+last_sync_modified_date: 2025-11-17T11:32:47-0500
 notation:
   primary: English spelling
   missing: Speech does not contain personally identifying information
@@ -32,7 +33,7 @@ versions:
   first_appeared: 0.1.0
   last_modified: 0.1.0
 color: cornflower blue
-last_modified_date: 2025-09-15T10:23:19-04:00
+last_modified_date: 2025-11-17T11:34:53-05:00
 ---
 
 https://djvill.github.io/APLS/doc/transcription-convention#redaction

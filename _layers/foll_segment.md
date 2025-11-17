@@ -12,14 +12,15 @@ synced:
   scope: segment
   transcripts_exportable: yes
   matches_exportable: yes
-  searchable: regex
+  searchable: regex_caseSensitive
+  search_numValidLabels: 48
   search_targetable: segment
   transcript_selectable: yes
   export_includeCounts: no
   export_includeAnchorSharing: no
   color_hex: '#8d7b7b'
   extra: (none)
-last_sync_modified_date: 2025-09-13T22:23:08-0400
+last_sync_modified_date: 2025-11-17T11:32:47-0500
 notation:
   primary: DISC
   additional: DISC pause
@@ -37,7 +38,7 @@ versions:
   first_appeared: 0.1.0
   last_modified: 0.1.2
 color: gray
-last_modified_date: 2025-09-15T09:59:45-04:00
+last_modified_date: 2025-11-17T11:34:49-05:00
 ---
 
 **Fill longer description here**

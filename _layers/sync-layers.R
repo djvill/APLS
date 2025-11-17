@@ -117,7 +117,7 @@ layers <- layers |>
 ##Columns and names
 layers <- layers |>
   ##Remove columns relevant only to participant/transcript attributes
-  select(-c(attribute, validLabels, subtype, hint, display_order, searchable, 
+  select(-c(attribute, subtype, hint, display_order, searchable, 
             access, attrib_type)) |>
   ##Rename
   rename(project = category,
@@ -160,6 +160,16 @@ layers <- layers |>
                                             "py" ~ "Python",
                                             .default=.x)))
 
+##Handle validLabels
+layers <- layers |>
+  chop(validLabels) |>
+  mutate(search_numValidLabels = map_int(validLabels, 
+                                         \(x) x |>
+                                           pivot_longer(everything()) |>
+                                           drop_na() |>
+                                           nrow()),
+         .keep="unused")
+
 ##Add properties pertaining to how users can interact with layers
 layers <- layers |>
   ##All layers can be exported from https://apls.pitt.edu/labbcat/transcripts
@@ -171,13 +181,15 @@ layers <- layers |>
          matches_exportable = !(id %in% c("turn", "utterance")),
          
          ##How layer can be used in https://apls.pitt.edu/labbcat/search
-         searchable = case_match(data_type,
-                                 ##In search matrix, but only for anchoring matches
-                                 "timing-only" ~ "anchor-only",
-                                 ##In search matrix with a minimum & maximum
-                                 "numeric" ~ "min_max",
-                                 ##In search matrix with a regex
-                                 c("phonological", "text") ~ "regex"),
+         searchable = case_when(
+           ##In search matrix, but only for anchoring matches
+           data_type=="timing-only" ~ "anchor-only",
+           ##In search matrix with a minimum & maximum
+           data_type=="numeric" ~ "min_max",
+           ##In search matrix with a case-sensitive regex
+           data_type=="phonological" | id=="word" ~ "regex_caseSensitive",
+           ##In search matrix with a case-insensitive regex
+           data_type=="text" ~ "regex"),
          
          ##Whether layer can be the target of a search (https://github.com/nzilbb/labbcat-server/blob/b70d69/user-interface/src/main/angular/projects/labbcat-view/src/app/search-matrix/search-matrix.component.ts#L187-L194)
          search_targetable = case_when(
@@ -208,7 +220,8 @@ layers <- layers |>
            alignment != "sub-interval" ~ FALSE,
            peers ~ TRUE,
            .default=FALSE),
-         .before=extra)
+         .before=extra) |>
+  relocate(search_numValidLabels, .after=searchable)
 
 ##Add layer color ()
 string_to_color <- function(x) {

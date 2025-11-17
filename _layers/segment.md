@@ -12,14 +12,15 @@ synced:
   scope: segment
   transcripts_exportable: yes
   matches_exportable: yes
-  searchable: regex
+  searchable: regex_caseSensitive
+  search_numValidLabels: 47
   search_targetable: segment
   transcript_selectable: yes
   export_includeCounts: yes
   export_includeAnchorSharing: yes
   color_hex: '#d3acfb'
   extra: (none)
-last_sync_modified_date: 2025-09-13T22:23:08-0400
+last_sync_modified_date: 2025-11-17T11:32:47-0500
 notation:
   primary: DISC
   missing: Force-alignment failed for this utterance (line)
@@ -35,7 +36,7 @@ versions:
   first_appeared: 0.1.0
   last_modified: 0.1.0
 color: lavender
-last_modified_date: 2025-09-15T09:59:49-04:00
+last_modified_date: 2025-11-17T11:34:53-05:00
 ---
 
 **Fill longer description here**

@@ -14,6 +14,7 @@ synced:
   transcripts_exportable: yes
   matches_exportable: yes
   searchable: min_max
+  search_numValidLabels: 0
   search_targetable: phrase
   transcript_selectable: yes
   export_includeCounts: yes
@@ -21,7 +22,7 @@ synced:
   color_hex: '#2db180'
   extra: "#Tue Dec 03 14:38:45 EST 2024\r\nLayerId=66\r\nParticipants=participant_speech_rate\r\nPattern=\r\nTranscripts=\r\nUtterances=true\r\nStatistic=Word
     Rate (per second)\r\nMillisecondsPauseThreshold=\r\nMainSpeakerOnly=false\r\nCorpora=false\r\nScopeLayerId=\r\nTranscriptParticipants=false\r\nTurns=false\r\nExcludedTranscriptTypes=-1\r\nSecondsContext=\r\n"
-last_sync_modified_date: 2025-09-13T22:23:08-0400
+last_sync_modified_date: 2025-11-17T11:32:47-0500
 notation:
   primary: Decimal
   missing: The current utterance doesn't have any <span class="layer">segment</span>
@@ -34,7 +35,7 @@ versions:
   first_appeared: 0.1.4
   last_modified: 0.1.4
 color: teal
-last_modified_date: 2025-09-15T09:59:49-04:00
+last_modified_date: 2025-11-17T11:34:53-05:00
 ---
 
 **Fill longer description here**
