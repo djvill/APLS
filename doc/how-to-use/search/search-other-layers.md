@@ -5,7 +5,7 @@ permalink: /doc/search-other-layers
 parent: Searching the corpus
 grand_parent: How to use APLS
 nav_order: 40
-last_modified_date: 2025-10-24T13:31:16-04:00
+last_modified_date: 2025-11-17T11:50:48-05:00
 ---
 
 # {{ page.title }}
@@ -135,6 +135,13 @@ To bring up the symbol picker, click the {% include labbcat-icon.html src="expan
 {% include screengrab.html src="search/symbol-picker.png" %}
 
 This saves you the trouble of needing to memorize things like the DISC alphabet or part-of-speech tags to use all of the <span class="apls-page">Search</span> page's functionalities!
+
+{: .note}
+> Here's the full list of layers that have a symbol picker:
+{% assign hasSymbolPicker = site.layers | where_exp: "item", "item.synced.search_numValidLabels > 0" -%}
+{%- for layer in hasSymbolPicker -%}
+> - <span class="layer">{{ layer.path | remove: "_layers/" | remove: ".md" }}</span>
+{% endfor %}
 
 The <span class="layer">syllables</span> symbol picker includes individual IPA symbols (like _θ_), subcategories (like _Diphthongs_), and categories (like _CONSONANT_).
 If you click an **IPA** symbol, it will fill (and briefly highlight) the corresponding **DISC** symbol into the input box.
