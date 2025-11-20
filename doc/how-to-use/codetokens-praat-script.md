@@ -4,7 +4,7 @@ permalink: /doc/codetokens-praat-script
 parent: Coding tokens
 grand_parent: How to use APLS
 nav_order: 10
-last_modified_date: 2025-11-11T14:26:20-05:00
+last_modified_date: 2025-11-20T14:20:43-05:00
 ---
 
 # {{ page.title }}
@@ -26,7 +26,7 @@ You only need to complete these steps once per computer.
 
 1. Download Praat from <https://praat.org/> and install it on your computer.
    - If you already have Praat, make sure it's at least version 6.4.32. You can check your Praat version in the Praat Objects window by selecting _Help_ > _About Praat_.
-1. Download `CodeTokens.praat` by clicking this link: <https://github.com/djvill/code-tokens-dot-praat/releases/download/v1.0.0/CodeTokens.praat>
+1. Download `CodeTokens.praat` by clicking this link: <https://github.com/djvill/code-tokens-dot-praat/releases/latest/download/CodeTokens.praat>
    - When you open `CodeTokens.praat`, your computer will probably open it in Praat automatically. If not, open Praat and select _Praat_ > _Open Praat script..._
 
 
@@ -175,7 +175,10 @@ Clicking _Continue_ on either window will load the first token's [coding screen]
   - Click _Browse..._ to open a new window that helps you select a folder on your computer
 - `File in progress`
   - You can use this option if you're doing your coding in multiple sessions
-  - If `File in progress` is selected, `CodeTokens.praat` will look for a CSV file that ends with a `_coded` suffix and it will only present tokens that have a blank in the coding column
+  - If `File in progress` is selected, `CodeTokens.praat` will look for an input CSV file that ends with a `_coded` suffix
+  - If `File in progress` is selected, `CodeTokens.praat` will present either:
+    - tokens that have a blank in the coding column, if there are blanks
+    - tokens that have `(unsure)` in the coding column, if there are **no** blanks and at least one `(unsure)`
 - `Code column`
   - The column for storing codes (including `(unsure)` and `(not a token)` codes)
   - If you and a collaborator are coding the same tokens for quality-control purposes, you can specify different coding columns with your names (like `Codes - Dan` and `Codes - Jack`)
