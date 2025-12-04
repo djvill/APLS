@@ -15,7 +15,7 @@ synced:
         description: ''
   data_type: select
   short_description: Four-way classification of occupation
-  display_order: 6
+  display_order: 7
   filterable: no
   access: yes
   attrib_type: participant
@@ -23,6 +23,6 @@ synced:
   attrib_page_viewable: participant
   matches_exportable: yes
   export_includeCounts: no
-last_sync_modified_date: 2025-02-17T14:18:55-0500
-last_modified_date: 2025-02-17T14:20:00-05:00
+last_sync_modified_date: 2025-12-04T10:43:01-0500
+last_modified_date: 2025-12-04T13:07:35-05:00
 ---

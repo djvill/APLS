@@ -15,7 +15,7 @@ synced:
   data_type: select
   short_description: Whether a participant is a main speaker (interviewee), interviewer,
     or bystander.
-  display_order: 7
+  display_order: 10
   filterable: yes
   access: yes
   attrib_type: participant
@@ -23,6 +23,6 @@ synced:
   attrib_page_viewable: participant
   matches_exportable: yes
   export_includeCounts: no
-last_sync_modified_date: 2025-02-19T15:54:06-0500
-last_modified_date: 2025-02-19T15:55:24-05:00
+last_sync_modified_date: 2025-12-04T10:43:01-0500
+last_modified_date: 2025-12-04T13:07:36-05:00
 ---

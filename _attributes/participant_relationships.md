@@ -6,7 +6,7 @@ synced:
   multi_select: no
   data_type: text
   short_description: Relationships to other speakers
-  display_order: 50
+  display_order: 55
   filterable: no
   access: yes
   attrib_type: participant
@@ -14,6 +14,6 @@ synced:
   attrib_page_viewable: participant
   matches_exportable: yes
   export_includeCounts: no
-last_sync_modified_date: 2025-02-17T14:18:55-0500
-last_modified_date: 2025-02-17T14:20:00-05:00
+last_sync_modified_date: 2025-12-04T10:43:01-0500
+last_modified_date: 2025-12-04T13:07:35-05:00
 ---

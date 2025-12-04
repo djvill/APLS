@@ -11,7 +11,7 @@ synced:
         description: Male
   data_type: select
   short_description: Gender identity
-  display_order: 3
+  display_order: 4
   filterable: yes
   access: yes
   attrib_type: participant
@@ -19,8 +19,8 @@ synced:
   attrib_page_viewable: participant
   matches_exportable: yes
   export_includeCounts: no
-last_sync_modified_date: 2025-02-17T14:18:55-0500
-last_modified_date: 2025-02-25T12:38:34-05:00
+last_sync_modified_date: 2025-12-04T10:43:01-0500
+last_modified_date: 2025-12-04T13:07:34-05:00
 ---
 
 {: .note .no-collapse }

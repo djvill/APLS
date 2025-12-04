@@ -57,7 +57,7 @@ synced:
         description: Welsh
   data_type: select
   short_description: Ethnic/racial self-identification
-  display_order: 10
+  display_order: 11
   filterable: no
   access: yes
   attrib_type: participant
@@ -65,6 +65,6 @@ synced:
   attrib_page_viewable: participant
   matches_exportable: yes
   export_includeCounts: yes
-last_sync_modified_date: 2025-02-19T15:54:06-0500
-last_modified_date: 2025-02-19T15:55:24-05:00
+last_sync_modified_date: 2025-12-04T10:43:01-0500
+last_modified_date: 2025-12-04T13:07:34-05:00
 ---

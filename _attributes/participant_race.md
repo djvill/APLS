@@ -1,13 +1,18 @@
 ---
 synced:
-  attribute: neighborhood_current
-  display_title: Current neighborhood
+  attribute: race
+  display_title: Race
   parent: participant
   multi_select: no
-  data_type: text
-  short_description: Neighborhood/municipality at time of interview (narrow)
-  display_order: 50
-  filterable: no
+  valid_labels:
+    - - label: Black
+        description: Black
+      - label: White
+        description: White
+  data_type: select
+  short_description: Racial self-identification
+  display_order: 3
+  filterable: yes
   access: yes
   attrib_type: participant
   transcripts_exportable: yes

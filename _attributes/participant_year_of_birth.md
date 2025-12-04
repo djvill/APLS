@@ -4,9 +4,9 @@ synced:
   display_title: Birth year
   parent: participant
   multi_select: no
-  data_type: integer
+  data_type: number
   short_description: Year of birth
-  display_order: 4
+  display_order: 5
   filterable: yes
   access: yes
   attrib_type: participant
@@ -14,6 +14,6 @@ synced:
   attrib_page_viewable: participant
   matches_exportable: yes
   export_includeCounts: no
-last_sync_modified_date: 2025-02-17T14:18:55-0500
-last_modified_date: 2025-02-17T14:20:01-05:00
+last_sync_modified_date: 2025-12-04T10:43:01-0500
+last_modified_date: 2025-12-04T13:07:36-05:00
 ---

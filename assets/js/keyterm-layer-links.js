@@ -81,9 +81,6 @@ function addA(node, type) {
     case 'morphemes':
       title = `All possible ways to break down the current word into morphemes`;
       break;
-    case 'dictionary_phonemes':
-      title = `All possible phonemic representations of the word`;
-      break;
     case 'foll_segment':
       title = `Segment or pause following the current segment`;
       break;
@@ -125,6 +122,9 @@ function addA(node, type) {
       break;
     case 'redaction':
       title = `Speech redacted from the transcript (e.g., personally identifying information)`;
+      break;
+    case 'dictionary_phonemes':
+      title = `All possible phonemic representations of the word`;
       break;
     case 'htk':
       title = `HTK alignment time`;
@@ -176,6 +176,9 @@ function addA(node, type) {
       break;
     case 'participant_occupation':
       title = `Four-way classification of occupation`;
+      break;
+    case 'participant_race':
+      title = `Racial self-identification`;
       break;
     case 'participant_relationships':
       title = `Relationships to other speakers`;
