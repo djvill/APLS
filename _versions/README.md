@@ -57,3 +57,26 @@ Thanks, Kilgore!
 ### Repository versioning
 
 When incrementing a version, the `djvill/APLS` repository should be tagged with the version number, and a release should be added (with the version file serving as release notes).
+
+## Handy hints
+
+To figure out what's changed in the UI since the last APLS version, go to the `labbcat-server` repo.
+Let's say I'm in version 0.4.2 and I want to figure out changes since 0.4.1.
+
+```bash
+# Changes to UI since 0.4.1
+cd user-interface/src/main/angular/projects
+git log --oneline --no-merges apls-dev ^96d80f5 -- .
+
+# Changes to a particular component since 0.4.1
+git log --oneline --no-merges apls-dev ^96d80f5 -- labbcat-view/src/app/transcript
+
+# Changes to multiple components since 0.4.1
+git log --oneline --no-merges apls-dev ^96d80f5 -- labbcat-view/src/app/transcript labbcat-common/src/lib/layer-checkboxes
+
+# Changes since 0.4.1 authored by me
+git log --oneline --no-merges apls-dev ^96d80f5 --author="Dan" -- .
+
+# Changes since 0.4.1 not in upstream
+git log --oneline --no-merges apls-dev ^96d80f5 ^upstream -- .
+```
