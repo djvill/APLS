@@ -41,7 +41,7 @@ constants:
     transcript_content: 1510
     transcript_cb013_first_utterance: 580
     transcript_cb013_first_utterance_tooltip: 905
-    transcript_bj_first_utterance_tooltip: 1220
+    transcript_bj_first_utterance_tooltip: 1295
     transcripts_content: 1510
     participants_content: 1860
     search_tabs: 1170
@@ -783,7 +783,7 @@ screengrabs:
 
 - screengrab: transcript/overview.png
   instructions:
-    - Log in as test-student
+    - Log into an *incognito* window as test-student
     - Set browser zoom to 100%
     - Load https://apls.pitt.edu/labbcat/transcript?transcript=CB01interview3.eaf
     - Save
@@ -804,7 +804,7 @@ screengrabs:
       # header
     - func: rect
       xleft: 190
-      ytop: 322
+      ytop: 325
       xright: 1700
       ybottom: 382
       border: highlight_colors$hl_2
@@ -814,8 +814,8 @@ screengrabs:
     - func: rect
       xleft: 1430
       ytop: 155
-      xright: 1880
-      ybottom: 310
+      xright: 1885
+      ybottom: 325
       border: highlight_colors$hl_3
       lty: dashed
       lwd: 5
@@ -890,10 +890,11 @@ screengrabs:
     - Load https://apls.pitt.edu/labbcat/transcript?transcript=CB01interview3.eaf
     - Select layers speech_rate, frequency_from_celex, segment
     - Deselect layer noise
+    - Save
   offset_x: offset_x$transcript_content_left
   offset_y: offset_y$transcript_body_top
   width: width$transcript_content
-  height: 520
+  height: 545
 
 - screengrab: transcript/turn-swoosh.png
   instructions:
@@ -966,7 +967,7 @@ screengrabs:
   height: height$transcript_body_turn_container + 4*height$transcript_body_layer
   overlay:
     - image: _arrow.png
-      offset_x: 1049
+      offset_x: 1130
       offset_y: 428
 
 - screengrab: transcript/layer-hover-2.png
@@ -983,7 +984,7 @@ screengrabs:
   height: height$transcript_body_turn_container + 4*height$transcript_body_layer
   overlay:
     - image: _arrow.png
-      offset_x: 1049
+      offset_x: 1128
       offset_y: 456
 
 - screengrab: transcript/layer-hover-3.png
@@ -1000,8 +1001,8 @@ screengrabs:
   height: height$transcript_body_turn_container + 4*height$transcript_body_layer
   overlay:
     - image: _arrow.png
-      offset_x: 1051
-      offset_y: 485
+      offset_x: 1128
+      offset_y: 480
 
 - screengrab: transcript/layer-hover-4.png
   instructions:
@@ -1016,9 +1017,9 @@ screengrabs:
   width: width$transcript_bj_first_utterance_tooltip
   height: 190
   overlay:
-    - image: _beam.png
-      offset_x: 1050
-      offset_y: 503
+    - image: _arrow.png
+      offset_x: 1127
+      offset_y: 510
 
 - screengrab: !transcript/tooltips.png
   instructions:
@@ -1033,13 +1034,13 @@ screengrabs:
     - Hover over the middle of the empty segment annotation underneath 'what' in the second line
     - Save (use the Snipping Tool's delay option)
   offset_x: offset_x$transcript_content_left
-  offset_y: 535
+  offset_y: 550
   width: 740
   height: 160
   overlay:
     - image: _arrow.png
       offset_x: 280
-      offset_y: 635
+      offset_y: 650
 
 - screengrab: transcript/segment-dependency.png
   instructions:
@@ -1185,18 +1186,18 @@ screengrabs:
   drawing:
     # checkbox (comment)
     - func: rect
-      xleft: 540
+      xleft: 535
       ytop: 432
-      xright: 568
+      xright: 560
       ybottom: 460
       border: highlight_colors$hl_1
       lty: dashed
       lwd: 3
     # projects column
     - func: rect
-      xleft: 350
+      xleft: 340
       ytop: 395
-      xright: 520
+      xright: 513
       ybottom: 633
       border: highlight_colors$hl_2
       lty: dashed
@@ -1243,9 +1244,9 @@ screengrabs:
   drawing:
     # IPA/DISC toggle (segment)
     - func: rect
-      xleft: 1499
+      xleft: 1505
       ytop: 425
-      xright: 1545
+      xright: 1550
       ybottom: 472
       border: highlight_colors$hl_5
       lty: dashed
@@ -1279,7 +1280,7 @@ screengrabs:
   offset_x: offset_x$transcript_content_left
   offset_y: offset_y$transcript_header_top
   width: width$transcript_content
-  height: height$transcript_layer_picker_plus_1 + 2*height$transcript_body_layer + 10
+  height: height$transcript_layer_picker_plus_1 + 2*height$transcript_body_layer
 
 - screengrab: transcript/segment-tooltip.png
   instructions: See transcript/tooltips.png
@@ -1349,16 +1350,16 @@ screengrabs:
   offset_x: offset_x$transcript_content_left
   offset_y: offset_y$transcript_header_top
   width: width$transcript_content
-  height: height$transcript_layer_picker_plus_1
+  height: height$transcript_layer_picker_plus_1 + 1*height$transcript_body_layer
   overlay:
     - image: _help.png
       offset_x: 836
-      offset_y: 455
+      offset_y: 495
 
 - screengrab: transcript/layer-picker-segment-icons.png
   instructions: See transcript/layer-picker.png
   in_path: transcript/layer-picker.png
-  offset_x: 1265
+  offset_x: 1270
   offset_y: 430
   width: 255
   height: 35
