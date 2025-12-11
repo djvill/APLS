@@ -14,8 +14,9 @@ constants:
     participants_content_left: 25
     search_tabs_filtered_left: 360
     search_tabs_left: 370
-    search_matrix_left: 515
+    search_matrix_left: 510
     search_input_left: 580
+    search_input_syllables_left: 570
     search_progress_left: 570
   offset_y:
     window_top: 0
@@ -32,7 +33,7 @@ constants:
     search_tabs_top: 270
     search_matrix_top: 355
     search_input_top: 650
-    search_input_syllables_top: 670
+    search_input_syllables_top: 653
     search_progress_top: 795
   width:
     window: 1920
@@ -47,7 +48,7 @@ constants:
     search_tabs: 1170
     search_matrix: 870
     search_input: 752
-    search_input_picker: 1131
+    search_input_picker: 1141
     search_progress: 765
   height:
     window: 1128
@@ -62,7 +63,7 @@ constants:
     search_matrix: 385
     search_input: 84
     search_input_syllables: 89
-    search_input_picker: 352
+    search_input_picker: 351
     search_progress: 155
 
 screengrabs:
@@ -1682,9 +1683,9 @@ screengrabs:
       lwd: 5
       # search button
     - func: rect
-      xleft: 1427
+      xleft: offset_x$search_tabs_left
       ytop: 745
-      xright: 1535
+      xright: 485
       ybottom: 800
       border: highlight_colors$hl_3
       lty: dashed
@@ -1731,9 +1732,9 @@ screengrabs:
       lwd: 5
       # search button
     - func: rect
-      xleft: 1427
+      xleft: offset_x$search_tabs_left
       ytop: 745
-      xright: 1535
+      xright: 485
       ybottom: 800
       border: highlight_colors$hl_3
       lty: dashed
@@ -1766,7 +1767,7 @@ screengrabs:
     - - "`window.scrollTo(0, 100);`"
     - Save
   offset_x: 560
-  offset_y: 553
+  offset_y: 519
   width: 765
   height: 487
 
@@ -1786,8 +1787,8 @@ screengrabs:
 - screengrab: search/input.png
   instructions: See search/overview.png
   in_path: search/overview.png
-  offset_x: offset_x$search_input_top
-  offset_y: offset_y$search_input_left
+  offset_x: offset_x$search_input_left
+  offset_y: offset_y$search_input_top
   width: width$search_input
   height: height$search_input
 
@@ -1822,10 +1823,10 @@ screengrabs:
     - Load https://apls.pitt.edu/labbcat/search
     - Select all projects except temp
     - Save
-  offset_x: 280
+  offset_x: 275
   offset_y: offset_y$search_matrix_top
-  width: 1325
-  height: 600
+  width: 1340
+  height: 560
 
 - screengrab: search/syllables.png
   instructions:
@@ -1834,7 +1835,7 @@ screengrabs:
     - Load https://apls.pitt.edu/labbcat/search
     - Select syllables, deselect orthography
     - Save
-  offset_x: offset_x$search_input_left
+  offset_x: offset_x$search_input_syllables_left
   offset_y: offset_y$search_input_syllables_top
   width: width$search_input
   height: height$search_input_syllables
@@ -1848,7 +1849,7 @@ screengrabs:
     - Select syllables, deselect orthography
     - Open symbol picker
     - Save
-  offset_x: offset_x$search_input_left
+  offset_x: offset_x$search_input_syllables_left
   offset_y: offset_y$search_input_syllables_top
   width: width$search_input_picker
   height: height$search_input_picker
@@ -1863,7 +1864,7 @@ screengrabs:
     - Open symbol picker
     - Click θ
     - Save while still highlighted
-  offset_x: offset_x$search_input_left
+  offset_x: offset_x$search_input_syllables_left
   offset_y: offset_y$search_input_syllables_top
   width: width$search_input_picker
   height: height$search_input_picker
@@ -1878,7 +1879,7 @@ screengrabs:
     - Open symbol picker
     - Click θ, r, ou
     - Save while still highlighted
-  offset_x: offset_x$search_input_left
+  offset_x: offset_x$search_input_syllables_left
   offset_y: offset_y$search_input_syllables_top
   width: width$search_input_picker
   height: height$search_input_picker
@@ -1894,7 +1895,7 @@ screengrabs:
     - Click θ, r, ou
     - Move cursor to front and click STRESS
     - Save while still highlighted
-  offset_x: offset_x$search_input_left
+  offset_x: offset_x$search_input_syllables_left
   offset_y: offset_y$search_input_syllables_top
   width: width$search_input_picker
   height: height$search_input_picker
@@ -1965,7 +1966,7 @@ screengrabs:
     - Load https://apls.pitt.edu/labbcat/search
     - In the Participants tab, upload participants.csv
     - Save
-    
+
 - screengrab: search/transcripts.png
   instructions:
     - Log in as test-student
