@@ -3,7 +3,7 @@ title: Version history
 permalink: /doc/version-history
 parent: About APLS
 nav_order: 30
-last_modified_date: 2025-11-10T15:06:07-05:00
+last_modified_date: 2026-01-05T13:51:26-05:00
 ---
 
 {% comment %}
@@ -45,6 +45,7 @@ This version of APLS uses LaBB-CAT version {{ curr_ver.labbcat_version }}.
 - **Date:** {{ version.date | date: "%e %b %Y" }}
 - **LaBB-CAT version:** {{ version.labbcat_version }}
 
+{% comment %}TODO modify heading IDs within content to avoid duplicate html id{% endcomment %}
 {{ version.content }}
 
 {% if version.stats %}
