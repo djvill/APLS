@@ -204,6 +204,9 @@ function addA(node, type) {
     case 'transcript_language':
       title = `Language spoken (placeholder)`;
       break;
+    case 'transcript_left_channel_participants':
+      title = `Participant(s) whose audio is primarily on the left channel (though potentially with 'bleed' to the right channel) in the corresponding audio file.`;
+      break;
     case 'transcript_neighborhood':
       title = `Which neighborhood main speaker was recruited from (note that Pittsburghers often refer to municipalities near Pittsburgh as "neighborhoods")`;
       break;
@@ -212,6 +215,12 @@ function addA(node, type) {
       break;
     case 'transcript_recording_date':
       title = `Date of recording`;
+      break;
+    case 'transcript_right_channel_participants':
+      title = `Participant(s) whose audio is primarily on the right channel (though potentially with 'bleed' to the left channel) in the corresponding audio file.`;
+      break;
+    case 'transcript_single_channel_participants':
+      title = `Participant(s) whose audio appears on the only channel in the corresponding audio file (i.e., for files that are in mono rather than stereo).`;
       break;
     case 'transcript_transcribers':
       title = `Name of transcriber(s) who completed the original orthographic transcription`;
