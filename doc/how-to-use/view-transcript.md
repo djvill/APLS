@@ -6,7 +6,7 @@ parent: How to use APLS
 has_children: yes
 has_toc: no
 nav_order: 20
-last_modified_date: 2025-11-12T11:04:45-05:00
+last_modified_date: 2026-01-19T16:39:54-05:00
 ---
 
 # {{ page.title }}
@@ -736,15 +736,18 @@ Click on a <span class="layer">word</span> in the line you want to download, the
 ### Audio channels
 
 Almost all audio files are in stereo, with the interviewer appearing on the left channel and the interviewee (main participant) on the right channel.
-Unfortunately, most files feature "bleed" between channels.
-That is, the interviewer can usually be heard in the background of the right channel, and the interviewee can usually be heard in the background of the left channel.
+Unfortunately, most files feature "bleed" between channels; that is, the interviewer can usually be heard in the background of the right channel, and the interviewee can usually be heard in the background of the left channel.
+In addition, participants with `Bystander` <span class="participant-attr">type</span> tend to be in the background of both channels.
 
 {: .note}
 > Some audio files don't follow this pattern:
 >
 > - Transcripts in the `CB05and06` <span class="transcript-attr">episode</span> include `CB05` on the left channel, `CB06` on the right channel, and the interviewer (`Barbara Johnstone`) on both channels.
+> - Transcripts in the `FH05and06` <span class="transcript-attr">episode</span> include both `FH05` and the interviewer (`Barbara Johnstone`) on the right channel.
 > - Transcripts in the `LV08and09` <span class="transcript-attr">episode</span> include the interviewer (`Barbara Johnstone`) and `LV09` sharing the left channel, and `LV08` alone on the right channel.
-> - `LV10` transcripts are in mono, with both speakers appearing on both channels.
+> - `LV10` transcripts are in mono, with both participants appearing on the single channel.
+
+You can view information on which participant appears on which channel in the [_Attributes_ tab](#viewing-transcript-attributes).
 
 ## Exporting the transcript
 
