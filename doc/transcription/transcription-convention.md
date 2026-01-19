@@ -3,7 +3,7 @@ title: Transcription convention
 permalink: /doc/transcription-convention
 parent: Transcription
 nav_order: 10
-last_modified_date: 2025-05-07T16:28:59-04:00
+last_modified_date: 2026-01-19T16:42:19-05:00
 ---
 
 
@@ -351,3 +351,5 @@ Both can be accomplished in Elan.
 	var h = document.querySelectorAll("#main-content code");
 	h.forEach(a => a.innerText = a.innerText.replaceAll("-", "\u2011"));
 </script>
+
+{% include linklist.html %}
