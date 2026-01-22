@@ -3,7 +3,7 @@ title: User interface
 permalink: /doc/user-interface
 parent: About APLS
 nav_order: 35
-last_modified_date: 2025-06-20T11:13:19-04:00
+last_modified_date: 2026-01-22T15:15:52-05:00
 ---
 
 # {{ page.title }}
@@ -23,7 +23,7 @@ It is informed by Dan Villarreal's nearly 10 years of experience using and maint
 {: .under-the-hood }
 > The source code for the APLS UI is available on GitHub [here](https://github.com/djvill/labbcat-server/).
 > This repository is a fork of the [main trunk](https://github.com/nzilbb/labbcat-server) of LaBB-CAT UI development, maintained by Robert Fromont of [NZILBB].
-> As of APLS version [{{curr_version.version}}]({{ '/doc/version-history#' | append: curr_version.version | relative_url }}), APLS's UI code is at commit [`{{curr_version.apls_ui_commit}}`](https://github.com/nzilbb/labbcat-server/commit/{{curr_version.apls_ui_commit}}), which is up-to-date with commit [`5da4b06`](https://github.com/nzilbb/labbcat-server/commit/{{curr_version.upstream_ui_commit}}) of the LaBB-CAT UI repository.
+> As of APLS version [{{curr_version.version}}]({{ '/doc/version-history#' | append: curr_version.version | relative_url }}), APLS's UI code is at commit [`{{curr_version.apls_ui_commit}}`](https://github.com/nzilbb/labbcat-server/commit/{{curr_version.apls_ui_commit}}), which is up-to-date with commit [`{{curr_version.upstream_ui_commit}}`](https://github.com/nzilbb/labbcat-server/commit/{{curr_version.upstream_ui_commit}}) of the LaBB-CAT UI repository.
 > You can view code differences [here](https://github.com/nzilbb/labbcat-server/compare/{{curr_version.upstream_ui_commit}}...djvill:labbcat-server:{{curr_version.apls_ui_commit}}).
 >
 > LaBB-CAT's entire codebase is spread across multiple repositories:
