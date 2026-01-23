@@ -3,7 +3,7 @@ title: User interface
 permalink: /doc/user-interface
 parent: About APLS
 nav_order: 35
-last_modified_date: 2026-01-22T15:15:52-05:00
+last_modified_date: 2026-01-23T11:23:43-05:00
 ---
 
 # {{ page.title }}
@@ -120,7 +120,7 @@ The comparison images in this section come from the [HD05interview2.eaf](https:/
   {% include compare-ui.html file="transcript-header/search" caption='The <span class="apls-page">Transcript</span> page _Search_ tab' new_only="true" %}
   - **New functionality**: The new _Search_ tab provides shortcuts to the <span class="apls-page">Search</span> page with [transcript or participant filters]({{ '/doc/search-filters-and-options' | relative_url }}) applied.
 - _Export_ tab
-  {% include compare-ui.html file="transcript-header/participants" caption='The <span class="apls-page">Transcript</span> page _Export_ tab' %}
+  {% include compare-ui.html file="transcript-header/export" caption='The <span class="apls-page">Transcript</span> page _Export_ tab' %}
   - **More consistent**: Label and icon now mirror [_Export Formatted_]({{ '/doc/browse-transcripts#export-formatted' | relative_url }}) on the <span class="apls-page">Transcripts</span> page.
   - **More explicit** about which layers will be exported (updated when the user selects different layers in the layer picker).
 
