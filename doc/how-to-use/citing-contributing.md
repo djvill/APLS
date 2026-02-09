@@ -11,7 +11,7 @@ cites:
     url: https://apls.pitt.edu
     type: open data resource
   - cite: apls-doc
-    year: 2025
+    year: 2026
     authors: [Dan Villarreal, Jack Rechsteiner]
     title: Archive of Pittsburgh Language and Speech documentation
     url: https://djvill.github.io/APLS
@@ -32,7 +32,7 @@ styles:
   - style: apa
     name: APA 7th edition
     url: https://owl.purdue.edu/owl/research_and_citation/apa_style/apa_style_introduction.html
-last_modified_date: 2025-06-09T14:21:12-04:00
+last_modified_date: 2026-02-09T11:43:35-05:00
 ---
 
 # {{ page.title }}
