@@ -19,8 +19,9 @@ synced:
   export_includeCounts: no
   export_includeAnchorSharing: no
   color_hex: '#f4f047'
+  num_annotations: 12
   extra: (none)
-last_sync_modified_date: 2025-11-17T11:32:47-0500
+last_sync_modified_date: 2026-02-09T12:37:57-0500
 notation:
   primary: English spelling
   additional: Hesitation marker
@@ -33,7 +34,7 @@ versions:
   first_appeared: 0.1.0
   last_modified: 0.1.0
 color: yellow
-last_modified_date: 2025-11-17T11:34:50-05:00
+last_modified_date: 2026-02-09T12:47:53-05:00
 ---
 
 **Fill longer description here**

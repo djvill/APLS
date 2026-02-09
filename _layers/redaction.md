@@ -20,8 +20,9 @@ synced:
   export_includeCounts: yes
   export_includeAnchorSharing: yes
   color_hex: '#3793da'
+  num_annotations: 986
   extra: (none)
-last_sync_modified_date: 2025-11-17T11:32:47-0500
+last_sync_modified_date: 2026-02-09T12:37:57-0500
 notation:
   primary: English spelling
   missing: Speech does not contain personally identifying information
@@ -33,7 +34,7 @@ versions:
   first_appeared: 0.1.0
   last_modified: 0.1.0
 color: cornflower blue
-last_modified_date: 2025-11-17T11:34:53-05:00
+last_modified_date: 2026-02-09T12:47:56-05:00
 ---
 
 https://djvill.github.io/APLS/doc/transcription-convention#redaction

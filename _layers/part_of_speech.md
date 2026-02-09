@@ -19,8 +19,9 @@ synced:
   export_includeCounts: yes
   export_includeAnchorSharing: yes
   color_hex: '#7efe6d'
+  num_annotations: 538135
   extra: (none)
-last_sync_modified_date: 2025-11-17T11:32:47-0500
+last_sync_modified_date: 2026-02-09T12:37:57-0500
 notation:
   primary: Treebank part-of-speech tags
   missing: Word is redacted or an incomplete word
@@ -34,7 +35,7 @@ versions:
   first_appeared: 0.1.1
   last_updated: 0.1.2
 color: light green
-last_modified_date: 2025-11-17T11:34:52-05:00
+last_modified_date: 2026-02-09T12:47:55-05:00
 ---
 
 

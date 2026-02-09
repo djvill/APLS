@@ -19,8 +19,9 @@ synced:
   export_includeCounts: yes
   export_includeAnchorSharing: yes
   color_hex: '#d3acfb'
+  num_annotations: 1244557
   extra: (none)
-last_sync_modified_date: 2025-11-17T11:32:47-0500
+last_sync_modified_date: 2026-02-09T12:37:57-0500
 notation:
   primary: DISC
   missing: Force-alignment failed for this utterance (line)
@@ -36,7 +37,7 @@ versions:
   first_appeared: 0.1.0
   last_modified: 0.1.0
 color: lavender
-last_modified_date: 2025-11-17T11:34:53-05:00
+last_modified_date: 2026-02-09T12:47:57-05:00
 ---
 
 **Fill longer description here**

@@ -20,11 +20,12 @@ synced:
   export_includeCounts: yes
   export_includeAnchorSharing: no
   color_hex: '#3b191f'
+  num_annotations: 895990
   extra: "#Wed Oct 18 14:15:41 EDT 2023\r\nSplitAnnotationDelimiters=\r\nLanguage=en.*\r\nGenerateSegments=false\r\nSql=SELECT
     cxen_wordform.Cob\\r\\n FROM cxen_wordform\\r\\n INNER JOIN cxen_wordformortho\\r\\n
     ON cxen_wordformortho.IdNum \\= cxen_wordform.IdNum\\r\\n WHERE cxen_wordformortho.WordDia
     \\= ?\\r\\n ORDER BY cxen_wordform.Cob DESC\r\nPronounceOverridesCelex=false\r\nLayerId=2\r\n"
-last_sync_modified_date: 2025-11-17T11:32:47-0500
+last_sync_modified_date: 2026-02-09T12:37:57-0500
 notation:
   primary: Count
   missing: Word is not in CELEX
@@ -38,7 +39,7 @@ versions:
   first_appeared: 0.1.0
   last_modified: 0.1.0
 color: chocolate
-last_modified_date: 2025-11-17T11:34:49-05:00
+last_modified_date: 2026-02-09T12:47:51-05:00
 ---
 
 **Fill longer description here**

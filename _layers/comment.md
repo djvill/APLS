@@ -19,8 +19,9 @@ synced:
   export_includeCounts: yes
   export_includeAnchorSharing: no
   color_hex: '#5f4497'
+  num_annotations: 1721
   extra: (none)
-last_sync_modified_date: 2025-11-17T11:32:47-0500
+last_sync_modified_date: 2026-02-09T12:37:57-0500
 notation:
   primary: English spelling
 inputs:
@@ -31,7 +32,7 @@ versions:
   first_appeared: 0.1.0
   last_modified: 0.1.0
 color: purple
-last_modified_date: 2025-11-17T11:34:48-05:00
+last_modified_date: 2026-02-09T12:47:50-05:00
 ---
 
 **Fill longer description here**

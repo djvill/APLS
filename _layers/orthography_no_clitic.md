@@ -19,8 +19,9 @@ synced:
   export_includeCounts: no
   export_includeAnchorSharing: no
   color_hex: '#e07b61'
+  num_annotations: 12526
   extra: (none)
-last_sync_modified_date: 2025-11-17T11:32:47-0500
+last_sync_modified_date: 2026-02-09T12:37:57-0500
 notation:
   primary: English spelling (lowercase)
   missing: Word does not end in a clitic
@@ -32,7 +33,7 @@ versions:
   first_appeared: 0.1.0
   last_modified: 0.1.0
 color: coral
-last_modified_date: 2025-11-17T11:34:51-05:00
+last_modified_date: 2026-02-09T12:47:54-05:00
 ---
 
 ### Notes

@@ -223,7 +223,7 @@ layers <- layers |>
          .before=extra) |>
   relocate(search_numValidLabels, .after=searchable)
 
-##Add layer color ()
+##Add layer color
 string_to_color <- function(x) {
   library(V8)
   ct <- v8()
@@ -251,6 +251,12 @@ layers <- layers |>
     !transcript_selectable ~ "(none)",
     TRUE ~ string_to_color(id)),
     .before=extra)
+
+##Add number of annotations
+layers <- layers |>
+  mutate(num_annotations = map_int(id,
+                                   \(x) countMatchingAnnotations(lc, str_glue("layerId == '{x}'"))),
+         .before=extra)
 
 ##Optionally spoof alignments for turn/word/segment
 if (spoof_alignment) {

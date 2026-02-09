@@ -19,6 +19,7 @@ synced:
   export_includeCounts: yes
   export_includeAnchorSharing: yes
   color_hex: '#9f6200'
+  num_annotations: 40860
   extra: |
     #Wed Dec 01 16:47:47 EST 2021
     PronunciationLayerId=40
@@ -37,7 +38,7 @@ synced:
     HVitePruningThreshold=250
     RightPattern=Barbara Johnstone|Trista Pennington|.*
     OtherGroupBy=Not Aligned
-last_sync_modified_date: 2025-11-17T11:32:47-0500
+last_sync_modified_date: 2026-02-09T12:37:57-0500
 notation:
   primary: Time/date
   missing: Force-alignment failed for this utterance (line)
@@ -51,7 +52,7 @@ versions:
   first_appeared: 0.1.0
   last_modified: 0.1.0
 color: bronze
-last_modified_date: 2025-11-17T11:34:50-05:00
+last_modified_date: 2026-02-09T12:47:52-05:00
 ---
 
 **Fill longer description here**

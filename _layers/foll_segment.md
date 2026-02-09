@@ -19,8 +19,9 @@ synced:
   export_includeCounts: no
   export_includeAnchorSharing: no
   color_hex: '#8d7b7b'
+  num_annotations: 1243679
   extra: (none)
-last_sync_modified_date: 2025-11-17T11:32:47-0500
+last_sync_modified_date: 2026-02-09T12:37:57-0500
 notation:
   primary: DISC
   additional: DISC pause
@@ -38,7 +39,7 @@ versions:
   first_appeared: 0.1.0
   last_modified: 0.1.2
 color: gray
-last_modified_date: 2025-11-17T11:34:49-05:00
+last_modified_date: 2026-02-09T12:47:51-05:00
 ---
 
 **Fill longer description here**
