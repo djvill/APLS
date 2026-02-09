@@ -131,11 +131,11 @@ layers <- layers |>
   ##For now, only keep the first line of description as short_description
   mutate(across(short_description, ~ str_remove(.x, regex("\n.+", dotall=TRUE))),
          across(c(project, layer_manager, extra), ~ replace_na(.x, "(none)")),
-         across(scope, ~ case_match(.x, 
-                                    "W" ~ "word",
-                                    "S" ~ "segment",
-                                    "M" ~ "phrase",
-                                    "F" ~ "span")),
+         across(scope, ~ recode_values(.x, 
+                                       "W" ~ "word",
+                                       "S" ~ "segment",
+                                       "M" ~ "phrase",
+                                       "F" ~ "span")),
          across(data_type, ~ case_when(
            id %in% c("turn","utterance") ~ "timing-only",
            data_type=="ipa" ~ "phonological",
@@ -155,10 +155,9 @@ layers <- layers |>
            .x==1 ~ "timepoint",
            .x==2 ~ "sub-interval")),
          ##Recode shorter layer_manager values
-         across(layer_manager, ~ case_match(.x,
-                                            "CELEX-EN" ~ "CELEX-English",
-                                            "py" ~ "Python",
-                                            .default=.x)))
+         across(layer_manager, ~ replace_values(.x,
+                                                "CELEX-EN" ~ "CELEX-English",
+                                                "py" ~ "Python")))
 
 ##Handle validLabels
 layers <- layers |>
