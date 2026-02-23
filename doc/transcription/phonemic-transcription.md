@@ -3,7 +3,7 @@ title: Phonemic transcription with the DISC alphabet
 permalink: /doc/phonemic-transcription
 parent: Transcription
 nav_order: 3
-last_modified_date: 2025-07-08T15:46:16-04:00
+last_modified_date: 2026-02-23T10:23:21-05:00
 ---
 
 
@@ -22,8 +22,8 @@ In APLS, IPA is used only for _displaying_ phonological data to end-users.
 [^why-not-ipa]: 
     For the purpose of representing speech sounds in a database like APLS, IPA has several substantial drawbacks:
 
-    - Variability in representations: What is the IPA transcription for the phoneme in English _prize_? Depending on the author, it might be `aɪ` or `aj` or `ai`. The "ch" affricate might be `t͡ʃ` or `tʃ`; the last sound(s) in _apple_ might be `əl` or `əɫ` or `l̩`. This effectively breaks the one-to-one sound-symbol mapping that is absolutely necessary from a data perspective.
-    - Lookalike characters: `g` (typewriter g) is often substituted for `ɡ`, `:` (colon) for `ː`, `'` (apostrophe) for `ˈ`, superscript `j` for `ʲ`, etc. This also breaks the one-to-one mapping, and it can lead to hard-to-detect inconsistencies in the data.
+    - Variability in representations: What is the IPA transcription for the phoneme in English _prize_? Depending on the author, it might be <aɪ> or <aj> or <ai>. The "ch" affricate might be <t͡ʃ> or <tʃ>; the last sound(s) in _apple_ might be <əl> or <əɫ> or <l̩>. This effectively breaks the one-to-one sound-symbol mapping that is absolutely necessary from a data perspective.
+    - Lookalike characters: <g> ("typewriter G") is often substituted for <ɡ>, <:> (colon) for <ː>, <'> (apostrophe) for <ˈ>, superscript <j> for <ʲ>, etc. This also breaks the one-to-one mapping, and it can lead to hard-to-detect inconsistencies in the data.
     - Multiple characters per phoneme: Some phonemes are represented with more than one IPA character because they're multi-part sounds (e.g., diphthongs, affricates). This makes it harder to split strings of phonemes into individual phonemes, which has implications for large-scale processing of phonological data.
     
     It must be said that DISC is not drawback-free:
