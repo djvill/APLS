@@ -4,7 +4,7 @@
 # Files for building site locally (bundle exec jekyll serve)
 _site
 Gemfile*
-
+.jekyll-metadata
 
 # Unisyn dictionary
 files/custom-dictionary/apls.unisyn
