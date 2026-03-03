@@ -9,7 +9,7 @@ cites:
     authors: [Dan Villarreal, Barbara Johnstone, Scott Kiesling]
     title: Archive of Pittsburgh Language and Speech
     url: https://apls.pitt.edu
-    type: open data resource
+    software_type: open data resource
   - cite: apls-doc
     year: 2026
     authors: [Dan Villarreal, Jack Rechsteiner]
@@ -32,7 +32,7 @@ styles:
   - style: apa
     name: APA 7th edition
     url: https://owl.purdue.edu/owl/research_and_citation/apa_style/apa_style_introduction.html
-last_modified_date: 2026-02-09T11:43:35-05:00
+last_modified_date: 2026-03-03T15:19:19-05:00
 ---
 
 # {{ page.title }}

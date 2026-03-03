@@ -3,7 +3,7 @@ title: Credits
 permalink: /doc/credits
 parent: About APLS
 nav_order: 10
-last_modified_date: 2025-10-15T01:45:57-04:00
+last_modified_date: 2026-03-03T15:19:18-05:00
 ---
 
 # {{ page.title }}
@@ -15,6 +15,8 @@ Above all others, credit belongs to the speakers who have generously shared thei
 This page lists the [individuals](#contributors), [funding bodies](#funding), and [technological tools](#technological-tools) that have contributed to APLS, including the original data collection.
 Foremost among the technological tools is [LaBB-CAT], which was designed and written by [Robert Fromont] and [Jen Hay] for the [New Zealand Institute of Language, Brain and Behaviour (NZILBB)][nzilbb] at the University of Canterbury, Christchurch, New Zealand.
 Further credits for LaBB-CAT can be found on APLS's [Credits page](https://apls.pitt.edu/labbcat/credits) (requires login).
+
+For information about how you should cite APLS in your own work, see [this page]({{ '/doc/citing-contributing' | relative_url }}).
 
 {% include page_toc.html collapsible=true %}
 

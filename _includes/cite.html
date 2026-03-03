@@ -1,9 +1,20 @@
+{%- assign type = include.ref.type -%}
 {%- assign authors = include.ref.authors -%}
 {%- assign year = include.ref.year -%}
 {%- assign title = include.ref.title -%}
 {%- assign version = include.ref.version -%}
-{%- assign type = include.ref.type -%}
+{%- assign software_type = include.ref.software_type -%}
 {%- assign url = include.ref.url -%}
+{%- assign editors = include.ref.editors -%}
+{%- assign book_title = include.ref.book_title -%}
+{%- assign journal = include.ref.journal -%}
+{%- assign volume = include.ref.volume -%}
+{%- assign issue = include.ref.issue -%}
+{%- assign pages = include.ref.pages -%}
+{%- assign place = include.ref.place -%}
+{%- assign publisher = include.ref.publisher -%}
+{%- assign thesis_type = include.ref.thesis_type -%}
+{%- assign doi = include.ref.doi -%}
 
 {%- if include.file_format -%}
   {%- if include.file_format == "bib" -%}
@@ -20,18 +31,28 @@
       {%- else -%}
         {{ author }}
       {%- endif -%}
-      {%- if forloop.rindex > 2 -%}, {% elsif forloop.rindex == 2 -%}, and {% endif -%}
+      {%- if forloop.rindex > 2 -%}, {% elsif forloop.index == 1 and forloop.length == 2 %} and {% elsif forloop.rindex == 2 -%}, and {% endif -%}
     {%- endfor -%}
     . {% if version and version == "selector" -%}
         <span class="year">{{year}}</span>
       {%- else -%}
         {{year}}
       {%- endif -%}
-    . {{title}}
+    . {% if type == "book" -%}_{{title}}_{%- else -%}{{title}}{%- endif -%}
+    {%- if journal %}. _{{journal}}_ {{volume}}
+      {%- if issue -%}({{issue}}){%- endif -%}. {{pages}}
+    {%- endif -%}
     {%- if version %} (version <span class="version">{{version}}</span>){%- endif -%}
-    {%- if type %} [{{type}}]{%- endif -%}
-    .
+    {%- if software_type %} [{{software_type}}]{%- endif -%}
+    . {% if editors %} In
+      {%- for editor in editors %} {{ editor }}
+        {%- if forloop.rindex > 2 -%},{% elsif forloop.index == 1 and forloop.length == 2 %} and{% elsif forloop.rindex == 2 -%}, and{% endif -%}
+      {%- endfor %} (ed{%- if editors.size > 1 -%}s{%- endif -%}.), _{{ book_title }}_
+      {%- if pages -%}, {{ pages }}{%- endif -%}. {% endif -%}
+    {%- if place -%}{{ place }}{%- if publisher -%}: {% endif -%}{%- endif -%}
+    {%- if publisher -%}{{ publisher }}.{%- endif -%}
     {%- if url %} <{{url}}> (accessed {{ "today" | date: "%B %e, %Y"}}){%- endif -%}
+    {%- if doi %} <https://doi.org/{{doi}}>{%- endif -%}
   {%- elsif include.style == "apa" -%}
     {%- for author in authors -%}
       {%- assign author_last = author | split: " " | last -%}
@@ -50,7 +71,7 @@
     {%- endif -%}
     ). _{{title}}_
     {%- if version %} (version <span class="version">{{version}}</span>){%- endif -%}
-    {%- if type %} [{{type | capitalize}}]{%- endif -%}
+    {%- if software_type %} [{{software_type | capitalize}}]{%- endif -%}
     .
     {%- if url %} Retrieved {{ "today" | date: "%B %e, %Y,"}} from <{{url}}>{%- endif -%}
   {%- elsif include.style == "ieee" -%}
