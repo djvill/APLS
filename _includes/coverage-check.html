@@ -13,7 +13,8 @@
   {%- assign spanned = attribute_id | prepend: '-attr">' | prepend: attribute.synced.attrib_type | prepend: '<span class="' | append: '</span>' -%}
   {%- assign description = description | replace: attribute_id, spanned -%}
 {%- endfor -%}
+{%- assign pass = check.total | minus: check.failing -%}
 {%- assign pct_coverage = check.pct_coverage | times: 1 -%}
 {%- assign pct_rounded = pct_coverage | times: 100 | round: 1 -%}
-**{{ description }}**: True for {{ check.total | minus: check.failing }} out of {{ check.total }} {{ check.scope }} (
+**{{ description }}**: True for {% include commatize.html number=pass %} out of {% include commatize.html number=check.total %} {{ check.scope }} (
 {%- if pct_coverage < 1 and pct_rounded == 100 -%}>99.9{%- else -%}{{ pct_rounded }}{%- endif -%}%)
