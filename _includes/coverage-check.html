@@ -1,0 +1,21 @@
+{%- assign check = include.check -%}
+{%- assign description = check.check -%}
+{%- for layer in site.layers -%}
+  {%- assign layer_id = layer.path | remove: "_layers/" | remove: ".md" -%}
+  {%- assign spanned = layer_id | prepend: '<span class="layer">' | append: '</span>' -%}
+  {%- assign description = description | replace: layer_id, spanned -%}
+{%- endfor -%}
+{% comment %}
+{%- assign description = description | replace: 'transcript', '<span class="layer">transcript</span>' -%}
+{%- assign description = description | replace: 'participant', '<span class="layer">participant</span>' -%}
+{%- for attribute in site.attributes | where_exp: "item", "item.synced.attribute == 'episode'" | first -%}
+  {%- assign attribute_id = attribute.synced.attribute -%}
+  {%- assign spanned = attribute_id | prepend: '<span class="{{ attribute.synced.attrib_type }}-attr">' | append: '</span>' -%}
+  {%- assign spanned = attribute_id | prepend: '-attr">' | prepend: attribute.synced.attrib_type | prepend: '<span class="' | append: '</span>' -%}
+  {%- assign description = description | replace: attribute_id, spanned -%}
+{%- endfor -%}
+{% endcomment %}
+{%- assign pct_coverage = check.pct_coverage | times: 1 -%}
+{%- assign pct_rounded = pct_coverage | times: 100 | round: 1 -%}
+**{{ description }}**: True for {{ check.total | minus: check.failing }} out of {{ check.total }} {{ check.scope }} (
+{%- if pct_coverage < 1 and pct_rounded == 100 -%}>99.9{%- else -%}{{ pct_rounded }}{%- endif -%}%)
