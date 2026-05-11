@@ -3,7 +3,7 @@ title: Credits
 permalink: /doc/credits
 parent: About APLS
 nav_order: 10
-last_modified_date: 2026-03-03T15:19:18-05:00
+last_modified_date: 2026-05-11T14:59:54-04:00
 ---
 
 # {{ page.title }}
@@ -116,6 +116,7 @@ For information about how you should cite APLS in your own work, see [this page]
 
 ### Users who contributed annotations
 
+- Dan Villarreal
 
 ### Users who contributed corrections
 

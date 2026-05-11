@@ -75,6 +75,9 @@ function addA(node, type) {
     case 'frequency_in_corpus':
       title = `How often the current word appears in 'interview' and 'metalinguistic' transcripts`;
       break;
+    case 'hesitation':
+      title = `Whether or not the current word is a hesitation (an incomplete word)`;
+      break;
     case 'lemma':
       title = `All possible base forms of the word`;
       break;
@@ -122,6 +125,9 @@ function addA(node, type) {
       break;
     case 'redaction':
       title = `Speech redacted from the transcript (e.g., personally identifying information)`;
+      break;
+    case 'coronal_stop_deletion':
+      title = `Variants of the coronal stop deletion sociolinguistic variable (coded by Dan Villarreal)`;
       break;
     case 'dictionary_phonemes':
       title = `All possible phonemic representations of the word`;
