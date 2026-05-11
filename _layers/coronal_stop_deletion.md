@@ -24,22 +24,25 @@ synced:
   extra: (none)
 last_sync_modified_date: 2026-05-11T14:46:23-0400
 notation:
-  primary: Main category of notation system (e.g., English, downcased English, Penn
-    Treebank tags, DISC); links to `doc/notation-systems`
-  additional: _If applicable_, symbols that augment the primary notation system (e.g.,
-    transcription prosody symbols, morpheme marker, DISC syllabification/stress, foll_segment
-    pause symbol). Delete if not applicable
-  missing: How missing values should be interpreted
+  primary: Custom
+  missing: The current segment didn't appear in the original search for word-final coronal stops in consonant clusters.
 inputs:
-  - input: Name of input
-    type: layer, dictionary, algorithm, script, transcription, or other
-  - input: Name of input
-    type: layer, dictionary, algorithm, script, transcription, or other
+  - input: segment
+    type: layer
+  - input: orthography
+    type: layer
+  - input: phonemes
+    type: layer
+  - input: foll_segment
+    type: layer
+  - input: Coding file(s)
+    type: file
+segment_dependent: no
 versions:
-  first_appeared: Where layer first appeared
-  last_modified: Where layer was last modified
+  first_appeared: 0.4.4
+  last_modified: 0.4.4
 color: sea green
-last_modified_date: 2026-05-11T14:59:53-04:00
+last_modified_date: 2026-05-11T15:45:30-04:00
 ---
 
 **Fill longer description here**
