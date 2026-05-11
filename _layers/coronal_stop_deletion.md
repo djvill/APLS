@@ -20,12 +20,13 @@ synced:
   export_includeCounts: no
   export_includeAnchorSharing: no
   color_hex: '#4cfe96'
-  num_annotations: 14299
+  num_annotations: 14300
   extra: (none)
-last_sync_modified_date: 2026-05-11T14:46:23-0400
+last_sync_modified_date: 2026-05-11T15:52:30-0400
 notation:
   primary: Custom
-  missing: The current segment didn't appear in the original search for word-final coronal stops in consonant clusters.
+  missing: The current segment didn't appear in the original search for word-final
+    coronal stops in consonant clusters.
 inputs:
   - input: segment
     type: layer
@@ -42,7 +43,7 @@ versions:
   first_appeared: 0.4.4
   last_modified: 0.4.4
 color: sea green
-last_modified_date: 2026-05-11T15:45:30-04:00
+last_modified_date: 2026-05-11T15:53:19-04:00
 ---
 
 **Fill longer description here**
