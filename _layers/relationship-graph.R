@@ -16,7 +16,8 @@ node_shapes <- tibble::tribble(
   "dictionary",    "rect",
   "script",        "diamond",
   "algorithm",     "Mdiamond",
-  "layer",         "ellipse"
+  "layer",         "ellipse",
+  "file",          "tab"
 )
 
 ##Ensure correct working directory
