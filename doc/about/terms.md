@@ -3,7 +3,7 @@ title: Terms of use
 permalink: /doc/terms
 parent: About APLS
 nav_order: 50
-last_modified_date: 2025-02-10T14:52:11-05:00
+last_modified_date: 2026-05-14T16:21:16-04:00
 ---
 
 # {{ page.title }}
@@ -45,7 +45,13 @@ This document also serves as the license agreement for APLS (save for [this docu
 
 1. To access the user interface, you must log in with your user account. You **may not share your username and password** with anyone else. We may grant exceptions to create specialized user accounts for classes, demonstrations, etc.; [contact us](mailto:apls@pitt.edu) if you're interested. We reserve the right to remove user accounts that are inactive or that place excessive demands on computational resources (e.g., repeatedly downloading the full set of audio data), but we will contact users before doing do.
 
-1. Users may download APLS data, keep it indefinitely, and make copies for the purpose of personal backup or storage. Users may privately share APLS data with individual collaborators for the purpose of research and/or educational collaboration; collaborators are also bound by these terms of use. Users may share annotations, metadata, derived data, transcript _excerpts_, and/or screenshots of the user interface publicly, so long as they do not permit readers or viewers to reconstruct substantial portions of audio data, transcripts, and/or annotations. Users may _not_ share audio data, audio excerpts, or transcripts publicly. Users may play audio excerpts for research/classroom audiences or as experimental stimuli, but may not share files to wider audiences.
+1. Users **may** do any of the following:
+   - Download APLS data, keep it indefinitely, and make copies for the purpose of personal backup or storage.
+   - Privately share APLS data with individual collaborators for the purpose of research and/or educational collaboration; collaborators are also bound by these terms of use.
+   - Share annotations, metadata, derived data, transcript _excerpts_, and/or screenshots of the user interface publicly, so long as they do not permit readers or viewers to reconstruct substantial portions of audio data, transcripts, and/or annotations.
+   - _Play_ audio excerpts for research/classroom audiences or as experimental stimuli, as long as audio excerpts are not shared with wider audiences.
+   
+   However, users **may _not_** share audio data, audio excerpts, or transcripts publicly.
 
 1. Users **may not use web-scraping tools** to access APLS data. If you need programmatic tools for accessing APLS data, you may use APIs that LaBB-CAT provides (e.g., via the [`nzilbb.labbcat` R package](https://cran.r-project.org/package=nzilbb.labbcat)).
 
