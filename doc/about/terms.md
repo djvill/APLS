@@ -3,7 +3,7 @@ title: Terms of use
 permalink: /doc/terms
 parent: About APLS
 nav_order: 50
-last_modified_date: 2026-05-14T16:21:16-04:00
+last_modified_date: 2026-05-14T16:24:03-04:00
 ---
 
 # {{ page.title }}
@@ -49,7 +49,7 @@ This document also serves as the license agreement for APLS (save for [this docu
    - Download APLS data, keep it indefinitely, and make copies for the purpose of personal backup or storage.
    - Privately share APLS data with individual collaborators for the purpose of research and/or educational collaboration; collaborators are also bound by these terms of use.
    - Share annotations, metadata, derived data, transcript _excerpts_, and/or screenshots of the user interface publicly, so long as they do not permit readers or viewers to reconstruct substantial portions of audio data, transcripts, and/or annotations.
-   - _Play_ audio excerpts for research/classroom audiences or as experimental stimuli, as long as audio excerpts are not shared with wider audiences.
+   - _Play_ audio excerpts for research/classroom audiences or as experimental stimuli, as long as audio excerpts are not shared with wider audiences; this means that users may not distribute _recordings_ of research talks or classroom lessons that contain APLS audio excerpts.
    
    However, users **may _not_** share audio data, audio excerpts, or transcripts publicly.
 
