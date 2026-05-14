@@ -3,14 +3,14 @@ title: Terms of use
 permalink: /doc/terms
 parent: About APLS
 nav_order: 50
-last_modified_date: 2026-05-14T16:24:03-04:00
+last_modified_date: 2026-05-14T16:38:43-04:00
 ---
 
 # {{ page.title }}
 {:.no_toc}
 
 By using the Archive of Pittsburgh Language and Speech (APLS), you agree that you have read and will abide by the following terms of use.[^tou-sources]
-This document also serves as the license agreement for APLS (save for [this documentation site]({{ '/' | relative_url }}), which is distributed under a [Creative Commons BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/) license).
+This document also serves as the license agreement for APLS.[^license-exceptions]
 
 {: .try-it-title }
 > Definitions used in this document
@@ -34,6 +34,12 @@ This document also serves as the license agreement for APLS (save for [this docu
     - [Corpus of Regional African American Language](https://oraal.github.io/coraal)
     - [Sydney Speaks](http://www.dynamicsoflanguage.edu.au/sydney-speaks/).
 
+[^license-exceptions]:
+    License exceptions:
+    
+    - APLS documentation is distributed under a [Creative Commons BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/) license.
+      - Exception: Some pages contain content from [Villarreal et al.'s 2026 _Language and Linguistics Compass_ article][compass article]. These pages are distributed under a [Creative Commons BY 4.0](https://creativecommons.org/licenses/by/4.0/) license, as is the article.
+    - [LaBB-CAT], which powers the user interface, is distributed under the [GNU Affero General Public License](https://apls.pitt.edu/labbcat/agpl.txt).
 
 1. APLS is provided for **free, public use** for **research and educational purposes**. It may not be used for commercial purposes. It may not be used to create technology designed for policing or law enforcement.
 
@@ -60,3 +66,5 @@ This document also serves as the license agreement for APLS (save for [this docu
 1. If these terms of use change, we will notify users and explain any changes. We may grant exceptions to these terms; please [contact us](mailto:apls@pitt.edu) if you are interested.
 
 Finally, if anything is unclear about what you can or cannot do with APLS, please do not hesitate to contact us at apls@pitt.edu!
+
+{% include linklist.html %}
