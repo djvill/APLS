@@ -576,6 +576,7 @@ screengrabs:
       lwd: 5
 
 - screengrab: transcripts/layer-picker-segment-icons.png
+  elements: [layer-picker]
   instructions:
     - Log in as test-student
     - Set browser zoom to 100%
@@ -1162,6 +1163,7 @@ screengrabs:
   height: 105
 
 - screengrab: transcript/layer-picker.png
+  elements: [layer-picker]
   instructions:
     - Log in as test-student
     - Set browser zoom to 100%
@@ -1174,6 +1176,7 @@ screengrabs:
   height: height$transcript_layer_picker_plus_1
 
 - screengrab: transcript/layer-picker-layout.png
+  elements: [layer-picker]
   instructions: See transcript/layer-picker.png
   in_path: transcript/layer-picker.png
   offset_x: offset_x$transcript_content_left
@@ -1219,6 +1222,7 @@ screengrabs:
       lwd: 3
 
 - screengrab: transcript/layer-picker-segment.png
+  elements: [layer-picker]
   instructions:
     - Log in as test-student
     - Set browser zoom to 100%
@@ -1232,6 +1236,7 @@ screengrabs:
   height: height$transcript_layer_picker_plus_1 + 1*height$transcript_body_layer
 
 - screengrab: transcript/layer-picker-segment-layout.png
+  elements: [layer-picker]
   instructions: See transcript/layer-picker-segment.png
   in_path: transcript/layer-picker-segment.png
   offset_x: offset_x$transcript_content_left
@@ -1250,6 +1255,7 @@ screengrabs:
       lwd: 3
 
 - screengrab: transcript/layer-picker-segment-disc.png
+  elements: [layer-picker]
   instructions:
     - Log in as test-student
     - Set browser zoom to 100%
@@ -1264,6 +1270,7 @@ screengrabs:
   height: height$transcript_layer_picker_plus_1 + 1*height$transcript_body_layer
 
 - screengrab: transcript/layer-picker-segment-disc-phonemes.png
+  elements: [layer-picker]
   instructions:
     - Log in as test-student
     - Set browser zoom to 100%
@@ -1292,6 +1299,7 @@ screengrabs:
       offset_y: 510
 
 - screengrab: transcript/layer-picker-no-segment.png
+  elements: [layer-picker]
   instructions:
     - Log in as test-student
     - Set browser zoom to 100%
@@ -1307,6 +1315,7 @@ screengrabs:
   height: height$transcript_layer_picker_plus_1
 
 - screengrab: transcript/layer-picker-projects.png
+  elements: [layer-picker]
   instructions:
     - Log in as test-student
     - Set browser zoom to 100%
@@ -1320,6 +1329,7 @@ screengrabs:
   height: height$transcript_layer_picker_plus_1
 
 - screengrab: transcript/layer-picker-no-projects.png
+  elements: [layer-picker]
   instructions:
     - Log in as test-student
     - Set browser zoom to 100%
@@ -1335,6 +1345,7 @@ screengrabs:
   height: height$transcript_layer_picker_plus_1 + 1*height$transcript_body_layer
 
 - screengrab: transcript/layer-picker-tooltip.png
+  elements: [layer-picker]
   instructions:
     - Log in as test-student
     - Set browser zoom to 100%
@@ -1354,6 +1365,7 @@ screengrabs:
       offset_y: 495
 
 - screengrab: transcript/layer-picker-segment-icons.png
+  elements: [layer-picker]
   instructions: See transcript/layer-picker.png
   in_path: transcript/layer-picker.png
   offset_x: 1270
@@ -1362,6 +1374,7 @@ screengrabs:
   height: 35
 
 - screengrab: transcript/layer-picker-icon-tooltip.png
+  elements: [layer-picker]
   instructions:
     - Log in as test-student
     - Set browser zoom to 100%
@@ -1379,6 +1392,7 @@ screengrabs:
       offset_y: 460
 
 - screengrab: transcript/layer-picker-hide-icons.png
+  elements: [layer-picker]
   instructions:
     - Log in as test-student
     - Set browser zoom to 100%
@@ -1392,6 +1406,7 @@ screengrabs:
   height: height$transcript_layer_picker_plus_1
 
 - screengrab: transcript/layer-picker-many-annotations.png
+  elements: [layer-picker]
   instructions:
     - Log in as test-student
     - Set browser zoom to 100%
@@ -1406,6 +1421,7 @@ screengrabs:
   height: 820
 
 - screengrab: transcript/layer-picker-hide-annotation-counts.png
+  elements: [layer-picker]
   instructions:
     - Log in as test-student
     - Set browser zoom to 100%
@@ -1468,6 +1484,7 @@ screengrabs:
   height: 155
 
 - screengrab: transcript/layer-picker-empty-layers.png
+  elements: [layer-picker]
   instructions:
     - Log in as test-student
     - Set browser zoom to 100%
@@ -1615,6 +1632,7 @@ screengrabs:
   height: 485
 
 - screengrab: home/overview.png
+  elements: [footer]
   instructions:
     - Log in as test-student
     - Set browser zoom to 100%
@@ -1629,6 +1647,7 @@ screengrabs:
   height: height$top_menu
 
 - screengrab: home/footer-menu.png
+  elements: [footer]
   instructions: See home/overview.png
   in_path: home/overview.png
   offset_x: 320
@@ -1653,6 +1672,7 @@ screengrabs:
     - In Paint, manually crop and add ellipsis
 
 - screengrab: search/overview.png
+  elements: [layer-picker]
   instructions:
     - Log in as test-student
     - Set browser zoom to 100%
@@ -1701,6 +1721,7 @@ screengrabs:
       lwd: 5
 
 - screengrab: search/overview-progress.png
+  elements: [layer-picker]
   instructions:
     - Log in as test-student
     - Set browser zoom to 100%
@@ -1759,6 +1780,7 @@ screengrabs:
       lwd: 5
 
 - screengrab: search/matrix.png
+  elements: [layer-picker]
   instructions:
     - Log in as test-student
     - Set browser zoom to 100%
@@ -1793,6 +1815,7 @@ screengrabs:
   height: height$search_input
 
 - screengrab: search/matrix-orthography-segment.png
+  elements: [layer-picker]
   instructions:
     - Log in as test-student
     - Set browser zoom to 100%
@@ -1805,6 +1828,7 @@ screengrabs:
   height: 475
 
 - screengrab: search/matrix-segment.png
+  elements: [layer-picker]
   instructions:
     - Log in as test-student
     - Set browser zoom to 100%
@@ -1817,6 +1841,7 @@ screengrabs:
   height: height$search_matrix
 
 - screengrab: search/all-layers.png
+  elements: [layer-picker]
   instructions:
     - Log in as test-student
     - Set browser zoom to 100%
@@ -1926,6 +1951,7 @@ screengrabs:
     - Save
 
 - screengrab: search/participants-selected.png
+  elements: [layer-picker, footer]
   instructions:
     - Log in as test-student
     - Set browser zoom to 100%
@@ -1945,6 +1971,7 @@ screengrabs:
     - Save
 
 - screengrab: search/both-filters.png
+  elements: [layer-picker, footer]
   instructions:
     - Log in as test-student
     - Set browser zoom to 100%
@@ -1957,6 +1984,7 @@ screengrabs:
     - Save
 
 - screengrab: search/participants-uploaded.png
+  elements: [layer-picker, footer]
   instructions:
     - Log in as test-student
     - Set browser zoom to 100%
@@ -1968,6 +1996,7 @@ screengrabs:
     - Save
 
 - screengrab: search/transcripts.png
+  elements: [layer-picker, footer]
   instructions:
     - Log in as test-student
     - Set browser zoom to 100%
