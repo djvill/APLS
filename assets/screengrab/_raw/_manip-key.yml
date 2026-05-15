@@ -11,6 +11,7 @@ constants:
     top_menu_nohelp_left: 565
     transcript_content_left: 190
     transcripts_content_left: 189
+    transcripts_export_formatted_left: 90
     participants_content_left: 25
     search_tabs_filtered_left: 360
     search_tabs_left: 370
@@ -31,10 +32,10 @@ constants:
     transcripts_filters_bottom: 410
     excel_formula_bar_top: 120
     search_tabs_top: 270
-    search_matrix_top: 355
+    search_matrix_top: 350
     search_input_top: 650
     search_input_syllables_top: 653
-    search_progress_top: 795
+    search_progress_top: 815
   width:
     window: 1920
     top_menu: 875
@@ -44,9 +45,10 @@ constants:
     transcript_cb013_first_utterance_tooltip: 905
     transcript_bj_first_utterance_tooltip: 1295
     transcripts_content: 1510
+    transcripts_export_formatted: 1650
     participants_content: 1860
     search_tabs: 1170
-    search_matrix: 870
+    search_matrix: 890
     search_input: 752
     search_input_picker: 1141
     search_progress: 765
@@ -56,7 +58,7 @@ constants:
     transcript_body_layer: 30
     transcript_body_turn_container: 45
     transcript_attributes: 560
-    transcript_layer_picker_plus_1: 470
+    transcript_layer_picker_plus_1: 495
     transcript_export_plus_1: 655
     search_tabs: 70
     search_filter_tabs: 515
@@ -544,6 +546,7 @@ screengrabs:
   height: 390
 
 - screengrab: transcripts/export-formatted.png
+  elements: [layer-picker]
   instructions:
     - Log in as test-student
     - Set browser zoom to 100%
@@ -551,26 +554,26 @@ screengrabs:
     - "`window.scrollTo(0,100); document.querySelector('html').style.backgroundImage = 'unset'`"
     - Click "Export Formatted"
     - Save
-  offset_x: 165
+  offset_x: offset_x$transcripts_export_formatted_left
   offset_y: 260
-  width: width$transcripts_content
-  height: 760
+  width: width$transcripts_export_formatted
+  height: 725
   drawing:
       # layer picker
     - func: rect
-      xleft: 170
-      ytop: 310
-      xright: 1660
-      ybottom: 1018
+      xleft: offset_x$transcripts_export_formatted_left + 5
+      ytop: 309
+      xright: offset_x$transcripts_export_formatted_left + width$transcripts_export_formatted - 5
+      ybottom: 982
       border: highlight_colors$hl_1
       lty: dashed
       lwd: 5
       # format picker
     - func: rect
-      xleft: 663
-      ytop: 251
-      xright: 930
-      ybottom: 285
+      xleft: 590
+      ytop: 267
+      xright: 855
+      ybottom: 298
       border: highlight_colors$hl_2
       lty: dashed
       lwd: 5
@@ -1186,9 +1189,9 @@ screengrabs:
   drawing:
     # checkbox (comment)
     - func: rect
-      xleft: 535
+      xleft: 544
       ytop: 432
-      xright: 560
+      xright: 569
       ybottom: 460
       border: highlight_colors$hl_1
       lty: dashed
@@ -1198,24 +1201,24 @@ screengrabs:
       xleft: 340
       ytop: 395
       xright: 513
-      ybottom: 633
+      ybottom: 660
       border: highlight_colors$hl_2
       lty: dashed
       lwd: 3
     # layer icons (orthography)
     - func: rect
-      xleft: 975
+      xleft: 985
       ytop: 432
-      xright: 1034
+      xright: 1044
       ybottom: 463
       border: highlight_colors$hl_3
       lty: dashed
       lwd: 3
     # annotation count (word)
     - func: rect
-      xleft: 1160
+      xleft: 1170
       ytop: 469
-      xright: 1229
+      xright: 1239
       ybottom: 497
       border: highlight_colors$hl_4
       lty: dashed
@@ -1246,9 +1249,9 @@ screengrabs:
   drawing:
     # IPA/DISC toggle (segment)
     - func: rect
-      xleft: 1505
+      xleft: 1515
       ytop: 425
-      xright: 1550
+      xright: 1560
       ybottom: 472
       border: highlight_colors$hl_5
       lty: dashed
@@ -1361,8 +1364,8 @@ screengrabs:
   height: height$transcript_layer_picker_plus_1 + 1*height$transcript_body_layer
   overlay:
     - image: _help.png
-      offset_x: 836
-      offset_y: 495
+      offset_x: 846
+      offset_y: 491
 
 - screengrab: transcript/layer-picker-segment-icons.png
   elements: [layer-picker]
@@ -1418,7 +1421,7 @@ screengrabs:
   offset_x: offset_x$transcript_content_left
   offset_y: offset_y$top_menu_bottom
   width: width$transcript_content
-  height: 820
+  height: 850
 
 - screengrab: transcript/layer-picker-hide-annotation-counts.png
   elements: [layer-picker]
@@ -1686,9 +1689,9 @@ screengrabs:
       # search matrix
     - func: rect
       xleft: 580
-      ytop: 650
+      ytop: 675
       xright: 1332
-      ybottom: 740
+      ybottom: 760
       border: highlight_colors$hl_1
       lty: dashed
       lwd: 5
@@ -1697,16 +1700,16 @@ screengrabs:
       xleft: offset_x$search_matrix_left + 5
       ytop: offset_y$search_matrix_top
       xright: offset_x$search_matrix_left + width$search_matrix - 5
-      ybottom: 650
+      ybottom: 675
       border: highlight_colors$hl_2
       lty: dashed
       lwd: 5
       # search button
     - func: rect
       xleft: offset_x$search_tabs_left
-      ytop: 745
+      ytop: 770
       xright: 485
-      ybottom: 800
+      ybottom: 825
       border: highlight_colors$hl_3
       lty: dashed
       lwd: 5
@@ -1736,9 +1739,9 @@ screengrabs:
       # search matrix
     - func: rect
       xleft: 580
-      ytop: 650
+      ytop: 675
       xright: 1332
-      ybottom: 740
+      ybottom: 755
       border: highlight_colors$hl_1
       lty: dashed
       lwd: 5
@@ -1747,16 +1750,16 @@ screengrabs:
       xleft: offset_x$search_matrix_left + 5
       ytop: offset_y$search_matrix_top
       xright: offset_x$search_matrix_left + width$search_matrix - 5
-      ybottom: 650
+      ybottom: 675
       border: highlight_colors$hl_2
       lty: dashed
       lwd: 5
       # search button
     - func: rect
       xleft: offset_x$search_tabs_left
-      ytop: 745
+      ytop: 770
       xright: 485
-      ybottom: 800
+      ybottom: 825
       border: highlight_colors$hl_3
       lty: dashed
       lwd: 5
@@ -1780,7 +1783,6 @@ screengrabs:
       lwd: 5
 
 - screengrab: search/matrix.png
-  elements: [layer-picker]
   instructions:
     - Log in as test-student
     - Set browser zoom to 100%
@@ -1815,7 +1817,6 @@ screengrabs:
   height: height$search_input
 
 - screengrab: search/matrix-orthography-segment.png
-  elements: [layer-picker]
   instructions:
     - Log in as test-student
     - Set browser zoom to 100%
@@ -1828,7 +1829,6 @@ screengrabs:
   height: 475
 
 - screengrab: search/matrix-segment.png
-  elements: [layer-picker]
   instructions:
     - Log in as test-student
     - Set browser zoom to 100%
@@ -1848,10 +1848,10 @@ screengrabs:
     - Load https://apls.pitt.edu/labbcat/search
     - Select all projects except temp
     - Save
-  offset_x: 275
+  offset_x: 225
   offset_y: offset_y$search_matrix_top
-  width: 1340
-  height: 560
+  width: 1440
+  height: 540
 
 - screengrab: search/syllables.png
   instructions:
@@ -1976,9 +1976,8 @@ screengrabs:
     - Log in as test-student
     - Set browser zoom to 100%
     - Load https://apls.pitt.edu/labbcat/participants
-    - Click Male
-    - Click Layered Search
-    - Click Filter Transcripts
+    - Click CB01 and FH05
+    - Click List Transcripts
     - Click reading
     - Click Layered Search
     - Save
