@@ -84,6 +84,9 @@ function addA(node, type) {
     case 'morphemes':
       title = `All possible ways to break down the current word into morphemes`;
       break;
+    case 'word_index':
+      title = `The current word's index (1st, 54th, etc.) for this participant in this transcript`;
+      break;
     case 'foll_segment':
       title = `Segment or pause following the current segment`;
       break;
@@ -197,6 +200,9 @@ function addA(node, type) {
       break;
     case 'participant_type':
       title = `Whether a participant is a main speaker (interviewee), interviewer, or bystander.`;
+      break;
+    case 'participant_word_count':
+      title = `Count of all words (not word types) uttered by this speaker, not counting redactions`;
       break;
     case 'participant_year_of_birth':
       title = `Year of birth`;
