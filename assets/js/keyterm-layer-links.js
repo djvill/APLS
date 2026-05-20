@@ -93,6 +93,9 @@ function addA(node, type) {
     case 'phonemes':
       title = `Sequence of speech sounds in the word`;
       break;
+    case 'prec_segment':
+      title = `Segment or pause preceding the current segment`;
+      break;
     case 'stress':
       title = `Syllable stresses in the word`;
       break;
@@ -104,6 +107,9 @@ function addA(node, type) {
       break;
     case 'overlap':
       title = `Whether or not there is more than one speaker speaking in this turn`;
+      break;
+    case 'prec_pause':
+      title = `Duration of pause (in seconds) preceding the current word`;
       break;
     case 'speech_rate':
       title = `Measurement of syllables per second for this utterance (line), skipping over pauses`;
