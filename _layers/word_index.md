@@ -30,11 +30,12 @@ inputs:
     type: layer
   - input: word_index.py
     type: script 
+segment_dependent: no
 versions:
   first_appeared: 0.4.5
   last_modified: 0.4.5
 color: wisteria 
-last_modified_date: 2026-05-19T16:35:43-04:00
+last_modified_date: 2026-05-19T23:30:30-04:00
 ---
 
 **Fill longer description here**
