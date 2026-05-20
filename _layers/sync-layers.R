@@ -108,11 +108,13 @@ layers <-
 
 ## Wrangle layers ============================================================
 
-##Remove language layer
+##Remove invisible layers: language, word_count
 ##language has no annotations; it's only in the APLS schema because it's
 ##  required by some layer managers; and it's hidden from all layer selectors
+##word_count has no annotations; it's only there for generating the word_count
+##  participant attribute; and it's [soon to be] hidden from all layer selectors
 layers <- layers |>
-  filter(id != "language")
+  filter(!(id %in% c("language", "word_count")))
 
 ##Columns and names
 layers <- layers |>
@@ -480,6 +482,7 @@ blank_props_layers <- list(last_sync_modified_date = last_sync_modified_date,
                                               type = "layer, dictionary, algorithm, script, transcription, or other"),
                                          list(input = "Name of input",
                                               type = "layer, dictionary, algorithm, script, transcription, or other")),
+                           segment_dependent = "yes or no",
                            versions = list(first_appeared = "Where layer first appeared",
                                            last_modified = "Where layer was last modified"),
                            color = "Use _closest-colors.R with color_hex",
