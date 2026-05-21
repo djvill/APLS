@@ -235,5 +235,19 @@ if (!is.null(indiv_ref)) {
 compare_subset <- compare_subset |>
   mutate(across(where(is.double), \(x) round(x, decimal_places)))
 
+##Mark colors that are currently in use
+curr_colors <-
+  dir(pattern="[a-z_]+\\.md") |>
+  map(\(x) x |>
+        read_lines() |>
+        grepv("color: ", x=_)) |>
+  compact() |>
+  list_c(ptype=character()) |>
+  sub(".*color: ", "", x=_) |>
+  trimws()
+
+compare_subset <- compare_subset |>
+  mutate(across(color, \(x) if_else(x %in% curr_colors, paste0("**", x), x)))
+
 ##Output
 compare_subset
