@@ -72,6 +72,9 @@ function addA(node, type) {
     case 'frequency_from_celex':
       title = `How often the current word appears in the CELEX English reference corpus`;
       break;
+    case 'frequency_from_subtlex':
+      title = `Lg10CD measure from the SUBTLEX-US reference corpus (log base 10 of the number of films that the word appears in, out of 8388)`;
+      break;
     case 'frequency_in_corpus':
       title = `How often the current word appears in 'interview' and 'metalinguistic' transcripts`;
       break;
