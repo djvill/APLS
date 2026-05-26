@@ -17,7 +17,7 @@
 					{% endif %}
 				{% endcapture %}
 				<li class="item" id="{{ linkid | strip }}">
-					<a href="{{ link.url | absolute_url }}" {{ target }} >
+					<a href="{{ link.url | absolute_url }}" {{ target }} title="{{ link.alt | default: link.text }}">
 						<img src="{{ link.image | prepend: '/assets/img/' | absolute_url }}" />
 						<span class="dash-label">{{ link.text }}</span>
 					</a>
