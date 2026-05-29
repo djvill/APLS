@@ -37,10 +37,10 @@ inputs:
     type: script
 segment_dependent: yes
 versions:
-  first_appeared: 0.4.5
-  last_modified: 0.4.5
+  first_appeared: 0.5.0
+  last_modified: 0.5.0
 color: brick red
-last_modified_date: 2026-05-19T23:31:29-04:00
+last_modified_date: 2026-05-29T13:21:10-04:00
 ---
 
 **Fill longer description here**

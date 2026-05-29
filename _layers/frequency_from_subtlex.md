@@ -33,10 +33,10 @@ inputs:
     type: dictionary
 segment_dependent: no
 versions:
-  first_appeared: 0.4.5
-  last_modified: 0.4.5
+  first_appeared: 0.5.0
+  last_modified: 0.5.0
 color: pink
-last_modified_date: 2026-05-20T20:31:02-04:00
+last_modified_date: 2026-05-29T13:21:10-04:00
 ---
 
 **Fill longer description here**

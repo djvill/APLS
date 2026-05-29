@@ -32,10 +32,10 @@ inputs:
     type: script 
 segment_dependent: no
 versions:
-  first_appeared: 0.4.5
-  last_modified: 0.4.5
+  first_appeared: 0.5.0
+  last_modified: 0.5.0
 color: wisteria 
-last_modified_date: 2026-05-19T23:30:30-04:00
+last_modified_date: 2026-05-29T13:21:11-04:00
 ---
 
 **Fill longer description here**
