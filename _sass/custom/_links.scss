@@ -61,7 +61,7 @@ a:not([class]) {
   [href="https://doi.org/10.1111/lnc3.70038"],
   /* serving locally */
   [href*="localhost"]
-)) {
+)):not(.no-extlink-icon) {
   /* Add external-link svg (which one depends on color scheme) */
   /* https://christianoliff.com/blog/styling-external-links-with-an-icon-in-css/ */
   &:after {
