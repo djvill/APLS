@@ -31,21 +31,21 @@ labbcat_version: LABBCAT_VERSION
 
 SUMMARY
 
-#### Credits (if applicable)
+#### Credits (if applicable) {#credits-{{ page.version }}}
 {:.no_toc}
 
 [Kilgore Trout](https://kilgore-trout.github.io/) contributed hand-corrections for STRUT tokens in Hill District interview files.
 Thanks, Kilgore!
 
 
-#### New features (if applicable)
+#### New features (if applicable) {#new-features-{{ page.version }}}
 {:.no_toc}
 
 - Description
 - Description
   - Details
 
-#### Breaking changes (if applicable)
+#### Breaking changes (if applicable) {#breaking-changes-{{ page.version }}}
 {:.no_toc}
 
 - Description
