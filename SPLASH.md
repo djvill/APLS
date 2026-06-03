@@ -2,6 +2,7 @@
 layout: ghost
 nav_exclude: true
 search_exclude: true
+sitemap: false
 dashlinks:
   - text: Sign in
     alt: Sign in to APLS with your user account

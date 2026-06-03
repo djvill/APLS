@@ -2,6 +2,7 @@
 layout: default
 nav_exclude: true
 search_exclude: true
+sitemap: false
 permalink: /README
 ---
 
