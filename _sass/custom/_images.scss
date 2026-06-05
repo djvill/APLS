@@ -10,8 +10,10 @@ img.screengrab {
   transition: 0.3s;
 }
 //No border in callouts
-.try-it img.screengrab, .under-the-hood img.screengrab {
-  border: none;
+.try-it, .try-it-title, .under-the-hood, .note {
+  img.screengrab {
+    border: none;
+  }
 }
 
 //Modal (maximized) images

@@ -114,3 +114,9 @@
     width: 15%;
   }
 }
+
+.two-way {
+  tr:last-child > *:first-child {
+    border-left: $border $border-color;
+  }
+}
