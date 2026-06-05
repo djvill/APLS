@@ -2235,3 +2235,31 @@ screengrabs:
 - screengrab: no-page/noload.png
   instructions:
     - This is hard to replicate because it happened when there was a larger Pitt IT outage
+
+- screengrab: transcript/word_index.png
+  instructions:
+    - Log in as test-student
+    - Set browser zoom to 100%
+    - Load https://apls.pitt.edu/labbcat/transcript?transcript=CB01interview4.eaf
+    - Select word_index, hide Layers tab
+    - Save
+  offset_x: offset_x$transcript_content_left
+  offset_y: offset_y$transcript_body_top
+  width: width$transcript_content
+  height: 895 - offset_y$transcript_body_top
+
+- screengrab: praat/forgot-measures.png
+  instructions:
+    - Log in as test-student
+    - Set browser zoom to 100%
+    - Search for orthography=test, export to CSV
+    - Load https://apls.pitt.edu/labbcat/praat
+    - Upload csv
+    - Change a pitch setting
+    - Click Process
+    - Save
+  offset_x: 620
+  offset_y: offset_y$page_top - 10
+  width: 680
+  height: 285
+
