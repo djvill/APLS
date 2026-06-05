@@ -121,6 +121,14 @@ if (length(path_err) > 0) {
   stop("Input image(s) not found: ",
        paste(names(path_err), collapse=" "))
 }
+##Create directory(ies) if needed
+manip$out_image |>
+  dirname() |>
+  strsplit("/") |>
+  walk(\(x) x |>
+         accumulate(\(x, y) paste0(x, "/", y)) |>
+         discard(dir.exists) |>
+         walk(dir.create))
 
 ##Optionally overlay additional images
 if ("overlay" %in% colnames(manip)) {
