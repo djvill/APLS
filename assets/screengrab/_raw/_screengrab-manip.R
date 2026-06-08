@@ -17,6 +17,7 @@ library(yaml)
 library(purrr)
 suppressPackageStartupMessages(library(dplyr))
 suppressWarnings(suppressPackageStartupMessages(library(magick)))
+library(tidyr)
 
 ##Check that all arguments are files defined in manip_key
 to_manip <- sub("^\\.\\./", "", commandArgs(trailingOnly = TRUE))
@@ -82,22 +83,49 @@ yaml_to_tibble <- function(x, envir=yaml$constants) {
     as_tibble()
 }
 
-##Wrangle YAML to tibble (with list-columns for overlay & drawing, if applicable)
+##Wrangle YAML to tibble:
+##- DF-columns for overlay & drawing, if applicable
+##- List-columns for combine & buffer, if applicable
+##- composite column (even combine is not in the input, to make things simpler)
 manip <-
   screengrabs |>
   keep(~ .x$screengrab %in% to_manip) |>
   map_dfr(~ .x |>
             discard_at("instructions") |>
             modify_at(c("overlay", "drawing"), \(x) list(map_dfr(x, yaml_to_tibble))) |>
+            modify_at(c("combine", "buffer"), list) |>
             yaml_to_tibble())
+if ("combine" %in% colnames(manip)) {
+  manip <- manip |>
+    mutate(composite = !map_lgl(combine, is.null))
+} else {
+  manip <- manip |>
+    mutate(composite = FALSE)
+}
 
 ##Set up I/O paths
+if ("combine" %in% colnames(manip)) {
+  manip <- manip |>
+    mutate(across(combine, \(x) if_else(composite,
+                                        map(x, \(x) file.path(out_dir, x)),
+                                        NA)))
+  if ("in_path" %in% colnames(manip)) {
+    manip <- manip |>
+      mutate(in_path = in_path |>
+               map2(combine, coalesce) |>
+               map2(screengrab, coalesce))
+  } else {
+    manip <- manip |>
+      mutate(in_path = map2(combine, screengrab, coalesce))
+  }
+} else {
 if ("in_path" %in% colnames(manip)) {
   manip <- manip |>
     mutate(in_path = coalesce(in_path, screengrab))
 } else {
   manip <- manip |>
     mutate(in_path = screengrab)
+}
 }
 if ("dir" %in% colnames(manip)) {
   manip <- manip |>
@@ -106,29 +134,96 @@ if ("dir" %in% colnames(manip)) {
   manip <- manip |>
     mutate(out_path = file.path(out_dir, screengrab))
 }
-##Set up images
+
+##Read inputs if possible
+if ("combine" %in% colnames(manip)) {
+  manip <- manip |>
+    mutate(safe_image = map_depth(in_path, 2, safely(image_read), .ragged=TRUE),
+           path_err = map_depth(safe_image, 2, "error"),
+           in_image = map_depth(safe_image, 2, "result") |>
+             map_if(!composite, 1),
+           out_image = in_image)
+  path_err <-
+    manip |>
+    unnest(c(path_err, in_path)) |>
+    pull(path_err, in_path) |>
+    compact()
+} else {
 manip <- manip |>
   mutate(safe_image = map(in_path, safely(image_read)),
          path_err = map(safe_image, "error"),
          in_image = map(safe_image, "result"),
          out_image = in_image)
-##Throw errors if needed
 path_err <-
   manip |>
   pull(path_err, in_path) |>
   compact()
+}
+##Throw errors if needed
 if (length(path_err) > 0) {
   stop("Input image(s) not found: ",
        paste(names(path_err), collapse=" "))
 }
 ##Create directory(ies) if needed
-manip$out_image |>
+manip$out_path |>
   dirname() |>
   strsplit("/") |>
   walk(\(x) x |>
          accumulate(\(x, y) paste0(x, "/", y)) |>
          discard(dir.exists) |>
          walk(dir.create))
+
+##Optionally create composites
+if ("combine" %in% colnames(manip)) {
+  to_combine <-
+    manip |>
+    filter(composite)
+  if ("buffer" %in% colnames(to_combine)) {
+    ##Create buffer
+    to_combine <- to_combine |>
+      unnest_wider(buffer) |>
+      mutate(stack = orientation == "vertical",
+             size = coalesce(size, 0),
+             max_dims = map(in_image,
+                            \(x) x |>
+                              image_join() |>
+                              image_info() |>
+                              summarise(across(c(width, height), max))),
+             buffer_width = if_else(stack,
+                                    map_int(max_dims, "width"),
+                                    size),
+             buffer_height = if_else(stack,
+                                     size,
+                                     map_int(max_dims, "height")))
+    if ("background_color" %in% colnames(to_combine)) {
+      to_combine <- to_combine |>
+        mutate(background_color = coalesce(background_color, "none"))
+    } else {
+      to_combine <- to_combine |>
+        mutate(background_color = "none")
+    }
+    to_combine <- to_combine |>
+      rename(buffer_color = background_color) |>
+      pack(buffer = starts_with("buffer_"), .names_sep="_") |>
+      mutate(buffer_image = pmap(buffer, image_blank))
+    
+    ##Combine images with buffer
+    to_combine <- to_combine |>
+      mutate(out_image = map2(in_image, buffer_image,
+                              \(x, y) reduce(x,
+                                             \(xx, yy) image_join(xx, y, yy))) |>
+                           map2(stack, \(x, y) image_append(x, stack=y)))
+  } else {
+    to_combine <- to_combine |>
+      mutate(out_image = map(in_image,
+                              \(x) reduce(x,
+                                          \(xx, yy) image_join(xx, yy))) |>
+                           map2(stack, \(x, y) image_append(x, stack=y)))
+  }
+  ##Add back to main dataframe
+  manip <- manip |>
+    rows_update(to_combine |> select(screengrab, out_image), "screengrab")
+}
 
 ##Optionally overlay additional images
 if ("overlay" %in% colnames(manip)) {
@@ -188,4 +283,3 @@ if (any(c("width", "height", "offset_x", "offset_y") %in% colnames(manip))) {
   with(manip, 
        walk2(out_image, out_path, image_write))
 }
-

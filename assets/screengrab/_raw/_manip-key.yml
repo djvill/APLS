@@ -497,8 +497,14 @@ screengrabs:
       offset_x: 710
       offset_y: 360
 
-- screengrab: !transcripts/expandable.png
-  instructions: In PowerPoint, stitch together transcripts/filters-interview-small.png and transcripts/filters-expand-small.png (with 0.2 inches of horizontal space). I promise it'll be okay.
+- screengrab: transcripts/expandable.png
+  instructions: See input images
+  combine:
+    - transcripts/filters-interview-small.png
+    - transcripts/filters-expand-small.png
+  orientation: horizontal
+  buffer:
+    size: 25
 
 - screengrab: transcripts/filters-multi-select.png
   instructions:
@@ -778,9 +784,14 @@ screengrabs:
   width: width$transcript_cb013_first_utterance
   height: 340
 
-- screengrab: !transcript/word-menu-comp.png
-  instructions:
-    - In PowerPoint, stitch together transcript/no-praat-word-menu-context-comp.png and transcript/word-menu-context.png (with a 0.25in spacer). I promise it'll be okay
+- screengrab: transcript/word-menu-comp.png
+  instructions: See input images
+  combine:
+    - transcript/no-praat-word-menu-context-comp.png
+    - transcript/word-menu-context.png
+  orientation: horizontal
+  buffer:
+    size: 30
 
 - screengrab: transcript/overview.png
   instructions:
@@ -1031,9 +1042,14 @@ screengrabs:
       offset_x: 1127
       offset_y: 510
 
-- screengrab: !transcript/tooltips.png
-  instructions:
-    - Stitch together transcript/layer-hover-N.png in PowerPoint with no buffer (I promise it's not as bad as it sounds)
+- screengrab: transcript/tooltips.png
+  instructions: See input images
+  combine:
+    - transcript/layer-hover-1.png
+    - transcript/layer-hover-2.png
+    - transcript/layer-hover-3.png
+    - transcript/layer-hover-4.png
+  orientation: vertical
 
 - screengrab: transcript/tooltip-missing.png
   instructions:
@@ -1110,9 +1126,14 @@ screengrabs:
       offset_x: 708
       offset_y: 430
 
-- screengrab: !transcript/peers-tooltip-vert.png
-  instructions:
-    - In PowerPoint, stitch together transcript/peers-tooltip-vert-1.png and transcript/peers-tooltip-vert-2.png (with 0.2 inches of vertical space). I promise it'll be okay
+- screengrab: transcript/peers-tooltip-vert.png
+  instructions: See input images
+  combine:
+    - transcript/peers-tooltip-vert-1.png
+    - transcript/peers-tooltip-vert-2.png
+  orientation: vertical
+  buffer:
+    size: 25
 
 - screengrab: transcript/peers-tooltip-horiz-1.png
   instructions:
@@ -1148,9 +1169,14 @@ screengrabs:
       offset_x: 400
       offset_y: 485
 
-- screengrab: !transcript/peers-tooltip-horiz.png
-  instructions:
-    - In PowerPoint, stitch together transcript/peers-tooltip-horiz-1.png and transcript/peers-tooltip-horiz-2.png (with 0.2 inches of vertical space). I promise it'll be okay
+- screengrab: transcript/peers-tooltip-horiz.png
+  instructions: See input images
+  combine:
+    - transcript/peers-tooltip-horiz-1.png
+    - transcript/peers-tooltip-horiz-2.png
+  orientation: vertical
+  buffer:
+    size: 25
 
 - screengrab: transcript/peers-textgrid.png
   instructions:
