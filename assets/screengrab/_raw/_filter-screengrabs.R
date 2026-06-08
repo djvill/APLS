@@ -89,27 +89,30 @@ if (opt$no_in_path) {
 if (opt$downstream || opt$downstream_only) {
   downstream <-
     screengrabs |>
-    semi_join(filtered, join_by(in_path == screengrab))
+    semi_join(filtered, join_by(in_path == screengrab)) |>
+    pull(screengrab) |>
+    unique()
 }
 if (opt$upstream || opt$upstream_only) {
   upstream <-
     screengrabs |>
-    semi_join(filtered, join_by(screengrab == in_path))
+    semi_join(filtered, join_by(screengrab == in_path)) |>
+    pull(screengrab) |>
+    unique()
 }
+filtered <- unique(filtered$screengrab)
 if (opt$downstream_only) {
-  out <- downstream$screengrab
+  out <- downstream
 } else if (opt$upstream_only) {
-  out <- upstream$screengrab
-} else if (opt$downstream || opt$upstream) {
-  out <- list(filtered = filtered$screengrab)
-  if (opt$downstream) {
-    out <- c(out, downstream = downstream$screengrab)
-  }
-  if (opt$upstream) {
-    out <- c(out, upstream = upstream$screengrab)
-  }
+  out <- upstream
+} else if (opt$downstream && opt$upstream) {
+  out <- list(filtered = filtered, downstream = downstream, upstream = upstream)
+} else if (opt$downstream) {
+  out <- list(filtered = filtered, downstream = downstream)
+} else if (opt$upstream) {
+  out <- list(filtered = filtered, upstream = upstream)
 } else {
-  out <- filtered$screengrab
+  out <- filtered
 }
 
 out
