@@ -119,13 +119,13 @@ if ("combine" %in% colnames(manip)) {
       mutate(in_path = map2(combine, screengrab, coalesce))
   }
 } else {
-if ("in_path" %in% colnames(manip)) {
-  manip <- manip |>
-    mutate(in_path = coalesce(in_path, screengrab))
-} else {
-  manip <- manip |>
-    mutate(in_path = screengrab)
-}
+  if ("in_path" %in% colnames(manip)) {
+    manip <- manip |>
+      mutate(in_path = coalesce(in_path, screengrab))
+  } else {
+    manip <- manip |>
+      mutate(in_path = screengrab)
+  }
 }
 if ("dir" %in% colnames(manip)) {
   manip <- manip |>
@@ -149,15 +149,15 @@ if ("combine" %in% colnames(manip)) {
     pull(path_err, in_path) |>
     compact()
 } else {
-manip <- manip |>
-  mutate(safe_image = map(in_path, safely(image_read)),
-         path_err = map(safe_image, "error"),
-         in_image = map(safe_image, "result"),
-         out_image = in_image)
-path_err <-
-  manip |>
-  pull(path_err, in_path) |>
-  compact()
+  manip <- manip |>
+    mutate(safe_image = map(in_path, safely(image_read)),
+           path_err = map(safe_image, "error"),
+           in_image = map(safe_image, "result"),
+           out_image = in_image)
+  path_err <-
+    manip |>
+    pull(path_err, in_path) |>
+    compact()
 }
 ##Throw errors if needed
 if (length(path_err) > 0) {
