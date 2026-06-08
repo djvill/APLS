@@ -1017,6 +1017,15 @@ screengrabs:
   offset_y: offset_y$transcript_body_top
   width: width$transcript_bj_first_utterance_tooltip
   height: 190
+  drawing:
+    # cover up next turn
+    - func: rect
+      xleft: offset_x$transcript_content_left
+      ytop: 545
+      xright: 1020
+      ybottom: 575
+      col: white
+      border: white
   overlay:
     - image: _arrow.png
       offset_x: 1127
