@@ -20,10 +20,12 @@ parser <- parser |>
   add_option("--no-element", default="", help="element exclusion regex") |>
   add_option("--in-path", action="store_true", default=FALSE, help="only include screengrabs with in_path") |>
   add_option("--no-in-path", action="store_true", default=FALSE, help="only include screengrabs without in_path") |>
-  add_option("--downstream", action="store_true", default=FALSE, help="also include screengrabs whose in_path is selected by these filters") |>
-  add_option("--upstream", action="store_true", default=FALSE, help="also include screengrabs that serve as in_path to those selected by these filters") |>
-  add_option("--downstream-only", action="store_true", default=FALSE, help="only include screengrabs whose in_path is selected by these filters") |>
-  add_option("--upstream-only", action="store_true", default=FALSE, help="only include screengrabs that serve as in_path to those selected by these filters")
+  add_option("--composite", action="store_true", default=FALSE, help="only include screengrabs with combine") |>
+  add_option("--no-composite", action="store_true", default=FALSE, help="only include screengrabs without combine") |>
+  add_option("--downstream", action="store_true", default=FALSE, help="also include screengrabs whose in_path or combine is selected by these filters") |>
+  add_option("--upstream", action="store_true", default=FALSE, help="also include screengrabs that serve as in_path or combine to those selected by these filters") |>
+  add_option("--downstream-only", action="store_true", default=FALSE, help="only include screengrabs whose in_path or combine is selected by these filters") |>
+  add_option("--upstream-only", action="store_true", default=FALSE, help="only include screengrabs that serve as in_path or combine to those selected by these filters")
 parsed <- parse_args(parser, positional_arguments=TRUE, convert_hyphens_to_underscores=TRUE)
 opt <- parsed$options
 
@@ -40,10 +42,11 @@ if (opt$upstream && opt$downstream_only) {
 screengrabs <- read_yaml(manip_key)$screengrabs
 
 screengrabs <- screengrabs |>
-  map(\(x) keep_at(x, c("screengrab", "elements", "in_path"))) |>
+  map(\(x) keep_at(x, c("screengrab", "elements", "in_path", "combine"))) |>
   bind_rows() |>
   chop(elements) |>
   filter(screengrab != "") |>
+  mutate(across(in_path, \(x) coalesce(x, combine))) |>
   mutate(folder = dirname(screengrab),
          file = basename(screengrab),
          .after=screengrab) |>
@@ -85,6 +88,14 @@ if (opt$in_path) {
 if (opt$no_in_path) {
   filtered <- filtered |>
     filter(is.na(in_path))
+}
+if (opt$composite) {
+  filtered <- filtered |>
+    filter(!map_lgl(combine, is.null))
+}
+if (opt$no_composite) {
+  filtered <- filtered |>
+    filter(map_lgl(combine, is.null))
 }
 if (opt$downstream || opt$downstream_only) {
   downstream <-
