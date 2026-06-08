@@ -2228,7 +2228,7 @@ screengrabs:
 - screengrab: no-page/name-not-resolved.png
   instructions:
     - Set browser zoom to 100%
-    - Load https://apl.pitt.edu/labbcat/
+    - Load https://apls.pitt.edu/labbcat/
     - Make window take up half-screen horizontally and just tall enough vertically that the error is left-aligned
     - Save
 

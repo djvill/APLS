@@ -27,4 +27,38 @@ Some exceptions to keep things less annoying:
 - <https://apls.pitt.edu/labbcat/participant> and <https://apls.pitt.edu/participantsExport> get sub-subfolders within the `participants` subfolder.
 - <https://apls.pitt.edu/> goes in `home/`.
 - Anything having to do with setting up the Praat integration goes in `praat-integration/`.
-- Anything that doesn't relate to a specific page **within** APLS goes in `no-page/`. This includes troubleshooting things where no valid page loads, the login box, etc.
+- Anything that doesn't relate to a specific page **within** APLS goes in `no-page/`. This includes troubleshooting things where no valid page loads, the (old BASIC popup) login box, etc.
+
+## `_manip-key.yml` syntax
+
+Metasyntax:
+
+| Symbol               | Meaning                            |
+|----------------------|------------------------------------|
+| `<x>`                | Fill in value of variable `x`      |
+| `x|y`                | Fill in `x` or `y`                 |
+| `[<x1>, <x2>, <x3>]` | As many `x` as necessary           |
+| `(x:)`               | `x` is optional                    |
+| `(x:)\n  y:`         | If `x` is present, `y` is required |
+
+### Normal screengrab (corresponds to a new raw screengrab)
+
+### `in_path` (corresponds to an existing raw screengrab)
+
+### Composite screengrab (corresponds to 2+ raw screengrab)
+
+```yaml
+- screengrab: <out_path>
+  instructions: See input images
+  (elements:) [<element1>, <element2>, <element3>]
+  combine:
+   - <in_image_1>
+   - <in_image_2>
+   - <in_image_3>
+  orientation: horizontal|vertical
+  (buffer:)
+    size: <px>
+    (background_color:)
+```
+
+### Constants
