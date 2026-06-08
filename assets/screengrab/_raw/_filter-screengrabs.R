@@ -10,7 +10,7 @@ library(purrr)
 suppressPackageStartupMessages(library(dplyr))
 library(tidyr)
 
-parser <- OptionParser(usage="%prog [options]")
+parser <- OptionParser(usage="%prog [options] [PATH1 PATH2...]")
 parser <- parser |>
   add_option("--file", default=".*", help="filename inclusion regex (not including folder)") |>
   add_option("--no-file", default="", help="filename exclusion regex (not including folder)") |>
@@ -23,8 +23,10 @@ parser <- parser |>
   add_option("--downstream", action="store_true", default=FALSE, help="also include screengrabs whose in_path is selected by these filters") |>
   add_option("--upstream", action="store_true", default=FALSE, help="also include screengrabs that serve as in_path to those selected by these filters") |>
   add_option("--downstream-only", action="store_true", default=FALSE, help="only include screengrabs whose in_path is selected by these filters") |>
-  add_option("--upstream-only", action="store_true", default=FALSE, help="also include screengrabs that serve as in_path to those selected by these filters")
-opt <- parse_args(parser, convert_hyphens_to_underscores=TRUE)
+  add_option("--upstream-only", action="store_true", default=FALSE, help="only include screengrabs that serve as in_path to those selected by these filters")
+parsed <- parse_args(parser, positional_arguments=TRUE, convert_hyphens_to_underscores=TRUE)
+opt <- parsed$options
+
 if (opt$downstream_only && opt$upstream_only) {
   stop("Can't select both downstream-only and upstream-only")
 }
@@ -48,6 +50,10 @@ screengrabs <- screengrabs |>
   arrange(tools::file_path_sans_ext(screengrab))
 
 filtered <- screengrabs
+if (length(parsed$args) > 1) {
+  filtered <- filtered |>
+    filter(screengrab %in% parsed$args)
+}
 if (opt$file != "") {
   filtered <- filtered |>
     filter(grepl(opt$file, file))
