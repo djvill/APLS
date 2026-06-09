@@ -1,9 +1,9 @@
 ---
 title: User interface 
 permalink: /doc/user-interface
-parent: About APLS
-nav_order: 35
-last_modified_date: 2026-01-23T11:23:43-05:00
+parent: Version history
+nav_order: 10
+last_modified_date: 2026-06-09T13:38:04-04:00
 ---
 
 # {{ page.title }}
