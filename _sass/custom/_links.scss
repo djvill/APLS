@@ -100,3 +100,18 @@ p:has(> .btn.next-page) {
   justify-content: flex-end;
   @include fs-6;
 }
+
+/* PDF links */
+a[href$='pdf'] {
+  &::before {
+    content: "";
+    width: 0.9em;
+    height: 0.9em;
+    margin-right: 0.1em;
+    background-image: $pdf-link-svg;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: inline-block;
+  }
+}
