@@ -272,6 +272,14 @@ screengrabs:
   offset_y: offset_y$address_bar_top
   width: width$window
   height: 890
+
+- screengrab: transcripts/overview_outlines.png
+  instructions: See transcripts/overview.png
+  in_path: transcripts/overview.png
+  offset_x: offset_x$window_left
+  offset_y: offset_y$address_bar_top
+  width: width$window
+  height: 890
   drawing:
       # transcript list
     - func: rect
@@ -560,6 +568,11 @@ screengrabs:
     - "`window.scrollTo(0,100); document.querySelector('html').style.backgroundImage = 'unset'`"
     - Click "Export Formatted"
     - Save
+
+- screengrab: transcripts/export-formatted_outlines.png
+  elements: [layer-picker]
+  instructions: See transcripts/export-formatted.png
+  in_path: transcripts/export-formatted.png
   offset_x: offset_x$transcripts_export_formatted_left
   offset_y: 260
   width: width$transcripts_export_formatted
@@ -799,6 +812,14 @@ screengrabs:
     - Set browser zoom to 100%
     - Load https://apls.pitt.edu/labbcat/transcript?transcript=CB01interview3.eaf
     - Save
+  offset_x: offset_x$window_left
+  offset_y: offset_y$page_top
+  width: width$window
+  height: 890
+
+- screengrab: transcript/overview_outlines.png
+  instructions: See transcript/overview.png
+  in_path: transcript/overview.png
   offset_x: offset_x$window_left
   offset_y: offset_y$page_top
   width: width$window
@@ -1213,7 +1234,7 @@ screengrabs:
   width: width$transcript_content
   height: height$transcript_layer_picker_plus_1
 
-- screengrab: transcript/layer-picker-layout.png
+- screengrab: transcript/layer-picker_outlines.png
   elements: [layer-picker]
   instructions: See transcript/layer-picker.png
   in_path: transcript/layer-picker.png
@@ -1710,7 +1731,7 @@ screengrabs:
     - In Paint, manually crop and add ellipsis
 
 - screengrab: search/overview.png
-  elements: [layer-picker]
+  elements: [layer-picker, footer]
   instructions:
     - Log in as test-student
     - Set browser zoom to 100%
@@ -1722,7 +1743,7 @@ screengrabs:
   height: height$window - offset_y$address_bar_top
 
 - screengrab: search/overview_outlines.png
-  elements: [layer-picker]
+  elements: [layer-picker, footer]
   instructions: See search/overview.png
   in_path: search/overview.png
   offset_x: offset_x$window_left
@@ -1768,13 +1789,22 @@ screengrabs:
       lwd: 5
 
 - screengrab: search/overview-progress.png
-  elements: [layer-picker]
+  elements: [layer-picker, footer]
   instructions:
     - Log in as test-student
     - Set browser zoom to 100%
     - Load https://apls.pitt.edu/labbcat/search
     - Search for orthography test
     - Save while it still says Querying
+  offset_x: offset_x$window_left
+  offset_y: offset_y$address_bar_top
+  width: width$window
+  height: height$window - offset_y$address_bar_top
+
+- screengrab: search/overview-progress_outlines.png
+  elements: [layer-picker, footer]
+  instructions: See search/overview-progress.png
+  in_path: search/overview-progress.png
   offset_x: offset_x$window_left
   offset_y: offset_y$address_bar_top
   width: width$window

@@ -4,7 +4,7 @@ contributors: [Dan Villarreal, Jack Rechsteiner]
 permalink: /doc/browse-transcripts
 parent: How to use APLS
 nav_order: 30
-last_modified_date: 2025-10-24T10:32:35-04:00
+last_modified_date: 2026-06-10T14:20:46-04:00
 ---
 
 # {{ page.title }} {#page-title}
@@ -33,7 +33,7 @@ The <span class="apls-page">Transcripts</span> page allows you to...
 
 The following image shows the top of the <span class="apls-page">Transcripts</span> page when you first load it:
 
-{% include screengrab.html src="transcripts/overview.png" %}
+{% include screengrab.html src="transcripts/overview.png" layout=true %}
 
 - The <span class="keyterm">transcript list</span> (highlighted in **red**{:.hl-1} above) continues all the way down the page. This is where you can...
   - [Browse transcripts](#browsing-transcripts) available in APLS

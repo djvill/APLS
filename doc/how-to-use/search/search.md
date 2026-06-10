@@ -6,7 +6,7 @@ parent: How to use APLS
 has_children: yes
 has_toc: no
 nav_order: 50
-last_modified_date: 2026-06-10T14:18:56-04:00
+last_modified_date: 2026-06-10T14:20:46-04:00
 ---
 
 # {{ page.title }}
@@ -101,7 +101,7 @@ The following image shows the <span class="apls-page">Search</span> page when yo
 
 Once you enter a pattern into the search matrix and click _Search_, a <span class="keyterm">progress bar</span> pops up (highlighted in **orange**{:.hl-5} below):
 
-{% include screengrab.html src="search/overview-progress.png" %}
+{% include screengrab.html src="search/overview-progress.png" layout=true %}
 
 #### Search matrix and pattern inputs
 {: .no_toc}

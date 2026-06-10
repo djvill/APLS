@@ -6,7 +6,7 @@ parent: How to use APLS
 has_children: yes
 has_toc: no
 nav_order: 20
-last_modified_date: 2026-01-19T16:39:54-05:00
+last_modified_date: 2026-06-10T14:20:47-04:00
 ---
 
 # {{ page.title }}
@@ -51,7 +51,7 @@ If you need a refresher on the basics, check out the [Data organization in LaBB-
 Individual <span class="apls-page">Transcript</span> pages have two sections, plus some elements that stay in the same place as you scroll down the page.
 This is highlighted in the following image, which displays the top of the <span class="apls-page">Transcript</span> page for `CB01interview3.eaf`:
 
-{% include screengrab.html src="transcript/overview.png" %}
+{% include screengrab.html src="transcript/overview.png" layout=true %}
 
 - The <span class="keyterm">transcript body</span> (highlighted in **red**{:.hl-1} above), which continues all the way down the page. This is where you can...
   - [Read](#reading-the-transcript) the transcript
@@ -395,11 +395,9 @@ Clicking on the _Layers_ tab in the transcript header brings up the <span class=
 The layer picker controls which layers are displayed in the transcript body and displays information about layers and annotations.
 Here's what the layer picker looks like when you load the <span class="apls-page">Transcript</span> page for `CB01interview3.eaf`, plus the first line of the transcript:
 
-{% include screengrab.html src="transcript/layer-picker.png" %}
+{% include screengrab.html src="transcript/layer-picker.png" layout=true %}
 
 Let's break down what we're looking at:
-
-{% include screengrab.html src="transcript/layer-picker-layout.png" %}
 
 - <span class="keyterm">Layer checkboxes</span> (one highlighted in **red**{:.hl-1}) toggle layers [on and off](#toggling-layers-on-and-off).
 - <span class="keyterm">Projects</span> (highlighted in **blue**{:.hl-2}) make more layer checkboxes [appear](#projects).
