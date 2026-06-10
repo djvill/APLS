@@ -326,6 +326,7 @@ screengrabs:
   height: 466
 
 - screengrab: transcript/attributes/overview.png
+  elements: [transcript-attributes, footer]
   instructions:
     - Log in as test-student
     - Set browser zoom to 100%
@@ -337,6 +338,7 @@ screengrabs:
   height: height$transcript_attributes
 
 - screengrab: transcript/attributes/tooltip.png
+  elements: [transcript-attributes, footer]
   instructions:
     - Log in as test-student
     - Set browser zoom to 100%
@@ -353,6 +355,7 @@ screengrabs:
       offset_y: 425
 
 - screengrab: transcript/attributes/prefixes.png
+  elements: [transcript-attributes, footer]
   instructions:
     - Log in as test-student
     - Set browser zoom to 100%
@@ -365,6 +368,7 @@ screengrabs:
   height: height$transcript_attributes
 
 - screengrab: transcript/attributes/hide-names.png
+  elements: [transcript-attributes, footer]
   instructions:
     - Log in as test-student
     - Set browser zoom to 100%
@@ -690,6 +694,7 @@ screengrabs:
   height: 70
 
 - screengrab: transcript/attributes.png
+  elements: [transcript-attributes]
   instructions:
     - Log in as test-student
     - Set browser zoom to 100%
@@ -700,7 +705,9 @@ screengrabs:
   offset_y: offset_y$transcript_header_top
   width: width$transcript_content
   height: height$transcript_attributes
+
 - screengrab: transcript/attributes-tooltip.png
+  elements: [transcript-attributes]
   instructions:
     - Log in as test-student
     - Set browser zoom to 100%
@@ -718,6 +725,7 @@ screengrabs:
       offset_y: 517
 
 - screengrab: transcript/attributes-prefixes.png
+  elements: [transcript-attributes]
   instructions:
     - Log in as test-student
     - Set browser zoom to 100%
@@ -731,6 +739,7 @@ screengrabs:
   height: height$transcript_attributes
 
 - screengrab: transcript/attributes-hide-names.png
+  elements: [transcript-attributes]
   instructions:
     - Log in as test-student
     - Set browser zoom to 100%
