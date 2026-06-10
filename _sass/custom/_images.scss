@@ -87,3 +87,16 @@ img.screengrab {
   height: 23px;
   border: 2px solid $pitt-gold;
 }
+
+//Layout screengrabs
+.screengrab.layout {
+  margin-bottom: 0;
+}
+a.show-hide-outlines {
+  cursor: pointer;
+  font-style: italic;
+  
+  &:hover {
+    color: $link-hover-color;
+  }
+}

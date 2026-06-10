@@ -1,1 +1,4 @@
-<img src="{{include.src | prepend: '/assets/screengrab/' | relative_url}}" class="screengrab" alt="{{include.alt | smartify}}">
+{% assign src = include.src | prepend: '/assets/screengrab/' | relative_url -%}
+{%- if include.layout %}{% assign src = src | replace: '.png', '_outlines.png' %}{% endif -%}
+<img src="{{src}}" class="screengrab{% if include.layout %} layout{% endif %}" alt="{{include.alt | smartify}}">
+{%- if include.layout %}<a class="show-hide-outlines fs-3" onclick="let hide = this.innerText == 'Hide outlines', img = this.parentElement.children[0] ; this.innerText = hide ? 'Show outlines' : 'Hide outlines' ; img.src = hide ? img.src.replace('_outlines', '') : img.src.replace('.png', '_outlines.png')">Hide outlines</a>{% endif %}

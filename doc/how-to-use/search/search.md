@@ -6,7 +6,7 @@ parent: How to use APLS
 has_children: yes
 has_toc: no
 nav_order: 50
-last_modified_date: 2025-11-12T12:17:34-05:00
+last_modified_date: 2026-06-10T14:18:56-04:00
 ---
 
 # {{ page.title }}
@@ -86,7 +86,7 @@ these could also go on the "Searching complex patterns" page but that already ha
 
 The following image shows the <span class="apls-page">Search</span> page when you first load it:
 
-{% include screengrab.html src="search/overview.png" %}
+{% include screengrab.html src="search/overview.png" layout=true %}
 
 - The <span class="keyterm">search matrix</span> (highlighted in **red**{:.hl-1} above).
   - This is where you specify patterns to search.

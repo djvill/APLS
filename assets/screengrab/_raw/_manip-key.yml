@@ -1720,6 +1720,15 @@ screengrabs:
   offset_y: offset_y$address_bar_top
   width: width$window
   height: height$window - offset_y$address_bar_top
+
+- screengrab: search/overview_outlines.png
+  elements: [layer-picker]
+  instructions: See search/overview.png
+  in_path: search/overview.png
+  offset_x: offset_x$window_left
+  offset_y: offset_y$address_bar_top
+  width: width$window
+  height: height$window - offset_y$address_bar_top
   drawing:
       # search matrix
     - func: rect
