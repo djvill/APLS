@@ -1143,8 +1143,8 @@ screengrabs:
   height: height$transcript_body_turn_container + 4*height$transcript_body_layer
   overlay:
     - image: _arrow.png
-      offset_x: 800
-      offset_y: 430
+      offset_x: 812
+      offset_y: 460
 
 - screengrab: transcript/peers-tooltip-vert-2.png
   instructions:
@@ -1160,8 +1160,8 @@ screengrabs:
   height: height$transcript_body_turn_container + 4*height$transcript_body_layer
   overlay:
     - image: _arrow.png
-      offset_x: 708
-      offset_y: 430
+      offset_x: 723
+      offset_y: 460
 
 - screengrab: transcript/peers-tooltip-vert.png
   instructions: See input images
@@ -1204,7 +1204,7 @@ screengrabs:
   overlay:
     - image: _arrow.png
       offset_x: 400
-      offset_y: 485
+      offset_y: 490
 
 - screengrab: transcript/peers-tooltip-horiz.png
   instructions: See input images
