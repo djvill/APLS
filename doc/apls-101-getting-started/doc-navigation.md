@@ -3,7 +3,7 @@ title: Navigating documentation
 permalink: /doc/doc-navigation
 parent: APLS 101/Getting started
 nav_order: 40
-last_modified_date: 2025-10-21T22:09:45-04:00
+last_modified_date: 2026-07-13T12:56:24-04:00
 ---
 
 # {{ page.title }}
@@ -66,6 +66,14 @@ Throughout these pages are "callout" boxes to help you understand how to use APL
   > APLS's original URL was <https://labb-cat.linguistics.pitt.edu/labbcat>.
   > But the <https://apls.pitt.edu/labbcat> URL was chosen as an alias because it's shorter, easier to remember, and less prone to typos.
 
+
+## Page layouts
+
+Occasionally you'll see a screenshot from an APLS page that includes dotted outlines to highlight different elements.
+You can toggle these outlines off or on by clicking _Hide outlines_ or _Show outlines_.
+For example, here's the layout of the <span class="apls-page">Transcript</span> page from the [Viewing a transcript docpage]({{ '/doc/view-transcript#page-layout' | relative_url }}):
+
+{% include screengrab.html src="transcript/overview.png" layout=true %}
 
 [Next page: **Navigating APLS**]({{ '/doc/navigation' | relative_url }}){: .btn .next-page }
 
