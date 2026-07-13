@@ -17,7 +17,7 @@ constants:
     search_tabs_left: 370
     search_matrix_left: 510
     search_input_left: 580
-    search_input_syllables_left: 570
+    search_input_syllables_left: 578
     search_progress_left: 570
   offset_y:
     window_top: 0
@@ -34,7 +34,7 @@ constants:
     search_tabs_top: 270
     search_matrix_top: 350
     search_input_top: 650
-    search_input_syllables_top: 653
+    search_input_syllables_top: 673
     search_progress_top: 815
   width:
     window: 1920
@@ -50,7 +50,7 @@ constants:
     search_tabs: 1170
     search_matrix: 890
     search_input: 752
-    search_input_picker: 1141
+    search_input_picker: 1149
     search_progress: 765
   height:
     window: 1128
@@ -62,10 +62,10 @@ constants:
     transcript_export_plus_1: 655
     search_tabs: 70
     search_filter_tabs: 515
-    search_matrix: 385
+    search_matrix: 415
     search_input: 84
     search_input_syllables: 89
-    search_input_picker: 351
+    search_input_picker: 383
     search_progress: 155
 
 screengrabs:
@@ -165,6 +165,7 @@ screengrabs:
   height: height$search_filter_tabs + 80
 
 - screengrab: search/overwrite-filter.png
+  elements: [layer-picker, footer]
   instructions:
     - Log in as test-student
     - Set browser zoom to 100%
@@ -201,6 +202,7 @@ screengrabs:
   height: 815
 
 - screengrab: transcript/word-menu.png
+  elements: [word-menu]
   instructions:
     - Log in as test-student
     - Set browser zoom to 100%
@@ -210,15 +212,16 @@ screengrabs:
   offset_x: 250
   offset_y: 410
   width: 460
-  height: 320
+  height: 360
 
 - screengrab: transcript/word-menu-context.png
+  elements: [word-menu]
   instructions: See transcript/word-menu.png
   in_path: transcript/word-menu.png
   offset_x: offset_x$transcript_content_left
   offset_y: offset_y$transcript_body_top
   width: width$transcript_cb013_first_utterance
-  height: 340
+  height: 400
 
 - screengrab: transcript/permalink-hover.png
   instructions:
@@ -782,31 +785,35 @@ screengrabs:
   height: 172
 
 - screengrab: transcript/no-praat-word-menu.png
+  elements: [word-menu]
   in_path: transcript/no-praat.png
   instructions: See transcript/no-praat-player.png
   offset_x: 250
   offset_y: 410
-  width: 190
-  height: 190
+  width: 250
+  height: 230
 
 - screengrab: transcript/no-praat-word-menu-context.png
+  elements: [word-menu]
   in_path: transcript/no-praat.png
   instructions: See transcript/no-praat-player.png
   offset_x: offset_x$transcript_content_left
   offset_y: offset_y$transcript_body_top
   width: width$transcript_cb013_first_utterance
-  height: 205
+  height: 255
 
 ## For side-by-side comparison to transcript/word-menu-context.png
 - screengrab: transcript/no-praat-word-menu-context-comp.png
+  elements: [word-menu]
   instructions: See transcript/no-praat.png
   in_path: transcript/no-praat.png
   offset_x: offset_x$transcript_content_left
   offset_y: offset_y$transcript_body_top
   width: width$transcript_cb013_first_utterance
-  height: 340
+  height: 400
 
 - screengrab: transcript/word-menu-comp.png
+  elements: [word-menu]
   instructions: See input images
   combine:
     - transcript/no-praat-word-menu-context-comp.png
@@ -1874,7 +1881,7 @@ screengrabs:
     - - "`window.scrollTo(0, 100);`"
     - Save
   offset_x: 560
-  offset_y: 519
+  offset_y: 524
   width: 765
   height: 487
 
@@ -1909,7 +1916,7 @@ screengrabs:
   offset_x: offset_x$search_matrix_left
   offset_y: offset_y$search_matrix_top
   width: width$search_matrix
-  height: 475
+  height: 500
 
 - screengrab: search/matrix-segment.png
   instructions:
@@ -1931,10 +1938,10 @@ screengrabs:
     - Load https://apls.pitt.edu/labbcat/search
     - Select all projects except temp
     - Save
-  offset_x: 225
+  offset_x: 210
   offset_y: offset_y$search_matrix_top
-  width: 1440
-  height: 540
+  width: 1465
+  height: 645
 
 - screengrab: search/syllables.png
   instructions:
@@ -2009,6 +2016,7 @@ screengrabs:
   height: height$search_input_picker
 
 - screengrab: search/participants.png
+  elements: [layer-picker, footer]
   instructions:
     - Log in as test-student
     - Set browser zoom to 100%
@@ -2025,6 +2033,7 @@ screengrabs:
     - Save
 
 - screengrab: search/participant-filter.png
+  elements: [layer-picker, footer]
   instructions:
     - Log in as test-student
     - Set browser zoom to 100%
@@ -2044,6 +2053,7 @@ screengrabs:
     - Save    
 
 - screengrab: transcripts/participant-filter-from-search.png
+  elements: [footer]
   instructions:
     - Log in as test-student
     - Set browser zoom to 100%
