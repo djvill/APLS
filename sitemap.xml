@@ -3,7 +3,7 @@ layout: null
 search_exclude: true
 nav_exclude: true
 ---
-{% comment %}https://github.com/jekyll/jekyll-sitemap/blob/99148a2/lib/sitemap.xml, with last_modified_at replaced by last_modified_date{% endcomment -%}
+{% comment %}https://github.com/jekyll/jekyll-sitemap/blob/99148a2/lib/sitemap.xml, with last_modified_at replaced by last_modified_date, and page-sort algorithm inspired by https://github.com/just-the-docs/just-the-docs/blob/394d6c0/_includes/components/nav/sorted.html{% endcomment -%}
 <?xml version="1.0" encoding="UTF-8"?>
 {% if page.xsl %}
   <?xml-stylesheet type="text/xsl" href="{{ "/sitemap.xsl" | absolute_url }}"?>
@@ -23,13 +23,40 @@ nav_exclude: true
   {% endfor %}
 
   {% assign pages = site.html_pages | where_exp:'doc','doc.sitemap != false' | where_exp:'doc','doc.url != "/404.html"' %}
-  {% for page in pages %}
+  {% assign pages = pages | where_exp: "page", "page.title != nil" %}
+  {% assign nav_parenthood = pages | group_by: "parent" %}
+  {% assign nav_top_nodes = nav_parenthood | where_exp: "item", "item.name == ''" | map: "items" | first | sort: "nav_order" %}
+  {% for page in nav_top_nodes -%}
     <url>
       <loc>{{ page.url | replace:'/index.html','/' | absolute_url | xml_escape }}</loc>
       {% if page.last_modified_date %}
         <lastmod>{{ page.last_modified_date | date_to_xmlschema }}</lastmod>
       {% endif %}
     </url>
+    {% assign children = nav_parenthood | where: "name", page.title | map: "items" | first %}
+    {% if children %}
+      {% assign children_sorted = children | sort: "nav_order" %}
+      {% for child in children_sorted %}
+    <url>
+      <loc>{{ child.url | replace:'/index.html','/' | absolute_url | xml_escape }}</loc>
+      {% if child.last_modified_date %}
+        <lastmod>{{ child.last_modified_date | date_to_xmlschema }}</lastmod>
+      {% endif %}
+    </url>
+        {% assign grandchildren = nav_parenthood | where: "name", child.title | map: "items" | first %}
+        {% if grandchildren %}
+          {% assign grandchildren_sorted = grandchildren | sort: "nav_order" %}
+          {% for grandchild in grandchildren_sorted %}
+    <url>
+      <loc>{{ grandchild.url | replace:'/index.html','/' | absolute_url | xml_escape }}</loc>
+      {% if grandchild.last_modified_date %}
+        <lastmod>{{ grandchild.last_modified_date | date_to_xmlschema }}</lastmod>
+      {% endif %}
+    </url>
+          {% endfor %}
+        {% endif %}
+      {% endfor %}
+    {% endif %}
   {% endfor %}
 
   {% assign static_files = page.static_files | where_exp:'page','page.sitemap != false' | where_exp:'page','page.name != "404.html"' %}
