@@ -4,7 +4,7 @@ contributors: [Dan Villarreal, Jack Rechsteiner]
 permalink: /doc/datasheet
 parent: About APLS
 nav_order: 15
-last_modified_date: 2026-06-09T13:40:00-04:00
+last_modified_date: 2026-08-19T11:24:35-04:00
 ---
 
 # {{ page.title }}
@@ -371,3 +371,4 @@ Older versions of APLS data will be kept by dataset maintainers, but only the mo
 
 Users can notify corpus maintainers about inaccuracies in the transcripts, annotations, and/or metadata by email at [apls@pitt.edu](mailto:apls@pitt.edu). Suggestions of contributions to the dataset that would be useful are detailed on the APLS documentation website at <https://djvill.github.io/APLS/doc/citing-contributing#contributing-back>.
 
+{% include linklist.html %}
