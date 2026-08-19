@@ -6,7 +6,7 @@ parent: How to use APLS
 has_children: yes
 has_toc: no
 nav_order: 20
-last_modified_date: 2026-06-10T14:20:47-04:00
+last_modified_date: 2026-08-19T11:13:51-04:00
 ---
 
 # {{ page.title }}
@@ -329,9 +329,17 @@ You can also hover over a word to bring up a [tooltip](#annotation-tooltips):
 
 As you can see, the tooltip for _okay_ includes `[2]` followed by two separate annotations (`05 'k1`), while the tooltip for _just_ includes only one label (`'_Vst`).
 
-Vertical peers are harder to see at a glance than horizontal peers.
-There aren't visual cues that <span class="layer">dictionary_phonemes</span> allows vertical peers, or that _a_, _as_, and _an_ have vertical peers for <span class="layer">dictionary_phonemes</span>, but none of the other words.
-To find this out, you can hover over the word's <span class="layer">dictionary_phonemes</span> annotation, which makes vertical peers pop up above the annotation (if any for that word) and also shows a [tooltip](#annotation-tooltips):
+Vertical peers are a little harder to see at a glance than horizontal peers.
+Among these 4 layers, only <span class="layer">dictionary_phonemes</span> allows vertical peers;
+there aren't visual cues to this fact in the transcript body, although there are in the layer picker (see [below](#icons)).
+
+In addition, not all words have vertical peers for <span class="layer">dictionary_phonemes</span> in this utterance.
+To find out which annotations have vertical peers, you can click the button {% include labbcat-icon.html src="vertical-peers-underline.svg" %}{:.bordered-icon.deselected} in the layer picker.
+As discussed [below](#underlining-annotations-that-have-vertical-peers), this causes underlines to appear under these annotations:
+
+{% include screengrab.html src="transcript/peers-underline.png" %}
+
+In addition, you can hover over the word's <span class="layer">dictionary_phonemes</span> annotation, which makes vertical peers pop up above the annotation (if any for that word) and also shows a [tooltip](#annotation-tooltips):
 
 {% include screengrab.html src="transcript/peers-tooltip-vert.png" %}
 
@@ -404,11 +412,17 @@ Let's break down what we're looking at:
 - Layer <span class="keyterm">icons</span> (one highlighted in **green**{:.hl-3}) indicate [layer properties](#icons).
 - <span class="keyterm">Annotation counts</span> (one highlighted in **purple**{:.hl-4}) indicate the [number of annotations](#annotation-counts) on that layer in that transcript.
 
-If you select a phonological layer like <span class="layer">segment</span>, the icon {% include labbcat-icon.html src="interpreted.svg" %}{:.bordered-icon} pops up to the right of its checkbox:
+If you select a phonological layer like <span class="layer">segment</span>, the button {% include labbcat-icon.html src="interpreted.svg" %}{:.bordered-icon} pops up to the right of its checkbox:
 
 {% include screengrab.html src="transcript/layer-picker-segment-layout.png" %}
 
-- The <span class="keyterm">IPA/DISC toggle</span> (highlighted in **orange**{:.hl-5}) affects how annotations are [displayed](#displaying-phonological-layers-in-disc) on phonological layers.
+- The <span class="keyterm">IPA/DISC toggle</span> (highlighted in **orange**{:.hl-5}) affects how phonological annotations are [displayed](#displaying-phonological-layers-in-disc) in the transcript body.
+
+If you select a layer that allows vertical peers like <span class="layer">lemma</span>, the button {% include labbcat-icon.html src="vertical-peers-underline.svg" %}{:.bordered-icon.deselected} pops up to the right of its checkbox:
+
+{% include screengrab.html src="transcript/layer-picker-lemma-layout.png" %}
+
+- The <span class="keyterm">vertical-peers underline toggle</span> (highlighted in **red**{:.hl-1}) affects whether annotations with vertical peers are [underlined](#underlining-annotations-that-have-vertical-peers) in the transcript body.
 
 
 ### Toggling layers on and off
@@ -608,6 +622,29 @@ You can choose different settings for different phonological layers:
 > {% include screengrab.html src="transcript/segment-tooltip.png" %}
 
 
+### Underlining annotations that have vertical peers
+
+As mentioned [above](#horizontal-and-vertical-peers), some layers allow <span class="keyterm">vertical peers</span>, meaning that multiple annotations can occupy an identical timespan.
+These layers are denoted by the {% include labbcat-icon.html src="vertical-peers.svg" %} [icon](#icons) in the layer picker.
+When an annotation has vertical peers, you can hover over that annotation to make its vertical peers pop up above the annotation:
+
+{% include screengrab.html src="transcript/layer-picker-vertical-peers-tooltip.png" %}
+
+While some layers **allow** vertical peers, not all annotations on these layers actually **have** vertical peers.
+This is where the {% include labbcat-icon.html src="vertical-peers-underline.svg" %}{:.bordered-icon.deselected} button (the vertical-peers underline toggle) comes in handy.
+When you click this button, annotations on this layer with vertical peers are underlined in the transcript body;
+annotations without vertical peers are not.
+As a result, it's easy to see at a glance which annotations have vertical peers:
+
+{% include screengrab.html src="transcript/layer-picker-vertical-peers-underline.png" %}
+
+To remove underlines, simply click the vertical-peers underline toggle again.
+
+As with the [IPA/DISC toggle](#displaying-phonological-layers-in-disc), you can choose different settings for different layers:
+
+{% include screengrab.html src="transcript/layer-picker-vertical-peers-underline-one.png" %}
+
+
 ## Creating permalinks
 
 You can create permalinks for individual lines (<span class="layer">utterance</span>s) or words in the transcript in the [word menu](#word-menu) by clicking on _Utterance_ or _Word_:
@@ -644,7 +681,6 @@ Here's what that looks like for `CB01interview3.eaf`:
 
 {% include screengrab.html src="transcript/attributes.png" %}
 
-<!-- Move this to Transcript attributes docpage instead? -->
 This tab looks exactly like the transcript's [<span class="apls-page">Transcript attributes</span>]({{ '/doc/browse-transcripts#transcript-attributes-pages' | relative_url }}) page.
 The left-hand column shows attributes' display titles (like `Duration (sec)`) and names (like `duration`).
 The right-hand column shows attributes' values (e.g., `521.073`).
@@ -748,6 +784,8 @@ In addition, participants with `Bystander` <span class="participant-attr">type</
 You can view information on which participant appears on which channel in the [_Attributes_ tab](#viewing-transcript-attributes).
 
 ## Exporting the transcript
+
+<!-- Include Orignal transcript -->
 
 The _Export_ tab in the transcript header allows you to download the current transcript in any of the listed file types:
 

@@ -1129,6 +1129,19 @@ screengrabs:
   width: width$transcript_cb013_first_utterance_tooltip
   height: height$transcript_body_turn_container + 4*height$transcript_body_layer
 
+- screengrab: transcript/peers-underline.png
+  instructions:
+    - Log in as test-student
+    - Set browser zoom to 100%
+    - Load https://apls.pitt.edu/labbcat/transcript?transcript=CB01interview3.eaf
+    - Select dictionary_phonemes, phonemes, syllables
+    - Select underline-vertical-peers for dictionary_phonemes
+    - Save
+  offset_x: offset_x$transcript_content_left
+  offset_y: offset_y$transcript_body_top
+  width: width$transcript_cb013_first_utterance_tooltip
+  height: height$transcript_body_turn_container + 4*height$transcript_body_layer
+
 - screengrab: transcript/peers-tooltip-vert-1.png
   instructions:
     - Log in as test-student
@@ -1329,6 +1342,30 @@ screengrabs:
       lty: dashed
       lwd: 3
 
+- screengrab: transcript/layer-picker-lemma-layout.png
+  elements: [layer-picker]
+  instructions:
+    - Log in as test-student
+    - Set browser zoom to 100%
+    - Load https://apls.pitt.edu/labbcat/transcript?transcript=CB01interview3.eaf
+    - Click the Layers tab
+    - Select lemma, deselect lexicon
+    - Save
+  offset_x: offset_x$transcript_content_left
+  offset_y: offset_y$transcript_header_top
+  width: width$transcript_content
+  height: height$transcript_layer_picker_plus_1 + 1*height$transcript_body_layer
+  drawing:
+    # vertical-peers underline toggle (lemma)
+    - func: rect
+      xleft: 1130
+      ytop: 425
+      xright: 1175
+      ybottom: 472
+      border: highlight_colors$hl_1
+      lty: dashed
+      lwd: 3
+
 - screengrab: transcript/layer-picker-segment-disc.png
   elements: [layer-picker]
   instructions:
@@ -1508,6 +1545,55 @@ screengrabs:
   offset_y: offset_y$transcript_header_top
   width: width$transcript_content
   height: height$transcript_layer_picker_plus_1
+
+- screengrab: transcript/layer-picker-vertical-peers-tooltip.png
+  elements: [layer-picker]
+  instructions:
+    - Log in as test-student
+    - Set browser zoom to 100%
+    - Load https://apls.pitt.edu/labbcat/transcript?transcript=CB01interview3.eaf
+    - Select dictionary_phonemes
+    - Deselect temp project
+    - Hover just right of n in dictionary_phonemes an
+    - Save (use the Snipping Tool's delay option)
+  offset_x: offset_x$transcript_content_left
+  offset_y: offset_y$transcript_header_top
+  width: width$transcript_content
+  height: 535
+  overlay:
+    - image: _arrow.png
+      offset_x: 721
+      offset_y: 783
+
+- screengrab: transcript/layer-picker-vertical-peers-underline.png
+  elements: [layer-picker]
+  instructions:
+    - Log in as test-student
+    - Set browser zoom to 100%
+    - Load https://apls.pitt.edu/labbcat/transcript?transcript=CB01interview3.eaf
+    - Select dictionary_phonemes
+    - Deselect temp project
+    - Display vertical-peers underlines for dictionary_phonemes
+    - Save
+  offset_x: offset_x$transcript_content_left
+  offset_y: offset_y$transcript_header_top
+  width: width$transcript_content
+  height: 535
+
+- screengrab: transcript/layer-picker-vertical-peers-underline-one.png
+  elements: [layer-picker]
+  instructions:
+    - Log in as test-student
+    - Set browser zoom to 100%
+    - Load https://apls.pitt.edu/labbcat/transcript?transcript=CB01interview3.eaf
+    - Select dictionary_phonemes, morphemes
+    - Deselect projects
+    - Display vertical-peers underlines for morphemes
+    - Save
+  offset_x: offset_x$transcript_content_left
+  offset_y: offset_y$transcript_header_top
+  width: width$transcript_content
+  height: 560
 
 - screengrab: transcript/export.png
   instructions:
