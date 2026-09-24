@@ -3,7 +3,7 @@ title: Troubleshooting
 permalink: /doc/troubleshooting
 parent: How to use APLS
 nav_order: 90
-last_modified_date: 2025-07-08T15:46:15-04:00
+last_modified_date: 2026-09-24T09:56:27-04:00
 ---
 
 # {{ page.title }}
@@ -14,6 +14,13 @@ If you don't see your issue here, please [contact us](mailto:apls@pitt.edu?subje
 {% include page_toc.html collapsible=true %}
 
 ## You can't log onto APLS
+
+### APLS redirects to Pitt homepage
+
+| Symptoms | Explanation | Solution |
+| -------- | ----------- | -------- |
+| The <https://apls.pitt.edu/labbcat> URL redirects to <https://www.pitt.edu>, but the <https://apls.pitt.edu> homepage is still showing. | This indicates that some computationally expensive process within APLS (probably initiated by a corpus maintainer, not a user) has caused the [Apache Tomcat] webserver that runs APLS to crash. | [Email us](mailto:apls@pitt.edu?subject=Error: APLS redirects to Pitt homepage&body=Please fix this error. Thanks!) |
+
 
 ### "HTTP Status 404"
 
