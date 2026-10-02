@@ -3,7 +3,7 @@ title: Layer typology
 permalink: /doc/layer-typology
 parent: Layers and attributes
 nav_order: 10
-last_modified_date: 2025-06-16T14:12:33-04:00
+last_modified_date: 2026-10-02T13:21:25-04:00
 ---
 
 # Layers: {{ page.title }}
@@ -214,7 +214,7 @@ Here are brief descriptions of primary notation systems, with links to more deta
 | Text         | Boolean          | `True` or `False` |
 | Text         | [English spelling]({{ '/doc/layer-notation-systems#english-spelling' | relative_url }}) | |
 | Text         | [English spelling]({{ '/doc/layer-notation-systems#english-spelling' | relative_url }}) (lowercase) | |
-| Text         | [Treebank part-of-speech tags]({{ '/doc/layer-notation-systems#treebank-pos' | relative_url }}) | |
+| Text         | [NLP4J part-of-speech tags]({{ '/doc/layer-notation-systems#nlp4j-pos' | relative_url }}) | One of [50 possible tags][nlp4j] |
 | Timing-only  | (none)           | By definition, timing-only layers don't have labels |
 {: .layer-props .no-keyterm }
 
@@ -241,7 +241,7 @@ Here are additional notations:
 
 **Primary** notation system:
 
-{% include layer-table.html property="notation.primary" categories="DISC,Stress markers,Count,Decimal,Boolean,English spelling,English spelling (lowercase),Treebank part-of-speech tags,(none)" exclude_proj="temp" not_synced=true no_caps=true %}
+{% include layer-table.html property="notation.primary" categories="DISC,Stress markers,Count,Decimal,Boolean,English spelling,English spelling (lowercase),NLP4J part-of-speech tags,(none)" exclude_proj="temp" not_synced=true no_caps=true %}
 
 
 **Additional** notation:
@@ -320,3 +320,5 @@ Unlike other layer properties, projects don't affect _anything_ about how layers
 
 {: .note .no-collapse }
 > Layers in the "temp" project aren't meaningful for end-users, so the other "layers by property" tables on this page omit these layers.
+
+{% include linklist.html %}

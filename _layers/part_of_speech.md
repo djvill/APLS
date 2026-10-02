@@ -23,7 +23,7 @@ synced:
   extra: (none)
 last_sync_modified_date: 2026-02-09T12:37:57-0500
 notation:
-  primary: Treebank part-of-speech tags
+  primary: NLP4J part-of-speech tags
   missing: Word is redacted or an incomplete word
 inputs:
   - input: orthography
@@ -35,7 +35,7 @@ versions:
   first_appeared: 0.1.1
   last_updated: 0.1.2
 color: light green
-last_modified_date: 2026-02-09T12:47:55-05:00
+last_modified_date: 2026-10-02T13:21:25-04:00
 ---
 
 
