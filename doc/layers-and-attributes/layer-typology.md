@@ -3,7 +3,7 @@ title: Layer typology
 permalink: /doc/layer-typology
 parent: Layers and attributes
 nav_order: 10
-last_modified_date: 2026-10-02T13:21:25-04:00
+last_modified_date: 2026-10-12T20:30:55-04:00
 ---
 
 # Layers: {{ page.title }}
@@ -316,7 +316,7 @@ Unlike other layer properties, projects don't affect _anything_ about how layers
 
 ### Layers by project
 
-{% include layer-table.html property="project" categories="(none),syntax,lexicon,timing,phonology,imported,temp" no_caps=true %}
+{% include layer-table.html property="project" categories="(none),syntax,lexicon,phonology,timing,imported,user_contrib,temp" no_caps=true %}
 
 {: .note .no-collapse }
 > Layers in the "temp" project aren't meaningful for end-users, so the other "layers by property" tables on this page omit these layers.
