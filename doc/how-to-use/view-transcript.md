@@ -6,7 +6,7 @@ parent: How to use APLS
 has_children: yes
 has_toc: no
 nav_order: 20
-last_modified_date: 2026-08-19T11:13:51-04:00
+last_modified_date: 2026-10-14T15:02:20-04:00
 ---
 
 # {{ page.title }}
@@ -85,6 +85,7 @@ The word menu is where you can...
 - Create [permalinks](#creating-permalinks) for individual lines or words in the transcript
 - [Play](#listening-to-the-transcript) individual lines of the transcript
 - [Download](#downloading-audio) audio for individual lines
+- [Copy](#copying-utterance-text-to-the-clipboard) the text of individual lines of the transcript
 - [Open](#opening-utterances-in-praat) individual lines in [Praat] (if you've installed the Praat integration)
 
 <!-- Maybe also "what you can't do": view precise timings, view every single annotation (if vertical peers), search (no ctrl-f) -->
@@ -103,7 +104,8 @@ In the example above, the interviewer Barbara Johnstone is speaking in the first
 If there's overlapping speech, participants' turns are shown side-by-side;
 this is the case in the second line above, where Barbara Johnstone and CB01 overlap one another.
 Bold text is used for CB01's words and the `CB01` speaker code, since CB01 is the <span class="keyterm">main participant</span> in this transcript (that is, the interviewee).
-Finally, the text in magenta italics represents noises, whether produced by a participant (e.g., breathing, smacking lips) or not (e.g., banging, car horns). <!-- Mention `unclear` here? -->
+Finally, the text in {% include layer-color.html layer="noise" %} italics represents noises, whether produced by a participant (e.g., breathing, smacking lips) or not (e.g., banging, car horns).
+(You'll also see _unclear_ in {% include layer-color.html layer="noise" %} italics when the original transcriber couldn't figure out what the participant was saying.)
 
 When you're reading the transcript, you'll also notice some bits of punctuation in participants' turns:
 
@@ -903,6 +905,26 @@ Phonological layers (like <span class="layer">segment</span>) are always display
 >
 > {% include screengrab.html src="transcript/export-praat-3.png" %}
 
+
+## Copying utterance text to the clipboard
+
+Sometimes, you don't want or need to export an entire transcript, you simply want the text of a single line---that is, all the <span class="layer">word</span>s in the <span class="layer">utterance</span>.
+Because of the way the Transcript page's HTML is structured, highlighting a line of the transcript with your cursor and hitting `<ctrl>/<cmd>+C` (or right-clicking then clicking _Copy_) won't always work nicely.
+For example, if you highlight the following line...
+
+{% include screengrab.html src="transcript/imported-layers.png" %}
+
+...and hit `<ctrl>/<cmd>+C`, the following will be copied to your clipboard:
+
+```
+ tap  but   even   though  ðth~   the   reality tap  is .   I   don't   even   know   what   they   would 
+tap
+  callmid-word laugh   themselves   but
+```
+
+Instead, use the _Copy transcript text_ option in the [word menu](#word-menu):
+
+{% include screengrab.html src="transcript/copy-transcript-text.png" %}
 
 ## Opening utterances in Praat
 

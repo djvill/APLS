@@ -1637,12 +1637,28 @@ screengrabs:
     - Set browser zoom to 100%
     - Load https://apls.pitt.edu/labbcat/transcript?transcript=CB01interview3.eaf
     - Select noise, comment, pronounce
-    - "`window.scrollTo(0, 11315);"
+    - "`window.scrollTo(0, 11615);`"
     - Save
   offset_x: offset_x$transcript_content_left
   offset_y: offset_y$page_top
   width: 1065
   height: 155
+
+- screengrab: transcript/copy-transcript-text.png
+  elements: [word-menu]
+  instructions:
+    - Log in as test-student
+    - Set browser zoom to 100%
+    - Load https://apls.pitt.edu/labbcat/transcript?transcript=CB01interview3.eaf
+    - Select noise, comment, pronounce
+    - "`window.scrollTo(0, 11615);`"
+    - Click but
+    - Click Copy transcript text
+    - Save
+  offset_x: offset_x$transcript_content_left
+  offset_y: offset_y$page_top
+  width: 1110
+  height: 470
 
 - screengrab: transcript/layer-picker-empty-layers.png
   elements: [layer-picker]
