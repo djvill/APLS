@@ -13,7 +13,7 @@ params <- commandArgs(trailingOnly=TRUE)
 option_list=list(
   make_option(c("--color-set", "-s"), type="character", default="x11", 
               metavar="Color set",
-              help="color set (x11 or xkcd)"),
+              help="color set (x11, xkcd, or get-color)"),
   make_option(c("--suffixed", "-x"), action="store_true", default=FALSE, 
               metavar="Suffixed",
               help="if x11, include suffixed colors (e.g., green1, gray20)"),
@@ -147,8 +147,14 @@ if (color_set=="x11") {
 	ref_colors <- suppressWarnings(read_tsv("https://xkcd.com/color/rgb.txt",
                                  col_names=c("color","hex"), col_types="cc-",
                                  skip=1))
+} else if (color_set=="get-color") {
+  ref_colors <- read_html("https://get-color.com/") |>
+    html_elements("#colors a") |>
+    html_text() |>
+    tibble() |>
+    separate_wider_delim(1, " — ", names=c("color", "hex"))
 } else {
-  stop("color-set '", color_set, "' not supported (only x11, xkcd)")
+  stop("color-set '", color_set, "' not supported (only x11, xkcd, get-color)")
 }
 ##Turn hex into red, green, blue
 ref_colors <- ref_colors |>
