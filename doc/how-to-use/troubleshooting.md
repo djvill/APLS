@@ -3,7 +3,7 @@ title: Troubleshooting
 permalink: /doc/troubleshooting
 parent: How to use APLS
 nav_order: 90
-last_modified_date: 2026-09-24T09:56:27-04:00
+last_modified_date: 2026-10-14T19:36:35-04:00
 ---
 
 # {{ page.title }}
@@ -56,6 +56,14 @@ If you don't see your issue here, please [contact us](mailto:apls@pitt.edu?subje
 | You get an error message like "This site can't be reached. The connection was reset." | This indicates a larger issue with IT systems at Pitt, affecting the server that APLS runs on. These are very rare but can last for unknown amounts of time.<br>(Contrary to the error message, checking the proxy/firewall or running network diagnostics will generally _not_ fix this issue.) | [Email us](mailto:apls@pitt.edu?subject=Error: The connection was reset&body=Please fix this error. Thanks!) |
 
 {% include screengrab.html src="no-page/noload.png" alt='A Google Chrome browser window that shows https://apls.pitt.edu/labbcat/www.pitt.edu in the URL bar, with the page showing the text "This page isn’t working. The connection was reset. Try checking the connection, checking the proxy and the firewall, running Windows Network Diagnostics. ERR_CONNECTION_RESET"' %}
+
+### "HTTP Status 400: Request header is too large"
+
+| Symptoms | Explanation | Solution |
+| -------- | ----------- | -------- |
+| You get the status "HTTP Status 400" with an error message like "Request header is too large." | This indicates that you have too many cookies for pitt.edu | Clear pitt.edu cookies and refresh the page | 
+
+{% include screengrab.html src="no-page/request-header-too-large.png" %} 
 
 
 ### Username/password incorrect

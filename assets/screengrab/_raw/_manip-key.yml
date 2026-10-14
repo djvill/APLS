@@ -2431,6 +2431,13 @@ screengrabs:
   instructions:
     - This is hard to replicate because it happened when there was a larger Pitt IT outage
 
+- screengrab: no-page/request-header-too-large.png
+  instructions:
+    - This is hard to replicate because this is from a student (and then I cropped the picture to remove their bookmarks bar & photo), but I think it's:
+    - Load up a bunch of cookies for pitt.edu (somehow)
+    - Try to log in to https://apls.pitt.edu/labbcat
+    - Save
+
 - screengrab: transcript/word_index.png
   instructions:
     - Log in as test-student
