@@ -5,7 +5,7 @@ permalink: /doc/search-other-layers
 parent: Searching the corpus
 grand_parent: How to use APLS
 nav_order: 40
-last_modified_date: 2025-11-17T11:50:48-05:00
+last_modified_date: 2026-10-14T15:17:47-04:00
 ---
 
 # {{ page.title }}
@@ -167,6 +167,9 @@ Similar to other parts of APLS, you can hover your mouse over the options in the
 For phonological layers, consonants that have the same symbol in both IPA and DISC are left off of the symbol picker to save space.
 However, you can hover over `Other consonants: Use normal IPA` to see a list of these consonants.
 
+{: .note}
+> You don't **have** to use the symbol picker if you know the DISC symbol you want;
+> you can input symbols directly into the input box.
 
 ### Searching phonological layers
 
@@ -192,6 +195,7 @@ The phonological layers (and what is included in their symbol pickers) in APLS a
 > 1. Enter `.*` after `".*U` in the syllables input box.
 > 1. Click _Search_.
 
+{% comment %}TODO add something about case-sensitivity{% endcomment %}
 
 ### Searching text layers that use English spelling
 
@@ -211,6 +215,8 @@ Other layers that can be searched using English spelling are:
 > However, the pattern for <span class="layer">redaction</span> must match the comments in the <span class="layer">redaction</span> layer.
 > Therefore, searching for `___` on the <span class="layer">redaction</span> layer won't display any results but searching `.*name.*` will show all redactions that contain "name" in the comment.
 
+{% comment %}TODO add something about case-sensitivity for word{% endcomment %}
+
 ### Text layers that use part-of-speech tags
 
 Currently, <span class="layer">part_of_speech</span> is the only layer that uses part-of-speech tags (specifically, Treebank tags).
@@ -226,7 +232,7 @@ Like phonological layers, <span class="layer">part_of_speech</span> includes a [
 ### Text layers that use Boolean values
 
 Currently, <span class="layer">overlap</span> is the only layer that uses Boolean values: `TRUE` for speech that is overlapping and `FALSE` for speech that isn't overlapping. 
-Like phonological layers, <span class="layer">part_of_speech</span> includes a [symbol picker](#symbol-picker).
+Like phonological layers, <span class="layer">overlap</span> includes a [symbol picker](#symbol-picker).
 
 ### Searching numeric layers
 

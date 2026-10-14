@@ -5,7 +5,7 @@ permalink: /doc/regex
 parent: Searching the corpus
 grand_parent: How to use APLS
 nav_order: 30
-last_modified_date: 2025-10-28T16:54:33-04:00
+last_modified_date: 2026-10-14T15:17:47-04:00
 ---
 
 # {{ page.title }}
@@ -28,6 +28,8 @@ If you are...
 - experienced with regex in other contexts, read about how regex is [different in APLS](#regex-in-apls-vs-regex-elsewhere)
 
 {% include page_toc.html collapsible=true %}
+
+{% comment %}TODO add something about case-sensitivity somewhere in here{% endcomment %}
 
 ## Regex cheat sheet
 
@@ -103,7 +105,7 @@ The important distinction between `.+` and `.*` is that `.+` requires there to b
 ### Square brackets (`[]`)
 
 Square brackets `[]` can be used to match any _one_ of the characters within the brackets.
-The characters within the brackets are a <span class="keyterm">character set</span>.
+The characters within the brackets are a <span class="keyterm">character class</span>.
 
 | Pattern | Explanation | Examples |
 |---------|-------------|----------|
@@ -157,8 +159,8 @@ Metacharacters can be grouped into a few categories based on their functions:
   - `.` is a wildcard that will match any single character
 - A quantifier controls the number of times a pattern can match
   - The most useful quantifiers are `?` (match 0 or 1 times), `+` (match 1 or more times), and `*` (match 0 or more times)
-- A character set lets you specify a set of possible characters for a match
-  - Characters sets are created with `[]`
+- A character class lets you specify a set of possible characters for a match
+  - Character classes are created with `[]`
 - A group treats multiple characters as a unit, which lets you control the scope and order of operations in a regex
   - Groups are created with `()`
 - An alternator lets you match either the pattern before or the pattern after the alternator

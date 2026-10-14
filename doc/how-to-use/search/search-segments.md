@@ -5,7 +5,7 @@ permalink: /doc/search-segments
 parent: Searching the corpus
 grand_parent: How to use APLS
 nav_order: 60
-last_modified_date: 2025-10-24T13:31:17-04:00
+last_modified_date: 2026-10-14T15:17:47-04:00
 ---
 
 # {{ page.title }}
@@ -51,8 +51,8 @@ Clicking the small {% include labbcat-icon.html src="add.svg" %} button on the r
 This allows you to construct patterns that search for a sequence of segments within a word.
 
 {:.note}
-> It is strongly recommended to not attempt within-word searches for <span class="layer">segment</span> and <span class="layer">foll_segment</span> at the same time.
-> Because of how these searches look for matches, specifying within-word patterns for both <span class="layer">segment</span> and <span class="layer">foll_segment</span> will most likely return no results or result in an error message.
+> Currently, it's not possible to specify multiple within-word segments across multiple layers.
+> This will either result in 0 matches or an error.
 
 {: .try-it }
 > To find matches for every instance of /l/ followed by /t/:

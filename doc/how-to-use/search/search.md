@@ -6,7 +6,7 @@ parent: How to use APLS
 has_children: yes
 has_toc: no
 nav_order: 50
-last_modified_date: 2026-06-10T14:20:46-04:00
+last_modified_date: 2026-10-14T15:17:48-04:00
 ---
 
 # {{ page.title }}
@@ -117,13 +117,14 @@ Not all layers' pattern inputs look alike.
 To demonstrate all the possible features, here's what the search matrix looks like when you select <span class="layer">overlap</span>, <span class="layer">turn</span>, <span class="layer">syllables</span>, <span class="layer">foll_pause</span>, <span class="layer">orthography</span>, and <span class="layer">segment</span> in the layer picker:
 
 {% include screengrab.html src="search/matrix.png" %}
+{% comment %}TODO treat this as a layout screengrab, with outlines{% endcomment %}
 
 This search matrix has 6 different pattern inputs, one for each selected layer.
 Let's break down what we're seeing:
 
-- Most important of all, <span class="keyterm">input boxes</span> (marked `Regular expression`, `Minimum`, or `Maximum`) let you specify a pattern for that layer.
+- Most important of all, <span class="keyterm">input boxes</span> (marked `Regular expression`, `Regular expression (A≠a)`, `Minimum`, or `Maximum`) let you specify a pattern for that layer.
   - Appearance depends on the layer's [data type]({{ '/doc/layer-typology#data-type' | relative_url }}):
-    - Text layers (like <span class="layer">overlap</span>) and phonological layers (like <span class="layer">syllables</span>) have one input box marked `Regular expression`.
+    - Text layers (like <span class="layer">overlap</span>) and phonological layers (like <span class="layer">syllables</span>) have one input box marked `Regular expression` or `Regular expression (A≠a)`.
     - Numeric layers (like <span class="layer">foll_pause</span>) have two: `Minimum` and `Maximum`.
     - Timing-only layers (like <span class="layer">turn</span>) have none.
 - The {% include labbcat-icon.html src="add.svg" %} buttons let you change the width of the search matrix.
