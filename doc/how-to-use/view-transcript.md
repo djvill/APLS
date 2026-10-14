@@ -6,7 +6,7 @@ parent: How to use APLS
 has_children: yes
 has_toc: no
 nav_order: 20
-last_modified_date: 2026-10-14T15:02:20-04:00
+last_modified_date: 2026-10-14T16:15:06-04:00
 ---
 
 # {{ page.title }}
@@ -98,7 +98,7 @@ For example, here's the first few lines of `CB01interview3.eaf`:
 
 {% include screengrab.html src="transcript/body.png" %}
 
-Every line in the transcript corresponds to a conversational turn or continuous utterance in the audio recording (see [below](#turns-and-utterances))
+Every line in the transcript corresponds to a conversational turn in the audio recording (see [below](#turns-and-utterances)).
 The participant who is speaking in a particular turn is shown in italic gray text above the turn.
 In the example above, the interviewer Barbara Johnstone is speaking in the first turn.
 If there's overlapping speech, participants' turns are shown side-by-side;
