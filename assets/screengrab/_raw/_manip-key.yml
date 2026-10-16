@@ -5,6 +5,9 @@ constants:
     hl_3: '#4daf4a' #.hl-3 (green)
     hl_4: '#984ea3' #.hl-4 (purple)
     hl_5: '#ff7f00' #.hl-5 (orange)
+    hl_6: '#ffff33' #.hl-6 (yellow)
+    hl_7: '#a65628' #.hl-7 (brown)
+    hl_8: '#f781bf' #.hl-8 (pink)
   offset_x:
     window_left: 0
     top_menu_left: 550

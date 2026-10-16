@@ -1,5 +1,5 @@
 /* Highlights */
-/* From https://colorbrewer2.org/?type=qualitative&scheme=Set1&n=5 */
+/* From https://colorbrewer2.org/?type=qualitative&scheme=Set1&n=8 */
 
 %highlight {
   color: white;
@@ -25,4 +25,18 @@
 .hl-5, .hl-orange {
   @extend %highlight;
   background-color: $highlight-5;
+}
+.hl-6, .hl-yellow {
+  @extend %highlight;
+  color: black;
+  background-color: $highlight-6;
+}
+.hl-7, .hl-brown {
+  @extend %highlight;
+  background-color: $highlight-7;
+}
+.hl-8, .hl-pink {
+  @extend %highlight;
+  color: black;
+  background-color: $highlight-8;
 }
