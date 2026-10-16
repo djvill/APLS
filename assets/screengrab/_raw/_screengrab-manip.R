@@ -91,7 +91,7 @@ manip <-
   screengrabs |>
   keep(~ .x$screengrab %in% to_manip) |>
   map_dfr(~ .x |>
-            discard_at("instructions") |>
+            discard_at(c("elements", "instructions")) |>
             modify_at(c("overlay", "drawing"), \(x) list(map_dfr(x, yaml_to_tibble))) |>
             modify_at(c("combine", "buffer"), list) |>
             yaml_to_tibble())
