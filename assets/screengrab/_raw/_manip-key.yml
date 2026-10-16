@@ -19,7 +19,13 @@ constants:
     search_tabs_filtered_left: 360
     search_tabs_left: 370
     search_matrix_left: 510
-    search_input_left: 580
+    search_input_left: 580       # just orthography
+    search_input_wider_left: 592 # 6 layers in search/matrix.png
+    search_anchor_start_left: 563
+    search_anchor_end_left: 1243
+    search_regex_input_box_left: 844
+    search_minimum_input_box_left: 605
+    search_maximum_input_box_left: 918
     search_input_syllables_left: 578
     search_progress_left: 570
   offset_y:
@@ -53,10 +59,15 @@ constants:
     search_tabs: 1170
     search_matrix: 890
     search_input: 752
+    search_anchor: 20
+    search_matches_dropdown: 250
+    search_regex_input_box: 388
+    search_numeric_input_box: 300
     search_input_picker: 1149
     search_progress: 765
   height:
     window: 1128
+    dropdown: 24
     top_menu: 30
     transcript_body_layer: 30
     transcript_body_turn_container: 45
@@ -67,9 +78,15 @@ constants:
     search_filter_tabs: 515
     search_matrix: 415
     search_input: 84
+    search_anchor: 25
+    search_input_box: 31
     search_input_syllables: 89
     search_input_picker: 383
     search_progress: 155
+  # square elements
+  size:
+    search_target: 21
+    search_small_button: 37
 
 screengrabs:
 - screengrab: participants/participantsExport/attributes-multiselect-export.png
@@ -1989,6 +2006,254 @@ screengrabs:
   offset_y: 524
   width: 765
   height: 487
+
+- screengrab: search/matrix_outlines.png
+  instructions: see search/matrix.png
+  in_path: search/matrix.png
+  offset_x: 560
+  offset_y: 524
+  width: 765
+  height: 487
+  drawing:
+      # input box - overlap
+    - func: rect
+      xleft: offset_x$search_regex_input_box_left
+      ytop: 564
+      xright: offset_x$search_regex_input_box_left + width$search_regex_input_box - size$search_small_button - 1
+      ybottom: 564 + height$search_input_box
+      border: highlight_colors$hl_1
+      lty: dashed
+      lwd: 2
+      # input box - syllables
+    - func: rect
+      xleft: offset_x$search_regex_input_box_left
+      ytop: 700
+      xright: offset_x$search_regex_input_box_left + width$search_regex_input_box - size$search_small_button - 1
+      ybottom: 700 + height$search_input_box
+      border: highlight_colors$hl_1
+      lty: dashed
+      lwd: 2
+      # input boxes - foll_pause
+    - func: rect
+      xleft: offset_x$search_minimum_input_box_left
+      ytop: 786
+      xright: offset_x$search_minimum_input_box_left + width$search_numeric_input_box
+      ybottom: 786 + height$search_input_box
+      border: highlight_colors$hl_1
+      lty: dashed
+      lwd: 2
+    - func: rect
+      xleft: offset_x$search_maximum_input_box_left
+      ytop: 786
+      xright: offset_x$search_maximum_input_box_left + width$search_numeric_input_box
+      ybottom: 786 + height$search_input_box
+      border: highlight_colors$hl_1
+      lty: dashed
+      lwd: 2
+      # input box - orthography
+    - func: rect
+      xleft: offset_x$search_regex_input_box_left
+      ytop: 870
+      xright: offset_x$search_regex_input_box_left + width$search_regex_input_box
+      ybottom: 870 + height$search_input_box
+      border: highlight_colors$hl_1
+      lty: dashed
+      lwd: 2
+      # input box - segment
+    - func: rect
+      xleft: offset_x$search_regex_input_box_left
+      ytop: 957
+      xright: offset_x$search_regex_input_box_left + width$search_regex_input_box - 2*size$search_small_button - 1
+      ybottom: 957 + height$search_input_box
+      border: highlight_colors$hl_1
+      lty: dashed
+      lwd: 2
+      # matches dropdown - overlap
+    - func: rect
+      xleft: offset_x$search_input_wider_left
+      ytop: 567
+      xright: offset_x$search_input_wider_left + width$search_matches_dropdown
+      ybottom: 567 + height$dropdown
+      border: highlight_colors$hl_2
+      lty: dashed
+      lwd: 2
+      # matches dropdown - syllables
+    - func: rect
+      xleft: offset_x$search_input_wider_left
+      ytop: 703
+      xright: offset_x$search_input_wider_left + width$search_matches_dropdown
+      ybottom: 703 + height$dropdown
+      border: highlight_colors$hl_2
+      lty: dashed
+      lwd: 2
+      # matches dropdown - orthography
+    - func: rect
+      xleft: offset_x$search_input_wider_left
+      ytop: 873
+      xright: offset_x$search_input_wider_left + width$search_matches_dropdown
+      ybottom: 873 + height$dropdown
+      border: highlight_colors$hl_2
+      lty: dashed
+      lwd: 2
+      # matches dropdown - segment
+    - func: rect
+      xleft: offset_x$search_input_wider_left + size$search_target
+      ytop: 960
+      xright: offset_x$search_input_wider_left + width$search_matches_dropdown
+      ybottom: 960 + height$dropdown
+      border: highlight_colors$hl_2
+      lty: dashed
+      lwd: 2
+      # one-word-wider button
+    - func: rect
+      xleft: 1264
+      ytop: 742
+      xright: 1264 + 48
+      ybottom: 742 + 48
+      border: highlight_colors$hl_3
+      lty: dashed
+      lwd: 2
+      # one-segment-wider button
+    - func: rect
+      xleft: 1197
+      ytop: 953
+      xright: 1197 + size$search_small_button
+      ybottom: 953 + size$search_small_button
+      border: highlight_colors$hl_4
+      lty: dashed
+      lwd: 2
+      # symbol picker button - overlap
+    - func: rect
+      xleft: 1197
+      ytop: 560
+      xright: 1197 + size$search_small_button
+      ybottom: 560 + size$search_small_button
+      border: highlight_colors$hl_5
+      lty: dashed
+      lwd: 2
+      # symbol picker button - syllables
+    - func: rect
+      xleft: 1197
+      ytop: 696
+      xright: 1197 + size$search_small_button
+      ybottom: 696 + size$search_small_button
+      border: highlight_colors$hl_5
+      lty: dashed
+      lwd: 2
+      # symbol picker button - segment
+    - func: rect
+      xleft: 1159
+      ytop: 953
+      xright: 1159 + size$search_small_button
+      ybottom: 953 + size$search_small_button
+      border: highlight_colors$hl_5
+      lty: dashed
+      lwd: 2
+      # target - overlap
+    - func: rect
+      xleft: offset_x$search_input_wider_left + 2
+      ytop: 527
+      xright: offset_x$search_input_wider_left + size$search_target
+      ybottom: 527 + size$search_target
+      border: highlight_colors$hl_7
+      lty: dashed
+      lwd: 2
+      # target - syllables
+    - func: rect
+      xleft: offset_x$search_input_wider_left + 2
+      ytop: 664
+      xright: offset_x$search_input_wider_left + size$search_target
+      ybottom: 664 + size$search_target
+      border: highlight_colors$hl_7
+      lty: dashed
+      lwd: 2
+      # target - orthography
+    - func: rect
+      xleft: offset_x$search_input_wider_left + 2
+      ytop: 838
+      xright: offset_x$search_input_wider_left + size$search_target
+      ybottom: 838 + size$search_target
+      border: highlight_colors$hl_7
+      lty: dashed
+      lwd: 2
+      # target - segment
+    - func: rect
+      xleft: offset_x$search_input_wider_left
+      ytop: 962
+      xright: offset_x$search_input_wider_left + size$search_target
+      ybottom: 962 + size$search_target
+      border: highlight_colors$hl_7
+      lty: dashed
+      lwd: 2
+      # anchors - overlap
+    - func: rect
+      xleft: offset_x$search_anchor_start_left
+      ytop: 563
+      xright: offset_x$search_anchor_start_left + width$search_anchor
+      ybottom: 563 + height$search_anchor
+      border: highlight_colors$hl_8
+      lty: dashed
+      lwd: 2
+    - func: rect
+      xleft: offset_x$search_anchor_end_left
+      ytop: 563
+      xright: offset_x$search_anchor_end_left + width$search_anchor
+      ybottom: 563 + height$search_anchor
+      border: highlight_colors$hl_8
+      lty: dashed
+      lwd: 2
+      # anchors - turn
+    - func: rect
+      xleft: offset_x$search_anchor_start_left
+      ytop: 631
+      xright: offset_x$search_anchor_start_left + width$search_anchor
+      ybottom: 631 + height$search_anchor
+      border: highlight_colors$hl_8
+      lty: dashed
+      lwd: 2
+    - func: rect
+      xleft: offset_x$search_anchor_end_left
+      ytop: 631
+      xright: offset_x$search_anchor_end_left + width$search_anchor
+      ybottom: 631 + height$search_anchor
+      border: highlight_colors$hl_8
+      lty: dashed
+      lwd: 2
+      # anchors - segment
+    - func: rect
+      xleft: offset_x$search_anchor_start_left
+      ytop: 957
+      xright: offset_x$search_anchor_start_left + width$search_anchor
+      ybottom: 957 + height$search_anchor
+      border: highlight_colors$hl_8
+      lty: dashed
+      lwd: 2
+    - func: rect
+      xleft: offset_x$search_anchor_end_left
+      ytop: 957
+      xright: offset_x$search_anchor_end_left + width$search_anchor
+      ybottom: 957 + height$search_anchor
+      border: highlight_colors$hl_8
+      lty: dashed
+      lwd: 2
+      # spanning-layer outline - overlap
+    - func: rect
+      xleft: 575
+      ytop: 528
+      xright: 1252
+      ybottom: 548
+      border: highlight_colors$hl_6
+      lty: dashed
+      lwd: 2
+      # spanning-layer outline - turn
+    - func: rect
+      xleft: 575
+      ytop: 615
+      xright: 1252
+      ybottom: 633
+      border: highlight_colors$hl_6
+      lty: dashed
+      lwd: 2
 
 - screengrab: search/progress-bar.png
   instructions:
