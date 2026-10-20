@@ -10,7 +10,7 @@ img.screengrab {
   transition: 0.3s;
 }
 //No border in callouts
-.try-it, .try-it-title, .under-the-hood, .note {
+.try-it, .try-it-title, .under-the-hood, .under-the-hood-title, .note, .note-title {
   img.screengrab {
     border: none;
   }

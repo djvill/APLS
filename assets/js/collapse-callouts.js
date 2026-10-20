@@ -9,7 +9,7 @@ function collapsible(node) {
   //Get title: either default title or from first paragraph
   var cl = node.classList,
       title;
-	if (cl.contains("try-it-title")) {
+	if (cl.contains("try-it-title") || cl.contains("under-the-hood-title") || cl.contains("note-title")) {
 	  title = node.querySelector("p").innerText;
 	} else if (cl.contains("try-it")) {
 	  title = "Try it!";
@@ -51,8 +51,8 @@ function collapsible(node) {
     //Add title
     s.textContent = title;
     
-    //For try-it-title, remove first paragraph (old title)
-    if (cl.contains("try-it-title")) {
+    //For *-title, remove first paragraph (old title)
+    if (cl.contains("try-it-title") || cl.contains("under-the-hood-title") || cl.contains("note-title")) {
       d.querySelector("p").remove();
     }
     
@@ -65,6 +65,6 @@ function collapsible(node) {
 }
 
 window.addEventListener('DOMContentLoaded', () => {
-	var callouts = document.querySelectorAll(":is(.try-it, .try-it-title, .under-the-hood, .note)");
+	var callouts = document.querySelectorAll(":is(.try-it, .try-it-title, .under-the-hood, .under-the-hood-title, .note, .note-title)");
 	callouts.forEach(collapsible);
 });
