@@ -28,6 +28,7 @@ constants:
     search_maximum_input_box_left: 918
     search_input_syllables_left: 578
     search_progress_left: 570
+    matches_list_left: 25
   offset_y:
     window_top: 0
     address_bar_top: 60
@@ -45,6 +46,7 @@ constants:
     search_input_top: 650
     search_input_syllables_top: 673
     search_progress_top: 815
+    matches_list_top: 363
   width:
     window: 1920
     top_menu: 875
@@ -939,6 +941,14 @@ screengrabs:
   offset_y: offset_y$transcript_body_top
   width: width$transcript_content
   height: 615
+
+- screengrab: transcript/body-line-3.png
+  instructions: See transcript/overview.png
+  in_path: transcript/overview.png
+  offset_x: offset_x$transcript_content_left
+  offset_y: 535
+  width: 1265
+  height: 95
 
 - screengrab: transcript/word-noise-comment.png
   instructions:
@@ -1935,18 +1945,213 @@ screengrabs:
     - Search for orthography test
     - Save while it still says Querying
   offset_x: offset_x$window_left
+  offset_y: offset_y$page_top
+  width: width$window
+  height: height$window - offset_y$page_top
+
+- screengrab: search/complete.png
+  elements: [layer-picker, footer]
+  instructions:
+    - Log in as test-student
+    - Set browser zoom to 100%
+    - Load https://apls.pitt.edu/labbcat/search
+    - Search for orthography test
+    - Wait for the search to complete
+    - Save
+  offset_x: offset_x$window_left
+  offset_y: offset_y$page_top
+  width: width$window
+  height: height$window - offset_y$page_top
+
+- screengrab: search/popup-blocked.png
+  elements: [layer-picker, footer]
+  instructions:
+    - Log in as test-student
+    - Set browser zoom to 100%
+    - Load https://apls.pitt.edu/labbcat/search
+    - Remove pop-up permissions from apls.pitt.edu
+    - Search for orthography test
+    - Wait for the search to complete
+    - Click Pop-up Blocked
+    - Click Always allow pop-ups
+    - Save
+  offset_x: offset_x$window_left
   offset_y: offset_y$address_bar_top
   width: width$window
   height: height$window - offset_y$address_bar_top
+
+- screengrab: matches/orthography-test.png
+  instructions:
+    - Log in as test-student
+    - Set browser zoom to 100%
+    - Load https://apls.pitt.edu/labbcat/search
+    - Search for orthography test
+    - Wait for the search to complete
+    - Go to the Search results page
+    - Save
+  offset_x: offset_x$window_left
+  offset_y: offset_y$address_bar_top
+  width: width$window
+  height: height$window - offset_y$address_bar_top
+
+- screengrab: matches/orthography-test_outlines.png
+  instructions: see matches/orthography-test.png
+  in_path: matches/orthography-test.png
+  offset_x: offset_x$window_left
+  offset_y: offset_y$page_top
+  width: width$window
+  height: height$window - offset_y$page_top
+  drawing:
+      # match list
+    - func: rect
+      xleft: offset_x$matches_list_left
+      ytop: offset_y$matches_list_top
+      xright: 475
+      ybottom: 1050
+      border: highlight_colors$hl_1
+      lty: dashed
+      lwd: 5
+      # before-match context (2)
+    - func: rect
+      xleft: 266
+      ytop: 389
+      xright: 286
+      ybottom: 419
+      border: highlight_colors$hl_2
+      lty: dashed
+      lwd: 5
+    - func: rect
+      xleft: 266
+      ytop: 449
+      xright: 286
+      ybottom: 479
+      border: highlight_colors$hl_2
+      lty: dashed
+      lwd: 5
+      # match links (2)
+    - func: rect
+      xleft: 292
+      ytop: 389
+      xright: 355
+      ybottom: 419
+      border: highlight_colors$hl_3
+      lty: dashed
+      lwd: 5
+    - func: rect
+      xleft: 292
+      ytop: 449
+      xright: 355
+      ybottom: 479
+      border: highlight_colors$hl_3
+      lty: dashed
+      lwd: 5
+      # after-match context (2)
+    - func: rect
+      xleft: 359
+      ytop: 389
+      xright: 379
+      ybottom: 419
+      border: highlight_colors$hl_4
+      lty: dashed
+      lwd: 5
+    - func: rect
+      xleft: 359
+      ytop: 449
+      xright: 399
+      ybottom: 479
+      border: highlight_colors$hl_4
+      lty: dashed
+      lwd: 5
+
+- screengrab: matches/orthography-yinzer.png
+  instructions:
+    - Log in as test-student
+    - Set browser zoom to 100%
+    - Load https://apls.pitt.edu/labbcat/search
+    - Search for orthography yinzer
+    - Go to the Search results page
+    - Save
+  offset_x: offset_x$window_left
+  offset_y: offset_y$page_top
+  width: width$window
+  height: height$window - offset_y$page_top
+
+- screengrab: matches/orthography-market.png
+  instructions:
+    - Log in as test-student
+    - Set browser zoom to 100%
+    - Load https://apls.pitt.edu/labbcat/search
+    - Search for orthography market
+    - Go to the Search results page
+    - Save
+  offset_x: offset_x$window_left
+  offset_y: offset_y$page_top
+  width: width$window
+  height: height$window - offset_y$page_top
+
+- screengrab: search/word-May-regex.png
+  instructions:
+    - Log in as test-student
+    - Set browser zoom to 100%
+    - Load https://apls.pitt.edu/labbcat/search
+    - "Search for **word** May( .+)?"
+    - Wait for the search to complete
+    - Go back to the Search page
+    - Save
+  offset_x: offset_x$window_left
+  offset_y: offset_y$page_top
+  width: width$window
+  height: height$window - offset_y$page_top
+
+- screengrab: matches/word-May-regex.png
+  instructions:
+    - Log in as test-student
+    - Set browser zoom to 100%
+    - Load https://apls.pitt.edu/labbcat/search
+    - "Search for **word** May( .+)?"
+    - Wait for the search to complete
+    - Go to the Search results page
+    - Save
+  offset_x: offset_x$window_left
+  offset_y: offset_y$page_top
+  width: width$window
+  height: height$window - offset_y$page_top
+
+- screengrab: matches/word-May.png
+  instructions:
+    - Log in as test-student
+    - Set browser zoom to 100%
+    - Load https://apls.pitt.edu/labbcat/search
+    - "Search for **word** May"
+    - Wait for the search to complete
+    - Go to the Search results page
+    - Save
+  offset_x: offset_x$window_left
+  offset_y: offset_y$page_top
+  width: width$window
+  height: height$window - offset_y$page_top
+
+- screengrab: search/multiple-words-one-box.png
+  instructions:
+    - Log in as test-student
+    - Set browser zoom to 100%
+    - Load https://apls.pitt.edu/labbcat/search
+    - Search for orthography a few
+    - Wait for the search to complete
+    - Save
+  offset_x: offset_x$window_left
+  offset_y: offset_y$page_top
+  width: width$window
+  height: height$window - offset_y$page_top
 
 - screengrab: search/overview-progress_outlines.png
   elements: [layer-picker, footer]
   instructions: See search/overview-progress.png
   in_path: search/overview-progress.png
   offset_x: offset_x$window_left
-  offset_y: offset_y$address_bar_top
+  offset_y: offset_y$page_top
   width: width$window
-  height: height$window - offset_y$address_bar_top
+  height: height$window - offset_y$page_top
   drawing:
       # search matrix
     - func: rect
@@ -1991,6 +2196,25 @@ screengrabs:
       xright: offset_x$search_progress_left + width$search_progress
       ybottom: offset_y$search_progress_top + height$search_progress
       border: highlight_colors$hl_5
+      lty: dashed
+      lwd: 5
+
+- screengrab: search/overview_one-outline.png
+  elements: [layer-picker, footer]
+  instructions: See search/overview.png
+  in_path: search/overview.png
+  offset_x: offset_x$window_left
+  offset_y: offset_y$address_bar_top
+  width: width$window
+  height: height$window - offset_y$address_bar_top
+  drawing:
+      # search matrix
+    - func: rect
+      xleft: 580
+      ytop: 675
+      xright: 1332
+      ybottom: 760
+      border: highlight_colors$hl_1
       lty: dashed
       lwd: 5
 
