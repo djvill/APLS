@@ -5,7 +5,7 @@ permalink: /doc/your-first-search
 parent: Searching the corpus
 grand_parent: How to use APLS
 nav_order: 10
-last_modified_date: 2026-10-21T16:20:44-04:00
+last_modified_date: 2026-10-21T17:10:45-04:00
 ---
 
 # {{ page.title }}
@@ -29,7 +29,7 @@ Let's search for all instances of the word _test_ in APLS.
 {: .try-it .no-collapse}
 > 1. Go to the [<span class="apls-page">Search</span> page](https://apls.pitt.edu/labbcat/search).
 > 1. Enter `test` into the orthography input box.
-> 1. Click the _Search_ button.
+> 1. Press the `Enter`/`Return` key, or click the _Search_ button.
 
 Here's what that should look like:
 

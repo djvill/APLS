@@ -5,7 +5,7 @@ permalink: /doc/search-page-layout
 parent: Searching the corpus
 grand_parent: How to use APLS
 nav_order: 15
-last_modified_date: 2026-10-21T16:20:43-04:00
+last_modified_date: 2026-10-21T17:10:45-04:00
 ---
 
 # {{ page.title }}
@@ -31,7 +31,6 @@ Once you enter a pattern into the search matrix and click _Search_, a <span clas
 {% include screengrab.html src="search/overview-progress.png" layout=true %}
 
 ## Pattern input features
-{:.no_toc}
 
 The <span class="keyterm">search matrix</span> is made up of one or more <span class="keyterm">pattern inputs</span>.
 When you first load the search page, you'll only see a pattern input for the <span class="layer">orthography</span> layer (highlighted in **red**{:.hl-1} below).

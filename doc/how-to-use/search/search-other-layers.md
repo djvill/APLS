@@ -5,7 +5,7 @@ permalink: /doc/search-other-layers
 parent: Searching the corpus
 grand_parent: How to use APLS
 nav_order: 40
-last_modified_date: 2026-10-14T15:17:47-04:00
+last_modified_date: 2026-10-21T17:10:44-04:00
 ---
 
 # {{ page.title }}
@@ -120,13 +120,13 @@ The primary notation systems by data type are:
   - Positive whole numbers
   - Decimal numbers
   
-You can read more about notation systems on the [Layer typology]({{ '/doc/layer-typology#notation-system' | relative_url }}) and [Layer notation systems]({{ '/doc/layer-notation-systems' | relative_url }}) documentation pages.
+You can read more about notation systems on the [Layer typology]({{ '/doc/layer-typology#notation-system' | relative_url }}) {% comment %}and [Layer notation systems]({{ '/doc/layer-notation-systems' | relative_url }}) {% endcomment %}documentation page{% comment %}s{% endcomment %}.
 
 
 ### Symbol picker
 
 To make these layers easier to search, layers that don't use English spelling or numbers have an additional part in their pattern inputs: a <span class="keyterm">symbol picker</span>, shown with a {% include labbcat-icon.html src="expand-down.svg" %} icon.
-For example, we can see the {% include labbcat-icon.html src="expand-down.svg" %} icon for the <span class="layer">syllables</span> layer, which uses stress markers and the DISC phonemic alphabet:
+For example, we can see the {% include labbcat-icon.html src="expand-down.svg" %} icon for the <span class="layer">syllables</span> layer, which uses stress markers and the [DISC phonemic alphabet]({{ '/doc/phonemic-transcription' | relative_url }}):
 
 {% include screengrab.html src="search/syllables.png" %}
 
@@ -173,17 +173,21 @@ However, you can hover over `Other consonants: Use normal IPA` to see a list of 
 
 ### Searching phonological layers
 
-The phonological layers (and what is included in their symbol pickers) in APLS are:
-- <span class="layer">phonemes</span> (IPA symbols that are not on QWERTY keyboards)
-- <span class="layer">dictionary_phonemes</span> (IPA symbols that are not on QWERTY keyboards)
-- <span class="layer">stress</span> (stress markers)
-- <span class="layer">pronounce</span> (IPA symbols that are not on QWERTY keyboards, stress markers, and syllable boundaries)
-- <span class="layer">syllables</span> (IPA symbols that are not on QWERTY keyboards and stress markers)
-- <span class="layer">segment</span> (IPA symbols that are not on QWERTY keyboards)
-- <span class="layer">foll_segment</span> (IPA symbols that are not on QWERTY keyboards and a pause marker)
+Phonological layers all use the [DISC phonemic alphabet]({{ '/doc/phonemic-transcription' | relative_url }}), so all of them have symbol pickers to help you translate from IPA to DISC.
+Different layers use different parts of the DISC alphabet:
+
+| Layer | What's on its symbol picker |
+|-------|-----------------------------|
+| <span class="layer">phonemes</span> | IPA symbols that are not on QWERTY keyboards |
+| <span class="layer">stress</span> | stress markers |
+| <span class="layer">pronounce</span> | IPA symbols that are not on QWERTY keyboards, stress markers, and a syllable-boundary marker |
+| <span class="layer">syllables</span> | IPA symbols that are not on QWERTY keyboards and stress markers |
+| <span class="layer">segment</span> | IPA symbols that are not on QWERTY keyboards |
+| <span class="layer">foll_segment</span> | IPA symbols that are not on QWERTY keyboards and a pause marker |
+| <span class="layer">prec_segment</span> | IPA symbols that are not on QWERTY keyboards and a pause marker |
 
 {:.note .no-collapse}
-> The <span class="layer">segment</span> and <span class="layer">foll_segment</span> layers have additional capabilities that are described in [Searching segments within words]({{ '/doc/search-segments' | relative_url }}).
+> The <span class="layer">segment</span>, <span class="layer">foll_segment</span>, and <span class="layer">prec_segment</span> layers have additional capabilities that are described in [Searching segments within words]({{ '/doc/search-segments' | relative_url }}).
 
 {: .try-it }
 > To find all matches for syllables with /ʊ/ that have secondary stress:
@@ -211,7 +215,7 @@ Other layers that can be searched using English spelling are:
 
 {:.note}
 > The <span class="layer">redaction</span> search targets the comments that are made for redactions on the word layer.
-> All redactions are annotated as `___` on the word layer, which is what appears on the <span class="apls-page">Search results</span> page for redactions.
+> All redactions are annotated as `___` on the <span class="layer">word</span> layer, which is what appears on the <span class="apls-page">Search results</span> page for redactions.
 > However, the pattern for <span class="layer">redaction</span> must match the comments in the <span class="layer">redaction</span> layer.
 > Therefore, searching for `___` on the <span class="layer">redaction</span> layer won't display any results but searching `.*name.*` will show all redactions that contain "name" in the comment.
 
@@ -231,8 +235,13 @@ Like phonological layers, <span class="layer">part_of_speech</span> includes a [
 
 ### Text layers that use Boolean values
 
-Currently, <span class="layer">overlap</span> is the only layer that uses Boolean values: `TRUE` for speech that is overlapping and `FALSE` for speech that isn't overlapping. 
-Like phonological layers, <span class="layer">overlap</span> includes a [symbol picker](#symbol-picker).
+In APLS, there are two Boolean values: `True` and `False`.
+(Because these layers use case-insensitive searching, `TRUE`, `false`, and `tRUe` are also valid.)
+
+| Layer | What `True` means |
+|-------|-------------------|
+| <span class="layer">hesitation</span> | The current word is a hesitation (incomplete word) |
+| <span class="layer">overlap</span> | More than one speaker is speaking during this turn |
 
 ### Searching numeric layers
 
