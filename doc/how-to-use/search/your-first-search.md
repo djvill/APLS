@@ -5,7 +5,7 @@ permalink: /doc/your-first-search
 parent: Searching the corpus
 grand_parent: How to use APLS
 nav_order: 10
-last_modified_date: 2026-10-20T10:00:07-04:00
+last_modified_date: 2026-10-21T16:20:44-04:00
 ---
 
 # {{ page.title }}
@@ -192,3 +192,5 @@ However, there is no **single** word in any transcript whose <span class="layer"
 If you want to find multi-word phrases, you need to widen the search matrix, as explained in the [Searching multiple words]({{ '/doc/search-complex-patterns#searching-multiple-words' | relative_url }}) section of the [Searching complex patterns]({{ '/doc/search-complex-patterns' | relative_url }}) documentation page.
 
 {% include linklist.html %}
+
+[Next page: **<span class="apls-page">Search</span> page layout**]({{ '/doc/search-page-layout' | relative_url }}){: .btn .next-page }
