@@ -5,7 +5,7 @@ permalink: /doc/search-other-layers
 parent: Searching the corpus
 grand_parent: How to use APLS
 nav_order: 40
-last_modified_date: 2026-10-22T10:49:45-04:00
+last_modified_date: 2026-10-22T12:59:07-04:00
 ---
 
 # {{ page.title }}
@@ -28,8 +28,16 @@ For example, here's what the search matrix looks like when <span class="layer">o
 
 {% include screengrab.html src="search/matrix-segment.png" %}
 
-{: .note .no-collapse}
-> If you select a layer but don't enter anything into its input box, it doesn't get applied to the search.
+{: .note}
+> If you select a layer but don't change its pattern input, it doesn't get applied to the search.
+> For example, here's what happens when you select <span class="layer">phonemes</span> and <span class="layer">orthography</span>, add `test` to the <span class="layer">orthography</span> input box, and leave the <span class="layer">phonemes</span> pattern input unchanged:
+>
+> {% include screengrab.html src="search/empty-pattern.png" %}
+>
+> As you can see, this search pattern yields 13 results.
+> This is the same thing you get if you search <span class="layer">orthography</span> for `test` without the <span class="layer">phonemes</span> pattern input showing:
+>
+> {% include screengrab.html src="search/orthography-test.png" %}
 
 The layer picker on the <span class="apls-page">Search</span> page works similarly to the [layer picker on the <span class="apls-page">Transcript</span> page]({{ '/doc/view-transcript#selecting-layers-to-display' | relative_url }}), with a few differences:
 
@@ -46,7 +54,9 @@ The screengrab below has the projects that are most useful to users toggled on t
 {:.note .no-collapse}
 > Layers in the `temp` project aren’t meaningful for end-users, so these layers are not discussed on this page.
 
-Hovering over the names of the layers will display a tooltip giving a brief description of that layer.
+Hovering over a layer's name will display a tooltip giving a brief description of that layer:
+
+{% include screengrab.html src="search/layer-tooltip.png" %}
 
 
 ### Layer picker icons

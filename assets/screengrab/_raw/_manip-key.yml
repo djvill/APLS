@@ -2513,6 +2513,7 @@ screengrabs:
   height: 500
 
 - screengrab: search/matrix-segment.png
+  elements: [layer-picker]
   instructions:
     - Log in as test-student
     - Set browser zoom to 100%
@@ -2523,6 +2524,32 @@ screengrabs:
   offset_y: offset_y$search_matrix_top
   width: width$search_matrix
   height: height$search_matrix
+
+- screengrab: search/empty-pattern.png
+  elements: [layer-picker]
+  instructions:
+    - Log in as test-student
+    - Set browser zoom to 100%
+    - Load https://apls.pitt.edu/labbcat/search
+    - Select phonemes
+    - Type test for orthography, nothing for phonemes
+    - Search
+    - Scroll back to the top of the window
+    - Wait for the search to complete
+    - Save
+  offset_x: 475
+  offset_y: offset_y$search_matrix_top
+  width: 940
+  height: 730
+
+- screengrab: search/orthography-test.png
+  elements: [layer-picker]
+  instructions: See search/complete.png
+  in_path: search/complete.png
+  offset_x: 500
+  offset_y: offset_y$search_matrix_top
+  width: 885
+  height: 640
 
 - screengrab: search/all-layers.png
   elements: [layer-picker]
@@ -2536,6 +2563,24 @@ screengrabs:
   offset_y: offset_y$search_matrix_top
   width: 1465
   height: 645
+
+- screengrab: search/layer-tooltip.png
+  elements: [layer-picker]
+  instructions:
+    - Log in as test-student
+    - Set browser zoom to 100%
+    - Load https://apls.pitt.edu/labbcat/search
+    - Select phonology
+    - Put cursor on top of the first underline dot under phonemes
+    - Save (use the Snipping Tool's delay option)
+  offset_x: 485
+  offset_y: offset_y$search_matrix_top
+  width: 940
+  height: height$search_matrix
+  overlay:
+    - image: _help.png
+      offset_x: 1005
+      offset_y: 410
 
 - screengrab: search/syllables.png
   instructions:
