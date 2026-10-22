@@ -5,7 +5,7 @@ permalink: /doc/search-other-layers
 parent: Searching the corpus
 grand_parent: How to use APLS
 nav_order: 40
-last_modified_date: 2026-10-21T17:10:44-04:00
+last_modified_date: 2026-10-22T10:49:45-04:00
 ---
 
 # {{ page.title }}
@@ -114,7 +114,7 @@ The primary notation systems by data type are:
   - Stress markers (`'` [primary stress], `"` [secondary stress], `0` [unstressed])
 - Text
   - English spelling
-  - Treebank part-of-speech tags
+  - NLP4J part-of-speech tags
   - Boolean (`TRUE` or `FALSE`)
 - Numeric
   - Positive whole numbers
@@ -223,7 +223,7 @@ Other layers that can be searched using English spelling are:
 
 ### Text layers that use part-of-speech tags
 
-Currently, <span class="layer">part_of_speech</span> is the only layer that uses part-of-speech tags (specifically, Treebank tags).
+Currently, <span class="layer">part_of_speech</span> is the only layer that uses part-of-speech tags (specifically, [NLP4J] tags).
 Like phonological layers, <span class="layer">part_of_speech</span> includes a [symbol picker](#symbol-picker).
 
 {: .try-it }
@@ -248,10 +248,13 @@ In APLS, there are two Boolean values: `True` and `False`.
 The pattern inputs for numeric layers allow you to define a numerical range you would like to search for.
 
 The following layers use numeric range pattern inputs:
-- <span class="layer">frequency_from_celex</span> 
-- <span class="layer">frequency_in_corpus</span> 
+- <span class="layer">frequency_from_celex</span>
+- <span class="layer">frequency_from_subtlex</span>
+- <span class="layer">frequency_in_corpus</span>
 - <span class="layer">speech_rate</span> 
-- <span class="layer">foll_pause</span> 
+- <span class="layer">foll_pause</span>
+- <span class="layer">prec_pause</span>
+- <span class="layer">word_index</span>
 
 {: .try-it }
 > To find every word that only appears in the corpus once or twice:

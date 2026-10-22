@@ -4,7 +4,7 @@ contributors: [Dan Villarreal, Jack Rechsteiner]
 permalink: /doc/data-organization
 parent: APLS 101/Getting started
 nav_order: 30
-last_modified_date: 2025-07-08T15:46:13-04:00
+last_modified_date: 2026-10-22T10:49:44-04:00
 ---
 
 # {{ page.title }}
@@ -94,7 +94,7 @@ At the top of the image is `HD07`, the speaker code for the participant who utte
 
 To the right of the speaker code are three layers. From top to bottom, these are <span class="layer">speech_rate</span>, <span class="layer">part_of_speech</span>, and <span class="layer">word</span>.
 - <span class="layer">speech_rate</span> layer (top, colored teal): Measures how quickly HD07 uttered this line of speech (`6.5068` syllables per second).
-- <span class="layer">part_of_speech</span> layer (middle, colored lime green): Encodes each word's part of speech using [Penn Treebank part-of-speech tags]({{ '/doc/notation-systems#treebank-pos' | relative_url }}) (e.g., `UH` for interjections, `CC` for coordinating conjunctions).
+- <span class="layer">part_of_speech</span> layer (middle, colored lime green): Encodes each word's part of speech using [NLP4J part-of-speech tags][NLP4J] (e.g., `UH` for interjections, `CC` for coordinating conjunctions).
 - <span class="layer">word</span> layer (bottom, colored black): Contains the words that HD07 spoke, written in conventional English spelling.
 
 Layers are covered in more detail in the [Layers and attributes section]({{ '/doc/layers-and-attributes' | relative_url }}) of the APLS documentation.
