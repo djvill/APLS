@@ -77,6 +77,7 @@ constants:
     transcript_layer_picker_plus_1: 495
     transcript_export_plus_1: 655
     search_tabs: 70
+    search_unfiltered_tabs: 220
     search_filter_tabs: 515
     search_matrix: 415
     search_input: 84
@@ -187,7 +188,6 @@ screengrabs:
   height: height$search_filter_tabs + 80
 
 - screengrab: search/overwrite-filter.png
-  elements: [layer-picker, footer]
   instructions:
     - Log in as test-student
     - Set browser zoom to 100%
@@ -196,6 +196,10 @@ screengrabs:
     - Click Layered Search
     - Click Filter Participants
     - Save
+  offset_x: offset_x$search_tabs_filtered_left
+  offset_y: offset_y$page_top + 1
+  width: width$search_tabs
+  height: 360
 
 - screengrab: transcript/layer-alignment.png
   instructions:
@@ -2655,13 +2659,16 @@ screengrabs:
   height: height$search_input_picker
 
 - screengrab: search/participants.png
-  elements: [layer-picker, footer]
   instructions:
     - Log in as test-student
     - Set browser zoom to 100%
     - Load https://apls.pitt.edu/labbcat/search
     - Open Participants tab
     - Save
+  offset_x: offset_x$search_tabs_filtered_left
+  offset_y: offset_y$search_tabs_top
+  width: width$search_tabs
+  height: height$search_unfiltered_tabs
 
 - screengrab: participants/from-search.png
   instructions:
@@ -2670,9 +2677,12 @@ screengrabs:
     - Load https://apls.pitt.edu/labbcat/search
     - Click Filter Participants
     - Save
+  offset_x: offset_x$participants_content_left
+  offset_y: offset_y$page_title_top
+  width: width$participants_content
+  height: height$window - offset_y$page_title_top
 
 - screengrab: search/participant-filter.png
-  elements: [layer-picker, footer]
   instructions:
     - Log in as test-student
     - Set browser zoom to 100%
@@ -2680,9 +2690,12 @@ screengrabs:
     - Click Male
     - Click Layered Search
     - Save
+  offset_x: offset_x$search_tabs_filtered_left
+  offset_y: offset_y$search_tabs_top
+  width: width$search_tabs
+  height: height$search_filter_tabs
 
 - screengrab: search/participants-selected.png
-  elements: [layer-picker, footer]
   instructions:
     - Log in as test-student
     - Set browser zoom to 100%
@@ -2690,20 +2703,26 @@ screengrabs:
     - Select CB01 and FH05
     - Click Layered Search
     - Save    
+  offset_x: offset_x$search_tabs_filtered_left
+  offset_y: offset_y$search_tabs_top
+  width: width$search_tabs
+  height: 280
 
 - screengrab: transcripts/participant-filter-from-search.png
-  elements: [footer]
   instructions:
     - Log in as test-student
     - Set browser zoom to 100%
     - Load https://apls.pitt.edu/labbcat/participants
-    - Click Male
+    - Select CB01 and FH05
     - Click Layered Search
     - Click Filter Transcripts
     - Save
+  offset_x: 125
+  offset_y: offset_y$page_title_top
+  width: 1660
+  height: 715
 
 - screengrab: search/both-filters.png
-  elements: [layer-picker, footer]
   instructions:
     - Log in as test-student
     - Set browser zoom to 100%
@@ -2713,9 +2732,12 @@ screengrabs:
     - Click reading
     - Click Layered Search
     - Save
+  offset_x: offset_x$search_tabs_filtered_left
+  offset_y: offset_y$search_tabs_top
+  width: width$search_tabs
+  height: 315
 
 - screengrab: search/participants-uploaded.png
-  elements: [layer-picker, footer]
   instructions:
     - Log in as test-student
     - Set browser zoom to 100%
@@ -2725,15 +2747,22 @@ screengrabs:
     - Load https://apls.pitt.edu/labbcat/search
     - In the Participants tab, upload participants.csv
     - Save
+  offset_x: offset_x$search_tabs_filtered_left
+  offset_y: offset_y$search_tabs_top
+  width: width$search_tabs
+  height: 315
 
 - screengrab: search/transcripts.png
-  elements: [layer-picker, footer]
   instructions:
     - Log in as test-student
     - Set browser zoom to 100%
     - Load https://apls.pitt.edu/labbcat/search
     - Open Transcripts tab
     - Save
+  offset_x: offset_x$search_tabs_filtered_left
+  offset_y: offset_y$search_tabs_top
+  width: width$search_tabs
+  height: height$search_unfiltered_tabs
 
 - screengrab: matches/context-utterance.png
   instructions:

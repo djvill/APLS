@@ -5,7 +5,7 @@ permalink: /doc/search-filters-and-options
 parent: Searching the corpus
 grand_parent: How to use APLS
 nav_order: 20
-last_modified_date: 2025-11-03T15:38:43-05:00
+last_modified_date: 2026-10-23T15:31:52-04:00
 ---
 
 # {{ page.title }}
@@ -18,14 +18,11 @@ You can also specify additional match and display options for your search using 
 
 {% include page_toc.html collapsible=true %}
 
-<!-- TODO mention that if you want to filter by attributes not on the participants/transcripts pages, you should download the attributes csv, manually filter, and upload -->
-
 ## Filtering participants
 
 The participants filter is located in the _Participants_ tab.
-Here's what the _Participants_ tab looks like when you first load the <span class="apls-page">Search</span> page:
+Here's what the _Participants_ tab looks like when you first load the <span class="apls-page">Search</span> page and click _Participants_:
 
-{% comment %}TODO crop screengrabs on this page{% endcomment %}
 {% include screengrab.html src="search/participants.png" %}
 
 There are two ways to filter participants: click the _Filter Participants_ button or upload a file with a list of participants.
@@ -48,7 +45,8 @@ Clicking _Filter Participants_ will take you to the [<span class="apls-page">Par
 From the <span class="apls-page">Participants</span> page, specify which participants you would like to include in your search by either [specifying a filter]({{ '/doc/browse-transcripts#filtering-transcripts' | relative_url }}) or clicking checkboxes next to participants' names.
 If you specify a filter for the <span class="apls-page">Participants</span> page and don't click any checkboxes, then it will select all participants matched by the filter (see [export menu selection rules]({{ '/doc/browse-transcripts#export-menu-selection-rules' | relative_url }})).
 Once you've created a filter or selected participants, click _Layered Search_ to return to the <span class="apls-page">Search</span> page.
-For example, here's what it looks like when you select the _Male_ box under `Gender` and the _Main speaker_ box under `Speaker type`, then click _Layered Search_:
+
+For example, here's what it looks like when you select the _Male_ box under `Gender` and leave the _Main speaker_ box under `Speaker type` selected, then click _Layered Search_:
 
 {% include screengrab.html src="search/participant-filter.png" %}
 
@@ -81,7 +79,7 @@ More information about the <span class="apls-page">Participants</span> page can 
 
 You can also upload a file containing participant codes to the participants filter by clicking the _Choose File_ button (or dragging-and-dropping a file onto the button).
 You might want to do this if you want to filter participants by <span class="keyterm">attributes</span> that aren't listed on the <span class="apls-page">Participants</span> page (like <span class="participant-attr">occupation</span>).
-Saving your participant list in a separate file can also aid the reproducibility
+Saving your participant list in a separate file can also aid in reproducibility (that is, making it easier for you or others to follow and reproduce the steps of your research methods).
 
 The participant list needs to have a specific file format.
 You can find these requirements on the _Participants_ tab in the _What should the file look like?_ collapsible info-box:
@@ -104,7 +102,9 @@ You can find these requirements on the _Participants_ tab in the _What should th
 > 1. Go to the [<span class="apls-page">Participants</span> page](https://apls.pitt.edu/labbcat/participants).
 > 1. Click the checkboxes for CB01, CB05, and CB06.
 > 1. Click the _Export Attributes_ button twice to download the `participants.csv` file.
+{%- comment %} TODO update the link to browse-participants once that page has been overhauled
 >    - You can learn more about the options of the <span class="apls-page">Export participant data</span> page on the [Browsing participants]({{ '/doc/browse-participants#exporting-and-searching-participants' | relative_url }}) documentation page.
+{%- endcomment %}
 > 1. Go to the [<span class="apls-page">Search</span> page](https://apls.pitt.edu/labbcat/search).
 > 1. Open the _Participants_ tab, click _Choose File_, and select the `participants.csv` file.
 >
@@ -165,14 +165,25 @@ If you try to do that, APLS will warn you and give you the option to back out:
 
 ## Search options
 
-In the _Options_ tab are checkboxes that let you set certain match and display options for your search:
+In the _Options_ tab are checkboxes that let you set match and display options for your search.
+By default, none of the checkboxes are clicked.
+{% comment %}<!-- Uncomment once I've updated APLS to new LaBB-CAT version -->
+However, if you select checkbox(es) then create a participant or transcript filter, your selections will be preserved when you return to the <span class="apls-page">Search</span> page.
+{% endcomment %}
+
+### Match options
 
 - _Only include matches from the main participant in a transcript._
-  - This restricts the search to only include matches from 'Main speaker' participants, excluding matches from interviewers and bystanders.
-- _Only match words that are aligned._
-  - This checkbox restricts your search to only match tokens that have alignments on the <span class="layer">segment</span> layer, ignoring any tokens that have not been aligned yet.
+  - Select this checkbox to restrict the search to only include matches from interviewees, excluding matches from interviewers and bystanders.
+  - This is equivalent to selecting a [participant filter](#filtering-participants) for "Main speaker" <span class="participant-attr">type</span>.
+- _Only match tokens that have <span class="layer">segment</span> alignments._
+  - Select this checkbox to restrict your search to only match tokens that have alignments on the <span class="layer">segment</span> layer, ignoring any tokens that have not been aligned yet.
   - If you're searching a [segment-dependent layer]({{ '/doc/layer-typology#segment-dependency' | relative_url }}), then this option is redundant, since the search results will only include aligned tokens anyway.
 - _Only one match per transcript._
-  - This checkbox restricts the search results to one match per transcript, allowing you to identify transcripts that contain a given pattern without listing all instances of that pattern in the transcript.
+  - Select this checkbox to restrict the search results to one match per transcript, allowing you to identify transcripts that contain a given pattern without listing all instances of that pattern in the transcript.
+  - While it might seem like this would make searches quicker, it often makes them take longer because it introduces an extra processing step. If you want to pilot a [complicated search]({{ '/doc/search-complex-patterns.png' | relative_url }}), it's more efficient to search a smaller subset of the corpus by filtering participants and/or transcripts.
+
+### Display option
+
 - _No matches, only a count of results._
-  - This checkbox will prevent the <span class="apls-page">Search</span> page from automatically opening a new tab with the <span class="apls-page">Search results</span> page displaying the results (although results can still be viewed by clicking on _Display results_ underneath the progress bar once the search has completed).
+  - This checkbox will prevent the <span class="apls-page">Search</span> page from automatically opening a new tab with the <span class="apls-page">Search results</span> page displaying the results. You can still open the <span class="apls-page">Search results</span> page manually by clicking on _Display results_ underneath the progress bar once the search has completed.
