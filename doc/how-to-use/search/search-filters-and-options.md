@@ -5,7 +5,7 @@ permalink: /doc/search-filters-and-options
 parent: Searching the corpus
 grand_parent: How to use APLS
 nav_order: 20
-last_modified_date: 2026-10-23T15:31:52-04:00
+last_modified_date: 2026-10-26T17:17:39-04:00
 ---
 
 # {{ page.title }}
@@ -176,6 +176,7 @@ However, if you select checkbox(es) then create a participant or transcript filt
 - _Only include matches from the main participant in a transcript._
   - Select this checkbox to restrict the search to only include matches from interviewees, excluding matches from interviewers and bystanders.
   - This is equivalent to selecting a [participant filter](#filtering-participants) for "Main speaker" <span class="participant-attr">type</span>.
+  {%- comment %}TODO: Explain that this is not always equivalent: LV08/09 in the other's reading/pairs files.{% endcomment %}
 - _Only match tokens that have <span class="layer">segment</span> alignments._
   - Select this checkbox to restrict your search to only match tokens that have alignments on the <span class="layer">segment</span> layer, ignoring any tokens that have not been aligned yet.
   - If you're searching a [segment-dependent layer]({{ '/doc/layer-typology#segment-dependency' | relative_url }}), then this option is redundant, since the search results will only include aligned tokens anyway.
