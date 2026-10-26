@@ -952,7 +952,7 @@ screengrabs:
   offset_x: offset_x$transcript_content_left
   offset_y: 535
   width: 1265
-  height: 95
+  height: 100
 
 - screengrab: transcript/word-noise-comment.png
   instructions:
