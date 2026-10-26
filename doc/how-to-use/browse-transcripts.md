@@ -4,7 +4,7 @@ contributors: [Dan Villarreal, Jack Rechsteiner]
 permalink: /doc/browse-transcripts
 parent: How to use APLS
 nav_order: 30
-last_modified_date: 2026-06-10T14:20:46-04:00
+last_modified_date: 2026-10-26T11:02:54-04:00
 ---
 
 # {{ page.title }} {#page-title}
@@ -245,12 +245,16 @@ If you want to reset the <span class="apls-page">Transcripts</span> page to its 
 > If you need a walkthrough of how filters work, read the previous section instead.
 
 The four filters correspond to the columns in the transcript list below the export menu:
-- The `Transcript name` box filters transcripts by name and supports [regular expressions]({{ '/doc/regex' | relative_url }}).
+- The `Transcript name` box filters transcripts by name and supports [regular expressions]({{ '/doc/regex' | relative_url }}) (case-insensitive).
+
+  {: .try-it }
+  > In regular expressions, the `-` metacharacter means a [range]({{ '/doc/regex#regex-cheat-sheet' | relative_url }}) between two letters or digits.
+  > To view only interview files 1 through 3 for any given speaker, enter `interview[1-3]` in the `Transcript name` box.
 - The `Transcript type` multi-select menu filters transcripts by their <span class="transcript-attr">type</span> of content.
 
   {: .try-it }
   > Because transcript type is determined by the content of the transcript, it makes it easy for researchers to filter for certain types of speech.
-  > To view all transcripts with higher attention to speech, go to the [<span class="apls-page">Transcripts</span> page](https://apls.pitt.edu/labbcat/transcripts) and select *reading* and *pairs* from the Transcript type drop-down list.
+  > To view all transcripts with higher [attention paid to speech](https://en.wikipedia.org/wiki/Style_(sociolinguistics)), go to the [<span class="apls-page">Transcripts</span> page](https://apls.pitt.edu/labbcat/transcripts) and select *reading* and *pairs* from the `Transcript type` drop-down list.
 - The `Neighborhood` multi-select menu filters transcripts according to the Pittsburgh <span class="transcript-attr">neighborhood</span> where the participant was [recruited from]({{ '/doc/pittsburgh-interviews' | relative_url }}).
 - The `Duration (sec)` boxes filter transcripts by their <span class="transcript-attr">duration</span> in seconds. 
   - To view transcripts that are...
