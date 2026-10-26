@@ -5,7 +5,7 @@ permalink: /doc/regex
 parent: Searching the corpus
 grand_parent: How to use APLS
 nav_order: 30
-last_modified_date: 2026-10-26T17:33:22-04:00
+last_modified_date: 2026-10-26T17:41:26-04:00
 ---
 
 # {{ page.title }}
@@ -132,7 +132,7 @@ These can be useful when you'd like to find multiple words with the same search.
 
 | Pattern | Explanation | Examples |
 |---------|-------------|----------|
-| `steeler|penguin` | The word `steeler` _or_ the word `penguin` | <span class="goodex">steeler</span> <span class="goodex">penguin</span> <br><span class="badex">steel</span> <span class="badex">penguins</span> <span class="badex">pirate</span>  |
+| <code>steeler|&NoBreak;penguin</code> | The word `steeler` _or_ the word `penguin` | <span class="goodex">steeler</span> <span class="goodex">penguin</span> <br><span class="badex">steel</span> <span class="badex">penguins</span> <span class="badex">pirate</span>  |
 | `steel|pen.*` | The word `steel` _or_ any word that starts with `pen` | <span class="badex">steelers</span> <span class="goodex">pencil</span> <br><span class="goodex">steel</span> <span class="badex">bullpen</span> <span class="badex">pirate</span>  |
 | `(steel|pen).*` | Any word that starts with `steel` _or_ `pen` | <span class="goodex">steelers</span> <span class="goodex">pencil</span> <br><span class="goodex">steel</span> <span class="badex">bullpen</span> <span class="badex">pirate</span>  |
 | `b(oo|ea|u)t` | Any word that starts with `b`, then `oo` _or_ `ea` _or_ `u`, and ends with `t` | <span class="goodex">boot</span> <span class="goodex">beat</span> <span class="goodex">but</span> <br><span class="badex">boat</span> <span class="badex">bet</span> <span class="badex">bit</span>  |
