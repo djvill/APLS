@@ -5,7 +5,7 @@ permalink: /doc/search-complex-patterns
 parent: Searching the corpus
 grand_parent: How to use APLS
 nav_order: 80
-last_modified_date: 2025-10-24T13:31:16-04:00
+last_modified_date: 2026-10-26T17:07:25-04:00
 ---
 
 # {{ page.title }}
@@ -18,7 +18,7 @@ These advanced searches rely on features described on other [search documentatio
 
 ## Searching multiple words
 
-In an [earlier documentation page]({{ '/doc/your-first-search' | relative_url }}), we said that searching `not even` in the <span class="layer">orthography</span> layer would not return any matches because there are no single words that match "not even".
+In an [earlier documentation page]({{ '/doc/your-first-search' | relative_url }}), we said that entering `a few` into the <span class="layer">orthography</span> input box would not return any matches because there are no single words that match "a few".
 The way to search for multiple words is to make the search "wider".
 
 Clicking {% include labbcat-icon.html src="add.svg" %} on the right side of the search matrix makes the search wider by adding another word to your search pattern.
@@ -31,10 +31,10 @@ You can make your pattern as wide as you need to conduct your search, and every 
 Clicking {% include labbcat-icon.html src="remove.svg" %} makes your search narrower by removing a word from your search pattern.
 
 {: .try-it }
-> To search for every instance of the word "not" immediately followed by the word "even":
+> To search for every instance of the word _a_ immediately followed by the word _few_:
 > 1. Go to the [<span class="apls-page">Search</span> page](https://apls.pitt.edu/labbcat/search).
 > 1. Click {% include labbcat-icon.html src="add.svg" %} to make your search pattern one word wider.
-> 1. Enter `not` in the first input box and enter `even` in the second input box.
+> 1. Enter `a` in the first input box and enter `few` in the second input box.
 > 1. Click the _Search_ button.
 
 Similar to [multiple segment searches]({{ '/doc/search-segments#searching-for-multiple-segments-within-a-word' | relative_url }}), you can designate one of the words in your multi-word search as your "token of interest" by clicking the target {% include labbcat-icon.html src="target.svg" %} for that word.
