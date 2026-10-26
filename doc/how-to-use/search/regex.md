@@ -5,7 +5,7 @@ permalink: /doc/regex
 parent: Searching the corpus
 grand_parent: How to use APLS
 nav_order: 30
-last_modified_date: 2026-10-26T11:01:53-04:00
+last_modified_date: 2026-10-26T17:33:22-04:00
 ---
 
 # {{ page.title }}
@@ -360,7 +360,7 @@ Here we've collected some tips and tricks for using regex with APLS that are bro
 ### Checking your search matches
 
 When you perform a search and the [<span class="apls-page">Search results</span> page]({{ '/doc/export-data#search-results-page' | relative_url }}) contains a handful of matches, it can be easy to manually check how many unique items your search matched.
-APLS contains over 400,000 word tokens, so often a search will result in a lot more than a handful of matches!
+APLS contains over 500,000 word tokens, so often a search will result in a lot more than a handful of matches!
 Even if you export your search results as a `.csv`, it can be difficult to identify all the unique item matches if one or two items are much more frequent than the rest.
 
 The _Export Dictionary_ export option on the [<span class="apls-page">Search results</span> page]({{ '/doc/export-data#search-results-page' | relative_url }}) lets you download a `.txt` file of every unique individual item that your search matched.
@@ -383,3 +383,5 @@ A few places that we would recommend are:
 - [regexone.com](https://www.regexone.com/) or [regexlearn.com](https://regexlearn.com/) for learning regex by practicing with simple, interactive exercises.
 - [regular-expressions.info tutorial](https://www.regular-expressions.info/tutorial.html) for more details about basic regex concepts.
   - The regular-expressions website also has resources for learning about more advanced regex concepts!
+
+{% include linklist.html %}
