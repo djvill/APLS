@@ -5,11 +5,19 @@ permalink: /doc/search-segments
 parent: Searching the corpus
 grand_parent: How to use APLS
 nav_order: 60
-last_modified_date: 2026-10-14T15:17:47-04:00
+last_modified_date: 2026-10-26T11:00:03-04:00
 ---
 
 # {{ page.title }}
 {:.no_toc}
+
+{% comment %}
+TODO:
+- Move this after search-filters-and-options
+- Add a brief description of the symbol picker, cribbed from search-other-layers, but don't shorten the description there
+- Move "Searching for multiple segments within a word" to a new page "Searching across multiple words or segments", which is split out from "Searching complex patterns" (which in turn just becomes "Searching multiple layers at a time")
+- Add a section about phonemic vs. phonetic (or maybe this goes in view-transcript under "Everything you see is data"?)
+{% endcomment %}
 
 Layers in APLS have different [scopes]({{ '/doc/layer-typology#scope' | relative_url }}): <span class="keyterm">span</span>, <span class="keyterm">phrase</span>, <span class="keyterm">word</span>, and <span class="keyterm">segment</span>.
 You may notice that these are the column names at the top of the layer picker!
