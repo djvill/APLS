@@ -43,7 +43,7 @@ constants:
     excel_formula_bar_top: 120
     search_tabs_top: 270
     search_matrix_top: 350
-    search_input_top: 650
+    search_input_top: 675
     search_input_syllables_top: 673
     search_progress_top: 815
     matches_list_top: 363
@@ -2763,6 +2763,60 @@ screengrabs:
   offset_y: offset_y$search_tabs_top
   width: width$search_tabs
   height: height$search_unfiltered_tabs
+
+- screengrab: search/invalid-regex.png
+  instructions:
+    - Set browser zoom to 100%
+    - Log in as test-student
+    - Load https://apls.pitt.edu/labbcat/search
+    - Type * in orthography
+    - Save before speech bubble pops up
+  offset_x: offset_x$search_input_left
+  offset_y: offset_y$search_input_top
+  width: width$search_input
+  height: 125
+
+- screengrab: search/invalid-regex-bubble.png
+  instructions:
+    - Set browser zoom to 100%
+    - Log in as test-student
+    - Load https://apls.pitt.edu/labbcat/search
+    - Type * in orthography
+    - Save after speech bubble pops up
+  offset_x: offset_x$search_input_left
+  offset_y: offset_y$search_input_top
+  width: width$search_input
+  height: 125
+
+- screengrab: search/invalid-regex-tooltip.png
+  instructions:
+    - Set browser zoom to 100%
+    - Log in as test-student
+    - Load https://apls.pitt.edu/labbcat/search
+    - Type * in orthography
+    - Put cursor to the right of *
+    - Save (use the Snipping Tool's delay option)
+  offset_x: offset_x$search_input_left
+  offset_y: offset_y$search_input_top
+  width: 900
+  height: 125
+  overlay:
+    - image: _beam.png
+      offset_x: 1055
+      offset_y: 715
+
+- screengrab: search/invalid-regex-searched.png
+  instructions:
+    - Set browser zoom to 100%
+    - Log in as test-student
+    - Load https://apls.pitt.edu/labbcat/search
+    - Type * in orthography
+    - Press Enter
+    - Save before speech bubble pops up
+  offset_x: offset_x$search_input_left - 15
+  offset_y: offset_y$search_input_top
+  width: width$search_input + 10
+  height: height$window - offset_y$search_input_top
 
 - screengrab: matches/context-utterance.png
   instructions:

@@ -5,7 +5,7 @@ permalink: /doc/your-first-search
 parent: Searching the corpus
 grand_parent: How to use APLS
 nav_order: 10
-last_modified_date: 2026-10-21T17:10:45-04:00
+last_modified_date: 2026-10-26T11:02:38-04:00
 ---
 
 # {{ page.title }}
@@ -147,7 +147,7 @@ Here's what that looks like:
 > 1. Click the _Search_ button.
 > 1. Now do the same for `sTeElErS`. Do you get the same matches?
 
-{: .note-title }
+{: .note-title #case-sensitive-word-search }
 > Case-sensitive searches on the <span class="layer">word</span> layer
 >
 > In rare cases, you might want a case-sensitive search.

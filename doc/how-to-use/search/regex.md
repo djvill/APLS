@@ -5,13 +5,13 @@ permalink: /doc/regex
 parent: Searching the corpus
 grand_parent: How to use APLS
 nav_order: 30
-last_modified_date: 2026-10-14T15:17:47-04:00
+last_modified_date: 2026-10-26T11:01:53-04:00
 ---
 
 # {{ page.title }}
 {:.no_toc}
 
-Layers that support the use of <span class="keyterm">regular expressions</span> are denoted by their pattern inputs having `Regular expression` in the input box.
+Layers that support the use of <span class="keyterm">regular expressions</span> are denoted by their pattern inputs having `Regular expression` or `Regular expression (A≠a)` in the input box.
 
 A regular expression (or 'regex') is a compact way of finding a pattern in a string of text.
 In APLS, for example, searching the <span class="layer">orthography</span> layer for `do.*` will return all words that _start with_ the characters `do` (including the word _do_ itself).
@@ -29,23 +29,24 @@ If you are...
 
 {% include page_toc.html collapsible=true %}
 
-{% comment %}TODO add something about case-sensitivity somewhere in here{% endcomment %}
-
 ## Regex cheat sheet
 
-| Character | Meaning |
-|-------|---------|
-| Letters & numbers (`A`-`Z`, `a`-`z`, `0`-`9`) | Themselves |
-| Most special characters used in [layer notation systems]({{ '/doc/layer-typology#notation-system' | relative_url }})  | Themselves |
-| `.`  | Any single character |
-| `?` | The character before `?` is optional; i.e. it can occur 0 or 1 times |
-| `+`  | The character before `+` can repeat; i.e. it can occur 1 or more times |
-| `*`  | The character before `*` can be optional or repeat; i.e. it can occur any number of times, including 0 |
-| `()`  | Characters inside the parentheses are treated as a unit |
-| `[abc]`  | Match `a` _or_ `b` _or_ `c` | 
-| `[^abc]`  | Match anything other than `a`, `b`, and `c` | 
-| `ab|cd`  | Match `ab` _or_ `cd` |
-| `\`  | The character after `\` is **not** treated as a metacharacter; i.e., the character is treated literally |
+Here are the regex patterns you're most likely to use when searching APLS:
+
+| Character/pattern | Type | Meaning |
+|-----------|------|---------|
+| Letters & numbers (`A`-`Z`, `a`-`z`, `0`-`9`) | Literal | Themselves |
+| Most special characters used in [layer notation systems]({{ '/doc/layer-typology#notation-system' | relative_url }}) | Literal | Themselves |
+| `.` | Wildcard | Any single character |
+| `?` | Quantifier | The character before `?` is optional; i.e. it can occur 0 or 1 times |
+| `+` | Quantifier | The character before `+` can repeat; i.e. it can occur 1 or more times |
+| `*` | Quantifier | The character before `*` is optional or it can repeat; i.e. it can occur any number of times, including 0 |
+| `[]` (example: `[abc]`) | Character class | Match any **single** character inside the brackets |
+| `[^]` (example: `[^abc]`) | Character class | Match any **single** character **other than** the ones inside the brackets |
+| `-` (example: `f-i`) | Range | Match any **single** letter or digit in the range (including the endpoints) |
+| `|` (example: `ab|cd`) | Alternator | Match the left **or** right side |
+| `()` | Grouping | Characters inside the parentheses are treated as a unit; used in conjunction with a quantifier or alternator |
+| `\` | Escape | The character after `\` is **not** treated as a metacharacter; i.e., the character is treated literally |
 
 Because of the [notation systems used by certain layers]({{ '/doc/layer-typology#notation-system' | relative_url }}), the characters in APLS that you may need to use `\` to match literally are: 
 
@@ -54,19 +55,14 @@ Because of the [notation systems used by certain layers]({{ '/doc/layer-typology
 | <span class="layer">morphemes</span> | `+` | Morpheme boundary |
 | <span class="layer">word</span> | `.` | Short pause |
 | <span class="layer">word</span> | `-` | Long pause |
-| <span class="layer">word</span> | `?` | Question mark |
-| <span class="layer">foll_segment</span> | `.` | Following pause |
+| <span class="layer">word</span> | `?` | Question or question intonation |
+| <span class="layer">prec_segment</span>, <span class="layer">foll_segment</span> | `.` | Preceding or following pause |
 | <span class="layer">pronounce</span> | `-` | Syllable boundary |
-| <span class="layer">segment</span>, <span class="layer">foll_segment</span>, <span class="layer">syllables</span>, <span class="layer">phonemes</span>, <span class="layer">dictionary_phonemes</span>, <span class="layer">pronounce</span> | `{` | DISC symbol for the IPA /æ/ vowel |
-| <span class="layer">segment</span>, <span class="layer">foll_segment</span>, <span class="layer">syllables</span>, <span class="layer">phonemes</span>, <span class="layer">dictionary_phonemes</span>, <span class="layer">pronounce</span> | `$` | DISC symbol for the IPA /ɔ/ vowel |
+| <span class="layer">segment</span>, <span class="layer">foll_segment</span>, <span class="layer">prec_segment</span>, <span class="layer">syllables</span>, <span class="layer">phonemes</span>, <span class="layer">dictionary_phonemes</span>, <span class="layer">pronounce</span> | `{` | DISC symbol for the IPA /æ/ vowel |
+| <span class="layer">segment</span>, <span class="layer">foll_segment</span>, <span class="layer">prec_segment</span>, <span class="layer">syllables</span>, <span class="layer">phonemes</span>, <span class="layer">dictionary_phonemes</span>, <span class="layer">pronounce</span> | `$` | DISC symbol for the IPA /ɔ/ vowel |
 | <span class="layer">part_of_speech</span> | `$` | Used in the part-of-speech tags `$` (currency symbols), `PRP$` (possessive pronoun), `WP$` (possessive wh- pronoun) |
 
 {% comment %}TODO build these dynamically from _layers{% endcomment %}
-
-{:.note .no-collapse}
-> Entering an invalid regex will make the text turn red.
-> If you hover over the red text, a tooltip will pop up with a brief explanation of why the regex is invalid.
-> In addition, if you click the _Search_ button with an invalid regex, the search will return an error message.
 
 ## Common regex idioms
 
@@ -137,21 +133,30 @@ These can be useful when you'd like to find multiple words with the same search.
 | Pattern | Explanation | Examples |
 |---------|-------------|----------|
 | `steeler|penguin` | The word `steeler` _or_ the word `penguin` | <span class="goodex">steeler</span> <span class="goodex">penguin</span> <br><span class="badex">steel</span> <span class="badex">penguins</span> <span class="badex">pirate</span>  |
-| `steel.*|pen.*` | Any word that starts with `steel` _or_ `pen` | <span class="goodex">steelers</span> <span class="goodex">pencil</span> <br><span class="badex">steer</span> <span class="badex">bullpen</span> <span class="badex">pirate</span>  |
+| `steel|pen.*` | The word `steel` _or_ any word that starts with `pen` | <span class="badex">steelers</span> <span class="goodex">pencil</span> <br><span class="goodex">steel</span> <span class="badex">bullpen</span> <span class="badex">pirate</span>  |
+| `(steel|pen).*` | Any word that starts with `steel` _or_ `pen` | <span class="goodex">steelers</span> <span class="goodex">pencil</span> <br><span class="goodex">steel</span> <span class="badex">bullpen</span> <span class="badex">pirate</span>  |
 | `b(oo|ea|u)t` | Any word that starts with `b`, then `oo` _or_ `ea` _or_ `u`, and ends with `t` | <span class="goodex">boot</span> <span class="goodex">beat</span> <span class="goodex">but</span> <br><span class="badex">boat</span> <span class="badex">bet</span> <span class="badex">bit</span>  |
 | `(wh|th|sh).*` | Any word that starts with `wh` _or_ `th` _or_ `sh` | <span class="goodex">what</span> <span class="goodex">though</span> <span class="goodex">short</span> <br><span class="badex">other</span> <span class="badex">slush</span>  |
 
+{: .note}
+> The 2nd and 3rd rows of the previous table demonstrate something important to keep in mind when using `|`:
+> The vertical pipe applies to the entire match unless you use parentheses.
+> (Just like mathematics operators, regex metacharacters have an "order of operations" that can be overridden with parentheses.)
+> As a result, the regex `steel|pen.*` matches the **entire** word `steel` **or** any word that starts with `pen` because it matches `steel` or `pen.*`;
+> the regex `(steel|pen).*` matches any word that **starts with** `steel` **or** `pen` because it matches `steel`+`.*` or `pen`+`.*`.
 
 ## Introduction to regex
 
 {% comment %}In the future, I might want to make this more scaffolded with more subsections and try-its.{% endcomment %}
 
-In regular expressions, letters and numbers are literal characters that match themselves -- the regex `apples` will match the literal text "apples".
+In regular expressions, letters and numbers are literal characters that match themselves.
+For example, the regex `test` will match the literal text "test".
 
 What makes regular expressions more powerful than normal searches are metacharacters that have special functions.
-These special functions allow regexes to match <span class="keyterm">patterns</span> that are more flexible than searches for literal words.
+These special functions allow you to match <span class="keyterm">patterns</span> that are more flexible than searches for literal words.
+For example, the regex `test.*` will match not only "test", but also "testing", "testify", "testy", "tests", and "tested".
 
-Metacharacters are denoted using punctuation symbols, which means that regexes can look confusing and hard to read at first. 
+Metacharacters are denoted using punctuation symbols, which means that regex can look confusing and hard to read at first. 
 However, regex patterns get easier to decode once you understand the meanings of the different metacharacters.
 
 Metacharacters can be grouped into a few categories based on their functions:
@@ -219,12 +224,70 @@ You can find some practice search questions below, with solutions included as "T
 > 1. Enter `q.+|.+x` into the orthography input box.
 > 1. Click the _Search_ button.
 
+## Regex and error messages
+
+If you use regular expressions, you are bound to get errors---regardless of whether you're a regex newbie or a seasoned regex practitioner.
+Don't sweat the errors when you get them!
+
+Fortunately, the <span class="apls-page">Search</span> page makes it easy to check whether your regex are valid.
+If you enter an invalid regex, the text in the input box will turn red.
+Here's what it looks like when you enter `*` in the <span class="layer">orthography</span> input box:
+
+{% include screengrab.html src="search/invalid-regex.png" %}
+
+After a few seconds, if the regex is still invalid, a "speech bubble" will pop up with an error message:
+
+{% include screengrab.html src="search/invalid-regex-bubble.png" %}
+
+As you can see, a speech bubble has popped up with the message `Nothing to repeat`.
+
+The speech bubble disappears after a few seconds.
+If you missed it and want to see the error, hover over the input box for a tooltip:
+
+{% include screengrab.html src="search/invalid-regex-tooltip.png" %}
+
+To understand **why** this regex is invalid, remember that the regex character `*` means "0 or more of the preceding character (or character class, or group)".
+As a result, `*` can't be at the start of a regex.
+As the message says, if `*` is at the start of the regex, there's nothing before `*` that `*` can repeat.
+
+{: .note}
+> If you see red text in an input box, you should not press the _Search_ button, but fix the regex error first.
+> If you do attempt to search with an invalid regex, the search will fail with a long (and frankly scary-looking) error message:
+>
+> {% include screengrab.html src="search/invalid-regex-searched.png" %}
+
+### Error messages you might encounter
+
+Here are some regex error messages you might see, with examples and explanations.
+
+{: .note .no-collapse}
+> The text of the error message can vary based on your browser.
+> For example, the regex `(` will yield the error `Unterminated group` in Chrome but `unterminated parenthetical` in Firefox.
+> For this table, we checked Chrome (version 156) and Firefox (version 153).
+> If there's one error message in a row, both browsers use that message;
+> if there are two, the first is from Chrome, the second Firefox.
+
+| Error message | Example regex that can yield this error | Explanation |
+|---------------|-----------------------------------------|-------------|
+| `Nothing to repeat` | `?`, `+`, `*`, `?abc`, `*def` | Quantifiers apply to the character or pattern that is immediately before them |
+| `Unterminated group` or `unterminated parenthetical` | `(`, `abc(`, `(def` | Every `(` has to have a `)` later in the regex |
+| `Unmatched ')'` or `unmatched ) in regular expression` | `)`, `abc)`, `abc)def` | Every `)` has to have a `(` earlier in the regex |
+| `Unterminated character class` | `[`, `abc[`, `]def` | Every `[` has to have a `]` later in the regex |
+| `Lone quantifier brackets` or `raw bracket is not allowed in regular expression with unicode flag` | `]`, `{`, `}` | Same as above |
+| `Empty character class` | `[]`, `abc[]def` | Character classes can't be empty |
+| `\ at end of pattern` | `\`, `abc\` | Escapes apply to the character or pattern that is immediately after them |
+
+{: .note}
+> If your regex is invalid for **multiple** reasons, you'll only see the first error message.
+> For example, the regex `?[]` is invalid for both the regex-initial `?` and the empty `[]`, but only the error message `Nothing to repeat` will be displayed.
+> Once you fix the first error, the tooltip will change to reflect the next error.
+
 ## Regex in APLS vs. regex elsewhere
 
 APLS's search regex syntax is very similar to standard "flavors" of regex in high-level programming languages (e.g., Python, R, JavaScript), with some important differences.
 
 
-### Search: Regex match whole annotations, not parts
+### <span class="apls-page">Search</span> page: Regex match whole annotations, not parts
 
 Unlike regex elsewhere, APLS's search matches patterns to **whole** annotations, whether those are words, part-of-speech tags, segments, etc.
 
@@ -258,20 +321,35 @@ For example, on the <span class="apls-page">Participants</span> page, entering `
 This also means that `^` and `$`, which anchor patterns to the start and end (respectively) of the match, _do_ work in these filters
 For example, on the <span class="apls-page">Participants</span> page, entering `1$` in the _Participant_ box will match participants whose speaker codes _end with_ `1`.
 
-{% comment %}Regex are used in one other place in the corpus, the Process with Praat page, where they match participant attribute labels for overriding default settings (e.g., change the formant ceiling if participant_gender matches `M(ale)?`). That one is a whole-annotation match, like search, and uses java.util.regex.{% endcomment %}
+{% comment %}Regex are used in one other place in the corpus, the Process with Praat page, where they match participant attribute labels for overriding default settings (e.g., change the formant ceiling if participant_gender matches `M(ale)?`). That one is a whole-annotation match, like search, and uses java.util.regex. It's also case-sensitive.{% endcomment %}
 
+
+### Regex are case-sensitive only in certain contexts
+
+In most contexts outside of APLS, regular expressions are case-sensitive by default, though users often have the choice to treat regex as case-insensitive.
+In APLS, case-sensitivity is determined by context and cannot be controlled by users.
+In search, the only case-sensitive layers are <span class="layer">word</span> and layers with phonological [data type]({{ '/doc/layer-typology#data-type' | relative_url }}).
+<span class="layer">word</span> is case-sensitive because capitalization may signal lexical differences (for example, between the month _May_ and the verb _may_);
+see [this callout]({{ '/doc/your-first-search#case-sensitive-word-search' | relative_url }}) for info on how to search <span class="layer">word</span> for these differences.
+Phonological layers (like <span class="layer">segment</span>) are case-sensitive since there are [DISC]({{ '/doc/phonemic-transcription' | relative_url }}) symbols that differ only by case, such as `t` (IPA /t/) vs. `T` (IPA /θ/).
+As a hint to case-sensitivity, the input boxes for <span class="layer">word</span> and phonological layers have `Regular expression (A≠a)`.
+
+On the <span class="apls-page">Participants</span> and <span class="apls-page">Transcripts</span> pages, filters that accept regular expressions are always case-insensitive.
 
 ### Regex use POSIX Extended Regular Expressions
 
-APLS [implements regex](https://github.com/nzilbb/labbcat-server/blob/main/server/src/main/java/nzilbb/labbcat/server/db/OneQuerySearch.java) in MySQL (i.e., with the MySQL `REGEXP` operator), which uses [POSIX Extended Regular Expressions](https://www.regular-expressions.info/posix.html).
+One confusing aspect of working with regular expressions is that there is not just one regular expression syntax, but rather different [regex "flavors"](https://www.regular-expressions.info/tutorial.html#engine).
+As a result, regular expressions that work in one programming language or software context may not work in another.
+
+APLS searches use [POSIX Extended Regular Expressions (ERE)](https://www.regular-expressions.info/posix.html).
+This is because APLS [performs searches in MySQL](https://github.com/nzilbb/labbcat-server/blob/main/server/src/main/java/nzilbb/labbcat/server/db/OneQuerySearch.java) (i.e., with the MySQL `REGEXP` operator).
 This means that, compared to [PCRE](https://www.regular-expressions.info/pcre.html) regular expressions that are currently standard in high-level programming languages, features like [backreferences](https://www.regular-expressions.info/backref.html) and [lookarounds](https://www.regular-expressions.info/lookaround.html) are not supported.
 
 {% comment %}Technically, _participants_ and _transcripts_ use java.util.regex, so they do support backreferences (e.g., on _transcripts_, `CB(.).+\1` will match CB10interview1.eaf, CB10reading1.eaf, CB17interview1.eaf, and CB17reading1.eaf). But that's unlikely to matter for end-users.{% endcomment %}
 
 {: .under-the-hood }
-> On the <span class="apls-page">Search</span> page, entering an invalid regex pattern will make the text turn red.
-> Hovering over the red text will make a tooltip appear that gives a brief explanation of why the regex is invalid.
-> This error-checking is powered not by MySQL's regex engine but by JavaScript's `new Regexp()` with the `"u"` (Unicode) flag.
+> While APLS uses MySQL for the server-side processing of search regex, live in-browser [regex error-checking](#regex-and-error-messages) is powered by JavaScript's `new Regexp()` with the `"u"` (Unicode) flag.
+> There are some small differences between the two, but in developing the user interface for APLS, we've done our best to code the input box to [close the gap between the two regex engines](https://github.com/djvill/labbcat-server/blob/apls/user-interface/src/main/angular/projects/labbcat-common/src/lib/input-regexp/input-regexp.component.ts).
 > The error messages are mostly self-explanatory, but you can look them up [here](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Errors) if needed.
 
 
@@ -301,8 +379,7 @@ This page is only meant to be an introduction to regular expressions (and the [w
 There are lots of resources out there for learning and practicing regex if you would like more than this page can provide!
 
 A few places that we would recommend are:
+- [regex101.com][regex101] for testing out different regex patterns.
 - [regexone.com](https://www.regexone.com/) or [regexlearn.com](https://regexlearn.com/) for learning regex by practicing with simple, interactive exercises.
 - [regular-expressions.info tutorial](https://www.regular-expressions.info/tutorial.html) for more details about basic regex concepts.
   - The regular-expressions website also has resources for learning about more advanced regex concepts!
-- [regex crosswords](https://regexcrossword.com/) for practicing regex skills with crossword-like puzzles.
-- [regex101.com](https://regex101.com/) for testing out different regex patterns.
