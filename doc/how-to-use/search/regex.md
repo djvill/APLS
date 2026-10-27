@@ -5,7 +5,7 @@ permalink: /doc/regex
 parent: Searching the corpus
 grand_parent: How to use APLS
 nav_order: 30
-last_modified_date: 2026-10-26T17:41:26-04:00
+last_modified_date: 2026-10-26T22:25:35-04:00
 ---
 
 # {{ page.title }}
@@ -38,14 +38,14 @@ Here are the regex patterns you're most likely to use when searching APLS:
 | Letters & numbers (`A`-`Z`, `a`-`z`, `0`-`9`) | Literal | Themselves |
 | Most special characters used in [layer notation systems]({{ '/doc/layer-typology#notation-system' | relative_url }}) | Literal | Themselves |
 | `.` | Wildcard | Any single character |
-| `?` | Quantifier | The character before `?` is optional; i.e. it can occur 0 or 1 times |
-| `+` | Quantifier | The character before `+` can repeat; i.e. it can occur 1 or more times |
-| `*` | Quantifier | The character before `*` is optional or it can repeat; i.e. it can occur any number of times, including 0 |
 | `[]` (example: `[abc]`) | Character class | Match any **single** character inside the brackets |
 | `[^]` (example: `[^abc]`) | Character class | Match any **single** character **other than** the ones inside the brackets |
-| `-` (example: `f-i`) | Range | Match any **single** letter or digit in the range (including the endpoints) |
-| `|` (example: `ab|cd`) | Alternator | Match the left **or** right side |
+| `[-]` (example: `[f-i]`) | Range | Match any **single** letter or digit in the range (including the endpoints) |
 | `()` | Grouping | Characters inside the parentheses are treated as a unit; used in conjunction with a quantifier or alternator |
+| `?` | Quantifier | The character (or character class, or group) before `?` is optional; i.e. it can occur 0 or 1 times |
+| `+` | Quantifier | The character (or character class, or group) before `+` can repeat; i.e. it can occur 1 or more times |
+| `*` | Quantifier | The character (or character class, or group) before `*` is optional or it can repeat; i.e. it can occur any number of times, including 0 |
+| `|` (example: `ab|cd`) | Alternator | Match the left **or** right side |
 | `\` | Escape | The character after `\` is **not** treated as a metacharacter; i.e., the character is treated literally |
 
 Because of the [notation systems used by certain layers]({{ '/doc/layer-typology#notation-system' | relative_url }}), the characters in APLS that you may need to use `\` to match literally are: 
